@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt – EGroupware</title>
+<style>
+  :root {
+    --blue: #1a56db;
+    --blue-dark: #12408f;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #d1d5db;
+    --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+  }
+  header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--blue);
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+  p.lede {
+    color: var(--muted);
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .required-note {
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 560px) {
+    .row { grid-template-columns: 1fr; }
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 1rem 0 0.35rem;
+  }
+  label .req { color: #dc2626; }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text);
+    background: var(--bg);
+  }
+  textarea { resize: vertical; min-height: 7rem; }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.15);
+  }
+  .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 1.25rem;
+  }
+  .checkbox-row input { margin-top: 0.2rem; }
+  .checkbox-row label {
+    margin: 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  .checkbox-row .req { color: #dc2626; }
+  /* honeypot: visually hidden, but present for bots to fill in */
+  .hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  button[type="submit"] {
+    margin-top: 1.5rem;
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button[type="submit"]:hover { background: var(--blue-dark); }
+  button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
+  #form-status {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: none;
+  }
+  #form-status.success {
+    display: block;
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+  }
+  #form-status.error {
+    display: block;
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+  }
+  .foot-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 1rem;
+  }
+</style>
+</head>
+<body>
+<header>EGroupware</header>
+<main>
+  <h1>Sprechen wir über Ihr Vorhaben</h1>
+  <p class="lede">Ob Sie nur eine Preisfrage haben oder eine Migration von hundert Postfächern planen: Schreiben Sie uns, wir melden uns zeitnah zurück.</p>
+
+  <h2 style="margin-bottom:0.25rem;">Anfrage senden</h2>
+  <p class="required-note">Felder mit * sind Pflichtfelder.</p>
+
+  <form id="contact-form" novalidate>
+    <!-- honeypot: real users never see or fill this; if it's non-empty we silently drop the submission -->
+    <div class="hp" aria-hidden="true">
+      <label for="website">Website</label>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="name">Name <span class="req">*</span></label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div>
+        <label for="company">Unternehmen / Organisation</label>
+        <input type="text" id="company" name="company" autocomplete="organization">
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="email">E-Mail <span class="req">*</span></label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div>
+        <label for="phone">Telefon (optional)</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="topic">Ihr Anliegen</label>
+        <select id="topic" name="topic">
+          <option>Beratung Cloud</option>
+          <option>Beratung Eigeninstallation</option>
+          <option>Demo-Termin</option>
+          <option>Angebot / Preise</option>
+          <option>Support</option>
+          <option>Sonstiges</option>
+        </select>
+      </div>
+      <div>
+        <label for="users">Anzahl Nutzer (ca.)</label>
+        <select id="users" name="users">
+          <option>1 – 10</option>
+          <option>11 – 50</option>
+          <option>51 – 200</option>
+          <option>201 – 1.000</option>
+          <option>über 1.000</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="message">Nachricht <span class="req">*</span></label>
+    <textarea id="message" name="message" required></textarea>
+
+    <div class="checkbox-row">
+      <input type="checkbox" id="privacy" name="privacy" required>
+      <label for="privacy">Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. <span class="req">*</span></label>
+    </div>
+
+    <div class="checkbox-row">
+      <input type="checkbox" id="newsletter" name="newsletter">
+      <label for="newsletter">Ja, ich möchte mich zum EGroupware-Newsletter anmelden.</label>
+    </div>
+
+    <button type="submit">Anfrage absenden</button>
+    <div id="form-status" role="status"></div>
+    <p class="foot-note">Wir nutzen Ihre Angaben ausschließlich zur Beantwortung Ihrer Anfrage.</p>
+  </form>
+</main>
+
+<script>
+(function () {
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('form-status');
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+
+    // silently drop spam: honeypot field should always be empty for real users
+    if (form.website.value.trim() !== '') {
+      return;
+    }
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    var submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    status.className = '';
+    status.textContent = '';
+
+    var notesParts = [];
+    if (form.topic.value) notesParts.push('Anliegen: ' + form.topic.value);
+    if (form.users.value) notesParts.push('Anzahl Nutzer: ' + form.users.value);
+    notesParts.push(form.message.value.trim());
+    if (form.newsletter.checked) notesParts.push('[Newsletter-Anmeldung gewünscht]');
+
+    var payload = {
+      fullName: form.name.value.trim(),
+      'emails/work': form.email.value.trim(),
+      'notes/note': notesParts.join('\n\n')
+    };
+    if (form.company.value.trim()) {
+      payload['organizations/org/name'] = form.company.value.trim();
+    }
+    if (form.phone.value.trim()) {
+      payload['phones/tel_work'] = form.phone.value.trim();
+    }
+
+    fetch('/pole', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        status.className = 'success';
+        status.textContent = 'Vielen Dank! Ihre Anfrage wurde übermittelt, wir melden uns zeitnah zurück.';
+        form.reset();
+      })
+      .catch(function () {
+        status.className = 'error';
+        status.textContent = 'Entschuldigung, beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns an info@egroupware.org.';
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+      });
+  });
+})();
+</script>
+</body>
+</html>
