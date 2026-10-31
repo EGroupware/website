@@ -1,0 +1,1463 @@
+<!doctype html>
+<html lang="en" data-theme-init>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News and updates – EGroupware</title>
+  <meta name="description" content="News from development, events and the press: releases, case studies and webinars around EGroupware.">
+  <link rel="canonical" href="https://www.egroupware.org/en/blog">
+  <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/blog">
+  <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/blog">
+  <link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/blog">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EGroupware">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="News and updates – EGroupware">
+  <meta property="og:description" content="News from development, events and the press: releases, case studies and webinars around EGroupware.">
+  <meta property="og:url" content="https://www.egroupware.org/en/blog">
+  <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/css/style.css" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    (function(){try{var t=localStorage.getItem("egw-theme");
+    if(t==="dark"||t==="light"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="./">
+        <img class="brand-light" src="../assets/img/EGroupware-Logo.svg"
+             alt="EGroupware – Smart Online Office" width="189" height="37" fetchpriority="high">
+        <img class="brand-dark" src="../assets/img/EGroupware-Logo-invert.svg"
+             alt="" aria-hidden="true" width="189" height="37">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="primary-nav">
+        <li><a href="./">Home</a></li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="features">Features</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Features – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Organisation</p><ul><li><a href="calendar"><img class="nav-sub__icon" src="../assets/img/icons/calendar.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Calendar</span></a></li><li><a href="contacts"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Contacts</span></a></li><li><a href="tasks"><img class="nav-sub__icon" src="../assets/img/icons/infolog.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Tasks</span></a></li><li><a href="projects"><img class="nav-sub__icon" src="../assets/img/icons/projectmanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Projects</span></a></li><li><a href="timesheet"><img class="nav-sub__icon" src="../assets/img/icons/timesheet.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Timesheet</span></a></li><li><a href="resources"><img class="nav-sub__icon" src="../assets/img/icons/resources.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Ressources</span></a></li><li><a href="e-invoicing"><img class="nav-sub__icon" src="../assets/img/icons/einvoice.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-Invoice</span></a></li><li><a href="administration"><img class="nav-sub__icon" src="../assets/img/icons/admin.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Administration</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Communication</p><ul><li><a href="email"><img class="nav-sub__icon" src="../assets/img/icons/mail.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Email</span></a></li><li><a href="chat"><img class="nav-sub__icon" src="../assets/img/icons/chat.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Team Chat</span></a></li><li><a href="videoconferences"><img class="nav-sub__icon" src="../assets/img/icons/videoconference.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Videoconferences</span></a></li><li><a href="file-manager"><img class="nav-sub__icon" src="../assets/img/icons/filemanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Documents</span></a></li><li><a href="online-office"><img class="nav-sub__icon" src="../assets/img/icons/collabora.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Online Office</span></a></li><li><a href="kanban"><img class="nav-sub__icon" src="../assets/img/icons/kanban.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kanban</span></a></li><li><a href="helpdesk"><img class="nav-sub__icon" src="../assets/img/icons/tracker.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Helpdesk</span></a></li><li><a href="crm"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CRM</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Tech &amp; integration</p><ul><li><a href="cti-phone-integration"><img class="nav-sub__icon" src="../assets/img/icons/cti.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CTI Telefon-Integration</span></a></li><li><a href="remote-work"><img class="nav-sub__icon" src="../assets/img/icons/home.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Homeoffice Integration</span></a></li><li><a href="mobile-access"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span>Mobil Access</span></a></li><li><a href="synchronisation"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span><span>Synchronisation</span></a></li><li><a href="guacamole"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span><span>Guacamole</span></a></li><li><a href="univention"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><span>Univention Corporate Server (UCS)</span></a></li><li><a href="vidoteach"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span><span>Video based learning</span></a></li><li><a href="community-edition-vs-epl"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span><span>EGroupware CE vs EPL</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="pricing">Pricing</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Pricing – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="pricing"><span>Pricing</span></a></li><li><a href="why-cloud"><span>Why Cloud?</span></a></li><li><a href="why-on-premise"><span>Why On-premise?</span></a></li><li><a href="cloud-services"><span>EGroupware Cloud Service</span></a></li><li><a href="trial"><span>Trial Version</span></a></li><li><a href="demo"><span>Online Demo</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="industries">Industries</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Industries – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="industries"><span>Industries</span></a></li><li><a href="education"><span>Solutions for educational institutions</span></a></li><li><a href="collaboration-tools"><span>Collaboration Tools</span></a></li><li><a href="exchange-alternative"><span>Exchange Alternative</span></a></li><li><a href="dropbox-alternative"><span>Dropbox alternative</span></a></li><li><a href="owncloud-alternative"><span>Owncloud Alternative</span></a></li><li><a href="google-calendar-alternative"><span>Google Calendar Alternative</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="about">About</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="About – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="about"><span>About</span></a></li><li><a href="testimonials"><span>Testimonials</span></a></li><li><a href="why-egroupware"><span>Why EGroupware?</span></a></li><li><a href="press"><span>Press</span></a></li><li><a href="community"><span>Community</span></a></li><li><a href="technology-partners"><span>Technology partner</span></a></li><li><a href="integration-partners"><span>Integration partner</span></a></li><li><a href="resellers"><span>EGroupware Reseller</span></a></li><li><a href="become-reseller"><span>Become Reseller</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="support">Support</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Support – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="support"><span>Support</span></a></li><li><a href="customer-support-login"><span>Customer Support Login</span></a></li><li><a href="download"><span>Download</span></a></li><li><a href="installation-on-your-own-server"><span>Installation on your own server</span></a></li><li><a href="tutorials"><span>Webinars and tutorials</span></a></li><li><a href="caldav-synchronizer"><span>Caldav Synchronizer</span></a></li><li><a href="security-and-data-privacy"><span>Security and data privacy</span></a></li><li><a href="status"><span>EGroupware Cloud Status</span></a></li></ul></div>
+        </div>
+        </li>
+        <li><a href="blog" aria-current="page">News</a></li>
+        <li><a href="contact">Contact</a></li>
+          <li class="nav-cta"><a class="btn btn--primary" href="contact">Start 30-day free trial</a></li>
+          <li class="nav-theme">
+            <button class="theme-toggle-inline" type="button">
+              <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+              <span>Switch colour scheme</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language"><a href="../de/blog" hreflang="de" data-set-lang="de">DE</a><a href="blog" hreflang="en" data-set-lang="en" aria-current="true">EN</a></div>
+        <button class="theme-toggle" type="button" aria-label="Switch colour scheme"
+                data-label-dark="Switch colour scheme" data-label-light="Switch colour scheme">
+          <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+        </button>
+        <a class="btn btn--primary btn--sm" href="contact">Start 30-day free trial</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="primary-nav" aria-label="Open menu">
+          <span class="i-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg></span><span class="i-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="./">Home</a> <span aria-hidden="true">›</span> News
+        </nav>
+        <h1>News</h1>
+        <p class="lead">Releases, case studies, events and press coverage – what is happening at EGroupware.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="module-filter reveal" data-module-filter>
+          <div class="module-filter__search">
+            <label class="visually-hidden" for="post-search">Search posts</label>
+            <span class="module-filter__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m16.2 16.2 4.3 4.3"/></svg></span>
+            <input id="post-search" type="search" autocomplete="off" placeholder="Search by keyword …">
+          </div>
+          <div class="chips"><button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All posts <span class="chip__count">152</span></button><button class="chip" type="button" data-filter="news" aria-pressed="false">News <span class="chip__count">51</span></button><button class="chip" type="button" data-filter="general" aria-pressed="false">General <span class="chip__count">18</span></button><button class="chip" type="button" data-filter="press" aria-pressed="false">In the press <span class="chip__count">26</span></button><button class="chip" type="button" data-filter="tutorials" aria-pressed="false">Tutorials <span class="chip__count">18</span></button><button class="chip" type="button" data-filter="events" aria-pressed="false">Events <span class="chip__count">12</span></button><button class="chip" type="button" data-filter="webinars" aria-pressed="false">Webinars <span class="chip__count">27</span></button></div>
+        </div>
+        <div class="post-grid mt-3" data-module-grid>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="php2shell and our strategy on 21 october 2026 the php project disclosed two critical security vulnerabilities. what egroupware did, when the systems were patched and what to check on your own installation.">
+          <a class="post-card__thumb" href="general/php2shell-and-our-strategy" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/php2shell.webp" alt="" width="1200" height="799" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2026-10-27">October 27, 2026</time>
+          </div>
+          <h2><a href="general/php2shell-and-our-strategy">PHP2Shell and Our Strategy</a></h2>
+          <p>On 21 October 2026 the PHP project disclosed two critical security vulnerabilities. What EGroupware did, when the systems were patched and what to check on your own installation.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="successful digital transformation and well-managed government structures zettl: i oversee data protection for catholic institutions in bavaria. as an independent data protection supervisory authority, we at kdsz bayern support approximately 8,000 church institutions and consistently prioritize digital sovereignty within our own …">
+          <a class="post-card__thumb" href="general/successful-digital-transformation-and-well-managed-government-structures" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/bildschirmfoto-2026-09-07-um-13-09-27.webp" alt="" width="1200" height="764" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2026-09-08">September 8, 2026</time>
+          </div>
+          <h2><a href="general/successful-digital-transformation-and-well-managed-government-structures">Successful Digital Transformation and Well-Managed Government Structures</a></h2>
+          <p>Zettl: &quot;I oversee data protection for Catholic institutions in Bavaria. As an independent data protection supervisory authority, we at KDSZ Bayern support approximately 8,000 church institutions and consistently prioritize digital sovereignty within our own …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="clever it strategy including the open source version how can using the free ce version with on-premises installation support an open-source project, and what freedoms and safeguards does it offer the company? we spoke to samuel wolf from wolf maschinenbau ag about how they use the ce version of our …">
+          <a class="post-card__thumb" href="general/clever-it-strategy-including-the-open-source-version" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/bildschirmfoto-2026-04-24-um-12-13-30.webp" alt="" width="1200" height="803" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2026-04-27">April 27, 2026</time>
+          </div>
+          <h2><a href="general/clever-it-strategy-including-the-open-source-version">Clever IT Strategy including the Open Source Version</a></h2>
+          <p>How can using the free CE version with on-premises installation support an open-source project, and what freedoms and safeguards does it offer the company? We spoke to Samuel Wolf from Wolf Maschinenbau AG about how they use the CE version of our …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="press release - egroupware 26.2 new release model, modern &amp; fully responsive frontend, improved accessibility and ui customization, introduction of ai integration">
+          <a class="post-card__thumb" href="general/press-release-26-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/chat-app-chooser.webp" alt="" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2026-02-09">February 9, 2026</time>
+          </div>
+          <h2><a href="general/press-release-26-2">Press release - EGroupware 26.2</a></h2>
+          <p>New release model, modern &amp; fully responsive frontend, improved accessibility and UI customization, introduction of AI integration</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="newsletter november 2025 what can you expect in the new egroupware version? success stories: how are others using egroupware cleverly? egroupware roadmap: accessibility and artificial intelligence">
+          <a class="post-card__thumb" href="general/news-2511" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/bildschirmfoto-2025-11-24-um-11-12-29.webp" alt="" width="1200" height="667" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2025-11-25">November 25, 2025</time>
+          </div>
+          <h2><a href="general/news-2511">Newsletter November 2025</a></h2>
+          <p>What can you expect in the new EGroupware version? Success stories: How are others using EGroupware cleverly? EGroupware roadmap: Accessibility and artificial intelligence</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="e-invoicing made easy with egroupware big changes are coming on january 1, 2025. thanks to the german growth opportunities act, electronic invoicing (or e-invoicing)">
+          <a class="post-card__thumb" href="general/e-invoicing-made-easy-with-egroupware" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/241218-banner-e-invoicing-news.webp" alt="" width="1200" height="863" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2024-12-20">December 20, 2024</time>
+          </div>
+          <h2><a href="general/e-invoicing-made-easy-with-egroupware">E-Invoicing Made Easy with EGroupware</a></h2>
+          <p>Big changes are coming on January 1, 2025. Thanks to the German Growth Opportunities Act, electronic invoicing (or e-invoicing)</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="simplify invoicing with egroupware&#x27;s new app at the end of the year, egroupware wishes you all the best – and is pleased to introduce the new e-invoicing application to you">
+          <a class="post-card__thumb" href="general/simplify-invoicing-with-egroupwares-new-app" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/241216-new-app.webp" alt="" width="1200" height="770" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2024-12-17">December 17, 2024</time>
+          </div>
+          <h2><a href="general/simplify-invoicing-with-egroupwares-new-app">Simplify invoicing with EGroupware&#x27;s new app</a></h2>
+          <p>At the end of the year, EGroupware wishes you all the best – and is pleased to introduce the new e-invoicing application to you</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="webinar: teaching in times of artificial intelligence &amp; open source events ">
+          <a class="post-card__thumb" href="general/webinar-teaching-in-times-of-artificial-intelligence-open-source-events-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-antecedent-egroupware-collabora.webp" alt="" width="1042" height="648" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2024-08-20">August 20, 2024</time>
+          </div>
+          <h2><a href="general/webinar-teaching-in-times-of-artificial-intelligence-open-source-events-2">Webinar: Teaching in times of artificial intelligence &amp; open source events</a></h2>
+          <p></p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="no rushed contracts for the delos cloud the federal chancellery is currently exerting strong pressure on the federal states to conclude immediate cloud contracts with delos, a german version of the microsoft azure cloud. on 27 june 2024, a corresponding resolution is to be passed at a special …">
+          <a class="post-card__thumb" href="general/no-rushed-contracts-for-the-delos-cloud" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/think-data.webp" alt="" width="540" height="361" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2024-06-25">June 25, 2024</time>
+          </div>
+          <h2><a href="general/no-rushed-contracts-for-the-delos-cloud">No rushed contracts for the Delos Cloud</a></h2>
+          <p>The Federal Chancellery is currently exerting strong pressure on the federal states to conclude immediate cloud contracts with Delos, a German version of the Microsoft Azure Cloud. On 27 June 2024, a corresponding resolution is to be passed at a special …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="simplified customizing in egroupware and more data security with s3 storage in march, the issue of a lack of data protection was (unfortunately) back on the agenda. according to the european data protection supervisor, the european commission is violating its own data protection rules when using ms 365: the commission has failed to …">
+          <a class="post-card__thumb" href="general/simplified-customizing-in-egroupware-and-more-data-security-with-s3-storage" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/s3-verschluesselung-2.webp" alt="" width="1080" height="720" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2024-06-17">June 17, 2024</time>
+          </div>
+          <h2><a href="general/simplified-customizing-in-egroupware-and-more-data-security-with-s3-storage">Simplified customizing in EGroupware and more data security with S3 Storage</a></h2>
+          <p>In March, the issue of a lack of data protection was (unfortunately) back on the agenda. According to the European Data Protection Supervisor, the European Commission is violating its own data protection rules when using MS 365: The Commission has failed to …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="webinar: teaching in times of artificial intelligence &amp; open source events ">
+          <a class="post-card__thumb" href="general/webinar-teaching-in-times-of-artificial-intelligence-open-source-events" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-antecedent-egroupware-collabora.webp" alt="" width="1042" height="648" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2024-06-17">June 17, 2024</time>
+          </div>
+          <h2><a href="general/webinar-teaching-in-times-of-artificial-intelligence-open-source-events">Webinar: Teaching in times of artificial intelligence &amp; open source events</a></h2>
+          <p></p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="too nosy: new outlook enables unwanted data leakage to microsoft even heise.de issued a warning about the new outlook in november 23. according to the it portal, the new outlook app sends access data to imap and smtp servers to microsoft cloud servers, which then mirror users&#x27; emails.when asked, microsoft explained why the …">
+          <a class="post-card__thumb" href="general/new-outlook-enables-unwanted-data-leakage-to-microsoft" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/datenkrake-sw.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2024-01-26">January 26, 2024</time>
+          </div>
+          <h2><a href="general/new-outlook-enables-unwanted-data-leakage-to-microsoft">Too nosy: New Outlook enables unwanted data leakage to Microsoft</a></h2>
+          <p>Even Heise.de issued a warning about the new Outlook in November 23. According to the IT portal, the new Outlook app sends access data to IMAP and SMTP servers to Microsoft cloud servers, which then mirror users&#x27; emails.When asked, Microsoft explained why the …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="rest api interface for integration of contacts, mails, calendars and tasks dear customers and egroupware users,for some time now, we have been using the software interface rest-api (representational state transfer application programming interface) to enable uniform communication and data exchange between egroupware and other …">
+          <a class="post-card__thumb" href="general/rest-api-interface-for-integration-of-contacts-mails-calendars-and-tasks" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/rest-api.webp" alt="" width="1200" height="847" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2023-07-10">July 10, 2023</time>
+          </div>
+          <h2><a href="general/rest-api-interface-for-integration-of-contacts-mails-calendars-and-tasks">Rest API interface for integration of contacts, mails, calendars and tasks</a></h2>
+          <p>Dear customers and EGroupware users,For some time now, we have been using the software interface REST-API (Representational State Transfer Application Programming Interface) to enable uniform communication and data exchange between EGroupware and other …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="egroupware plus collabora online – video of cool days 2023 now online dear customers and egroupware users,exciting presentations, news about collabora online and many nice people: the cool days 2023 in cambridge were a great success!the technical day was all about performance improvements, new features, interoperability …">
+          <a class="post-card__thumb" href="general/egroupware-at-cool-days-2023" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/bildschirmfoto-2023-04-25-um-12-47-58.webp" alt="" width="1200" height="676" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2023-04-25">April 25, 2023</time>
+          </div>
+          <h2><a href="general/egroupware-at-cool-days-2023">EGroupware plus Collabora Online – Video of Cool Days 2023 now online</a></h2>
+          <p>Dear customers and EGroupware users,exciting presentations, news about Collabora Online and many nice people: The Cool Days 2023 in Cambridge were a great success!The &quot;Technical Day&quot; was all about performance improvements, new features, interoperability …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 23.1 available as of today finally the time has come: the latest egroupware version 23.1 is available. with the release, we would like to provide you with important information about the latest version and share a few useful links.the most important innovations at a glance:✔ technology …">
+          <a class="post-card__thumb" href="news/egroupware-23-1-available-as-of-today" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/logo-header-23-mobile-de.webp" alt="" width="1200" height="476" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2023-03-15">March 15, 2023</time>
+          </div>
+          <h2><a href="news/egroupware-23-1-available-as-of-today">EGroupware 23.1 available as of today</a></h2>
+          <p>Finally the time has come: The latest EGroupware version 23.1 is available. With the release, we would like to provide you with important information about the latest version and share a few useful links.The most important innovations at a glance:✔ Technology …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="transforming chaos to convenience: elsental youth farm&#x27;s journey with egroupware&#x27;s infolog the elsental youth farm near stuttgart, germany, relies on egroupware — not just for accounting, but also for booking of leisure activities. about two years ago, they implemented a registration system with egroupware. parents can now sign up their children …">
+          <a class="post-card__thumb" href="news/transforming-chaos-to-convenience-elsental-youth-farms-journey-with-egroupwares-infolog" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/zettelwirtschaft.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2023-02-17">February 17, 2023</time>
+          </div>
+          <h2><a href="news/transforming-chaos-to-convenience-elsental-youth-farms-journey-with-egroupwares-infolog">Transforming Chaos to Convenience: Elsental Youth Farm&#x27;s Journey with EGroupware&#x27;s InfoLog</a></h2>
+          <p>The Elsental Youth Farm near Stuttgart, Germany, relies on EGroupware — not just for accounting, but also for booking of leisure activities. About two years ago, they implemented a registration system with EGroupware. Parents can now sign up their children …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="new features egroupware 23.1 plus managed davx5, clt and cool days dear customers und egroupware users,some time has passed since our last newsletter, and in the meantime a lot has happened here.the most exciting news for you as a user: egroupware 23.1 is on its way.the release is currently planned for the beginning of …">
+          <a class="post-card__thumb" href="news/new-features-egroupware-23-1-plus-managed-davx5-clt-and-cool-days" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/header-newsletter.webp" alt="" width="1200" height="510" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2023-02-14">February 14, 2023</time>
+          </div>
+          <h2><a href="news/new-features-egroupware-23-1-plus-managed-davx5-clt-and-cool-days">New Features EGroupware 23.1 plus Managed DAVx5, CLT and COOL Days</a></h2>
+          <p>Dear Customers und EGroupware Users,Some time has passed since our last newsletter, and in the meantime a lot has happened here.The most exciting news for you as a user: EGroupware 23.1 is on its way.The release is currently planned for the beginning of …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="smart collaboration: egroupware and managed davx⁵ enhance productivity at jena city council the jena city council has been using egroupware as its main groupware solution for more than 15 years. about two years ago, the it service providers implemented managed davx⁵ for employees to use on their smartphones, which has been successfully syncing …">
+          <a class="post-card__thumb" href="news/smart-collaboration-egroupware-and-managed-davx5-enhance-productivity-at-jena-city-council" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/telephon-dav5.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2023-01-30">January 30, 2023</time>
+          </div>
+          <h2><a href="news/smart-collaboration-egroupware-and-managed-davx5-enhance-productivity-at-jena-city-council">Smart Collaboration: EGroupware and Managed DAVx⁵ Enhance Productivity at Jena City Council</a></h2>
+          <p>The Jena City Council has been using EGroupware as its main groupware solution for more than 15 years. About two years ago, the IT service providers implemented Managed DAVx⁵ for employees to use on their smartphones, which has been successfully syncing …</p>
+        </article>
+        <article class="post-card reveal" data-group="general" data-search="smart collaboration: egroupware und managed davx⁵ steigern die produktivität der stadtverwaltung jena ">
+          
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2023-01-30">January 30, 2023</time>
+          </div>
+          <h2><a href="allgemein/smart-collaboration-egroupware-und-managed-davx%e2%81%b5-steigern-die-produktivitaet-der-stadtverwaltung-jena">Smart Collaboration: EGroupware und Managed DAVx⁵ steigern die Produktivität der Stadtverwaltung Jena</a></h2>
+          <p></p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="egroupware at the univention summit 2022 visit us at the univention summit 2022">
+          <a class="post-card__thumb" href="egroupware-in-the-press/egroupware-at-the-univention-summit-2022" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/univention-banner-egroupware.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2022-04-13">April 13, 2022</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/egroupware-at-the-univention-summit-2022">EGroupware at the Univention Summit 2022</a></h2>
+          <p>Visit us at the Univention Summit 2022</p>
+        </article>
+        <article class="post-card reveal" data-group="general" data-search="opensource.com - spannender egroupware-artikel - erste schritte mit egroupware ">
+          
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2022-03-09">March 9, 2022</time>
+          </div>
+          <h2><a href="allgemein/opensource-com-spannender-egroupware-artikel-erste-schritte-mit-egroupware">opensource.com - Spannender EGroupware-Artikel - Erste Schritte mit EGroupware</a></h2>
+          <p></p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="placeholders, and automatic generation of pdf/png in 21.1 how you can use placeholders and automatic generation of pdf/png in egroupware and collabora online office">
+          <a class="post-card__thumb" href="news/placeholders-and-automatic-generation-of-pdf-png-in-egroupware-21-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-placeholder.webp" alt="" width="1200" height="569" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2022-01-24">January 24, 2022</time>
+          </div>
+          <h2><a href="news/placeholders-and-automatic-generation-of-pdf-png-in-egroupware-21-1">Placeholders, and automatic generation of PDF/PNG in 21.1</a></h2>
+          <p>How you can use Placeholders and automatic generation of PDF/PNG in EGroupware and Collabora online Office</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="asterisk telefon integration with egroupware more information about the asterisk telefon integration.">
+          <a class="post-card__thumb" href="news/asterisk-telefon-integration-with-egroupware" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/asterisk-integration-1.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2022-01-21">January 21, 2022</time>
+          </div>
+          <h2><a href="news/asterisk-telefon-integration-with-egroupware">Asterisk Telefon Integration with EGroupware</a></h2>
+          <p>More Information about the Asterisk Telefon Integration.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="security vulnerability log4j - egroupware and the integrated tools are explicitly not affected egroupware and the integrated tools are explicitly not affected.">
+          <a class="post-card__thumb" href="news/security-vulnerability-log4j-egroupware-and-the-integrated-tools-are-explicitly-not-affected" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/security.webp" alt="" width="640" height="300" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-12-15">December 15, 2021</time>
+          </div>
+          <h2><a href="news/security-vulnerability-log4j-egroupware-and-the-integrated-tools-are-explicitly-not-affected">Security vulnerability log4j - EGroupware and the integrated tools are explicitly NOT affected</a></h2>
+          <p>EGroupware and the integrated tools are explicitly NOT affected.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware soutient le procès contre microsoft microsoft abuse de sa position dominante et nuit ainsi à l&#x27;écosystème informatique européen en liant ses services en ligne.">
+          <a class="post-card__thumb" href="news/egroupware-soutient-le-proces-contre-microsoft-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/complaint-against-microsoft.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-11-26">November 26, 2021</time>
+          </div>
+          <h2><a href="news/egroupware-soutient-le-proces-contre-microsoft-2">EGroupware soutient le procès contre Microsoft</a></h2>
+          <p>Microsoft abuse de sa position dominante et nuit ainsi à l&#x27;écosystème informatique européen en liant ses services en ligne.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware supports lawsuit against microsoft microsoft abuses its dominant position and thus harms the european it ecosystem by linking its online services.">
+          <a class="post-card__thumb" href="news/egroupware-supports-lawsuit-against-microsoft" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/complaint-against-microsoft.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-11-26">November 26, 2021</time>
+          </div>
+          <h2><a href="news/egroupware-supports-lawsuit-against-microsoft">EGroupware supports lawsuit against Microsoft</a></h2>
+          <p>Microsoft abuses its dominant position and thus harms the European IT ecosystem by linking its online services.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="cti telephone system connection with agfeo integration of your agfeo phones can be found in this article.">
+          <a class="post-card__thumb" href="news/cti-telephone-system-connection-with-agfeo" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/agfeo-telefon-integration.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-10-04">October 4, 2021</time>
+          </div>
+          <h2><a href="news/cti-telephone-system-connection-with-agfeo">CTI telephone system connection with AGFEO</a></h2>
+          <p>Integration of your AGFEO phones can be found in this article.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="cooldays 2021 cooldays were held for the first time. a two-day event around collabora online (cool) with a presentation of egroupware">
+          <a class="post-card__thumb" href="news/cooldays-2021" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/cooldays.webp" alt="" width="487" height="348" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-09-30">September 30, 2021</time>
+          </div>
+          <h2><a href="news/cooldays-2021">COOLDays 2021</a></h2>
+          <p>COOLDays were held for the first time. A two-day event around Collabora Online (COOL) with a presentation of EGroupware</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="egroupware 21.1 freigegeben die egroupware version 21.1 wurde am 25. mai 2021 freigegeben.">
+          <a class="post-card__thumb" href="news/egroupware-21-1-freigegeben-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-release-21-vorschau.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2021-05-25">May 25, 2021</time>
+          </div>
+          <h2><a href="news/egroupware-21-1-freigegeben-2">EGroupware 21.1 freigegeben</a></h2>
+          <p>Die EGroupware Version 21.1 wurde am 25. Mai 2021 freigegeben.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="egroupware 21.1 released the egroupware version 21.1 has been released on may 25, 2021.">
+          <a class="post-card__thumb" href="news/egroupware-21-1-released" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-release-21-vorschau.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2021-05-25">May 25, 2021</time>
+          </div>
+          <h2><a href="news/egroupware-21-1-released">EGroupware 21.1 released</a></h2>
+          <p>The EGroupware version 21.1 has been released on May 25, 2021.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="sortie d&#x27;egroupware 21.1 la version 21.1 d&#x27;egroupware a été publiée le 25 mai 2021.">
+          <a class="post-card__thumb" href="news/sortie-degroupware-21-1-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-release-21-vorschau.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2021-05-25">May 25, 2021</time>
+          </div>
+          <h2><a href="news/sortie-degroupware-21-1-2">Sortie d&#x27;EGroupware 21.1</a></h2>
+          <p>La version 21.1 d&#x27;EGroupware a été publiée le 25 mai 2021.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="placetel configuration workshop - tipps and ticks in this webinar, you will learn how to set up placetel integration with egroupware and export egroupware users to the phone system">
+          <a class="post-card__thumb" href="webinars/placetel-configuration-workshop" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tipps-zur-placetel-einrichtung.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2021-05-19">May 19, 2021</time>
+          </div>
+          <h2><a href="webinars/placetel-configuration-workshop">Placetel Configuration Workshop - Tipps and Ticks</a></h2>
+          <p>In this webinar, you will learn how to set up Placetel Integration with EGroupware and export EGroupware users to the phone System</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="taller de configuración de placetel - consejos y trucos en este seminario web, aprenderá a configurar la integración de placetel con egroupware y a exportar los usuarios de egroupware al sistema telefónico">
+          <a class="post-card__thumb" href="webinars/taller-de-configuracion-de-placetel-consejos-y-trucos-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tipps-zur-placetel-einrichtung.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2021-05-19">May 19, 2021</time>
+          </div>
+          <h2><a href="webinars/taller-de-configuracion-de-placetel-consejos-y-trucos-2">Taller de configuración de Placetel - Consejos y trucos</a></h2>
+          <p>En este seminario web, aprenderá a configurar la integración de Placetel con EGroupware y a exportar los usuarios de EGroupware al sistema telefónico</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="pré-annonce de la version egroupware 21.1 la version 21.1 de l&#x27;egroupware sera publiée le 25 mai 2021.">
+          <a class="post-card__thumb" href="news/pre-annonce-de-la-version-egroupware-21-1-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-release-21-vorschau.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2021-05-17">May 17, 2021</time>
+          </div>
+          <h2><a href="news/pre-annonce-de-la-version-egroupware-21-1-2">Pré-annonce de la version EGroupware 21.1</a></h2>
+          <p>La version 21.1 de l&#x27;EGroupware sera publiée le 25 mai 2021.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="pre-annuncio di rilascio egroupware 21.1 la versione 21.1 di egroupware sarà rilasciata il 25 maggio 2021.">
+          <a class="post-card__thumb" href="news/pre-annuncio-di-rilascio-egroupware-21-1-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-release-21-vorschau.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2021-05-17">May 17, 2021</time>
+          </div>
+          <h2><a href="news/pre-annuncio-di-rilascio-egroupware-21-1-2">Pre-annuncio di rilascio EGroupware 21.1</a></h2>
+          <p>La versione 21.1 di EGroupware sarà rilasciata il 25 maggio 2021.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="pressemitteilung (vorankündigung release) egroupware 21.1 die egroupware gmbh veröffentlicht am 25 mai 2021 version 21.1 der gleichnamigen groupware-lösung.">
+          <a class="post-card__thumb" href="news/pressemitteilung-vorankuendigung-release-egroupware-21-1-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-release-21-vorschau.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2021-05-17">May 17, 2021</time>
+          </div>
+          <h2><a href="news/pressemitteilung-vorankuendigung-release-egroupware-21-1-2">Pressemitteilung (Vorankündigung Release) EGroupware 21.1</a></h2>
+          <p>Die EGroupware GmbH veröffentlicht am 25 Mai 2021 Version 21.1 der gleichnamigen Groupware-Lösung.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="release pre-announcement egroupware 21.1 the egroupware version 21.1 of the groupwaresolution will be released on may 25, 2021.">
+          <a class="post-card__thumb" href="news/release-pre-announcement-egroupware-21-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-release-21-vorschau.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2021-05-17">May 17, 2021</time>
+          </div>
+          <h2><a href="news/release-pre-announcement-egroupware-21-1">Release Pre-Announcement EGroupware 21.1</a></h2>
+          <p>The EGroupware version 21.1 of the groupwaresolution will be released on May 25, 2021.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="annuncio del rilascio di egroupware 21.1 e registrazione del webinar di placetel rilascio di egroupware 21.1siamo lieti di annunciare la data del rilascio di egroupware 21.1: martedì 25 maggio 2021.come negli anni precedenti, aggiorneremo successivamente le istanze di egroupware cloud alla 21.1 con un preavviso corrispondente. gli …">
+          <a class="post-card__thumb" href="news/annuncio-del-rilascio-di-egroupware-21-1-e-registrazione-del-webinar-di-placetel-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-release-21-vorschau.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-05-14">May 14, 2021</time>
+          </div>
+          <h2><a href="news/annuncio-del-rilascio-di-egroupware-21-1-e-registrazione-del-webinar-di-placetel-2">Annuncio del rilascio di EGroupware 21.1 e registrazione del webinar di Placetel</a></h2>
+          <p>Rilascio di EGroupware 21.1Siamo lieti di annunciare la data del rilascio di EGroupware 21.1: Martedì 25 maggio 2021.Come negli anni precedenti, aggiorneremo successivamente le istanze di EGroupware Cloud alla 21.1 con un preavviso corrispondente. Gli …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 21.1 and placetel webinar recording you can find the webinar recording and information about the release date of the version 21.1">
+          <a class="post-card__thumb" href="news/egroupware-21-1-release-announcement-and-placetel-webinar-recording" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/placetel-workshop.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-05-14">May 14, 2021</time>
+          </div>
+          <h2><a href="news/egroupware-21-1-release-announcement-and-placetel-webinar-recording">EGroupware 21.1 and Placetel webinar recording</a></h2>
+          <p>You can find the Webinar Recording and information about the release date of the version 21.1</p>
+        </article>
+        <article class="post-card reveal" data-group="news" data-search="giornata dell&#x27;educazione aperta 2021 smallpart lezione alla giornata di formazione aperta della pädagologische hochschule di berna.">
+          
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-05-11">May 11, 2021</time>
+          </div>
+          <h2><a href="news/giornata-delleducazione-aperta-2021">Giornata dell&#x27;educazione aperta 2021</a></h2>
+          <p>smallPART Lezione alla giornata di formazione aperta della pädagologische Hochschule di Berna.</p>
+        </article>
+        <article class="post-card reveal" data-group="news" data-search="integrazione di placetel in egroupware in questo webinar, imparerete come impostare una telefon-integration (cti-integration) in egroupware con placetel con molte informazioni.">
+          
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-05-11">May 11, 2021</time>
+          </div>
+          <h2><a href="news/integrazione-di-placetel-in-egroupware">Integrazione di Placetel in EGroupware</a></h2>
+          <p>In questo webinar, imparerete come impostare una Telefon-Integration (CTI-Integration) in EGroupware con Placetel con molte informazioni.</p>
+        </article>
+        <article class="post-card reveal" data-group="general" data-search="placetel integration in egroupware in diesem webinar erfahren sie, wie sie eine telefon-integration (cti-integration) in egroupware mit placetel einrichten können.">
+          
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2021-05-11">May 11, 2021</time>
+          </div>
+          <h2><a href="allgemein/placetel-integration-in-egroupware">Placetel Integration in EGroupware</a></h2>
+          <p>In diesem Webinar erfahren Sie, wie Sie eine Telefon-Integration (CTI-Integration) in EGroupware mit Placetel einrichten können.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="open education day 2021 smallpart lecture at open education day of the pädagologische hochschule in bern.">
+          <a class="post-card__thumb" href="events/open-education-day-2021" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/open-education-day.webp" alt="" width="840" height="493" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2021-04-23">April 23, 2021</time>
+          </div>
+          <h2><a href="events/open-education-day-2021">Open Education Day 2021</a></h2>
+          <p>smallPART Lecture at open education day of the pädagologische Hochschule in Bern.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="integración telefónica en egroupware (integración cti) con el ejemplo de placetel en este seminario web, aprenderá a configurar una integración telefónica (cti-integration) en egroupware con placetel con mucha información.">
+          <a class="post-card__thumb" href="webinars/integracion-telefonica-en-egroupware-integracion-cti-con-el-ejemplo-de-placetel-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/titelbild-cti-integration.webp" alt="" width="1200" height="665" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2021-04-16">April 16, 2021</time>
+          </div>
+          <h2><a href="webinars/integracion-telefonica-en-egroupware-integracion-cti-con-el-ejemplo-de-placetel-2">Integración telefónica en EGroupware (integración CTI) con el ejemplo de Placetel</a></h2>
+          <p>En este seminario web, aprenderá a configurar una integración telefónica (CTI-Integration) en EGroupware con Placetel con mucha información.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="intégration téléphonique dans egroupware (intégration cti) à l&#x27;aide de l&#x27;exemple de placetel dans ce webinaire, vous apprendrez comment mettre en place une intégration téléphonique (intégration cti) dans egroupware avec placetel avec beaucoup d&#x27;informations.">
+          <a class="post-card__thumb" href="webinars/integration-telephonique-dans-egroupware-integration-cti-a-laide-de-lexemple-de-placetel" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/titelbild-cti-integration.webp" alt="" width="1200" height="665" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2021-04-16">April 16, 2021</time>
+          </div>
+          <h2><a href="webinars/integration-telephonique-dans-egroupware-integration-cti-a-laide-de-lexemple-de-placetel">Intégration téléphonique dans EGroupware (intégration CTI) à l&#x27;aide de l&#x27;exemple de Placetel</a></h2>
+          <p>Dans ce webinaire, vous apprendrez comment mettre en place une intégration téléphonique (intégration CTI) dans EGroupware avec Placetel avec beaucoup d&#x27;informations.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="telefonintegration in egroupware (cti-integration) am beispiel von placetel in diesem webinar erfahren sie, wie sie eine telefon-integration (cti-integration) in egroupware mit placetel mit vielen informationen einrichten können.">
+          <a class="post-card__thumb" href="webinars/telefonintegration-in-egroupware-cti-integration-am-beispiel-von-placetel-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/titelbild-cti-integration.webp" alt="" width="1200" height="665" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2021-04-16">April 16, 2021</time>
+          </div>
+          <h2><a href="webinars/telefonintegration-in-egroupware-cti-integration-am-beispiel-von-placetel-2">Telefonintegration in EGroupware (CTI-Integration) am Beispiel von Placetel</a></h2>
+          <p>In diesem Webinar erfahren Sie, wie Sie eine Telefon-Integration (CTI-Integration) in EGroupware mit Placetel mit vielen Informationen einrichten können.</p>
+        </article>
+        <article class="post-card reveal" data-group="general" data-search="telefonintegration in egroupware (cti-integration) am beispiel von placetel in diesem webinar erfahren sie, wie sie eine telefon-integration (cti-integration) in egroupware mit placetel mit vielen informationen einrichten können.">
+          
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2021-04-16">April 16, 2021</time>
+          </div>
+          <h2><a href="allgemein/telefonintegration-in-egroupware-cti-integration-am-beispiel-von-placetel">Telefonintegration in EGroupware (CTI-Integration) am Beispiel von Placetel</a></h2>
+          <p>In diesem Webinar erfahren Sie, wie Sie eine Telefon-Integration (CTI-Integration) in EGroupware mit Placetel mit vielen Informationen einrichten können.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="telephone integration in egroupware (cti integration) using the example of placetel in this webinar, you will learn how to set up a telefon-integration (cti-integration) in egroupware with placetel with a lot of informations.">
+          <a class="post-card__thumb" href="webinars/telephone-integration-in-egroupware-cti-integration-using-placetel" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/titelbild-cti-integration-blog.webp" alt="" width="1200" height="1200" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2021-04-16">April 16, 2021</time>
+          </div>
+          <h2><a href="webinars/telephone-integration-in-egroupware-cti-integration-using-placetel">Telephone Integration in EGroupware (CTI Integration) using the Example of Placetel</a></h2>
+          <p>In this webinar, you will learn how to set up a Telefon-Integration (CTI-Integration) in EGroupware with Placetel with a lot of informations.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="chemnitzer linux tage 2021 - egroupware im home office und in bildungseinrichtungen in diesem vortragsvideo von den chemnitzer linux tagen 2021 zum thema
+egroupware in heimbüros und bildungseinrichtungen.">
+          <a class="post-card__thumb" href="events/chemnitzer-linux-tage-2021-egroupware-im-home-office-und-in-bildungseinrichtungen-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/chemnitzer-linux-tage.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2021-04-12">April 12, 2021</time>
+          </div>
+          <h2><a href="events/chemnitzer-linux-tage-2021-egroupware-im-home-office-und-in-bildungseinrichtungen-2">Chemnitzer Linux Tage 2021 - EGroupware im Home Office und in Bildungseinrichtungen</a></h2>
+          <p>In diesem Vortragsvideo von den Chemnitzer Linux Tagen 2021 zum Thema
+EGroupware in Heimbüros und Bildungseinrichtungen.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="chemnitzer linux tage 2021 - egroupware in the home office and in educational institutions in this lecture video from the chemnitzer linux tage 2021 on the topic of
+egroupware in home offices and educational institutions.">
+          <a class="post-card__thumb" href="events/chemnitzer-linux-tage-2021-egroupware-in-the-home-office-and-in-educational-institutions" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/chemnitzer-linux-tage.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2021-04-12">April 12, 2021</time>
+          </div>
+          <h2><a href="events/chemnitzer-linux-tage-2021-egroupware-in-the-home-office-and-in-educational-institutions">Chemnitzer Linux Tage 2021 - EGroupware in the Home Office and in Educational Institutions</a></h2>
+          <p>In this lecture video from the Chemnitzer Linux Tage 2021 on the topic of
+EGroupware in home offices and educational institutions.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 21.1: annuncio del webinar sull&#x27;integrazione telefonica cti caro utente di egroupware,vorremmo invitarvi al nostro webinar sull&#x27;integrazione della telefonia (cti) utilizzando il sistema telefonico cloud placetel come esempio. non vediamo l&#x27;ora di darvi il benvenuto la prossima settimana, giovedì 15 aprile 2021 alle …">
+          <a class="post-card__thumb" href="news/egroupware-21-1-annuncio-del-webinar-sullintegrazione-telefonica-cti-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/anrufe-kalender-4.webp" alt="" width="1200" height="797" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-04-07">April 7, 2021</time>
+          </div>
+          <h2><a href="news/egroupware-21-1-annuncio-del-webinar-sullintegrazione-telefonica-cti-2">EGroupware 21.1: Annuncio del webinar sull&#x27;integrazione telefonica CTI</a></h2>
+          <p>Caro utente di EGroupware,vorremmo invitarvi al nostro webinar sull&#x27;integrazione della telefonia (CTI) utilizzando il sistema telefonico cloud Placetel come esempio. Non vediamo l&#x27;ora di darvi il benvenuto la prossima settimana, giovedì 15 aprile 2021 alle …</p>
+        </article>
+        <article class="post-card reveal" data-group="general" data-search="egroupware 21.1: webinarankündigung zur cti-telefonintegration ">
+          
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2021-04-07">April 7, 2021</time>
+          </div>
+          <h2><a href="allgemein/egroupware-21-1-webinarankuendigung-zur-cti-telefonintegration">EGroupware 21.1: Webinarankündigung zur CTI-Telefonintegration</a></h2>
+          <p></p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 21.1: webinarannouncement on cti telephone integration we would like to invite you to our webinar on telephonie integration (cti) using the placetel cloud telephone system as an example.">
+          <a class="post-card__thumb" href="news/egroupware-21-1-webinarannouncement-on-cti-telephone-integration" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/anrufe-kalender-4.webp" alt="" width="1200" height="797" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-04-07">April 7, 2021</time>
+          </div>
+          <h2><a href="news/egroupware-21-1-webinarannouncement-on-cti-telephone-integration">EGroupware 21.1: Webinarannouncement on CTI Telephone Integration</a></h2>
+          <p>We would like to invite you to our webinar on telephonie integration (CTI) using the Placetel cloud telephone system as an example.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="smallpart webinar with exams in this webinar, you will learn how you can use smallpart for your lessons. how to create exams and many practical tips.">
+          <a class="post-card__thumb" href="webinars/smallpart-webinar-with-exams" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/vorschau-blogpost-smallpart.webp" alt="" width="1200" height="1200" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2021-03-31">March 31, 2021</time>
+          </div>
+          <h2><a href="webinars/smallpart-webinar-with-exams">smallPART Webinar with exams</a></h2>
+          <p>In this webinar, you will learn how you can use smallPART for your lessons. How to create exams and many practical tips.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="webinaire smallpart avec examens dans ce webinaire, vous apprendrez comment vous pouvez utiliser smallpart pour vos cours. comment créer des examens et de nombreux conseils pratiques.">
+          <a class="post-card__thumb" href="webinars/webinaire-smallpart-avec-examens-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/smallpart-webinar-30-03-2021.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2021-03-31">March 31, 2021</time>
+          </div>
+          <h2><a href="webinars/webinaire-smallpart-avec-examens-2">Webinaire smallPART avec examens</a></h2>
+          <p>Dans ce webinaire, vous apprendrez comment vous pouvez utiliser smallPART pour vos cours. Comment créer des examens et de nombreux conseils pratiques.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="kanban web-training what is kanban and what are the advantages?
+how can kanban be used within egroupware?">
+          <a class="post-card__thumb" href="webinars/kanban-web-training" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/vorschau-kanban-webinar.webp" alt="" width="1068" height="1068" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2021-03-26">March 26, 2021</time>
+          </div>
+          <h2><a href="webinars/kanban-web-training">Kanban Web-Training</a></h2>
+          <p>What is Kanban and what are the advantages?
+How can Kanban be used within EGroupware?</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="séminaires web sur egroupware 21.1 cher utilisateur d&#x27;egroupware,le développement d&#x27;egroupware 21.1 s&#x27;est poursuivi au cours des dernières semaines et certains bogues ont été corrigés. un grand merci à tous les testeurs de la nouvelle version.si vous souhaitez tester egroupware 21.1 dans le …">
+          <a class="post-card__thumb" href="news/seminaires-web-sur-egroupware-21-1-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/210217-header-03-1.webp" alt="" width="1000" height="425" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-03-17">March 17, 2021</time>
+          </div>
+          <h2><a href="news/seminaires-web-sur-egroupware-21-1-2">Séminaires web sur EGroupware 21.1</a></h2>
+          <p>Cher utilisateur d&#x27;EGroupware,Le développement d&#x27;EGroupware 21.1 s&#x27;est poursuivi au cours des dernières semaines et certains bogues ont été corrigés. Un grand merci à tous les testeurs de la nouvelle version.Si vous souhaitez tester EGroupware 21.1 dans le …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="webinare zu egroupware 21.1 lieber egroupware-anwender,die entwicklung von egroupware 21.1 wurde in den letzten wochen fortgesetzt und einige bugs wurden behoben. vielen dank an alle tester der neuen version.wenn sie interesse haben, egroupware 21.1 in der cloud zu testen, lassen sie es …">
+          <a class="post-card__thumb" href="news/webinare-zu-egroupware-21-1-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/210217-header-03-1.webp" alt="" width="1000" height="425" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-03-17">March 17, 2021</time>
+          </div>
+          <h2><a href="news/webinare-zu-egroupware-21-1-2">Webinare zu EGroupware 21.1</a></h2>
+          <p>Lieber EGroupware-Anwender,Die Entwicklung von EGroupware 21.1 wurde in den letzten Wochen fortgesetzt und einige Bugs wurden behoben. Vielen Dank an alle Tester der neuen Version.Wenn Sie Interesse haben, EGroupware 21.1 in der Cloud zu testen, lassen Sie es …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="webinars on egroupware 21.1 dear egroupware user,the development of egroupware 21.1 has continued over the last few weeks and some bugs have been fixed. many thanks to all testers of the new version.if you are interested in testing egroupware 21.1 in the cloud, just let us know.first …">
+          <a class="post-card__thumb" href="news/webinars-on-egroupware-21-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/210217-header-03-1.webp" alt="" width="1000" height="425" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-03-17">March 17, 2021</time>
+          </div>
+          <h2><a href="news/webinars-on-egroupware-21-1">Webinars on EGroupware 21.1</a></h2>
+          <p>Dear EGroupware user,The development of EGroupware 21.1 has continued over the last few weeks and some bugs have been fixed. Many thanks to all testers of the new version.If you are interested in testing EGroupware 21.1 in the cloud, just let us know.First …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="nouvelles fonctionnalités et applications dans egroupware 21.1 cher utilisateur d&#x27;egroupware,comme vous l&#x27;avez probablement remarqué, egroupware a (depuis le début 2021) un nouveau site web et un nouveau logo, que nous présentons ici pour la première fois. jetez un coup d&#x27;œil à notre site web egroupware il y a beaucoup à …">
+          <a class="post-card__thumb" href="news/nouvelles-fonctionnalites-et-applications-dans-egroupware-21-1-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/210217-header-03-1.webp" alt="" width="1000" height="425" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-03-10">March 10, 2021</time>
+          </div>
+          <h2><a href="news/nouvelles-fonctionnalites-et-applications-dans-egroupware-21-1-2">Nouvelles fonctionnalités et applications dans EGroupware 21.1</a></h2>
+          <p>Cher utilisateur d&#x27;EGroupware,Comme vous l&#x27;avez probablement remarqué, EGroupware a (depuis le début 2021) un nouveau site web et un nouveau logo, que nous présentons ici pour la première fois. Jetez un coup d&#x27;œil à notre Site web EGroupware il y a beaucoup à …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="smart working - educazione e scuole questo webinar mostra le nuove funzionalità di egroupware e l&#x27;invio e la presentazione di videochiamate e l&#x27;integrazione di guacamole.">
+          <a class="post-card__thumb" href="webinars/smart-working-educazione-e-scuole-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/student-2052868-1280.webp" alt="" width="1200" height="789" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2021-03-09">March 9, 2021</time>
+          </div>
+          <h2><a href="webinars/smart-working-educazione-e-scuole-2">Smart Working - Educazione e scuole</a></h2>
+          <p>Questo webinar mostra le nuove funzionalità di EGroupware e l&#x27;invio e la presentazione di videochiamate e l&#x27;integrazione di Guacamole.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="new features and applications in egroupware 21.1 dear egroupware user,as you probably noticed, egroupware has (since the beginning 2021) a new website and a new logo, which we here introduce for the first time. have a look at our egroupware website there is a lot to discover. furthermore, the development of …">
+          <a class="post-card__thumb" href="news/new-features-and-applications-in-egroupware-21-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/210217-header-03-1.webp" alt="" width="1000" height="425" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2021-02-22">February 22, 2021</time>
+          </div>
+          <h2><a href="news/new-features-and-applications-in-egroupware-21-1">New features and applications in EGroupware 21.1</a></h2>
+          <p>Dear EGroupware user,As you probably noticed, EGroupware has (since the beginning 2021) a new website and a new logo, which we here introduce for the first time. Have a look at our EGroupware Website there is a lot to discover. Furthermore, the development of …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="smallpart tutorial lti connection in this smallpart tutorial you will learn more about the lti connection to the openolatt learning management system.">
+          <a class="post-card__thumb" href="tutorials/smallpart-lti-connection" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/openolat.webp" alt="" width="1200" height="815" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2021-01-06">January 6, 2021</time>
+          </div>
+          <h2><a href="tutorials/smallpart-lti-connection">smallPART Tutorial LTI Connection</a></h2>
+          <p>In this smallPART tutorial you will learn more about the LTI connection to the OpenOlatt learning management system.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="digitalbusiness cloud - collaboration-software: egroupware with homeoffice dear community, dear egroupware users and partners,we are pleased to draw your attention to the following article from the new digitalbusiness cloud magazine:collaboration-software: egroupware extends solution with home office functionson the digitalbusiness …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/digitalbusiness-cloud-collaboration-software-egroupware-with-homeoffice" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/home-office.webp" alt="" width="640" height="426" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2020-09-03">September 3, 2020</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/digitalbusiness-cloud-collaboration-software-egroupware-with-homeoffice">digitalbusiness CLOUD - Collaboration-Software: EGroupware with Homeoffice</a></h2>
+          <p>Dear Community, dear EGroupware users and partners,we are pleased to draw your attention to the following article from the new digitalbusiness CLOUD magazine:Collaboration-Software: EGroupware extends solution with home office functionsOn the digitalbusiness …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="linux-magazin - exciting egroupware article working together dear community, dear egroupware users and partners,we are pleased to draw your attention to the following article from the new linux-magazin:working together by erik bärwaldtin the current linux-magazin - mr. bärwaldt examines about collaborative work.while …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/linux-magazin-exciting-egroupware-article" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/arbeiten-in-der-gruppe.webp" alt="" width="640" height="426" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2020-08-17">August 17, 2020</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/linux-magazin-exciting-egroupware-article">Linux-Magazin - exciting EGroupware article working together</a></h2>
+          <p>Dear community, dear EGroupware users and partners,we are pleased to draw your attention to the following article from the new Linux-Magazin:Working Together by Erik BärwaldtIn the current Linux-Magazin - Mr. Bärwaldt examines about collaborative work.&quot;While …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="egroupware comes into version 20.1 the new egroupware version 20.1 is now available.egroupware gets an extension for video-based learning and teaching, for video conferencing and for remote use of company pcs. in addition, two technical innovations make the collaboration software …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/egroupware-comes-into-version-20-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-20-1-startbildschirm.webp" alt="" width="1200" height="661" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2020-08-12">August 12, 2020</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/egroupware-comes-into-version-20-1">EGroupware comes into version 20.1</a></h2>
+          <p>The new EGroupware version 20.1 is now available.EGroupware gets an extension for video-based learning and teaching, for video conferencing and for remote use of company PCs. In addition, two technical innovations make the collaboration software …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="egroupware version 20.1 is coming soon egroupware gets an extension for video-based learning and teaching, for video conferencing and for remote use of company pcs. in addition, two technical innovations make the collaboration software resource-saving and secure.">
+          <a class="post-card__thumb" href="egroupware-in-the-press/egroupware-version-20-1-is-coming-soon" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-20-1-startbildschirm-2.webp" alt="" width="1200" height="661" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2020-08-10">August 10, 2020</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/egroupware-version-20-1-is-coming-soon">EGroupware version 20.1 is coming soon</a></h2>
+          <p>EGroupware gets an extension for video-based learning and teaching, for video conferencing and for remote use of company PCs. In addition, two technical innovations make the collaboration software resource-saving and secure.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="smallpart web-training how the smallpart module can help learning in the video and not only in the form of a text analysis of the video. simple operation for teachers and students">
+          <a class="post-card__thumb" href="webinars/smallpart-web-training" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/smallpart-webinar.webp" alt="" width="1200" height="803" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2020-05-14">May 14, 2020</time>
+          </div>
+          <h2><a href="webinars/smallpart-web-training">smallPART Web-Training</a></h2>
+          <p>How the SmallPART Module can help Learning in the video and not only in the form of a text analysis of the video. Simple operation for teachers and students</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="smart working new features to support home office the english webinar about home office tools and the implementation about guacamole and jitsi, rocket.chat server server. questions about the implentation and how to use it.">
+          <a class="post-card__thumb" href="webinars/smart-working-new-features-to-support-home-office" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/video-5055130-1280.webp" alt="" width="1200" height="774" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2020-04-24">April 24, 2020</time>
+          </div>
+          <h2><a href="webinars/smart-working-new-features-to-support-home-office">Smart working new features to support home office</a></h2>
+          <p>The english Webinar about Home Office tools and the implementation about Guacamole and Jitsi, Rocket.Chat Server Server. Questions about the implentation and how to use it.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="integrated video conferencing and remote access to desktop pcs the collaboration solution egroupware now offers a module for video conferences with the integration of jitsi. the new module guacamole provides a full-fledged home office workplace by accessing the company pc via web browser.">
+          <a class="post-card__thumb" href="news/video-conferences-and-remote-access-to-desktop-pcs-integrated" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/laptop-vodeokonferenz-6-de-01-2.webp" alt="" width="1200" height="693" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2020-04-24">April 24, 2020</time>
+          </div>
+          <h2><a href="news/video-conferences-and-remote-access-to-desktop-pcs-integrated">Integrated video conferencing and remote access to desktop PCs</a></h2>
+          <p>The collaboration solution EGroupware now offers a module for video conferences with the integration of &quot;Jitsi&quot;. The new module &quot;Guacamole&quot; provides a full-fledged home office workplace by accessing the company PC via web browser.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="it  administrator:  research about egroupware 19.1 the magazine for professional system and network technology - it administrator of heinemann verlag gmbh has published an article about working with egroupware 19.1. the article describes very well the test of the software in comparison to other alternatives …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/it-administrator-research-about-egroupware-19-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-ita-0420.webp" alt="" width="600" height="849" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2020-04-20">April 20, 2020</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/it-administrator-research-about-egroupware-19-1">IT  Administrator:  research about EGroupware 19.1</a></h2>
+          <p>The magazine for professional system and network technology - IT Administrator of Heinemann Verlag GmbH has published an article about working with EGroupware 19.1. The article describes very well the test of the software in comparison to other alternatives …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="smart working – educations and schools this webinar shows the new features in egroupware and the sending and submission of video calls and the integration of guacamole.">
+          <a class="post-card__thumb" href="webinars/smart-working-educations-and-schools" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/student-2052868-1280.webp" alt="" width="1200" height="789" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2020-03-26">March 26, 2020</time>
+          </div>
+          <h2><a href="webinars/smart-working-educations-and-schools">Smart Working – Educations and schools</a></h2>
+          <p>This webinar shows the new features in EGroupware and the sending and submission of video calls and the integration of Guacamole.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="2-factor-authentication (2fa) how to enable two factor authentification in egroupware is shown in this tutorial">
+          <a class="post-card__thumb" href="tutorials/2-factor-authentication-2fa-in-egroupware" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/cyber-security-3400657-1280.webp" alt="" width="1200" height="720" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2019-10-14">October 14, 2019</time>
+          </div>
+          <h2><a href="tutorials/2-factor-authentication-2fa-in-egroupware">2-Factor-Authentication (2FA)</a></h2>
+          <p>How to enable two Factor Authentification in EGroupware is shown in this tutorial</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="release egroupware 19.1 the egroupware gmbh has released the latest version of its collaboration solution. among the new features are above all a messenger, functions to fulfill the gdpr, improved security through two-factor authentication and a clearer design of the user interface.">
+          <a class="post-card__thumb" href="egroupware-in-the-press/press-release-egroupware-19-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-19-1-scaled.webp" alt="" width="1200" height="652" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2019-08-12">August 12, 2019</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/press-release-egroupware-19-1">Release EGroupware 19.1</a></h2>
+          <p>The EGroupware GmbH has released the latest version of its collaboration solution. Among the new features are above all a messenger, functions to fulfill the GDPR, improved security through two-factor authentication and a clearer design of the user interface.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="libreoffice online in egroupware egroupware community manager stefan unverricht at the froscon 2019 (free and open source software conference).">
+          <a class="post-card__thumb" href="tutorials/libreoffice-online-in-egroupware" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/libro-office-vortrag.webp" alt="" width="1200" height="624" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2019-08-11">August 11, 2019</time>
+          </div>
+          <h2><a href="tutorials/libreoffice-online-in-egroupware">LibreOffice Online in EGroupware</a></h2>
+          <p>EGroupware Community Manager Stefan Unverricht at the FrOSCon 2019 (Free and Open Source Software Conference).</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="release announcement egroupware 19.1 we would like to inform you that the 3rd release candidate of egroupware 19.1 is available and that the release will be published next week. start working with the new version prior to the actual release and thereby help us to find the last bugs of 19.1! …">
+          <a class="post-card__thumb" href="news/release-announcement-egroupware-19-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-19-1-scaled.webp" alt="" width="1200" height="652" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2019-08-08">August 8, 2019</time>
+          </div>
+          <h2><a href="news/release-announcement-egroupware-19-1">Release Announcement EGroupware 19.1</a></h2>
+          <p>We would like to inform you that the 3rd release candidate of EGroupware 19.1 is available and that the release will be published next week. Start working with the new version prior to the actual release and thereby help us to find the last bugs of 19.1! …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="pre-release and betatest 19.1 we&#x27;d like to invite you to join the egroupware 19.1 testing phase - no matter if you&#x27;re using egroupware on premises or in the cloud. start working with the new version prior to the actual release and thereby help us to find the last bugs of 19.1!the first …">
+          <a class="post-card__thumb" href="news/pre-release-and-betatest-19-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-19-1-scaled.webp" alt="" width="1200" height="652" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2019-07-18">July 18, 2019</time>
+          </div>
+          <h2><a href="news/pre-release-and-betatest-19-1">Pre-Release and Betatest 19.1</a></h2>
+          <p>We&#x27;d like to invite you to join the EGroupware 19.1 testing phase - no matter if you&#x27;re using EGroupware on premises or in the cloud. Start working with the new version prior to the actual release and thereby help us to find the last bugs of 19.1!The first …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="egroupware 19.1 – what is new? this online seminar shows the most important innovations of egroupware 19.1. we give users and admins practical tips and tricks for the new version and answer the questions of the online seminar participants.">
+          <a class="post-card__thumb" href="webinars/egroupware-19-1-what-is-new" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-19-1-webinar.webp" alt="" width="1200" height="607" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2019-06-26">June 26, 2019</time>
+          </div>
+          <h2><a href="webinars/egroupware-19-1-what-is-new">EGroupware 19.1 – What is new?</a></h2>
+          <p>This online seminar shows the most important innovations of EGroupware 19.1. We give users and admins practical tips and tricks for the new version and answer the questions of the online seminar participants.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="outlook caldav sync client outlook caldav synchronizer synchronizes events and contacts between outlook and egroupware. supported outlook versions are 2019, 2016, 2013, 2010 and 2007. the outlook caldav synchronizer is free and open-source software (foss). you can find and contribute …">
+          <a class="post-card__thumb" href="news/outlook-caldav-sync-egroupware" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/business-sync.webp" alt="" width="640" height="426" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2019-04-16">April 16, 2019</time>
+          </div>
+          <h2><a href="news/outlook-caldav-sync-egroupware">Outlook CalDAV Sync Client</a></h2>
+          <p>Outlook CalDav Synchronizer synchronizes events and contacts between Outlook and EGroupware. Supported Outlook versions are 2019, 2016, 2013, 2010 and 2007. The Outlook CalDav Synchronizer is Free and Open-Source Software (FOSS). You can find and contribute …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="collabora 4.0 and outlook caldav sync-client dear egroupware users,in february the schedule was already quite full and right at the beginning of the year there were two exciting events. at the univention summit egroupware was silver sponsor and at the calconnect chief developer ralf becker and community …">
+          <a class="post-card__thumb" href="news/collabora-4-0-outlook-caldav-sync-client" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/caldav-outlook-syncronizer.webp" alt="" width="1200" height="410" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2019-03-01">March 1, 2019</time>
+          </div>
+          <h2><a href="news/collabora-4-0-outlook-caldav-sync-client">Collabora 4.0 and Outlook CalDAV Sync-Client</a></h2>
+          <p>Dear EGroupware Users,in February the schedule was already quite full and right at the beginning of the year there were two exciting events. At the Univention Summit EGroupware was silver sponsor and at the CalConnect chief developer Ralf Becker and community …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="edit dokuments online – collabora online 3.1 this online seminar shows the integration of collabora in egroupware. we show tips and tricks and answer the participants&#x27; questions.">
+          <a class="post-card__thumb" href="webinars/edit-dokuments-online-collabora-online-3-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/collabora-webinar.webp" alt="" width="1200" height="596" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2018-03-15">March 15, 2018</time>
+          </div>
+          <h2><a href="webinars/edit-dokuments-online-collabora-online-3-1">Edit Dokuments online – Collabora Online 3.1</a></h2>
+          <p>This online seminar shows the integration of Collabora in EGroupware. We show tips and tricks and answer the participants&#x27; questions.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="collabora 3.1 available with egroupware there are many interesting news to share: 1. collabora online office 3.1 is now available2. collabora trial phase is completed3. collabora webinar with quick start information4. early bird booking discount for user days extended until 31 march1.collabora …">
+          <a class="post-card__thumb" href="news/collabora-3-1-available-with-egroupware" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/7-bg-134.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2018-03-14">March 14, 2018</time>
+          </div>
+          <h2><a href="news/collabora-3-1-available-with-egroupware">Collabora 3.1 available with EGroupware</a></h2>
+          <p>there are many interesting news to share: 1. Collabora Online Office 3.1 is now available2. Collabora trial phase is completed3. Collabora Webinar with Quick Start Information4. Early bird booking discount for user days extended until 31 March1.Collabora …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="collabora 3.1 disponible con egroupware hay muchas noticias interesantes que compartir: 1. collabora online office 3.1 ya está disponible2. finalización de la fase de prueba de collabora3. webinar de collabora con información de inicio rápido4. el descuento por reserva anticipada de días de usuario …">
+          <a class="post-card__thumb" href="news/collabora-3-1-disponible-con-egroupware-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/7-bg-134.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2018-03-14">March 14, 2018</time>
+          </div>
+          <h2><a href="news/collabora-3-1-disponible-con-egroupware-2">Collabora 3.1 disponible con EGroupware</a></h2>
+          <p>hay muchas noticias interesantes que compartir: 1. Collabora Online Office 3.1 ya está disponible2. Finalización de la fase de prueba de Collabora3. Webinar de Collabora con información de inicio rápido4. El descuento por reserva anticipada de días de usuario …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="cloud computing insider: working with egroupware and collabora the cloud computing insider portal of vogel it-medien gmbh has published an article about working with egroupware and collabora. the article describes very well the integration and distribution for processing documents with collabora. the functions of the crm …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/cloud-computing-insider-arbeiten-mit-egroupware-und-collabora" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/cloud-computing.webp" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2018-02-16">February 16, 2018</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/cloud-computing-insider-arbeiten-mit-egroupware-und-collabora">Cloud Computing Insider: Working with EGroupware and Collabora</a></h2>
+          <p>The Cloud Computing Insider Portal of Vogel IT-Medien GmbH has published an article about working with EGroupware and Collabora. The article describes very well the integration and distribution for processing documents with Collabora. The functions of the CRM …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="egroupware userdays 2018 in berlin the egroupware user days will take place this year from 7.-8. june in berlin. these offer the opportunity to find out about egroupware trends, learn about new solutions, benefit from best practice examples and get to know each other.further information about …">
+          <a class="post-card__thumb" href="events/egroupware-userdays-berlin" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/alte-borse-ansicht-haus.webp" alt="" width="960" height="720" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2018-02-16">February 16, 2018</time>
+          </div>
+          <h2><a href="events/egroupware-userdays-berlin">EGroupware userdays 2018 in Berlin</a></h2>
+          <p>The EGroupware User Days will take place this year from 7.-8. June in Berlin. These offer the opportunity to find out about EGroupware trends, learn about new solutions, benefit from best practice examples and get to know each other.Further information about …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="new collabora version in egroupware collabora online is a powerful libreoffice-based online office suite that lets you edit documents from your web browser. it is compatible with all major document, spreadsheet and presentation file formats and can be easily integrated into your …">
+          <a class="post-card__thumb" href="news/new-collabora-version-egroupware" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/collabora-egw.webp" alt="" width="1200" height="727" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2018-02-15">February 15, 2018</time>
+          </div>
+          <h2><a href="news/new-collabora-version-egroupware">New Collabora version in EGroupware</a></h2>
+          <p>Collabora Online is a powerful LibreOffice-based online office suite that lets you edit documents from your web browser. It is compatible with all major document, spreadsheet and presentation file formats and can be easily integrated into your …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="linux-magazin - exciting egroupware article dear community, dear egroupware users and partners,we are pleased to draw your attention to the following article from the new linux magazine:collaborative working with office suites by erik bärwaldtin the current version of linux-magazin (2018/02) mr. …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/linux-magazin-spannender-egroupware-artikel" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/linux.webp" alt="" width="640" height="359" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2018-01-18">January 18, 2018</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/linux-magazin-spannender-egroupware-artikel">Linux-Magazin - exciting EGroupware article</a></h2>
+          <p>Dear community, dear EGroupware users and partners,We are pleased to draw your attention to the following article from the new Linux magazine:Collaborative working with office suites by Erik BärwaldtIn the current version of Linux-Magazin (2018/02) Mr. …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="egroupware 17.1 with collabora - merger of classic groupware and file server with online office kaiserslautern, november 15th. 2017 - egroupware gmbh provides the new version 17.1 of its groupware. the open source solution enables collaborative editing of documents without a client in an office suite, more variable customization of the appearance, an …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/egroupware-17-1-collabora-merger-classic-groupware-file-server-online-office" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-collabora-online-de.webp" alt="" width="1200" height="627" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2017-11-15">November 15, 2017</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/egroupware-17-1-collabora-merger-classic-groupware-file-server-online-office">EGroupware 17.1 with Collabora - Merger of classic groupware and file server with online office</a></h2>
+          <p>Kaiserslautern, November 15th. 2017 - EGroupware GmbH provides the new version 17.1 of its groupware. The open source solution enables collaborative editing of documents without a client in an office suite, more variable customization of the appearance, an …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="egroupware 17.1 con collabora - fusión de groupware clásico y servidor de archivos con oficina en línea kaiserslautern, 15 de noviembre. 2017 - egroupware gmbh ofrece la nueva versión 17.1 de su groupware. la solución de código abierto permite la edición colaborativa de documentos sin un cliente en una suite ofimática, una personalización más variable de la …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/egroupware-17-1-con-collabora-fusion-de-groupware-clasico-y-servidor-de-archivos-con-oficina-en-linea-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-collabora-online-de.webp" alt="" width="1200" height="627" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2017-11-15">November 15, 2017</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/egroupware-17-1-con-collabora-fusion-de-groupware-clasico-y-servidor-de-archivos-con-oficina-en-linea-2">EGroupware 17.1 con Collabora - Fusión de groupware clásico y servidor de archivos con oficina en línea</a></h2>
+          <p>Kaiserslautern, 15 de noviembre. 2017 - EGroupware GmbH ofrece la nueva versión 17.1 de su groupware. La solución de código abierto permite la edición colaborativa de documentos sin un cliente en una suite ofimática, una personalización más variable de la …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="egroupware 17.1 is now released dear community, dear egroupware developers and users,we are pleased that egroupware 17.1 is now available. here you will find all the necessary information to upgrade to the new egroupware version.​with version 17.1, egroupware has been extended from the …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/egroupware-egroupware-17-1-now-released" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-egroupware-serial-mails.webp" alt="" width="1200" height="671" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2017-11-15">November 15, 2017</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/egroupware-egroupware-17-1-now-released">EGroupware 17.1 is now released</a></h2>
+          <p>Dear community, dear EGroupware developers and users,We are pleased that EGroupware 17.1 is now available. Here you will find all the necessary information to upgrade to the new EGroupware version.​With version 17.1, EGroupware has been extended from the …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="pro linux: egroupware 17.1 integriert collabora pro linux published an article about the new features and how collabora online office is integrated into egroupware:">
+          <a class="post-card__thumb" href="egroupware-in-the-press/pro-linux-egroupware-17-1-integriert-collabora" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/laptop-collabora3-de.webp" alt="" width="1200" height="803" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2017-11-15">November 15, 2017</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/pro-linux-egroupware-17-1-integriert-collabora">Pro Linux: EGroupware 17.1 integriert Collabora</a></h2>
+          <p>Pro Linux published an article about the new features and how Collabora Online Office is integrated into EGroupware:</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="new egroupware version 17.1 new functions this online seminar shows the integration of collabora (libreoffice online) in the egroupware 17.1 and also shows some new features of version 17.1. we show tips and tricks for editing documents and answer questions.">
+          <a class="post-card__thumb" href="webinars/new-egroupware-version-17-1-new-functions" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-egroupware-17-1.webp" alt="" width="1200" height="730" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2017-11-09">November 9, 2017</time>
+          </div>
+          <h2><a href="webinars/new-egroupware-version-17-1-new-functions">New EGroupware Version 17.1 new functions</a></h2>
+          <p>This online seminar shows the integration of Collabora (LibreOffice Online) in the EGroupware 17.1 and also shows some new features of version 17.1. We show tips and tricks for editing documents and answer Questions.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware security update 16.1 &amp; upgrade to 17.1 we would like to inform you about the following news:1. egroupware security update and bug fix release for versions 16.1 &amp; 17.1 rc2. egroupware 17.1 is coming soon.1. egroupware penetration tests / code review / security update for 16.1 and 17.1 rcmarcel …">
+          <a class="post-card__thumb" href="news/egroupware-security-update-16-1-upgrade-17-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/computer-security.webp" alt="" width="640" height="418" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2017-11-06">November 6, 2017</time>
+          </div>
+          <h2><a href="news/egroupware-security-update-16-1-upgrade-17-1">EGroupware Security Update 16.1 &amp; Upgrade to 17.1</a></h2>
+          <p>We would like to inform you about the following news:1. EGroupware security update and bug fix release for versions 16.1 &amp; 17.1 RC2. EGroupware 17.1 is coming soon.1. EGroupware Penetration Tests / Code Review / Security Update for 16.1 and 17.1 RCMarcel …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="egroupware at the openrheinruhr 2017 in oberhausen we are represented at the openrheinruhr on 4 and 5 november 2017 at the rheinisches industriemuseum in oberhausen with our community manager and a lecture.visit the exhibition, listen to the lecture, meet our community manager stefan unverricht (both days …">
+          <a class="post-card__thumb" href="events/egroupware-auf-der-openrheinruhr-2017-oberhausen" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/workshop-open-ruhr.webp" alt="" width="640" height="427" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2017-10-29">October 29, 2017</time>
+          </div>
+          <h2><a href="events/egroupware-auf-der-openrheinruhr-2017-oberhausen">EGroupware at the OpenRheinRuhr 2017 in Oberhausen</a></h2>
+          <p>We are represented at the OpenRheinRuhr on 4 and 5 November 2017 at the Rheinisches Industriemuseum in Oberhausen with our Community Manager and a lecture.Visit the exhibition, listen to the lecture, meet our Community Manager Stefan Unverricht (both days …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="egroupware 17.1 the integration of collabora online office completes egroupware to a flexible enterprise software:your users open and edit office documents such as texts, tables or presentations directly in egroupware. a ticket system, project management, crm functionalities …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/egroupware-17-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/online-calendar-app-s2.webp" alt="" width="800" height="534" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2017-10-27">October 27, 2017</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/egroupware-17-1">EGroupware 17.1</a></h2>
+          <p>The integration of Collabora Online Office completes EGroupware to a flexible enterprise software:Your users open and edit Office documents such as texts, tables or presentations directly in EGroupware. A ticket system, project management, CRM functionalities …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="first release candidate for egroupware version 17.1 egroupware version 17.1 contains many new features and improvements. just to name a few:* collabora: integration of collabora libre office online allowing to edit office document in browser* collabora: collaborative editing* collabora: free of charge trial …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/erster-release-kandidat-fur-egroupware-version-17-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/screen-collabora-19-1-01.webp" alt="" width="1200" height="638" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2017-10-26">October 26, 2017</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/erster-release-kandidat-fur-egroupware-version-17-1">First Release Candidate for EGroupware Version 17.1</a></h2>
+          <p>EGroupware Version 17.1 contains many new features and improvements. Just to name a few:* Collabora: integration of Collabora Libre Office Online allowing to edit office document in browser* Collabora: collaborative editing* Collabora: free of charge trial …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="collabora online in egroupware version 17.1 editing documents with collabora online in egroupware version 17.1">
+          <a class="post-card__thumb" href="webinars/collabora-online-egroupware-version-17-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/neu-egroupware-17-1.webp" alt="" width="1200" height="619" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2017-10-13">October 13, 2017</time>
+          </div>
+          <h2><a href="webinars/collabora-online-egroupware-version-17-1">Collabora Online in EGroupware Version 17.1</a></h2>
+          <p>Editing Documents with Collabora Online in EGroupware Version 17.1</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="online teamwork made easy “online teamwork made easy” – egroupware at the it forum of ihk. overview of the basic functions of the software and its unique selling points, such as the open source approach">
+          <a class="post-card__thumb" href="tutorials/online-teamwork-made-easy-egroupware-at-the-it-forum-of-ihk" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/teamwork-leicht-gemacht1.webp" alt="" width="1200" height="788" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2017-10-12">October 12, 2017</time>
+          </div>
+          <h2><a href="tutorials/online-teamwork-made-easy-egroupware-at-the-it-forum-of-ihk">Online Teamwork made easy</a></h2>
+          <p>“Online Teamwork made easy” – EGroupware at the IT Forum of IHK. Overview of the basic functions of the software and its unique selling points, such as the open source approach</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="encryption with s/mime (version 17.1) how do i create my own s/mime key?
+how do i store public keys of my contacts?
+how do i sign or encrypt e-mails?
+option to participate in our test phase">
+          <a class="post-card__thumb" href="webinars/verschlusselung-mit-smime-ab-egroupware-version-17-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-encription-17-1.webp" alt="" width="1065" height="732" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2017-09-13">September 13, 2017</time>
+          </div>
+          <h2><a href="webinars/verschlusselung-mit-smime-ab-egroupware-version-17-1">Encryption with S/MIME (Version 17.1)</a></h2>
+          <p>How do I create my own S/MIME key?
+How do I store public keys of my contacts?
+How do I sign or encrypt e-mails?
+Option to participate in our test phase</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="partnership egroupware gmbh &amp; collabora productivity and new webinar collabora online we&#x27;re approaching the release of egroupware version 17.1. therefore, we&#x27;re happy to announce, that collabora online will be available within egroupware starting with version 17.1.furthermore, we announce a partnership with collabora productivity, the …">
+          <a class="post-card__thumb" href="news/egroupware-collabora-online" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/collabora-egw.webp" alt="" width="1200" height="727" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2017-09-06">September 6, 2017</time>
+          </div>
+          <h2><a href="news/egroupware-collabora-online">Partnership EGroupware GmbH &amp; Collabora Productivity and New Webinar &quot;Collabora Online&quot;</a></h2>
+          <p>We&#x27;re approaching the release of EGroupware Version 17.1. Therefore, we&#x27;re happy to announce, that &quot;Collabora Online&quot; will be available within EGroupware starting with Version 17.1.Furthermore, we announce a partnership with Collabora Productivity, the …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="s/mime - encryption with egroupware startig with version 17.1 data security is becoming more and more important to most of the companies - especially to those who handle sensitive customer data.starting with egroupware version 17.1, that will soon be published, we&#x27;ll offer encryption with s/mime as an alternative to …">
+          <a class="post-card__thumb" href="news/smime-vs-pgp-webinar" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-smime.webp" alt="" width="1200" height="854" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2017-09-01">September 1, 2017</time>
+          </div>
+          <h2><a href="news/smime-vs-pgp-webinar">S/MIME - Encryption with EGroupware startig with Version 17.1</a></h2>
+          <p>data security is becoming more and more important to most of the companies - especially to those who handle sensitive customer data.Starting with EGroupware Version 17.1, that will soon be published, we&#x27;ll offer encryption with S/MIME as an alternative to …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="egroupware at the it-forum of the ihk on thursday, may 4, 2017 we were at the it forum of the ihk in ludwigshafen.topic: digital vs. analog - new ideas for the digital transformation at the workplace.after an introduction by mr. grotelüschen from the innovation and technology consulting, many …">
+          <a class="post-card__thumb" href="events/egroupware-beim-forum-der-ihk" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/ihk-forum-egroupware.webp" alt="" width="640" height="466" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2017-05-05">May 5, 2017</time>
+          </div>
+          <h2><a href="events/egroupware-beim-forum-der-ihk">EGroupware at the IT-Forum of the IHK</a></h2>
+          <p>On Thursday, May 4, 2017 we were at the IT Forum of the IHK in Ludwigshafen.Topic: &quot;Digital vs. analog - New ideas for the digital transformation at the workplace&quot;.After an introduction by Mr. Grotelüschen from the Innovation and Technology Consulting, many …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="egroupware user convention - update programme we&#x27;re looking forward to your topic suggestions concerning the users convention, and would be happy to meet you on 23rd and 24th of june in mainz.&gt;&gt; german info page about the egroupware user convention 2017kind regardsbirgit becker, egroupware gmbh">
+          <a class="post-card__thumb" href="events/egroupware-anwendertage-update-zum-programm" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/user-convention-icon4-01-2.webp" alt="" width="270" height="270" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2017-04-21">April 21, 2017</time>
+          </div>
+          <h2><a href="events/egroupware-anwendertage-update-zum-programm">EGroupware User Convention - Update Programme</a></h2>
+          <p>We&#x27;re looking forward to your topic suggestions concerning the users convention, and would be happy to meet you on 23rd and 24th of June in Mainz.&gt;&gt; German info page about the EGroupware User Convention 2017Kind regardsBirgit Becker, EGroupware GmbH</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware user convention: 23rd and 24th of june we invite you to join the egroupware user convention on 23rd and 24th of june in mainz, germany. visit our workshops, learn more about egroupware and get in contact with other users.we&#x27;re looking forward to talk to you about the new cloud hosting operational …">
+          <a class="post-card__thumb" href="news/egroupware-user-convention-23rd-and-24th-of-june" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/user-convention-icon4-01-2.webp" alt="" width="270" height="270" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2017-03-27">March 27, 2017</time>
+          </div>
+          <h2><a href="news/egroupware-user-convention-23rd-and-24th-of-june">EGroupware User Convention: 23rd and 24th of June</a></h2>
+          <p>We invite you to join the EGroupware User Convention on 23rd and 24th of June in Mainz, Germany. Visit our workshops, learn more about EGroupware and get in contact with other users.We&#x27;re looking forward to talk to you about the new cloud hosting operational …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="optimised operational concept for the egroupware hosting the move is successfully completed, all instances are now running in the new data center in frankfurt/main, germany. after an extensive research and talks to different providers, we decided to work with profitbricks as an experienced, german cloud computing …">
+          <a class="post-card__thumb" href="news/umzug-des-egroupware-hostings-zu-profitbricks" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/170320-konzept-profitbricks-en.webp" alt="" width="729" height="517" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2017-03-24">March 24, 2017</time>
+          </div>
+          <h2><a href="news/umzug-des-egroupware-hostings-zu-profitbricks">Optimised Operational Concept for the EGroupware Hosting</a></h2>
+          <p>The move is successfully completed, all instances are now running in the new data center in Frankfurt/Main, Germany. After an extensive research and talks to different providers, we decided to work with Profitbricks as an experienced, German cloud computing …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="events" data-search="egroupware at the univention summit 2017 last week we visited univention: 300 visitors, speeches about open source, app development, technics and it in education, an interesting panel discussion and several expert talks at the univention summit 2017 in bremen, germany.we particularly liked peter …">
+          <a class="post-card__thumb" href="events/ein-guter-start-ins-neue-jahr-univention-summit-2017" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/univention-sumit.webp" alt="" width="640" height="480" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Events</span><time datetime="2017-01-30">January 30, 2017</time>
+          </div>
+          <h2><a href="events/ein-guter-start-ins-neue-jahr-univention-summit-2017">EGroupware at the Univention Summit 2017</a></h2>
+          <p>Last week we visited Univention: 300 visitors, speeches about open source, app development, technics and IT in education, an interesting panel discussion and several expert talks at the Univention Summit 2017 in Bremen, Germany.We particularly liked Peter …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="the year is drawing to a close... the year is drawing to a close.we would like to take this opportunity to thank you for the trust you have placed in us.thank you for the valuable cooperation.our team will be on vacation from december 22nd, 2016 until january 2nd, 2017.should necessity …">
+          <a class="post-card__thumb" href="news/ein-ereignisreiches-jahr-neigt-sich-dem-ende-zu" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/geschenke.webp" alt="" width="640" height="340" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2016-12-21">December 21, 2016</time>
+          </div>
+          <h2><a href="news/ein-ereignisreiches-jahr-neigt-sich-dem-ende-zu">The year is drawing to a close...</a></h2>
+          <p>The year is drawing to a close.We would like to take this opportunity to thank you for the trust you have placed in us.Thank you for the valuable cooperation.Our team will be on vacation from December 22nd, 2016 until January 2nd, 2017.Should necessity …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware hosting receives a+ rating from ssl labs! www.ssllabs.com">
+          <a class="post-card__thumb" href="news/egroupware-erhalt-rating-von-ssl-labs" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/bildschirmfoto-2016-11-09-um-11-02-51-1.webp" alt="" width="1019" height="443" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2016-11-09">November 9, 2016</time>
+          </div>
+          <h2><a href="news/egroupware-erhalt-rating-von-ssl-labs">EGroupware hosting receives A+ rating from SSL LABS!</a></h2>
+          <p>www.ssllabs.com</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="egroupware 16.1 - collaborate wherever you are group calendars, address books, tasks and projects, tracking system, file management and e-mail client – the mobile version with smartphone optimisation enables online access to your data...">
+          <a class="post-card__thumb" href="tutorials/egroupware-16-1-colloboration" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-tutorial-16-1.webp" alt="" width="1000" height="530" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-10-24">October 24, 2016</time>
+          </div>
+          <h2><a href="tutorials/egroupware-16-1-colloboration">EGroupware 16.1 - Collaborate wherever you are</a></h2>
+          <p>Group Calendars, Address books, Tasks and Projects, Tracking System, File Management and E-mail client – The mobile version with smartphone optimisation enables online access to your data...</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="encryption with egroupware how to encrypt mails and infologs with egroupware?
+why can encryption be useful?
+with our partner mailvelope, we now offer a possibility to send and receive all your mails with and-to-end- encryption.">
+          <a class="post-card__thumb" href="tutorials/encryption-with-egroupware" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tutorial-encryption.webp" alt="" width="1000" height="625" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-10-24">October 24, 2016</time>
+          </div>
+          <h2><a href="tutorials/encryption-with-egroupware">Encryption with EGroupware</a></h2>
+          <p>How to encrypt mails and Infologs with EGroupware?
+Why can encryption be useful?
+With our partner mailvelope, we now offer a possibility to send and receive all your mails with and-to-end- encryption.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="egroupware 16.1: información actualizada formación web 29.06.2016 - egroupware 16.1: información de actualización ¿cuándo puedo cambiar a una nueva versión?
+¿cómo actualizar a egroupware 16.1?">
+          <a class="post-card__thumb" href="webinars/egroupware-16-1-informacion-actualizada-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-update-16-1.webp" alt="" width="1200" height="891" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2016-10-22">October 22, 2016</time>
+          </div>
+          <h2><a href="webinars/egroupware-16-1-informacion-actualizada-2">EGroupware 16.1: información actualizada</a></h2>
+          <p>Formación web 29.06.2016 - EGroupware 16.1: Información de actualización ¿Cuándo puedo cambiar a una nueva versión?
+¿Cómo actualizar a EGroupware 16.1?</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="egroupware 16.1: update infos web training 29.06.2016 – egroupware 16.1: update infos when can i change to a new version?
+how to upgrade to egroupware 16.1?">
+          <a class="post-card__thumb" href="webinars/egroupware-16-1-update-infos" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-update-16-1.webp" alt="" width="1200" height="891" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2016-10-22">October 22, 2016</time>
+          </div>
+          <h2><a href="webinars/egroupware-16-1-update-infos">EGroupware 16.1: update infos</a></h2>
+          <p>Web training 29.06.2016 – EGroupware 16.1: Update Infos When can I change to a new version?
+How to upgrade to EGroupware 16.1?</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="egroupware 16.1 calendario de eventos y recursos en línea, gestión de contactos con crm, gestión de tareas y un servidor de archivos en línea: los equipos que trabajan con egroupware pueden acceder a sus datos en cualquier momento...">
+          <a class="post-card__thumb" href="general/egroupware-16-1-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-tutorial-16-1.webp" alt="" width="1000" height="530" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2016-10-11">October 11, 2016</time>
+          </div>
+          <h2><a href="general/egroupware-16-1-2">EGroupware 16.1</a></h2>
+          <p>Calendario de eventos y recursos en línea, gestión de contactos con CRM, gestión de tareas y un servidor de archivos en línea: los equipos que trabajan con EGroupware pueden acceder a sus datos en cualquier momento...</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="general" data-search="egroupware 16.1 online kalender für events und ressourcen, kontaktmanagement mit crm, aufgaben-verwaltung und ein online fileserver – teams, die mit egroupware arbeiten, können jederzeit zugriff auf ihre daten haben...">
+          <a class="post-card__thumb" href="general/egroupware-16-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-tutorial-16-1.webp" alt="" width="1000" height="530" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">General</span><time datetime="2016-10-11">October 11, 2016</time>
+          </div>
+          <h2><a href="general/egroupware-16-1">EGroupware 16.1</a></h2>
+          <p>Online Kalender für Events und Ressourcen, Kontaktmanagement mit CRM, Aufgaben-Verwaltung und ein Online Fileserver – Teams, die mit EGroupware arbeiten, können jederzeit Zugriff auf Ihre Daten haben...</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware offers status report and is searching for beta testers the development of the groupware is going on – more about the new groupware status report, further webinars and the user test for egroupwares new tool (collaborative editing of documents)!new free webinarsthe development of the groupware is going on. we´re …">
+          <a class="post-card__thumb" href="news/egroupware-offers-status-report-and-looks-for-beta-testers-for-collaborative-editing" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/developer.webp" alt="" width="640" height="426" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2016-10-05">October 5, 2016</time>
+          </div>
+          <h2><a href="news/egroupware-offers-status-report-and-looks-for-beta-testers-for-collaborative-editing">EGroupware offers status report and is searching for beta testers</a></h2>
+          <p>The development of the groupware is going on – More about the new groupware status report, further webinars and the user test for egroupwares new tool (collaborative editing of documents)!New free webinarsThe development of the groupware is going on. We´re …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="we´re happy to inform you about the company foundation of the egroupware gmbh! the egroupware gmbh, located in kaiserslautern, germany, is taking over the egroupware business division from stylite ag, taking effect in september 2016.it thereby stands for focusing on the main competences in the software sector, as well as for expert …">
+          <a class="post-card__thumb" href="news/were-happy-to-inform-you-about-the-company-foundation-of-the-egroupware-gmbh" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-g.webp" alt="" width="449" height="449" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2016-09-07">September 7, 2016</time>
+          </div>
+          <h2><a href="news/were-happy-to-inform-you-about-the-company-foundation-of-the-egroupware-gmbh">We´re happy to inform you about the company foundation of the EGroupware GmbH!</a></h2>
+          <p>The EGroupware GmbH, located in Kaiserslautern, Germany, is taking over the EGroupware business division from Stylite AG, taking effect in September 2016.It thereby stands for focusing on the main competences in the software sector, as well as for expert …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="datacenter insider: los usuarios deciden el desarrollo de egroupware el portal datacenter insider de vogel it-medien gmbh ha publicado un artículo sobre el código abierto y las colaboraciones en el proyecto egroupware. el artículo describe muy bien las nuevas características de la versión 16.1 de egroupware y cómo los usuarios …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/datacenter-insider-los-usuarios-deciden-el-desarrollo-de-egroupware-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/office-meeting.webp" alt="" width="1000" height="667" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2016-07-05">July 5, 2016</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/datacenter-insider-los-usuarios-deciden-el-desarrollo-de-egroupware-2">Datacenter Insider: Los usuarios deciden el desarrollo de EGroupware</a></h2>
+          <p>El portal Datacenter Insider de Vogel IT-Medien GmbH ha publicado un artículo sobre el código abierto y las colaboraciones en el proyecto EGroupware. El artículo describe muy bien las nuevas características de la versión 16.1 de EGroupware y cómo los usuarios …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="datacenter insider: users decide the egroupware development the datacenter insider portal of vogel it-medien gmbh has published an article about open source and collaborations on the egroupware project. the article describes very well the new features of egroupware version 16.1 and how users can contribute to the …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/datacenter-insider-users-decide-egroupware-development" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/office-meeting.webp" alt="" width="1000" height="667" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2016-07-05">July 5, 2016</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/datacenter-insider-users-decide-egroupware-development">Datacenter Insider: Users decide the EGroupware Development</a></h2>
+          <p>The Datacenter Insider Portal of Vogel IT-Medien GmbH has published an article about Open Source and collaborations on the EGroupware project. The article describes very well the new features of EGroupware version 16.1 and how users can contribute to the …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="ix magzin: egroupware 16.1 with interface for mobile devices the ix magazine for professional information technology has published an article about the new egroupware version. the article describes very well the possibilities of working with the mobile template and the reworked user interface. the possibilities of …">
+          <a class="post-card__thumb" href="egroupware-in-the-press/ix-magzin-egroupware-16-1-mit-interface-fur-mobilgerate" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/online-infolog-mobile-sd.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2016-07-04">July 4, 2016</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/ix-magzin-egroupware-16-1-mit-interface-fur-mobilgerate">iX Magzin: EGroupware 16.1 with interface for mobile devices</a></h2>
+          <p>The ix magazine for professional information technology has published an article about the new EGroupware version. The article describes very well the possibilities of working with the mobile template and the reworked user interface. The possibilities of …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 16.1 final release stylite ag is happy to announce the immediate availability of final release 16.1.egroupware 16.1 contains many new features and improvements, just to name a few:">
+          <a class="post-card__thumb" href="news/egroupware-16-1-final-release" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tutorial-basocs.webp" alt="" width="1200" height="617" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2016-06-30">June 30, 2016</time>
+          </div>
+          <h2><a href="news/egroupware-16-1-final-release">EGroupware 16.1 final release</a></h2>
+          <p>Stylite AG is happy to announce the immediate availability of final release 16.1.EGroupware 16.1 contains many new features and improvements, just to name a few:</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 16.1. release candidate 3 stylite ag is happy to announce the third and probably last 16.1 release candidate.it contains following changes and fixes to 16.1 rc2:* esync: several fixes to improve syncing with outlook and avoid running out of memory* mysql/ubuntu 16.04: switch off …">
+          <a class="post-card__thumb" href="news/egroupware-16-1-release-candidate-3" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/e-mail-einrichtung-tutorial.webp" alt="" width="1200" height="596" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2016-06-28">June 28, 2016</time>
+          </div>
+          <h2><a href="news/egroupware-16-1-release-candidate-3">EGroupware 16.1. Release Candidate 3</a></h2>
+          <p>Stylite AG is happy to announce the third and probably last 16.1 release candidate.It contains following changes and fixes to 16.1 RC2:* eSync: several fixes to improve syncing with Outlook and avoid running out of memory* MySQL/Ubuntu 16.04: switch off …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 16.1. release candidate 2 stylite ag is happy to announce the second release candidate for egroupware 16.1.it contains following changes and fixes to 16.1 rc1:* esync: you need to recreate exchange accounts on your devices, z-push sql state backend is used now* esync: z-push 2.3 …">
+          <a class="post-card__thumb" href="news/egroupware-16-1-release-candidate-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/box.webp" alt="" width="489" height="640" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2016-06-22">June 22, 2016</time>
+          </div>
+          <h2><a href="news/egroupware-16-1-release-candidate-2">EGroupware 16.1. Release Candidate 2</a></h2>
+          <p>Stylite AG is happy to announce the second release candidate for EGroupware 16.1.It contains following changes and fixes to 16.1 RC1:* eSync: you need to recreate exchange accounts on your devices, Z-Push SQL state backend is used now* eSync: Z-Push 2.3 …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="egroupware admin basics basics of egroupware administration: how to create users and groups, add categories, define access rights and custom fields.">
+          <a class="post-card__thumb" href="tutorials/admin-basics" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tutorial-admin.webp" alt="" width="1200" height="615" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-21">June 21, 2016</time>
+          </div>
+          <h2><a href="tutorials/admin-basics">EGroupware Admin Basics</a></h2>
+          <p>Basics of EGroupware administration: How to create users and groups, add categories, define access rights and custom fields.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="basic features egroupware basic features and functions in all applications.">
+          <a class="post-card__thumb" href="tutorials/basic-features" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tutorial-basocs.webp" alt="" width="1200" height="617" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-21">June 21, 2016</time>
+          </div>
+          <h2><a href="tutorials/basic-features">Basic Features</a></h2>
+          <p>EGroupware basic features and functions in all applications.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="e-mail account management step by step guide to add an existing imap e-mail account to egroupware by using egroupware e-mail configuration wizard.">
+          <a class="post-card__thumb" href="tutorials/e-mail-account-management" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/e-mail-einrichtung-tutorial.webp" alt="" width="1200" height="596" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-21">June 21, 2016</time>
+          </div>
+          <h2><a href="tutorials/e-mail-account-management">E-Mail Account Management</a></h2>
+          <p>Step by step guide to add an existing IMAP E-mail account to EGroupware by using EGroupware E-Mail configuration wizard.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="e-mail administration an egroupware administrator can change settings for users in egroupware mail hosting, create new mail accounts shared by several users">
+          <a class="post-card__thumb" href="tutorials/e-mail-administration" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tutorial-mail-for-admins.webp" alt="" width="1200" height="563" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-21">June 21, 2016</time>
+          </div>
+          <h2><a href="tutorials/e-mail-administration">E-Mail Administration</a></h2>
+          <p>An EGroupware administrator can change settings for users in EGroupware Mail hosting, create new mail accounts shared by several users</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="egroupware 16.1: the mobile version mobile without sync?
+which apps are available?
+how to work from on the go?">
+          <a class="post-card__thumb" href="webinars/egroupware-16-1-the-mobile-version" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-16-webinar-mobil-version.webp" alt="" width="1200" height="869" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2016-06-21">June 21, 2016</time>
+          </div>
+          <h2><a href="webinars/egroupware-16-1-the-mobile-version">EGroupware 16.1: The Mobile Version</a></h2>
+          <p>Mobile without sync?
+Which apps are available?
+How to work from on the go?</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="egroupware 16.1: the new calendar how to use the calendar in version 16.1?
+how to work with the new toolbar?
+more efficiency with the new context menu?">
+          <a class="post-card__thumb" href="webinars/egroupware-16-1-the-new-calendar" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-new-calendar-egw-16-en.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2016-06-21">June 21, 2016</time>
+          </div>
+          <h2><a href="webinars/egroupware-16-1-the-new-calendar">EGroupware 16.1: The new Calendar</a></h2>
+          <p>How to use the Calendar in Version 16.1?
+How to work with the new toolbar?
+More efficiency with the new context menu?</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="preview egroupware version 16.1 – part 2 we show a preview of egroupware version 16.1, focus on brand new calendar, mobile template and various design improvements.">
+          <a class="post-card__thumb" href="webinars/vorschau-auf-egroupware-version-16-1-teil-2-german" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-16-1-preview.webp" alt="" width="1200" height="543" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2016-06-21">June 21, 2016</time>
+          </div>
+          <h2><a href="webinars/vorschau-auf-egroupware-version-16-1-teil-2-german">Preview EGroupware Version 16.1 – Part 2</a></h2>
+          <p>We show a preview of EGroupware version 16.1, focus on brand new calendar, mobile template and various design improvements.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="e-mail basics basic features of e-mail application: folder management, vacation notice settings, preview options, the use of context menus">
+          <a class="post-card__thumb" href="tutorials/e-mail-basics" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tutorial-mail-basic-functions.webp" alt="" width="1200" height="485" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-16">June 16, 2016</time>
+          </div>
+          <h2><a href="tutorials/e-mail-basics">E-Mail Basics</a></h2>
+          <p>Basic features of E-Mail application: Folder management, vacation notice settings, preview options, the use of context menus</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="egroupware crm - customer relationship management software customer relationship management” – this video shows, how contacts and events of customers or partners can be edited with addressbook, calendar and infolog.">
+          <a class="post-card__thumb" href="tutorials/egroupware-crm" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tutorial-crm.webp" alt="" width="1200" height="576" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-16">June 16, 2016</time>
+          </div>
+          <h2><a href="tutorials/egroupware-crm">EGroupware CRM - Customer Relationship Management Software</a></h2>
+          <p>Customer Relationship Management” – This video shows, how contacts and events of customers or partners can be edited with Addressbook, Calendar and InfoLog.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="customizing egroupware how to customize egroupware perfectly to the needs of my company – without any programming">
+          <a class="post-card__thumb" href="tutorials/egroupware-customizing" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tutorial-egroupware-anpassen.webp" alt="" width="1200" height="612" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-16">June 16, 2016</time>
+          </div>
+          <h2><a href="tutorials/egroupware-customizing">Customizing EGroupware</a></h2>
+          <p>How to customize EGroupware perfectly to the needs of my company – without any programming</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="egroupware trial introduction we´re happy that you´re going to try our software for thirty days! this video helps users starting with our trial by providing useful tips and showing, where to find further information and more free tutorials.">
+          <a class="post-card__thumb" href="tutorials/egroupware-trial-introduction" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-trials-tutorial.webp" alt="" width="1200" height="649" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-16">June 16, 2016</time>
+          </div>
+          <h2><a href="tutorials/egroupware-trial-introduction">EGroupware trial introduction</a></h2>
+          <p>We´re happy that you´re going to try our software for thirty days! This video helps users starting with our trial by providing useful tips and showing, where to find further information and more free tutorials.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="file manager tips and tricks how to mail files as attachment, download link, read-only share or writable share – with time limit option.">
+          <a class="post-card__thumb" href="tutorials/file-manager" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/filemanager-tutorial.webp" alt="" width="1200" height="497" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-16">June 16, 2016</time>
+          </div>
+          <h2><a href="tutorials/file-manager">File Manager</a></h2>
+          <p>Tips and tricks how to mail files as attachment, download link, read-only share or writable share – with time limit option.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="how to install egroupware on an ubuntu 16.04 server our tutorials show how to install the egroupware enterprise line or community edition. furthermore, we offer a video about the installation of egroupware in a profitbricks data center.">
+          <a class="post-card__thumb" href="tutorials/installation-ubuntu-server" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tutorial-installatgion.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-16">June 16, 2016</time>
+          </div>
+          <h2><a href="tutorials/installation-ubuntu-server">How to install EGroupware on an Ubuntu 16.04 Server</a></h2>
+          <p>Our tutorials show how to install the EGroupware Enterprise Line or Community Edition. Furthermore, we offer a video about the installation of EGroupware in a ProfitBricks data center.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="synchronisation – android a step by step guide to synchronise egroupware with android smart phone or tablet.">
+          <a class="post-card__thumb" href="tutorials/synchronisation-android" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/synchronisation-android-tutorial.webp" alt="" width="1200" height="684" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-16">June 16, 2016</time>
+          </div>
+          <h2><a href="tutorials/synchronisation-android">Synchronisation – Android</a></h2>
+          <p>A step by step guide to synchronise EGroupware with Android smart phone or tablet.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="tutorials" data-search="synchronisation – apple a step by step guide to synchronise egroupware with iphone or ipad.">
+          <a class="post-card__thumb" href="tutorials/synchronisation-apple" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tutorial-apple-sync.webp" alt="" width="1200" height="792" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Tutorials</span><time datetime="2016-06-16">June 16, 2016</time>
+          </div>
+          <h2><a href="tutorials/synchronisation-apple">Synchronisation – Apple</a></h2>
+          <p>A step by step guide to synchronise EGroupware with iPhone or iPad.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 16.1. first release candidate stylite ag is happy to announce the first 16.1 release candidate.16.1 contains many new features and improvements, just to name a few:* calendar: complete rewrite of user interface for improved functionality, drag&amp;drop, context menu* mobile: new mobile phone …">
+          <a class="post-card__thumb" href="news/egroupware-16-1-first-release-candidate" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/software-rc.webp" alt="" width="640" height="428" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2016-06-07">June 7, 2016</time>
+          </div>
+          <h2><a href="news/egroupware-16-1-first-release-candidate">EGroupware 16.1. first release candidate</a></h2>
+          <p>Stylite AG is happy to announce the first 16.1 release candidate.16.1 contains many new features and improvements, just to name a few:* Calendar: complete rewrite of user interface for improved functionality, drag&amp;drop, context menu* Mobile: new mobile phone …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="preview egroupware version 16.1 – part 1 we show a preview of egroupware version 16.1, focus on brand new calendar, mobile template and various design improvements. we explain, how you work more efficiently with 16.1 and answer egroupware users questions.">
+          <a class="post-card__thumb" href="webinars/vorschau-auf-egroupware-version-16-1-teil-1-german" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/egroupware-16-1-preview-part1.webp" alt="" width="1200" height="605" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2016-03-09">March 9, 2016</time>
+          </div>
+          <h2><a href="webinars/vorschau-auf-egroupware-version-16-1-teil-1-german">Preview EGroupware Version 16.1 – Part 1</a></h2>
+          <p>We show a preview of EGroupware version 16.1, focus on brand new calendar, mobile template and various design improvements. We explain, how you work more efficiently with 16.1 and answer EGroupware users questions.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="egroupware expert panel the egroupware team answers live customer questions - our topics this time:
+mail, calendar, address book, project manager and file manager.">
+          <a class="post-card__thumb" href="webinars/egroupware-expertennunde-german" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-egroupware-expertenrunde.webp" alt="" width="1200" height="836" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2016-02-03">February 3, 2016</time>
+          </div>
+          <h2><a href="webinars/egroupware-expertennunde-german">EGroupware expert panel</a></h2>
+          <p>The EGroupware team answers live customer questions - Our topics this time:
+Mail, calendar, address book, project manager and file manager.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="egroupware serial emails how do i use placeholders for personalised serial e-mails?
+how do i work more efficiently with pre-formulated mails?
+our support team is always happy to answer questions about serial e-mails.">
+          <a class="post-card__thumb" href="webinars/egroupware-serien-e-mails-german" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-egroupware-serial-mails.webp" alt="" width="1200" height="671" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2016-01-14">January 14, 2016</time>
+          </div>
+          <h2><a href="webinars/egroupware-serien-e-mails-german">EGroupware serial emails</a></h2>
+          <p>How do I use placeholders for personalised serial e-mails?
+How do I work more efficiently with pre-formulated mails?
+Our support team is always happy to answer questions about serial e-mails.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="webinars" data-search="egroupware data import in this live-webinar for it-decider and user wie answer questions and share expert knowledge about data import with egroupware.">
+          <a class="post-card__thumb" href="webinars/egroupware-datenimport-german" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/webinar-datenimport.webp" alt="" width="1200" height="685" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">Webinars</span><time datetime="2015-12-10">December 10, 2015</time>
+          </div>
+          <h2><a href="webinars/egroupware-datenimport-german">EGroupware data import</a></h2>
+          <p>In this Live-Webinar for IT-decider and user wie answer questions and share expert knowledge about data import with EGroupware.</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="press" data-search="ix magzin: groupware-paket via software-as-a-service the ix magazine for professional information technology has published an article about the availability of egroupware as software as a service. the article describes very well the possibilities and easy you can get access to the software:">
+          <a class="post-card__thumb" href="egroupware-in-the-press/ix-magzin-groupware-paket-via-software-service" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/service.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">In the press</span><time datetime="2015-09-18">September 18, 2015</time>
+          </div>
+          <h2><a href="egroupware-in-the-press/ix-magzin-groupware-paket-via-software-service">iX Magzin: Groupware-Paket via Software-as-a-Service</a></h2>
+          <p>The ix magazine for professional information technology has published an article about the availability of EGroupware as Software as a Service. The article describes very well the possibilities and easy you can get access to the software:</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 14.2 provides dropbox alternative with the new version of egroupware also large files can be exchanged without size limits in mail traffic. a newly developed template simplifies the work on mobile devices. user may select their most desired information on a dashboard.kirchheimbolanden, …">
+          <a class="post-card__thumb" href="news/egroupware-14-2-provides-dropbox-alternative" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/screenshots-19-filemgr-2-04.webp" alt="" width="1200" height="768" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2015-02-12">February 12, 2015</time>
+          </div>
+          <h2><a href="news/egroupware-14-2-provides-dropbox-alternative">EGroupware 14.2 provides Dropbox alternative</a></h2>
+          <p>With the new version of EGroupware also large files can be exchanged without size limits in mail traffic. A newly developed template simplifies the work on mobile devices. User may select their most desired information on a dashboard.Kirchheimbolanden, …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="final release candidate for 14.2 and new tutorial administration basics i&#x27;m happy to announce availability of administration basics tutorial:and our last release candidate containing following fixes and improvements:3. release candidate for upcoming 14.2 releaseall apps: activate cross-browser autocompleteall apps: printing of …">
+          <a class="post-card__thumb" href="news/final-release-candidate-for-14-2-and-new-tutorial-administration-basics" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/admin-06.webp" alt="" width="417" height="417" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2015-02-10">February 10, 2015</time>
+          </div>
+          <h2><a href="news/final-release-candidate-for-14-2-and-new-tutorial-administration-basics">Final release candidate for 14.2 and new tutorial administration basics</a></h2>
+          <p>I&#x27;m happy to announce availability of administration basics tutorial:and our last release candidate containing following fixes and improvements:3. release candidate for upcoming 14.2 releaseAll apps: Activate cross-browser autocompleteAll apps: printing of …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="2. rc for egroupware 14.2 released we decided to have an other final release candidate, because of many noteworthy improvements since first release candidate:">
+          <a class="post-card__thumb" href="news/2-rc-for-egroupware-14-2-released" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/computer.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2015-01-22">January 22, 2015</time>
+          </div>
+          <h2><a href="news/2-rc-for-egroupware-14-2-released">2. RC for EGroupware 14.2 released</a></h2>
+          <p>We decided to have an other final release candidate, because of many noteworthy improvements since first release candidate:</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 14.2 rc available i&#x27;m happy to announce immediate availability of a new feature complete release candidate for next egroupware version 14.2installation packages are available via openbuildservice server:egroupware:trunk project, see our download page:/downloadrelease candidate …">
+          <a class="post-card__thumb" href="news/egroupware-14-2-rc-available" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/computer-service.webp" alt="" width="640" height="516" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2015-01-13">January 13, 2015</time>
+          </div>
+          <h2><a href="news/egroupware-14-2-rc-available">EGroupware 14.2 RC available</a></h2>
+          <p>I&#x27;m happy to announce immediate availability of a new feature complete release candidate for next EGroupware version 14.2Installation packages are available via OpenBuildService server:eGroupWare:trunk project, see our download page:/downloadRelease candidate …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 14.2 beta released i&#x27;m happy to announce the immediate availability of new 14.2 beta.14.2 adds three - in our opinion - most wanted features:1. dropbox like sharing of filesegroupware users often have the need to exchange files with people outside there own egroupware.with file …">
+          <a class="post-card__thumb" href="news/egroupware-14-2-beta-released" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/tool-software.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2014-12-10">December 10, 2014</time>
+          </div>
+          <h2><a href="news/egroupware-14-2-beta-released">EGroupware 14.2 Beta released</a></h2>
+          <p>I&#x27;m happy to announce the immediate availability of new 14.2 beta.14.2 adds three - in our opinion - most wanted features:1. Dropbox like sharing of filesEGroupware users often have the need to exchange files with people outside there own EGroupware.With file …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 14.1 pubblicato gestione della squadra con l&#x27;open sourceegroupware 14.1 release pubblicato il 10 luglio 2014come processi efficienti possono essere fusi con la migliore sicurezza possibile lo dimostra egroupware con la sua ultima release della versione 14.1, che è stata resa …">
+          <a class="post-card__thumb" href="news/egroupware-14-1-pubblicato-2" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/csm-egroupware-tablet-calendar-en-6edf021857.webp" alt="" width="512" height="386" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2014-07-10">July 10, 2014</time>
+          </div>
+          <h2><a href="news/egroupware-14-1-pubblicato-2">EGroupware 14.1 pubblicato</a></h2>
+          <p>Gestione della squadra con l&#x27;Open SourceEGroupware 14.1 Release pubblicato il 10 luglio 2014Come processi efficienti possono essere fusi con la migliore sicurezza possibile lo dimostra EGroupware con la sua ultima release della versione 14.1, che è stata resa …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="egroupware 14.1 veröffentlicht team management with open sourceegroupware 14.1 release published on 10th july 2014how efficient processes can be merged with best possible security shows egroupware with its latest release of version 14.1, which was made public today, 10th july 2014.with …">
+          <a class="post-card__thumb" href="news/egroupware-14-1-released" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/csm-egroupware-tablet-calendar-en-6edf021857.webp" alt="" width="512" height="386" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2014-07-10">July 10, 2014</time>
+          </div>
+          <h2><a href="news/egroupware-14-1-released">EGroupware 14.1 veröffentlicht</a></h2>
+          <p>Team Management with Open SourceEGroupware 14.1 Release published on 10th July 2014How efficient processes can be merged with best possible security shows EGroupware with its latest release of version 14.1, which was made public today, 10th July 2014.With …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="14.1 release, new website and group administration for 1.8 users 14.1 is a huge step for egroupware and beside all usability improvements and features, we also changed what we define as community edition (ce):1.8 was a copy of our 2009 subscription version epl 9.2, that ensured there were many reasons to buy our …">
+          <a class="post-card__thumb" href="news/14-1-release-new-website-and-group-administration-for-1-8-users" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/template-webseite.webp" alt="" width="640" height="426" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2014-07-04">July 4, 2014</time>
+          </div>
+          <h2><a href="news/14-1-release-new-website-and-group-administration-for-1-8-users">14.1 release, new website and group administration for 1.8 users</a></h2>
+          <p>14.1 is a huge step for EGroupware and beside all usability improvements and features, we also changed what we define as community edition (CE):1.8 was a copy of our 2009 subscription version EPL 9.2, that ensured there were many reasons to buy our …</p>
+        </article>
+        <article class="post-card post-card--img reveal" data-group="news" data-search="what is that new etemplate2 in 14.1? etemplate is a rendering engine used in previous egroupware versions to generate user interface for most apps. it takes content from an app plus a template and renders it on the server as html. when user submits that html form in its browser etemplate engine …">
+          <a class="post-card__thumb" href="news/what-is-that-new-etemplate2-in-14-1" tabindex="-1" aria-hidden="true"><img class="post-card__img" src="../assets/img/import/programmer-2.webp" alt="" width="640" height="444" loading="lazy" decoding="async"></a>
+          <div class="post-card__meta">
+            <span class="post-card__cat">News</span><time datetime="2014-06-10">June 10, 2014</time>
+          </div>
+          <h2><a href="news/what-is-that-new-etemplate2-in-14-1">What is that new eTemplate2 in 14.1?</a></h2>
+          <p>eTemplate is a rendering engine used in previous EGroupware versions to generate user interface for most apps. It takes content from an app plus a template and renders it on the server as HTML. When user submits that HTML form in its browser eTemplate engine …</p>
+        </article>
+        </div>
+        <div class="module-empty" data-module-empty hidden>
+          <h2 style="font-size:var(--fs-h3)">Nothing found</h2>
+          <p class="mt-2">No post matches this selection.</p>
+          <div class="btn-row center mt-3">
+            <button class="btn btn--ghost" type="button" data-filter-reset>Reset</button>
+          </div>
+        </div>
+        <p class="visually-hidden" role="status" data-filter-status
+           data-one="1 post" data-many="{n} posts"></p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2>Try EGroupware free for 30 days</h2>
+          <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
+          <div class="btn-row center">
+            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
+            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="./">
+            <img src="../assets/img/EGroupware-Logo-invert.svg" alt="EGroupware"
+                 width="173" height="34" loading="lazy">
+          </a>
+          <p>EGroupware is the open source online office for companies, public administrations and educational institutions. Developed, hosted and supported in Germany.</p>
+          <p class="mt-2"><strong style="color:#fff">Developed &amp; hosted in Germany</strong></p>
+        </div>
+      <div>
+        <h2 class="footer-h">Product</h2>
+        <ul>
+          <li><a href="features">Features</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="industries">Industries</a></li>
+          <li><a href="./">EGroupware 26</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Company</h2>
+        <ul>
+          <li><a href="about">About us</a></li>
+          <li><a href="support">Support</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Legal</h2>
+        <ul>
+          <li><a href="imprint">Imprint</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="site-terms">Site terms</a></li>
+          <li><a href="cancel-contract">Cancel contract</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> EGroupware GmbH. All rights reserved.</p>
+        <nav aria-label="Legal"><a href="imprint">Imprint</a> <a href="privacy">Privacy</a> <a href="site-terms">Site terms</a> <a href="cancel-contract">Cancel contract</a></nav>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en" data-theme-init>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EGroupware CE vs EPL - EGroupware</title>
+  <meta name="description" content="Here you will find a list of the differences between the EGroupware CE (Communitiy Editon) and the EPL version.">
+  <link rel="canonical" href="https://www.egroupware.org/en/community-edition-vs-epl">
+  <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/community-edition-vs-epl">
+  <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/community-edition-vs-epl">
+  <link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/community-edition-vs-epl">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EGroupware">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="EGroupware CE vs EPL - EGroupware">
+  <meta property="og:description" content="Here you will find a list of the differences between the EGroupware CE (Communitiy Editon) and the EPL version.">
+  <meta property="og:url" content="https://www.egroupware.org/en/community-edition-vs-epl">
+  <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/css/style.css" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    (function(){try{var t=localStorage.getItem("egw-theme");
+    if(t==="dark"||t==="light"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="./">
+        <img class="brand-light" src="../assets/img/EGroupware-Logo.svg"
+             alt="EGroupware – Smart Online Office" width="189" height="37" fetchpriority="high">
+        <img class="brand-dark" src="../assets/img/EGroupware-Logo-invert.svg"
+             alt="" aria-hidden="true" width="189" height="37">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="primary-nav">
+        <li><a href="./">Home</a></li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="features">Features</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Features – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Organisation</p><ul><li><a href="calendar"><img class="nav-sub__icon" src="../assets/img/icons/calendar.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Calendar</span></a></li><li><a href="contacts"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Contacts</span></a></li><li><a href="tasks"><img class="nav-sub__icon" src="../assets/img/icons/infolog.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Tasks</span></a></li><li><a href="projects"><img class="nav-sub__icon" src="../assets/img/icons/projectmanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Projects</span></a></li><li><a href="timesheet"><img class="nav-sub__icon" src="../assets/img/icons/timesheet.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Timesheet</span></a></li><li><a href="resources"><img class="nav-sub__icon" src="../assets/img/icons/resources.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Ressources</span></a></li><li><a href="e-invoicing"><img class="nav-sub__icon" src="../assets/img/icons/einvoice.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-Invoice</span></a></li><li><a href="administration"><img class="nav-sub__icon" src="../assets/img/icons/admin.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Administration</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Communication</p><ul><li><a href="email"><img class="nav-sub__icon" src="../assets/img/icons/mail.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Email</span></a></li><li><a href="chat"><img class="nav-sub__icon" src="../assets/img/icons/chat.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Team Chat</span></a></li><li><a href="videoconferences"><img class="nav-sub__icon" src="../assets/img/icons/videoconference.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Videoconferences</span></a></li><li><a href="file-manager"><img class="nav-sub__icon" src="../assets/img/icons/filemanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Documents</span></a></li><li><a href="online-office"><img class="nav-sub__icon" src="../assets/img/icons/collabora.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Online Office</span></a></li><li><a href="kanban"><img class="nav-sub__icon" src="../assets/img/icons/kanban.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kanban</span></a></li><li><a href="helpdesk"><img class="nav-sub__icon" src="../assets/img/icons/tracker.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Helpdesk</span></a></li><li><a href="crm"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CRM</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Tech &amp; integration</p><ul><li><a href="cti-phone-integration"><img class="nav-sub__icon" src="../assets/img/icons/cti.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CTI Telefon-Integration</span></a></li><li><a href="remote-work"><img class="nav-sub__icon" src="../assets/img/icons/home.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Homeoffice Integration</span></a></li><li><a href="mobile-access"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span>Mobil Access</span></a></li><li><a href="synchronisation"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span><span>Synchronisation</span></a></li><li><a href="guacamole"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span><span>Guacamole</span></a></li><li><a href="univention"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><span>Univention Corporate Server (UCS)</span></a></li><li><a href="vidoteach"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span><span>Video based learning</span></a></li><li><a href="community-edition-vs-epl" aria-current="page"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span><span>EGroupware CE vs EPL</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="pricing">Pricing</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Pricing – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="pricing"><span>Pricing</span></a></li><li><a href="why-cloud"><span>Why Cloud?</span></a></li><li><a href="why-on-premise"><span>Why On-premise?</span></a></li><li><a href="cloud-services"><span>EGroupware Cloud Service</span></a></li><li><a href="trial"><span>Trial Version</span></a></li><li><a href="demo"><span>Online Demo</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="industries">Industries</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Industries – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="industries"><span>Industries</span></a></li><li><a href="education"><span>Solutions for educational institutions</span></a></li><li><a href="collaboration-tools"><span>Collaboration Tools</span></a></li><li><a href="exchange-alternative"><span>Exchange Alternative</span></a></li><li><a href="dropbox-alternative"><span>Dropbox alternative</span></a></li><li><a href="owncloud-alternative"><span>Owncloud Alternative</span></a></li><li><a href="google-calendar-alternative"><span>Google Calendar Alternative</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="about">About</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="About – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="about"><span>About</span></a></li><li><a href="testimonials"><span>Testimonials</span></a></li><li><a href="why-egroupware"><span>Why EGroupware?</span></a></li><li><a href="press"><span>Press</span></a></li><li><a href="community"><span>Community</span></a></li><li><a href="technology-partners"><span>Technology partner</span></a></li><li><a href="integration-partners"><span>Integration partner</span></a></li><li><a href="resellers"><span>EGroupware Reseller</span></a></li><li><a href="become-reseller"><span>Become Reseller</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="support">Support</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Support – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="support"><span>Support</span></a></li><li><a href="customer-support-login"><span>Customer Support Login</span></a></li><li><a href="download"><span>Download</span></a></li><li><a href="installation-on-your-own-server"><span>Installation on your own server</span></a></li><li><a href="tutorials"><span>Webinars and tutorials</span></a></li><li><a href="caldav-synchronizer"><span>Caldav Synchronizer</span></a></li><li><a href="security-and-data-privacy"><span>Security and data privacy</span></a></li><li><a href="status"><span>EGroupware Cloud Status</span></a></li></ul></div>
+        </div>
+        </li>
+        <li><a href="blog">News</a></li>
+        <li><a href="contact">Contact</a></li>
+          <li class="nav-cta"><a class="btn btn--primary" href="contact">Start 30-day free trial</a></li>
+          <li class="nav-theme">
+            <button class="theme-toggle-inline" type="button">
+              <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+              <span>Switch colour scheme</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language"><a href="../de/community-edition-vs-epl" hreflang="de" data-set-lang="de">DE</a><a href="community-edition-vs-epl" hreflang="en" data-set-lang="en" aria-current="true">EN</a></div>
+        <button class="theme-toggle" type="button" aria-label="Switch colour scheme"
+                data-label-dark="Switch colour scheme" data-label-light="Switch colour scheme">
+          <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+        </button>
+        <a class="btn btn--primary btn--sm" href="contact">Start 30-day free trial</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="primary-nav" aria-label="Open menu">
+          <span class="i-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg></span><span class="i-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/egroupware-ce-vs-epl):
+       - Unbekannte Shortcodes entfernt: go_pricing, vc_toggle. Text an der Stelle prüfen.
+       - Enthielt 1 eingebettetes Video (https://www.youtube.com/watch?v=9TieCfVdm5E).
+       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
+    -->
+    <section class="page-hero page-hero--split">
+      <div class="wrap page-hero__grid">
+        <div>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="./">Home</a> <span aria-hidden="true">›</span> 
+        </nav>
+        <h1>EGroupware CE vs EPL</h1>
+        <p class="lead">EGroupware will offer an application for mandatory e-invoicing in Germany starting in 2025. It supports the XRechnung and ZUGFeRD formats in compliance with EU standard EN 16931.</p>
+        </div>
+        <div class="hero-shot">
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/23-grafik-ce-epl-en.webp" alt="EGroupware CE vs EPL" width="1200" height="848" fetchpriority="high" decoding="async"></figure>
+        </div>
+      </div>
+    </section>
+    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>EGroupware CE vs EPL</span></div></nav>
+    <section class="section">
+      <div class="wrap">
+        <div class="grid grid-2">
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.5 5.2a7.5 7.5 0 1 0 0 13.6M3.5 10h9M3.5 14h9"/></svg></span>
+          <h2>New: Create and receive legally compliant e-invoices</h2>
+          <p>EGroupware will offer an application for mandatory e-invoicing in Germany starting in 2025. It supports the XRechnung and ZUGFeRD formats in compliance with EU standard EN 16931.</p>
+          
+          <div class="link-list mt-3"><a href="e-invoicing">e-invoicing</a></div>
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
+          <h2>Community Edition (CE) or Enterprise Line (EPL)?</h2>
+          <p>The Community Edition offers the basis for your online office with numerous functions. Here you can read all about the additional functions of the EGroupware EPL that go beyond the basics of the CE.</p>
+          
+          
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section--soft">
+      <div class="wrap split split--flip">
+        <div class="reveal">
+          <h2>Differences CE and EPL version</h2>
+          
+          <ul class="check-list mt-3"><li>EGroupware offers all basic functions as an open source variant in the free community version &quot;CE&quot;.</li><li>Under the so-called EPL functions, EGroupware bundles applications and functions that are especially interesting for companies or large organizations.</li><li>Preferred support and cheaper support hours for EPL/Cloud customers.</li><li>The change between Community Edition &quot;CE&quot; and Enterprise Line &quot;EPL&quot; is possible at any time and easily in both directions. The databases for both versions are identical, therefore all data is preserved.</li><li>The license for EPL is valid indefinitely, the access to the updates of the EPL functions is only during the term of the contracts.</li><li>The e-invoicing app is only available in the EPL version.</li></ul>
+          
+        </div>
+        <div class="reveal">
+          <figure class="shot"><img class="shot__img" src="../assets/img/import/23-grafik-ce-epl-en.webp" alt="Differences CE and EPL version" width="1200" height="848" loading="lazy" decoding="async"></figure>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="grid grid-3">
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.8"/><path d="m5.6 5.6 3.7 3.7m5.4 5.4 3.7 3.7m0-12.8-3.7 3.7m-5.4 5.4-3.7 3.7"/></svg></span>
+          <h2>Support and services</h2>
+          <p>Support Platform MyEGroupware Installation and migration support</p>
+          <ul class="check-list mt-3"><li>Access to the EGroupware support platform for technical and administrative support.</li><li>Fast question and error management via tickets for all applications and functions.</li><li>Direct access to EGroupware software development or system engineers for installation and migration support. Easy appointment scheduling as needed.</li><li>Installation support within one month after purchase of an EGroupware EPL package (from 20 ccu) is included. Of course we also offer support and consulting for small installations or larger projects on a support budget basis.</li><li>Support for connection to ActiveDirecty or LDAP environment, integration of Samba or NAS drives, migration to EGroupware mail server including spam and virus filtering or home office support via Guacamole.</li><li>Support services are also available for users of the CE version, but this will cost double the hourly rates for the service.</li></ul>
+          
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
+          <h2>Kanban Board</h2>
+          <p>Controlling workflows with Kanban In EGroupware EPL you can control processes easily and smartly with the new Kanban application. The Kanban method is suitable for sales processes, project organisation, software development or the management of other services. The core of Kanban is visualisation and limitation of the tasks to be completed simultaneously. As soon as capacities become free, an employee &quot;takes&quot; a task from the pool and pulls it onto &quot;Work in Progress&quot;.</p>
+          
+          
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
+          <h2>Telephony integration with Placetel</h2>
+          <p>Connect your contacts or your customer management (CRM) directly with your telephone system. With the integration, the CRM view of the contact opens automatically for incoming and outgoing telephone calls. Further integration, e.g. display of telephone lists, will follow.</p>
+          <ul class="check-list mt-3"><li>The basic functionalities for telephony integration are also available in the CE version or can also be configured for other telephone systems. Of course, the telephone system must support this and you must define all details of the interface.</li><li>For the Placetel telephone system there is a special configuration where you only enter your API key from Placetel and generate a token for the signature header. Conversely, for Placetel you enter the &quot;URL of your API endpoint (webhook for incoming calls)&quot; displayed in EGroupware and the token under Integration -&gt; Notify-Api.</li><li>The function in EGroupware can be found in Administration -&gt; Applications -&gt; EPL functions -&gt; Configuration of the application.</li></ul>
+          
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
+          <h2>Administration and documentation (GDPR)</h2>
+          <p>Group management &amp; access control Documentation of all administrative actions (GDPR &amp; Audit)</p>
+          <ul class="check-list mt-3"><li>Create and manage any number of user groups. Management of access permissions via group membership. New users can easily be assigned to the appropriate groups and automatically have the appropriate access to calendars, address books or documents.</li><li>The CE version contains 4 standard groups, further access rights can be managed on user level.</li><li>EGroupware EPL automatically records all administrative changes and offers the possibility to save a comment and the person responsible.</li><li>For example, it is easy to track when a user changed to the Marketing group and thus gained access to their address books, tasks or documents. Or which access rights or settings were changed when, by whom and for what reasons.</li><li>The documentation cannot be changed and is therefore also suitable for audits without major effort.</li></ul>
+          
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
+          <h2>General functions and features</h2>
+          <p></p>
+          <ul class="check-list mt-3"><li>Service module / ticket system: Graphical overviews and reporting for transparency and traceability of service processes.</li><li>Global search across all modules as a superordinate function for fast data research.</li><li>Flexible database view generator for individually designable data views and the provision of information for interfaces.</li><li>Samba connection: easy integration of SMB user and group folders. Secure access to your own Samba file server via EGroupware in the browser using two-factor authentication.</li></ul>
+          
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section--soft">
+      <div class="wrap split split--flip">
+        <div class="reveal">
+          <h2>Synchronisation and Mobile Device Management</h2>
+          
+          <ul class="check-list mt-3"><li>eSync Provisioning: ActiveSync based Mobile Device Management (MDM) for managing synchronization profiles on smartphones. Synchronization via eSync is also included in the CE version, but no additional provisioning options.</li><li>Android DAVx5: With the Managed DAVx5 Version for Android, Mobile Device Management can now also be implemented for synchronization via CalDAV/CardDAV. The synchronization protocol in general works for Android as well as desktop clients or Apple devices also in the CE version.</li></ul>
+          
+        </div>
+        <div class="reveal">
+          <figure class="shot"><img class="shot__img" src="../assets/img/import/caldav-outlook-sync-04.webp" alt="Synchronisation and Mobile Device Management" width="1200" height="848" loading="lazy" decoding="async"></figure>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="grid grid-3">
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
+          <h2>Address book policies (GDPR support)</h2>
+          <p></p>
+          <ul class="check-list mt-3"><li>Use address book policies to simplify implementation of the GDPR.</li><li>Set rules for your individual address books. Which fields need to be filled in? Who in the company is allowed to access them? Who is allowed to see contacts&#x27; private phone numbers?</li><li>Practical: The rules can be printed and stored directly in the directory of processing activities (directory of procedures).</li></ul>
+          
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M22 20v-1.6a4 4 0 0 0-3-3.87M16.5 4.13a3.5 3.5 0 0 1 0 6.74"/></svg></span>
+          <h2>CRM, task and project management</h2>
+          <p></p>
+          <ul class="check-list mt-3"><li>Tasks (InfoLog) as events in the calendar in all views: InfoLogs can be displayed by type like appointments in the calendar in all views and can be moved flexibly using drag and drop. In the CE version, tasks can only be displayed as a separate list in the day view.</li><li>Project Manager &amp; Smart Gantt Chart: Drag and drop of tasks in the Gantt Chart with customization of start date, status or due dates.</li><li>PGP encryption of Infolog entries to protect sensitive data for example access information or personal data. Infolog types can be additionally protected via group owners.</li></ul>
+          
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
+          <h2>Documents: versioning and deletion protection</h2>
+          <p></p>
+          <ul class="check-list mt-3"><li>Storage of all modified or deleted files as versions with roll-back function.</li><li>Versioning of file and folder operations also when connected via WebDAV as a network drive on the local desktop.</li><li>Versioning is automatically enabled on all application directories. In home directories (users and groups) versioning can be turned on or off accordingly.</li><li>Administrative options for data cleanup of older versions or deleted data</li></ul>
+          
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
+          <h2>Folder Subscription &amp; Sharing Options</h2>
+          <p></p>
+          <ul class="check-list mt-3"><li>Readable or writable folder sharing via sharing link: dropbox-comparable distribution of data to any external user. Additional security via optional password and folder share expiration.</li><li>Direct sharing link for integrated Collabora Online Office: collaborate with external parties on a document without extra folder sharing.</li><li>Simply subscribe to a folder for users, groups or even external email addresses. EGroupware sends notifications as pop-up or email when files and folders are changed.</li></ul>
+          
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h5"/></svg></span>
+          <h2>Print templates and customization of dialogs</h2>
+          <p>Print templates Customization of lists and dialogs via eTemplates</p>
+          <ul class="check-list mt-3"><li>Ready-to-go templates for printing in forms, standard or serial letters, personalized email templates with attachments or complex reports.</li><li>These templates can be customized via placeholders, so that all stored information from the applications can be easily reused.</li><li>Mount option in the file management module for the integration of EGroupware form templates (eTemplates) for easy editing and setup of individual user dialogs. With this feature, your customizations will persist through updates and the masks can be customized.</li><li>For example, if you prefer different fields and arrangements in the address book for customers or suppliers, this can be implemented accordingly via eTemplates. Similarly, you can create complex dialogs in the Infolog or ticket system, which can then also be displayed directly in the edit window and printed or sent by email from there.</li></ul>
+          
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
+          <h2>EPL vs. CE - differences and advantages</h2>
+          <p>As an EPL customer, you benefit from cheaper support hours and a wider range of functions. Feel free to contact us to find out whether an EPL or CE is more suitable for you. We will be happy to show you the differences in a personal presentation.</p>
+          
+          <div class="link-list mt-3"><a href="contact">personal presentation</a></div>
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.8"/><path d="m5.6 5.6 3.7 3.7m5.4 5.4 3.7 3.7m0-12.8-3.7 3.7m-5.4 5.4-3.7 3.7"/></svg></span>
+          <h2>Frequently asked support questions</h2>
+          <p>The EGroupware support can assist you with technical as well as organizational questions around EGroupware. Here, the friendly support team can help you train your administrators and users. Often a workshop or a personal call will reveal many new possibilities that will make your company even more productive. Just contact us and we will discuss the possibilities to support you as well.There are several ways to do this. The easiest way is to contact us directly. Then we discuss on the phone how we can best support you. With a support budget you can reach us by ticket system, email or phone. Pictures say more than many words. That&#x27;s why it&#x27;s often easier to have a quick look at your problem together via remote maintenance.You can contact the EGroupware Forum free of charge. Alternatively, you can get professional support for your free Community Edition of EGroupware. Depending on the conditions a change from the CE to the EPL version can be more favorable. A change from the CE to the EPL version and vice versa is easily possible. Please feel free to contact us.There are various migrations and technical support. On the one hand, we can update the EGroupware version for you, or assist with the server move. Also a move of your mail server is possible. There are different ways how we can support you and your team. Just contact us. EPL for larger organizations, schools, universities or educational institutions: Decide for yourself whether the EGroupware Cloud or a self-installation is better suited to your needs. If you have any questions about our services, simply contact us.</p>
+          <ul class="check-list mt-3"><li>Workshops &amp; Consulting</li><li>Training of users</li><li>Support for administrators</li><li>Technical Support</li><li>Data migration</li><li>Support via ticket system</li><li>Telephone support</li><li>Desktop sharing</li><li>Remote maintenance</li><li>Troubleshooting</li><li>Active Directory or LDAP connection</li><li>Integration with Univention Corporate Server (UCS)</li><li>Connection via Schibboleth or integration of external applications via OpenID</li><li>Sharing of smallPART course (video-based learning) to a learning platforms via LTI</li><li>Integration or migration to EGroupware mail server (Dovecot with PUSH)</li><li>Scalable configuration according to large number of users</li><li>Rights management via user group administration</li><li>Operation of Collabora Online Server in own data center</li></ul>
+          <div class="link-list mt-3"><a href="contact">contact</a><a href="contact">contact</a><a href="contact">contact</a></div>
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15.5v3.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3.5M7.5 11 12 15.5 16.5 11M12 3v12"/></svg></span>
+          <h2>EGroupware Update and Migration</h2>
+          <p></p>
+          <ul class="check-list mt-3"><li>Update of an older EGroupware to the current version</li><li>Change from self-installation to the EGroupware Cloud</li><li>Migration between community version and EPL</li><li>Support for mail migration and administration</li><li>Support for migration from SQL to LDAP or ActiveDirectory</li><li>Support for integration of Samba or file servers</li><li>Migration from other groupware systems</li></ul>
+          
+        </article>
+        <article class="card feature reveal">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15.5v3.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3.5M7.5 11 12 15.5 16.5 11M12 3v12"/></svg></span>
+          <h2>Frequently asked questions about migration</h2>
+          <p>There are different migrations and technical support. On the one hand, we can update the EGroupware version for you or assist with a migration. Also a move of your mail server is possible. There are different ways how we can support you and your team.Also old EGroupware versions e.g. 1.4 - 1.8 can be migrated easily in one step, because EGroupware always carries all update scripts retroactively. Important is for migrations of EGroupware before version 14 the old &quot;phpgwapi&quot; must be installed as application. If you do not want to do the update yourself, we will be happy to support you. An easy way to do this is via the EGroupware Cloud. We create a test version for you and upload the database backup of the previous version there. Then we perform the update for you. You check the completeness and can then either download the updated version for your own installation or continue to use the cloud.Our offers for update and migration are also aimed at users of the community version. We support you both in the pure update of your community version as well as in the migration to the full version EPL, either still in the self-installation or in the German EGroupware Cloud. Especially when migrating an older EGroupware version, we always recommend to integrate a workshop into the migration process, where your users are quickly introduced to the new version.EGroupware can store users and groups in the database or be connected to an existing infrastructure. For example, you can authenticate against a mail server, their LDAP or ActiveDirectory (AD) and still store the data (users &amp; groups) in the database. Alternatively, EGroupware can be completely connected to LDAP or AD, so that users and groups are stored in LDAP/AD and can also be managed in EGroupware. If your mail server is also connected to LDAP/AD, mail account management is also possible directly in EGroupware including forwarding, alias or absence notes. NEW: EGroupware also offers Dovecot Mailserver packages, which allows a complete mail account management in the SQL database. This option is especially interesting for SMBs that do not have LDAP or ActiveDirectory in use.Univention Corporate Server (UCS) provides a platform with a graphical interface for the management and integration of various apps. UCS can easily &quot;join&quot; an ActiveDirectory (AD) and EGroupware is started and updated as an app. UCS can be easily integrated into existing environments thanks to standardized interfaces. The integrated App Center offers a large number of enterprise solutions, such as EGroupware, an email server or Collabora Online.If you have any questions about our services, just contact us.</p>
+          
+          <div class="link-list mt-3"><a href="univention">Univention Corporate Server</a><a href="contact">contact</a></div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap-narrow">
+        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
+        <ul class="sibling-list mt-3"><li><a href="administration">Administration</a></li><li><a href="guacamole">Guacamole</a></li><li><a href="univention">Univention Corporate Server (UCS)</a></li><li><a href="vidoteach">Video based learning</a></li></ul>
+        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2>Try EGroupware free for 30 days</h2>
+          <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
+          <div class="btn-row center">
+            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
+            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="./">
+            <img src="../assets/img/EGroupware-Logo-invert.svg" alt="EGroupware"
+                 width="173" height="34" loading="lazy">
+          </a>
+          <p>EGroupware is the open source online office for companies, public administrations and educational institutions. Developed, hosted and supported in Germany.</p>
+          <p class="mt-2"><strong style="color:#fff">Developed &amp; hosted in Germany</strong></p>
+        </div>
+      <div>
+        <h2 class="footer-h">Product</h2>
+        <ul>
+          <li><a href="features">Features</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="industries">Industries</a></li>
+          <li><a href="./">EGroupware 26</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Company</h2>
+        <ul>
+          <li><a href="about">About us</a></li>
+          <li><a href="support">Support</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Legal</h2>
+        <ul>
+          <li><a href="imprint">Imprint</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="site-terms">Site terms</a></li>
+          <li><a href="cancel-contract">Cancel contract</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> EGroupware GmbH. All rights reserved.</p>
+        <nav aria-label="Legal"><a href="imprint">Imprint</a> <a href="privacy">Privacy</a> <a href="site-terms">Site terms</a> <a href="cancel-contract">Cancel contract</a></nav>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

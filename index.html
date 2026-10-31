@@ -1,10 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
-<meta charset="utf-8">
-<title>EGroupware</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EGroupware – Das smarte Online Office</title>
+  <meta name="description" content="EGroupware – Open-Source-Groupware aus Deutschland. Wählen Sie Ihre Sprache. / Open source groupware from Germany. Choose your language.">
+  <link rel="canonical" href="https://www.egroupware.org/">
+  <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/">
+  <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/">
+  <link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Sprachweiche. Wer schon einmal hier war und oben DE/EN gewaehlt hat,
+       kommt dorthin zurueck (gespeichert unter "egw-lang"). Sonst
+       entscheidet die Browsersprache: Deutsch zu /de/, alles andere zu
+       /en/. Ohne JavaScript bleibt die Auswahl unten stehen. */
+    (function () {
+      var ziel = "en/";
+      try {
+        var gemerkt = localStorage.getItem("egw-lang");
+        if (gemerkt === "de" || gemerkt === "en") {
+          ziel = gemerkt + "/";
+        } else {
+          var sprachen = navigator.languages || [navigator.language || ""];
+          for (var i = 0; i < sprachen.length; i++) {
+            var s = String(sprachen[i]).toLowerCase();
+            if (s === "de" || s.indexOf("de-") === 0) { ziel = "de/"; break; }
+            if (s === "en" || s.indexOf("en-") === 0) { break; }
+          }
+        }
+      } catch (e) { /* kein localStorage: dann eben nach Browsersprache */ }
+      location.replace(ziel);
+    })();
+  </script>
 </head>
 <body>
-<p>Placeholder - content coming soon.</p>
+  <main id="main" class="section">
+    <div class="wrap-narrow center">
+      <img src="assets/img/EGroupware-Logo.svg" alt="EGroupware – Smart Online Office"
+           width="270" height="53" style="margin:0 auto 1.5rem;max-width:min(100%, 270px)">
+      <h1 class="visually-hidden">EGroupware</h1>
+      <p class="lead mt-2">Bitte wählen Sie Ihre Sprache. / Please choose your language.</p>
+      <div class="btn-row center mt-3">
+        <a class="btn btn--primary btn--lg" href="de/" hreflang="de">Deutsch</a>
+        <a class="btn btn--ghost btn--lg" href="en/" hreflang="en">English</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

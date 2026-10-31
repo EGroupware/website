@@ -1,0 +1,68 @@
+# robots.txt – www.egroupware.org
+
+User-agent: *
+Allow: /
+
+# ---- KI-Assistenten und Antwortmaschinen ----
+
+# OpenAI – Suche in ChatGPT
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI – Seitenaufruf auf Nutzerwunsch
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI – Training
+User-agent: GPTBot
+Allow: /
+
+# Anthropic – Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Anthropic – Seitenaufruf auf Nutzerwunsch
+User-agent: Claude-User
+Allow: /
+
+# Anthropic – Suche
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity – Index
+User-agent: PerplexityBot
+Allow: /
+
+# Perplexity – Seitenaufruf auf Nutzerwunsch
+User-agent: Perplexity-User
+Allow: /
+
+# Google – Gemini und KI-Uebersichten
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Amazon – Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# Common Crawl – Datenbasis vieler Modelle
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.egroupware.org/sitemap.xml

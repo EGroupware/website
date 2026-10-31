@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" data-theme-init>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHP2Shell: critical PHP vulnerabilities and our response</title>
+  <meta name="description" content="CVE-2026-109618 and CVE-2026-109619: what EGroupware did, what cloud customers need to do and what to check on an on-premise installation.">
+  <link rel="canonical" href="https://www.egroupware.org/en/general/php2shell-and-our-strategy">
+  <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/php2shell-und-unsere-massnahmen">
+  <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/general/php2shell-and-our-strategy">
+  <link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/general/php2shell-and-our-strategy">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EGroupware">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="PHP2Shell: critical PHP vulnerabilities and our response">
+  <meta property="og:description" content="CVE-2026-109618 and CVE-2026-109619: what EGroupware did, what cloud customers need to do and what to check on an on-premise installation.">
+  <meta property="og:url" content="https://www.egroupware.org/en/general/php2shell-and-our-strategy">
+  <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../../assets/css/style.css" as="style">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "PHP2Shell and Our Strategy", "description": "CVE-2026-109618 and CVE-2026-109619: what EGroupware did, what cloud customers need to do and what to check on an on-premise installation.", "url": "https://www.egroupware.org/en/general/php2shell-and-our-strategy", "mainEntityOfPage": "https://www.egroupware.org/en/general/php2shell-and-our-strategy", "inLanguage": "en", "author": {"@id": "https://www.egroupware.org/#organization"}, "publisher": {"@id": "https://www.egroupware.org/#organization"}, "datePublished": "2026-10-27"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "News", "item": "https://www.egroupware.org/en/blog"}, {"@type": "ListItem", "position": 2, "name": "General"}, {"@type": "ListItem", "position": 3, "name": "PHP2Shell and Our Strategy", "item": "https://www.egroupware.org/en/general/php2shell-and-our-strategy"}]}]}
+  </script>
+  <script>
+    (function(){try{var t=localStorage.getItem("egw-theme");
+    if(t==="dark"||t==="light"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="../">
+        <img class="brand-light" src="../../assets/img/EGroupware-Logo.svg"
+             alt="EGroupware – Smart Online Office" width="189" height="37" fetchpriority="high">
+        <img class="brand-dark" src="../../assets/img/EGroupware-Logo-invert.svg"
+             alt="" aria-hidden="true" width="189" height="37">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="primary-nav">
+        <li><a href="../">Home</a></li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="../features">Features</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Features – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Organisation</p><ul><li><a href="../calendar"><img class="nav-sub__icon" src="../../assets/img/icons/calendar.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Calendar</span></a></li><li><a href="../contacts"><img class="nav-sub__icon" src="../../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Contacts</span></a></li><li><a href="../tasks"><img class="nav-sub__icon" src="../../assets/img/icons/infolog.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Tasks</span></a></li><li><a href="../projects"><img class="nav-sub__icon" src="../../assets/img/icons/projectmanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Projects</span></a></li><li><a href="../timesheet"><img class="nav-sub__icon" src="../../assets/img/icons/timesheet.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Timesheet</span></a></li><li><a href="../resources"><img class="nav-sub__icon" src="../../assets/img/icons/resources.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Ressources</span></a></li><li><a href="../e-invoicing"><img class="nav-sub__icon" src="../../assets/img/icons/einvoice.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-Invoice</span></a></li><li><a href="../administration"><img class="nav-sub__icon" src="../../assets/img/icons/admin.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Administration</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Communication</p><ul><li><a href="../email"><img class="nav-sub__icon" src="../../assets/img/icons/mail.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Email</span></a></li><li><a href="../chat"><img class="nav-sub__icon" src="../../assets/img/icons/chat.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Team Chat</span></a></li><li><a href="../videoconferences"><img class="nav-sub__icon" src="../../assets/img/icons/videoconference.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Videoconferences</span></a></li><li><a href="../file-manager"><img class="nav-sub__icon" src="../../assets/img/icons/filemanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Documents</span></a></li><li><a href="../online-office"><img class="nav-sub__icon" src="../../assets/img/icons/collabora.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Online Office</span></a></li><li><a href="../kanban"><img class="nav-sub__icon" src="../../assets/img/icons/kanban.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kanban</span></a></li><li><a href="../helpdesk"><img class="nav-sub__icon" src="../../assets/img/icons/tracker.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Helpdesk</span></a></li><li><a href="../crm"><img class="nav-sub__icon" src="../../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CRM</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Tech &amp; integration</p><ul><li><a href="../cti-phone-integration"><img class="nav-sub__icon" src="../../assets/img/icons/cti.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CTI Telefon-Integration</span></a></li><li><a href="../remote-work"><img class="nav-sub__icon" src="../../assets/img/icons/home.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Homeoffice Integration</span></a></li><li><a href="../mobile-access"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span>Mobil Access</span></a></li><li><a href="../synchronisation"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span><span>Synchronisation</span></a></li><li><a href="../guacamole"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span><span>Guacamole</span></a></li><li><a href="../univention"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><span>Univention Corporate Server (UCS)</span></a></li><li><a href="../vidoteach"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span><span>Video based learning</span></a></li><li><a href="../community-edition-vs-epl"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span><span>EGroupware CE vs EPL</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="../pricing">Pricing</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Pricing – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="../pricing"><span>Pricing</span></a></li><li><a href="../why-cloud"><span>Why Cloud?</span></a></li><li><a href="../why-on-premise"><span>Why On-premise?</span></a></li><li><a href="../cloud-services"><span>EGroupware Cloud Service</span></a></li><li><a href="../trial"><span>Trial Version</span></a></li><li><a href="../demo"><span>Online Demo</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="../industries">Industries</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Industries – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="../industries"><span>Industries</span></a></li><li><a href="../education"><span>Solutions for educational institutions</span></a></li><li><a href="../collaboration-tools"><span>Collaboration Tools</span></a></li><li><a href="../exchange-alternative"><span>Exchange Alternative</span></a></li><li><a href="../dropbox-alternative"><span>Dropbox alternative</span></a></li><li><a href="../owncloud-alternative"><span>Owncloud Alternative</span></a></li><li><a href="../google-calendar-alternative"><span>Google Calendar Alternative</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="../about">About</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="About – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="../about"><span>About</span></a></li><li><a href="../testimonials"><span>Testimonials</span></a></li><li><a href="../why-egroupware"><span>Why EGroupware?</span></a></li><li><a href="../press"><span>Press</span></a></li><li><a href="../community"><span>Community</span></a></li><li><a href="../technology-partners"><span>Technology partner</span></a></li><li><a href="../integration-partners"><span>Integration partner</span></a></li><li><a href="../resellers"><span>EGroupware Reseller</span></a></li><li><a href="../become-reseller"><span>Become Reseller</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="../support">Support</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Support – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="../support"><span>Support</span></a></li><li><a href="../customer-support-login"><span>Customer Support Login</span></a></li><li><a href="../download"><span>Download</span></a></li><li><a href="../installation-on-your-own-server"><span>Installation on your own server</span></a></li><li><a href="../tutorials"><span>Webinars and tutorials</span></a></li><li><a href="../caldav-synchronizer"><span>Caldav Synchronizer</span></a></li><li><a href="../security-and-data-privacy"><span>Security and data privacy</span></a></li><li><a href="../status"><span>EGroupware Cloud Status</span></a></li></ul></div>
+        </div>
+        </li>
+        <li><a href="../blog" aria-current="page">News</a></li>
+        <li><a href="../contact">Contact</a></li>
+          <li class="nav-cta"><a class="btn btn--primary" href="../contact">Start 30-day free trial</a></li>
+          <li class="nav-theme">
+            <button class="theme-toggle-inline" type="button">
+              <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+              <span>Switch colour scheme</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language"><a href="../../de/blog" hreflang="de" data-set-lang="de">DE</a><a href="../blog" hreflang="en" data-set-lang="en" aria-current="true">EN</a></div>
+        <button class="theme-toggle" type="button" aria-label="Switch colour scheme"
+                data-label-dark="Switch colour scheme" data-label-light="Switch colour scheme">
+          <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+        </button>
+        <a class="btn btn--primary btn--sm" href="../contact">Start 30-day free trial</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="primary-nav" aria-label="Open menu">
+          <span class="i-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg></span><span class="i-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/general/php2shell-and-our-strategy):
+       - Von Hand nachgearbeitet (build/php2shell_nacharbeit.py). In WordPress stehen die Mängel noch: englische Dublette im Abschnitt 2 der deutschen Fassung, fehlende Überschrift „3.“ in der englischen Fassung, Yoast-Title und -Description für beide Sprachen auf Englisch („php2shell strategy“), dazu eine dritte Fassung des Beitrags unter /allgemein/php2shell-und-unsere-massnahmen-2.
+    -->
+    <article class="section post">
+      <div class="wrap-narrow">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../blog">News</a> <span aria-hidden="true">/</span>
+          <span>General</span>
+        </nav>
+        <h1 class="mt-2">PHP2Shell and Our Strategy</h1>
+        <p class="post__meta">General · <time datetime="2026-10-27">October 27, 2026</time></p>
+        <p class="lead mt-2">On 21 October 2026 the PHP project disclosed two critical security vulnerabilities. What EGroupware did, when the systems were patched and what to check on your own installation.</p>
+        <figure class="post__figure"><img class="post__image" src="../../assets/img/import/php2shell.webp" alt="PHP2Shell and Our Strategy" width="1200" height="799" fetchpriority="high" decoding="async"></figure>
+        <div class="prose mt-4">
+          <p>CVE-2026-109618 and CVE-2026-109619 · Measures taken by EGroupware GmbH · As of 27 October 2026</p>
+          <h2>Key points at a glance</h2>
+          <p><strong>Update 27 October 2026:</strong> Since 26 October 2026, the vulnerabilities have been actively exploited in attacks, according to the EU Agency for Cybersecurity (ENISA) and the US agency CISA. We are not aware of any case affecting EGroupware installations so far. Please make sure that your installation is up to date.<br>On 21 October 2026, the PHP project published two critical vulnerabilities in PHP (CVSS 9.2). They<br>may allow attackers to execute code on the server without logging in.<br>We applied mitigations on the same day and released the fixed PHP version 8.5.12 that evening:<br>EGroupware 26.10.20261021 and EGroupware 23.1.20261021.</p>
+          <h3>EGroupware Cloud</h3>
+          <p>All systems have been running PHP 8.5.12 since the evening of 21 October<br>2026. No action is required on your part.</p>
+          <h3>Self-hosted installations</h3>
+          <p>Standard installations received the update automatically during the night<br>of 21 to 22 October 2026. Please check that PHP 8.5.12 is in use (see section 6).<br>Our review found no indication that the vulnerabilities were exploited on EGroupware installations.</p>
+          <h2>1. The vulnerabilities</h2>
+          <p>The PHP project announced the publication on 20 October 2026. Because of a leak, it was brought forward by<br>one day: the details and the fixed versions became public on 21 October 2026 between approx. 15:40 and<br>16:00 CEST (first media reports from 15:42, official PHP announcement at 16:00). According to PHP, all PHP<br>installations that handle web requests are affected, including PHP-FPM, which EGroupware also uses. An<br>attack is possible without logging in and takes place before any application code runs. It therefore does not<br>matter which PHP functions EGroupware itself uses.<br>Vulnerability Description according to the PHP advisory<br>CVE-2026-109618<br>“RCE via OOM<br>corruption”<br>If PHP runs out of memory during a request, processing can abort while internal request data<br>is only partially initialised. The subsequent cleanup then treats this invalid data as valid.<br>CVE-2026-109619<br>“RCE via stale<br>global state”<br>Internal data of a request can persist even though its memory has already been freed. A later<br>request handled by the same PHP process can then use this stale data.<br>The vulnerabilities are fixed in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35. According to PHP, there is no complete<br>mitigation without updating.</p>
+          <h2>2. Why PHP-FPM is affected and what we changed</h2>
+          <p>EGroupware runs on PHP-FPM. A pool of continuously running PHP processes (“workers”) handles many<br>requests one after another. This is fast, but it also means that whatever one request leaves behind in a worker<br>can affect the next request in the same worker. This is exactly what the vulnerabilities exploit.<br>CVE-2026-109619: An attacker sends a crafted request that leaves stale data in the worker. If the next<br>request is handled by the same worker, this can lead to code execution. Confirmed attack paths use the<br>PHP “upload progress” feature ( session.upload_progress ) and, on PHP 8.5, additionally error backtraces<br>for fatal errors ( fatal_error_backtraces ).<br>CVE-2026-109618: An attacker deliberately pushes PHP to the memory limit of a request ( memory_limit )<br>so that processing aborts at a critical point.<br>Until the fixed PHP version was available, we therefore applied the mitigations recommended by the PHP<br>project in the PHP-FPM configuration.<br>Upload sizes ( post_max_size , upload_max_filesize ) are already limited in EGroupware. We did not lower<br>them further, as the PHP project mentions as an additional option, because larger uploads in the file manager<br>would then no longer be possible.</p>
+          <h2>3. Our measures over time</h2>
+          <div class="table-wrap">
+            <table class="data-table"><tbody><tr><td>21 Oct, 07:00</td><td>Notice of the announced vulnerabilities, start of preparing mitigations</td></tr><tr><td>21 Oct, 07:48</td><td>EGroupware Cloud: first mitigation (<code>session.upload_progress</code> off) on all PHP-FPM servers</td></tr><tr><td>21 Oct, 09:54</td><td>New images for EGroupware 26 with the first mitigation</td></tr><tr><td>21 Oct, 11:31</td><td>New images for EGroupware 23.1 with the first mitigation</td></tr><tr><td>21 Oct, 11:45</td><td>1st customer information by e-mail and in the forum (German and English): instructions for self-hosted installations so that you can apply the images with the first mitigation immediately</td></tr><tr><td>21 Oct, approx. 15:40–16:00</td><td>The details and the fixed PHP versions become public (first media reports from 15:42, official PHP announcement at 16:00)</td></tr><tr><td>21 Oct, 16:03</td><td>New images for EGroupware 26 with all three mitigations</td></tr><tr><td>21 Oct, 16:10</td><td>EGroupware Cloud: all three mitigations applied</td></tr><tr><td>21 Oct, 16:34</td><td>New images for EGroupware 23.1 with all mitigations applicable to PHP 8.4</td></tr><tr><td>21 Oct, 17:31</td><td>2nd customer information by e-mail and in the forum: apply the images with all mitigations immediately; first time including instructions for Univention installations</td></tr><tr><td>21 Oct, from 21:01</td><td>EGroupware Cloud: update to PHP 8.5.12, first on a test system, then on all PHP-FPM servers</td></tr><tr><td>21 Oct, evening</td><td>Release of EGroupware 26.10.20261021 and 23.1.20261021 with PHP 8.5.12</td></tr><tr><td>22 Oct, 06:00</td><td>Automatic distribution of the new versions to self-hosted standard installations (Watchtower)</td></tr><tr><td>22 Oct</td><td>Push server updated to a version with PHP 8.4.27; Univention instructions in the forum extended with the <code>docker-compose pull</code> step; release for Univention Nubus announced</td></tr><tr><td>23 Oct, 15:12</td><td>Univention publishes the update with PHP 8.5.12 in the Univention App Center</td></tr></tbody></table>
+          </div>
+          <p>To make the update available quickly, we switched the base image of our Docker containers to the official Alpine Linux based PHP image. PHP 8.5.12 was available there earlier than in the Ubuntu packages we had been using.</p>
+          <h2>4. Results of our review</h2>
+          <ul><li>We reviewed the EGroupware Cloud logs for the period from 20 October 2026 until shortly after all mitigations were applied on 21 October 2026 and found no anomalies. At that time, the vulnerabilities were not known to be actively exploited. Since 26 October 2026, ENISA and CISA have listed them as actively exploited. We are not aware of any attacks on EGroupware instances.</li><li>The attack path of CVE-2026-109619 requires two requests to be handled one after another by the same PHP process. In the EGroupware Cloud, requests are distributed across several PHP-FPM servers. Together with the early first mitigation, we consider the likelihood of a successful exploitation to be very low.</li><li><strong>Push server:</strong> The EGroupware push server is also based on PHP (Swoole). We tested whether the attack path via upload progress can be exploited there. The result was negative. We nevertheless applied the mitigation as a precaution and updated the push server on 22 October 2026 to a version with the fixed PHP 8.4.27.</li><li><strong>Collabora Online:</strong> On 21 October 2026, we checked whether Collabora Online and the Collabora controller (COOL Controller) used in the cloud are affected. Neither uses PHP, so neither is affected. Collabora accesses your documents through EGroupware, which is covered by the mitigations and the PHP update.</li></ul>
+          <h2>5. Additional protection beyond the update</h2>
+          <p>We kept two of the mitigations in place after the PHP update. They turn off PHP features that EGroupware does not need at all: the upload progress display and detailed error reports for fatal errors. Nothing changes for you; EGroupware works as usual. For attackers, however, there are fewer ways in: what is switched off cannot be exploited, even by future vulnerabilities.<br>This has already paid off: on 23 October 2026, the PHP project reported another vulnerability that has not yet been fixed (CVE-2026-115560). As protection, PHP recommends exactly this: turning off upload progress. The EGroupware Cloud and installations using our current images were therefore already protected before the vulnerability became known. PHP will deliver the final fix with its next regular update, which we will include in our images as usual.</p>
+          <h2>6. What you need to do</h2>
+          <h3>EGroupware Cloud</h3>
+          <p><strong>Nothing. All systems are up to date.</strong></p>
+          <h3>Self-hosted installation (Docker, DEB/RPM packages)</h3>
+          <p>If automatic updates (Watchtower) are enabled, the update was applied during the night of 21 to 22 October 2026. If they are disabled or you have pinned a fixed version, please update manually:</p>
+          <pre class="codeblock"><code>cd /etc/egroupware-docker
+docker compose pull &amp;&amp; docker compose up -d &amp;&amp; docker logs -f egroupware
+# Press Ctrl-C once &quot;NOTICE: fpm is running, pid 1&quot; appears</code></pre>
+          <p><strong>Check:</strong> Under <em>Admin → PHP information</em>, PHP 8.5.12 (or newer) must be shown.</p>
+          <h3>Univention / Nubus</h3>
+          <p>Univention published the update with PHP 8.5.12 on 23 October 2026 at 15:12. Please install it via the Univention App Center if you have not already done so.</p>
+          <p>If you installed the update manually beforehand, following our instructions in the forum, your installation is already up to date. You can install future updates via the App Center as usual.</p>
+          <h3>EGroupware 23.1 and older versions</h3>
+          <p>EGroupware 23.1 is no longer supported. Because of the severity of the vulnerabilities, we are providing release 23.1.20261021 as an exception and without extending support. It is the final update for 23.1. It contains PHP 8.5.12 and most, but not all, security updates of EGroupware 26. The security notice within EGroupware 23.1 therefore remains active. Please update to EGroupware 26 soon. There are no more updates for versions before 23.1.</p>
+          <h2>7. Further information</h2>
+          <ul><li>Customer information in the forum: <a href="https://help.egroupware.org/t/uk-serious-security-vulnerability-in-php-update-required-customer-information-21-10-2026/80112">English</a> · <a href="https://help.egroupware.org/t/de-schwerwiegende-sicherheitsluecke-im-php-update-erforderlich-kundeninfo-21-10-2026/80111">German</a></li><li>Release EGroupware 26.10.20261021: <a href="https://help.egroupware.org/t/egroupware-maintenance-and-security-release-26-10-20261021/80114">help.egroupware.org/t/80114</a></li><li>Release EGroupware 23.1.20261021: <a href="https://help.egroupware.org/t/egroupware-security-release-23-1-20261021/80120">help.egroupware.org/t/80120</a></li><li>Release for Univention Nubus: <a href="https://help.egroupware.org/t/egroupware-maintenance-and-security-release-26-10-20261021-for-univention-nubus/80124">help.egroupware.org/t/80124</a></li><li>PHP security advisory: <a href="https://www.php.net/archive/2026.php">php.net/archive/2026.php</a></li><li>The Hacker News: <a href="https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html">PHP warns of another unpatched flaw (CVE-2026-115560)</a></li><li>heise online: <a href="https://www.heise.de/en/news/php2shell-Critical-flaws-allow-code-injection-in-PHP-11494897.html">php2shell: Critical flaws allow code injection in PHP</a></li></ul>
+          <p><strong>If you have any questions, please contact us through the usual support channels.</strong><br><em>This customer information was created with the assistance of Claude Code and reviewed by EGroupware GmbH.</em></p>
+        </div>
+        <p class="mt-4"><a class="btn btn--ghost" href="../blog">All posts</a></p>
+      </div>
+    </article>
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2>Try EGroupware free for 30 days</h2>
+          <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
+          <div class="btn-row center">
+            <a class="btn btn--solid-light btn--lg" href="../contact">Start 30-day free trial</a>
+            <a class="btn btn--light btn--lg" href="../pricing">See pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="../">
+            <img src="../../assets/img/EGroupware-Logo-invert.svg" alt="EGroupware"
+                 width="173" height="34" loading="lazy">
+          </a>
+          <p>EGroupware is the open source online office for companies, public administrations and educational institutions. Developed, hosted and supported in Germany.</p>
+          <p class="mt-2"><strong style="color:#fff">Developed &amp; hosted in Germany</strong></p>
+        </div>
+      <div>
+        <h2 class="footer-h">Product</h2>
+        <ul>
+          <li><a href="../features">Features</a></li>
+          <li><a href="../pricing">Pricing</a></li>
+          <li><a href="../industries">Industries</a></li>
+          <li><a href="../">EGroupware 26</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Company</h2>
+        <ul>
+          <li><a href="../about">About us</a></li>
+          <li><a href="../support">Support</a></li>
+          <li><a href="../contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Legal</h2>
+        <ul>
+          <li><a href="../imprint">Imprint</a></li>
+          <li><a href="../privacy">Privacy</a></li>
+          <li><a href="../site-terms">Site terms</a></li>
+          <li><a href="../cancel-contract">Cancel contract</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> EGroupware GmbH. All rights reserved.</p>
+        <nav aria-label="Legal"><a href="../imprint">Imprint</a> <a href="../privacy">Privacy</a> <a href="../site-terms">Site terms</a> <a href="../cancel-contract">Cancel contract</a></nav>
+      </div>
+    </div>
+  </footer>
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="de" data-theme-init>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funktionen &amp; Module – EGroupware</title>
+  <meta name="description" content="Kalender, E-Mail, Dateimanager, Videokonferenzen, CRM, Projekte, E-Rechnung und mehr: alle Module von EGroupware im Überblick.">
+  <link rel="canonical" href="https://www.egroupware.org/de/funktionen">
+  <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/funktionen">
+  <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/features">
+  <link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/features">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EGroupware">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Funktionen &amp; Module – EGroupware">
+  <meta property="og:description" content="Kalender, E-Mail, Dateimanager, Videokonferenzen, CRM, Projekte, E-Rechnung und mehr: alle Module von EGroupware im Überblick.">
+  <meta property="og:url" content="https://www.egroupware.org/de/funktionen">
+  <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/css/style.css" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kann ich einzelne Module deaktivieren?","acceptedAnswer":{"@type":"Answer","text":"Ja. EGroupware ist konsequent modular. Sie aktivieren nur, was Ihr Team braucht, und können jederzeit erweitern – etwa mit dem Kalender starten und später CRM und Projekte ergänzen."}},{"@type":"Question","name":"Lässt sich EGroupware mit Outlook oder dem iPhone synchronisieren?","acceptedAnswer":{"@type":"Answer","text":"Ja. Kalender und Kontakte werden über die offenen Standards CalDAV und CardDAV synchronisiert. E-Mail läuft über IMAP und funktioniert damit mit praktisch jedem Mail-Programm."}},{"@type":"Question","name":"Brauchen externe Gäste ein Konto für Videokonferenzen?","acceptedAnswer":{"@type":"Answer","text":"Nein. Gäste treten über einen Link im Browser bei. Ein EGroupware-Konto ist dafür nicht nötig."}},{"@type":"Question","name":"Kann ich eigene Felder anlegen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Benutzerdefinierte Felder, Kategorien und Typen legen Sie über die Oberfläche an – ohne Programmierkenntnisse."}}]}
+  </script>
+  <script>
+    (function(){try{var t=localStorage.getItem("egw-theme");
+    if(t==="dark"||t==="light"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="./">
+        <img class="brand-light" src="../assets/img/EGroupware-Logo.svg"
+             alt="EGroupware – Smart Online Office" width="189" height="37" fetchpriority="high">
+        <img class="brand-dark" src="../assets/img/EGroupware-Logo-invert.svg"
+             alt="" aria-hidden="true" width="189" height="37">
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="primary-nav">
+        <li><a href="./">Start</a></li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="funktionen" aria-current="page">Funktionen</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Funktionen – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Organisation</p><ul><li><a href="kalender"><img class="nav-sub__icon" src="../assets/img/icons/calendar.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kalender</span></a></li><li><a href="kontakte"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kontakte</span></a></li><li><a href="aufgaben"><img class="nav-sub__icon" src="../assets/img/icons/infolog.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Aufgaben</span></a></li><li><a href="projekte"><img class="nav-sub__icon" src="../assets/img/icons/projectmanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Projekte</span></a></li><li><a href="stundenzettel"><img class="nav-sub__icon" src="../assets/img/icons/timesheet.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Zeiterfassung</span></a></li><li><a href="ressourcen"><img class="nav-sub__icon" src="../assets/img/icons/resources.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Ressourcen</span></a></li><li><a href="e-rechnung"><img class="nav-sub__icon" src="../assets/img/icons/einvoice.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-Rechnung</span></a></li><li><a href="administration"><img class="nav-sub__icon" src="../assets/img/icons/admin.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Administration</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Kommunikation</p><ul><li><a href="email"><img class="nav-sub__icon" src="../assets/img/icons/mail.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-Mail</span></a></li><li><a href="chat"><img class="nav-sub__icon" src="../assets/img/icons/chat.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Team Chat</span></a></li><li><a href="videokonferenzen"><img class="nav-sub__icon" src="../assets/img/icons/videoconference.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Videokonferenzen</span></a></li><li><a href="dateiverwaltung"><img class="nav-sub__icon" src="../assets/img/icons/filemanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Dateien</span></a></li><li><a href="online-office"><img class="nav-sub__icon" src="../assets/img/icons/collabora.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Collabora Online Office</span></a></li><li><a href="kanban"><img class="nav-sub__icon" src="../assets/img/icons/kanban.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kanban</span></a></li><li><a href="helpdesk"><img class="nav-sub__icon" src="../assets/img/icons/tracker.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Helpdesk</span></a></li><li><a href="crm"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CRM-Funktionen</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Technik &amp; Integration</p><ul><li><a href="cti-telefon-integration"><img class="nav-sub__icon" src="../assets/img/icons/cti.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CTI Telefon-Integration</span></a></li><li><a href="homeoffice-integration"><img class="nav-sub__icon" src="../assets/img/icons/home.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Homeoffice Integration</span></a></li><li><a href="mobiler-zugang"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span>Mobiler Zugang</span></a></li><li><a href="synchronisation"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span><span>Synchronisation</span></a></li><li><a href="guacamole"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span><span>Guacamole</span></a></li><li><a href="univention"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><span>Univention Corporate Server (UCS)</span></a></li><li><a href="vidoteach"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span><span>Lernen mit Videos</span></a></li><li><a href="community-edition-vs-epl"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span><span>EGroupware CE vs. EPL</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="preise">Tarife</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Tarife – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="preise"><span>Tarife</span></a></li><li><a href="warum-cloud"><span>Warum Cloud?</span></a></li><li><a href="warum-eigeninstallation"><span>Warum Eigeninstallation?</span></a></li><li><a href="cloud-dienst"><span>EGroupware Cloud-Dienst</span></a></li><li><a href="testversion"><span>Testversion</span></a></li><li><a href="demo"><span>Online Demo</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="branchen">Branchen</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Branchen – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="branchen"><span>Branchen</span></a></li><li><a href="bildungseinrichtungen"><span>Lösungen für Bildungseinrichtungen</span></a></li><li><a href="kollaborationswerkzeuge"><span>Kollaborationswerkzeuge</span></a></li><li><a href="exchange-alternative"><span>Exchange Alternative</span></a></li><li><a href="dropbox-alternative"><span>Dropbox-Alternative</span></a></li><li><a href="owncloud-alternative"><span>Owncloud Alternative</span></a></li><li><a href="google-kalender-alternative"><span>Google Kalender Alternative</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="ueber-uns">Über uns</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Über uns – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="ueber-uns"><span>Über uns</span></a></li><li><a href="kundenstimmen"><span>Kundenstimmen</span></a></li><li><a href="warum-egroupware"><span>Warum EGroupware?</span></a></li><li><a href="presse"><span>Presse</span></a></li><li><a href="community"><span>Community</span></a></li><li><a href="technologiepartner"><span>Technologiepartner</span></a></li><li><a href="integrationspartner"><span>Integrationspartner</span></a></li><li><a href="reseller"><span>EGroupware Reseller</span></a></li><li><a href="reseller-werden"><span>Reseller werden</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="support">Support</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Support – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="support"><span>Support</span></a></li><li><a href="support-login"><span>Support Login</span></a></li><li><a href="download"><span>Download</span></a></li><li><a href="installation-eigener-server"><span>Installation auf Ihrem eigenen Server</span></a></li><li><a href="tutorials"><span>Webinare und Tutorials</span></a></li><li><a href="caldav-synchronisierer"><span>Caldav-Synchronisierer</span></a></li><li><a href="sicherheit-datenschutz"><span>Sicherheit und Datenschutz</span></a></li><li><a href="status"><span>EGroupware Cloud Status</span></a></li></ul></div>
+        </div>
+        </li>
+        <li><a href="blog">News</a></li>
+        <li><a href="kontakt">Kontakt</a></li>
+          <li class="nav-cta"><a class="btn btn--primary" href="kontakt">30 Tage gratis testen</a></li>
+          <li class="nav-theme">
+            <button class="theme-toggle-inline" type="button">
+              <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+              <span>Farbschema wechseln</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Sprache"><a href="funktionen" hreflang="de" data-set-lang="de" aria-current="true">DE</a><a href="../en/features" hreflang="en" data-set-lang="en">EN</a></div>
+        <button class="theme-toggle" type="button" aria-label="Farbschema wechseln"
+                data-label-dark="Farbschema wechseln" data-label-light="Farbschema wechseln">
+          <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+        </button>
+        <a class="btn btn--primary btn--sm" href="kontakt">30 Tage gratis testen</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="primary-nav" aria-label="Menü öffnen">
+          <span class="i-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg></span><span class="i-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="./">Start</a> <span aria-hidden="true">›</span> Funktionen
+        </nav>
+        <h1>Alle Module im Überblick</h1>
+        <p class="lead">EGroupware ist modular aufgebaut. Sie schalten frei, was Ihr Team braucht – und erweitern jederzeit, ohne das System zu wechseln.</p>
+      </div>
+    </section>
+    <section class="section" id="module">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Wofür brauchen Sie EGroupware?</h2>
+        </div>
+        <div class="module-filter reveal" data-module-filter>
+          <div class="module-filter__search">
+            <label class="visually-hidden" for="module-search">Module durchsuchen</label>
+            <span class="module-filter__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m16.2 16.2 4.3 4.3"/></svg></span>
+            <input id="module-search" type="search" autocomplete="off"
+                   placeholder="Modul oder Stichwort suchen …">
+          </div>
+          <div class="chips" role="group" aria-label="Module durchsuchen">
+        <button class="chip is-active" type="button" data-filter="all" aria-pressed="true" data-desc="Jedes Modul lässt sich einzeln zuschalten und arbeitet nahtlos mit den anderen zusammen.">Alle Funktionen <span class="chip__count">24</span></button>
+        <button class="chip" type="button" data-filter="collab" aria-pressed="false" data-desc="Termine, Dateien und Dokumente gemeinsam bearbeiten – in Echtzeit und über Standorte hinweg.">Zusammenarbeit <span class="chip__count">6</span></button>
+        <button class="chip" type="button" data-filter="comm" aria-pressed="false" data-desc="E-Mail, Telefonie und mobiler Zugriff – erreichbar bleiben, im Büro wie unterwegs.">Kommunikation <span class="chip__count">4</span></button>
+        <button class="chip" type="button" data-filter="sales" aria-pressed="false" data-desc="Kundendaten, Anfragen und Historie an einer Stelle statt in getrennten Werkzeugen.">Vertrieb &amp; Kunden <span class="chip__count">3</span></button>
+        <button class="chip" type="button" data-filter="projects" aria-pressed="false" data-desc="Von der Aufgabe über den Stundenzettel bis zur gesetzeskonformen E-Rechnung.">Projekte &amp; Abrechnung <span class="chip__count">5</span></button>
+        <button class="chip" type="button" data-filter="it" aria-pressed="false" data-desc="Benutzerverwaltung, Anbindung an bestehende Systeme und offene Schnittstellen.">IT &amp; Administration <span class="chip__count">6</span></button>
+          </div>
+        </div>
+        <p class="module-filter__desc reveal" data-filter-desc>Jedes Modul lässt sich einzeln zuschalten und arbeitet nahtlos mit den anderen zusammen.</p>
+        <div class="grid grid-2 mt-3" data-module-grid>
+        <article class="module module--link reveal" data-group="collab" data-search="kalender einzel-, gruppen- und ressourcentermine, urlaubsplanung, serientermine und kalenderfreigaben. synchronisation per caldav mit outlook, ios und android. zusammenarbeit">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/calendar.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="kalender">Kalender</a></h3>
+            <p>Einzel-, Gruppen- und Ressourcentermine, Urlaubsplanung, Serientermine und Kalenderfreigaben. Synchronisation per CalDAV mit Outlook, iOS und Android.</p>
+            <span class="module__cat">Zusammenarbeit</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="collab" data-search="team chat kanäle und direktnachrichten für die schnelle abstimmung, integriert über rocket.chat. zusammenarbeit">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/chat.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="chat">Team Chat</a></h3>
+            <p>Kanäle und Direktnachrichten für die schnelle Abstimmung, integriert über Rocket.Chat.</p>
+            <span class="module__cat">Zusammenarbeit</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="collab" data-search="videokonferenzen spontan starten oder aus dem kalender heraus planen – ohne zusätzliche software für gäste. zusammenarbeit">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/videoconference.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="videokonferenzen">Videokonferenzen</a></h3>
+            <p>Spontan starten oder aus dem Kalender heraus planen – ohne zusätzliche Software für Gäste.</p>
+            <span class="module__cat">Zusammenarbeit</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="collab" data-search="dateimanager feingranulare rechte, versionierung, archivierung und leselinks für externe partner. zusammenarbeit">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/filemanager.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="dateiverwaltung">Dateimanager</a></h3>
+            <p>Feingranulare Rechte, Versionierung, Archivierung und Leselinks für externe Partner.</p>
+            <span class="module__cat">Zusammenarbeit</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="collab" data-search="collabora online office texte, tabellen und präsentationen gemeinsam in echtzeit im browser bearbeiten. zusammenarbeit">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/collabora.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="online-office">Collabora Online Office</a></h3>
+            <p>Texte, Tabellen und Präsentationen gemeinsam in Echtzeit im Browser bearbeiten.</p>
+            <span class="module__cat">Zusammenarbeit</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="collab" data-search="kanban prozesse visuell steuern: boards, spalten, karten und automatiken. zusammenarbeit">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/kanban.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="kanban">Kanban</a></h3>
+            <p>Prozesse visuell steuern: Boards, Spalten, Karten und Automatiken.</p>
+            <span class="module__cat">Zusammenarbeit</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="comm" data-search="e-mail vollwertiger imap-client mit signaturen, vorlagen, ablage an projekte und kontakte sowie serienmail-funktion. kommunikation">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/mail.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="email">E-Mail</a></h3>
+            <p>Vollwertiger IMAP-Client mit Signaturen, Vorlagen, Ablage an Projekte und Kontakte sowie Serienmail-Funktion.</p>
+            <span class="module__cat">Kommunikation</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="comm" data-search="cti-telefonie anrufe direkt aus dem adressbuch starten, eingehende nummern erkennen und dokumentieren. kommunikation">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/cti.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="cti-telefon-integration">CTI-Telefonie</a></h3>
+            <p>Anrufe direkt aus dem Adressbuch starten, eingehende Nummern erkennen und dokumentieren.</p>
+            <span class="module__cat">Kommunikation</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="comm" data-search="homeoffice-integration voller funktionsumfang von unterwegs und aus dem homeoffice, ohne vpn-zwang. kommunikation">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/home.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="homeoffice-integration">Homeoffice-Integration</a></h3>
+            <p>Voller Funktionsumfang von unterwegs und aus dem Homeoffice, ohne VPN-Zwang.</p>
+            <span class="module__cat">Kommunikation</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="comm" data-search="mobiler zugang responsive oberfläche plus sync über caldav, carddav und activesync-alternativen. kommunikation">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
+          <div>
+            <h3><a href="mobiler-zugang">Mobiler Zugang</a></h3>
+            <p>Responsive Oberfläche plus Sync über CalDAV, CardDAV und ActiveSync-Alternativen.</p>
+            <span class="module__cat">Kommunikation</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="sales" data-search="kontakte &amp; adressbücher mehrere adressbücher, kontakttypen, kategorien und filter. über carddav auf allen geräten verfügbar. vertrieb &amp; kunden">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="kontakte">Kontakte &amp; Adressbücher</a></h3>
+            <p>Mehrere Adressbücher, Kontakttypen, Kategorien und Filter. Über CardDAV auf allen Geräten verfügbar.</p>
+            <span class="module__cat">Vertrieb &amp; Kunden</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="sales" data-search="helpdesk &amp; tickets anfragen strukturiert erfassen, zuweisen und nachverfolgen – mit e-mail-anbindung. vertrieb &amp; kunden">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/tracker.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="helpdesk">Helpdesk &amp; Tickets</a></h3>
+            <p>Anfragen strukturiert erfassen, zuweisen und nachverfolgen – mit E-Mail-Anbindung.</p>
+            <span class="module__cat">Vertrieb &amp; Kunden</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="sales" data-search="crm kundenhistorie über mails, termine, angebote und tickets hinweg an einer stelle. vertrieb &amp; kunden">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="crm">CRM</a></h3>
+            <p>Kundenhistorie über Mails, Termine, Angebote und Tickets hinweg an einer Stelle.</p>
+            <span class="module__cat">Vertrieb &amp; Kunden</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="projects" data-search="aufgaben zuständigkeiten, fälligkeiten und fortschritt im blick – verknüpft mit projekten, kontakten und terminen. projekte &amp; abrechnung">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/infolog.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="aufgaben">Aufgaben</a></h3>
+            <p>Zuständigkeiten, Fälligkeiten und Fortschritt im Blick – verknüpft mit Projekten, Kontakten und Terminen.</p>
+            <span class="module__cat">Projekte &amp; Abrechnung</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="projects" data-search="projekte projektstruktur, budgets, beteiligte und projekttagebuch – auf wunsch transparent für kunden. projekte &amp; abrechnung">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/projectmanager.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="projekte">Projekte</a></h3>
+            <p>Projektstruktur, Budgets, Beteiligte und Projekttagebuch – auf Wunsch transparent für Kunden.</p>
+            <span class="module__cat">Projekte &amp; Abrechnung</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="projects" data-search="zeiterfassung stundenzettel je projekt, kunde und mitarbeitendem, direkt auswertbar für abrechnung und controlling. projekte &amp; abrechnung">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/timesheet.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="stundenzettel">Zeiterfassung</a></h3>
+            <p>Stundenzettel je Projekt, Kunde und Mitarbeitendem, direkt auswertbar für Abrechnung und Controlling.</p>
+            <span class="module__cat">Projekte &amp; Abrechnung</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="projects" data-search="ressourcen räume, fahrzeuge, geräte und lizenzen zentral buchen – konflikte werden automatisch erkannt. projekte &amp; abrechnung">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/resources.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="ressourcen">Ressourcen</a></h3>
+            <p>Räume, Fahrzeuge, Geräte und Lizenzen zentral buchen – Konflikte werden automatisch erkannt.</p>
+            <span class="module__cat">Projekte &amp; Abrechnung</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="projects" data-search="e-rechnung xrechnung und zugferd nach eu-norm en 16931, seit 2025 im standardumfang. projekte &amp; abrechnung">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/einvoice.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="e-rechnung">E-Rechnung</a></h3>
+            <p>XRechnung und ZUGFeRD nach EU-Norm EN 16931, seit 2025 im Standardumfang.</p>
+            <span class="module__cat">Projekte &amp; Abrechnung</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="it" data-search="administration benutzer, gruppen, rechte und richtlinien über die weboberfläche steuern – ohne konsole. it &amp; administration">
+          <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/admin.svg" alt="" width="26" height="26" loading="lazy"></span>
+          <div>
+            <h3><a href="administration">Administration</a></h3>
+            <p>Benutzer, Gruppen, Rechte und Richtlinien über die Weboberfläche steuern – ohne Konsole.</p>
+            <span class="module__cat">IT &amp; Administration</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="it" data-search="guacamole zugriff auf remote-desktops und terminalserver direkt aus dem browser. it &amp; administration">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span>
+          <div>
+            <h3><a href="guacamole">Guacamole</a></h3>
+            <p>Zugriff auf Remote-Desktops und Terminalserver direkt aus dem Browser.</p>
+            <span class="module__cat">IT &amp; Administration</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="it" data-search="univention (ucs) fertige app im univention app center für identitäts- und benutzerverwaltung. it &amp; administration">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
+          <div>
+            <h3><a href="univention">Univention (UCS)</a></h3>
+            <p>Fertige App im Univention App Center für Identitäts- und Benutzerverwaltung.</p>
+            <span class="module__cat">IT &amp; Administration</span>
+          </div>
+        </article>
+        <article class="module reveal" data-group="it" data-search="active directory &amp; ldap bestehende benutzerkonten weiternutzen, single sign-on möglich. it &amp; administration">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8.5 8.5-4 3.5 4 3.5M15.5 8.5l4 3.5-4 3.5M13.5 4.5l-3 15"/></svg></span>
+          <div>
+            <h3>Active Directory &amp; LDAP</h3>
+            <p>Bestehende Benutzerkonten weiternutzen, Single Sign-on möglich.</p>
+            <span class="module__cat">IT &amp; Administration</span>
+          </div>
+        </article>
+        <article class="module module--link reveal" data-group="it" data-search="vidoteach lernplattform-anbindung für bildungseinrichtungen. it &amp; administration">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span>
+          <div>
+            <h3><a href="vidoteach">VIDOTEACH</a></h3>
+            <p>Lernplattform-Anbindung für Bildungseinrichtungen.</p>
+            <span class="module__cat">IT &amp; Administration</span>
+          </div>
+        </article>
+        <article class="module reveal" data-group="it" data-search="offene schnittstellen rest-api und standardprotokolle für eigene automatisierungen. it &amp; administration">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
+          <div>
+            <h3>Offene Schnittstellen</h3>
+            <p>REST-API und Standardprotokolle für eigene Automatisierungen.</p>
+            <span class="module__cat">IT &amp; Administration</span>
+          </div>
+        </article>
+        </div>
+        <div class="module-empty" data-module-empty hidden>
+          <h3>Kein Modul gefunden</h3>
+          <p>Versuchen Sie ein anderes Stichwort oder zeigen Sie alle Funktionen an.</p>
+          <button class="btn btn--ghost mt-2" type="button" data-filter-reset>Alle anzeigen</button>
+        </div>
+        <p class="visually-hidden" role="status" data-filter-status
+           data-one="1 Modul" data-many="{n} Module"></p>
+      </div>
+    </section>
+    <section class="section section--soft">
+      <div class="wrap-narrow">
+      <div class="section-head center reveal">
+        <h2>Häufige Fragen zu den Funktionen</h2>
+      </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Kann ich einzelne Module deaktivieren?</summary>
+            <div class="faq-body"><p>Ja. EGroupware ist konsequent modular. Sie aktivieren nur, was Ihr Team braucht, und können jederzeit erweitern – etwa mit dem Kalender starten und später CRM und Projekte ergänzen.</p></div>
+          </details>
+          <details>
+            <summary>Lässt sich EGroupware mit Outlook oder dem iPhone synchronisieren?</summary>
+            <div class="faq-body"><p>Ja. Kalender und Kontakte werden über die offenen Standards CalDAV und CardDAV synchronisiert. E-Mail läuft über IMAP und funktioniert damit mit praktisch jedem Mail-Programm.</p></div>
+          </details>
+          <details>
+            <summary>Brauchen externe Gäste ein Konto für Videokonferenzen?</summary>
+            <div class="faq-body"><p>Nein. Gäste treten über einen Link im Browser bei. Ein EGroupware-Konto ist dafür nicht nötig.</p></div>
+          </details>
+          <details>
+            <summary>Kann ich eigene Felder anlegen?</summary>
+            <div class="faq-body"><p>Ja. Benutzerdefinierte Felder, Kategorien und Typen legen Sie über die Oberfläche an – ohne Programmierkenntnisse.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2>Modul-Auswahl gemeinsam durchgehen?</h2>
+          <p>In einer kurzen Demo zeigen wir Ihnen genau die Module, die zu Ihren Abläufen passen.</p>
+          <div class="btn-row center">
+            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
+            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="./">
+            <img src="../assets/img/EGroupware-Logo-invert.svg" alt="EGroupware"
+                 width="173" height="34" loading="lazy">
+          </a>
+          <p>EGroupware ist das Open-Source-Online-Office für Unternehmen, Verwaltungen und Bildungseinrichtungen. Entwickelt, gehostet und betreut in Deutschland.</p>
+          <p class="mt-2"><strong style="color:#fff">Entwickelt &amp; gehostet in Deutschland</strong></p>
+        </div>
+      <div>
+        <h2 class="footer-h">Produkt</h2>
+        <ul>
+          <li><a href="funktionen">Funktionen</a></li>
+          <li><a href="preise">Preise</a></li>
+          <li><a href="branchen">Branchen</a></li>
+          <li><a href="./">EGroupware 26</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Unternehmen</h2>
+        <ul>
+          <li><a href="ueber-uns">Über uns</a></li>
+          <li><a href="support">Support</a></li>
+          <li><a href="kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Rechtliches</h2>
+        <ul>
+          <li><a href="impressum">Impressum</a></li>
+          <li><a href="datenschutz">Datenschutz</a></li>
+          <li><a href="haftungsausschluss">Haftungsausschluss</a></li>
+          <li><a href="vertrag-kuendigen">Vertrag kündigen</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> EGroupware GmbH. Alle Rechte vorbehalten.</p>
+        <nav aria-label="Rechtliches"><a href="impressum">Impressum</a> <a href="datenschutz">Datenschutz</a> <a href="haftungsausschluss">Haftungsausschluss</a> <a href="vertrag-kuendigen">Vertrag kündigen</a></nav>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
