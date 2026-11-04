@@ -21,7 +21,7 @@ jobs:
         run: |
           PAYLOAD="{\"ref\":\"${{ github.sha }}\"}"
           SIG="sha256=$(printf '%s' "$PAYLOAD" | openssl dgst -sha256 -hmac "$WEBHOOK_SECRET" | sed 's/^.* //')"
-          curl -sf -X POST https://docker.egroupware.org/hooks/deploy-www2 \
+          curl -sf -X POST https://staging.egroupware.org/hooks/deploy-www2 \
             -H "Content-Type: application/json" \
             -H "X-Hub-Signature-256: $SIG" \
             --data "$PAYLOAD"
