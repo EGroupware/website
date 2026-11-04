@@ -1723,3 +1723,142 @@ a.alt-tile:hover .alt-tile__name { color: var(--primary); }
 .alt-quote figcaption { margin-top: auto; font-size: var(--fs-sm); }
 .alt-quote cite { font-style: normal; font-weight: 650; display: block; color: var(--text); }
 .alt-quote figcaption span { color: var(--text-muted); }
+
+/* -- Statusseite (de/status, en/status) ------------------------------ */
+/* Farben fuer Betriebszustand und Meldungsarten. Die Optik folgt den
+   EGroupware-Benachrichtigungen: Kopfleiste, Badges in Grossbuchstaben,
+   gelbe Markierung fuer Stoerungen, gruene Box fuer Updates. */
+.status-page {
+  --st-ok: #1e6b3e;     --st-ok-bg: #dcf1e4;
+  --st-warn: #7a5600;   --st-warn-bg: #fdf3d6;  --st-warn-bar: #e0a12a;
+  --st-err: #a8261c;    --st-err-bg: #fbe3e0;   --st-err-bar: #d9443a;
+  --st-info: #094c85;   --st-info-bg: #e1ecf8;
+  --st-head: #e8eef5;   --st-note-bg: #f1f4f7;  --st-note-bar: #2e7d4f;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .status-page {
+    --st-ok: #7fd6a2;   --st-ok-bg: #12301f;
+    --st-warn: #f2c66b; --st-warn-bg: #2e2510;  --st-warn-bar: #d39a2a;
+    --st-err: #ff9b91;  --st-err-bg: #3a1714;   --st-err-bar: #e0574d;
+    --st-info: #9cc7f0; --st-info-bg: #14243a;
+    --st-head: #1b2635; --st-note-bg: #151e2a;  --st-note-bar: #4caf78;
+  }
+}
+:root[data-theme="dark"] .status-page {
+  --st-ok: #7fd6a2;   --st-ok-bg: #12301f;
+  --st-warn: #f2c66b; --st-warn-bg: #2e2510;  --st-warn-bar: #d39a2a;
+  --st-err: #ff9b91;  --st-err-bg: #3a1714;   --st-err-bar: #e0574d;
+  --st-info: #9cc7f0; --st-info-bg: #14243a;
+  --st-head: #1b2635; --st-note-bg: #151e2a;  --st-note-bar: #4caf78;
+}
+
+.st-badge {
+  display: inline-block; flex: none; white-space: nowrap;
+  font-size: .72rem; font-weight: 700; letter-spacing: .06em; line-height: 1.2;
+  padding: .3rem .55rem; border-radius: 4px; border: 1px solid transparent;
+}
+.st-badge--ok       { background: var(--st-ok-bg);   color: var(--st-ok); }
+.st-badge--warn     { background: var(--st-warn-bg); color: var(--st-warn); border-color: var(--st-warn-bar); }
+.st-badge--err      { background: var(--st-err-bg);  color: var(--st-err); border-color: var(--st-err-bar); }
+.st-badge--stoerung { background: transparent; color: var(--st-warn); border-color: var(--st-warn-bar); }
+.st-badge--wartung  { background: var(--st-info-bg); color: var(--st-info); }
+.st-badge--update   { background: var(--st-ok-bg);   color: var(--st-ok); }
+
+/* Aktueller Status: Karte mit Kopfleiste, eine Zeile pro Dienst */
+.status-board {
+  border: 1px solid var(--border); border-radius: var(--r-md);
+  background: var(--bg-elevated); overflow: hidden; box-shadow: var(--shadow-sm);
+}
+.status-board__head {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: .25rem 1rem; padding: 1rem 1.25rem;
+  background: var(--st-head); border-bottom: 1px solid var(--border);
+}
+.status-board__head h2 { font-size: var(--fs-h4); margin: 0; }
+.status-board__stand { font-size: var(--fs-sm); color: var(--text-muted); }
+.status-board__list { list-style: none; margin: 0; padding: 0 1.25rem; }
+.status-board__list li {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .85rem 0; border-bottom: 1px solid var(--border);
+}
+.status-board__list li:last-child { border-bottom: 0; }
+.status-board__svc { font-weight: 600; }
+.status-note { margin-top: 1rem; font-size: var(--fs-sm); color: var(--text-soft); }
+
+/* Legende und Jahresgruppen */
+.status-legend { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin: 0 0 1.5rem; }
+.status-legend div { display: flex; align-items: center; gap: .5rem; }
+.status-legend dt, .status-legend dd { margin: 0; font-size: var(--fs-sm); color: var(--text-soft); }
+
+.status-history { display: grid; gap: .75rem; }
+.status-year {
+  border: 1px solid var(--border); border-radius: var(--r-md);
+  background: var(--bg-elevated); overflow: hidden;
+}
+.status-year summary {
+  cursor: pointer; list-style: none; padding: 1rem 1.25rem;
+  display: flex; align-items: center; gap: .75rem;
+  font-weight: 700; font-size: var(--fs-lg); color: var(--text);
+}
+.status-year summary::-webkit-details-marker { display: none; }
+.status-year summary::after {
+  content: "+"; margin-left: auto; font-size: 1.4rem; font-weight: 400;
+  color: var(--primary); line-height: 1; transition: transform .2s ease;
+}
+.status-year[open] summary::after { transform: rotate(45deg); }
+.status-year__count { font-size: var(--fs-sm); font-weight: 500; color: var(--text-muted); }
+.status-year__list { display: grid; gap: 1rem; padding: 0 1.25rem 1.25rem; }
+
+/* Einzelne Meldung: Kopfleiste wie in der Ticket-Benachrichtigung */
+.incident {
+  border: 1px solid var(--border); border-radius: var(--r-sm);
+  background: var(--bg); overflow: hidden;
+}
+.incident__head {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem;
+  padding: .8rem 1rem; background: var(--st-head); border-bottom: 1px solid var(--border);
+}
+.incident__head h3 { margin: 0; font-size: var(--fs-base); line-height: 1.4; }
+.incident__body { padding: .9rem 1rem 1rem; font-size: var(--fs-sm); }
+.incident__body > * + * { margin-top: .6rem; }
+.incident__body ul, .incident__body ol { padding-left: 1.25rem; }
+.incident__body em { color: var(--text-soft); }
+.incident__body a { overflow-wrap: anywhere; }
+
+.incident--stoerung .incident__head { box-shadow: inset 4px 0 0 var(--st-warn-bar); }
+.incident--wartung .incident__head  { box-shadow: inset 4px 0 0 var(--st-info); }
+/* Updates haengen eingerueckt am Vorfall, als gruene Kommentar-Box */
+.incident--update {
+  margin-left: clamp(.75rem, 3vw, 2rem); border: 0; border-left: 4px solid var(--st-note-bar);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0; background: var(--st-note-bg);
+}
+.incident--update .incident__head { background: transparent; border-bottom: 0; padding-bottom: 0; }
+
+@media (max-width: 560px) {
+  .incident__head { flex-direction: column; gap: .5rem; }
+}
+
+/* Farbiger Punkt vor jedem Dienst. Die Farbe folgt dem Badge in derselben
+   Zeile, beim Umstellen muss also nur das Badge geaendert werden. Ohne
+   :has()-Unterstuetzung bleibt der Punkt grau, das Badge sagt es trotzdem. */
+.status-board__svc { display: inline-flex; align-items: center; gap: .65rem; }
+.status-board__svc::before {
+  content: ""; flex: none; width: .75rem; height: .75rem; border-radius: 50%;
+  background: var(--text-muted);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--text-muted) 18%, transparent);
+}
+.status-board__list li:has(.st-badge--ok) .status-board__svc::before {
+  background: #2e9d5b; box-shadow: 0 0 0 4px color-mix(in srgb, #2e9d5b 20%, transparent);
+}
+.status-board__list li:has(.st-badge--warn) .status-board__svc::before {
+  background: #e0a12a; box-shadow: 0 0 0 4px color-mix(in srgb, #e0a12a 22%, transparent);
+}
+.status-board__list li:has(.st-badge--err) .status-board__svc::before {
+  background: #d9443a; box-shadow: 0 0 0 4px color-mix(in srgb, #d9443a 22%, transparent);
+}
+
+/* EGroupware-Zeichen vor dem Seitentitel: wer ueber status.egroupware.org
+   direkt hier landet, sieht sofort, auf wessen Seite er ist. */
+.status-hero__title { display: flex; align-items: center; gap: clamp(.75rem, 2vw, 1.25rem); }
+.status-hero__title img { width: clamp(44px, 6vw, 64px); height: auto; flex: none; }
+.status-hero__title h1 { margin: 0; }
