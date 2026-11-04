@@ -1,4 +1,4 @@
-name: Deploy www2 site
+name: Deploy egroupware.org site (currently www2.egroupware.org)
 
 on:
   push:
@@ -14,14 +14,16 @@ jobs:
       # for the sites themselves, so we trigger over HTTPS instead, authenticated by
       # an HMAC-SHA256 signature (verified server-side by a webhook listener that
       # only ever runs its own fixed git-fetch-and-reset-hard script - no deploy
-      # logic or secrets live in this workflow).
+      # logic or secrets live in this workflow). Routed through staging.egroupware.org
+      # (not docker.egroupware.org, which is CDN-fronted for the Nordenham customer
+      # site) so this URL doesn't need to change when www2 is renamed to www.
       - name: Trigger deploy via webhook
         env:
-          WEBHOOK_SECRET: ${{ secrets.WWW2_WEBHOOK_SECRET }}
+          WEBHOOK_SECRET: ${{ secrets.EGROUPWARE_ORG_WEBHOOK_SECRET }}
         run: |
           PAYLOAD="{\"ref\":\"${{ github.sha }}\"}"
           SIG="sha256=$(printf '%s' "$PAYLOAD" | openssl dgst -sha256 -hmac "$WEBHOOK_SECRET" | sed 's/^.* //')"
-          curl -sf -X POST https://staging.egroupware.org/hooks/deploy-www2 \
+          curl -sf -X POST https://staging.egroupware.org/hooks/deploy-egroupware-org \
             -H "Content-Type: application/json" \
             -H "X-Hub-Signature-256: $SIG" \
             --data "$PAYLOAD"
