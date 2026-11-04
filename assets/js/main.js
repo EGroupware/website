@@ -277,3 +277,14 @@
   var year = document.querySelector("[data-year]");
   if (year) { year.textContent = String(new Date().getFullYear()); }
 })();
+
+/* Rocket.Chat livechat widget - unmodified official embed snippet, same
+   as used on the current www.egroupware.org (served by the Rocket.Chat
+   instance itself, so it always loads whatever version is deployed
+   there - no update needed here when Rocket.Chat is upgraded). */
+(function (w, d, s, u) {
+  w.RocketChat = function (c) { w.RocketChat._.push(c); }; w.RocketChat._ = []; w.RocketChat.url = u;
+  var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+  j.async = true; j.src = 'https://pole.egroupware.org/livechat/rocketchat-livechat.min.js?_=201912110000';
+  h.parentNode.insertBefore(j, h);
+})(window, document, 'script', 'https://pole.egroupware.org/livechat');
