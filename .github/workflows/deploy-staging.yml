@@ -1,0 +1,23 @@
+name: Deploy staging site
+
+on:
+  push:
+    branches: [staging]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.STAGING_DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          echo "docker.egroupware.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN9Bxw8xiP6RtleSqrWjMtpGTEtX8Dh44VnUVU0+4EKS" > ~/.ssh/known_hosts
+
+      # The server only ever runs its own fixed deploy script, regardless of
+      # what is requested here (enforced via a forced `command=` on the
+      # deploy-website user's authorized_keys entry), so no deploy logic or
+      # secrets are handled in this workflow itself.
+      - name: Trigger deploy
+        run: ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes deploy-website@docker.egroupware.org
