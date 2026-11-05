@@ -1897,3 +1897,20 @@ a.alt-tile:hover .alt-tile__name { color: var(--primary); }
   .fc-claim { flex-direction: column; align-items: flex-start; }
   .fc-help { grid-template-columns: 1fr; }
 }
+
+/* Faktencheck: kleine Ueberschriften "Annahme", "Fakt", "Unsere Sicht", damit
+   Aussage, nachpruefbarer Sachverhalt und unsere Position klar getrennt sind. */
+.fc-label {
+  display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--st-warn);
+}
+.fc-label--ok   { color: var(--st-ok); }
+.fc-label--info { color: var(--primary); }
+.fc-claim__text { display: grid; gap: .2rem; }
+.fc-help { grid-template-columns: 1fr; gap: .2rem; }
+.fc-help__title { margin: 0; font-size: var(--fs-sm); font-weight: 700; color: var(--text); }
+.fc-legend {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin: 0 0 1.25rem;
+  font-size: var(--fs-sm); color: var(--text-soft);
+}
+.fc-legend > span { display: inline-flex; align-items: baseline; gap: .45rem; }
