@@ -1558,29 +1558,6 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/de/kundenstimmen/silvia-gross-max-planck-institut-fuer-plasmaphysik-institut-greifswald</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/silvia-gross-max-planck-institut-fuer-plasmaphysik-institut-greifswald"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/silvia-gross-max-planck-institut-fuer-plasmaphysik-institut-greifswald"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/silvia-gross-max-planck-institut-fuer-plasmaphysik-institut-greifswald"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/de/kundenstimmen/andreas-lehmann-zentrum-fuer-brennstoffzellen-technologie</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/andreas-lehmann-zentrum-fuer-brennstoffzellen-technologie"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/kundenstimmen/andreas-lehmann-zentrum-fuer-brennstoffzellen-technologie"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/de/kundenstimmen/lutz-seidel-lutz-seidel-esa-elektroschaltanlagen-gmbh</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/lutz-seidel-lutz-seidel-esa-elektroschaltanlagen-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/lutz-seidel-lutz-seidel-esa-elektroschaltanlagen-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/lutz-seidel-lutz-seidel-esa-elektroschaltanlagen-gmbh"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/de/kundenstimmen/karsten-preuss-ingenieurbuero-otte-schulz-gmbh-co-kg</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/karsten-preuss-ingenieurbuero-otte-schulz-gmbh-co-kg"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/kundenstimmen/karsten-preuss-ingenieurbuero-otte-schulz-gmbh-co-kg"/>
@@ -1604,13 +1581,6 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/de/kundenstimmen/michael-grau-institut-fuer-prozessoptimierung</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/michael-grau-institut-fuer-prozessoptimierung"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/kundenstimmen/michael-grau-institut-fuer-prozessoptimierung"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/de/kundenstimmen/helmut-schramm-isb-ambulante-dienste-ggmbh</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/helmut-schramm-isb-ambulante-dienste-ggmbh"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/helmut-schramm-isb-ambulante-dienste-ggmbh"/>
@@ -1623,14 +1593,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/ingo-schnieders-it-verantwortlicher-pfeifer-drako-drahtseilwerk"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/ingo-schnieders-it-verantwortlicher-pfeifer-drako-drahtseilwerk"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/ingo-schnieders-it-verantwortlicher-pfeifer-drako-drahtseilwerk"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/de/kundenstimmen/frank-pruskil-qcons-gmbh</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/frank-pruskil-qcons-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/frank-pruskil-qcons-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/frank-pruskil-qcons-gmbh"/>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -1649,9 +1611,9 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/de/kundenstimmen/michael-engelhardt-geschaeftsfuehrer-der-igu-tragwerksplanung</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/michael-engelhardt-geschaeftsfuehrer-der-igu-tragwerksplanung"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/kundenstimmen/michael-engelhardt-geschaeftsfuehrer-der-igu-tragwerksplanung"/>
+    <loc>https://www.egroupware.org/de/kundenstimmen/igu-tragwerksplanung</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/igu-tragwerksplanung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/kundenstimmen/igu-tragwerksplanung"/>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -1672,25 +1634,10 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/de/kundenstimmen/frank-michel-michel-ingenieure-gmbh</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/frank-michel-michel-ingenieure-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/frank-michel-michel-ingenieure-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/frank-michel-michel-ingenieure-gmbh"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/de/kundenstimmen/ines-mense-fachbereich-edv-i-stadt-ochtrup</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/ines-mense-fachbereich-edv-i-stadt-ochtrup"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/ines-mense-fachbereich-edv-i-stadt-ochtrup"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/ines-mense-fachbereich-edv-i-stadt-ochtrup"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/de/kundenstimmen/andreas-meier-stadt-detmold-schul-informationstechnik</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/andreas-meier-stadt-detmold-schul-informationstechnik"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/kundenstimmen/andreas-meier-stadt-detmold-schul-informationstechnik"/>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -1721,13 +1668,6 @@
     <loc>https://www.egroupware.org/de/kundenstimmen/martin-reinhardt-abteilungsleiter-kommunale-immobilien-jena</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/martin-reinhardt-abteilungsleiter-kommunale-immobilien-jena"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/kundenstimmen/martin-reinhardt-abteilungsleiter-kommunale-immobilien-jena"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/de/kundenstimmen/michael-schacht-fachlehrer-fuer-kunst-und-berater-fuer-schulentwicklun</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/michael-schacht-fachlehrer-fuer-kunst-und-berater-fuer-schulentwicklun"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/kundenstimmen/michael-schacht-fachlehrer-fuer-kunst-und-berater-fuer-schulentwicklun"/>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -3405,24 +3345,9 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/en/testimonials/andreas-lehmann-the-hydrogen-and-fuel-cell-center-zbt</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/andreas-lehmann-the-hydrogen-and-fuel-cell-center-zbt"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/andreas-lehmann-the-hydrogen-and-fuel-cell-center-zbt"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/en/testimonials/alexander-neofitidis-system-administrator-henze-glas-gmbh-hoerden-in-t</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/alexander-neofitidis-system-administrator-henze-glas-gmbh-hoerden-in-t"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/alexander-neofitidis-system-administrator-henze-glas-gmbh-hoerden-in-t"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/testimonials/lutz-seidel-lutz-seidel-esa-elektroschaltanlagen-gmbh</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/lutz-seidel-lutz-seidel-esa-elektroschaltanlagen-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/lutz-seidel-lutz-seidel-esa-elektroschaltanlagen-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/lutz-seidel-lutz-seidel-esa-elektroschaltanlagen-gmbh"/>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -3450,28 +3375,6 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/en/testimonials/michael-engelhardt-director-general-de-igu-tragwerksplanung</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/michael-engelhardt-director-general-de-igu-tragwerksplanung"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/michael-engelhardt-director-general-de-igu-tragwerksplanung"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/testimonials/michael-grau-institut-fuer-prozessoptimierung-und-informationstechnolo</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/michael-grau-institut-fuer-prozessoptimierung-und-informationstechnolo"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/michael-grau-institut-fuer-prozessoptimierung-und-informationstechnolo"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/testimonials/frank-michel-michel-ingenieure-gmbh</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/frank-michel-michel-ingenieure-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/frank-michel-michel-ingenieure-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/frank-michel-michel-ingenieure-gmbh"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/en/testimonials/helmut-schramm-isb-ambulante-dienste-ggmbh</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/helmut-schramm-isb-ambulante-dienste-ggmbh"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/helmut-schramm-isb-ambulante-dienste-ggmbh"/>
@@ -3480,9 +3383,9 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/en/testimonials/michael-engelhardt-managing-director-of-igu-tragwerksplanung</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/michael-engelhardt-managing-director-of-igu-tragwerksplanung"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/michael-engelhardt-managing-director-of-igu-tragwerksplanung"/>
+    <loc>https://www.egroupware.org/en/testimonials/igu-tragwerksplanung</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/igu-tragwerksplanung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/igu-tragwerksplanung"/>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -3495,21 +3398,6 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/en/testimonials/frank-pruskil-qcons-gmbh</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/frank-pruskil-qcons-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/frank-pruskil-qcons-gmbh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/frank-pruskil-qcons-gmbh"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/testimonials/gerd-weinzierl-gerd-weinzierl-director-de-la-autoescuela-weinzierl</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/gerd-weinzierl-gerd-weinzierl-director-de-la-autoescuela-weinzierl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/gerd-weinzierl-gerd-weinzierl-director-de-la-autoescuela-weinzierl"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/en/testimonials/ines-mense-fachbereich-edv-i-stadt-ochtrup</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/ines-mense-fachbereich-edv-i-stadt-ochtrup"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/ines-mense-fachbereich-edv-i-stadt-ochtrup"/>
@@ -3518,25 +3406,10 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/en/testimonials/silvia-gross-max-planck-institut-fuer-plasmaphysik-institut-greifswald</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/silvia-gross-max-planck-institut-fuer-plasmaphysik-institut-greifswald"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/silvia-gross-max-planck-institut-fuer-plasmaphysik-institut-greifswald"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/silvia-gross-max-planck-institut-fuer-plasmaphysik-institut-greifswald"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/en/testimonials/harald-goessinger-tonstudio-blautone-kathriner-gmbh</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/harald-goessinger-tonstudio-blautone-kathriner-gmbh"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/harald-goessinger-tonstudio-blautone-kathriner-gmbh"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/harald-goessinger-tonstudio-blautone-kathriner-gmbh"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/testimonials/christian-herzog-christian-herzog-jefe-de-informatica-departamento-de-</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/christian-herzog-christian-herzog-jefe-de-informatica-departamento-de-"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/christian-herzog-christian-herzog-jefe-de-informatica-departamento-de-"/>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -3559,13 +3432,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kundenstimmen/sven-lattermann-rechtsanwalt"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/sven-lattermann-rechtsanwalt"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/sven-lattermann-rechtsanwalt"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/testimonials/andreas-meier-stadt-detmold-school-information-technology</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/andreas-meier-stadt-detmold-school-information-technology"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/andreas-meier-stadt-detmold-school-information-technology"/>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -3596,13 +3462,6 @@
     <loc>https://www.egroupware.org/en/testimonials/martin-reinhardt-head-of-department-kommunale-immobilien-jena-dv-tk</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/martin-reinhardt-head-of-department-kommunale-immobilien-jena-dv-tk"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/martin-reinhardt-head-of-department-kommunale-immobilien-jena-dv-tk"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/testimonials/michael-schacht-gymnasium-edenkoben</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/testimonials/michael-schacht-gymnasium-edenkoben"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/michael-schacht-gymnasium-edenkoben"/>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>

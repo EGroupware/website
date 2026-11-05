@@ -624,7 +624,7 @@ strong { color: var(--text); font-weight: 650; }
 .logo-strip__list {
   list-style: none; padding: 0; margin: 0;
   display: grid; gap: .75rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 210px)); justify-content: center;
 }
 .logo-strip__list li {
   display: grid; place-items: center; min-height: 68px; padding: .6rem .8rem;
@@ -1989,3 +1989,7 @@ a.alt-tile:hover .alt-tile__name { color: var(--primary); }
 
 /* Knopf "Text kopieren" braucht JavaScript */
 html:not(.js) [data-copy] { display: none; }
+
+/* Links im dunklen Band: Standard-Linkfarbe waere dort kaum lesbar */
+.section--dark .link-arrow, .section--dark .prose a, .section--dark p a { color: var(--accent-400); }
+.section--dark .link-arrow:hover, .section--dark p a:hover { color: #fff; }
