@@ -8,7 +8,9 @@ die hier mit Claude Code arbeiten.
 
 - `index.html` – Sprachweiche (leitet nach `de/` oder `en/` weiter)
 - `de/*.html`, `en/*.html` – die Seiten, je Sprache rund 65. Links ohne `.html`
-  (`href="kalender"`), der Server ergänzt die Endung.
+  (`href="kalender"`), der Server ergänzt die Endung. **Interne Links nie mit `.html`**
+  schreiben – auch nicht in Vorschau-Seiten, Skripten oder Downloads-Listen (Hinweis Ralf).
+  Nach größeren Änderungen alle internen Links prüfen (siehe „Links prüfen“ unten).
 - `assets/css/style.css` – das einzige Stylesheet, Design-Tokens oben in `:root`
 - `assets/img/` – Logos (`EGroupware-Logo.svg`, `-invert.svg`, `EGroupware-Mark.svg`), Bilder
 - `sitemap.xml`, `robots.txt`, `404.html`
@@ -115,3 +117,10 @@ oben im `<main>` der Seiten.
 
 Seiten direkt im Browser öffnen (`de/status.html`). Dabei funktionieren die Links
 ohne `.html` nicht – das ist lokal normal und auf dem Server in Ordnung.
+
+## Links prüfen
+
+Nach Änderungen an Menü, Footer, neuen Seiten oder Umbenennungen alle internen Links
+prüfen: Jeder relative `href`/`src` muss auf eine vorhandene Datei zeigen (`ziel`,
+`ziel.html` oder `ziel/index.html`). Externe Links (`https:`, `mailto:`, `tel:`) und
+Sprungmarken (`#…`) sind ausgenommen. Gefundene Fehler beheben, nicht nur melden.
