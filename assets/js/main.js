@@ -51,6 +51,20 @@
     schemeQuery.addListener(followSystem);
   }
 
+  /* ---- Text kopieren (Presseseite: Kurzbeschreibung) ----
+     <button data-copy="ID" data-copied="Kopiert"> kopiert den Text des Elements ID. */
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var target = document.getElementById(btn.getAttribute("data-copy"));
+      if (!target || !navigator.clipboard) { return; }
+      var label = btn.textContent;
+      navigator.clipboard.writeText(target.innerText.trim()).then(function () {
+        btn.textContent = btn.getAttribute("data-copied") || label;
+        setTimeout(function () { btn.textContent = label; }, 2000);
+      });
+    });
+  });
+
   /* ---- Mobile navigation ---- */
   var navToggle = document.querySelector(".nav-toggle");
   var navLinks = document.getElementById("primary-nav");

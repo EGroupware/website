@@ -1914,3 +1914,76 @@ a.alt-tile:hover .alt-tile__name { color: var(--primary); }
   font-size: var(--fs-sm); color: var(--text-soft);
 }
 .fc-legend > span { display: inline-flex; align-items: baseline; gap: .45rem; }
+
+/* -- Presseseite (de/presse, en/press) ------------------------------- */
+.press-nav { display: flex; flex-wrap: wrap; gap: .5rem; }
+.press-nav .chip { text-decoration: none; }
+.press-contact { display: grid; grid-template-columns: 96px 1fr; gap: 1.25rem; align-items: center; }
+.press-contact--wide { grid-template-columns: 140px 1fr; }
+.press-contact__photo {
+  width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center 20%;
+  border-radius: 50%; border: 3px solid var(--bg-elevated); box-shadow: var(--shadow-sm);
+}
+.press-contact__name { font-weight: 700; font-size: var(--fs-lg); margin: 0; }
+.press-contact__links { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; font-weight: 600; }
+.press-contact address { font-style: normal; color: var(--text-soft); font-size: var(--fs-sm); }
+@media (max-width: 520px) { .press-contact, .press-contact--wide { grid-template-columns: 72px 1fr; } }
+
+/* Logo-Kacheln: Vorschau auf passendem Grund, darunter die Formate */
+.asset-card {
+  border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden;
+  background: var(--bg-elevated); display: flex; flex-direction: column;
+}
+.asset-card__preview {
+  display: grid; place-items: center; height: 150px; padding: 1.25rem 1.5rem;
+  background: #fff; border-bottom: 1px solid var(--border);
+}
+.asset-card__preview--dark { background: #0b3151; }
+.asset-card__preview img { max-width: 100%; max-height: 64px; width: auto; height: auto; }
+.asset-card__preview img.asset-card__icon { max-height: 72px; }
+.asset-card__body { padding: 1rem 1.25rem 1.25rem; display: grid; gap: .6rem; }
+.asset-card__body h3, .asset-card__body h4 { margin: 0; font-size: var(--fs-base); }
+.asset-card__dl, .gallery__item figcaption a, .person-card figcaption a { margin: 0; }
+.asset-card__dl { display: flex; flex-wrap: wrap; gap: .5rem; }
+.asset-card__dl a, .gallery__item figcaption a, .person-card figcaption a {
+  display: inline-flex; align-items: center; gap: .35rem; font-size: var(--fs-xs); font-weight: 650;
+  text-decoration: none; color: var(--primary);
+}
+.asset-card__dl a {
+  padding: .35rem .7rem; border: 1px solid var(--border-strong); border-radius: var(--r-full);
+}
+.asset-card__dl a:hover { border-color: var(--primary); background: var(--primary-soft); }
+.asset-card__dl a::before, .gallery__item figcaption a::before, .person-card figcaption a::before { content: "↓"; }
+
+/* Screenshot-Galerie */
+.gallery-h { font-size: var(--fs-h4); margin: 2rem 0 1rem; }
+.gallery {
+  display: grid; gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+}
+.gallery--mobile { grid-template-columns: repeat(auto-fill, minmax(min(170px, 100%), 1fr)); }
+.gallery__item { margin: 0; display: grid; gap: .5rem; }
+.gallery__item > a {
+  display: block; aspect-ratio: 16 / 10; overflow: hidden; border-radius: var(--r-sm);
+  border: 1px solid var(--border); background: var(--bg-soft);
+}
+.gallery--mobile .gallery__item > a { aspect-ratio: 850 / 1600; }
+.gallery__item img { width: 100%; height: 100%; object-fit: contain; transition: transform .2s ease; }
+.gallery__item > a:hover img { transform: scale(1.03); }
+.gallery__item figcaption { display: grid; gap: .15rem; font-size: var(--fs-sm); color: var(--text); font-weight: 600; }
+
+/* Fotos der Geschaeftsfuehrung */
+.person-card {
+  margin: 0; display: grid; grid-template-columns: 160px 1fr; gap: 1.25rem; align-items: center;
+  border: 1px solid var(--border); border-radius: var(--r-md); background: var(--bg-elevated); padding: 1rem;
+}
+.person-card img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: var(--r-sm); }
+.person-card figcaption { display: grid; gap: .3rem; }
+.person-card figcaption span { color: var(--text-soft); font-size: var(--fs-sm); }
+
+.press-more { margin-top: 1rem; border-top: 1px solid var(--border); padding-top: .75rem; }
+.press-more summary { cursor: pointer; font-weight: 650; color: var(--primary); font-size: var(--fs-sm); }
+.press-more .facts { margin-top: .75rem; }
+
+/* Knopf "Text kopieren" braucht JavaScript */
+html:not(.js) [data-copy] { display: none; }
