@@ -565,7 +565,8 @@
   <url>
     <loc>https://www.egroupware.org/de/allgemein/digitale-souveraenitaet-offener-brief-an-claudia-plattner-vom-bsi</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/digitale-souveraenitaet-offener-brief-an-claudia-plattner-vom-bsi"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/allgemein/digitale-souveraenitaet-offener-brief-an-claudia-plattner-vom-bsi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/general/digital-sovereignty-open-letter-to-claudia-plattner-of-the-bsi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/general/digital-sovereignty-open-letter-to-claudia-plattner-of-the-bsi"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -579,14 +580,16 @@
   <url>
     <loc>https://www.egroupware.org/de/allgemein/2025-zeit-fuer-umstieg-von-microsoft</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/2025-zeit-fuer-umstieg-von-microsoft"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/allgemein/2025-zeit-fuer-umstieg-von-microsoft"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/general/2025-time-to-switch-from-microsoft"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/general/2025-time-to-switch-from-microsoft"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.egroupware.org/de/allgemein/kriterien-fuer-os-projekte</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/kriterien-fuer-os-projekte"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/de/allgemein/kriterien-fuer-os-projekte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/general/sustainable-open-source-providers-vs-price-dumpers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/general/sustainable-open-source-providers-vs-price-dumpers"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3602,5 +3605,29 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials/michael-schacht-gymnasium-edenkoben"/>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.egroupware.org/en/general/digital-sovereignty-open-letter-to-claudia-plattner-of-the-bsi</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/digitale-souveraenitaet-offener-brief-an-claudia-plattner-vom-bsi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/general/digital-sovereignty-open-letter-to-claudia-plattner-of-the-bsi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/general/digital-sovereignty-open-letter-to-claudia-plattner-of-the-bsi"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.egroupware.org/en/general/2025-time-to-switch-from-microsoft</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/2025-zeit-fuer-umstieg-von-microsoft"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/general/2025-time-to-switch-from-microsoft"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/general/2025-time-to-switch-from-microsoft"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.egroupware.org/en/general/sustainable-open-source-providers-vs-price-dumpers</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/kriterien-fuer-os-projekte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/general/sustainable-open-source-providers-vs-price-dumpers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/general/sustainable-open-source-providers-vs-price-dumpers"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
