@@ -63,6 +63,20 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
   Das Konzept dazu: https://claude.ai/artifact/1vLETdr9W2yRCurMoPJZhV
 - Jede Seite muss auf dem Handy funktionieren (kein seitliches Scrollen).
 
+## Texte und Suchmaschinen
+
+- Community Edition nie „kostenlos“/„free“ nennen, sondern „ohne Lizenzkosten“ /
+  „without licence fees“ (bzw. „lizenzkostenfrei“ / „licence-free“). Betrieb und
+  Updates liegen beim Kunden, Support ist optional buchbar. Wirklich kostenlose
+  Angebote (30-Tage-Test, Forum) dürfen „kostenlos“ heißen.
+- EPL: Kunden erhalten Lizenzschlüssel und Zugang zum Repository und dürfen den
+  Quellcode prüfen und anpassen, aber nicht veröffentlichen. Die Lizenz gilt für die
+  erworbene Version unbefristet. Keinen Langzeit-Support für ältere Versionen zusagen.
+- Seiten mit FAQ (Startseite, Preise, Digitale Souveränität) haben strukturierte Daten
+  (`<script type="application/ld+json">` im `<head>`). Wer dort Fragen oder Antworten
+  ändert, muss das JSON-LD mit anpassen, und das „Stand“-Datum bzw. `dateModified`
+  aktualisieren.
+
 ## Statusseite pflegen (`de/status.html`, `en/status.html`)
 
 Immer beide Sprachen gleichzeitig ändern. Die genaue Vorlage steht als Kommentar
