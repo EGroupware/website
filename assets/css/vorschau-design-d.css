@@ -1,0 +1,47 @@
+/* VORSCHAU (nur Staging, vor Merge nach main entfernen) – Variante D "Benachrichtigungs-Stil"
+   Baut auf B (Container) auf; die Seite laedt vorschau-design-b.css mit.
+   Ergaenzt sparsam Bausteine der Status- und Souveraenitaetsseite:
+   Kopfleisten, Label-Wert-Zeilen, eine gelbe Markierung (nur Vergleich),
+   gruene Kommentar-Boxen (nur Kundenstimmen). Sonst bleibt es neutral. */
+
+/* 1. Abschnitts-Label als neutraler Badge (wie in B), Kundenstimmen gruen */
+.v-d #kundenstimmen .eyebrow { border-color: transparent; background: var(--st-ok-bg); color: var(--st-ok); }
+
+/* 2. "EGroupware auf einen Blick": Karte mit Kopfleiste, darunter Label-Wert-Zeilen */
+.v-d #was-ist-egroupware .panel {
+  padding: 0; overflow: hidden; background: var(--bg-elevated);
+  border: 1px solid var(--border); border-radius: var(--r-md); box-shadow: none;
+}
+.v-d #was-ist-egroupware .panel .facts-h3 {
+  margin: 0; padding: .9rem 1.25rem; background: var(--st-head);
+  border-bottom: 1px solid var(--border); font-size: var(--fs-base);
+}
+.v-d #was-ist-egroupware .panel .facts { margin: 0; padding: .25rem 1.25rem .75rem; }
+
+/* 3. Vergleichstabelle: EGroupware-Spalte wie die markierte Zeile in den Benachrichtigungen */
+.v-d .compare thead th { background: var(--st-head); }
+.v-d .compare tr > :nth-child(2) {
+  background: var(--st-warn-bg); box-shadow: inset 4px 0 0 var(--st-warn-bar); font-weight: 600;
+}
+.v-d .compare thead th:nth-child(2) { color: var(--text); }
+
+/* 4. Kundenstimmen als Kommentar-Boxen: grauer Grund, gruener Rand links */
+.v-d .quote {
+  background: var(--st-note-bg); border: 0; border-left: 4px solid var(--st-note-bar);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+}
+.v-d .quote-tag {
+  align-self: flex-start; border-radius: 4px; letter-spacing: .06em;
+  background: var(--bg-elevated); color: var(--text-soft); border: 1px solid var(--border-strong);
+}
+.v-d .quote-metric { border-radius: 4px; background: var(--st-ok-bg); color: var(--st-ok); }
+
+/* 5. Kennzahlen mit Kopfleisten-Optik: Zahl in der Leiste, Bezeichnung darunter */
+.v-d .stats { overflow: hidden; }
+.v-d .stats .stat { padding: 0; }
+.v-d .stats .stat dd { background: var(--st-head); padding: .9rem 1rem; margin: 0; border-bottom: 1px solid var(--border); }
+.v-d .stats .stat dt { padding: .7rem 1rem .9rem; }
+
+/* 6. FAQ: geoeffnete Frage bekommt die Kopfleiste */
+.v-d .faq details[open] summary { background: var(--st-head); border-bottom: 1px solid var(--border); }
+.v-d .faq details[open] .faq-body { padding-top: 1rem; }
