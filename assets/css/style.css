@@ -1985,5 +1985,7 @@ a.alt-tile:hover .alt-tile__name { color: var(--primary); }
 .press-more summary { cursor: pointer; font-weight: 650; color: var(--primary); font-size: var(--fs-sm); }
 .press-more .facts { margin-top: .75rem; }
 
+.rocketchat-widget { color-scheme: light;}
+
 /* Knopf "Text kopieren" braucht JavaScript */
 html:not(.js) [data-copy] { display: none; }
