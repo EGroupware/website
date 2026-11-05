@@ -63,6 +63,18 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
   Das Konzept dazu: https://claude.ai/artifact/1vLETdr9W2yRCurMoPJZhV
 - Jede Seite muss auf dem Handy funktionieren (kein seitliches Scrollen).
 
+## Hell-/Dunkelmodus
+
+- Standard: Die Seite folgt dem Betriebssystem (`prefers-color-scheme`), auch live.
+- Der Knopf mit Mond/Sonne setzt `data-theme` auf `<html>` und merkt sich die Wahl
+  in `localStorage` (`egw-theme`) zusammen mit dem Systemschema zum Zeitpunkt des
+  Klicks (`egw-theme-sys`). Die letzte Aktion gewinnt: Wird das Betriebssystem
+  umgestellt, wird die Wahl verworfen. Klickt man zurück auf das Systemschema, ebenso.
+- Logik in `assets/js/main.js` und in einem kleinen Skript im `<head>` **jeder** Seite
+  (läuft vor dem ersten Zeichnen, damit nichts aufblitzt). Dieses Kopf-Skript ist in
+  allen Seiten identisch – Änderungen daran immer in allen Dateien gleich machen und
+  neue Seiten aus einer bestehenden Seite kopieren, damit es dabei ist.
+
 ## Texte und Suchmaschinen
 
 - Community Edition nie „kostenlos“/„free“ nennen, sondern „ohne Lizenzkosten“ /

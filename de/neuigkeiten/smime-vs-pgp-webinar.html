@@ -28,7 +28,7 @@
   </script>
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
-    if(t==="dark"||t==="light"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();
+    var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
   </script>
 </head>
 <body>

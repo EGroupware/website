@@ -11,17 +11,45 @@
   function store(key, value) {
     try { window.localStorage.setItem(key, value); } catch (e) { /* ignore */ }
   }
+  function unstore(key) {
+    try { window.localStorage.removeItem(key); } catch (e) { /* ignore */ }
+  }
+
+  /* Ohne eigene Wahl folgt die Seite dem Betriebssystem (CSS prefers-color-scheme,
+     auch live beim Umschalten). Die letzte Aktion gewinnt: Eine Wahl per Knopf gilt,
+     bis das Betriebssystem umgestellt wird. Dafuer merken wir uns das Systemschema
+     zum Zeitpunkt des Klicks ("egw-theme-sys"); das Skript im <head> verwirft die
+     Wahl, sobald das System nicht mehr dazu passt. */
+  var schemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  function systemScheme() { return schemeQuery.matches ? "dark" : "light"; }
+  function followSystem() {
+    root.removeAttribute("data-theme");
+    unstore("egw-theme");
+    unstore("egw-theme-sys");
+  }
 
   var themeButtons = document.querySelectorAll(".theme-toggle, .theme-toggle-inline");
   themeButtons.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      var current = root.getAttribute("data-theme") || (prefersDark ? "dark" : "light");
+      var system = systemScheme();
+      var current = root.getAttribute("data-theme") || system;
       var next = current === "dark" ? "light" : "dark";
-      root.setAttribute("data-theme", next);
-      store("egw-theme", next);
+      if (next === system) {
+        followSystem();
+      } else {
+        root.setAttribute("data-theme", next);
+        store("egw-theme", next);
+        store("egw-theme-sys", system);
+      }
     });
   });
+
+  /* Systemumstellung bei geoeffneter Seite: eigene Wahl verwerfen */
+  if (schemeQuery.addEventListener) {
+    schemeQuery.addEventListener("change", followSystem);
+  } else if (schemeQuery.addListener) {
+    schemeQuery.addListener(followSystem);
+  }
 
   /* ---- Mobile navigation ---- */
   var navToggle = document.querySelector(".nav-toggle");
