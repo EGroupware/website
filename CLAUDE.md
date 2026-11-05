@@ -26,6 +26,9 @@ die hier mit Claude Code arbeiten.
 - Gearbeitet wird auf `staging`. Nach `main` nur, wenn es ausdrücklich gesagt wird.
 - **Vor jedem Commit die Änderung lokal im Browser zeigen** und auf Freigabe warten.
 - Commit-Nachrichten kurz und auf Englisch, wie in der bisherigen Historie.
+- Im Repo arbeiten mehrere Personen. Vor dem Arbeiten und vor jedem Push den aktuellen
+  Stand holen: `git pull --rebase origin staging`. Bei Konflikten nicht überschreiben,
+  sondern die Änderungen der anderen erhalten und im Zweifel nachfragen. Nie `--force` pushen.
 - Vorschau-Seiten (`de/vorschau-design-*.html`, `assets/css/vorschau-design-*.css`) sind nur für
   Abstimmungen auf Staging gedacht und müssen vor einem Merge nach `main` entfernt werden.
 
