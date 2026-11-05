@@ -38,3 +38,7 @@
 .v-c main > .section:not(.section--dark):not(.section--tight):not(:first-of-type) > :is(.wrap, .wrap-narrow) {
   border-top: 1px solid var(--border); padding-top: clamp(2.5rem, 5vw, 4rem);
 }
+
+/* Logoleiste "Im Einsatz bei": schlichtes Label wie die Kapitel, ohne Nummer; keine durchgehende Linie */
+.v-c .logo-strip { border-bottom: 0; padding-block: clamp(2.5rem, 5vw, 3.5rem) 1rem; }
+.v-c .logo-strip__label { color: var(--text-muted); letter-spacing: .14em; margin-bottom: 1.5rem; }

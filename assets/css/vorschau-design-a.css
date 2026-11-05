@@ -31,3 +31,13 @@
 /* Kennzahlen ohne Kasten, nur Zahlen */
 .v-a .stats { border: 0; background: none; box-shadow: none; }
 .v-a .stats .stat { background: none; }
+
+/* Logoleiste "Im Einsatz bei": Label wie die Kapitel-Labels, keine durchgehende Linie */
+.v-a .logo-strip { border-bottom: 0; padding-block: clamp(2.5rem, 5vw, 3.5rem) 1rem; }
+.v-a .logo-strip__label {
+  display: flex; align-items: center; justify-content: center; gap: .75rem;
+  color: var(--text-muted); letter-spacing: .14em; margin-bottom: 1.5rem;
+}
+.v-a .logo-strip__label::before {
+  content: ""; width: 28px; height: 3px; border-radius: 2px; background: var(--primary);
+}
