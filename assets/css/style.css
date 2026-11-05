@@ -624,7 +624,7 @@ strong { color: var(--text); font-weight: 650; }
 .logo-strip__list {
   list-style: none; padding: 0; margin: 0;
   display: grid; gap: .75rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
 }
 .logo-strip__list li {
   display: grid; place-items: center; min-height: 68px; padding: .6rem .8rem;
@@ -1725,10 +1725,10 @@ a.alt-tile:hover .alt-tile__name { color: var(--primary); }
 .alt-quote figcaption span { color: var(--text-muted); }
 
 /* -- Statusseite (de/status, en/status) ------------------------------ */
-/* Farben fuer Betriebszustand und Meldungsarten. Die Optik folgt den
+/* Farben fuer Betriebszustand und Meldungsarten (seitenweit nutzbar). Die Optik folgt den
    EGroupware-Benachrichtigungen: Kopfleiste, Badges in Grossbuchstaben,
    gelbe Markierung fuer Stoerungen, gruene Box fuer Updates. */
-.status-page {
+:root {
   --st-ok: #1e6b3e;     --st-ok-bg: #dcf1e4;
   --st-warn: #7a5600;   --st-warn-bg: #fdf3d6;  --st-warn-bar: #e0a12a;
   --st-err: #a8261c;    --st-err-bg: #fbe3e0;   --st-err-bar: #d9443a;
@@ -1736,7 +1736,7 @@ a.alt-tile:hover .alt-tile__name { color: var(--primary); }
   --st-head: #e8eef5;   --st-note-bg: #f1f4f7;  --st-note-bar: #2e7d4f;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .status-page {
+  :root:not([data-theme="light"]) {
     --st-ok: #7fd6a2;   --st-ok-bg: #12301f;
     --st-warn: #f2c66b; --st-warn-bg: #2e2510;  --st-warn-bar: #d39a2a;
     --st-err: #ff9b91;  --st-err-bg: #3a1714;   --st-err-bar: #e0574d;
@@ -1744,7 +1744,7 @@ a.alt-tile:hover .alt-tile__name { color: var(--primary); }
     --st-head: #1b2635; --st-note-bg: #151e2a;  --st-note-bar: #4caf78;
   }
 }
-:root[data-theme="dark"] .status-page {
+:root[data-theme="dark"] {
   --st-ok: #7fd6a2;   --st-ok-bg: #12301f;
   --st-warn: #f2c66b; --st-warn-bg: #2e2510;  --st-warn-bar: #d39a2a;
   --st-err: #ff9b91;  --st-err-bg: #3a1714;   --st-err-bar: #e0574d;
@@ -1862,3 +1862,38 @@ a.alt-tile:hover .alt-tile__name { color: var(--primary); }
 .status-hero__title { display: flex; align-items: center; gap: clamp(.75rem, 2vw, 1.25rem); }
 .status-hero__title img { width: clamp(44px, 6vw, 64px); height: auto; flex: none; }
 .status-hero__title h1 { margin: 0; }
+
+/* -- Faktencheck (de/digitale-souveraenitaet, en/digital-sovereignty) - */
+/* Je Annahme eine Karte wie in der EGroupware-Benachrichtigung: Kopfleiste
+   mit Nummer, die Annahme als gelb markierte Zeile, der Fakt als gruene Box,
+   darunter was EGroupware dazu beitraegt. */
+.factcheck { display: grid; gap: clamp(1rem, 2vw, 1.5rem); }
+.fc-card {
+  border: 1px solid var(--border); border-radius: var(--r-md);
+  background: var(--bg-elevated); overflow: hidden; box-shadow: var(--shadow-sm);
+}
+.fc-card__head {
+  display: flex; align-items: baseline; gap: .75rem; padding: .85rem 1.25rem;
+  background: var(--st-head); border-bottom: 1px solid var(--border);
+}
+.fc-card__nr { font-weight: 800; color: var(--primary); }
+.fc-card__head h3 { margin: 0; font-size: var(--fs-base); }
+.fc-card__body { display: grid; gap: .9rem; padding: 1.1rem 1.25rem 1.25rem; }
+.fc-claim {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .8rem 1rem; background: var(--st-warn-bg); border-left: 4px solid var(--st-warn-bar);
+}
+.fc-claim q { font-size: var(--fs-lg); font-weight: 650; color: var(--text); }
+.fc-fact {
+  padding: .85rem 1rem; background: var(--st-note-bg);
+  border-left: 4px solid var(--st-note-bar); border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+.fc-fact__head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: .35rem; }
+.fc-fact__head strong { font-size: var(--fs-sm); }
+.fc-fact p, .fc-help p { margin: 0; font-size: var(--fs-sm); }
+.fc-help { display: grid; grid-template-columns: minmax(9rem, 13rem) 1fr; gap: .4rem 1.25rem; padding: 0 .25rem; }
+.fc-help__label { font-weight: 700; color: var(--primary); font-size: var(--fs-sm); }
+@media (max-width: 640px) {
+  .fc-claim { flex-direction: column; align-items: flex-start; }
+  .fc-help { grid-template-columns: 1fr; }
+}

@@ -353,6 +353,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.egroupware.org/de/digitale-souveraenitaet</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/digitale-souveraenitaet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/digital-sovereignty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/digital-sovereignty"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.egroupware.org/de/status</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/status"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/status"/>
@@ -2071,6 +2079,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/testimonials"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.egroupware.org/en/digital-sovereignty</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/digitale-souveraenitaet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/digital-sovereignty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/digital-sovereignty"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.egroupware.org/en/status</loc>
