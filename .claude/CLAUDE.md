@@ -2,7 +2,12 @@
 
 Statische Webseite von www.egroupware.org (früher WordPress). Reines HTML und CSS,
 kein Build-Schritt, keine Frameworks, keine Webfonts. Diese Datei gilt für alle,
-die hier mit Claude Code arbeiten.
+die hier mit Claude Code arbeiten. Claude Code lädt sie automatisch aus `.claude/`. Damit sie
+nicht über die Webseite abrufbar ist, muss der Webserver `/.claude/` (bzw. alle `*.md`) sperren.
+
+**Vertrauliches gehört nicht ins Repo.** Das Repository EGroupware/website ist auf GitHub
+öffentlich. Keine Zugangsdaten, Passwörter, Kundendaten oder internen Absprachen in Dateien,
+Commit-Nachrichten oder Kommentaren ablegen – auch nicht in dieser Datei.
 
 ## Aufbau
 
