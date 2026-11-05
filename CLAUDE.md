@@ -24,6 +24,8 @@ die hier mit Claude Code arbeiten.
 - Gearbeitet wird auf `staging`. Nach `main` nur, wenn es ausdrücklich gesagt wird.
 - **Vor jedem Commit die Änderung lokal im Browser zeigen** und auf Freigabe warten.
 - Commit-Nachrichten kurz und auf Englisch, wie in der bisherigen Historie.
+- Vorschau-Seiten (`de/vorschau-design-*.html`, `assets/css/vorschau-design-*.css`) sind nur für
+  Abstimmungen auf Staging gedacht und müssen vor einem Merge nach `main` entfernt werden.
 
 **Ausnahme Statusseite (ab Produktivbetrieb):** Sobald www.egroupware.org auf diese
 Seite umgestellt ist, gehen Änderungen an `de/status.html` und `en/status.html`

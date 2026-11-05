@@ -1,0 +1,37 @@
+/* VORSCHAU (nur Staging, vor Merge nach main entfernen) – Variante B "Container" 
+   Neutraler Seitenhintergrund, jeder Abschnitt als grosse abgerundete Karte,
+   angelehnt an die Karten in EGroupware selbst. */
+.v-b main { background: var(--bg-soft); padding-bottom: 1.5rem; }
+.v-b .section, .v-b .section--soft { background: transparent; padding-block: .75rem; }
+.v-b .section--tight { padding-block: .75rem; }
+
+.v-b .section > :is(.wrap, .wrap-narrow) {
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--r-xl); box-shadow: var(--shadow-sm);
+  padding: clamp(1.75rem, 4vw, 3.5rem);
+}
+/* Abschnitte mit eigener Karte im Inneren (Kennzahlen, CTA) nicht doppelt rahmen */
+.v-b .section--tight > .wrap, .v-b .section:has(.cta-band) > .wrap {
+  background: none; border: 0; box-shadow: none; padding: 0;
+}
+
+/* Dunkler Abschnitt: Verlauf wandert in die Karte */
+.v-b .section--dark { background: transparent; overflow: visible; }
+.v-b .section--dark > .wrap {
+  background:
+    radial-gradient(700px 360px at 88% 0%, color-mix(in srgb, var(--accent-500) 26%, transparent), transparent 62%),
+    radial-gradient(620px 340px at 6% 100%, color-mix(in srgb, var(--brand-500) 40%, transparent), transparent 60%),
+    linear-gradient(160deg, var(--brand-800), var(--brand-900) 60%, #08283f);
+  border-color: transparent;
+}
+
+/* Label im Stil der Benachrichtigungs-Badges */
+.v-b .eyebrow {
+  background: none; border: 1px solid var(--border-strong); border-radius: 4px;
+  padding: .3rem .6rem; color: var(--text-soft); letter-spacing: .08em;
+}
+.v-b .section--dark .eyebrow { border-color: rgba(255, 255, 255, .35); color: rgba(255, 255, 255, .85); }
+
+/* Karten im Inneren etwas zuruecknehmen, damit es nicht Karte-in-Karte wirkt */
+.v-b .section .card { background: var(--bg-soft); box-shadow: none; }
+.v-b .section--dark .card { background: rgba(255, 255, 255, .06); }

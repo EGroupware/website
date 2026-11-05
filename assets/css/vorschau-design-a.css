@@ -1,0 +1,33 @@
+/* VORSCHAU (nur Staging, vor Merge nach main entfernen) – Variante A "Ruhig mit Akzenten" 
+   Ein Hintergrund fuer alle Abschnitte, Rhythmus ueber Weissraum und
+   Kapitel-Labels. Farbe nur noch an zwei Stellen: Souveraenitaets-Band, CTA. */
+.v-a .section--soft { background: transparent; }
+.v-a .section { padding-block: clamp(4.5rem, 9vw, 8rem); }
+.v-a .section--tight { padding-block: clamp(2rem, 4vw, 3rem); }
+
+/* Kapitel-Label statt Pille: Text mit kurzem Akzentstrich */
+.v-a .eyebrow {
+  background: none; padding: 0; border-radius: 0; gap: .75rem;
+  color: var(--text-muted); letter-spacing: .14em;
+}
+.v-a .eyebrow::before {
+  content: ""; width: 28px; height: 3px; border-radius: 2px; background: var(--primary);
+}
+.v-a .section--dark .eyebrow { color: rgba(255, 255, 255, .75); }
+.v-a .section--dark .eyebrow::before { background: var(--accent-400); }
+
+/* Feine Trennlinie zwischen den Abschnitten, nur so breit wie der Inhalt */
+.v-a main > .section + .section:not(.section--dark):not(.section--tight) > :is(.wrap, .wrap-narrow) {
+  border-top: 1px solid var(--border); padding-top: clamp(3rem, 6vw, 5rem);
+}
+.v-a main > .section + .section:not(.section--dark):not(.section--tight) { padding-top: 0; }
+.v-a main > .section--dark + .section > :is(.wrap, .wrap-narrow) { border-top: 0 !important; }
+.v-a main > .section--dark + .section { padding-top: clamp(4.5rem, 9vw, 8rem) !important; }
+
+/* Ueberschriften etwas groesser, Abschnittskoepfe mit mehr Luft */
+.v-a .section h2 { font-size: clamp(2rem, 2.6vw + 1.1rem, 3rem); letter-spacing: -.02em; }
+.v-a .section-head { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+
+/* Kennzahlen ohne Kasten, nur Zahlen */
+.v-a .stats { border: 0; background: none; box-shadow: none; }
+.v-a .stats .stat { background: none; }
