@@ -1,7 +1,7 @@
 /* VORSCHAU (nur Staging, vor Merge nach main entfernen) – Variante D "Benachrichtigungs-Stil"
    Baut auf B (Container) auf; die Seite laedt vorschau-design-b.css mit.
    Ergaenzt sparsam Bausteine der Status- und Souveraenitaetsseite:
-   Kopfleisten, Label-Wert-Zeilen, eine gelbe Markierung (nur Vergleich),
+   Kopfleisten, Label-Wert-Zeilen, eine blaue Markierung (nur Vergleich),
    gruene Kommentar-Boxen (nur Kundenstimmen). Sonst bleibt es neutral. */
 
 /* 1. Abschnitts-Label als neutraler Badge (wie in B), Kundenstimmen gruen */
@@ -18,12 +18,18 @@
 }
 .v-d #was-ist-egroupware .panel .facts { margin: 0; padding: .25rem 1.25rem .75rem; }
 
-/* 3. Vergleichstabelle: EGroupware-Spalte wie die markierte Zeile in den Benachrichtigungen */
+/* 3. Vergleichstabelle: EGroupware-Spalte in Markenblau hervorgehoben
+   (Gelb steht in den Benachrichtigungen fuer Geaendert/Achtung, daher hier nicht) */
 .v-d .compare thead th { background: var(--st-head); }
 .v-d .compare tr > :nth-child(2) {
-  background: var(--st-warn-bg); box-shadow: inset 4px 0 0 var(--st-warn-bar); font-weight: 600;
+  background: var(--brand-100); box-shadow: inset 4px 0 0 var(--brand-700); font-weight: 600;
 }
 .v-d .compare thead th:nth-child(2) { color: var(--text); }
+/* Dunkelmodus: dunkles Blau statt hellem Hintergrund, damit die Schrift lesbar bleibt */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .v-d .compare tr > :nth-child(2) { background: var(--primary-soft); box-shadow: inset 4px 0 0 var(--primary); }
+}
+:root[data-theme="dark"] .v-d .compare tr > :nth-child(2) { background: var(--primary-soft); box-shadow: inset 4px 0 0 var(--primary); }
 
 /* 4. Kundenstimmen als Kommentar-Boxen: grauer Grund, gruener Rand links */
 .v-d .quote {
