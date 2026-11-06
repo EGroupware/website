@@ -80,6 +80,12 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
   (nur Abschluss-Bänder `.cta-band` bleiben zentriert). Überschriften und Einleitungstexte
   werden nie automatisch getrennt.
 - Jede Seite muss auf dem Handy funktionieren (kein seitliches Scrollen).
+- **Versionsnummer bei CSS/JS-Änderungen hochzählen.** Der Server lässt Browser
+  `style.css`, `main.js` und `social.svg` zehn Jahre zwischenspeichern. Alle Seiten binden
+  sie daher mit `?v=JJJJMMTT` ein (bei `social.svg` vor dem `#`). Wer eine dieser Dateien
+  ändert, setzt die Nummer in **allen** HTML-Dateien neu (pro Tag gleiches Datum, bei
+  mehreren Änderungen am Tag `JJJJMMTTb` usw.) – sonst sehen wiederkehrende Besucher
+  die alte Fassung.
 
 ## Hell-/Dunkelmodus
 
