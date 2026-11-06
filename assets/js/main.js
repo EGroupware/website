@@ -188,7 +188,8 @@
       var term = (search.value || "").trim().toLowerCase();
       var shown = 0;
       cards.forEach(function (card) {
-        var byGroup = active === "all" || card.getAttribute("data-group") === active;
+        // data-group kann mehrere Kategorien enthalten (erste = Hauptkategorie auf der Karte)
+        var byGroup = active === "all" || (" " + card.getAttribute("data-group") + " ").indexOf(" " + active + " ") !== -1;
         var byTerm = !term || card.getAttribute("data-search").indexOf(term) !== -1;
         var visible = byGroup && byTerm;
         card.hidden = !visible;
