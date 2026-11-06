@@ -21,6 +21,15 @@ Commit-Nachrichten oder Kommentaren ablegen – auch nicht in dieser Datei.
 - `sitemap.xml`, `robots.txt`, `404.html`
 - `.github/workflows/` – automatisches Veröffentlichen (siehe unten)
 
+## Deutsch und Englisch immer gleich behandeln
+
+`de/` und `en/` sind inhaltlich und im Aufbau gleich. Jede Änderung an Inhalt, Abschnitten,
+Menü, Footer oder strukturierten Daten (JSON-LD) wird **im selben Commit in beiden Sprachen**
+gemacht – die englische Seite als Übersetzung, nicht als gekürzte Fassung. Fehlt auf einer
+Seite etwas, das die andere Sprache hat, ist das ein Fehler und wird ergänzt.
+Ausnahmen nur, wenn es ausdrücklich gesagt wird (z. B. rein deutschsprachige Inhalte wie
+Pressemitteilungen, die es nur auf Deutsch gibt).
+
 ## Git und Veröffentlichung
 
 | Zweig     | Push veröffentlicht auf                                  |
