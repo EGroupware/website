@@ -50,4 +50,4 @@
   color: var(--text-soft); letter-spacing: .08em;
 }
 /* Innenabstand der Karte: Kacheln etwas schmaler, damit alle Logos in eine Zeile passen */
-.v-b .logo-strip__list { grid-template-columns: repeat(auto-fit, minmax(min(125px, 100%), 210px)); }
+.v-b .logo-strip__list { grid-template-columns: repeat(auto-fit, minmax(min(125px, 100%), 165px)); }
