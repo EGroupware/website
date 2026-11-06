@@ -2204,3 +2204,33 @@ main > :is(.hero, .page-hero, .crumbs) + .section { padding-top: clamp(3rem, 6vw
 .cta-band .btn-row.center { justify-content: center; }
 /* Zwischenueberschriften innerhalb eines Abschnitts ebenfalls links */
 main .section .wrap > h2.center { text-align: left; }
+
+/* -- Vergleichstabelle auf dem Handy als Karten ----
+   Statt seitlich zu scrollen: je Kriterium eine Karte mit Kopfleiste,
+   darunter die drei Anbieter (Name aus data-label der Zelle). */
+@media (max-width: 640px) {
+  .table-wrap:has(> table.compare) { overflow: visible; border: 0; border-radius: 0; background: none; }
+  table.compare, table.compare tbody, table.compare tr, table.compare tbody th, table.compare td {
+    display: block; min-width: 0; width: auto;
+  }
+  table.compare thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  table.compare tr {
+    border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; background: var(--bg-elevated);
+  }
+  table.compare tr + tr { margin-top: .75rem; }
+  table.compare tbody th {
+    position: static; box-shadow: none; min-width: 0;
+    background: var(--st-head); padding: .7rem 1rem; border-bottom: 1px solid var(--border);
+  }
+  table.compare td {
+    display: grid; grid-template-columns: 8.5rem 1fr; gap: .75rem; align-items: baseline;
+    padding: .6rem 1rem; border-bottom: 1px solid var(--border);
+  }
+  table.compare tr td:last-child { border-bottom: 0; }
+  table.compare td::before {
+    content: attr(data-label); font-size: var(--fs-xs); font-weight: 650; color: var(--text-muted);
+  }
+}
+@media (max-width: 380px) {
+  table.compare td { grid-template-columns: 1fr; gap: .15rem; }
+}
