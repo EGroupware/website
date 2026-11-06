@@ -34,7 +34,8 @@ Commit-Nachrichten oder Kommentaren ablegen – auch nicht in dieser Datei.
 - Im Repo arbeiten mehrere Personen. Vor dem Arbeiten und vor jedem Push den aktuellen
   Stand holen: `git pull --rebase origin staging`. Bei Konflikten nicht überschreiben,
   sondern die Änderungen der anderen erhalten und im Zweifel nachfragen. Nie `--force` pushen.
-- Vorschau-Seiten (`de/vorschau-design-*.html`, `assets/css/vorschau-design-*.css`) sind nur für
+- Vorschau-Seiten (`de/vorschau-design-*.html`, `assets/css/vorschau-design-*.css`,
+  `assets/css/vorschau-style-alt.css`) sind nur für
   Abstimmungen auf Staging gedacht und müssen vor einem Merge nach `main` entfernt werden.
 
 **Ausnahme Statusseite (ab Produktivbetrieb):** Sobald www.egroupware.org auf diese
@@ -73,6 +74,11 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
   Kopfleiste, Badges in Großbuchstaben (`.st-badge`), gelbe Markierung für
   Störung/Geändert, grüne Box für Neues/Updates, blauer Button mit kleinem Radius.
   Das Konzept dazu: https://claude.ai/artifact/1vLETdr9W2yRCurMoPJZhV
+- Seitenstil „Kapitel mit Akzenten“ (Standard seit 06.11.2026, Block am Ende von `style.css`):
+  ein Hintergrund, Abschnitte durch eine Linie getrennt, Abschnittskopf links mitlaufend,
+  Labels mit kurzem Akzentstrich. Überschriften und Abschnittsköpfe **immer linksbündig**
+  (nur Abschluss-Bänder `.cta-band` bleiben zentriert). Überschriften und Einleitungstexte
+  werden nie automatisch getrennt.
 - Jede Seite muss auf dem Handy funktionieren (kein seitliches Scrollen).
 
 ## Hell-/Dunkelmodus
