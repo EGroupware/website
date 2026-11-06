@@ -1993,3 +1993,9 @@ html:not(.js) [data-copy] { display: none; }
 /* Links im dunklen Band: Standard-Linkfarbe waere dort kaum lesbar */
 .section--dark .link-arrow, .section--dark .prose a, .section--dark p a { color: var(--accent-400); }
 .section--dark .link-arrow:hover, .section--dark p a:hover { color: #fff; }
+
+/* Logoleiste: helle Original-Logos (z. B. KDSZ in Hellblau) werden in Graustufen
+   zu blass – etwas abdunkeln. Beim Hover erscheint wie ueblich das Original. */
+.logo-strip__list img[src$="kdsz-bayern.webp"] { filter: grayscale(1) brightness(.6); }
+/* Nordenham ist ein JPEG mit weissem Grund: Kontrast statt Abdunkeln, damit Weiss weiss bleibt */
+.logo-strip__list img[src$="stadt-nordenham.jpg"] { filter: grayscale(1) brightness(.8) contrast(1.8); opacity: .85; }

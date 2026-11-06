@@ -1,24 +1,16 @@
 /* VORSCHAU (nur Staging, vor Merge nach main entfernen) – Variante C "Kapitel" 
    Wie A ein durchgehender Hintergrund. Bei Abschnitten mit Abschnittskopf
-   steht der Titel nummeriert links und bleibt beim Scrollen stehen. */
+   steht der Titel links und bleibt beim Scrollen stehen. */
 .v-c .section--soft { background: transparent; }
 .v-c .section { padding-block: clamp(4rem, 8vw, 7rem); }
 .v-c .section--tight { padding-block: clamp(2rem, 4vw, 3rem); }
-.v-c main { counter-reset: kapitel; }
+
 
 .v-c .eyebrow {
   background: none; padding: 0; border-radius: 0; color: var(--text-muted); letter-spacing: .14em;
 }
 .v-c .section--dark .eyebrow { color: rgba(255, 255, 255, .75); }
 
-/* Nummerierung vor dem Label aller Abschnitte mit Label */
-.v-c .section .eyebrow { counter-increment: kapitel; }
-.v-c .section .eyebrow::before {
-  content: counter(kapitel, decimal-leading-zero);
-  font-variant-numeric: tabular-nums; color: var(--primary); font-weight: 800;
-  padding-right: .75rem; margin-right: .25rem; border-right: 2px solid var(--border-strong);
-}
-.v-c .section--dark .eyebrow::before { color: var(--accent-400); border-color: rgba(255, 255, 255, .3); }
 
 /* Zweispaltig: Kopf links (mitlaufend), Inhalt rechts – nur bei linksbuendigen Koepfen */
 @media (min-width: 960px) {
