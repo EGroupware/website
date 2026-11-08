@@ -457,14 +457,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/de/kollaborationswerkzeuge</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kollaborationswerkzeuge"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/collaboration-tools"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/collaboration-tools"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/de/cloud-dienst</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/cloud-dienst"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/cloud-services"/>
@@ -2108,14 +2100,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/warum-egroupware"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/why-egroupware"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/why-egroupware"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/collaboration-tools</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kollaborationswerkzeuge"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/collaboration-tools"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/collaboration-tools"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
