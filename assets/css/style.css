@@ -2241,3 +2241,6 @@ main .section .wrap > h2.center { text-align: left; }
    Alle Anbieter-Spalten sehen gleich aus. */
 .compare.compare--neutral tbody td { background: none !important; box-shadow: none !important; font-weight: inherit; color: var(--text-soft); }
 .compare.compare--neutral thead th:nth-child(2) { background: var(--st-head) !important; box-shadow: none !important; color: var(--text); }
+
+/* -- Preiskarten: zweiter Button (z. B. Bestellen + Testen) mit Abstand ---- */
+.price .btn + .btn { margin-top: .5rem; }
