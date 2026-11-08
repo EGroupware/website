@@ -2244,3 +2244,8 @@ main .section .wrap > h2.center { text-align: left; }
 
 /* -- Preiskarten: zweiter Button (z. B. Bestellen + Testen) mit Abstand ---- */
 .price .btn + .btn { margin-top: .5rem; }
+
+/* -- Links im Fliesstext nicht ueber zwei Zeilen umbrechen ----
+   Passt ein Link nicht mehr in die Zeile, beginnt er als Ganzes in der naechsten.
+   Nur wenn er laenger als eine ganze Zeile ist, bricht er in sich um. */
+main :is(p, li, dd, dt, td, th, figcaption, small) a:not(.btn) { display: inline-block; }

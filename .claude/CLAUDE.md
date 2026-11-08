@@ -100,6 +100,10 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
   Trennungen nicht von Hand entfernen, sondern das Wort in die Liste `%never` im Skript eintragen
   (bzw. Endungen in `%badright`) und das Skript erneut laufen lassen. Beim Erzeugen von JSON-LD
   aus sichtbarem Text `&shy;` und `&#8288;` entfernen.
+- **Links im Text werden nicht über zwei Zeilen umbrochen.** Passt ein Link nicht mehr in die
+  Zeile, beginnt er als Ganzes in der nächsten (CSS-Block „Links im Fliesstext …“ am Ende von
+  `style.css`, gilt für Links in Absätzen, Listen, Tabellen und Wert-Listen). Linktexte daher
+  kurz halten – ein Link, der länger als eine ganze Zeile ist, bricht trotzdem in sich um.
 - Jede Seite muss auf dem Handy funktionieren (kein seitliches Scrollen).
 - **Versionsnummer bei CSS/JS-Änderungen hochzählen.** Der Server lässt Browser
   `style.css`, `main.js`, `social.svg` und `nav-icons.svg` zehn Jahre zwischenspeichern. Alle Seiten binden
