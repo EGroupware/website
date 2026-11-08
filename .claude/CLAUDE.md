@@ -126,6 +126,11 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
 
 ## Texte und Suchmaschinen
 
+- **Vergleiche mit anderen Anbietern sachlich und fair** – nichts Negatives über andere Anbieter
+  herausstellen. Beschreiben, was EGroupware anders macht (Quellcode, Datenstandort, Abrechnung),
+  Stärken der anderen anerkennen und Angaben zu anderen Produkten mit Quelle und Stand-Datum
+  versehen. Bei **anderen Open-Source-Anbietern** (z. B. ownCloud, Nextcloud) nicht „Alternative“,
+  sondern unterschiedliche Schwerpunkte und Kombinationsmöglichkeiten zeigen.
 - **Synchronisation:** zuerst die offenen Standards nennen (CalDAV, CardDAV, WebDAV, IMAP), danach
   „das ActiveSync-Protokoll“ / "the ActiveSync protocol" – nie nur „ActiveSync“, denn ActiveSync ist
   ein Microsoft-Produkt; EGroupware stellt das Protokoll über die Open-Source-Software Z-Push bereit.
