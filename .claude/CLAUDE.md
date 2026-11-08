@@ -127,6 +127,16 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
   Zeile, beginnt er als Ganzes in der nächsten (CSS-Block „Links im Fliesstext …“ am Ende von
   `style.css`, gilt für Links in Absätzen, Listen, Tabellen und Wert-Listen). Linktexte daher
   kurz halten – ein Link, der länger als eine ganze Zeile ist, bricht trotzdem in sich um.
+- **Kontrast im Hellmodus** (Stand 09.11.2026, wird im Team noch abgestimmt): Der Hellmodus muss
+  mindestens so gut lesbar sein wie der Dunkelmodus.
+  - Text mindestens 4,5:1, Fließtext und kleine Hinweise auf weißem und grauem Grund möglichst
+    ab 5,5:1. Die hellen Grautöne `--n-300`/`--n-400` nie als Textfarbe verwenden, für blassen
+    Text `--text-muted` nehmen.
+  - Die Seite bleibt weiß, Kacheln stehen auf leichtem Grau (`--card-bg`) mit Rand (`--border`)
+    und kleinem Schatten – nie nur weiße Kachel mit hellem Rand. Neue Kacheltypen in den
+    CSS-Block „Kontrast im Hellmodus: Kacheln leicht grau“ am Ende von `style.css` aufnehmen.
+  - Neue Farben vor dem Einbau im Hellmodus nachmessen (Kontrastverhältnis), nicht nur im
+    Dunkelmodus ansehen.
 - Jede Seite muss auf dem Handy funktionieren (kein seitliches Scrollen).
 - **Versionsnummer bei CSS/JS-Änderungen hochzählen.** Der Server lässt Browser
   `style.css`, `main.js`, `social.svg` und `nav-icons.svg` zehn Jahre zwischenspeichern. Alle Seiten binden

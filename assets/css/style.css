@@ -43,11 +43,12 @@
   --bg-inverse:    var(--brand-900);
   --text:          var(--n-800);
   --text-soft:     var(--n-600);
-  --text-muted:    var(--n-500);
+  --text-muted:    #566173;   /* 6,3:1 auf Weiss (vorher n-500 mit 4,5:1) */
   --text-inverse:  #ffffff;
-  --border:        var(--n-200);
-  --border-strong: var(--n-300);
-  --border-hover:  var(--n-400);
+  --border:        #cfd6e0;   /* Kachelraender im Hellmodus sichtbar (vorher n-200) */
+  --border-strong: #aab4c4;
+  --border-hover:  #7d899d;
+  --card-bg:       #f3f5f8;   /* Kacheln leicht grau auf weisser Seite */
   --primary:       var(--brand-600);
   --primary-hover: var(--brand-700);
   --primary-soft:  var(--brand-50);
@@ -99,6 +100,7 @@
     --border:        #263141;
     --border-strong: #33415a;
     --border-hover:  #4b5d78;
+    --card-bg:       #161e2a;
     --primary:       var(--brand-300);
     --primary-hover: var(--brand-200);
     --primary-soft:  #14243a;
@@ -120,6 +122,7 @@
   --border:        #263141;
   --border-strong: #33415a;
   --border-hover:  #4b5d78;
+  --card-bg:       #161e2a;
   --primary:       var(--brand-300);
   --primary-hover: var(--brand-200);
   --primary-soft:  #14243a;
@@ -2312,3 +2315,13 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
    leicht anheben, Schatten. Kacheln ohne eigenes Ziel (card--hover, partner) bekommen nur
    ein kraeftigeres Grau (--border-hover), damit nichts klickbar wirkt, was es nicht ist. */
 .card--link:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+/* -- Kontrast im Hellmodus: Kacheln leicht grau ---- */
+/* Im Dunkelmodus heben sich Kacheln durch ihren helleren Grund ab. Im Hellmodus bleibt
+   die Seite weiss und die Kacheln bekommen ein leichtes Grau (--card-bg) plus Rand und
+   kleinen Schatten. Textfarben sind auf --card-bg mindestens 5,5:1. */
+.card, .price, .partner, .alt-card, .fc-card, .asset-card, .post-card, .alt-tile, .module,
+.section--soft .module {
+  background-color: var(--card-bg);
+}
+.card, .price, .partner, .alt-card, .fc-card, .asset-card { box-shadow: var(--shadow-sm); }
