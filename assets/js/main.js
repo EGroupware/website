@@ -294,6 +294,20 @@
       finder.querySelector("[data-finder-name]").textContent = t.name;
       finder.querySelector("[data-finder-preis]").textContent = t.preis;
       finder.querySelector("[data-finder-text]").textContent = t.text;
+      // Knoepfe passend zum Tarif: Bestellen im Shop, Angebot oder Testen.
+      // Ohne Angabe bleiben die Standardknoepfe aus dem HTML stehen.
+      var knoepfe = finder.querySelector("[data-finder-knoepfe]");
+      if (knoepfe && t.knoepfe && t.knoepfe.length) {
+        knoepfe.textContent = "";
+        t.knoepfe.forEach(function (k) {
+          var a = document.createElement("a");
+          a.className = "btn btn--" + (k.stil === "primary" ? "primary" : "ghost");
+          a.href = k.href;
+          a.textContent = k.text;
+          if (/^https?:/.test(k.href)) { a.rel = "noopener"; }
+          knoepfe.appendChild(a);
+        });
+      }
       // Platzhalter raus, Empfehlung rein. Das Feld selbst stand schon da,
       // deshalb springt an dieser Stelle nichts.
       if (warte) { warte.hidden = true; }
