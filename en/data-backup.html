@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en" data-theme-init>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data backup and disaster recovery with EGroupware</title>
+  <meta name="description" content="How to back up EGroupware properly: automatic backups in the cloud, EGroupware backup, third S3 directory, mail archive and restart in the EGroupware Cloud.">
+  <link rel="canonical" href="https://www.egroupware.org/en/data-backup">
+  <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/datensicherung">
+  <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/data-backup">
+  <link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/data-backup">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EGroupware">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Data backup and disaster recovery with EGroupware">
+  <meta property="og:description" content="How to back up EGroupware properly: automatic backups in the cloud, EGroupware backup, third S3 directory, mail archive and restart in the EGroupware Cloud.">
+  <meta property="og:url" content="https://www.egroupware.org/en/data-backup">
+  <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/css/style.css?v=20261108c" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261108c">
+  <script>
+    (function(){try{var t=localStorage.getItem("egw-theme");
+    var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/data-backup#webpage","url":"https://www.egroupware.org/en/data-backup","name":"Data backup and disaster recovery with EGroupware","description":"How to back up EGroupware properly: automatic backups in the cloud, EGroupware backup, third S3 directory, mail archive and restart in the EGroupware Cloud.","inLanguage":"en","datePublished":"2026-11-08","dateModified":"2026-11-08","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/data-backup#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/data-backup#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/data-backup#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Support","item":"https://www.egroupware.org/en/support"},{"@type":"ListItem","position":3,"name":"Data backup and disaster recovery","item":"https://www.egroupware.org/en/data-backup"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/data-backup#faq","mainEntity":[{"@type":"Question","name":"How often should I back up?","acceptedAnswer":{"@type":"Answer","text":"At least daily. The EGroupware backup can be scheduled for any weekday at a fixed time. In the cloud, the automatic daily and weekly backups come on top."}},{"@type":"Question","name":"Where does the EGroupware backup go?","acceptedAnswer":{"@type":"Answer","text":"The target directory is defined in setup. In the cloud, every backup is stored in both S3 storage systems of our data centres and, on request, additionally in a third S3 storage with a hosting provider of your choice."}},{"@type":"Question","name":"Does the backup replace a mail archive?","acceptedAnswer":{"@type":"Answer","text":"No. A backup protects against data loss; a mail archive meets the legal retention requirements for emails. We recommend Benno MailArchiv – on premise or in the cloud – or an archive that can be connected via OAuth."}},{"@type":"Question","name":"Do you help with the setup?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can set up the backup, the third S3 directory and the disaster recovery plan yourself, or we take care of it on request via support contingents."}}]}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="./">
+        <img class="brand-light" src="../assets/img/EGroupware-Logo.svg"
+             alt="EGroupware – Smart Online Office" width="189" height="37" fetchpriority="high">
+        <img class="brand-dark" src="../assets/img/EGroupware-Logo-invert.svg"
+             alt="" aria-hidden="true" width="189" height="37">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="primary-nav">
+        <li><a href="./">Home</a></li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="features">Features</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Features – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Organisation</p><ul><li><a href="calendar"><img class="nav-sub__icon" src="../assets/img/icons/calendar.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Calendar</span></a></li><li><a href="contacts"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Contacts</span></a></li><li><a href="tasks"><img class="nav-sub__icon" src="../assets/img/icons/infolog.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Tasks</span></a></li><li><a href="projects"><img class="nav-sub__icon" src="../assets/img/icons/projectmanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Projects</span></a></li><li><a href="timesheet"><img class="nav-sub__icon" src="../assets/img/icons/timesheet.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Timesheet</span></a></li><li><a href="resources"><img class="nav-sub__icon" src="../assets/img/icons/resources.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Ressources</span></a></li><li><a href="e-invoicing"><img class="nav-sub__icon" src="../assets/img/icons/einvoice.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-&#8288;Invoice</span></a></li><li><a href="administration"><img class="nav-sub__icon" src="../assets/img/icons/admin.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Administration</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Communication</p><ul><li><a href="email"><img class="nav-sub__icon" src="../assets/img/icons/mail.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Email</span></a></li><li><a href="chat"><img class="nav-sub__icon" src="../assets/img/icons/chat.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Team Chat</span></a></li><li><a href="videoconferences"><img class="nav-sub__icon" src="../assets/img/icons/videoconference.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Video&shy;conferences</span></a></li><li><a href="file-manager"><img class="nav-sub__icon" src="../assets/img/icons/filemanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Documents</span></a></li><li><a href="online-office"><img class="nav-sub__icon" src="../assets/img/icons/collabora.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Online Office</span></a></li><li><a href="kanban"><img class="nav-sub__icon" src="../assets/img/icons/kanban.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kanban</span></a></li><li><a href="helpdesk"><img class="nav-sub__icon" src="../assets/img/icons/tracker.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Helpdesk</span></a></li><li><a href="crm"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CRM</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Tech &amp; integration</p><ul><li><a href="cti-phone-integration"><img class="nav-sub__icon" src="../assets/img/icons/cti.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CTI Telefon-Integration</span></a></li><li><a href="remote-work"><img class="nav-sub__icon" src="../assets/img/icons/home.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Home&shy;office Integration</span></a></li><li><a href="mobile-access"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span>Mobil Access</span></a></li><li><a href="synchronisation"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span><span>Synchronisation</span></a></li><li><a href="guacamole"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span><span>Guacamole</span></a></li><li><a href="univention"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><span>Univention Corporate Server (UCS)</span></a></li><li><a href="vidoteach"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span><span>Video based learning</span></a></li><li><a href="community-edition-vs-epl"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span><span>EGroupware CE vs EPL</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="pricing">Pricing</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Pricing – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="pricing"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#tag"/></svg></span><span>Pricing</span></a></li><li><a href="cloud-or-own-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#compare"/></svg></span><span>Cloud or own server?</span></a></li><li><a href="cloud-services"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#cloud-check"/></svg></span><span>EGroupware Cloud Service</span></a></li><li><a href="trial"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#clock"/></svg></span><span>Trial Version</span></a></li><li><a href="demo"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#monitor"/></svg></span><span>Online Demo</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="industries">Industries</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Industries – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Solutions</p><ul><li><a href="industries"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#building"/></svg></span><span>Industries</span></a></li><li><a href="education"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#cap"/></svg></span><span>Educational institutions</span></a></li><li><a href="collaboration-tools"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#grid"/></svg></span><span>Collaboration Tools</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Alternative to</p><ul><li><a href="exchange-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#mail"/></svg></span><span>Exchange</span></a></li><li><a href="dropbox-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#folder"/></svg></span><span>Dropbox</span></a></li><li><a href="owncloud-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#cloud"/></svg></span><span>ownCloud</span></a></li><li><a href="google-calendar-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#calendar"/></svg></span><span>Google Calendar</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="about">About</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="About – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Company</p><ul><li><a href="about"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#info"/></svg></span><span>About</span></a></li><li><a href="testimonials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#quote"/></svg></span><span>Testimonials</span></a></li><li><a href="why-egroupware"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#check"/></svg></span><span>Why EGroupware?</span></a></li><li><a href="digital-sovereignty"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#shield"/></svg></span><span>Digital sovereignty</span></a></li><li><a href="press"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#news"/></svg></span><span>Press</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Partners &amp; community</p><ul><li><a href="community"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#users"/></svg></span><span>Community</span></a></li><li><a href="technology-partners"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#chip"/></svg></span><span>Technology partner</span></a></li><li><a href="integration-partners"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#plug"/></svg></span><span>Integration partner</span></a></li><li><a href="resellers"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#store"/></svg></span><span>EGroupware Reseller</span></a></li><li><a href="become-reseller"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#user-plus"/></svg></span><span>Become Reseller</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="support">Support</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Support – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Help &amp; service</p><ul><li><a href="support"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#lifebuoy"/></svg></span><span>Support</span></a></li><li><a href="customer-support-login"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#login"/></svg></span><span>Customer Support Login</span></a></li><li><a href="status"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#pulse"/></svg></span><span>EGroupware Cloud Status</span></a></li><li><a href="security-and-data-privacy"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#lock"/></svg></span><span>Security and data privacy</span></a></li><li><a href="data-backup" aria-current="page"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#backup"/></svg></span><span>Data backup</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Self-hosting</p><ul><li><a href="download"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#download"/></svg></span><span>Download</span></a></li><li><a href="installation-on-your-own-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#terminal"/></svg></span><span>Installation on your own server</span></a></li><li><a href="tutorials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#play"/></svg></span><span>Webinars and tutorials</span></a></li><li><a href="caldav-synchronizer"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#sync"/></svg></span><span>Caldav Synchronizer</span></a></li></ul></div>
+        </div>
+        </li>
+        <li><a href="blog">News</a></li>
+        <li><a href="contact">Contact</a></li>
+          <li class="nav-cta"><a class="btn btn--primary" href="contact">Start 30-day free trial</a></li>
+          <li class="nav-theme">
+            <button class="theme-toggle-inline" type="button">
+              <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+              <span>Switch colour scheme</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language"><a href="../de/datensicherung" hreflang="de" data-set-lang="de">DE</a><a href="data-backup" hreflang="en" data-set-lang="en" aria-current="true">EN</a></div>
+        <button class="theme-toggle" type="button" aria-label="Switch colour scheme"
+                data-label-dark="Switch colour scheme" data-label-light="Switch colour scheme">
+          <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+        </button>
+        <a class="btn btn--primary btn--sm" href="contact">Start 30-day free trial</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="primary-nav" aria-label="Open menu">
+          <span class="i-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg></span><span class="i-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="./">Home</a> <span aria-hidden="true">›</span> <a href="support">Support</a> <span aria-hidden="true">›</span> <span aria-current="page">Data backup and disaster recovery</span>
+        </nav>
+        <h1>Data backup and disaster recovery</h1>
+        <p class="lead">Data is only as safe as its last working backup. EGroupware has every&shy;thing you need for this – in the cloud and on your own server. Here we show what a good backup strategy looks like and where the focus lies depending on the operating model.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="#principles">To the strategy</a>
+          <a class="btn btn--ghost btn--lg" href="contact">Ask for advice</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="principles">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Principles</span>
+          <h2>Three rules for reliable backups</h2>
+          <p>Whether cloud or own server: these three rules protect against data loss, outages and unwanted dependency.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <h3>Several copies</h3>
+            <p>Keep at least three versions of your data: the live system and two independent backups.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Separate locations</h3>
+            <p>At least one copy is kept outside the system and the site – for example in S3 storage with another provider.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Test the restore</h3>
+            <p>A backup is only worth something once a restore has worked. Test it regularly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Building blocks</span>
+          <h2>What EGroupware provides</h2>
+          <p>Four building blocks that can be combined – from automatic basic backups to a copy under your own control.</p>
+        </div>
+        <div class="grid grid-2">
+          <article class="card reveal">
+            <h3>Automatic backups in the cloud</h3>
+            <p>In the EGroupware Cloud we back up all data automatically: 7 daily and 12 weekly backups in two data centres in Frankfurt am Main. In an emergency, we help you restore your data.</p>
+          </article>
+          <article class="card reveal">
+            <h3>EGroupware backup</h3>
+            <p>Under Admin → Backup you schedule the backup yourself: choose weekdays and time, and it then runs automatically. The target is defined in setup. In the cloud, every backup is stored in both S3 storage systems of our data centres.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Third S3 directory</h3>
+            <p>In addition, every backup can go to a third S3 storage – with a hosting provider of your choice or in your own data centre. You can set this up yourself at any time or with our support.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Mail archive</h3>
+            <p>A mail archive does not replace a backup; it meets the legal retention requirements for emails. We recommend Benno MailArchiv – on premise or in the cloud – or an archive that can be connected easily via OAuth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Depending on the operating model</span>
+          <h2>Different priorities</h2>
+          <p>The building blocks are the same – what to focus on depends on who runs the server.</p>
+        </div>
+        <div class="grid grid-2">
+          <article class="card reveal">
+            <h3>In the cloud</h3>
+            <p>We take care of the basic backups. Your focus: an independent copy under your control.</p>
+            <ul class="check-list mt-3">
+              <li>Schedule the EGroupware backup under Admin → Backup.</li>
+              <li>Set up a third S3 directory with a hosting provider of your choice – a complete copy outside our data centres.</li>
+              <li>Add a mail archive for the retention requirements.</li>
+              <li>This keeps you able to switch at any time – which is exactly what digital sovereignty means.</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>On your own server</h3>
+            <p>Backups are entirely your responsibility. Your focus: a reliable routine and a plan for outages.</p>
+            <ul class="check-list mt-3">
+              <li>Schedule the EGroupware backup to run automatically.</li>
+              <li>Also set up snapshots of the virtual machine or of the file and backup directories.</li>
+              <li>If the mail server runs locally, back it up as well – in addition to the mail archive.</li>
+              <li>Keep at least one copy off-&#8288;site, for example in S3 storage.</li>
+              <li>Test the restore regularly.</li>
+              <li>Add a mail archive for the retention requirements.</li>
+            </ul>
+          </article>
+        </div>
+        <p class="mt-3 reveal"><a class="link-arrow" href="cloud-or-own-server">Cloud or own server? The comparison</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Disaster recovery</span>
+          <h2>Restart in the EGroupware Cloud</h2>
+          <p class="mt-2">The simplest way is the third S3 directory: your EGroupware backup also goes to external S3 storage. If your own server fails, an EGroupware instance in our cloud is connected to this S3 storage – the backups are available there immediately and can be restored. Your team keeps working while you rebuild your own server.</p>
+          <p class="mt-2">Whether you move back afterwards or stay in the cloud is up to you: cloud and own server use the same software.</p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>How the disaster recovery plan works</strong><span class="st-badge st-badge--update">OWN SERVER</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Preparation</dt><dd>EGroupware backup also goes to an external S3 directory</dd></div>
+            <div class="fact"><dt>In an outage</dt><dd>Connect an instance in the EGroupware Cloud to this S3 storage and restore the backup</dd></div>
+            <div class="fact"><dt>Afterwards</dt><dd>Back to your own server or stay in the cloud</dd></div>
+            <div class="fact"><dt>Costs</dt><dd>Please contact us</dd></div>
+          </dl>
+          <p class="mt-2"><a class="link-arrow" href="contact">Ask about a recovery plan</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Open standards</span>
+          <h2>Your data stays readable – even without EGroupware</h2>
+          <p class="mt-2">EGroupware works with open standards: emails via IMAP, appointments via CalDAV, contacts via CardDAV and files via WebDAV. In addition, there is JMAP and the EGroupware REST API, which lets you read and write contacts, appointments, tasks and emails automatically. This means your data can not only be opened with common programs and transferred to other systems, but also exchanged automatically on an ongoing basis – with your ERP system, for example. That way, separate systems still work together.</p>
+          <p class="mt-2"><a class="link-arrow" href="general/rest-api-interface-for-integration-of-contacts-mails-calendars-and-tasks">More about the REST API</a></p>
+          <p class="mt-3"><a class="link-arrow" href="digital-sovereignty">Digital sovereignty fact-checked</a></p>
+        </div>
+        <div class="reveal">
+          <ul class="check-list">
+            <li>Emails: IMAP</li>
+            <li>Appointments: CalDAV</li>
+            <li>Contacts: CardDAV</li>
+            <li>Files: WebDAV</li>
+            <li>Emails, appointments, contacts: JMAP</li>
+            <li>Automated access: REST API</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-narrow">
+        <div class="section-head center reveal">
+          <h2>Frequently asked questions about data backup</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>How often should I back up?</summary>
+            <div class="faq-body"><p>At least daily. The EGroupware backup can be scheduled for any weekday at a fixed time. In the cloud, the automatic daily and weekly backups come on top.</p></div>
+          </details>
+          <details>
+            <summary>Where does the EGroupware backup go?</summary>
+            <div class="faq-body"><p>The target directory is defined in setup. In the cloud, every backup is stored in both S3 storage systems of our data centres and, on request, additionally in a third S3 storage with a hosting provider of your choice.</p></div>
+          </details>
+          <details>
+            <summary>Does the backup replace a mail archive?</summary>
+            <div class="faq-body"><p>No. A backup protects against data loss; a mail archive meets the legal retention requirements for emails. We recommend Benno MailArchiv – on premise or in the cloud – or an archive that can be connected via OAuth.</p></div>
+          </details>
+          <details>
+            <summary>Do you help with the setup?</summary>
+            <div class="faq-body"><p>Yes. You can set up the backup, the third S3 directory and the disaster recovery plan yourself, or we take care of it on request via support contingents.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2>Review your backup strategy</h2>
+          <p>Together we look at your backups and show what is still missing – in the cloud and on your own server.</p>
+          <div class="btn-row center">
+            <a class="btn btn--solid-light btn--lg" href="contact">Ask for advice</a>
+            <a class="btn btn--light btn--lg" href="support">Support contingents</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="./">
+            <img src="../assets/img/EGroupware-Logo-invert.svg" alt="EGroupware"
+                 width="173" height="34" loading="lazy">
+          </a>
+          <p>EGroupware is the open source online office for companies, public administrations and educational institutions. Developed, hosted and supported in Germany.</p>
+          <p class="mt-2"><strong style="color:#fff">Developed &amp; hosted in Germany</strong></p>
+        </div>
+      <div>
+        <h2 class="footer-h">Product</h2>
+        <ul>
+          <li><a href="features">Features</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="industries">Industries</a></li>
+          <li><a href="./">EGroupware 26</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Company</h2>
+        <ul>
+          <li><a href="about">About us</a></li>
+          <li><a href="support">Support</a></li>
+          <li><a href="status">Cloud status</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Legal</h2>
+        <ul>
+          <li><a href="imprint">Imprint</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="site-terms">Site terms</a></li>
+          <li><a href="cancel-contract">Cancel contract</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> EGroupware GmbH. All rights reserved.</p>
+        <nav class="footer-social" aria-label="Social media"><a href="https://de.linkedin.com/company/egroupware-gmbh" target="_blank" rel="noopener" aria-label="EGroupware on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#linkedin"/></svg></a><a href="https://fosstodon.org/@EGroupware" target="_blank" rel="noopener" aria-label="EGroupware on Mastodon"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#mastodon"/></svg></a><a href="https://bsky.app/profile/egroupware.org" target="_blank" rel="noopener" aria-label="EGroupware on Bluesky"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#bluesky"/></svg></a><a href="https://www.youtube.com/user/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware on YouTube"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#youtube"/></svg></a><a href="https://www.facebook.com/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware on Facebook"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#facebook"/></svg></a><a href="https://github.com/EGroupware/egroupware" target="_blank" rel="noopener" aria-label="EGroupware on GitHub"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#github"/></svg></a><a href="https://help.egroupware.org/" target="_blank" rel="noopener" aria-label="EGroupware community forum"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#egroupware"/></svg></a></nav>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js?v=20261108c" defer></script>
+</body>
+</html>
