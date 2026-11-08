@@ -748,19 +748,21 @@ strong { color: var(--text); font-weight: 650; }
 .module h3 { font-size: 1rem; margin-bottom: .3rem; letter-spacing: -.01em; }
 /* Karten mit eigener Unterseite: der Link liegt auf der Ueberschrift und deckt
    per ::before die ganze Karte ab. Der Pfeil sitzt als runder Knopf oben rechts. */
-.module--link { position: relative; }
-.module--link h3 { padding-right: 2.2rem; }
+.module--link, .card--link { position: relative; }
+.module--link h3, .card--link :is(h2, h3) { padding-right: 2.2rem; }
 .module h3 a { color: var(--text); text-decoration: none; }
-.module--link:hover h3 a { color: var(--primary); }
+.module--link:hover h3 a, .card--link:hover :is(h2, h3) a { color: var(--primary); }
+.card--link :is(h2, h3) a { color: var(--text); text-decoration: none; }
+.card--link :is(h2, h3) a:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; border-radius: 3px; }
 .module h3 a:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; border-radius: 3px; }
-.module--link h3 a::before { content: ""; position: absolute; inset: 0; border-radius: inherit; }
-.module--link h3 a::after {
+.module--link h3 a::before, .card--link :is(h2, h3) a::before { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.module--link h3 a::after, .card--link :is(h2, h3) a::after {
   content: ""; position: absolute; top: .95rem; right: .95rem;
   width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border);
   background: var(--bg-elevated) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / 15px no-repeat;
   transition: background-color .15s ease, border-color .15s ease, transform .15s ease;
 }
-.module--link:hover h3 a::after {
+.module--link:hover h3 a::after, .card--link:hover :is(h2, h3) a::after {
   background: var(--primary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / 15px no-repeat;
   border-color: var(--primary); transform: translateX(2px);
 }

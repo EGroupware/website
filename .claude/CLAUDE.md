@@ -21,6 +21,14 @@ Commit-Nachrichten oder Kommentaren ablegen – auch nicht in dieser Datei.
 - `sitemap.xml`, `robots.txt`, `404.html`
 - `.github/workflows/` – automatisches Veröffentlichen (siehe unten)
 
+## Pfeil-Links
+
+- Karte mit genau einem Ziel: ganze Karte klickbar (`class="card … card--link"`, der Link
+  liegt auf der Überschrift), runder Pfeil oben rechts – wie die Modulkarten auf „Funktionen“.
+  Keine zusätzliche „Mehr erfahren“-Zeile.
+- Karten mit mehreren Links sowie einzelne Links unter Abschnitten, in Infokästen und
+  FAQs bleiben Text-Links mit Pfeil (`link-arrow`).
+
 ## Deutsch und Englisch immer gleich behandeln
 
 `de/` und `en/` sind inhaltlich und im Aufbau gleich. Jede Änderung an Inhalt, Abschnitten,
