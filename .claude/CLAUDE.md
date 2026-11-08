@@ -126,6 +126,10 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
 
 ## Texte und Suchmaschinen
 
+- **Synchronisation:** zuerst die offenen Standards nennen (CalDAV, CardDAV, WebDAV, IMAP), danach
+  „das ActiveSync-Protokoll“ / "the ActiveSync protocol" – nie nur „ActiveSync“, denn ActiveSync ist
+  ein Microsoft-Produkt; EGroupware stellt das Protokoll über die Open-Source-Software Z-Push bereit.
+  Für Desktop-Programme Thunderbird oder eM Client empfehlen (sprechen die offenen Standards nativ).
 - Inhalte in Tabellenzellen und Wert-Listen (z. B. „EGroupware auf einen Blick“, Vergleichs- und
   Preistabellen) beginnen **immer mit einem Großbuchstaben** – auch einzelne Wörter („Nein“,
   „Proprietär“) und Satzanfänge wie „Ab 25 Postfächern“ / „From €390“. Gilt für Deutsch und Englisch.
