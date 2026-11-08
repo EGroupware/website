@@ -2286,3 +2286,12 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
 .partner__ext:hover { color: var(--primary); }
 /* Neutrales Kategorie-Badge (blau), z. B. fuer Partnerkategorien */
 .st-badge--info { background: var(--st-info-bg); color: var(--st-info); }
+
+/* -- Abschnittskopf bei nur einer Kartenreihe ---- */
+/* Steht rechts nur ein Raster mit hoechstens zwei Karten (eine Reihe), bleibt der Kopf
+   stehen statt mitzulaufen - sonst rutscht er beim Scrollen nur ein kleines Stueck. */
+@media (min-width: 960px) {
+  .section > .wrap:has(> .section-head:not(.center)):has(> .grid):not(:has(> :nth-child(3))):not(:has(> .grid > :nth-child(3))) > .section-head {
+    position: static;
+  }
+}
