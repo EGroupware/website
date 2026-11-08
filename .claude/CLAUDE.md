@@ -71,6 +71,15 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
 - Eine bestehende Seite als Vorlage nehmen, damit Header, Footer und Kopfdaten stimmen.
 - In `sitemap.xml` eintragen und, wenn sinnvoll, im Menü und Footer verlinken.
 
+## Seite löschen oder umbenennen
+
+- Alte Adresse nie einfach ins Leere laufen lassen: in **`.claude/weiterleitungen.md`** eintragen
+  (alte Adresse, neue Adresse, Grund, Datum, Status „offen“). Ralf richtet daraus die
+  dauerhaften Weiterleitungen (301) auf dem Server ein.
+- Bis dahin unter der alten Adresse eine kleine HTML-Weiterleitung lassen (`noindex`, `canonical`
+  auf die neue Seite, `meta refresh`), Links im Menü und in Texten auf die neue Adresse umstellen
+  und den Eintrag in `sitemap.xml` entfernen bzw. anpassen.
+
 ## Design und CSS
 
 - Neue Bausteine ans Ende von `style.css` als eigenen Abschnitt mit Kommentar
