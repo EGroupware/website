@@ -93,12 +93,13 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
   **an der Wortfuge** liegt („Datenschutz·erklärung“, nicht „Daten·schutzer·klärung“ oder „ei-nem“).
   Umsetzung: keine automatische Silbentrennung (`hyphens: manual`); die erlaubten Stellen stehen
   als `&shy;` im Text. Bindestrich-Wörter mit einem Teil unter 4 Buchstaben (E-Mail, E-Rechnung,
-  IT-…, Drag-and-Drop) stehen in `<span class="nobr">` und brechen nicht am Bindestrich um.
+  IT-…, Drag-and-Drop) bekommen hinter dem Bindestrich den unsichtbaren Wortverbinder `&#8288;`
+  und brechen dort nicht um (kein `<span>` – das zerlegt Check-Listen und FAQ-Fragen).
   **Nach jeder Textänderung** im Repo-Hauptordner `perl .claude/tools/trennstellen.pl` ausführen –
   das Skript setzt alle Trennstellen neu (`--dry de` zeigt nur die Vorschläge). Falsche
   Trennungen nicht von Hand entfernen, sondern das Wort in die Liste `%never` im Skript eintragen
   (bzw. Endungen in `%badright`) und das Skript erneut laufen lassen. Beim Erzeugen von JSON-LD
-  aus sichtbarem Text `&shy;` und `<span class="nobr">` entfernen.
+  aus sichtbarem Text `&shy;` und `&#8288;` entfernen.
 - Jede Seite muss auf dem Handy funktionieren (kein seitliches Scrollen).
 - **Versionsnummer bei CSS/JS-Änderungen hochzählen.** Der Server lässt Browser
   `style.css`, `main.js`, `social.svg` und `nav-icons.svg` zehn Jahre zwischenspeichern. Alle Seiten binden

@@ -2237,5 +2237,3 @@ main .section .wrap > h2.center { text-align: left; }
   table.compare td { grid-template-columns: 1fr; gap: .15rem; }
 }
 
-/* -- Bindestrich-Woerter mit kurzem Teil (E-Mail, E-Rechnung, IT-...) nicht am Bindestrich umbrechen ---- */
-.nobr { white-space: nowrap; }

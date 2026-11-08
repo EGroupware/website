@@ -4,8 +4,10 @@
 #    zusammengesetzter Woerter, beide Teile mindestens 4 Buchstaben
 #    -> als &shy; in den Text gesetzt (hyphens: manual beachtet nur diese Stellen)
 #  - Bindestrich-Woerter mit einem Teil unter 4 Buchstaben (E-Mail, E-Rechnung, IT-Abteilung)
-#    werden nicht am Bindestrich umbrochen -> <span class="nobr">
-# Ein Wort gilt als zusammengesetzt, wenn beide Teile (der linke ggf. ohne Fugen-s/-es/-n/-en/-e/-er)
+#    werden nicht am Bindestrich umbrochen -> unsichtbarer Wortverbinder &#8288; (U+2060) direkt
+#    hinter dem Bindestrich. (Kein <span>: in Flex-Containern wie Check-Listen oder FAQ-Fragen
+#    wuerde ein Span zu einem eigenen Block.)
+# Ein Wort gilt als zusammengesetzt, wenn beide Teile (der linke ggf. ohne Fugen-s/-es/-n/-en)
 # als eigenstaendige Woerter im Text der Webseite vorkommen (Wortschatz je Sprache aus allen Seiten).
 # Aufruf aus dem Repo-Hauptordner:
 #   perl .claude/tools/trennstellen.pl --dry de    # nur Vorschlagsliste ausgeben
@@ -84,21 +86,23 @@ my %badleft = map { $_ => 1 } qw(zuge ange abge ausge einge vorge inter);
         if ($parts) { my $pos = 0; my @o; for my $pt (@$parts) { push @o, substr($w, $pos, length $pt); $pos += length $pt } my $r = join('&shy;', @o); $plan{$w} = $r; $r } else { $w } }
     }ge;
     # Bindestrich-Ketten: ein Bindestrich mit einem Nachbarteil unter 4 Buchstaben wird nicht umbrochen.
-    # Zusammenhaengende geschuetzte Teile kommen in <span class="nobr">, z. B. <nobr>E-Mail</nobr>-Adresse
+    # Hinter einen geschuetzten Bindestrich kommt der Wortverbinder &#8288;, z. B. E-&#8288;Mail-Adresse
     $t =~ s{(?<![\p{L}\-])(\p{L}+(?:&shy;\p{L}+)*(?:-\p{L}+(?:&shy;\p{L}+)*)+)(?![\p{L}\-])}{
       my @p = split /-/, $1; my $len = sub { (my $x = shift) =~ s/&shy;//g; length $x };
-      my @seg = ([$p[0]]);
+      my $out = $p[0];
       for my $i (1 .. $#p) {
-        if ($len->($p[$i - 1]) < $MINPART || $len->($p[$i]) < $MINPART) { push @{$seg[-1]}, $p[$i] } else { push @seg, [$p[$i]] }
+        $out .= ($len->($p[$i - 1]) < $MINPART || $len->($p[$i]) < $MINPART) ? '-&#8288;' : '-';
+        $out .= $p[$i];
       }
-      join '-', map { @$_ > 1 ? '<span class="nobr">' . join('-', @$_) . '</span>' : $_->[0] } @seg;
+      $out;
     }ge;
     $t;
   };
   my $changed = 0;
   for my $f (@files) {
     local $/; open my $h, q{<:utf8}, $f or die; my $p = <$h>; close $h; my $orig = $p;
-    $p =~ s{<span class="nobr">(.*?)</span>}{$1}g;      # nobr neu berechnen (idempotent)
+    $p =~ s{<span class="nobr">(.*?)</span>}{$1}g;      # alte Fassung (Span) entfernen
+    $p =~ s{-&#8288;}{-}g;                               # Wortverbinder neu berechnen (idempotent)
     my $n = textnodes($p, $hy);
     next if $n eq $orig; $changed++;
     unless ($dry) { open $h, '>:utf8', $f or die; print $h $n; close $h; }
