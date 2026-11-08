@@ -165,7 +165,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
   border-radius: var(--r-sm);
 }
 
-/* Ueberschriften nie automatisch mit Bindestrich trennen; gleichmaessiger Umbruch */
+/* Worttrennung (Regel in .claude/CLAUDE.md): keine automatische Silbentrennung.
+   Getrennt wird nur an &shy; in zusammengesetzten Woertern (gesetzt per
+   .claude/tools/trennstellen.pl); gleichmaessiger Umbruch in Ueberschriften */
 h1, h2, h3, h4 {
   line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; color: var(--text);
   overflow-wrap: break-word; hyphens: manual; text-wrap: balance;
@@ -176,7 +178,7 @@ h3 { font-size: var(--fs-h3); }
 h4 { font-size: var(--fs-h4); letter-spacing: -0.015em; }
 
 p, li, dd, dt, td, th, figcaption, summary, label {
-  overflow-wrap: break-word; hyphens: auto;
+  overflow-wrap: break-word; hyphens: manual;
 }
 p, li { color: var(--text-soft); }
 strong { color: var(--text); font-weight: 650; }
@@ -2234,3 +2236,6 @@ main .section .wrap > h2.center { text-align: left; }
 @media (max-width: 380px) {
   table.compare td { grid-template-columns: 1fr; gap: .15rem; }
 }
+
+/* -- Bindestrich-Woerter mit kurzem Teil (E-Mail, E-Rechnung, IT-...) nicht am Bindestrich umbrechen ---- */
+.nobr { white-space: nowrap; }

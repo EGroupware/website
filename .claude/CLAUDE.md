@@ -86,8 +86,19 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
 - Seitenstil „Kapitel mit Akzenten“ (Standard seit 06.11.2026, Block am Ende von `style.css`):
   ein Hintergrund, Abschnitte durch eine Linie getrennt, Abschnittskopf links mitlaufend,
   Labels mit kurzem Akzentstrich. Überschriften und Abschnittsköpfe **immer linksbündig**
-  (nur Abschluss-Bänder `.cta-band` bleiben zentriert). Überschriften und Einleitungstexte
-  werden nie automatisch getrennt.
+  (nur Abschluss-Bänder `.cta-band` bleiben zentriert).
+- **Worttrennung** (gilt für allen Text, auch Überschriften): Ein Wort darf am Zeilenende nur
+  getrennt werden, wenn die Trennung den Rechtschreibregeln der jeweiligen Sprache entspricht,
+  **beide Teile mindestens 4 Buchstaben** haben und die Trennung bei zusammengesetzten Wörtern
+  **an der Wortfuge** liegt („Datenschutz·erklärung“, nicht „Daten·schutzer·klärung“ oder „ei-nem“).
+  Umsetzung: keine automatische Silbentrennung (`hyphens: manual`); die erlaubten Stellen stehen
+  als `&shy;` im Text. Bindestrich-Wörter mit einem Teil unter 4 Buchstaben (E-Mail, E-Rechnung,
+  IT-…, Drag-and-Drop) stehen in `<span class="nobr">` und brechen nicht am Bindestrich um.
+  **Nach jeder Textänderung** im Repo-Hauptordner `perl .claude/tools/trennstellen.pl` ausführen –
+  das Skript setzt alle Trennstellen neu (`--dry de` zeigt nur die Vorschläge). Falsche
+  Trennungen nicht von Hand entfernen, sondern das Wort in die Liste `%never` im Skript eintragen
+  (bzw. Endungen in `%badright`) und das Skript erneut laufen lassen. Beim Erzeugen von JSON-LD
+  aus sichtbarem Text `&shy;` und `<span class="nobr">` entfernen.
 - Jede Seite muss auf dem Handy funktionieren (kein seitliches Scrollen).
 - **Versionsnummer bei CSS/JS-Änderungen hochzählen.** Der Server lässt Browser
   `style.css`, `main.js`, `social.svg` und `nav-icons.svg` zehn Jahre zwischenspeichern. Alle Seiten binden
