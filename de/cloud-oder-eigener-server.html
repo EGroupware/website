@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="de" data-theme-init>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud oder eigener Server? EGroupware-Betriebsmodelle im Vergleich</title>
+  <meta name="description" content="EGroupware in der Cloud oder auf dem eigenen Server? Vergleich von Betrieb, Datenstandort, Datensicherung, Integration und Kosten – und warum ein Wechsel jederzeit möglich ist.">
+  <link rel="canonical" href="https://www.egroupware.org/de/cloud-oder-eigener-server">
+  <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/cloud-oder-eigener-server">
+  <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/cloud-or-own-server">
+  <link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/cloud-or-own-server">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EGroupware">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Cloud oder eigener Server? EGroupware-Betriebsmodelle im Vergleich">
+  <meta property="og:description" content="EGroupware in der Cloud oder auf dem eigenen Server? Vergleich von Betrieb, Datenstandort, Datensicherung, Integration und Kosten – und warum ein Wechsel jederzeit möglich ist.">
+  <meta property="og:url" content="https://www.egroupware.org/de/cloud-oder-eigener-server">
+  <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/css/style.css?v=20261108c" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261108c">
+  <script>
+    (function(){try{var t=localStorage.getItem("egw-theme");
+    var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/cloud-oder-eigener-server#webpage","url":"https://www.egroupware.org/de/cloud-oder-eigener-server","name":"Cloud oder eigener Server? EGroupware-Betriebsmodelle im Vergleich","description":"EGroupware in der Cloud oder auf dem eigenen Server? Vergleich von Betrieb, Datenstandort, Datensicherung, Integration und Kosten – und warum ein Wechsel jederzeit möglich ist.","inLanguage":"de","datePublished":"2026-11-08","dateModified":"2026-11-08","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/cloud-oder-eigener-server#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/cloud-oder-eigener-server#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/cloud-oder-eigener-server#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Tarife","item":"https://www.egroupware.org/de/preise"},{"@type":"ListItem","position":3,"name":"Cloud oder eigener Server?","item":"https://www.egroupware.org/de/cloud-oder-eigener-server"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/cloud-oder-eigener-server#faq","mainEntity":[{"@type":"Question","name":"Kann ich später zwischen Cloud und eigenem Server wechseln?","acceptedAnswer":{"@type":"Answer","text":"Ja, in beide Richtungen. Es ist dieselbe Software; wir unterstützen beim Umzug von E-Mail, Kalender, Kontakten und Dateien. Die Stadtverwaltung Nordenham hat EGroupware zum Beispiel zwölf Jahre selbst betrieben und ist 2018 in die Cloud gewechselt."}},{"@type":"Question","name":"Kann ich die Cloud an mein Active Directory und meinen Dateiserver anbinden?","acceptedAnswer":{"@type":"Answer","text":"Ja. Active Directory oder LDAP bleiben in Ihrem Haus und werden über eine VPN-Verbindung zwischen Ihrem Netz und unserem Rechenzentrum angebunden – Benutzer und Passwörter pflegen Sie wie gewohnt an einer Stelle. Auf Wunsch binden wir zusätzlich einen lokalen Dateiserver per SMB-Protokoll an, sodass Ihre Ablage im Haus direkt in EGroupware verfügbar ist."}},{"@type":"Question","name":"Was ist günstiger – Cloud oder eigener Server?","acceptedAnswer":{"@type":"Answer","text":"Die Cloud kostet ab 24,90 € pro Monat oder wird als Flatrate abgerechnet und enthält Betrieb, Updates und Datensicherung. Die Community Edition ist ohne Lizenzkosten, die Enterprise Line gibt es ab 62,50 € pro Monat – beim eigenen Server kommen Hardware oder Hosting sowie die Arbeitszeit für Wartung und Sicherung hinzu. Ohne eigene IT ist die Cloud deshalb häufig die günstigere Lösung."}},{"@type":"Question","name":"Brauche ich für den eigenen Server eine IT-Abteilung?","acceptedAnswer":{"@type":"Answer","text":"Sie brauchen Linux-Kenntnisse für Installation, Updates und Datensicherung – im Haus oder über einen Dienstleister. Alternativ übernimmt das EGroupware-Team die Wartung per Fernzugriff auf Basis von Support-Kontingenten."}},{"@type":"Question","name":"Wie sicher sind meine Daten in der Cloud?","acceptedAnswer":{"@type":"Answer","text":"Die Daten liegen in zwei Rechenzentren in Frankfurt am Main. Der Zugang ist immer verschlüsselt (HTTPS), zusätzlich ist eine Anmeldung mit zwei Faktoren möglich. Wir sichern die Daten täglich und halten 7 tägliche und 12 wöchentliche Sicherungen vor."}}]}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Haupt&shy;inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="./">
+        <img class="brand-light" src="../assets/img/EGroupware-Logo.svg"
+             alt="EGroupware – Smart Online Office" width="189" height="37" fetchpriority="high">
+        <img class="brand-dark" src="../assets/img/EGroupware-Logo-invert.svg"
+             alt="" aria-hidden="true" width="189" height="37">
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="primary-nav">
+        <li><a href="./">Start</a></li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="funktionen">Funktionen</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Funktionen – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Organisation</p><ul><li><a href="kalender"><img class="nav-sub__icon" src="../assets/img/icons/calendar.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kalender</span></a></li><li><a href="kontakte"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kontakte</span></a></li><li><a href="aufgaben"><img class="nav-sub__icon" src="../assets/img/icons/infolog.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Aufgaben</span></a></li><li><a href="projekte"><img class="nav-sub__icon" src="../assets/img/icons/projectmanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Projekte</span></a></li><li><a href="stundenzettel"><img class="nav-sub__icon" src="../assets/img/icons/timesheet.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Zeit&shy;erfassung</span></a></li><li><a href="ressourcen"><img class="nav-sub__icon" src="../assets/img/icons/resources.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Ressourcen</span></a></li><li><a href="e-rechnung"><img class="nav-sub__icon" src="../assets/img/icons/einvoice.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-&#8288;Rechnung</span></a></li><li><a href="administration"><img class="nav-sub__icon" src="../assets/img/icons/admin.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Administration</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Kommunikation</p><ul><li><a href="email"><img class="nav-sub__icon" src="../assets/img/icons/mail.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-&#8288;Mail</span></a></li><li><a href="chat"><img class="nav-sub__icon" src="../assets/img/icons/chat.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Team Chat</span></a></li><li><a href="videokonferenzen"><img class="nav-sub__icon" src="../assets/img/icons/videoconference.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Video&shy;konferenzen</span></a></li><li><a href="dateiverwaltung"><img class="nav-sub__icon" src="../assets/img/icons/filemanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Dateien</span></a></li><li><a href="online-office"><img class="nav-sub__icon" src="../assets/img/icons/collabora.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Collabora Online Office</span></a></li><li><a href="kanban"><img class="nav-sub__icon" src="../assets/img/icons/kanban.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kanban</span></a></li><li><a href="helpdesk"><img class="nav-sub__icon" src="../assets/img/icons/tracker.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Helpdesk</span></a></li><li><a href="crm"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CRM-&#8288;Funktionen</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Technik &amp; Integration</p><ul><li><a href="cti-telefon-integration"><img class="nav-sub__icon" src="../assets/img/icons/cti.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CTI Telefon-Integration</span></a></li><li><a href="homeoffice-integration"><img class="nav-sub__icon" src="../assets/img/icons/home.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Home&shy;office Integration</span></a></li><li><a href="mobiler-zugang"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span>Mobiler Zugang</span></a></li><li><a href="synchronisation"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span><span>Synchronisation</span></a></li><li><a href="guacamole"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span><span>Guacamole</span></a></li><li><a href="univention"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><span>Univention Corporate Server (UCS)</span></a></li><li><a href="vidoteach"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span><span>Lernen mit Videos</span></a></li><li><a href="community-edition-vs-epl"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span><span>EGroupware CE vs. EPL</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="preise">Tarife</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Tarife – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="preise"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#tag"/></svg></span><span>Tarife</span></a></li><li><a href="cloud-oder-eigener-server" aria-current="page"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#compare"/></svg></span><span>Cloud oder eigener Server?</span></a></li><li><a href="cloud-dienst"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#cloud-check"/></svg></span><span>EGroupware Cloud-Dienst</span></a></li><li><a href="testversion"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#clock"/></svg></span><span>Test&shy;version</span></a></li><li><a href="demo"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#monitor"/></svg></span><span>Online Demo</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="branchen">Branchen</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Branchen – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Lösungen</p><ul><li><a href="branchen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#building"/></svg></span><span>Branchen</span></a></li><li><a href="bildungseinrichtungen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#cap"/></svg></span><span>Bildungs&shy;einrichtungen</span></a></li><li><a href="kollaborationswerkzeuge"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#grid"/></svg></span><span>Kollaborations&shy;werkzeuge</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Alternative zu</p><ul><li><a href="exchange-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#mail"/></svg></span><span>Exchange</span></a></li><li><a href="dropbox-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#folder"/></svg></span><span>Dropbox</span></a></li><li><a href="owncloud-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#cloud"/></svg></span><span>ownCloud</span></a></li><li><a href="google-kalender-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#calendar"/></svg></span><span>Google Kalender</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="ueber-uns">Über uns</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Über uns – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Unter&shy;nehmen</p><ul><li><a href="ueber-uns"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#info"/></svg></span><span>Über uns</span></a></li><li><a href="kundenstimmen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#quote"/></svg></span><span>Kunden&shy;stimmen</span></a></li><li><a href="warum-egroupware"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#check"/></svg></span><span>Warum EGroupware?</span></a></li><li><a href="digitale-souveraenitaet"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#shield"/></svg></span><span>Digitale Souveränität</span></a></li><li><a href="presse"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#news"/></svg></span><span>Presse</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Partner &amp; Community</p><ul><li><a href="community"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#users"/></svg></span><span>Community</span></a></li><li><a href="technologiepartner"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#chip"/></svg></span><span>Technologie&shy;partner</span></a></li><li><a href="integrationspartner"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#plug"/></svg></span><span>Integrations&shy;partner</span></a></li><li><a href="reseller"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#store"/></svg></span><span>EGroupware Reseller</span></a></li><li><a href="reseller-werden"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#user-plus"/></svg></span><span>Reseller werden</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="support">Support</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Support – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Hilfe &amp; Service</p><ul><li><a href="support"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#lifebuoy"/></svg></span><span>Support</span></a></li><li><a href="support-login"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#login"/></svg></span><span>Support Login</span></a></li><li><a href="status"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#pulse"/></svg></span><span>EGroupware Cloud Status</span></a></li><li><a href="sicherheit-datenschutz"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#lock"/></svg></span><span>Sicherheit und Daten&shy;schutz</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Selbst betreiben</p><ul><li><a href="download"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#download"/></svg></span><span>Download</span></a></li><li><a href="installation-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#terminal"/></svg></span><span>Installation auf Ihrem eigenen Server</span></a></li><li><a href="tutorials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#play"/></svg></span><span>Webinare und Tutorials</span></a></li><li><a href="caldav-synchronisierer"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261108c#sync"/></svg></span><span>Caldav-Synchronisierer</span></a></li></ul></div>
+        </div>
+        </li>
+        <li><a href="blog">News</a></li>
+        <li><a href="kontakt">Kontakt</a></li>
+          <li class="nav-cta"><a class="btn btn--primary" href="kontakt">30 Tage gratis testen</a></li>
+          <li class="nav-theme">
+            <button class="theme-toggle-inline" type="button">
+              <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+              <span>Farbschema wechseln</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Sprache"><a href="cloud-oder-eigener-server" hreflang="de" data-set-lang="de" aria-current="true">DE</a><a href="../en/cloud-or-own-server" hreflang="en" data-set-lang="en">EN</a></div>
+        <button class="theme-toggle" type="button" aria-label="Farbschema wechseln"
+                data-label-dark="Farbschema wechseln" data-label-light="Farbschema wechseln">
+          <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+        </button>
+        <a class="btn btn--primary btn--sm" href="kontakt">30 Tage gratis testen</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="primary-nav" aria-label="Menü öffnen">
+          <span class="i-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg></span><span class="i-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="./">Start</a> <span aria-hidden="true">›</span> <a href="preise">Tarife</a> <span aria-hidden="true">›</span> <span aria-current="page">Cloud oder eigener Server?</span>
+        </nav>
+        <h1>Cloud oder eigener Server?</h1>
+        <p class="lead">EGroupware gibt es als Cloud-Dienst aus Deutsch&shy;land und zur Installation auf Ihrem eigenen Server – mit derselben Software. Diese Seite hilft bei der Entscheidung. Und wenn sich Ihre Anforderungen ändern, wechseln Sie einfach: in beide Richtungen.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="#vergleich">Zum Vergleich</a>
+          <a class="btn btn--ghost btn--lg" href="kontakt">Beratung anfragen</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="vergleich">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Im Überblick</span>
+          <h2>Die beiden Betriebs&shy;modelle im Vergleich</h2>
+          <p>Gleiche Software, gleiche Daten – der Unterschied liegt darin, wer den Server betreibt und wie viel Sie selbst in der Hand haben möchten.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="compare compare--neutral">
+            <thead><tr><th></th><th>Cloud</th><th>Eigener Server</th></tr></thead>
+            <tbody>
+            <tr><th scope="row">Betrieb und Updates</th><td data-label="Cloud">Über&shy;nehmen wir: Installation, Updates und Überwachung</td><td data-label="Eigener Server">Liegen bei Ihnen – oder beim EGroupware-Team per Fern&shy;wartung</td></tr>
+            <tr><th scope="row">Standort der Daten</th><td data-label="Cloud">Zwei Rechenzentren in Frankfurt am Main</td><td data-label="Eigener Server">Ihr eigenes Rechen&shy;zentrum oder ein Hoster Ihrer Wahl</td></tr>
+            <tr><th scope="row">Daten&shy;sicherung</th><td data-label="Cloud">Inklusive: 7 tägliche und 12 wöchentliche Sicherungen</td><td data-label="Eigener Server">Liegt in Ihrer Verantwortung</td></tr>
+            <tr><th scope="row">Anbindung an Ihre IT</th><td data-label="Cloud">Active Directory, LDAP und auf Wunsch ein lokaler Datei&shy;server – per VPN angebunden; eigene E-&#8288;Mail-Domain ohne Aufpreis</td><td data-label="Eigener Server">Active Directory, LDAP, vorhandener Mail- und Datei&shy;server – oder EGroupware Mail: Mail&shy;server wird mitinstalliert und in EGroupware verwaltet</td></tr>
+            <tr><th scope="row">Funktions&shy;umfang</th><td data-label="Cloud">Alle Funktionen der Enterprise Line</td><td data-label="Eigener Server">Community Edition oder Enterprise Line mit allen Funktionen</td></tr>
+            <tr><th scope="row">Kosten</th><td data-label="Cloud">Ab 24,90 € pro Monat, abgerechnet nach gleichzeitigen Zugriffen – oder als Flatrate</td><td data-label="Eigener Server">Community Edition ohne Lizenz&shy;kosten, Enterprise Line ab 62,50 € pro Monat – dazu Server und Betrieb</td></tr>
+            <tr><th scope="row">Benutzer&shy;konten</th><td data-label="Cloud">Unbegrenzt</td><td data-label="Eigener Server">Unbegrenzt</td></tr>
+            <tr><th scope="row">Voraussetzungen</th><td data-label="Cloud">Ein Browser – keine eigene IT nötig</td><td data-label="Eigener Server">Linux-Kenntnisse im Haus oder ein Dienstleister</td></tr>
+            <tr><th scope="row">Support</th><td data-label="Cloud">Ticket-Support inklusive, weitere Leistungen über Zeit&shy;kontingente</td><td data-label="Eigener Server">Enterprise Line: Installations- und Anwendungs&shy;support über MyEGroupware; sonst Zeit&shy;kontingente</td></tr>
+            <tr><th scope="row">Start</th><td data-label="Cloud">Sofort – 30 Tage kostenlos testen</td><td data-label="Eigener Server">Community Edition herunter&shy;laden oder Enterprise Line bestellen</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="price-note">Preise zzgl. MwSt. Details zu allen Paketen auf der Seite <a href="preise">Tarife</a>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Entscheidungs&shy;hilfe</span>
+          <h2>Was passt zu Ihrem Team?</h2>
+          <p>Die meisten Organisationen finden sich in einer der beiden Spalten deutlich wieder.</p>
+        </div>
+        <div class="grid grid-2">
+          <article class="card reveal">
+            <h3>Die Cloud passt, wenn …</h3>
+            <ul class="check-list mt-3">
+              <li>Sie keine eigene IT haben oder diese entlasten möchten.</li>
+              <li>Sie schnell starten möchten – ohne Server und Installation.</li>
+              <li>Updates und Daten&shy;sicherung zuverlässig erledigt sein sollen.</li>
+              <li>Sie feste monatliche Kosten statt eigener Hardware bevorzugen.</li>
+            </ul>
+            <p class="mt-3"><a class="link-arrow" href="cloud-dienst">Mehr zum Cloud-Dienst</a></p>
+          </article>
+          <article class="card reveal">
+            <h3>Der eigene Server passt, wenn …</h3>
+            <ul class="check-list mt-3">
+              <li>Sie den Server voll&shy;ständig selbst in der Hand haben möchten – vom Betriebs&shy;system bis zum Zeitpunkt der Updates.</li>
+              <li>Sie eigene Anpassungen oder Module direkt im Quellcode umsetzen möchten.</li>
+              <li>Die Daten Ihr Haus aus rechtlichen oder internen Gründen nicht verlassen dürfen.</li>
+              <li>Sie IT-&#8288;Know-&#8288;how im Haus haben oder einen Dienstleister beauftragen.</li>
+            </ul>
+            <p class="mt-3"><a class="link-arrow" href="installation-eigener-server">Mehr zur Installation</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Der Mittelweg</span>
+          <h2>Eigener Server, betreut vom EGroupware-Team</h2>
+          <p class="mt-2">Die Daten müssen im Haus bleiben, aber Ihnen fehlt die Zeit für die Administration? Dann installiert und wartet das EGroupware-Team die Software auf Ihrem Server per Fern&shy;wartung – abgerechnet über Support-Kontingente.</p>
+          <p class="mt-2">Viele Kunden kombinieren den eigenen Server mit einem Support-Kontingent: Den Alltag erledigen sie selbst, für komplexere Fragen haben sie das Team an der Seite, das die Software entwickelt.</p>
+          <p class="mt-3"><a class="link-arrow" href="support">Support-Kontingente ansehen</a></p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Aus der Praxis: Wolf Maschinenbau</strong><span class="st-badge st-badge--update">EIGENER SERVER</span></div>
+          <p>„Die eigentliche Umstellung verlief ohne Probleme, nach wenigen Tagen konnte die alte Lösung abgeschaltet werden.“ – Samuel Wolf, Wolf Maschinenbau AG</p>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Betrieb</dt><dd>Community Edition auf dem eigenen Server</dd></div>
+            <div class="fact"><dt>Unterstützung</dt><dd>Support-Budget für komplexere Fragen</dd></div>
+          </dl>
+          <p class="mt-2"><a class="link-arrow" href="allgemein/clevere-it-strategie-mit-der-community-edition">Anwender&shy;bericht lesen</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Keine Festlegung</span>
+          <h2>Wechseln, wenn sich Anforderungen ändern</h2>
+          <p class="mt-2">Cloud und eigener Server nutzen dieselbe Software. Ein Umzug ist jederzeit möglich, in die eine wie in die andere Richtung – wir unterstützen bei der Migration von E-&#8288;Mail, Kalender, Kontakten und Dateien.</p>
+          <p class="mt-2">Auch zwischen Community Edition und Enterprise Line wechseln Sie ohne Daten&shy;migration: Beide nutzen dieselbe Datenbank.</p>
+          <p class="mt-3"><a class="link-arrow" href="digitale-souveraenitaet">Digitale Souveränität im Fakten&shy;check</a></p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Aus der Praxis: Stadt&shy;verwaltung Nordenham</strong><span class="st-badge st-badge--update">CLOUD</span></div>
+          <p>„Nach 12 Jahren Nutzung der Community-Version in der Eigeninstallation wechselten wir 2018 in die EGroupware Cloud und migrierten 2020 auch unsere E-&#8288;Mail-Konten dorthin.“ – Olaf Reimers, Stadt&shy;verwaltung Nordenham</p>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>In der Cloud seit</dt><dd>2018, vorher 12 Jahre eigener Server</dd></div>
+            <div class="fact"><dt>Benutzer</dt><dd>240, davon rund 100 gleichzeitig</dd></div>
+          </dl>
+          <p class="mt-2"><a class="link-arrow" href="kundenstimmen/olaf-reimers-stadtverwaltung-nordenham">Zum Profil</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-narrow">
+        <div class="section-head center reveal">
+          <h2>Häufige Fragen zum Betriebs&shy;modell</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Kann ich später zwischen Cloud und eigenem Server wechseln?</summary>
+            <div class="faq-body"><p>Ja, in beide Richtungen. Es ist dieselbe Software; wir unterstützen beim Umzug von E-&#8288;Mail, Kalender, Kontakten und Dateien. Die Stadt&shy;verwaltung Nordenham hat EGroupware zum Beispiel zwölf Jahre selbst betrieben und ist 2018 in die Cloud gewechselt.</p></div>
+          </details>
+          <details>
+            <summary>Kann ich die Cloud an mein Active Directory und meinen Datei&shy;server anbinden?</summary>
+            <div class="faq-body"><p>Ja. Active Directory oder LDAP bleiben in Ihrem Haus und werden über eine VPN-&#8288;Verbindung zwischen Ihrem Netz und unserem Rechen&shy;zentrum angebunden – Benutzer und Passwörter pflegen Sie wie gewohnt an einer Stelle. Auf Wunsch binden wir zusätzlich einen lokalen Datei&shy;server per SMB-&#8288;Protokoll an, sodass Ihre Ablage im Haus direkt in EGroupware verfügbar ist.</p></div>
+          </details>
+          <details>
+            <summary>Was ist günstiger – Cloud oder eigener Server?</summary>
+            <div class="faq-body"><p>Die Cloud kostet ab 24,90 € pro Monat oder wird als Flatrate abgerechnet und enthält Betrieb, Updates und Daten&shy;sicherung. Die Community Edition ist ohne Lizenz&shy;kosten, die Enterprise Line gibt es ab 62,50 € pro Monat – beim eigenen Server kommen Hardware oder Hosting sowie die Arbeits&shy;zeit für Wartung und Sicherung hinzu. Ohne eigene IT ist die Cloud deshalb häufig die günstigere Lösung.</p></div>
+          </details>
+          <details>
+            <summary>Brauche ich für den eigenen Server eine IT-&#8288;Abteilung?</summary>
+            <div class="faq-body"><p>Sie brauchen Linux-Kenntnisse für Installation, Updates und Daten&shy;sicherung – im Haus oder über einen Dienstleister. Alternativ übernimmt das EGroupware-Team die Wartung per Fern&shy;zugriff auf Basis von Support-Kontingenten.</p></div>
+          </details>
+          <details>
+            <summary>Wie sicher sind meine Daten in der Cloud?</summary>
+            <div class="faq-body"><p>Die Daten liegen in zwei Rechenzentren in Frankfurt am Main. Der Zugang ist immer verschlüsselt (HTTPS), zusätzlich ist eine Anmeldung mit zwei Faktoren möglich. Wir sichern die Daten täglich und halten 7 tägliche und 12 wöchentliche Sicherungen vor.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2>Noch unsicher? Probieren Sie es aus.</h2>
+          <p>Testen Sie die Cloud 30 Tage kostenlos oder laden Sie die Community Edition für Ihren eigenen Server herunter. Gern beraten wir Sie auch persönlich.</p>
+          <div class="btn-row center">
+            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage Cloud testen</a>
+            <a class="btn btn--light btn--lg" href="download">Community Edition herunter&shy;laden</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="./">
+            <img src="../assets/img/EGroupware-Logo-invert.svg" alt="EGroupware"
+                 width="173" height="34" loading="lazy">
+          </a>
+          <p>EGroupware ist das Open-Source-Online-Office für Unter&shy;nehmen, Verwaltungen und Bildungs&shy;einrichtungen. Entwickelt, gehostet und betreut in Deutsch&shy;land.</p>
+          <p class="mt-2"><strong style="color:#fff">Entwickelt &amp; gehostet in Deutsch&shy;land</strong></p>
+        </div>
+      <div>
+        <h2 class="footer-h">Produkt</h2>
+        <ul>
+          <li><a href="funktionen">Funktionen</a></li>
+          <li><a href="preise">Preise</a></li>
+          <li><a href="branchen">Branchen</a></li>
+          <li><a href="./">EGroupware 26</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Unter&shy;nehmen</h2>
+        <ul>
+          <li><a href="ueber-uns">Über uns</a></li>
+          <li><a href="support">Support</a></li>
+          <li><a href="status">Cloud-Status</a></li>
+          <li><a href="kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Rechtliches</h2>
+        <ul>
+          <li><a href="impressum">Impressum</a></li>
+          <li><a href="datenschutz">Daten&shy;schutz</a></li>
+          <li><a href="haftungsausschluss">Haftungsausschluss</a></li>
+          <li><a href="vertrag-kuendigen">Vertrag kündigen</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> EGroupware GmbH. Alle Rechte vorbehalten.</p>
+        <nav class="footer-social" aria-label="Social Media"><a href="https://de.linkedin.com/company/egroupware-gmbh" target="_blank" rel="noopener" aria-label="EGroupware bei LinkedIn"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#linkedin"/></svg></a><a href="https://fosstodon.org/@EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Mastodon"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#mastodon"/></svg></a><a href="https://bsky.app/profile/egroupware.org" target="_blank" rel="noopener" aria-label="EGroupware bei Bluesky"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#bluesky"/></svg></a><a href="https://www.youtube.com/user/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei YouTube"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#youtube"/></svg></a><a href="https://www.facebook.com/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Facebook"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#facebook"/></svg></a><a href="https://github.com/EGroupware/egroupware" target="_blank" rel="noopener" aria-label="EGroupware bei GitHub"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#github"/></svg></a><a href="https://help.egroupware.org/" target="_blank" rel="noopener" aria-label="EGroupware Community-Forum"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261108c#egroupware"/></svg></a></nav>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js?v=20261108c" defer></script>
+</body>
+</html>

@@ -2237,3 +2237,7 @@ main .section .wrap > h2.center { text-align: left; }
   table.compare td { grid-template-columns: 1fr; gap: .15rem; }
 }
 
+/* -- Vergleichstabelle ohne hervorgehobene Spalte (z. B. Cloud vs. eigener Server) ----
+   Alle Anbieter-Spalten sehen gleich aus. */
+.compare.compare--neutral tbody td { background: none !important; box-shadow: none !important; font-weight: inherit; color: var(--text-soft); }
+.compare.compare--neutral thead th:nth-child(2) { background: var(--st-head) !important; box-shadow: none !important; color: var(--text); }

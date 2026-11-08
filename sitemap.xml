@@ -385,22 +385,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/de/warum-cloud</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/warum-cloud"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/why-cloud"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/why-cloud"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/de/warum-eigeninstallation</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/warum-eigeninstallation"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/why-on-premise"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/why-on-premise"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/de/exchange-alternative</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/exchange-alternative"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/exchange-alternative"/>
@@ -2056,22 +2040,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/en/why-cloud</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/warum-cloud"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/why-cloud"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/why-cloud"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/why-on-premise</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/warum-eigeninstallation"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/why-on-premise"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/why-on-premise"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/en/exchange-alternative</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/exchange-alternative"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/exchange-alternative"/>
@@ -3486,6 +3454,22 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/kriterien-fuer-os-projekte"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/general/sustainable-open-source-providers-vs-price-dumpers"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/general/sustainable-open-source-providers-vs-price-dumpers"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.egroupware.org/de/cloud-oder-eigener-server</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/cloud-oder-eigener-server"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/cloud-or-own-server"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/cloud-or-own-server"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.egroupware.org/en/cloud-or-own-server</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/cloud-oder-eigener-server"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/cloud-or-own-server"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/cloud-or-own-server"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
