@@ -110,6 +110,9 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
 
 ## Texte und Suchmaschinen
 
+- Inhalte in Tabellenzellen und Wert-Listen (z. B. „EGroupware auf einen Blick“, Vergleichs- und
+  Preistabellen) beginnen **immer mit einem Großbuchstaben** – auch einzelne Wörter („Nein“,
+  „Proprietär“) und Satzanfänge wie „Ab 25 Postfächern“ / „From €390“. Gilt für Deutsch und Englisch.
 - Community Edition nie „kostenlos“/„free“ nennen, sondern „ohne Lizenzkosten“ /
   „without licence fees“ (bzw. „lizenzkostenfrei“ / „licence-free“). Betrieb und
   Updates liegen beim Kunden, Support ist optional buchbar. Wirklich kostenlose
