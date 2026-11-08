@@ -24,7 +24,7 @@
   <link rel="preload" href="../assets/css/style.css?v=20261108e" as="style">
   <link rel="stylesheet" href="../assets/css/style.css?v=20261108e">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does CCU mean?","acceptedAnswer":{"@type":"Answer","text":"CCU stands for concurrent users. You do not pay per created account but by the number of people working in the system at the same time. For teams with shift work or occasional users that is considerably cheaper than a licence per head."}},{"@type":"Question","name":"Can I try EGroupware first?","acceptedAnswer":{"@type":"Answer","text":"Yes. The cloud version can be tested free of charge and without obligation for 30 days. The Community Edition is permanently available for download without licence fees."}},{"@type":"Question","name":"How does the support contingent work?","acceptedAnswer":{"@type":"Answer","text":"Support is purchased in advance as a contingent in 15-minute units. Contingents are valid for two years from purchase; unused time expires afterwards."}},{"@type":"Question","name":"Can I move from the cloud to my own server later?","acceptedAnswer":{"@type":"Answer","text":"Yes. Because EGroupware is built on open source and open standards, changing the operating model works in both directions. Our support team assists with migrations on request."}},{"@type":"Question","name":"Are there special rates for schools and associations?","acceptedAnswer":{"@type":"Answer","text":"Yes. eCloud NGO and eFlat School are dedicated tariffs for educational institutions, associations and non-profit organisations."}}]}
+  {"mainEntity":[{"name":"What does CCU mean?","@type":"Question","acceptedAnswer":{"@type":"Answer","text":"CCU stands for concurrent users. You do not pay per created account but by the number of people working in the system at the same time. For teams with shift work or occasional users that is considerably cheaper than a licence per head."}},{"name":"Can I try EGroupware first?","@type":"Question","acceptedAnswer":{"text":"Yes. The cloud version can be tested free of charge and without obligation for 30 days. The Community Edition is permanently available for download without licence fees.","@type":"Answer"}},{"acceptedAnswer":{"@type":"Answer","text":"Support is purchased in advance as a contingent in 15-minute units. Contingents are valid for two years from purchase; unused time expires afterwards."},"name":"How does the support contingent work?","@type":"Question"},{"acceptedAnswer":{"text":"Yes. Because EGroupware is built on open source and open standards, changing the operating model works in both directions. Our support team assists with migrations on request.","@type":"Answer"},"@type":"Question","name":"Can I move from the cloud to my own server later?"},{"acceptedAnswer":{"text":"Yes. eCloud NGO and eFlat School are dedicated tariffs for educational institutions, associations and non-profit organisations.","@type":"Answer"},"name":"Are there special rates for schools and associations?","@type":"Question"},{"acceptedAnswer":{"@type":"Answer","text":"One licence per user who works with Collabora Online. Unlike EGroupware itself, Collabora counts users, not concurrent sessions (CCU)."},"name":"How many licences do I need for Collabora Online?","@type":"Question"},{"acceptedAnswer":{"@type":"Answer","text":"Cloud packages can be paid monthly – minimum term one month – or yearly: then you only pay for ten months, two months are free. This also applies to Collabora Online in the cloud. Self-hosted installations have a minimum term of one year."},"name":"Which contract terms apply?","@type":"Question"},{"acceptedAnswer":{"text":"Yes, at €350 per hour from a support contingent. If you need help regularly, switching to the Enterprise Line can be cheaper: there a support hour costs €175.","@type":"Answer"},"name":"Can I get support for the Community Edition?","@type":"Question"}],"@context":"https://schema.org","@type":"FAQPage"}
   </script>
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
@@ -216,7 +216,7 @@
           <p class="desc">For schools, associations and non-&#8288;profit organisations.</p>
           <a class="btn btn--primary" href="https://www.digistore24.com/product/50667" rel="noopener">Order now</a>
           <a class="btn btn--ghost" href="trial">Start free trial</a>
-          <ul class="check-list"><li>Unlimited users</li><li>At least 2 concurrent users (CCU)</li><li>20 GB storage included</li><li>Support contingent available</li></ul>
+          <ul class="check-list"><li>Unlimited users</li><li>At least 2 concurrent users (CCU)</li><li>20 GB storage included</li><li>Support contingent available</li><li>Collabora Online add-&#8288;on: €9.90 per user/year</li><li>Pay yearly: two months free</li></ul>
         </article>
         <article class="price price--featured reveal" data-badge="Popular">
           <h3>eCloud</h3>
@@ -225,7 +225,7 @@
           <p class="desc">For companies of any size – the standard way into the cloud.</p>
           <a class="btn btn--primary" href="https://www.digistore24.com/product/58103" rel="noopener">Order now</a>
           <a class="btn btn--ghost" href="trial">Start free trial</a>
-          <ul class="check-list"><li>Unlimited users</li><li>At least 2 concurrent users (CCU)</li><li>20 GB storage included</li><li>Collabora Online available</li><li>30-day free trial</li></ul>
+          <ul class="check-list"><li>Unlimited users</li><li>At least 2 concurrent users (CCU)</li><li>20 GB storage included</li><li>Collabora Online add-&#8288;on: €36.50 per user/year</li><li>30-day free trial</li><li>Pay yearly: two months free</li></ul>
         </article>
         <article class="price reveal">
           <h3>eFlat School</h3>
@@ -245,7 +245,7 @@
         </div>
       </div>
     </section>
-    <section class="section section--soft">
+    <section class="section section--soft" id="on-premises">
       <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Self-hosted</span>
@@ -258,7 +258,7 @@
           <p class="amount">€0 <small>licence fees</small></p>
           <p class="desc">The complete open source code, without licence fees.</p>
           <a class="btn btn--ghost" href="download">Go to download</a>
-          <ul class="check-list"><li>Unlimited users</li><li>Full scope of the community version</li><li>Community forum and documentation</li><li>Support optional (€350/hour)</li></ul>
+          <ul class="check-list"><li>Unlimited users</li><li>Full scope of the community version</li><li>Community forum and documentation</li><li>Support optional (€350/hour)</li><li>Collabora Online: €9.90 (NGO) or €36.50 per user/year</li></ul>
         </article>
         <article class="price price--featured reveal" data-badge="For SMEs">
           <h3>EPL Smart</h3>
@@ -267,14 +267,82 @@
           <p class="desc">Enterprise Line for small and medium-sized businesses.</p>
           <a class="btn btn--primary" href="https://www.digistore24.com/product/70715" rel="noopener">Order now</a>
           <a class="btn btn--ghost" href="contact">Request a quote</a>
-          <ul class="check-list"><li>At least 10 concurrent users (CCU)</li><li>Quality-assured enterprise packages</li><li>Support at €175/hour</li><li>Collabora Online from €3.65 per user/month</li></ul>
+          <ul class="check-list"><li>At least 10 concurrent users (CCU)</li><li>Quality-assured enterprise packages</li><li>Support at €175/hour</li><li>Collabora Online: €9.90 (NGO) or €36.50 per user/year</li></ul>
         </article>
         <article class="price reveal">
           <h3>EPL Universal</h3>
           <p class="amount">on request <small></small></p>
           <p class="desc">Flat rate for large organisations with high user numbers.</p>
           <a class="btn btn--ghost" href="contact">Get in touch</a>
-          <ul class="check-list"><li>Unlimited CCU per server</li><li>Multiple instances possible</li><li>AD, LDAP and Univention integration</li><li>Collabora Online from €3.65 per user/month</li></ul>
+          <ul class="check-list"><li>Unlimited CCU per server</li><li>Multiple instances possible</li><li>AD, LDAP and Univention integration</li><li>Collabora Online: €9.90 (NGO) or €36.50 per user/year</li></ul>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="support">
+      <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Support</span>
+        <h2>Support contingents</h2>
+        <p>Personal support from the team that develops EGroupware – by email, phone, remote maintenance or on site. Billed from prepaid time contingents in 15-minute units; a contingent is valid for two years from purchase.</p>
+      </div>
+        <div class="price-grid">
+        <article class="price reveal">
+          <h3>Community Edition</h3>
+          <p class="amount">€350 <small>/ hour</small></p>
+          <span class="price-vat">plus VAT</span>
+          <p class="desc">Support for the free Community Edition.</p>
+          <a class="btn btn--primary" href="https://www.digistore24.com/product/51015" rel="noopener">Order now</a>
+          <ul class="check-list"><li>Billed in 15-minute units</li><li>Appointment by arrangement</li><li>Phone, remote maintenance or on site</li></ul>
+        </article>
+        <article class="price price--featured reveal" data-badge="EPL &amp; cloud">
+          <h3>EPL – cloud &amp; self-hosted</h3>
+          <p class="amount">€175 <small>/ hour</small></p>
+          <span class="price-vat">plus VAT</span>
+          <p class="desc">Preferred support for Enterprise Line and EGroupware Cloud customers.</p>
+          <a class="btn btn--primary" href="https://www.digistore24.com/product/51015" rel="noopener">Order now</a>
+          <ul class="check-list"><li>Half the hourly rate of the Community Edition</li><li>Billed in 15-minute units</li><li>Training, consulting, configuration and data migration</li></ul>
+        </article>
+        <article class="price reveal">
+          <h3>Migration &amp; update</h3>
+          <p class="amount">on request <small></small></p>
+          <p class="desc">Version update, server move or mail server migration – we take care of the technical work.</p>
+          <a class="btn btn--ghost" href="contact">Request a quote</a>
+          <ul class="check-list"><li>Update of the Community Edition or EPL</li><li>Move to a new server or to the cloud</li><li>Mail server migration</li></ul>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section--soft" id="collabora">
+      <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Online office</span>
+        <h2>Collabora Online</h2>
+        <p>Edit documents, spread&shy;sheets and presentations together in the browser – right inside EGroupware. Licensed per user, not by concurrent sessions. The price applies to the cloud, self-hosted installations and the Community Edition.</p>
+      </div>
+        <div class="price-grid">
+        <article class="price reveal">
+          <h3>NGO &amp; education</h3>
+          <p class="amount">€9.90 <small>/ user and year</small></p>
+          <span class="price-vat">plus VAT</span>
+          <p class="desc">For non-&#8288;profit organisations and educational institutions.</p>
+          <a class="btn btn--primary" href="https://www.digistore24.com/product/200525" rel="noopener">Order now</a>
+          <ul class="check-list"><li>From 50 licences €8.90, from 100 licences €7.50</li><li>Cloud: monthly or yearly payment</li><li>Self-hosted: minimum term one year</li></ul>
+        </article>
+        <article class="price price--featured reveal" data-badge="Popular">
+          <h3>Companies</h3>
+          <p class="amount">€36.50 <small>/ user and year</small></p>
+          <span class="price-vat">plus VAT</span>
+          <p class="desc">For companies and public administrations of any size.</p>
+          <a class="btn btn--primary" href="https://www.digistore24.com/product/200519" rel="noopener">Order now</a>
+          <ul class="check-list"><li>From 50 licences €33.50</li><li>Cloud: monthly or yearly payment</li><li>Self-hosted: minimum term one year</li></ul>
+        </article>
+        <article class="price reveal">
+          <h3>Collabora Cloud only</h3>
+          <p class="amount">on request <small></small></p>
+          <p class="desc">You run EGroupware or another groupware yourself and want to use Collabora Online from our cloud.</p>
+          <a class="btn btn--ghost" href="contact">Request a quote</a>
+          <ul class="check-list"><li>Connected to your own installation</li><li>Operation and updates by us</li></ul>
         </article>
         </div>
       </div>
@@ -312,6 +380,11 @@
             <tr><td>The community forum is support enough</td><td>You want priority support – €175 instead of €350 per hour</td></tr>
             </tbody>
           </table>
+        </div>
+        <div class="fc-fact reveal mt-3">
+          <div class="fc-fact__head"><strong>Good to know: you invest in open source</strong><span class="st-badge st-badge--update">OPEN SOURCE</span></div>
+          <p>The Enterprise Line helps fund the development and maintenance of the Community Edition – new features and fixes benefit everyone who uses EGroupware. If you stay with the Community Edition, you can also give something back: for example with a support contingent.</p>
+          <p class="mt-2"><a class="link-arrow" href="#support">See support contingents</a></p>
         </div>
         <p class="price-note mt-3">Start free and move later: Community Edition and EPL use the same database. Switching needs no migration – email, contacts and files stay where they are. <a href="community-edition-vs-epl">All differences in detail</a></p>
       </div>
@@ -358,20 +431,15 @@
       <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Add-&#8288;ons</span>
-        <h2>Complementary services</h2>
-        <p>Useful building blocks you can add at any time.</p>
+        <h2>More services</h2>
+        <p>Add-&#8288;ons for email and communication that you can add at any time.</p>
       </div>
         <div class="table-wrap reveal">
           <table>
             <thead><tr><th>Service</th><th>Price</th><th>Note</th></tr></thead>
             <tbody>
-            <tr><td>Collabora Online (cloud)</td><td>€0.99 – €3.65 per user/month</td><td>Collaborative document editing</td></tr>
-            <tr><td>Collabora Online (self-hosted), NGO</td><td>€9.90 per user/year</td><td>From 50 licences €8.90, from 100 licences €7.50 · <a href="https://www.digistore24.com/product/200525" rel="noopener">Order</a></td></tr>
-            <tr><td>Collabora Online (self-hosted), companies</td><td>€36.50 per user/year</td><td>From 50 licences €33.50 · <a href="https://www.digistore24.com/product/200519" rel="noopener">Order</a></td></tr>
-            <tr><td>Rocket.Chat</td><td>€20 – €30 / month</td><td>Team chat integration</td></tr>
-            <tr><td>Support, Community Edition</td><td>€350 / hour</td><td>Billed in 15-minute units Â· <a href="https://www.digistore24.com/product/51015" rel="noopener">Order hours</a></td></tr>
-            <tr><td>Support EPL (cloud &amp; self-hosted)</td><td>€175 / hour</td><td>Billed in 15-minute units · <a href="https://www.digistore24.com/product/51015" rel="noopener">Order hours</a></td></tr>
-            <tr><td>SpamTitan</td><td>From €222.50 / year</td><td>From 25 mail accounts</td></tr>
+                                                            <tr><td>Rocket.Chat</td><td>€20 – €30 / month</td><td>Team chat integration</td></tr>
+                                    <tr><td>SpamTitan</td><td>From €222.50 / year</td><td>From 25 mail accounts</td></tr>
             <tr><td>Benno MailArchiv</td><td>From €390 / year</td><td>From 50 GB archive storage</td></tr>
             </tbody>
           </table>
@@ -404,6 +472,18 @@
           <details>
             <summary>Are there special rates for schools and associations?</summary>
             <div class="faq-body"><p>Yes. eCloud NGO and eFlat School are dedicated tariffs for educational institutions, associations and non-&#8288;profit organisations.</p></div>
+          </details>
+          <details>
+            <summary>How many licences do I need for Collabora Online?</summary>
+            <div class="faq-body"><p>One licence per user who works with Collabora Online. Unlike EGroupware itself, Collabora counts users, not concurrent sessions (CCU).</p></div>
+          </details>
+          <details>
+            <summary>Which contract terms apply?</summary>
+            <div class="faq-body"><p>Cloud packages can be paid monthly – minimum term one month – or yearly: then you only pay for ten months, two months are free. This also applies to Collabora Online in the cloud. Self-hosted installations have a minimum term of one year.</p></div>
+          </details>
+          <details>
+            <summary>Can I get support for the Community Edition?</summary>
+            <div class="faq-body"><p>Yes, at €350 per hour from a support contingent. If you need help regularly, switching to the Enterprise Line can be cheaper: there a support hour costs €175.</p></div>
           </details>
         </div>
       </div>
