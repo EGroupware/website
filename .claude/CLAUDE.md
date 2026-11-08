@@ -28,6 +28,12 @@ Commit-Nachrichten oder Kommentaren ablegen – auch nicht in dieser Datei.
   Keine zusätzliche „Mehr erfahren“-Zeile.
 - Karten mit mehreren Links sowie einzelne Links unter Abschnitten, in Infokästen und
   FAQs bleiben Text-Links mit Pfeil (`link-arrow`).
+- **Hover-Regel für Kacheln:** Ist die ganze Kachel ein Link (`card--link`, `module--link`,
+  `post-card`, `alt-tile`), bekommt sie beim Darüberfahren einen **blauen Rand** (`--primary`),
+  hebt sich leicht und bekommt Schatten – wie die Modulkacheln auf der Startseite. Kacheln
+  ohne eigenes Ziel (`card--hover`, Partnerkarten) bekommen nur einen **grauen Rand**
+  (`--border-hover`, im Hellmodus kräftig genug), nie Blau. Kacheln ganz ohne Hover-Effekt
+  (Preis-, Vergleichs-, Faktencheck-Karten) bleiben so. Neue Kacheltypen nach dieser Regel bauen.
 
 ## Deutsch und Englisch immer gleich behandeln
 
