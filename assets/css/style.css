@@ -2249,3 +2249,40 @@ main .section .wrap > h2.center { text-align: left; }
    Passt ein Link nicht mehr in die Zeile, beginnt er als Ganzes in der naechsten.
    Nur wenn er laenger als eine ganze Zeile ist, bricht er in sich um. */
 main :is(p, li, dd, dt, td, th, figcaption, small) a:not(.btn) { display: inline-block; }
+
+/* -- Partnerkarten (Technologie- und Integrationspartner) ---- */
+.partner-jump { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.partner-jump .chip { text-decoration: none; }
+main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
+
+.partner {
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.partner:hover { border-color: var(--border-strong); box-shadow: var(--shadow-md); }
+/* Logos bringen eigene Farben mit und stehen darum in beiden Farbschemata auf hellem Grund */
+.partner__logo {
+  display: grid; place-items: center; height: 112px; padding: 1.1rem 1.5rem;
+  background: #fff; border-bottom: 1px solid var(--border);
+}
+.partner__logo img { max-width: 78%; max-height: 64px; width: auto; height: auto; object-fit: contain; }
+:root[data-theme="dark"] .partner__logo { background: #f4f7fb; border-color: transparent; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .partner__logo { background: #f4f7fb; border-color: transparent; }
+}
+.partner__body { display: flex; flex-direction: column; flex: 1; padding: 1.25rem 1.35rem 1.35rem; }
+.partner__meta { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .8rem; }
+.partner h3 { font-size: var(--fs-h4); margin: 0; letter-spacing: -.015em; }
+.partner__firm { margin: .2rem 0 .7rem; font-size: var(--fs-xs); color: var(--text-muted); }
+.partner__body > p:not(.partner__firm):not(.partner__links) { margin: 0; font-size: var(--fs-sm); color: var(--text-soft); }
+.partner__links {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; align-items: center;
+  margin: auto 0 0; padding-top: 1rem; font-size: var(--fs-sm);
+}
+.partner__ext { color: var(--text-muted); text-decoration: none; }
+.partner__ext::after { content: " \2197"; }
+.partner__ext:hover { color: var(--primary); }
+/* Neutrales Kategorie-Badge (blau), z. B. fuer Partnerkategorien */
+.st-badge--info { background: var(--st-info-bg); color: var(--st-info); }

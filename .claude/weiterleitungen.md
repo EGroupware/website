@@ -20,6 +20,8 @@ Alle Adressen ohne `.html`, relativ zu `https://www.egroupware.org`.
 | `/en/why-on-premise` | `/en/cloud-or-own-server` | Zusammengelegt zur Vergleichsseite | 08.11.2026 | Meta-Refresh | offen |
 | `/de/kollaborationswerkzeuge` | `/de/funktionen` | Seite entfernt (Doppelung) | 08.11.2026 | Meta-Refresh | offen |
 | `/en/collaboration-tools` | `/en/features` | Seite entfernt (Doppelung) | 08.11.2026 | Meta-Refresh | offen |
+| `/de/integrationspartner` | `/de/technologiepartner` | Zusammengelegt zur Partnerseite | 08.11.2026 | Meta-Refresh | offen |
+| `/en/integration-partners` | `/en/technology-partners` | Zusammengelegt zur Partnerseite | 08.11.2026 | Meta-Refresh | offen |
 
 ## Kundenstimmen umbenannt
 
@@ -77,5 +79,7 @@ location = /en/why-cloud                 { return 301 /en/cloud-or-own-server; }
 location = /en/why-on-premise            { return 301 /en/cloud-or-own-server; }
 location = /de/kollaborationswerkzeuge   { return 301 /de/funktionen; }
 location = /en/collaboration-tools       { return 301 /en/features; }
+location = /de/integrationspartner     { return 301 /de/technologiepartner; }
+location = /en/integration-partners    { return 301 /en/technology-partners; }
 # … weitere Zeilen nach demselben Muster aus den Tabellen oben
 ```

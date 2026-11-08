@@ -321,14 +321,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/de/integrationspartner</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/integrationspartner"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/integration-partners"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/integration-partners"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.egroupware.org/de/reseller</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/reseller"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/resellers"/>
@@ -1964,14 +1956,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/technologiepartner"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/technology-partners"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/technology-partners"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/integration-partners</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/integrationspartner"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/integration-partners"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/integration-partners"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
