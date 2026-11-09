@@ -2442,3 +2442,6 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
 
 /* Hochformat-Bild (z. B. Broschuere) nicht ueber die ganze Spalte ziehen */
 .shot--portrait { max-width: 16rem; margin-inline: auto; }
+
+/* Vier Karten immer als 2 x 2, nie 3 + 1 */
+@media (min-width: 641px) { .grid.grid--pairs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

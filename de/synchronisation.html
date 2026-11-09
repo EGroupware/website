@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Synchronisation von Daten wie Dateien, Aufgaben und Kontakten</title>
-  <meta name="description" content="Synchronisieren Sie Daten wie Kalender, Kontakte, Aufgaben, E-Mails oder Dateien, so dass Sie jederzeit gesicherten Zugriff darauf haben.">
+  <title>Synchronisation mit EGroupware: iPhone, Android, Outlook und Thunderbird</title>
+  <meta name="description" content="Kalender, Kontakte, Aufgaben, E-Mails und Dateien synchronisieren: über CalDAV, CardDAV, WebDAV und IMAP, zusätzlich über das ActiveSync-Protokoll – mit iPhone, Android, Outlook und Thunderbird.">
   <link rel="canonical" href="https://www.egroupware.org/de/synchronisation">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/synchronisation">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/synchronisation">
@@ -13,19 +13,22 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Synchronisation von Daten wie Dateien, Aufgaben und Kontakten">
-  <meta property="og:description" content="Synchronisieren Sie Daten wie Kalender, Kontakte, Aufgaben, E-Mails oder Dateien, so dass Sie jederzeit gesicherten Zugriff darauf haben.">
+  <meta property="og:title" content="Synchronisation mit EGroupware: iPhone, Android, Outlook und Thunderbird">
+  <meta property="og:description" content="Kalender, Kontakte, Aufgaben, E-Mails und Dateien synchronisieren: über CalDAV, CardDAV, WebDAV und IMAP, zusätzlich über das ActiveSync-Protokoll – mit iPhone, Android, Outlook und Thunderbird.">
   <meta property="og:url" content="https://www.egroupware.org/de/synchronisation">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="../assets/css/style.css?v=20261109i" as="style">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261109i">
+  <link rel="preload" href="../assets/css/style.css?v=20261109j" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261109j">
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/synchronisation#webpage","url":"https://www.egroupware.org/de/synchronisation","name":"Synchronisation mit EGroupware: iPhone, Android, Outlook und Thunderbird","description":"Kalender, Kontakte, Aufgaben, E-Mails und Dateien synchronisieren: über CalDAV, CardDAV, WebDAV und IMAP, zusätzlich über das ActiveSync-Protokoll – mit iPhone, Android, Outlook und Thunderbird.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/synchronisation#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/synchronisation#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/synchronisation#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"Synchronisation","item":"https://www.egroupware.org/de/synchronisation"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/synchronisation#faq","mainEntity":[{"@type":"Question","name":"Brauche ich eine eigene EGroupware-App?","acceptedAnswer":{"@type":"Answer","text":"Nein. Kalender und Kontakte synchronisieren Sie mit den Programmen, die auf Ihrem Gerät schon vorhanden sind, unter Android mit DAVx⁵. Alles Weitere nutzen Sie im Browser."}},{"@type":"Question","name":"Funktioniert das neue Outlook?","acceptedAnswer":{"@type":"Answer","text":"Der CalDAV Synchronizer ist eine Erweiterung für das klassische Outlook für Windows. Das neue Outlook unterstützt solche Erweiterungen nicht. Als Alternative empfehlen wir Thunderbird oder eM Client."}},{"@type":"Question","name":"Welche Daten werden synchronisiert?","acceptedAnswer":{"@type":"Answer","text":"Kalender und Aufgaben per CalDAV, Kontakte per CardDAV, E-Mails per IMAP und Dateien per WebDAV. Welche Kalender und Adressbücher auf ein Gerät kommen, wählen Sie in den Einstellungen von EGroupware."}}]}]}
   </script>
 </head>
 <body>
@@ -61,7 +64,7 @@
                     aria-label="Tarife – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub">
-          <div class="nav-sub__col"><ul><li><a href="preise"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#tag"/></svg></span><span>Tarife</span></a></li><li><a href="cloud-oder-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#compare"/></svg></span><span>Cloud oder eigener Server?</span></a></li><li><a href="cloud-dienst"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#cloud-check"/></svg></span><span>EGroupware Cloud</span></a></li><li><a href="installation-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#server"/></svg></span><span>EGroupware auf eigenem Server</span></a></li><li><a href="testversion"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#clock"/></svg></span><span>Test&shy;version</span></a></li><li><a href="demo"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#monitor"/></svg></span><span>Online Demo</span></a></li></ul></div>
+          <div class="nav-sub__col"><ul><li><a href="preise"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#tag"/></svg></span><span>Tarife</span></a></li><li><a href="cloud-oder-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#compare"/></svg></span><span>Cloud oder eigener Server?</span></a></li><li><a href="cloud-dienst"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#cloud-check"/></svg></span><span>EGroupware Cloud</span></a></li><li><a href="installation-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#server"/></svg></span><span>EGroupware auf eigenem Server</span></a></li><li><a href="testversion"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#clock"/></svg></span><span>Test&shy;version</span></a></li><li><a href="demo"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#monitor"/></svg></span><span>Online Demo</span></a></li></ul></div>
         </div>
         </li>
         <li class="nav-has-sub">
@@ -71,8 +74,8 @@
                     aria-label="Branchen – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub nav-sub--wide">
-          <div class="nav-sub__col"><p class="nav-sub__head">Lösungen</p><ul><li><a href="branchen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#building"/></svg></span><span>Branchen</span></a></li><li><a href="bildungseinrichtungen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#cap"/></svg></span><span>Bildungs&shy;einrichtungen</span></a></li></ul></div>
-          <div class="nav-sub__col"><p class="nav-sub__head">Im Vergleich zu</p><ul><li><a href="alternativen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#compare"/></svg></span><span>Microsoft 365 &amp; Google</span></a></li><li><a href="exchange-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#mail"/></svg></span><span>Exchange</span></a></li><li><a href="dropbox-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#folder"/></svg></span><span>Dropbox</span></a></li><li><a href="owncloud-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#cloud"/></svg></span><span>ownCloud</span></a></li><li><a href="google-kalender-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#calendar"/></svg></span><span>Google Kalender</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Lösungen</p><ul><li><a href="branchen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#building"/></svg></span><span>Branchen</span></a></li><li><a href="bildungseinrichtungen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#cap"/></svg></span><span>Bildungs&shy;einrichtungen</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Im Vergleich zu</p><ul><li><a href="alternativen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#compare"/></svg></span><span>Microsoft 365 &amp; Google</span></a></li><li><a href="exchange-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#mail"/></svg></span><span>Exchange</span></a></li><li><a href="dropbox-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#folder"/></svg></span><span>Dropbox</span></a></li><li><a href="owncloud-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#cloud"/></svg></span><span>ownCloud</span></a></li><li><a href="google-kalender-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#calendar"/></svg></span><span>Google Kalender</span></a></li></ul></div>
         </div>
         </li>
         <li class="nav-has-sub">
@@ -82,8 +85,8 @@
                     aria-label="Über uns – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub nav-sub--wide">
-          <div class="nav-sub__col"><p class="nav-sub__head">Unter&shy;nehmen</p><ul><li><a href="ueber-uns"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#info"/></svg></span><span>Über uns</span></a></li><li><a href="kundenstimmen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#quote"/></svg></span><span>Kunden&shy;stimmen</span></a></li><li><a href="warum-egroupware"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#check"/></svg></span><span>Warum EGroupware?</span></a></li><li><a href="digitale-souveraenitaet"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#shield"/></svg></span><span>Digitale Souveränität</span></a></li><li><a href="presse"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#news"/></svg></span><span>Presse</span></a></li></ul></div>
-          <div class="nav-sub__col"><p class="nav-sub__head">Partner &amp; Community</p><ul><li><a href="community"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#users"/></svg></span><span>Community</span></a></li><li><a href="technologiepartner"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#chip"/></svg></span><span>Technologie- und Integrations&shy;partner</span></a></li><li><a href="reseller"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#store"/></svg></span><span>EGroupware Reseller</span></a></li><li><a href="reseller-werden"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#user-plus"/></svg></span><span>Reseller werden</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Unter&shy;nehmen</p><ul><li><a href="ueber-uns"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#info"/></svg></span><span>Über uns</span></a></li><li><a href="kundenstimmen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#quote"/></svg></span><span>Kunden&shy;stimmen</span></a></li><li><a href="warum-egroupware"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#check"/></svg></span><span>Warum EGroupware?</span></a></li><li><a href="digitale-souveraenitaet"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#shield"/></svg></span><span>Digitale Souveränität</span></a></li><li><a href="presse"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#news"/></svg></span><span>Presse</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Partner &amp; Community</p><ul><li><a href="community"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#users"/></svg></span><span>Community</span></a></li><li><a href="technologiepartner"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#chip"/></svg></span><span>Technologie- und Integrations&shy;partner</span></a></li><li><a href="reseller"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#store"/></svg></span><span>EGroupware Reseller</span></a></li><li><a href="reseller-werden"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#user-plus"/></svg></span><span>Reseller werden</span></a></li></ul></div>
         </div>
         </li>
         <li class="nav-has-sub">
@@ -93,8 +96,8 @@
                     aria-label="Support – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub nav-sub--wide">
-          <div class="nav-sub__col"><p class="nav-sub__head">Hilfe &amp; Service</p><ul><li><a href="support"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#lifebuoy"/></svg></span><span>Support</span></a></li><li><a href="support-login"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#login"/></svg></span><span>Support Login</span></a></li><li><a href="status"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#pulse"/></svg></span><span>EGroupware Cloud Status</span></a></li><li><a href="sicherheit-datenschutz"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#lock"/></svg></span><span>Sicherheit und Daten&shy;schutz</span></a></li><li><a href="datensicherung"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#backup"/></svg></span><span>Daten&shy;sicherung</span></a></li></ul></div>
-          <div class="nav-sub__col"><p class="nav-sub__head">Selbst betreiben</p><ul><li><a href="download"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#download"/></svg></span><span>Download</span></a></li><li><a href="https://github.com/EGroupware/egroupware/wiki/Installation-using-egroupware-docker-RPM-DEB-package" target="_blank" rel="noopener"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#terminal"/></svg></span><span>Installations&shy;anleitung</span></a></li><li><a href="tutorials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#play"/></svg></span><span>Webinare und Tutorials</span></a></li><li><a href="caldav-synchronisierer"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109i#sync"/></svg></span><span>Caldav-Synchronisierer</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Hilfe &amp; Service</p><ul><li><a href="support"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#lifebuoy"/></svg></span><span>Support</span></a></li><li><a href="support-login"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#login"/></svg></span><span>Support Login</span></a></li><li><a href="status"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#pulse"/></svg></span><span>EGroupware Cloud Status</span></a></li><li><a href="sicherheit-datenschutz"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#lock"/></svg></span><span>Sicherheit und Daten&shy;schutz</span></a></li><li><a href="datensicherung"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#backup"/></svg></span><span>Daten&shy;sicherung</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Selbst betreiben</p><ul><li><a href="download"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#download"/></svg></span><span>Download</span></a></li><li><a href="https://github.com/EGroupware/egroupware/wiki/Installation-using-egroupware-docker-RPM-DEB-package" target="_blank" rel="noopener"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#terminal"/></svg></span><span>Installations&shy;anleitung</span></a></li><li><a href="tutorials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#play"/></svg></span><span>Webinare und Tutorials</span></a></li><li><a href="caldav-synchronisierer"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#sync"/></svg></span><span>Caldav-Synchronisierer</span></a></li></ul></div>
         </div>
         </li>
         <li><a href="blog">News</a></li>
@@ -123,121 +126,151 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/synchronisation):
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
-    <section class="page-hero page-hero--split">
-      <div class="wrap page-hero__grid">
-        <div>
-        <span class="eyebrow">Synchronisation</span>
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
         <h1>Synchronisation</h1>
-        <p class="lead">Synchronisieren sie wichtige Daten wie Kalender, Kontakte, Aufgaben, E-&#8288;Mails oder Dateien, so dass Sie jederzeit sicher auf Ihre Daten zugreifen können - auch wenn keine Internet&shy;verbindung zur Verfügung steht. Test Version 30 Tage gratis …</p>
+        <p class="lead">Kalender, Kontakte, Aufgaben, E-&#8288;Mails und Dateien gleichen Sie mit Smart&shy;phone, Tablet und den Programmen auf Ihrem Rechner ab – über offene Standards wie CalDAV, CardDAV, WebDAV und IMAP, zusätzlich über das ActiveSync-Protokoll. So haben Sie Ihre Daten auch ohne Internet&shy;verbindung dabei.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage gratis testen</a>
+          <a class="btn btn--ghost btn--lg" href="tutorials">Anleitungen ansehen</a>
         </div>
-        <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/business-mobilphone.webp" alt="Synchronisation" width="1200" height="800" fetchpriority="high" decoding="async"></figure>
-        </div>
+        <ul class="trust-bar"><li><strong>Offene Standards</strong><span>CalDAV, CardDAV, WebDAV, IMAP</span></li><li><strong>Jedes Gerät</strong><span>iPhone, Android, Mac, Windows, Linux</span></li><li><strong>Auch offline</strong><span>Daten liegen auf dem Gerät</span></li><li><strong>Eigene Zugänge</strong><span>Anwendungs&shy;passwörter statt Passwort</span></li></ul>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>Synchronisation</span></div></nav>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Synchronisation - Immer aktuell. Immer geschützt.</h2>
-          <p>Synchronisieren sie wichtige Daten wie Kalender, Kontakte, Aufgaben, E-&#8288;Mails oder Dateien, so dass Sie jederzeit sicher auf Ihre Daten zugreifen können - auch wenn keine Internet&shy;verbindung zur Verfügung steht. Test Version 30 Tage gratis testen</p>
-          
-          <div class="link-list mt-3"><a href="testversion">Test Version</a></div>
+        <article class="app-highlight app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--info">BESONDERS</span><small>Offene Standards zuerst</small></div>
+            <h2>Keine Spezial-&#8288;App, keine Abhängigkeit</h2>
+            <p>Kalender und Kontakte synchronisiert EGroupware über CalDAV und CardDAV. Diese offenen Standards sprechen iPhone, iPad und Mac von Haus aus, ebenso Thunderbird und eM Client. Für Android gibt es die Open-Source-&#8288;App DAVx⁵. Sie richten nichts ein, was Sie an EGroupware bindet – und können Ihre Geräte genauso mit anderen Diensten verbinden.</p>
+            <p class="mt-3"><a class="link-arrow" href="neuigkeiten/smart-collaboration-egroupware-und-managed-davx5-steigern-die-produktivitaet-der-stadtverwaltung-jena">Praxis&shy;beispiel: Stadt&shy;verwaltung Jena mit Managed DAVx⁵</a></p>
+          </div>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Vorteile der Synchronisation</h2>
-          <p>Bei der Synchronisation werden die Daten aus Kalender, Kontakten oder Aufgaben kopiert und auf das entsprechende Zielgerät über&shy;tragen. Diese Kopie wird dann ständig mit dem Organal abgeglichen und Veränderungen entsprechend synchronisiert.</p>
-          
-          
-        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Geräte und Programme</span>
+          <h2>So verbinden Sie Ihre Geräte</h2>
+          <p>Meist genügen die Adresse Ihrer EGroupware, Ihr Benutzer&shy;name und ein Passwort. Welche Kalender und Adressbücher abgeglichen werden, legen Sie in den Einstellungen fest.</p>
+        </div>
+        <div class="grid grid-2 grid--pairs">
+          <article class="card reveal card--link">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#monitor"/></svg></span>
+            <h3><a href="tutorials/synchronisation-apple">iPhone, iPad und Mac</a></h3>
+            <p>Die mitgelieferten Apps Kalender, Erinnerungen und Kontakte sprechen CalDAV und CardDAV direkt – auf dem Mac genauso wie auf iPhone und iPad, dazu Apple Mail per IMAP. Sie tragen Ihr EGroupware-Konto einmal in den Einstellungen ein, eine zusätzliche App brauchen Sie nicht.</p>
+          </article>
+          <article class="card reveal card--link">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#sync"/></svg></span>
+            <h3><a href="tutorials/synchronisation-android">Android mit DAVx⁵</a></h3>
+            <p>Android unterstützt CalDAV und CardDAV nicht von Haus aus. Wir empfehlen DAVx⁵ von bitfire, erhältlich im Google Play Store (kostenpflichtig) oder kostenlos über F-&#8288;Droid. Für Organisationen gibt es Managed DAVx⁵ mit zentral verteilten Einstellungen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#calendar"/></svg></span>
+            <h3>Thunderbird und eM Client</h3>
+            <p>Beide Programme sprechen CalDAV, CardDAV und IMAP nativ – unsere Empfehlung für den Desktop unter Windows, macOS und Linux.</p>
+          </article>
+          <article class="card reveal card--link">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#mail"/></svg></span>
+            <h3><a href="caldav-synchronisierer">Outlook</a></h3>
+            <p>Mit dem CalDAV Synchronizer gleichen Sie Kalender und Adressbuch zwischen EGroupware und dem klassischen Outlook für Windows in beide Richtungen ab.</p>
+          </article>
         </div>
       </div>
     </section>
+
     <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Online Zugriff für Smart&shy;phones bzw. Tablets</h2>
-          <p class="mt-2">Zusätzlich zu der Synchronisation gibt es auch die Möglichkeit mit dem mobilen Template für Smart&shy;phones oder Tablets direkt auf die EGroupware Daten in Echtzeit zugreifen. Die Handhabung ist auf die Mobilegräte abgestimmt und Sie haben mehr Möglichkeiten als bei der reinen Synchronisation. Eine Einrichtung für den mobilen Zugriff ist nicht nötig.</p>
-          
-          <div class="link-list mt-3"><a href="mobiler-zugang">mobilen Template</a></div>
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/synchronisation.webp" alt="Online Zugriff für Smartphones bzw. Tablets" width="1200" height="675" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section">
       <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Weitere Wege</span>
+          <h2>E-&#8288;Mail, Dateien und das ActiveSync-Protokoll</h2>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Welche Methoden werden unterstützt?</h2>
-          <p>EGroupware bietet verschiedene Protokolle zur Synchronisation. Dabei können Sie je nach Gerät und Client, die für Sie passende Synchronisation wählen. Für den Kalender empfehlen wir CalDAV und für Adressen das CardDAV Protokoll. Die gängigen Smart&shy;phones und Desktop-Clients unterstützen dieses Protokoll. Zusätzlich ist eine Synchronisation per eSync möglich, die auf dem ActiveSync-Protokoll basiert. Fall&shy;studie: EGroupware und Managed DAVx⁵ in der Stadt&shy;verwaltung Jena.</p>
-          
-          <div class="link-list mt-3"><a href="tutorials/synchronisation-apple">CalDAV</a><a href="tutorials/synchronisation-apple">CardDAV</a><a href="https://www.egroupware.org/de/neuigkeiten/smart-collaboration-egroupware-und-managed-davx%e2%81%b5-steigern-die-produktivitaet-der-stadtverwaltung-jena" rel="noopener" target="_blank">EGroupware und Managed DAVx⁵ in der Stadt&shy;verwaltung Jena</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>DAVx5 für Android</h2>
-          <p>Android unterstützt nativ keine Synchronisation per CalDAV / CardDAV, daher wird ein zusätzlicher Client benötigt. Hier empfehlen wir DAVx5 von bitfire web engineering GmbH. Für größere Organisationen gibt es auch eine Managed DAVx5 Version mit der auch Smart&shy;phone Policies umgesetzt werden können, gerne erstellen wir oder Bitfire hierfür ein Angebot. Eine kosten&shy;frei Version von DAVx5 kann über F-&#8288;Droid herunter&shy;geladen werden.</p>
-          
-          <div class="link-list mt-3"><a href="https://play.google.com/store/apps/details?id=at.bitfire.davdroid&amp;amp;hl=de&amp;amp;gl=US" rel="noopener" target="_blank">Android</a><a href="https://www.davx5.com/" rel="noopener" target="_blank">DAVx5</a><a href="https://www.davx5.com/organizations/managed-davx5" rel="noopener" target="_blank">Managed DAVx5 Version</a><a href="https://f-droid.org/de/packages/at.bitfire.davdroid/" rel="noopener" target="_blank">F-&#8288;Droid</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Desktop Clients an EGroupware anbinden</h2>
-          <p>Über CalDAV / CardDAV können alle gängigen Desktop Clients wie Thunderbird, EM-&#8288;Client oder MAC Clients mit EGroupware synchronisiert werden. Dabei benötigen Sie in der Regel nur Ihre EGroupware Anmeldeadresse, Ihren Benutzer&shy;namen und das Passwort. In den EGroupware Einstellungen legen Sie fest, welche Daten synchronisiert werden sollen.</p>
-          
-          
-        </article>
+          <article class="card reveal card--link">
+            <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/mail.svg" alt="" width="26" height="26" loading="lazy"></span>
+            <h3><a href="email">E-&#8288;Mail per IMAP</a></h3>
+            <p>Ihre Postfächer nutzen Sie mit jedem E-&#8288;Mail-Programm über IMAP, gesendet wird per SMTP. Ordner und gelesene Nach&shy;richten bleiben überall gleich.</p>
+          </article>
+          <article class="card reveal card--link">
+            <span class="icon-badge icon-badge--app"><img src="../assets/img/icons/filemanager.svg" alt="" width="26" height="26" loading="lazy"></span>
+            <h3><a href="dateiverwaltung">Dateien als Laufwerk</a></h3>
+            <p>Per WebDAV binden Sie den EGroupware-Datei&shy;manager als Laufwerk unter Windows, macOS oder Linux ein und arbeiten wie mit einem lokalen Ordner.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#sync"/></svg></span>
+            <h3>Das ActiveSync-Protokoll</h3>
+            <p>Für Geräte und Programme ohne CalDAV stellt EGroupware das ActiveSync-Protokoll über die Open-Source-Software Z-&#8288;Push bereit (eSync). Mit einer einzigen Einrichtung gleichen Sie E-&#8288;Mail, Adressbuch, Kalender und auf Wunsch Aufgaben ab. In der Enterprise Line verwalten Sie zusätzlich Profile für die Geräte.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>Outlook Synchronisieren</h2>
-          <p class="mt-2">Mit dem CalDAV-Synchronizer können Sie wechselseitig Daten aus Adressbuch und Kalender zwischen EGroupware und gängigen Outlook-Versionen synchronisieren. Unterstützte Outlook-Versionen sind 2019, 2016 und 2013. Der CalDAV-Synchronizer erleichtert EGroupware-Anwendern den Austausch mit Outlook und die Verwaltung Ihrer Informationen.</p>
-          
-          <div class="link-list mt-3"><a href="caldav-synchronisierer">CalDAV-Synchronizer</a></div>
+          <span class="eyebrow">Unterwegs</span>
+          <h2>Oder einfach im Browser</h2>
+          <p class="mt-2">Seit EGroupware 26.2 passt sich die Oberfläche jedem Bildschirm an. Auf Smart&shy;phone und Tablet arbeiten Sie im Browser mit allen Anwendungen und Daten in Echtzeit – auch mit Helpdesk, Projekten und Zeit&shy;erfassung, die eine Synchronisation nicht überträgt.</p>
+          <p class="mt-3"><a class="link-arrow" href="mobiler-zugang">Mehr zum mobilen Zugang</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/caldav-outlook-sync-04.webp" alt="Outlook Synchronisieren" width="1200" height="848" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Tipp</strong><span class="st-badge st-badge--info">SICHERHEIT</span></div>
+          <p>Richten Sie für jedes Gerät ein eigenes Anwendungs&shy;passwort ein, statt Ihr Anmeldepasswort zu hinter&shy;legen. Geht ein Smart&shy;phone verloren, widerrufen Sie nur dieses eine Token.</p>
+          <p class="mt-2"><a class="link-arrow" href="sicherheit-datenschutz">Mehr zu Sicherheit und Daten&shy;schutz</a></p>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Online File-Server</h2>
-          <p class="mt-2">Ihr gesamtes Team greift unkompliziert per Browser auf den EGroupware Datei&shy;manager zu - Sie sehen stets die selben, aktuellen Dokumente und Ordner. Alternativ dazu verbinden Sie per WebDAV Ihren Windows-, Mac- oder Linux-Desktop als EGroupware Laufwerk – so einfach und sicher, als würden Sie auf Ihre Festplatte zugreifen.</p>
-          
-          <div class="link-list mt-3"><a href="dateiverwaltung">Datei&shy;manager</a></div>
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zur Synchronisation</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Brauche ich eine eigene EGroupware-&#8288;App?</summary>
+            <div class="faq-body"><p>Nein. Kalender und Kontakte synchronisieren Sie mit den Programmen, die auf Ihrem Gerät schon vorhanden sind, unter Android mit DAVx⁵. Alles Weitere nutzen Sie im Browser.</p></div>
+          </details>
+          <details>
+            <summary>Funktioniert das neue Outlook?</summary>
+            <div class="faq-body"><p>Der CalDAV Synchronizer ist eine Erweiterung für das klassische Outlook für Windows. Das neue Outlook unterstützt solche Erweiterungen nicht. Als Alternative empfehlen wir Thunderbird oder eM Client.</p></div>
+          </details>
+          <details>
+            <summary>Welche Daten werden synchronisiert?</summary>
+            <div class="faq-body"><p>Kalender und Aufgaben per CalDAV, Kontakte per CardDAV, E-&#8288;Mails per IMAP und Dateien per WebDAV. Welche Kalender und Adressbücher auf ein Gerät kommen, wählen Sie in den Einstellungen von EGroupware.</p></div>
+          </details>
         </div>
       </div>
     </section>
+
     <section class="section">
-      <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="email">E-&#8288;Mail Modul</a></li><li><a href="cti-telefon-integration">CTI Telefon-Integration</a></li><li><a href="homeoffice-integration">Home&shy;office Integration</a></li><li><a href="mobiler-zugang">Mobiler Zugang</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Weiter&shy;lesen</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#monitor"/></svg></span><div><h3><a href="mobiler-zugang">Mobiler Zugang</a></h3><p>EGroupware im Browser auf Smart&shy;phone und Tablet.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#mail"/></svg></span><div><h3><a href="caldav-synchronisierer">CalDAV Synchronizer</a></h3><p>Outlook mit EGroupware abgleichen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/filemanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="dateiverwaltung">Datei&shy;manager</a></h3><p>Dateien teilen, versionieren, als Laufwerk nutzen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#play"/></svg></span><div><h3><a href="tutorials">Tutorials</a></h3><p>Anleitungen zur Einrichtung Schritt für Schritt.</p></div></article>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
           <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
-          <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
+          <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Geräte verbinden, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage gratis testen</a>
+            <a class="btn btn--light btn--lg" href="kontakt">Demo vereinbaren</a>
           </div>
         </div>
       </div>
@@ -284,10 +317,10 @@
       </div>
       <div class="footer-bottom">
         <p>© <span data-year>2026</span> EGroupware GmbH. Alle Rechte vorbehalten.</p>
-        <nav class="footer-social" aria-label="Social Media"><a href="https://de.linkedin.com/company/egroupware-gmbh" target="_blank" rel="noopener" aria-label="EGroupware bei LinkedIn"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109i#linkedin"/></svg></a><a href="https://fosstodon.org/@EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Mastodon"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109i#mastodon"/></svg></a><a href="https://bsky.app/profile/egroupware.org" target="_blank" rel="noopener" aria-label="EGroupware bei Bluesky"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109i#bluesky"/></svg></a><a href="https://www.youtube.com/user/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei YouTube"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109i#youtube"/></svg></a><a href="https://www.facebook.com/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Facebook"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109i#facebook"/></svg></a><a href="https://github.com/EGroupware/egroupware" target="_blank" rel="noopener" aria-label="EGroupware bei GitHub"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109i#github"/></svg></a><a href="https://help.egroupware.org/" target="_blank" rel="noopener" aria-label="EGroupware Community-Forum"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109i#egroupware"/></svg></a></nav>
+        <nav class="footer-social" aria-label="Social Media"><a href="https://de.linkedin.com/company/egroupware-gmbh" target="_blank" rel="noopener" aria-label="EGroupware bei LinkedIn"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#linkedin"/></svg></a><a href="https://fosstodon.org/@EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Mastodon"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#mastodon"/></svg></a><a href="https://bsky.app/profile/egroupware.org" target="_blank" rel="noopener" aria-label="EGroupware bei Bluesky"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#bluesky"/></svg></a><a href="https://www.youtube.com/user/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei YouTube"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#youtube"/></svg></a><a href="https://www.facebook.com/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Facebook"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#facebook"/></svg></a><a href="https://github.com/EGroupware/egroupware" target="_blank" rel="noopener" aria-label="EGroupware bei GitHub"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#github"/></svg></a><a href="https://help.egroupware.org/" target="_blank" rel="noopener" aria-label="EGroupware Community-Forum"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#egroupware"/></svg></a></nav>
       </div>
     </div>
   </footer>
-  <script src="../assets/js/main.js?v=20261109i" defer></script>
+  <script src="../assets/js/main.js?v=20261109j" defer></script>
 </body>
 </html>
