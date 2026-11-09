@@ -2418,3 +2418,15 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
 @media (min-width: 761px) {
   .check-list--2col { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; }
 }
+
+/* News: Newsletter-Anmeldung im Kopfbereich, aufklappbar */
+.nl-signup { max-width: 40rem; }
+.nl-signup > summary { list-style: none; cursor: pointer; display: inline-flex; gap: .5rem; align-items: center; }
+.nl-signup > summary::-webkit-details-marker { display: none; }
+.nl-signup > summary::after { content: "+"; font-weight: 700; transition: transform .2s; }
+.nl-signup[open] > summary::after { transform: rotate(45deg); }
+.nl-signup__body {
+  margin-top: 1rem; padding: clamp(1rem, 2.5vw, 1.5rem); background: var(--card-bg);
+  border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+}
+.nl-signup__body > p { margin: 0 0 1rem; font-size: var(--fs-sm); color: var(--text-soft); }
