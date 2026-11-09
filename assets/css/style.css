@@ -2448,3 +2448,9 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
 
 /* Wichtiger Hinweis im Kopfbereich (Warnfarbe statt NEU-Gruen) */
 .card-new--warn { background: var(--st-warn-bg); border-left-color: var(--st-warn-bar); max-width: 46rem; }
+
+/* Haekchenliste ohne Raster: Text, Links und Hervorhebungen fliessen in einer
+   Zeile weiter, statt einzeln in die schmale Haekchen-Spalte zu rutschen. */
+.check-list li { display: block; position: relative; padding-left: calc(20px + .7rem); }
+.check-list li::before { position: absolute; left: 0; top: 0; }
+.feature .check-list li { padding-left: calc(20px + .5rem); }
