@@ -2375,3 +2375,17 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
   background: var(--st-ok-bg); border-left: 3px solid var(--st-ok); border-radius: 0 var(--r-sm) var(--r-sm) 0;
 }
 .card-new .st-badge { margin-right: .35rem; padding: .15rem .4rem; font-size: .65rem; vertical-align: .1em; background: transparent; border-color: var(--st-ok); }
+
+/* Faktencheck in voller Breite: ab 900px steht der Fakt links und
+   "So hilft EGroupware" rechts, die Annahme laeuft ueber beide Spalten.
+   So bleibt die Zeilenlaenge lesbar, obwohl die Karten breit sind. */
+@media (min-width: 900px) {
+  .fc-card__body { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: .9rem 1.5rem; }
+  .fc-claim { grid-column: 1 / -1; }
+  .fc-help { padding: .85rem 0 0; }
+}
+
+/* Frage-Antwort-Liste (Checkliste): feste, gleich breite Spalten,
+   damit lange Fragen die Antwortspalte nicht zusammendruecken. */
+.facts--qa .fact { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+@media (max-width: 420px) { .facts--qa .fact { grid-template-columns: 1fr; } }
