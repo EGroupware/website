@@ -2430,3 +2430,7 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
   border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
 }
 .nl-signup__body > p { margin: 0 0 1rem; font-size: var(--fs-sm); color: var(--text-soft); }
+
+/* Testversion: Formular als Raster (Abstaende), Domain-Auswahl nicht abschneiden */
+.trial-form { display: grid; }
+.trial-form__instanz select { flex: 0 0 11.5rem; }
