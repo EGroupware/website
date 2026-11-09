@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Caldav-Synchronisierer – EGroupware</title>
-  <meta name="description" content="Mit dem CalDAV-Synchronizer können Sie wechselseitig Daten aus Adressbuch und Kalender zwischen EGroupware und gängigen Outlook-Versionen synchronisieren. …">
+  <title>CalDAV Synchronizer: Outlook mit EGroupware synchronisieren</title>
+  <meta name="description" content="Termine, Kontakte und Aufgaben zwischen EGroupware und dem klassischen Outlook für Windows abgleichen – mit dem Open-Source-CalDAV-Synchronizer, auf Wunsch mit Entwickler-Support.">
   <link rel="canonical" href="https://www.egroupware.org/de/caldav-synchronisierer">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/caldav-synchronisierer">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/caldav-synchronizer">
@@ -13,19 +13,22 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Caldav-Synchronisierer – EGroupware">
-  <meta property="og:description" content="Mit dem CalDAV-Synchronizer können Sie wechselseitig Daten aus Adressbuch und Kalender zwischen EGroupware und gängigen Outlook-Versionen synchronisieren. …">
+  <meta property="og:title" content="CalDAV Synchronizer: Outlook mit EGroupware synchronisieren">
+  <meta property="og:description" content="Termine, Kontakte und Aufgaben zwischen EGroupware und dem klassischen Outlook für Windows abgleichen – mit dem Open-Source-CalDAV-Synchronizer, auf Wunsch mit Entwickler-Support.">
   <meta property="og:url" content="https://www.egroupware.org/de/caldav-synchronisierer">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="../assets/css/style.css?v=20261109j" as="style">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261109j">
+  <link rel="preload" href="../assets/css/style.css?v=20261109k" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261109k">
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/caldav-synchronisierer#webpage","url":"https://www.egroupware.org/de/caldav-synchronisierer","name":"CalDAV Synchronizer: Outlook mit EGroupware synchronisieren","description":"Termine, Kontakte und Aufgaben zwischen EGroupware und dem klassischen Outlook für Windows abgleichen – mit dem Open-Source-CalDAV-Synchronizer, auf Wunsch mit Entwickler-Support.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/caldav-synchronisierer#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/caldav-synchronisierer#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/caldav-synchronisierer#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Synchronisation","item":"https://www.egroupware.org/de/synchronisation"},{"@type":"ListItem","position":3,"name":"CalDAV Synchronizer für Outlook","item":"https://www.egroupware.org/de/caldav-synchronisierer"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/caldav-synchronisierer#faq","mainEntity":[{"@type":"Question","name":"Welche Outlook-Versionen werden unterstützt?","acceptedAnswer":{"@type":"Answer","text":"Laut Projekt das klassische Outlook für Windows in den Versionen 2010 bis 2021. Mit Microsoft 365 (Office 365) und dem neuen Outlook funktioniert der CalDAV Synchronizer nicht."}},{"@type":"Question","name":"Bekomme ich Unterstützung bei der Einrichtung?","acceptedAnswer":{"@type":"Answer","text":"Ja. Der CalDAV Synchronizer verbindet sich über CalDAV und CardDAV mit EGroupware – also über die offenen Standards, die EGroupware selbst unterstützt. Auf Basis eines Support-Kontingents unterstützen wir Sie bei der Einrichtung und bei der Analyse von Fehlern."}},{"@type":"Question","name":"Gibt es Alternativen zu Outlook?","acceptedAnswer":{"@type":"Answer","text":"Ja. Thunderbird und eM Client sprechen die offenen Standards CalDAV, CardDAV und IMAP direkt und brauchen keine Erweiterung. Und im Browser nutzen Sie EGroupware ohnehin mit allen Anwendungen."}}]}]}
   </script>
 </head>
 <body>
@@ -61,7 +64,7 @@
                     aria-label="Tarife – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub">
-          <div class="nav-sub__col"><ul><li><a href="preise"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#tag"/></svg></span><span>Tarife</span></a></li><li><a href="cloud-oder-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#compare"/></svg></span><span>Cloud oder eigener Server?</span></a></li><li><a href="cloud-dienst"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#cloud-check"/></svg></span><span>EGroupware Cloud</span></a></li><li><a href="installation-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#server"/></svg></span><span>EGroupware auf eigenem Server</span></a></li><li><a href="testversion"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#clock"/></svg></span><span>Test&shy;version</span></a></li><li><a href="demo"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#monitor"/></svg></span><span>Online Demo</span></a></li></ul></div>
+          <div class="nav-sub__col"><ul><li><a href="preise"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#tag"/></svg></span><span>Tarife</span></a></li><li><a href="cloud-oder-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#compare"/></svg></span><span>Cloud oder eigener Server?</span></a></li><li><a href="cloud-dienst"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#cloud-check"/></svg></span><span>EGroupware Cloud</span></a></li><li><a href="installation-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#server"/></svg></span><span>EGroupware auf eigenem Server</span></a></li><li><a href="testversion"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#clock"/></svg></span><span>Test&shy;version</span></a></li><li><a href="demo"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#monitor"/></svg></span><span>Online Demo</span></a></li></ul></div>
         </div>
         </li>
         <li class="nav-has-sub">
@@ -71,8 +74,8 @@
                     aria-label="Branchen – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub nav-sub--wide">
-          <div class="nav-sub__col"><p class="nav-sub__head">Lösungen</p><ul><li><a href="branchen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#building"/></svg></span><span>Branchen</span></a></li><li><a href="bildungseinrichtungen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#cap"/></svg></span><span>Bildungs&shy;einrichtungen</span></a></li></ul></div>
-          <div class="nav-sub__col"><p class="nav-sub__head">Im Vergleich zu</p><ul><li><a href="alternativen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#compare"/></svg></span><span>Microsoft 365 &amp; Google</span></a></li><li><a href="exchange-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#mail"/></svg></span><span>Exchange</span></a></li><li><a href="dropbox-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#folder"/></svg></span><span>Dropbox</span></a></li><li><a href="owncloud-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#cloud"/></svg></span><span>ownCloud</span></a></li><li><a href="google-kalender-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#calendar"/></svg></span><span>Google Kalender</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Lösungen</p><ul><li><a href="branchen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#building"/></svg></span><span>Branchen</span></a></li><li><a href="bildungseinrichtungen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#cap"/></svg></span><span>Bildungs&shy;einrichtungen</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Im Vergleich zu</p><ul><li><a href="alternativen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#compare"/></svg></span><span>Microsoft 365 &amp; Google</span></a></li><li><a href="exchange-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#mail"/></svg></span><span>Exchange</span></a></li><li><a href="dropbox-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#folder"/></svg></span><span>Dropbox</span></a></li><li><a href="owncloud-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#cloud"/></svg></span><span>ownCloud</span></a></li><li><a href="google-kalender-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#calendar"/></svg></span><span>Google Kalender</span></a></li></ul></div>
         </div>
         </li>
         <li class="nav-has-sub">
@@ -82,8 +85,8 @@
                     aria-label="Über uns – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub nav-sub--wide">
-          <div class="nav-sub__col"><p class="nav-sub__head">Unter&shy;nehmen</p><ul><li><a href="ueber-uns"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#info"/></svg></span><span>Über uns</span></a></li><li><a href="kundenstimmen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#quote"/></svg></span><span>Kunden&shy;stimmen</span></a></li><li><a href="warum-egroupware"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#check"/></svg></span><span>Warum EGroupware?</span></a></li><li><a href="digitale-souveraenitaet"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#shield"/></svg></span><span>Digitale Souveränität</span></a></li><li><a href="presse"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#news"/></svg></span><span>Presse</span></a></li></ul></div>
-          <div class="nav-sub__col"><p class="nav-sub__head">Partner &amp; Community</p><ul><li><a href="community"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#users"/></svg></span><span>Community</span></a></li><li><a href="technologiepartner"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#chip"/></svg></span><span>Technologie- und Integrations&shy;partner</span></a></li><li><a href="reseller"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#store"/></svg></span><span>EGroupware Reseller</span></a></li><li><a href="reseller-werden"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#user-plus"/></svg></span><span>Reseller werden</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Unter&shy;nehmen</p><ul><li><a href="ueber-uns"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#info"/></svg></span><span>Über uns</span></a></li><li><a href="kundenstimmen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#quote"/></svg></span><span>Kunden&shy;stimmen</span></a></li><li><a href="warum-egroupware"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#check"/></svg></span><span>Warum EGroupware?</span></a></li><li><a href="digitale-souveraenitaet"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#shield"/></svg></span><span>Digitale Souveränität</span></a></li><li><a href="presse"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#news"/></svg></span><span>Presse</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Partner &amp; Community</p><ul><li><a href="community"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#users"/></svg></span><span>Community</span></a></li><li><a href="technologiepartner"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#chip"/></svg></span><span>Technologie- und Integrations&shy;partner</span></a></li><li><a href="reseller"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#store"/></svg></span><span>EGroupware Reseller</span></a></li><li><a href="reseller-werden"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#user-plus"/></svg></span><span>Reseller werden</span></a></li></ul></div>
         </div>
         </li>
         <li class="nav-has-sub">
@@ -93,8 +96,8 @@
                     aria-label="Support – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub nav-sub--wide">
-          <div class="nav-sub__col"><p class="nav-sub__head">Hilfe &amp; Service</p><ul><li><a href="support"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#lifebuoy"/></svg></span><span>Support</span></a></li><li><a href="support-login"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#login"/></svg></span><span>Support Login</span></a></li><li><a href="status"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#pulse"/></svg></span><span>EGroupware Cloud Status</span></a></li><li><a href="sicherheit-datenschutz"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#lock"/></svg></span><span>Sicherheit und Daten&shy;schutz</span></a></li><li><a href="datensicherung"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#backup"/></svg></span><span>Daten&shy;sicherung</span></a></li></ul></div>
-          <div class="nav-sub__col"><p class="nav-sub__head">Selbst betreiben</p><ul><li><a href="download"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#download"/></svg></span><span>Download</span></a></li><li><a href="https://github.com/EGroupware/egroupware/wiki/Installation-using-egroupware-docker-RPM-DEB-package" target="_blank" rel="noopener"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#terminal"/></svg></span><span>Installations&shy;anleitung</span></a></li><li><a href="tutorials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#play"/></svg></span><span>Webinare und Tutorials</span></a></li><li><a href="caldav-synchronisierer" aria-current="page"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109j#sync"/></svg></span><span>Caldav-Synchronisierer</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Hilfe &amp; Service</p><ul><li><a href="support"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#lifebuoy"/></svg></span><span>Support</span></a></li><li><a href="support-login"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#login"/></svg></span><span>Support Login</span></a></li><li><a href="status"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#pulse"/></svg></span><span>EGroupware Cloud Status</span></a></li><li><a href="sicherheit-datenschutz"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#lock"/></svg></span><span>Sicherheit und Daten&shy;schutz</span></a></li><li><a href="datensicherung"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#backup"/></svg></span><span>Daten&shy;sicherung</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Selbst betreiben</p><ul><li><a href="download"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#download"/></svg></span><span>Download</span></a></li><li><a href="https://github.com/EGroupware/egroupware/wiki/Installation-using-egroupware-docker-RPM-DEB-package" target="_blank" rel="noopener"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#terminal"/></svg></span><span>Installations&shy;anleitung</span></a></li><li><a href="tutorials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#play"/></svg></span><span>Webinare und Tutorials</span></a></li><li><a href="caldav-synchronisierer" aria-current="page"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109k#sync"/></svg></span><span>Caldav-Synchronisierer</span></a></li></ul></div>
         </div>
         </li>
         <li><a href="blog">News</a></li>
@@ -123,112 +126,68 @@
     </div>
   </header>
   <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="synchronisation">Synchronisation</a></nav>
+        <h1>CalDAV Synchronizer für Outlook</h1>
+        <p class="lead">Mit dem CalDAV Synchronizer gleichen Sie Termine, Kontakte und Aufgaben zwischen EGroupware und dem klassischen Outlook für Windows in beide Richtungen ab. Die Erweiterung ist Open Source und kostenlos verfügbar.</p>
+        <p class="card-new card-new--warn"><span class="st-badge st-badge--stoerung">WICHTIG</span> Funktioniert nur mit dem klassischen Outlook für Windows – nicht mit Microsoft 365 (Office 365) und nicht mit dem neuen Outlook.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="https://caldavsynchronizer.org/de/" rel="noopener" target="_blank">Zum Projekt</a>
+          <a class="btn btn--ghost btn--lg" href="kontakt">Fragen stellen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Open Source</strong><span>Quellcode auf GitHub</span></li><li><strong>Nur klassisches Outlook</strong><span>Outlook 2010 bis 2021 für Windows</span></li><li><strong>In beide Richtungen</strong><span>Termine, Kontakte, Aufgaben</span></li></ul>
+      </div>
+    </section>
 
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/caldav-synchronisierer):
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-       - Meta-Description selbst formuliert – im Original stand keine.
-    -->
-    <section class="page-hero page-hero--split">
-      <div class="wrap page-hero__grid">
-        <div>
-        <span class="eyebrow">CalDAV-Synchronisierer</span>
-        <h1>Caldav-Synchronisierer</h1>
-        <p class="lead">Mit dem CalDAV-Synchronizer können Sie wechselseitig Daten aus Adressbuch und Kalender zwischen EGroupware und gängigen Outlook-Versionen synchronisieren. Test Version 30 Tage gratis testen</p>
-        </div>
-        <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/caldav-outlook-sync-04.webp" alt="Caldav-Synchronisierer" width="1200" height="848" fetchpriority="high" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
     <section class="section">
-      <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Outlook CalDAV Synchronizer für EGroupware</h2>
-          <p>Mit dem CalDAV-Synchronizer können Sie wechselseitig Daten aus Adressbuch und Kalender zwischen EGroupware und gängigen Outlook-Versionen synchronisieren. Test Version 30 Tage gratis testen</p>
-          
-          <div class="link-list mt-3"><a href="testversion">Test Version</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Vorteile des Outlook CalDAV Synchronizers</h2>
-          <p>Mit dem CalDAV-Synchronizer können Sie wechselseitig Daten aus Adressbuch und Kalender zwischen EGroupware und gängigen Outlook-Versionen synchronisieren. Unterstützte Outlook-Versionen sind 2019, 2016, 2013, 2010 und 2007.</p>
-          
-          
-        </article>
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Funktions&shy;weise</span>
+          <h2>Outlook bleibt, die Daten liegen in EGroupware</h2>
+          <p class="mt-2">Der CalDAV Synchronizer ist eine Erweiterung für Outlook. Er verbindet Outlook über CalDAV und CardDAV mit EGroupware: Termine, Kontakte und Aufgaben, die Sie in Outlook anlegen oder ändern, landen in EGroupware – und umgekehrt.</p>
+          <p class="mt-2">Der CalDAV Synchronizer ist freie Software von Alexander Nimmervoll (Generalize-&#8288;IT Solutions). Seit Version 3.5.0 lässt sich EGroupware direkt als Profil auswählen; wir empfehlen, immer die aktuelle Version zu verwenden.</p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Gut zu wissen</strong><span class="st-badge st-badge--info">HINWEIS</span></div>
+          <p>Microsoft 365 (Office 365) und das neue Outlook für Windows unterstützen den CalDAV Synchronizer nicht. Für neue Arbeits&shy;plätze empfehlen wir Thunderbird oder eM Client – beide sprechen CalDAV, CardDAV und IMAP ohne Zusatz.</p>
+          <p class="mt-2"><a class="link-arrow" href="synchronisation">Alle Wege der Synchronisation</a></p>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Synchronisation von Terminen und Kontakten</h2>
-          <p class="mt-2">Der CalDAV-Synchronizer erleichtert EGropware-Anwendern die Integration von Outlook und die Synchronisation von Terminen, Kontakten und Aufgaben. Damit haben Sie in Ihrem Outlook auch Zugriff auf Ihren Termin&shy;kalender und Ihre Kontakte, die in EGroupware gespeichert werden.</p>
-          
-          <div class="link-list mt-3"><a href="https://caldavsynchronizer.org/de/" rel="noopener" target="_blank">CalDAV-Synchronizer</a></div>
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/caldav-outlook-sync-04.webp" alt="Synchronisation von Terminen und Kontakten" width="1200" height="848" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
+
+
     <section class="section">
-      <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Kauf&shy;version und professioneller Fehler&shy;behebung</h2>
-          <p>Das EGroupware-Team bietet ab 2019 eine professionelle und für EGroupware „supportete“ Kauf&shy;version des Outlook CalDAV Synchronizers für Outlook an. Die Kauf&shy;version trägt entgegen der frei verfügbaren Version Sorge, dass regelmäßig durch das EGroupware-Team mit EGrouware getestet wird und gemeldete Fehler schnellst&shy;möglich behoben werden.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m16.2 16.2 4.3 4.3"/></svg></span>
-          <h2>Zusatz&shy;funktionalitäten für die Kauf&shy;version</h2>
-          <p>Ab Sommer 2019 sind weitere Zusatz&shy;funktionalitäten für die Kauf&shy;version geplant. Folgende Features befinden sich momentan in der Entwicklung: Bei Interesse an dieser Version sprechen Sie uns einfach direkt an, wir beraten Sie gerne.</p>
-          <ul class="check-list mt-3"><li>Managed Attachments</li><li>Automatisches Verbinden/Anlegen aller Profile und Ordner in Outlook (z.B. für Gruppen-Adressbücher oder zusätzliche Kalender)</li></ul>
-          <div class="link-list mt-3"><a href="kontakt">sprechen</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Zusammen&shy;arbeit mit CalDAV Synchronizer</h2>
-          <p>Der Outlook CalDav Synchronizer ist Free and Open-Source Software (FOSS). Der Quellcode ist auf Github verfügbar. Die EGroupware GmbH hat 2019 im Rahmen der CalConnect die Zusammen&shy;arbeit mit Generalize-&#8288;IT Solutions (Herr Alexander Nimmervoll) aufgenommen und bietet die Synchronisation für alle Nutzer an. Ab CalDAV Synchronizer Version 3.5.0 kann EGrouware direkt zum Profil hinzugefügt werden. Zudem wurden ab dieser Version Fehler behoben, die zu Problemen beim Synchronisieren mit EGroupware geführt hatten. Wir empfehlen EGroupware-Anwendern daher mindestens Version 3.5.0.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Kaufen Sie den Synchronizer inkl. Support</h2>
-          <p>Durch die Zusammen&shy;arbeit können Sie den Outlook Synchronizer inkl Support bei uns erwerben. Für weitere Fragen zur Synchronisation sprechen Sie uns einfach an.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Basis&shy;paket “Outlook Sync 1”</h2>
-          <p>Jetzt bestellen “Outlook Sync 1” jetzt bestellen</p>
-          <ul class="check-list mt-3"><li>Lizenz für bis zu 10 Benutzer</li><li>3 Stunden Entwickler-Support (bevorzugter und direkter Support durch die Entwickler des Outlook CalDAV Synchronizers)</li><li>Preis: 500,00 €/Jahr zzgl. MwSt.</li></ul>
-          <div class="link-list mt-3"><a href="https://www.digistore24.com/product/268272" rel="noopener" target="_blank">Jetzt bestellen</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Basis&shy;paket “Outlook Sync 2”</h2>
-          <p>Jetzt bestellen “Outlook Sync 2” jetzt bestellen „Bei großem Mehr&shy;aufwand für Analyse oder Feature&shy;wünsche nutzen Sie bitte die EGroupware Support-Kontingente. Für Lizenzen mit einer größeren Anzahl an Benutzern wenden Sie sich bitte direkt an das EGroupware Team.“</p>
-          <ul class="check-list mt-3"><li>Lizenz für bis zu 20 Benutzer</li><li>5 Stunden Entwickler-Support (bevorzugter und direkter Support durch die Entwickler des Outlook CalDAV Synchronizers)</li><li>800,00 €/Jahr zzl. MwSt.</li></ul>
-          <div class="link-list mt-3"><a href="https://www.digistore24.com/product/268279" rel="noopener" target="_blank">Jetzt bestellen</a></div>
-        </article>
+      <div class="wrap-narrow">
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zum CalDAV Synchronizer</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Welche Outlook-Versionen werden unterstützt?</summary>
+            <div class="faq-body"><p>Laut Projekt das klassische Outlook für Windows in den Versionen 2010 bis 2021. Mit Microsoft 365 (Office 365) und dem neuen Outlook funktioniert der CalDAV Synchronizer nicht.</p></div>
+          </details>
+          <details>
+            <summary>Bekomme ich Unterstützung bei der Einrichtung?</summary>
+            <div class="faq-body"><p>Ja. Der CalDAV Synchronizer verbindet sich über CalDAV und CardDAV mit EGroupware – also über die offenen Standards, die EGroupware selbst unterstützt. Auf Basis eines <a href="preise">Support-Kontingents</a> unterstützen wir Sie bei der Einrichtung und bei der Analyse von Fehlern.</p></div>
+          </details>
+          <details>
+            <summary>Gibt es Alternativen zu Outlook?</summary>
+            <div class="faq-body"><p>Ja. Thunderbird und eM Client sprechen die offenen Standards CalDAV, CardDAV und IMAP direkt und brauchen keine Erweiterung. Und im Browser nutzen Sie EGroupware ohnehin mit allen Anwendungen.</p></div>
+          </details>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
-          <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
+          <h2>Fragen zur Anbindung von Outlook?</h2>
+          <p>Wir beraten Sie gern, welcher Weg für Ihre Arbeits&shy;plätze passt – Outlook mit dem CalDAV Synchronizer, Thunderbird oder der Browser.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="kontakt">Kontakt aufnehmen</a>
+            <a class="btn btn--light btn--lg" href="synchronisation">Zur Synchronisation</a>
           </div>
         </div>
       </div>
@@ -275,10 +234,10 @@
       </div>
       <div class="footer-bottom">
         <p>© <span data-year>2026</span> EGroupware GmbH. Alle Rechte vorbehalten.</p>
-        <nav class="footer-social" aria-label="Social Media"><a href="https://de.linkedin.com/company/egroupware-gmbh" target="_blank" rel="noopener" aria-label="EGroupware bei LinkedIn"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#linkedin"/></svg></a><a href="https://fosstodon.org/@EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Mastodon"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#mastodon"/></svg></a><a href="https://bsky.app/profile/egroupware.org" target="_blank" rel="noopener" aria-label="EGroupware bei Bluesky"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#bluesky"/></svg></a><a href="https://www.youtube.com/user/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei YouTube"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#youtube"/></svg></a><a href="https://www.facebook.com/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Facebook"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#facebook"/></svg></a><a href="https://github.com/EGroupware/egroupware" target="_blank" rel="noopener" aria-label="EGroupware bei GitHub"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#github"/></svg></a><a href="https://help.egroupware.org/" target="_blank" rel="noopener" aria-label="EGroupware Community-Forum"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109j#egroupware"/></svg></a></nav>
+        <nav class="footer-social" aria-label="Social Media"><a href="https://de.linkedin.com/company/egroupware-gmbh" target="_blank" rel="noopener" aria-label="EGroupware bei LinkedIn"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109k#linkedin"/></svg></a><a href="https://fosstodon.org/@EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Mastodon"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109k#mastodon"/></svg></a><a href="https://bsky.app/profile/egroupware.org" target="_blank" rel="noopener" aria-label="EGroupware bei Bluesky"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109k#bluesky"/></svg></a><a href="https://www.youtube.com/user/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei YouTube"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109k#youtube"/></svg></a><a href="https://www.facebook.com/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Facebook"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109k#facebook"/></svg></a><a href="https://github.com/EGroupware/egroupware" target="_blank" rel="noopener" aria-label="EGroupware bei GitHub"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109k#github"/></svg></a><a href="https://help.egroupware.org/" target="_blank" rel="noopener" aria-label="EGroupware Community-Forum"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109k#egroupware"/></svg></a></nav>
       </div>
     </div>
   </footer>
-  <script src="../assets/js/main.js?v=20261109j" defer></script>
+  <script src="../assets/js/main.js?v=20261109k" defer></script>
 </body>
 </html>

@@ -2445,3 +2445,6 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
 
 /* Vier Karten immer als 2 x 2, nie 3 + 1 */
 @media (min-width: 641px) { .grid.grid--pairs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Wichtiger Hinweis im Kopfbereich (Warnfarbe statt NEU-Gruen) */
+.card-new--warn { background: var(--st-warn-bg); border-left-color: var(--st-warn-bar); max-width: 46rem; }
