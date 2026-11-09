@@ -35,6 +35,36 @@ Commit-Nachrichten oder Kommentaren ablegen – auch nicht in dieser Datei.
   (`--border-hover`, im Hellmodus kräftig genug), nie Blau. Kacheln ganz ohne Hover-Effekt
   (Preis-, Vergleichs-, Faktencheck-Karten) bleiben so. Neue Kacheltypen nach dieser Regel bauen.
 
+## Funktionsseiten (eine Seite pro Anwendung)
+
+Vorlage ist `de/kalender.html` / `en/calendar.html` (Stand 09.11.2026). Aufbau:
+
+1. **Kopf:** Label mit Link zurück zu „Funktionen“ (`<nav class="eyebrow">`), H1, Einleitung in zwei
+   Sätzen, Knöpfe „30 Tage kostenlos testen“ + „Preise ansehen“, drei Kernpunkte
+   (`trust-bar trust-bar--3`). Keine alte Pfadzeile „Alle Module im Überblick / …“.
+2. **Ein Highlight pro Anwendung** (`app-highlight`): Badge **NEU** (`st-badge--update`,
+   `app-highlight--neu`, mit Version „Seit EGroupware …“) für frische Funktionen oder
+   **BESONDERS** (`st-badge--info`) für das, was EGroupware abhebt. Titel, zwei bis drei Sätze,
+   großer Screenshot; ohne Bild `app-highlight--text`. Fair formulieren (siehe „Texte“).
+   NEU-Kästen bei jedem größeren Release prüfen und ältere zu BESONDERS oder normaler Karte machen.
+3. **Funktionskarten** im Raster ohne Lücken (2, 4 oder 6 Karten bzw. `card--wide` für eine fünfte),
+   Symbol aus `nav-icons.svg`, je zwei bis drei Sätze.
+4. **Neuerungen in Karten** stehen nie im Fließtext, sondern immer in eigener Zeile:
+   `<p class="card-new"><span class="st-badge st-badge--update">NEU</span> …</p>`. Noch nicht
+   ausgelieferte Funktionen vor dem Livegang prüfen (sonst „In Kürze“).
+5. **Synchronisation/Schnittstellen** nach der Regel unten, daneben `fc-fact` „… auf einen Blick“.
+6. **„Passt dazu“** als `related-grid` mit vier kleinen `module module--link`-Karten (App-Symbol).
+7. **3–4 FAQs** mit JSON-LD, Abschlussband.
+
+**Nur in der Enterprise Line:** Fast alle Anwendungen sind auch in der Community Edition
+enthalten – das wird nicht auf jeder Seite wiederholt. Reine EPL-Anwendungen (bisher Kanban,
+E-Rechnung) und EPL-Zusätze (z. B. Policy im Adressbuch) werden gekennzeichnet: Badge
+„ENTERPRISE LINE“ im Kopf bzw. Hinweis im Highlight, mit Link zum Vergleich CE/EPL.
+
+**KI** hat seit 09.11.2026 einen eigenen Hauptpunkt in der Navigation („KI“/„AI“ mit NEU-Badge,
+`nav-ai`) und einen Eintrag im Funktionen-Menü. Die Leiste hat damit neun Punkte – bei neuen
+Hauptpunkten die Breiten 970, 1200, 1280 und 1440 px prüfen.
+
 ## Deutsch und Englisch immer gleich behandeln
 
 `de/` und `en/` sind inhaltlich und im Aufbau gleich. Jede Änderung an Inhalt, Abschnitten,

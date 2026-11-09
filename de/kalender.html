@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terminplanung online mit dem Online Teamkalender</title>
-  <meta name="description" content="Terminplanung online nach individuellen Bedürfnissen mit dem Online Teamkalender einfach testen. Hier erfahren Sie mehr dazu!">
+  <title>Online-Kalender für Teams: Termine, Videokonferenz und CalDAV-Sync</title>
+  <meta name="description" content="Der EGroupware-Kalender: Team- und Urlaubsplanung, Raumbuchung, Videokonferenz direkt aus dem Termin und Synchronisation per CalDAV mit Smartphone, Thunderbird und eM Client.">
   <link rel="canonical" href="https://www.egroupware.org/de/kalender">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kalender">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/calendar">
@@ -13,19 +13,22 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Terminplanung online mit dem Online Teamkalender">
-  <meta property="og:description" content="Terminplanung online nach individuellen Bedürfnissen mit dem Online Teamkalender einfach testen. Hier erfahren Sie mehr dazu!">
+  <meta property="og:title" content="Online-Kalender für Teams: Termine, Videokonferenz und CalDAV-Sync">
+  <meta property="og:description" content="Der EGroupware-Kalender: Team- und Urlaubsplanung, Raumbuchung, Videokonferenz direkt aus dem Termin und Synchronisation per CalDAV mit Smartphone, Thunderbird und eM Client.">
   <meta property="og:url" content="https://www.egroupware.org/de/kalender">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="../assets/css/style.css?v=20261109b" as="style">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261109b">
+  <link rel="preload" href="../assets/css/style.css?v=20261109c" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261109c">
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/kalender#webpage","url":"https://www.egroupware.org/de/kalender","name":"Online-Kalender für Teams: Termine, Videokonferenz und CalDAV-Sync","description":"Der EGroupware-Kalender: Team- und Urlaubsplanung, Raumbuchung, Videokonferenz direkt aus dem Termin und Synchronisation per CalDAV mit Smartphone, Thunderbird und eM Client.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/kalender#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/kalender#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/kalender#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"Kalender","item":"https://www.egroupware.org/de/kalender"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/kalender#faq","mainEntity":[{"@type":"Question","name":"Kann ich meinen Kalender mit dem Smartphone synchronisieren?","acceptedAnswer":{"@type":"Answer","text":"Ja. iPhone und iPad binden den Kalender direkt per CalDAV ein, Android-Geräte mit der App DAVx⁵. Für Geräte ohne CalDAV steht das ActiveSync-Protokoll über Z-Push bereit."}},{"@type":"Question","name":"Können externe Teilnehmer an Videokonferenzen teilnehmen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Einladungen und Erinnerungen enthalten den Link zum Konferenzraum. Externe brauchen dafür kein EGroupware-Konto."}},{"@type":"Question","name":"Wer darf meinen Kalender sehen?","acceptedAnswer":{"@type":"Answer","text":"Nur die Personen und Gruppen, denen Sie es erlauben. Sie legen fest, wer Ihre Termine nur lesen oder auch bearbeiten darf. Private Termine bleiben für andere verborgen."}},{"@type":"Question","name":"Lässt sich der Kalender mit Outlook nutzen?","acceptedAnswer":{"@type":"Answer","text":"Ja, über den Open-Source-Zusatz CalDAV Synchronizer für Outlook. Wir empfehlen Programme, die offene Standards direkt sprechen, etwa Thunderbird oder eM Client."}}]}]}
   </script>
 </head>
 <body>
@@ -50,9 +53,10 @@
         <div class="nav-sub nav-sub--wide">
           <div class="nav-sub__col"><p class="nav-sub__head">Organisation</p><ul><li><a href="kalender" aria-current="page"><img class="nav-sub__icon" src="../assets/img/icons/calendar.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kalender</span></a></li><li><a href="kontakte"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kontakte</span></a></li><li><a href="aufgaben"><img class="nav-sub__icon" src="../assets/img/icons/infolog.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Aufgaben</span></a></li><li><a href="projekte"><img class="nav-sub__icon" src="../assets/img/icons/projectmanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Projekte</span></a></li><li><a href="stundenzettel"><img class="nav-sub__icon" src="../assets/img/icons/timesheet.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Zeit&shy;erfassung</span></a></li><li><a href="ressourcen"><img class="nav-sub__icon" src="../assets/img/icons/resources.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Ressourcen</span></a></li><li><a href="e-rechnung"><img class="nav-sub__icon" src="../assets/img/icons/einvoice.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-&#8288;Rechnung</span></a></li><li><a href="administration"><img class="nav-sub__icon" src="../assets/img/icons/admin.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Administration</span></a></li></ul></div>
           <div class="nav-sub__col"><p class="nav-sub__head">Kommunikation</p><ul><li><a href="email"><img class="nav-sub__icon" src="../assets/img/icons/mail.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-&#8288;Mail</span></a></li><li><a href="chat"><img class="nav-sub__icon" src="../assets/img/icons/chat.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Team Chat</span></a></li><li><a href="videokonferenzen"><img class="nav-sub__icon" src="../assets/img/icons/videoconference.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Video&shy;konferenzen</span></a></li><li><a href="dateiverwaltung"><img class="nav-sub__icon" src="../assets/img/icons/filemanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Dateien</span></a></li><li><a href="online-office"><img class="nav-sub__icon" src="../assets/img/icons/collabora.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Collabora Online Office</span></a></li><li><a href="kanban"><img class="nav-sub__icon" src="../assets/img/icons/kanban.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kanban</span></a></li><li><a href="helpdesk"><img class="nav-sub__icon" src="../assets/img/icons/tracker.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Helpdesk</span></a></li><li><a href="crm"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CRM-&#8288;Funktionen</span></a></li></ul></div>
-          <div class="nav-sub__col"><p class="nav-sub__head">Technik &amp; Integration</p><ul><li><a href="cti-telefon-integration"><img class="nav-sub__icon" src="../assets/img/icons/cti.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CTI Telefon-Integration</span></a></li><li><a href="homeoffice-integration"><img class="nav-sub__icon" src="../assets/img/icons/home.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Home&shy;office Integration</span></a></li><li><a href="mobiler-zugang"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span>Mobiler Zugang</span></a></li><li><a href="synchronisation"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span><span>Synchronisation</span></a></li><li><a href="guacamole"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span><span>Guacamole</span></a></li><li><a href="univention"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><span>Univention Corporate Server (UCS)</span></a></li><li><a href="vidoteach"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span><span>Lernen mit Videos</span></a></li><li><a href="community-edition-vs-epl"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span><span>EGroupware CE vs. EPL</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Technik &amp; Integration</p><ul><li><a href="ki"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5l1.7 4.6 4.6 1.7-4.6 1.7L12 16.1l-1.7-4.6L5.7 9.8l4.6-1.7z"/><path d="M18.5 15.5l.8 2.1 2.1.8-2.1.8-.8 2.1-.8-2.1-2.1-.8 2.1-.8z"/></svg></span><span>KI in EGroupware</span></a></li><li><a href="cti-telefon-integration"><img class="nav-sub__icon" src="../assets/img/icons/cti.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CTI Telefon-Integration</span></a></li><li><a href="homeoffice-integration"><img class="nav-sub__icon" src="../assets/img/icons/home.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Home&shy;office Integration</span></a></li><li><a href="mobiler-zugang"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span>Mobiler Zugang</span></a></li><li><a href="synchronisation"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span><span>Synchronisation</span></a></li><li><a href="guacamole"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span><span>Guacamole</span></a></li><li><a href="univention"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><span>Univention Corporate Server (UCS)</span></a></li><li><a href="vidoteach"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span><span>Lernen mit Videos</span></a></li><li><a href="community-edition-vs-epl"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span><span>EGroupware CE vs. EPL</span></a></li></ul></div>
         </div>
         </li>
+        <li><a class="nav-ai" href="ki">KI <span class="nav-badge">NEU</span></a></li>
         <li class="nav-has-sub">
           <span class="nav-top">
             <a href="preise">Tarife</a>
@@ -60,7 +64,7 @@
                     aria-label="Tarife – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub">
-          <div class="nav-sub__col"><ul><li><a href="preise"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#tag"/></svg></span><span>Tarife</span></a></li><li><a href="cloud-oder-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#compare"/></svg></span><span>Cloud oder eigener Server?</span></a></li><li><a href="cloud-dienst"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#cloud-check"/></svg></span><span>EGroupware Cloud</span></a></li><li><a href="installation-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#server"/></svg></span><span>EGroupware auf eigenem Server</span></a></li><li><a href="testversion"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#clock"/></svg></span><span>Test&shy;version</span></a></li><li><a href="demo"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#monitor"/></svg></span><span>Online Demo</span></a></li></ul></div>
+          <div class="nav-sub__col"><ul><li><a href="preise"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#tag"/></svg></span><span>Tarife</span></a></li><li><a href="cloud-oder-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#compare"/></svg></span><span>Cloud oder eigener Server?</span></a></li><li><a href="cloud-dienst"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#cloud-check"/></svg></span><span>EGroupware Cloud</span></a></li><li><a href="installation-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#server"/></svg></span><span>EGroupware auf eigenem Server</span></a></li><li><a href="testversion"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#clock"/></svg></span><span>Test&shy;version</span></a></li><li><a href="demo"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#monitor"/></svg></span><span>Online Demo</span></a></li></ul></div>
         </div>
         </li>
         <li class="nav-has-sub">
@@ -70,8 +74,8 @@
                     aria-label="Branchen – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub nav-sub--wide">
-          <div class="nav-sub__col"><p class="nav-sub__head">Lösungen</p><ul><li><a href="branchen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#building"/></svg></span><span>Branchen</span></a></li><li><a href="bildungseinrichtungen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#cap"/></svg></span><span>Bildungs&shy;einrichtungen</span></a></li></ul></div>
-          <div class="nav-sub__col"><p class="nav-sub__head">Im Vergleich zu</p><ul><li><a href="alternativen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#compare"/></svg></span><span>Microsoft 365 &amp; Google</span></a></li><li><a href="exchange-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#mail"/></svg></span><span>Exchange</span></a></li><li><a href="dropbox-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#folder"/></svg></span><span>Dropbox</span></a></li><li><a href="owncloud-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#cloud"/></svg></span><span>ownCloud</span></a></li><li><a href="google-kalender-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#calendar"/></svg></span><span>Google Kalender</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Lösungen</p><ul><li><a href="branchen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#building"/></svg></span><span>Branchen</span></a></li><li><a href="bildungseinrichtungen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#cap"/></svg></span><span>Bildungs&shy;einrichtungen</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Im Vergleich zu</p><ul><li><a href="alternativen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#compare"/></svg></span><span>Microsoft 365 &amp; Google</span></a></li><li><a href="exchange-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#mail"/></svg></span><span>Exchange</span></a></li><li><a href="dropbox-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#folder"/></svg></span><span>Dropbox</span></a></li><li><a href="owncloud-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#cloud"/></svg></span><span>ownCloud</span></a></li><li><a href="google-kalender-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#calendar"/></svg></span><span>Google Kalender</span></a></li></ul></div>
         </div>
         </li>
         <li class="nav-has-sub">
@@ -81,8 +85,8 @@
                     aria-label="Über uns – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub nav-sub--wide">
-          <div class="nav-sub__col"><p class="nav-sub__head">Unter&shy;nehmen</p><ul><li><a href="ueber-uns"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#info"/></svg></span><span>Über uns</span></a></li><li><a href="kundenstimmen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#quote"/></svg></span><span>Kunden&shy;stimmen</span></a></li><li><a href="warum-egroupware"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#check"/></svg></span><span>Warum EGroupware?</span></a></li><li><a href="digitale-souveraenitaet"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#shield"/></svg></span><span>Digitale Souveränität</span></a></li><li><a href="presse"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#news"/></svg></span><span>Presse</span></a></li></ul></div>
-          <div class="nav-sub__col"><p class="nav-sub__head">Partner &amp; Community</p><ul><li><a href="community"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#users"/></svg></span><span>Community</span></a></li><li><a href="technologiepartner"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#chip"/></svg></span><span>Technologie- und Integrations&shy;partner</span></a></li><li><a href="reseller"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#store"/></svg></span><span>EGroupware Reseller</span></a></li><li><a href="reseller-werden"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#user-plus"/></svg></span><span>Reseller werden</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Unter&shy;nehmen</p><ul><li><a href="ueber-uns"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#info"/></svg></span><span>Über uns</span></a></li><li><a href="kundenstimmen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#quote"/></svg></span><span>Kunden&shy;stimmen</span></a></li><li><a href="warum-egroupware"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span><span>Warum EGroupware?</span></a></li><li><a href="digitale-souveraenitaet"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#shield"/></svg></span><span>Digitale Souveränität</span></a></li><li><a href="presse"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#news"/></svg></span><span>Presse</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Partner &amp; Community</p><ul><li><a href="community"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span><span>Community</span></a></li><li><a href="technologiepartner"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#chip"/></svg></span><span>Technologie- und Integrations&shy;partner</span></a></li><li><a href="reseller"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#store"/></svg></span><span>EGroupware Reseller</span></a></li><li><a href="reseller-werden"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#user-plus"/></svg></span><span>Reseller werden</span></a></li></ul></div>
         </div>
         </li>
         <li class="nav-has-sub">
@@ -92,8 +96,8 @@
                     aria-label="Support – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
           </span>
         <div class="nav-sub nav-sub--wide">
-          <div class="nav-sub__col"><p class="nav-sub__head">Hilfe &amp; Service</p><ul><li><a href="support"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#lifebuoy"/></svg></span><span>Support</span></a></li><li><a href="support-login"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#login"/></svg></span><span>Support Login</span></a></li><li><a href="status"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#pulse"/></svg></span><span>EGroupware Cloud Status</span></a></li><li><a href="sicherheit-datenschutz"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#lock"/></svg></span><span>Sicherheit und Daten&shy;schutz</span></a></li><li><a href="datensicherung"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#backup"/></svg></span><span>Daten&shy;sicherung</span></a></li></ul></div>
-          <div class="nav-sub__col"><p class="nav-sub__head">Selbst betreiben</p><ul><li><a href="download"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#download"/></svg></span><span>Download</span></a></li><li><a href="https://github.com/EGroupware/egroupware/wiki/Installation-using-egroupware-docker-RPM-DEB-package" target="_blank" rel="noopener"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#terminal"/></svg></span><span>Installations&shy;anleitung</span></a></li><li><a href="tutorials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#play"/></svg></span><span>Webinare und Tutorials</span></a></li><li><a href="caldav-synchronisierer"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109b#sync"/></svg></span><span>Caldav-Synchronisierer</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Hilfe &amp; Service</p><ul><li><a href="support"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lifebuoy"/></svg></span><span>Support</span></a></li><li><a href="support-login"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#login"/></svg></span><span>Support Login</span></a></li><li><a href="status"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#pulse"/></svg></span><span>EGroupware Cloud Status</span></a></li><li><a href="sicherheit-datenschutz"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lock"/></svg></span><span>Sicherheit und Daten&shy;schutz</span></a></li><li><a href="datensicherung"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#backup"/></svg></span><span>Daten&shy;sicherung</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Selbst betreiben</p><ul><li><a href="download"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#download"/></svg></span><span>Download</span></a></li><li><a href="https://github.com/EGroupware/egroupware/wiki/Installation-using-egroupware-docker-RPM-DEB-package" target="_blank" rel="noopener"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#terminal"/></svg></span><span>Installations&shy;anleitung</span></a></li><li><a href="tutorials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#play"/></svg></span><span>Webinare und Tutorials</span></a></li><li><a href="caldav-synchronisierer"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#sync"/></svg></span><span>Caldav-Synchronisierer</span></a></li></ul></div>
         </div>
         </li>
         <li><a href="blog">News</a></li>
@@ -122,102 +126,152 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/kalender):
-       - Kein eigener Einleitungstext – erster Abschnitt („Terminverwaltung mit EGroupware“) in den Kopfbereich gezogen.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Kalender</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
         <h1>Kalender</h1>
-        <p class="lead">Mit der Termin&shy;verwaltung optimieren Sie die Zusammen&shy;arbeit Ihres Teams, wo auch immer Sie sind. Sie haben jederzeit den Überblick über alle Termine. EGroupware schafft Transparenz und Übersicht für Sie und Ihre Kollegen. Mit einem Klick initialisieren Sie Video&shy;konferenzen per Jitsi oder BigBlueButton.</p>
+        <p class="lead">Termine, Besprechungen und Urlaube Ihres Teams an einem Ort. Sie sehen auf einen Blick, wer wann Zeit hat, und laden Kollegen und Externe mit wenigen Klicks ein – auf Wunsch gleich mit Video&shy;konferenz.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage kostenlos testen</a>
+          <a class="btn btn--ghost btn--lg" href="preise">Preise ansehen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Team-Kalender</strong><span>Gruppen, Urlaube, Ressourcen</span></li><li><strong>Video&shy;konferenz per Klick</strong><span>Mit Jitsi oder BigBlueButton</span></li><li><strong>Offene Standards</strong><span>Synchronisation per CalDAV</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/screenshot-perspektive-kal-de-1080px.webp" alt="Kalender" width="1080" height="909" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/screenshot-perspektive-kal-de-1080px.webp" alt="EGroupware-Kalender in der Wochenansicht" width="1080" height="909" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>Kalender</span></div></nav>
-    <section class="section section--knapp">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Termin&shy;vereinbarung im Team</h2>
-          <p class="mt-2">Behalten Sie mit den Kalender&shy;funktionen von EGroupware den Überblick über die Termin&shy;pläne Ihres Teams. Zeigen Sie sich zum Beispiel den Kalender Ihrer Arbeits&shy;gruppe an oder finden Sie den richtigen Zeitpunkt für ein Meeting mit Ihren Kollegen.</p>
-          
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Ansichten als Favoriten</h2>
-          <p class="mt-2">Ansichten die Sie häufiger benötigen speichern Sie als Favorit ab, darin enthalten sind alle ausgewählten Filter, Benutzer und Ansichten des Kalenders. Damit wechseln Sie schnell zum Beispiel zwischen dem eigenen Kalender in der Wochen&shy;ansicht und dem Urlaubsplaner des Teams.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/screenshots-cal-kan-mail-1080.webp" alt="Ansichten als Favoriten" width="1080" height="792" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <article class="app-highlight reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--info">BESONDERS</span><small>Highlight im Kalender</small></div>
+            <h2>Aus dem Termin direkt in die Video&shy;konferenz</h2>
+            <p>Setzen Sie beim Termin den Haken bei „Video&shy;konferenz“ – EGroupware legt den Konferenz&shy;raum mit Jitsi oder BigBlueButton an. Einladungen und Erinnerungen enthalten den Link, auch für externe Teilnehmer. Intern starten Sie die Konferenz direkt aus dem Kalender, ohne zusätzliches Programm.</p>
+            <p class="mt-3"><a class="link-arrow" href="videokonferenzen">Mehr zu Video&shy;konferenzen</a></p>
+          </div>
+          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-videokonferenz.webp" alt="Kalender mit laufender Videokonferenz" width="1200" height="675" loading="lazy" decoding="async"></figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Termine im Team planen</h2>
+          <p>Vom eigenen Wochen&shy;plan bis zum Urlaubs&shy;planer der ganzen Abteilung.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><circle cx="8.5" cy="14" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-          <h2>Laden Sie Kollegen ganz einfach zu Ihrem Meeting ein</h2>
-          <p>Laden Sie Mitarbeiter oder Geschäfts&shy;partner zu einem Treffen ein, suchen Sie nach alternativen Terminen oder benachrichtigen Sie diese automatisch per E-&#8288;Mail über Termin&shy;änderungen.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Meeting als Video&shy;konferenz planen</h2>
-          <p>Wählen Sie direkt beim Bearbeiten des Termins die Option für Video&shy;konferenz und EGroupware erstellt den entsprechenden Konferenz&shy;raum per Jitsi oder BigBlueButton. Einladungen an Externe und Alarme enthalten den Link zur Konferenz. Intern rufen Sie die Video&shy;konferenz einfach aus dem Kalender heraus auf. Natürlich sind statt eines Videocalls auch reine Telefonie oder Screen&shy;sharing möglich.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><circle cx="8.5" cy="14" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-          <h2>Termine per Drag &amp; Drop verschieben</h2>
-          <p>Termine via Drag-&#8288;and-&#8288;Drop zwischen verschiedenen Kalendern verschieben. Sie möchten den Termin mit dem neuen Fotografen Ihrem Kollegen zuweisen? Verschieben Sie ihn einfach in seinen Kalender!</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="10.5" width="16" height="10.5" rx="2.5"/><path d="M8 10.5V7.2a4 4 0 1 1 8 0v3.3"/></svg></span>
-          <h2>Kalender-Berechtigung</h2>
-          <p>Erlauben Sie einem oder mehreren Kollegen Ihren Kalender zu sehen oder zu verwalten. Sie entscheiden, wer Zugriff auf Ihren Kalender hat und wer nicht. So nutzen Sie Zeit und Ressourcen am effektivsten.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Synchronisieren Sie Ihren Kalender</h2>
-          <p>Selbst&shy;verständlich können Sie Ihren Kalender mit Ihrem Smart&shy;phone oder mit den Desktop-Anwendungen von Mac, Windows 10 oder Outlook synchronisieren.</p>
-          
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Einladen und Termin finden</h3>
+            <p>Laden Sie Kollegen und Geschäfts&shy;partner ein, prüfen Sie freie Zeiten mit der Termin&shy;suche und informieren Sie alle Teilnehmer automatisch per E-&#8288;Mail über Änderungen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#calendar"/></svg></span>
+            <h3>Gruppen und Urlaubs&shy;planung</h3>
+            <p>Blenden Sie die Kalender Ihrer Arbeits&shy;gruppe nebeneinander ein und sehen Sie Urlaube und Abwesenheiten des Teams auf einen Blick.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>Ansichten als Favoriten</h3>
+            <p>Speichern Sie Filter, Personen und Ansicht als Favorit und wechseln Sie mit einem Klick zwischen Ihrer Woche und dem Urlaubs&shy;planer.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEU</span> Favoriten lassen sich hierarchisch ordnen – auf Wunsch eines Kunden, der sehr viele Kalender-Ansichten verwaltet.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#grid"/></svg></span>
+            <h3>Verschieben per Drag-&#8288;and-&#8288;Drop</h3>
+            <p>Ziehen Sie Termine auf eine andere Zeit oder in den Kalender einer Kollegin – so geben Sie einen Termin in Sekunden weiter.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#building"/></svg></span>
+            <h3>Räume und Geräte buchen</h3>
+            <p>Buchen Sie Besprechungsräume, Fahrzeuge oder Beamer direkt mit dem Termin. Der Kalender zeigt, ob die Ressource frei ist.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lock"/></svg></span>
+            <h3>Freigaben und Rechte</h3>
+            <p>Sie entscheiden, wer Ihren Kalender sehen oder bearbeiten darf – für einzelne Kollegen oder ganze Gruppen.</p>
+          </article>
         </div>
       </div>
     </section>
+
     <section class="section">
-      <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="chat">Team Chat</a></li><li><a href="videokonferenzen">Video&shy;konferenzen</a></li><li><a href="dateiverwaltung">Dateien</a></li><li><a href="online-office">Collabora Online Office</a></li><li><a href="kanban">Kanban</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Synchronisation</span>
+          <h2>Ihr Kalender auf allen Geräten</h2>
+          <p class="mt-2">EGroupware setzt auf offene Standards: Der Kalender synchronisiert sich per CalDAV mit iPhone, iPad und Mac sowie mit Desktop-Programmen wie Thunderbird oder eM Client. Android-Geräte binden Sie mit der App DAVx⁵ an. Für Geräte, die keine offenen Standards sprechen, steht das ActiveSync-Protokoll über die Open-Source-Software Z-&#8288;Push bereit.</p>
+          <p class="mt-3"><a class="link-arrow" href="mobiler-zugang">Mobiler Zugang</a></p>
+          <p class="mt-2"><a class="link-arrow" href="caldav-synchronisierer">Outlook per CalDAV Synchronizer</a></p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Kalender auf einen Blick</strong><span class="st-badge st-badge--update">KALENDER</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Termine</dt><dd>Einzel-, Gruppen- und Serien&shy;termine</dd></div>
+            <div class="fact"><dt>Ansichten</dt><dd>Tag, Woche, Monat, Liste, Planer</dd></div>
+            <div class="fact"><dt>Video</dt><dd>Jitsi oder BigBlueButton</dd></div>
+            <div class="fact"><dt>Sync</dt><dd>CalDAV, ActiveSync-Protokoll über Z-&#8288;Push</dd></div>
+            <div class="fact"><dt>Programme</dt><dd>Thunderbird, eM Client, Apple Kalender</dd></div>
+          </dl>
+        </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Arbeitet zusammen mit</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/videoconference.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="videokonferenzen">Video&shy;konferenzen</a></h3><p>Meetings mit Jitsi oder BigBlueButton.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/resources.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="ressourcen">Ressourcen</a></h3><p>Räume, Fahrzeuge und Geräte buchen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/chat.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="chat">Team-Chat</a></h3><p>Kurze Abstimmung mit Rocket.Chat.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/kanban.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="kanban">Kanban</a></h3><p>Abläufe als Tafel organisieren.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-narrow">
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zum Kalender</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Kann ich meinen Kalender mit dem Smart&shy;phone synchronisieren?</summary>
+            <div class="faq-body"><p>Ja. iPhone und iPad binden den Kalender direkt per CalDAV ein, Android-Geräte mit der App DAVx⁵. Für Geräte ohne CalDAV steht das ActiveSync-Protokoll über Z-&#8288;Push bereit.</p></div>
+          </details>
+          <details>
+            <summary>Können externe Teilnehmer an Video&shy;konferenzen teil&shy;nehmen?</summary>
+            <div class="faq-body"><p>Ja. Einladungen und Erinnerungen enthalten den Link zum Konferenz&shy;raum. Externe brauchen dafür kein EGroupware-Konto.</p></div>
+          </details>
+          <details>
+            <summary>Wer darf meinen Kalender sehen?</summary>
+            <div class="faq-body"><p>Nur die Personen und Gruppen, denen Sie es erlauben. Sie legen fest, wer Ihre Termine nur lesen oder auch bearbeiten darf. Private Termine bleiben für andere verborgen.</p></div>
+          </details>
+          <details>
+            <summary>Lässt sich der Kalender mit Outlook nutzen?</summary>
+            <div class="faq-body"><p>Ja, über den Open-Source-Zusatz CalDAV Synchronizer für Outlook. Wir empfehlen Programme, die offene Standards direkt sprechen, etwa Thunderbird oder eM Client.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
+          <h2>Testen Sie den Kalender 30 Tage kostenlos</h2>
           <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage kostenlos testen</a>
+            <a class="btn btn--light btn--lg" href="funktionen">Alle Funktionen</a>
           </div>
         </div>
       </div>
@@ -264,10 +318,10 @@
       </div>
       <div class="footer-bottom">
         <p>© <span data-year>2026</span> EGroupware GmbH. Alle Rechte vorbehalten.</p>
-        <nav class="footer-social" aria-label="Social Media"><a href="https://de.linkedin.com/company/egroupware-gmbh" target="_blank" rel="noopener" aria-label="EGroupware bei LinkedIn"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109b#linkedin"/></svg></a><a href="https://fosstodon.org/@EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Mastodon"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109b#mastodon"/></svg></a><a href="https://bsky.app/profile/egroupware.org" target="_blank" rel="noopener" aria-label="EGroupware bei Bluesky"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109b#bluesky"/></svg></a><a href="https://www.youtube.com/user/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei YouTube"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109b#youtube"/></svg></a><a href="https://www.facebook.com/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Facebook"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109b#facebook"/></svg></a><a href="https://github.com/EGroupware/egroupware" target="_blank" rel="noopener" aria-label="EGroupware bei GitHub"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109b#github"/></svg></a><a href="https://help.egroupware.org/" target="_blank" rel="noopener" aria-label="EGroupware Community-Forum"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109b#egroupware"/></svg></a></nav>
+        <nav class="footer-social" aria-label="Social Media"><a href="https://de.linkedin.com/company/egroupware-gmbh" target="_blank" rel="noopener" aria-label="EGroupware bei LinkedIn"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109c#linkedin"/></svg></a><a href="https://fosstodon.org/@EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Mastodon"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109c#mastodon"/></svg></a><a href="https://bsky.app/profile/egroupware.org" target="_blank" rel="noopener" aria-label="EGroupware bei Bluesky"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109c#bluesky"/></svg></a><a href="https://www.youtube.com/user/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei YouTube"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109c#youtube"/></svg></a><a href="https://www.facebook.com/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Facebook"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109c#facebook"/></svg></a><a href="https://github.com/EGroupware/egroupware" target="_blank" rel="noopener" aria-label="EGroupware bei GitHub"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109c#github"/></svg></a><a href="https://help.egroupware.org/" target="_blank" rel="noopener" aria-label="EGroupware Community-Forum"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261109c#egroupware"/></svg></a></nav>
       </div>
     </div>
   </footer>
-  <script src="../assets/js/main.js?v=20261109b" defer></script>
+  <script src="../assets/js/main.js?v=20261109c" defer></script>
 </body>
 </html>
