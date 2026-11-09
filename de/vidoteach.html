@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>smallPART - Lernen mit Videos</title>
-  <meta name="description" content="smallPART ist eine Anwendung bei der Sie direkt “im Video” lernen können. SchülerInnen oder Studierende können direkt im Video Fragen stellen.">
+  <title>Vidoteach: Lernen mit Videos, Prüfungen und LTI für Moodle</title>
+  <meta name="description" content="Vidoteach (bisher smallPART): Kommentare und Fragen direkt im Video, Prüfungen mit automatischer Auswertung, Einbindung in Moodle, OpenOLAT oder Ilias per LTI.">
   <link rel="canonical" href="https://www.egroupware.org/de/vidoteach">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/vidoteach">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/vidoteach">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="smallPART - Lernen mit Videos">
-  <meta property="og:description" content="smallPART ist eine Anwendung bei der Sie direkt “im Video” lernen können. SchülerInnen oder Studierende können direkt im Video Fragen stellen.">
+  <meta property="og:title" content="Vidoteach: Lernen mit Videos, Prüfungen und LTI für Moodle">
+  <meta property="og:description" content="Vidoteach (bisher smallPART): Kommentare und Fragen direkt im Video, Prüfungen mit automatischer Auswertung, Einbindung in Moodle, OpenOLAT oder Ilias per LTI.">
   <meta property="og:url" content="https://www.egroupware.org/de/vidoteach">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/vidoteach#webpage","url":"https://www.egroupware.org/de/vidoteach","name":"Vidoteach: Lernen mit Videos, Prüfungen und LTI für Moodle","description":"Vidoteach (bisher smallPART): Kommentare und Fragen direkt im Video, Prüfungen mit automatischer Auswertung, Einbindung in Moodle, OpenOLAT oder Ilias per LTI.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/vidoteach#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/vidoteach#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/vidoteach#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"Vidoteach – Lernen mit Videos","item":"https://www.egroupware.org/de/vidoteach"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/vidoteach#faq","mainEntity":[{"@type":"Question","name":"Lässt sich Vidoteach in Moodle einbinden?","acceptedAnswer":{"@type":"Answer","text":"Ja. Über LTI veröffentlichen Sie Vidoteach-Kurse in Lernplattformen wie Moodle, OpenOLAT oder Ilias. Die Teilnehmer arbeiten dann ganz in ihrer gewohnten Plattform."}},{"@type":"Question","name":"Welche Fragetypen gibt es?","acceptedAnswer":{"@type":"Answer","text":"Single-Choice, Multiple-Choice und offene Fragen mit Antworthinweis für die Korrektur. Neu ist ein Fragetyp, der je nach Antwort zu einem anderen Video springt."}},{"@type":"Question","name":"Braucht Vidoteach eine EGroupware-Installation?","acceptedAnswer":{"@type":"Answer","text":"Ja, EGroupware ist die Basis für Anmeldung und Datenbank. Sie können Vidoteach auch auf dem eigenen Server mit EGroupware betreiben."}},{"@type":"Question","name":"Wie kann ich Vidoteach testen?","acceptedAnswer":{"@type":"Answer","text":"Sprechen Sie uns an – wir richten Ihnen gerne einen Testzugang als Lehrende oder Lehrender ein."}}]}]}
   </script>
 </head>
 <body>
@@ -123,192 +126,151 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/lernen-mit-videos):
-       - Enthielt 5 eingebettetes Video (https://www.youtube.com/watch?v=6swKzunmUHA, https://www.youtube.com/watch?v=zScC9hw6Ubc).
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">smallPART</span>
-        <h1>Lernen mit Videos</h1>
-        <p class="lead">smallPART ist eine Anwendung bei der Sie direkt “im Video” lernen können. SchülerInnen oder Studierende können direkt im Video Fragen stellen oder ein Feedback geben. Auch Markierungen im Bild sind ohne Aufwand möglich. Nutzen Sie …</p>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
+        <h1>Vidoteach – Lernen mit Videos</h1>
+        <p class="lead">Mit Vidoteach (bisher smallPART) lernen Schüler und Studierende direkt im Video: Sie stellen Fragen, geben Feedback und markieren Bild&shy;bereiche genau an der passenden Stelle. Lehrende beantworten Kommentare, stellen Prüfungs&shy;fragen und werten sie weitgehend automatisch aus.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage kostenlos testen</a>
+          <a class="btn btn--ghost btn--lg" href="preise">Preise ansehen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Lernen im Video</strong><span>Kommentare mit Farbcode</span></li><li><strong>Tests und Prüfungen</strong><span>Mit Countdown und Auswertung</span></li><li><strong>Lern&shy;plattformen</strong><span>Moodle, OpenOLAT, Ilias per LTI</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/smallpart-mit-logo-gr.webp" alt="Lernen mit Videos" width="900" height="631" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/smallpart-mit-logo-gr.webp" alt="Lernvideo mit Kommentaren in Vidoteach" width="900" height="631" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>Lernen mit Videos</span></div></nav>
-    <section class="section section--knapp">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Video&shy;gestütztes Lernen mit smallPART</h2>
-          <p class="mt-2">smallPART ist eine Anwendung bei der Sie direkt “im Video” lernen können. SchülerInnen oder Studierende können direkt im Video Fragen stellen oder ein Feedback geben. Auch Markierungen im Bild sind ohne Aufwand möglich. Nutzen Sie Aufzeichnungen aus dem Online Unterricht zum strukturierten video&shy;gestützten Lernen. Neu: Integration von Single-,Multiple- und offenen Frage für Test und Prüfungen Test Version EGroupware 30 Tage gratis testen smallPART testen smallPART 90 Tage gratis testen</p>
-          
-          <div class="link-list mt-3"><a href="testversion">Test Version</a><a href="https://smallpart.egroupware.de" rel="noopener" target="_blank">smallPART testen</a></div>
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Video&shy;gestütztes Lernen mit smallPART</h2>
-          <p class="mt-2">selfdirected media assisted learning lectures &amp; Process Analysis Reflection Tool Selbstgesteuerte mediengestützte Lern&shy;vorträge &amp; Reflexions-Tool zur Prozess&shy;analyse Die Bedienung ist sehr einfach: Kurs anlegen, Video einfügen und Aufgabe beschreiben. Die Lernenden im Kurs sehen das Video und die Aufgaben&shy;stellung. Sie kommentieren mit einem Klick im ablaufenden Video mit Farbcode Grün, Rot, Weiß. Die Lehrenden sehen alle Kommentare, können diese beantworten und freigeben. Entgegen herkömmlichen Lern&shy;plattformen findet Lernen also direkt mit / in dem Video statt und nicht nur in Form einer Text&shy;analyse zu dem Video. Es gibt vielfältige Anwendungs&shy;möglichkeiten zum Lernen und Lehren mit smallPART.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/smallpart-logo.webp" alt="Videogestütztes Lernen mit smallPART" width="1200" height="188" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M22 20v-1.6a4 4 0 0 0-3-3.87M16.5 4.13a3.5 3.5 0 0 1 0 6.74"/></svg></span>
-          <h2>Kooperation von Arbeits&shy;gruppen der Universität Tübingen und der TU Kaiserslautern</h2>
-          <p>Mit der Anwendung smallPART erhält EGroupware eine Erweiterung zum video&shy;gestützten Lernen &amp; Lehren. Das Tool entstand aus einer Kooperation von Arbeits&shy;gruppen der Universität Tübingen und der TU Kaiserslautern. Die Weiter&shy;entwicklung und Integration in EGroupware erfolgt im Rahmen einer aktuellen Zusammen&shy;arbeit zwischen der TU Kaiserslautern (Prof. Dr. Christoph Thyssen und Arash Tolou) und EGroupware. Ziel ist die Schaffung einer wissenschaftlich fundierten Lern&shy;plattform in EGroupware.</p>
-          
-          <div class="link-list mt-3"><a href="http://www.fdbio-tukl.de/index.php?id=449" rel="noopener" target="_blank">Prof. Dr. Christoph Thyssen</a><a href="http://www.fdbio-tukl.de/index.php?id=1017" rel="noopener" target="_blank">Arash Tolou</a></div>
+        <article class="app-highlight app-highlight--neu app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEU</span><small>Seit EGroupware 23.1 (Oktober 2025)</small></div>
+            <h2>Fragen, die zum passenden Video springen</h2>
+            <p>Ein neuer Fragetyp verzweigt das Lernen: Je nach gewählter Antwort springt Vidoteach zu einem von mehreren Ziel&shy;videos. So bauen Sie Lernwege, auf denen jeder mit dem Video weiter&shy;macht, das zu seiner Antwort passt.</p>
+          </div>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>Fachdidaktische Weiter&shy;entwicklung von smallPART</h2>
-          <p>Die Weiter&shy;entwicklung von smallPART wird über die Kooperation mit der TU Kaiserslautern fachdidaktisch begleitet. Nach jedem Lernzyklus mit den Teilnehmern der TU Kaiserslautern und anderen Anwendern wird das Tool analysiert und entsprechend dem Feedback bzgl. Usability und Lernwirksamkeit weiter entwickelt.</p>
-          
-          
-        </article>
-        </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Anwendungs&shy;szenario 1: Interaktives Vorlesungs- oder Einführungs&shy;video</h2>
-          <p class="mt-2">Vorteil: Einfache Bedienung und guter Überblick, damit offene Fragen schnell gefunden und beantworten werden</p>
-          <ul class="check-list mt-3"><li>Lernende stellen Fragen zu Video&shy;zeitpunkten in Form von rot markierten Kommentaren</li><li>Lehrende bearbeiten &amp; beantworten die Kommentare und setzen Sie dann auf grün</li><li>Lehrende entscheiden ob Kommentare für alle sichtbar sind, zum Beispiel zur Nutzung der Lern&shy;erfahrungen der Anderen</li></ul>
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-smallpart5.webp" alt="Anwendungsszenario 1: Interaktives Vorlesungs- oder Einführungsvideo" width="900" height="538" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Anwendungs&shy;szenario 2: Analyse zu Prozessen z.B. Arbeiten im Labor, Geräte&shy;bedienung oder Fahrschulsituation …</h2>
-          <p class="mt-2">Vorteil: Automatisierung und Prozess&shy;analyse mit einfacher Lern&shy;möglichkeit &amp; Feedback</p>
-          <ul class="check-list mt-3"><li>Videographie von Prozessen und Abläufen</li><li>Ergänzung des Videos über Lehr-Kommentare zu konkreten Zeitpunkten</li><li>Einbindung von Fragen / Beobachtungsaufgaben zu Videosituationen und / oder Hinter&shy;legen von Markierungen im “Bild”, um Bild&shy;bereiche hervorzuheben</li><li>Lernende antworten über Kommentare, Re-&#8288;Tweets oder markieren im Video relevante Elemente zum Beispiel Gefahren&shy;quellen, Personen oder Bedienelemente</li></ul>
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Neu: Prüfungen und Test mit smallPART</h2>
-          <p class="mt-2">Mit EGroupware 21.1 verbindet smallPART Videos und Prüfungen in einem Tool! Auch für den Prüfungs&shy;modus liegt der Fokus auf einer einfachen Bedienung: Kurs anlegen, Video einfügen, Test&shy;fragen erstellen &amp; veröffentlichen. Die Lernenden im Kurs sehen das Video und direkt dabei die Prüfungs&shy;fragen mit Countdown. Frage&shy;typen für Test &amp; Prüfungen: Single-Choice, Multiple-Choice und offene Text&shy;fragen</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/smallpart-logo.webp" alt="Neu: Prüfungen und Test mit smallPART" width="1200" height="188" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Lernen direkt im Video</h2>
+          <p>Kurs anlegen, Video einfügen, Aufgabe beschreiben – mehr braucht es nicht.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Kooperation TU Kaiserslautern und EGroupware GmbH</h2>
-          <p>Ziel ist die Schaffung einer wissenschaftlich fundierten video&shy;basierenden Lern&shy;plattform in EGroupware. Nach jedem Lernzyklus mit den Teilnehmern der TU Kaiserslautern und anderen Anwendern wird das Tool analysiert und entsprechend dem Feedback bzgl. Usability und Lernwirksamkeit weiter entwickelt. smallPART entstand aus einer Kooperation von Arbeits&shy;gruppen der Universität Tübingen, der TU Kaiserslautern und der EGroupware GmbH. Die Weiter&shy;entwicklung und Integration in EGroupware erfolgt im Rahmen der aktuellen Zusammen&shy;arbeit zwischen der TU Kaiserslautern (Prof. Dr. Christoph Thyssen und Arash Tolou) und EGroupware. Mit der Integration von Video und Prüfungen in einem Tool wurde der nächste logische Schritt gegangen und damit ein weiterer Anwendungs&shy;fall geschaffen, neben den Kommentaren und Markierungen der Vorgänger&shy;version.</p>
-          
-          <div class="link-list mt-3"><a href="http://www.fdbio-tukl.de/index.php?id=449" rel="noopener" target="_blank">Prof. Dr. Christoph Thyssen</a><a href="http://www.fdbio-tukl.de/index.php?id=1017" rel="noopener" target="_blank">Arash Tolou</a><a href="vidoteach">Kommentaren und Markierungen</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15.5v3.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3.5M7.5 11 12 15.5 16.5 11M12 3v12"/></svg></span>
-          <h2>Prüfungs&shy;fragen eingeben und Auswertung festlegen</h2>
-          <p>Der Lehrende erstellt oder Importiert seine Fragen für die Prüfung Vorteil: Einfache Bedienung, guter Überblick und weitgehend automatische Auswertung!</p>
-          <ul class="check-list mt-3"><li>Als Fragetyp steht Single und Multiple-Choice zur Verfügung, sowie offene Fragen mit Antwort&shy;hinweis für die Korrektur</li><li>Wenn die Frage über das Video erstellt wird, wird die Startzeit automatisch gesetzt, sie kann aber jederzeit angepasst werden, ebenso wie die Dauer der Anzeige.</li><li>Optional kann eine Frage als Pflicht&shy;frage gekennzeichnet, die Antworten in zufälliger Reihen&shy;folge angezeigt oder der Modus der Auswertung bei Multiple-Choice Fragen verändert werden.</li><li>Standardmäßig werden Fragen bei Prüfungen anstatt der Kommentar&shy;funktion angezeigt, man kann es aber auch kombinieren.</li></ul>
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="10.5" width="16" height="10.5" rx="2.5"/><path d="M8 10.5V7.2a4 4 0 1 1 8 0v3.3"/></svg></span>
-          <h2>Fragen, Antworten und Bewertungen</h2>
-          <p>Als Lehrender wählen Sie zwischen verschiedenen Ansichten: Vorteil: Einfache Kontrolle, Automatisierung &amp; Feedback</p>
-          <ul class="check-list mt-3"><li>Video mit den ablaufenden Fragen zur Kontrolle</li><li>Alle Fragen zu einem Kurs oder Video auf einen Blick</li><li>Alle Antworten auf einem Blick, Filter zur Auswahl der Teilnehmer, Anzeige der Antworten und Korrektur&shy;status (z.B. 100%)</li><li>Manuelle (Nach-)Korrektur mit Eingabe der Punktzahl z.B. für offene Fragestellungen, inklusive Anzeige der Beispiel&shy;antwort und Bemerkung für die Korrektur</li><li>Alle Fragen, Ergebnisse und Kommentare können exportiert werden.</li></ul>
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#play"/></svg></span>
+            <h3>Kommentare im laufenden Video</h3>
+            <p>Lernende sehen Video und Aufgabe und kommentieren mit einem Klick im laufenden Video, mit Farbcode Grün, Rot oder Weiß. Lehrende sehen alle Kommentare, beantworten sie und geben sie frei.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#cap"/></svg></span>
+            <h3>Interaktive Vorlesung</h3>
+            <p>Lernende stellen Fragen zu bestimmten Video&shy;stellen als rot markierte Kommentare. Lehrende beantworten sie, setzen sie auf Grün und entscheiden, ob alle sie sehen – so profitieren alle von den Fragen der anderen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#monitor"/></svg></span>
+            <h3>Abläufe analysieren</h3>
+            <p>Ob Labor&shy;arbeit, Geräte&shy;bedienung oder Fahrschulsituation: Lehrende ergänzen das Video um Kommentare und Beobachtungsaufgaben. Lernende antworten oder markieren im Bild wichtige Elemente wie Gefahren&shy;quellen oder Bedienelemente.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>Prüfungen im Video</h3>
+            <p>Seit EGroupware 21.1 verbindet Vidoteach Videos und Prüfungen: Die Lernenden sehen das Video und dazu die Prüfungs&shy;fragen mit Countdown. Zur Wahl stehen Single-Choice, Multiple-Choice und offene Fragen mit Antwort&shy;hinweis für die Korrektur.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#grid"/></svg></span>
+            <h3>Auswertung weitgehend automatisch</h3>
+            <p>Startzeit und Anzeige&shy;dauer einer Frage setzt Vidoteach automatisch, Pflicht&shy;fragen und zufällige Reihen&shy;folge sind möglich. Offene Fragen korrigieren Sie mit Punktzahl nach, alle Fragen, Ergebnisse und Kommentare lassen sich exportieren.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Wissenschaftlich begleitet</h3>
+            <p>Das Werkzeug entstand aus einer Kooperation von Arbeits&shy;gruppen der Universität Tübingen, der TU Kaiserslautern und der EGroupware GmbH. Nach jedem Lernzyklus wird es anhand der Rückmeldungen zu Bedienbarkeit und Lernwirksamkeit weiter&shy;entwickelt.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>Wollen Sie smallPART testen?</h2>
-          <p class="mt-2">Der einfachste Weg smallPART zu testen ist eine unserer Test&shy;umgebungen zu nutzen: Alternativ können Sie EGroupware als Basis und Authentifizierung für smallPART installieren und damit auf dem eigenen Server testen.</p>
-          <ul class="check-list mt-3"><li>smallpart.egroupware.de als Teilnehmer testen: Benutzer&shy;name: Test.Konto | Passwort: Test.Konto! Oder Sie registrieren sich mit ihrer E-&#8288;Mail&shy;adresse, der Zugang wird nach 3 Monaten deaktiviert und ihre Daten gelöscht.</li><li>smallPART als Lehrender testen: schreiben Sie uns eine E-&#8288;Mail an smallpart(at)egroupware.org und wir richten Ihnen einen Zugang ein.</li><li>Über OpenOLAT der TU Kaiserslautern testen Der Zugang erfolgt automatisch als Gast ohne Registrierung.</li></ul>
-          <div class="link-list mt-3"><a href="https://github.com/EGroupware/egroupware/wiki/20.1--Installation-using-egroupware-docker-RPM-DEB-package" rel="noopener" target="_blank">installieren</a></div>
+          <span class="eyebrow">Lern&shy;plattformen</span>
+          <h2>Vidoteach in Moodle, OpenOLAT und Ilias</h2>
+          <p class="mt-2">Vidoteach braucht eine EGroupware-Installation als Basis für Anmeldung und Datenbank. Die Teilnehmer können Vidoteach aber auch ausschließlich in der Lern&shy;plattform Ihrer Wahl nutzen, sofern sie Kurse per LTI (Learning Tools Interoperability) einbindet – etwa Moodle, OpenOLAT oder Ilias. Als Teil von EGroupware beherrscht Vidoteach SAML-Authentifizierung und Single Sign-&#8288;on, sodass Lernende über das System ihrer Schule oder Hoch&shy;schule zugreifen.</p>
+          <p class="mt-3"><a class="link-arrow" href="allgemein/smallpart-tutorial-lti-anbindung">Anleitung: LTI-&#8288;Anbindung</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://github.com/EGroupware/egroupware/wiki/SmallPART" rel="noopener" target="_blank">Technische Details im Wiki</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://www.vidoteach.de/de/" rel="noopener" target="_blank">Mehr auf vidoteach.de</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://www.youtube.com/user/EGroupware" rel="noopener" target="_blank">Webinar&shy;aufzeichnung auf YouTube</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/smallpart-kurs.webp" alt="Wollen Sie smallPART testen?" width="1200" height="752" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Vidoteach auf einen Blick</strong><span class="st-badge st-badge--update">VIDOTEACH</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Lernen</dt><dd>Kommentare und Markierungen im Video</dd></div>
+            <div class="fact"><dt>Frage&shy;typen</dt><dd>Single-Choice, Multiple-Choice, offen, Videoverzweigung</dd></div>
+            <div class="fact"><dt>Auswertung</dt><dd>Automatisch, mit manueller Nach&shy;korrektur</dd></div>
+            <div class="fact"><dt>Export</dt><dd>Fragen, Ergebnisse, Kommentare</dd></div>
+            <div class="fact"><dt>Anbindung</dt><dd>LTI, SAML, Single Sign-&#8288;on</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
-          <h2>smallPART in der deutschen Cloud DSGVO konform</h2>
-          <p>Spezialangebot smallPART für Schulen &amp; Hoch&shy;schulen Die anderen EGroupware Anwendungen zur Kollaboration stehen hier explizit nicht zur Verfügung, wobei sie jederzeit auch hinzu&shy;gebucht werden können! Gerne schicken wir Ihnen ein entsprechendes Angebot und einen Auftragsdatenverarbeitungsvertrag zu. Bitte schreiben Sie uns eine E-&#8288;Mail an smallpart(at)egroupware.org.</p>
-          <ul class="check-list mt-3"><li>50 GB Storage für die Videos</li><li>unbegrenzte Anzahl Benutzer bzw. gleichzeitige Anmeldungen</li><li>Mindestlaufzeit 1 Jahr</li><li>Preis 495€ / Jahr zzgl. MwSt.</li></ul>
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
-          <h2>smallPART per LTI in Lern&shy;plattformen einbinden</h2>
-          <p>smallPART benötigt als Basis eine Installation der EGroupware, da damit Authentifizierung und Datenbank-Tabellen angelegt werden. Die Nutzung von smallPART kann aber für die Teilnehmer auch ausschließlich in Ihrer der Lern&shy;plattform Ihrer Wahl statt&shy;finden, sofern dort Kurse per LTI veröffentlicht werden können. smallPART interagiert dank LTI (Learning Tools Interoperability) gut mit anderen Lern-ManagementSystemen wie Moodle, OpenOLAT und Ilias. Als Teil von EGroupware beherrscht smallPART die SAML-Authentifizierung und Single Sign-&#8288;on. Auf diese Weise erhalten Studierende und Schüler*innen Zugriff auf smallPART über das LMS der Lehranstalt oder Hoch&shy;schule. Im Video links sehen Sie wie der LTI-&#8288;Link erzeugt wird und dann in OpenOLAT eingebunden wird. Der Link rechts führt zu einem Beispiel eines Kurses im OpenOLAT der TU Kaiserslautern (Zugang als Gast ohne Registrierung).smallPART InfomatrialiensmallPART Aufgaben</p>
-          
-          <div class="link-list mt-3"><a href="https://github.com/EGroupware/egroupware/wiki/SmallPART" rel="noopener" target="_blank">LTI (Learning Tools Interoperability)</a><a href="allgemein/smallpart-tutorial-lti-anbindung">Video</a><a href="https://olat.vcrp.de/url/RepositoryEntry/2890760911?guest=true&amp;amp;lang=de" rel="noopener" target="_blank">Beispiel eines Kurses im OpenOLAT der TU Kaiserslautern</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>smallPART Webinar Aufzeichnung</h2>
-          <p></p>
-          <ul class="check-list mt-3"><li>Was steckt hinter smallPART?</li><li>Einfache Bedienung für Lehrende und Lernende</li><li>Anwendungs&shy;beispiele</li></ul>
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Warum ist Lernen mit Videos immer wichtiger?</h2>
-          <p>Lern&shy;videos erfreuen sich immer größerer Beliebtheit. Sowohl unter den Schülern, als auch unter den Lehrern und Dozenten.</p>
-          <ul class="check-list mt-3"><li>Video-Lernen lässt sich einfacher konsumieren, als lange Erklärungen zu lesen</li><li>Anderes Format für die Informationsaufnahme und eine gelungene Abwechslung zu normalen Unterrichts&shy;einheiten</li><li>Komplexe Themen können einfach aufbereitet und erklärt werden</li><li>Lernen mit smallPART ist interaktiv, spricht mehrere Sinne an und nutzt Feedback</li></ul>
-          
-        </article>
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Arbeitet zusammen mit</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/videoconference.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="videokonferenzen">Video&shy;konferenzen</a></h3><p>Online-Unterricht mit Jitsi oder BigBlueButton.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/filemanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="dateiverwaltung">Datei&shy;verwaltung</a></h3><p>Dokumente zentral ablegen und teilen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/admin.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="administration">Administration</a></h3><p>Single Sign-&#8288;on, LTI und Rechte.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/chat.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="chat">Team-Chat</a></h3><p>Kurze Abstimmung mit Rocket.Chat.</p></div></article>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="administration">Administration</a></li><li><a href="guacamole">Guacamole</a></li><li><a href="univention">Univention Corporate Server (UCS)</a></li><li><a href="community-edition-vs-epl">EGroupware CE vs. EPL</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zu Vidoteach</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Lässt sich Vidoteach in Moodle einbinden?</summary>
+            <div class="faq-body"><p>Ja. Über LTI veröffentlichen Sie Vidoteach-Kurse in Lern&shy;plattformen wie Moodle, OpenOLAT oder Ilias. Die Teilnehmer arbeiten dann ganz in ihrer gewohnten Plattform.</p></div>
+          </details>
+          <details>
+            <summary>Welche Frage&shy;typen gibt es?</summary>
+            <div class="faq-body"><p>Single-Choice, Multiple-Choice und offene Fragen mit Antwort&shy;hinweis für die Korrektur. Neu ist ein Fragetyp, der je nach Antwort zu einem anderen Video springt.</p></div>
+          </details>
+          <details>
+            <summary>Braucht Vidoteach eine EGroupware-Installation?</summary>
+            <div class="faq-body"><p>Ja, EGroupware ist die Basis für Anmeldung und Datenbank. Sie können Vidoteach auch auf dem eigenen Server mit EGroupware betreiben.</p></div>
+          </details>
+          <details>
+            <summary>Wie kann ich Vidoteach testen?</summary>
+            <div class="faq-body"><p>Sprechen Sie uns an – wir richten Ihnen gerne einen Test&shy;zugang als Lehrende oder Lehrender ein.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
           <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
           <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage kostenlos testen</a>
+            <a class="btn btn--light btn--lg" href="funktionen">Alle Funktionen</a>
           </div>
         </div>
       </div>

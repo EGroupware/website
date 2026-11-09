@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Access EGroupware data from the road with your smartphone</title>
-  <meta name="description" content="With the mobile template for smartphones or tablets, you can access all EGroupware data via the browser, while only selected data">
+  <title>Mobile access: EGroupware on smartphones and tablets</title>
+  <meta name="description" content="All EGroupware applications in the browser of your smartphone and tablet, with a responsive interface since 26.2 – plus sync via CalDAV, CardDAV and WebDAV.">
   <link rel="canonical" href="https://www.egroupware.org/en/mobile-access">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/mobiler-zugang">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/mobile-access">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Access EGroupware data from the road with your smartphone">
-  <meta property="og:description" content="With the mobile template for smartphones or tablets, you can access all EGroupware data via the browser, while only selected data">
+  <meta property="og:title" content="Mobile access: EGroupware on smartphones and tablets">
+  <meta property="og:description" content="All EGroupware applications in the browser of your smartphone and tablet, with a responsive interface since 26.2 – plus sync via CalDAV, CardDAV and WebDAV.">
   <meta property="og:url" content="https://www.egroupware.org/en/mobile-access">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/mobile-access#webpage","url":"https://www.egroupware.org/en/mobile-access","name":"Mobile access: EGroupware on smartphones and tablets","description":"All EGroupware applications in the browser of your smartphone and tablet, with a responsive interface since 26.2 – plus sync via CalDAV, CardDAV and WebDAV.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/mobile-access#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/mobile-access#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/mobile-access#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://www.egroupware.org/en/features"},{"@type":"ListItem","position":3,"name":"Mobile access","item":"https://www.egroupware.org/en/mobile-access"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/mobile-access#faq","mainEntity":[{"@type":"Question","name":"Do I need an app to use EGroupware on my smartphone?","acceptedAnswer":{"@type":"Answer","text":"No. You open EGroupware in your smartphone's or tablet's browser and use all applications there. You can also synchronise calendars, contacts and tasks with your device's programs."}},{"@type":"Question","name":"Which data can be synchronised?","acceptedAnswer":{"@type":"Answer","text":"Calendars and tasks via CalDAV, contacts via CardDAV and files via WebDAV. For devices without these open standards, the ActiveSync protocol is available via Z-Push."}},{"@type":"Question","name":"Can I work on tickets and working hours on the move?","acceptedAnswer":{"@type":"Answer","text":"Yes, in the browser. Helpdesk and time tracking have no counterpart on the smartphone to synchronise with, but they are fully usable via mobile access."}}]}]}
   </script>
 </head>
 <body>
@@ -123,109 +126,136 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/mobil-access):
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Mobile access</span>
-        <h1>Mobil Access</h1>
-        <p class="lead">With the mobile template for smart&shy;phones or tablets, you can access all EGroupware data via the browser, while only selected data is available during synchronisation. Trial Version Try now 30 days for free</p>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="features">Features</a></nav>
+        <h1>Mobile access</h1>
+        <p class="lead">On your smart&shy;phone and tablet you work in the browser with all EGroupware applications and data – no app, no installation. You can also synchronise calendars, contacts and tasks with your device's programs via open standards.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="trial">Try free for 30 days</a>
+          <a class="btn btn--ghost btn--lg" href="pricing">See pricing</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>All applications</strong><span>Including helpdesk and time tracking</span></li><li><strong>No installation</strong><span>In your device's browser</span></li><li><strong>Open standards</strong><span>CalDAV, CardDAV, WebDAV</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/mobiler-zugriff.webp" alt="Mobil Access" width="800" height="534" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/mobiler-zugriff.webp" alt="EGroupware file manager on a tablet" width="800" height="534" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>Mobil Access</span></div></nav>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Access EGroupware data from the road</h2>
-          <p>With the mobile template for smart&shy;phones or tablets, you can access all EGroupware data via the browser, while only selected data is available during synchronisation. Trial Version Try now 30 days for free</p>
-          
-          <div class="link-list mt-3"><a href="trial">Trial Version</a></div>
+        <article class="app-highlight app-highlight--neu app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEW</span><small>Since EGroupware 26.2</small></div>
+            <h2>An interface that adapts to every screen</h2>
+            <p>With version 26.2, EGroupware got a new responsive interface: lists, views and dialogues adjust to the screen size – from smart&shy;phone and tablet to a large monitor. On the move, you work with the same applications and the same up-&#8288;to-&#8288;date data as at your desk, without synchronisation and without an extra app.</p>
+          </div>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
-          <h2>Designed for tablets and smart&shy;phones</h2>
-          <p>With the mobile template for smart&shy;phones or tablets, you can directly access the EGroupware data in real time while on the move and have the same possibilities as when working with a laptop. The handling is adapted to the mobile devices.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
-          <h2>Your team can go mobile straight away</h2>
-          <p>Teams working with EGroupware can access their data at any time, no matter where they are. Clarity and simple handling are essential. Everyone always has access to all current data.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Compact presentation</h2>
-          <p>The mobile version of the collaboration software with smart&shy;phone optimisation enables access to your data on the move with its compact display - without synchronisation. It is available to all users without prior installation. Your team can start right away.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Advantages over synchronisation</h2>
-          <p>The mobile template shows all entries in EGroupware at all times and thus goes beyond individual synchronised applications. This is because many applications do not support the concepts of user-defined fields or can only synchronise standard fields. In addition, only standard applications such as calendar, contacts, tasks can be synchronised, while e.g. the ticket system or time recording have no counterpart on the smart&shy;phone. This is the big advantage of the mobile view, you can easily access all data and applications there.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Synchronisation with smart&shy;phones or tablets</h2>
-          <p>In addition to mobile online access, it is also possible to synchronise your smart&shy;phone or desktop clients (Thunderbird, Outlook EM or MAC client). EGroupware offers you a wide range of possibilities for exchanging information and knowledge. Whether you connect smart&shy;phones, notebooks or desktop computers in real time, whether you use a web file server or whether you use import and export functions: EGroupware optimises data exchange!</p>
-          
-          
-        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Every&shy;thing with you on the move</h2>
+          <p>The browser shows more than synchronisation could ever transfer.</p>
+        </div>
+        <div class="grid grid-2">
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#grid"/></svg></span>
+            <h3>All applications, not just the calendar</h3>
+            <p>Only standard applications such as calendar, contacts and tasks can be synchronised. In the browser you also use the ticket system, time tracking and every other application that has no counterpart on the smart&shy;phone.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>Custom fields too</h3>
+            <p>Many programs on the device only know standard fields. In the browser you see and edit every entry in full – including your organisation's custom fields.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>The whole team ready to go</h3>
+            <p>Mobile access is available to all users without any prior installation. Everyone accesses the same, always up-&#8288;to-&#8288;date data from anywhere.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#folder"/></svg></span>
+            <h3>Files like a hard drive</h3>
+            <p>Via WebDAV you connect your Windows, Mac or Linux computer directly to the EGroupware file manager. The whole team works with the same, current documents and folders.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>EGroupware supports various procedures</h2>
-          <p class="mt-2">EGroupware supports the various methods of data exchange such as CalDAV, CardDAV, WebDAV and the ActiveSync protocol. Simply contact us so that we can support you optimally with the set-&#8288;up. You can find more information under Data synchronisation.</p>
-          
-          <div class="link-list mt-3"><a href="synchronisation">Data synchronisation</a></div>
+          <span class="eyebrow">Synchronisation</span>
+          <h2>Also in sync on every device</h2>
+          <p class="mt-2">EGroupware relies on open standards: calendars and tasks synchronise via CalDAV, contacts via CardDAV and files via WebDAV – with iPhone, iPad and Mac as well as with desktop programs such as Thunderbird or eM Client. Android devices connect with the DAVx⁵ app. For devices that do not speak open standards, the ActiveSync protocol is available via the open source software Z-&#8288;Push. We are happy to help you with the set-&#8288;up.</p>
+          <p class="mt-3"><a class="link-arrow" href="synchronisation">Data synchronisation</a></p>
+          <p class="mt-2"><a class="link-arrow" href="contact">Advice on the set-&#8288;up</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/business1.webp" alt="EGroupware supports various procedures" width="710" height="530" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Mobile access at a glance</strong><span class="st-badge st-badge--update">MOBILE</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Browser</dt><dd>All applications, no installation</dd></div>
+            <div class="fact"><dt>Calendar</dt><dd>CalDAV</dd></div>
+            <div class="fact"><dt>Contacts</dt><dd>CardDAV</dd></div>
+            <div class="fact"><dt>Files</dt><dd>WebDAV</dd></div>
+            <div class="fact"><dt>Other devices</dt><dd>ActiveSync protocol via Z-&#8288;Push</dd></div>
+            <div class="fact"><dt>Programs</dt><dd>Thunderbird, eM Client, Apple Calendar</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Related</span>
+          <h2>Works together with</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/mail.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="email">Email</a></h3><p>Mailbox in the browser and via IMAP.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/filemanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="file-manager">File manager</a></h3><p>Store and share documents centrally.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/home.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="remote-work">Remote work</a></h3><p>Work from home as you do in the office.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/cti.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="cti-phone-integration">CTI phone integration</a></h3><p>Connect your phone system to contacts.</p></div></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Online file server</h2>
-          <p class="mt-2">Your entire team easily accesses the same, always up-&#8288;to-&#8288;date documents and folders via the internet. To do this, you connect directly to EGroupware via your Windows, Mac or Linux desktop - as easily and securely as if you were accessing your hard drive.</p>
-          
-          
+        <div class="section-head reveal">
+          <h2>Frequently asked questions about mobile access</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Do I need an app to use EGroupware on my smart&shy;phone?</summary>
+            <div class="faq-body"><p>No. You open EGroupware in your smart&shy;phone's or tablet's browser and use all applications there. You can also synchronise calendars, contacts and tasks with your device's programs.</p></div>
+          </details>
+          <details>
+            <summary>Which data can be synchronised?</summary>
+            <div class="faq-body"><p>Calendars and tasks via CalDAV, contacts via CardDAV and files via WebDAV. For devices without these open standards, the ActiveSync protocol is available via Z-&#8288;Push.</p></div>
+          </details>
+          <details>
+            <summary>Can I work on tickets and working hours on the move?</summary>
+            <div class="faq-body"><p>Yes, in the browser. Helpdesk and time tracking have no counterpart on the smart&shy;phone to synchronise with, but they are fully usable via mobile access.</p></div>
+          </details>
         </div>
       </div>
     </section>
-    <section class="section">
-      <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
-        <ul class="sibling-list mt-3"><li><a href="email">Email</a></li><li><a href="cti-phone-integration">CTI Telefon-Integration</a></li><li><a href="remote-work">Home&shy;office Integration</a></li><li><a href="synchronisation">Synchronisation</a></li></ul>
-        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
           <h2>Try EGroupware free for 30 days</h2>
           <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
-            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+            <a class="btn btn--solid-light btn--lg" href="trial">Try free for 30 days</a>
+            <a class="btn btn--light btn--lg" href="features">All features</a>
           </div>
         </div>
       </div>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Manage project managers and tasks with EGroupware</title>
-  <meta name="description" content="The EGroupware Project Management module supports your colleagues in the planning and execution of projects.">
+  <title>Online project management: templates, roles, Gantt chart</title>
+  <meta name="description" content="Projects in the EGroupware project manager: sub-projects, templates, roles and permissions, budgets and times, Gantt chart and linked tasks, files and emails.">
   <link rel="canonical" href="https://www.egroupware.org/en/projects">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/projekte">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/projects">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Manage project managers and tasks with EGroupware">
-  <meta property="og:description" content="The EGroupware Project Management module supports your colleagues in the planning and execution of projects.">
+  <meta property="og:title" content="Online project management: templates, roles, Gantt chart">
+  <meta property="og:description" content="Projects in the EGroupware project manager: sub-projects, templates, roles and permissions, budgets and times, Gantt chart and linked tasks, files and emails.">
   <meta property="og:url" content="https://www.egroupware.org/en/projects">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/projects#webpage","url":"https://www.egroupware.org/en/projects","name":"Online project management: templates, roles, Gantt chart","description":"Projects in the EGroupware project manager: sub-projects, templates, roles and permissions, budgets and times, Gantt chart and linked tasks, files and emails.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/projects#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/projects#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/projects#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://www.egroupware.org/en/features"},{"@type":"ListItem","position":3,"name":"Projects","item":"https://www.egroupware.org/en/projects"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/projects#faq","mainEntity":[{"@type":"Question","name":"Can external partners work on a project?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can give external partners their own role in the project and exchange files via a sharing link. External partners can also upload files there themselves."}},{"@type":"Question","name":"Can I create new projects from a template?","acceptedAnswer":{"@type":"Answer","text":"Yes. Templates contain sub-projects, tasks, file directories, participants and budgets if required. A new project takes over this structure."}},{"@type":"Question","name":"Do I have to maintain budgets in every project?","acceptedAnswer":{"@type":"Answer","text":"No. You decide per project whether to record only the status, the times as well or budgets in addition."}},{"@type":"Question","name":"How do I record working time for a project?","acceptedAnswer":{"@type":"Answer","text":"Create a timesheet directly from the project or from one of the project's tasks. The times then appear in the project and can be compared with the planned values."}}]}]}
   </script>
 </head>
 <body>
@@ -123,131 +126,150 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/projects):
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Projects</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="features">Features</a></nav>
         <h1>Projects</h1>
-        <p class="lead">The EGroupware project management module supports you and your partners in the planning and implementation of projects. The agile rights management can be optimally adapted to customer requirements. With the help of template projects, the …</p>
+        <p class="lead">Plan and manage projects together with your team and your partners – with sub-&#8288;projects, roles, budgets and times. Tasks, appointments, files and emails are linked directly to the project, and templates get new projects off the ground quickly.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="trial">Try free for 30 days</a>
+          <a class="btn btn--ghost btn--lg" href="pricing">See pricing</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Project templates</strong><span>Sub-&#8288;projects, tasks, budgets</span></li><li><strong>Roles and permissions</strong><span>Finely adjustable per project</span></li><li><strong>Gantt chart</strong><span>Plan and reschedule</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/projectmanager1.webp" alt="Projects" width="899" height="651" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/projectmanager1.webp" alt="EGroupware project manager with project list" width="899" height="651" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>Projects</span></div></nav>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>Manage projects and tasks</h2>
-          <p>The EGroupware project management module supports you and your partners in the planning and implementation of projects. The agile rights management can be optimally adapted to customer requirements. With the help of template projects, the creation of new projects is faster and easier. Trial Version Try now 30 days for free</p>
-          
-          <div class="link-list mt-3"><a href="trial">Trial Version</a></div>
+        <article class="app-highlight app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--info">SPECIAL</span><small>Project manager highlight</small></div>
+            <h2>Changes appear in the project immediately</h2>
+            <p>When someone in the team changes something, for example a task that belongs to the project, everyone involved sees it straight away in the project view. EGroupware sends the change to the browser as a push notification – nobody has to reload the page, and everyone works with the same status.</p>
+            <p class="mt-3"><a class="link-arrow" href="tasks">More on tasks</a></p>
+          </div>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3.5" width="18" height="17" rx="2.5"/><path d="M3 9h18M9.5 9v11.5"/></svg></span>
-          <h2>Overview of your projects</h2>
-          <p>With the project manager, you can define project hierarchies and schedule employees. All project participants are continuously informed about the current status. You can use the administration to set general access rights or assign project-related roles to employees (e.g. coordinator, employee, external).</p>
-          
-          
-        </article>
-        </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Determine projects, roles and budgets</h2>
-          <p class="mt-2">Plan your budgets or visualise the project progress with the Gantt Chart. Depending on your needs, you can define in the project whether you only want to record the status, times or also budgets. Structure typical projects once as templates with sub-&#8288;projects, tasks, project participants and, if necessary, budgets. With these templates, you create current projects and access the previously created project structure.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-mail-datei-anhaengen-klein.webp" alt="Determine projects, roles and budgets" width="1200" height="717" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Plan and manage projects</h2>
+          <p>From a small customer order to a project with many sub-&#8288;projects.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Link files to projects</h2>
-          <p>With the integration into the EGroupware file manager, you can easily link attachments from the file management or from the email module to your project. The filing of emails in a project makes information immediately available to all participants. You thus use the project manager as a central source of information for your digital office.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Share project files</h2>
-          <p>EGroupware facilitates cooperation with colleagues and external partners. For large files or for regular exchange, you can create your own exchange directory via a sharing link. External files can also be uploaded here, so that all documents and data are directly assigned to the project.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Document &amp; visualise project progress</h2>
-          <p>The project manager makes documentation easier for you. Create a time sheet directly from the project or from a task you have delegated to the responsible employees.</p>
-          
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#grid"/></svg></span>
+            <h3>Projects and sub-&#8288;projects</h3>
+            <p>Map project hierarchies with sub-&#8288;projects and schedule your staff. Everyone involved is kept up to date on the current status.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Roles and permissions</h3>
+            <p>Assign roles such as coordinator, employee or external to the people involved – for all projects or just for a specific one. This lets you define who may see, edit or delete parts of a project.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#backup"/></svg></span>
+            <h3>Templates for recurring projects</h3>
+            <p>Set up typical projects once as a template – with sub-&#8288;projects, tasks, file directories, participants and budgets if required. New projects take over this structure in a few clicks.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#pulse"/></svg></span>
+            <h3>Status, times and budgets</h3>
+            <p>You decide per project whether to record only the status, the times as well or budgets in addition. Planned and actual values are shown side by side.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#calendar"/></svg></span>
+            <h3>Gantt chart and reports</h3>
+            <p>The Gantt chart shows the course of the project and serves as a planning aid: you move tasks there with the whole project in view. Project and element lists as well as your own reports provide all the details.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#folder"/></svg></span>
+            <h3>Files and emails in the project</h3>
+            <p>Link files and emails directly to the project – so everyone involved has the information immediately. For external partners, you create a separate exchange directory via a sharing link, into which they can also upload.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>Gantt chart and reporting of the projects</h2>
-          <p class="mt-2">For an overview, use both project and element lists with all details, the graphic Gantt charts or your own reports. The reports can contain all the information from the project or even a list of assets. You can also use the Gantt Chart as a planning aid to edit your tasks and their respective status. Moving individual tasks is much easier in the Gantt Chart with a view of the whole project.</p>
-          
-          
+          <span class="eyebrow">Interaction</span>
+          <h2>The project as the central source of information</h2>
+          <p class="mt-2">The project manager brings together what is created in other applications: tasks, appointments, time&shy;sheets, files and emails. You create time records directly from the project or from a delegated task. If you like, projects also appear in the calendar based on your own date fields.</p>
+          <p class="mt-3"><a class="link-arrow" href="timesheet">Timesheet</a></p>
+          <p class="mt-2"><a class="link-arrow" href="file-manager">File manager</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-projektmanger-vorlageprojekt.webp" alt="Gantt chart and reporting of the projects" width="900" height="538" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Projects at a glance</strong><span class="st-badge st-badge--update">PROJECTS</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Structure</dt><dd>Projects, sub-&#8288;projects, templates</dd></div>
+            <div class="fact"><dt>Planning</dt><dd>Gantt chart, element and project lists</dd></div>
+            <div class="fact"><dt>Tracking</dt><dd>Status, times, budgets</dd></div>
+            <div class="fact"><dt>Roles</dt><dd>Coordinator, employee, external and your own</dd></div>
+            <div class="fact"><dt>Linked</dt><dd>Tasks, calendar, timesheet, files, email</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h5"/></svg></span>
-          <h2>Creation of project templates</h2>
-          <p>In practice, projects can often be structured very similarly. Then you benefit from the possibility to create your own project templates with sub-&#8288;projects, file directories and tasks. Budgets and time schedules can be taken into account.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>Extended role-based rights system</h2>
-          <p>With the role-based rights system, you can easily assign your own roles for all projects or just for a specific project. This allows you to define who is allowed to see, edit or even delete parts of a larger project.</p>
-          
-          
-        </article>
+        <div class="section-head reveal">
+          <span class="eyebrow">Related</span>
+          <h2>Works together with</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/infolog.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="tasks">Tasks</a></h3><p>Delegate and track tasks.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/timesheet.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="timesheet">Timesheet</a></h3><p>Record working time for the project.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/filemanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="file-manager">File manager</a></h3><p>Store and share project files.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/calendar.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="calendar">Calendar</a></h3><p>Plan project appointments as a team.</p></div></article>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
-        <ul class="sibling-list mt-3"><li><a href="tasks">Tasks</a></li><li><a href="timesheet">Timesheet</a></li><li><a href="resources">Ressources</a></li><li><a href="e-invoicing">E-&#8288;Invoice</a></li></ul>
-        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
+        <div class="section-head reveal">
+          <h2>Frequently asked questions about projects</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Can external partners work on a project?</summary>
+            <div class="faq-body"><p>Yes. You can give external partners their own role in the project and exchange files via a sharing link. External partners can also upload files there themselves.</p></div>
+          </details>
+          <details>
+            <summary>Can I create new projects from a template?</summary>
+            <div class="faq-body"><p>Yes. Templates contain sub-&#8288;projects, tasks, file directories, participants and budgets if required. A new project takes over this structure.</p></div>
+          </details>
+          <details>
+            <summary>Do I have to maintain budgets in every project?</summary>
+            <div class="faq-body"><p>No. You decide per project whether to record only the status, the times as well or budgets in addition.</p></div>
+          </details>
+          <details>
+            <summary>How do I record working time for a project?</summary>
+            <div class="faq-body"><p>Create a timesheet directly from the project or from one of the project's tasks. The times then appear in the project and can be compared with the planned values.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Try EGroupware free for 30 days</h2>
+          <h2>Try project management free for 30 days</h2>
           <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
-            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+            <a class="btn btn--solid-light btn--lg" href="trial">Try free for 30 days</a>
+            <a class="btn btn--light btn--lg" href="features">All features</a>
           </div>
         </div>
       </div>

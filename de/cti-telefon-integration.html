@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EGroupware CTI-Telefonintegration mit Placetel oder AGFEO</title>
-  <meta name="description" content="Computer-Telefonie-Integration (CTI), ist eine Schlüsselkomponente für jeden Kundenservice. Mit EGroupware erhalten Sie eine perfekte Integration">
+  <title>CTI-Telefonintegration: Placetel, Asterisk und AGFEO mit CRM-Ansicht</title>
+  <meta name="description" content="Telefonanlage mit EGroupware verbinden: Anrufen per Klick, CRM-Ansicht bei jedem Anruf, Anruflisten und Anrufbeantworter – mit Placetel, Asterisk oder AGFEO.">
   <link rel="canonical" href="https://www.egroupware.org/de/cti-telefon-integration">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/cti-telefon-integration">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/cti-phone-integration">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="EGroupware CTI-Telefonintegration mit Placetel oder AGFEO">
-  <meta property="og:description" content="Computer-Telefonie-Integration (CTI), ist eine Schlüsselkomponente für jeden Kundenservice. Mit EGroupware erhalten Sie eine perfekte Integration">
+  <meta property="og:title" content="CTI-Telefonintegration: Placetel, Asterisk und AGFEO mit CRM-Ansicht">
+  <meta property="og:description" content="Telefonanlage mit EGroupware verbinden: Anrufen per Klick, CRM-Ansicht bei jedem Anruf, Anruflisten und Anrufbeantworter – mit Placetel, Asterisk oder AGFEO.">
   <meta property="og:url" content="https://www.egroupware.org/de/cti-telefon-integration">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/cti-telefon-integration#webpage","url":"https://www.egroupware.org/de/cti-telefon-integration","name":"CTI-Telefonintegration: Placetel, Asterisk und AGFEO mit CRM-Ansicht","description":"Telefonanlage mit EGroupware verbinden: Anrufen per Klick, CRM-Ansicht bei jedem Anruf, Anruflisten und Anrufbeantworter – mit Placetel, Asterisk oder AGFEO.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/cti-telefon-integration#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/cti-telefon-integration#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/cti-telefon-integration#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"CTI-Telefonintegration","item":"https://www.egroupware.org/de/cti-telefon-integration"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/cti-telefon-integration#faq","mainEntity":[{"@type":"Question","name":"Welche Telefonanlagen lassen sich anbinden?","acceptedAnswer":{"@type":"Answer","text":"Besonders einfach ist die Cloud-Telefonanlage von Placetel. Außerdem lassen sich Asterisk-basierte Anlagen und AGFEO anbinden. Für andere Anlagen fragen Sie uns, ob eine Integration möglich ist."}},{"@type":"Question","name":"Brauche ich ein besonderes Telefon?","acceptedAnswer":{"@type":"Answer","text":"Nein. Sie wählen per Klick in EGroupware und sprechen wahlweise über ein Headset oder Ihr normales Telefon."}},{"@type":"Question","name":"Ist die Telefonintegration in der Community Edition enthalten?","acceptedAnswer":{"@type":"Answer","text":"Die Grundfunktionen für ausgehende Anrufe sind auch in der Community Edition vorhanden. Die Anbindung von Telefonanlagen gehört zu den Funktionen der Enterprise Line."}},{"@type":"Question","name":"Kann ich den Anrufbeantworter in EGroupware abhören?","acceptedAnswer":{"@type":"Answer","text":"Ja. Hat jemand eine Nachricht hinterlassen, zeigt die Anrufliste das direkt an, und Sie spielen die Nachricht in EGroupware ab."}}]}]}
   </script>
 </head>
 <body>
@@ -123,146 +126,152 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/cti-telefon-integration):
-       - Enthielt 3 eingebettetes Video (https://www.youtube.com/watch?v=maaCs7iYWyY, https://youtu.be/Gqpzr-UbFBs).
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Telefon-Integration</span>
-        <h1>CTI Telefon-Integration</h1>
-        <p class="lead">Computer-Telefonie-Integration (CTI), ist eine Schlüssel&shy;komponente für jeden Kundens&shy;ervice. Mit EGroupware erhalten Sie eine perfekte Integration mit der Placetel Cloud Telefon&shy;anlage. Ein Anbindung an Asterisk-basierte Telefonanlagen oder …</p>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
+        <h1>CTI-&#8288;Telefon&shy;integration</h1>
+        <p class="lead">Verbinden Sie Ihre Telefon&shy;anlage mit EGroupware: Sie wählen per Klick aus dem Adressbuch, und bei jedem Anruf öffnet sich die CRM-&#8288;Ansicht mit allen Vorgängen des Kunden. Anruf&shy;listen, Anrufbeantworter und Kalender greifen dabei nahtlos ineinander.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage kostenlos testen</a>
+          <a class="btn btn--ghost btn--lg" href="preise">Preise ansehen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Placetel</strong><span>Einrichtung fast automatisch</span></li><li><strong>CRM-&#8288;Ansicht</strong><span>Bei jedem Anruf sofort im Bild</span></li><li><strong>Asterisk und AGFEO</strong><span>Weitere Anlagen anbindbar</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/egroupwaretelefonie-blanko.webp" alt="CTI Telefon-Integration" width="1200" height="715" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/egroupwaretelefonie-blanko.webp" alt="EGroupware-Kalender mit protokollierten Anrufen und Telefon-Symbol" width="1200" height="715" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>CTI Telefon-Integration</span></div></nav>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>CTI Telefonie-Integration</h2>
-          <p>Computer-Telefonie-Integration (CTI), ist eine Schlüssel&shy;komponente für jeden Kundens&shy;ervice. Mit EGroupware erhalten Sie eine perfekte Integration mit der Placetel Cloud Telefon&shy;anlage. Ein Anbindung an Asterisk-basierte Telefonanlagen oder AGFEO ist ebenfalls möglich. Mit einem Klick erstellen Sie einen Anruf an einen Kollegen oder Kunden. Eingehende und ausgehende Anrufe öffnen die CRM-&#8288;Ansicht mit allen Kunden&shy;vorgängen - egal ob Ticket- oder Aufgaben&shy;verwaltung. Alle Anrufe werden in einer Anruf&shy;liste mit Dauer und Kontakt-Verknüpfung oder direkt in Ihrem Kalender angezeigt. Hören Sie Ihren Anrufbeantworter in EGroupware ab oder initiieren sie den Rückruf mit einem Klick. Die Status&shy;leiste zeigt direkt an, ob ein Kollegen gerade telefoniert. Test Version 30 Tage gratis testen</p>
-          
-          <div class="link-list mt-3"><a href="testversion">Test Version</a></div>
+        <article class="app-highlight reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--info">BESONDERS</span><small>Highlight der Telefon&shy;integration</small></div>
+            <h2>Placetel anbinden in wenigen Minuten</h2>
+            <p>Für die Cloud-Telefon&shy;anlage von Placetel tragen Sie nur die Zugangs&shy;daten Ihres Placetel-Haupt&shy;kontos ein. EGroupware trägt alle nötigen URLs und Tokens auf beiden Seiten automatisch ein, und die Benutzer über&shy;nehmen Sie mit einem Klick aus der Benutzer&shy;verwaltung zu Placetel. Danach öffnet jeder ein- und ausgehende Anruf die CRM-&#8288;Ansicht des Kontakts.</p>
+          </div>
+          <figure class="shot"><img class="shot__img" src="../assets/img/import/egroupwaretelefonie-2-blanko.webp" alt="Mitarbeiter telefoniert am Arbeitsplatz mit EGroupware auf dem Bildschirm" width="1200" height="715" loading="lazy" decoding="async"></figure>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Einfach per Klick aus dem CRM-&#8288;System anrufen</h2>
-          <p>Mit nur einem Klick können Sie direkt aus der EGroupware Kunden&shy;datenbank heraus Ihre Kunden oder Partner anwählen. Sobald die Schnittstelle zu Placetel eingerichtet ist, gibt es einen Link auf der Telefon&shy;nummer. Mit nur einem Klick wählen Sie den Kunden an, ohne mühsam die Telefon&shy;nummer abzuschreiben und einzutippen. Dabei spielt es keine Rolle, ob sie lieber über ein Headset oder Ihr normales Telefon anrufen.</p>
-          
-          
-        </article>
-        </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Bei eingehenden Telefon-Anrufen sofort den Einblick in die aktuellen Vorgänge erhalten</h2>
-          <p class="mt-2">Wenn Sie einen eingehenden Anruf erhalten, öffnet sich die CRM-&#8288;Ansicht in EGroupware mit den Kontakt&shy;daten des Anrufers und den aktiven Vorgängen. So erhalten Sie sofort einen Überblick, wer gerade anruft und um was es bei dem Anruf gehen könnte. Das schafft eine höhere Kunden&shy;bindung durch gut Informierte Mitarbeiter. Aus der CRM-&#8288;Ansicht können Sie auch direkt eine Vertriebs&shy;aktion oder ein Angebot erstellen und dem Kunden zumailen.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/egroupwaretelefonie-2-blanko.webp" alt="Bei eingehenden Telefon-Anrufen sofort den Einblick in die aktuellen Vorgänge erhalten" width="1200" height="715" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Telefonieren mit allen Informationen</h2>
+          <p>Vom Klick auf die Nummer bis zur Dokumentation des Gesprächs.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Telefonie-Integration mit Placetel</h2>
-          <p>Verbinden Sie Ihre Kontakte bzw. Ihre Kunden&shy;management (CRM) direkt mit ihrer Telefon&shy;anlage. Mit der Integration öffnet sich die CRM-&#8288;Ansicht des Kontaktes automatisch für eingehenden und ausgehende Telefon&shy;anrufe. Die Anrufe sehen Sie im Kalender oder als Anruf&shy;liste mit allen Optionen zum Nach&shy;arbeiten des Tages z.B. Stunden&shy;dokumentation.</p>
-          <ul class="check-list mt-3"><li>Die Grund&shy;funktionalitäten für ausgehende Gespräche sind auch in der CE Version vorhanden. Mit der Telefonie-Integration der EPL Funktionen können Sie auch andere Telefonanlagen konfigurieren und anbinden. Die Telefon&shy;anlage muss das natürlich unterstützen und Sie müssen alle Details der Schnittstelle definieren.</li><li>Für die Telefon&shy;anlage von Placetel gibt es eine spezielle Konfiguration bei der Sie nur Ihre Zugangs&shy;daten zum Haupt&shy;account bei Placetel eintragen und EGroupware dann automatisch alle notwenigen URLs und Tokens auf beiden Seiten (EGroupware und Placetel) einträgt. Auch die Übernahme der Benutzer von EGroupware zu Placetel erfolgt mit einem Klick aus der Administration der Benutzer&shy;konten.</li><li>Die Funktion bzw. Konfiguration in EGroupware finden Sie in Administration -&gt; Anwendungen -&gt; EPL-&#8288;Funktionen -&gt; CTI Integration</li></ul>
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Anruf&shy;listen perfekt integriert</h2>
-          <p>Die Anruf&shy;liste zeigt alle Anrufe (intern, ausgehend, eingehend) übersichtlich an. Wenn Sie Teil einer &quot;Anruf&shy;gruppe&quot; sind z.B. der Zentrale, sehen Sie automatisch alle Anrufe an die zentrale Rufnummer. Administratoren haben Zugriff auf Anruf&shy;listen aller Benutzer, weitere Zugriffs&shy;rechte steuern Sie wie gewohnt über die Gruppen. Zugeordnete Kontakte werden Ihnen direkt angezeigt und öffnen mit einem Klick die CRM-&#8288;Ansicht. Unbekannte Rufnummern rufen Sie einfach per Klick zurück. Hat jemand eine Nachricht auf dem Anrufbeantworter hinter&shy;lassen, wird Ihnen das auch direkt angezeigt und die Nachricht kann in EGroupware abgespielt werden. Die EGroupware Status-Leiste zeigt Ihnen an, ob ihr Kollege gerade telefoniert oder frei ist.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Anruf&shy;listen effektiv nutzen</h2>
-          <p>Nutzen Sie die Anruf&shy;liste oder den Kalender zur Dokumentation:</p>
-          <ul class="check-list mt-3"><li>Anrufe, die Sie nicht im Kalender sehen möchten, setzen Sie einfach auf gelöscht</li><li>Sie sehen einen entgangenen Anruf oder eine Nachricht vom Anrufbeantworter, Sie hören den AB mit einem Klick ab und rufen direkt zurück</li><li>Sie erstellen eine Stundenzettel&shy;dokumentation aus dem Anruf und verknüpfen diesen mit Ihrem Kunden oder Projekt</li><li>Sie benötigen noch ein Angebot für den Kunden, auch hier sind sie mit einem Klick in der CRM-&#8288;Ansicht, erstellen oder versenden ein Angebot und dokumentieren es direkt wieder für die Kollegen</li><li>Je nach Arbeits&shy;weise und Absprache mit den Kollegen löschen Sie auch einfach verpasste Anrufe auf gemeinsamen Rufnummern</li></ul>
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#plug"/></svg></span>
+            <h3>Anrufen per Klick</h3>
+            <p>Jede Telefon&shy;nummer im Adressbuch wird zum Link. Ein Klick wählt den Kunden an – ob Sie lieber über ein Headset oder Ihr normales Telefon sprechen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#info"/></svg></span>
+            <h3>CRM-&#8288;Ansicht beim Anruf</h3>
+            <p>Bei einem Anruf öffnet sich die CRM-&#8288;Ansicht mit den Kontakt&shy;daten und allen aktiven Vorgängen, egal ob Ticket oder Aufgabe. Von dort erstellen Sie direkt ein Angebot und schicken es dem Kunden.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#news"/></svg></span>
+            <h3>Anruf&shy;listen</h3>
+            <p>Die Anruf&shy;liste zeigt interne, ausgehende und eingehende Anrufe mit Dauer und verknüpftem Kontakt. Wer zu einer Anruf&shy;gruppe wie der Zentrale gehört, sieht auch deren Anrufe; weitere Rechte steuern Sie über Gruppen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#play"/></svg></span>
+            <h3>Anrufbeantworter und Rückruf</h3>
+            <p>Nach&shy;richten auf dem Anrufbeantworter hören Sie direkt in EGroupware ab. Verpasste Anrufe und unbekannte Nummern rufen Sie mit einem Klick zurück.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#calendar"/></svg></span>
+            <h3>Anrufe im Kalender</h3>
+            <p>Ihre Anrufe erscheinen auf Wunsch im Kalender. Aus einem Gespräch erstellen Sie einen Stunden&shy;zettel und verknüpfen ihn mit Kunde oder Projekt.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Sehen, wer telefoniert</h3>
+            <p>Die Statusleiste zeigt, ob eine Kollegin gerade telefoniert oder frei ist. So stellen Sie Gespräche nicht ins Leere durch.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>Asterisk Telefonanlagen Integration</h2>
-          <p class="mt-2">Neben der tiefen Integration von Placetel Telefonanlagen können auch Asterisk-basierte Telefonanlagen über die CTI-&#8288;Schnittstelle an EGroupware angebunden werden. Die Asterisk-Integration verwendet die ARI (Asterisk REST API), um mit dem Asterisk-Server zu kommunizieren und Anruf&shy;ereignisse zu empfangen, eine automatische CRM-&#8288;Ansicht anzuzeigen und Anrufe aufzuzeichnen. Unsere Dokumentation im Wiki zeigt im Detail, was Sie für die Asterisk-Integration konfigurieren müssen.</p>
-          
-          <div class="link-list mt-3"><a href="https://github.com/EGroupware/egroupware/wiki/CTI---Computer-Telephone-Integration" rel="noopener" target="_blank">Asterisk-basierte Telefonanlagen</a><a href="https://github.com/EGroupware/egroupware/wiki/CTI---Computer-Telephone-Integration" rel="noopener" target="_blank">Dokumentation im Wiki</a></div>
+          <span class="eyebrow">Telefon&shy;anlagen</span>
+          <h2>Placetel, Asterisk, AGFEO und weitere</h2>
+          <p class="mt-2">Neben Placetel binden Sie Asterisk-basierte Telefon&shy;anlagen an: Die Integration nutzt die Asterisk REST API (ARI), empfängt Anruf&shy;ereignisse, zeigt die CRM-&#8288;Ansicht und kann Anrufe aufzeichnen. Klassische Anlagen wie AGFEO verbinden Sie über die CTI-&#8288;Schnittstelle und wählen per Klick aus EGroupware. Auch andere Telefon&shy;anlagen sind möglich, erfordern aber mehr Einrichtung auf beiden Seiten – sprechen Sie uns an, gegen Support&shy;budget unterstützen wir Sie bei der Integration.</p>
+          <p class="mt-3"><a class="link-arrow" href="https://github.com/EGroupware/egroupware/wiki/CTI---Computer-Telephone-Integration" rel="noopener" target="_blank">Dokumentation im Wiki</a></p>
+          <p class="mt-2"><a class="link-arrow" href="neuigkeiten/cti-telefonintegration-mit-agfeo">CTI-&#8288;Telefon&shy;integration mit AGFEO</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://www.youtube.com/watch?v=maaCs7iYWyY" rel="noopener" target="_blank">Webinar-Aufzeichnung zur CTI-&#8288;Integration</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://youtu.be/Gqpzr-UbFBs" rel="noopener" target="_blank">Folge-Webinar zur Einrichtung von Placetel</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/asterisk-integration-1.webp" alt="Asterisk Telefonanlagen Integration" width="1200" height="675" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Telefon&shy;integration auf einen Blick</strong><span class="st-badge st-badge--update">CTI</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Anlagen</dt><dd>Placetel, Asterisk, AGFEO, weitere auf Anfrage</dd></div>
+            <div class="fact"><dt>Schnittstelle</dt><dd>Asterisk REST API (ARI) für Asterisk</dd></div>
+            <div class="fact"><dt>Anrufe</dt><dd>Anruf&shy;liste, Kalender, CRM-&#8288;Ansicht</dd></div>
+            <div class="fact"><dt>Edition</dt><dd>Ausgehende Anrufe auch in der Community Edition, Anlagen-Integration in der Enterprise Line</dd></div>
+            <div class="fact"><dt>Verfügbar</dt><dd>Seit EGroupware 21.1</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>AGFEO Telefonanlagen Integration</h2>
-          <p>Neben der tiefen Integration von IP-&#8288;gestützten Telefonanlagen können auch klassische Telefonanlagen wie AGFEO über die CTI-&#8288;Schnittstelle an EGroupware angebunden werden. Lesen Sie in dem Blog&shy;beitrag, wie im Detail die Integration der AGFEO Telefone durch&shy;geführt werden kann. Hierbei können über die Klicktodial Funktion Anrufe direkt aus der EGroupware Benutzer&shy;oberfläche ausgeführt werden.</p>
-          
-          <div class="link-list mt-3"><a href="https://www.agfeo.de" rel="noopener" target="_blank">AGFEO</a><a href="neuigkeiten/cti-telefonintegration-mit-agfeo">Blog&shy;beitrag</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Integration anderer Telefonanlagen</h2>
-          <p>Neben Placetel können auch andere Telefonanlagen an EGroupware angebunden werden, dafür müssen aber mehr Faktoren auf Seiten von EGroupware und der Telefon&shy;anlage eingerichtet werden wie zum Beispiel zur Identifikation von CTI-&#8288;Zuständen. Sie wollen Ihre Telefon&shy;anlage mit EGroupware verbinden? Sprechen Sie uns einfach an, ob eine Integration ihrer Telefon&shy;anlage möglich ist. Gegen Support&shy;budget unterstützt wir Sie bei der Integration, so kann auch die Liste der Integrationen wachsen. Die Screenshots unterhalb zeigen die Konfiguration für andere Telefonanlagen.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Webinar zur CTI-&#8288;Integration</h2>
-          <p>Sehen Sie sich die Aufzeichnung von dem Webinar zur Telefon&shy;anbindung an:</p>
-          <ul class="check-list mt-3"><li>Konfiguration und Einstellungen in EGroupware und Placetel</li><li>Mit einem Klick Anruf anstoßen und an &quot;normalen&quot; Telefon annehmen Anzeige eingehende, ausgehende und verpasste Anrufe im Kalender</li><li>Anruf&shy;liste mit Filter&shy;optionen und Abhören Anrufbeantworter</li><li>Aufruf der CRM Ansicht bei eingehendem Anruf</li><li>Anzeige Status-Anwendung</li><li>sehen wer gerade telefoniert oder anrufen</li><li>Nutzung und Konfiguration von Placetel (Daniel Selbach)</li><li>Fragen an die Experten von EGroupware und Placetel</li><li>Was ist Placetel?</li><li>Welche Telefone können verwendet werden?</li><li>Welches Telefon eignet sich am besten</li></ul>
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Folge-Webinar zur CTI-&#8288;Integration</h2>
-          <p>Sehen Sie sich die Aufzeichnung an von dem Webinar zur Placetel Konfiguration &amp; Einrichtung in EGroupware:</p>
-          <ul class="check-list mt-3"><li>Konfiguration von Placetel</li><li>Bereit&shy;stellen/Provisionieren von Telefonen</li><li>Einrichten von Soft&shy;phones</li><li>Einrichten von Telefonwarteschlangen</li><li>Routing</li><li>Mailbox Einrichten</li><li>Tipps und Tricks</li><li>Eingehende Anrufe konfigurieren</li><li>Fragen an Daniel Selbach von Placetel</li><li>Fragen an die Experten von EGroupware</li><li>CTI-&#8288;Integration ist in EGroupware ab der Version 21.1 verfügbar</li></ul>
-          
-        </article>
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Arbeitet zusammen mit</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="crm">CRM</a></h3><p>Alle Vorgänge eines Kunden im Blick.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/calendar.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="kalender">Kalender</a></h3><p>Anrufe und Termine an einem Ort.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/timesheet.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="stundenzettel">Stunden&shy;zettel</a></h3><p>Gespräche als Zeit erfassen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/tracker.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="helpdesk">Helpdesk</a></h3><p>Support&shy;fälle als Tickets bearbeiten.</p></div></article>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="email">E-&#8288;Mail Modul</a></li><li><a href="homeoffice-integration">Home&shy;office Integration</a></li><li><a href="synchronisation">Synchronisation</a></li><li><a href="mobiler-zugang">Mobiler Zugang</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zur Telefon&shy;integration</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Welche Telefon&shy;anlagen lassen sich anbinden?</summary>
+            <div class="faq-body"><p>Besonders einfach ist die Cloud-Telefon&shy;anlage von Placetel. Außerdem lassen sich Asterisk-basierte Anlagen und AGFEO anbinden. Für andere Anlagen fragen Sie uns, ob eine Integration möglich ist.</p></div>
+          </details>
+          <details>
+            <summary>Brauche ich ein besonderes Telefon?</summary>
+            <div class="faq-body"><p>Nein. Sie wählen per Klick in EGroupware und sprechen wahlweise über ein Headset oder Ihr normales Telefon.</p></div>
+          </details>
+          <details>
+            <summary>Ist die Telefon&shy;integration in der Community Edition enthalten?</summary>
+            <div class="faq-body"><p>Die Grund&shy;funktionen für ausgehende Anrufe sind auch in der Community Edition vorhanden. Die Anbindung von Telefon&shy;anlagen gehört zu den Funktionen der Enterprise Line.</p></div>
+          </details>
+          <details>
+            <summary>Kann ich den Anrufbeantworter in EGroupware abhören?</summary>
+            <div class="faq-body"><p>Ja. Hat jemand eine Nachricht hinter&shy;lassen, zeigt die Anruf&shy;liste das direkt an, und Sie spielen die Nachricht in EGroupware ab.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
           <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
           <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage kostenlos testen</a>
+            <a class="btn btn--light btn--lg" href="funktionen">Alle Funktionen</a>
           </div>
         </div>
       </div>

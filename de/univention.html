@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Univention Corporate Server (UCS) – EGroupware</title>
-  <meta name="description" content="Univention Corporate Server (UCS) ist eine gute Basis, um Serveranwendungen bzw. ganze IT-Infrastrukturen wirtschaftlich zu betreiben und einfach zu …">
+  <title>EGroupware auf Univention Nubus (früher UCS)</title>
+  <meta name="description" content="EGroupware als App für Univention Nubus, früher UCS: Installation über das App Center, zentrale Benutzerverwaltung, Mailserver inklusive und eigenes Release.">
   <link rel="canonical" href="https://www.egroupware.org/de/univention">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/univention">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/univention">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Univention Corporate Server (UCS) – EGroupware">
-  <meta property="og:description" content="Univention Corporate Server (UCS) ist eine gute Basis, um Serveranwendungen bzw. ganze IT-Infrastrukturen wirtschaftlich zu betreiben und einfach zu …">
+  <meta property="og:title" content="EGroupware auf Univention Nubus (früher UCS)">
+  <meta property="og:description" content="EGroupware als App für Univention Nubus, früher UCS: Installation über das App Center, zentrale Benutzerverwaltung, Mailserver inklusive und eigenes Release.">
   <meta property="og:url" content="https://www.egroupware.org/de/univention">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/univention#webpage","url":"https://www.egroupware.org/de/univention","name":"EGroupware auf Univention Nubus (früher UCS)","description":"EGroupware als App für Univention Nubus, früher UCS: Installation über das App Center, zentrale Benutzerverwaltung, Mailserver inklusive und eigenes Release.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/univention#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/univention#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/univention#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"Univention Nubus","item":"https://www.egroupware.org/de/univention"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/univention#faq","mainEntity":[{"@type":"Question","name":"Was ist der Unterschied zwischen Univention Nubus und UCS?","acceptedAnswer":{"@type":"Answer","text":"Univention Nubus ist die aktuelle Bezeichnung der Plattform, die früher Univention Corporate Server (UCS) hieß. Seit Oktober 2026 erscheint EGroupware als eigenes Release für Univention Nubus."}},{"@type":"Question","name":"Wie installiere ich EGroupware auf Univention?","acceptedAnswer":{"@type":"Answer","text":"Über das Univention App Center auf Ihrem bestehenden Univention-Server. Die App wird als Docker-Container ausgeliefert."}},{"@type":"Question","name":"Mit welchem Konto melde ich mich zuerst an?","acceptedAnswer":{"@type":"Answer","text":"Mit dem Benutzernamen „Administrator“ und dem Passwort der Univention-Administration. Benutzer, die Sie bereits in Univention angelegt haben, können sich ebenfalls anmelden."}},{"@type":"Question","name":"Kann ich eine bestehende EGroupware nach Univention umziehen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Wir bieten mehrere Wege für die Migration an, dabei bleiben alle Daten erhalten. Sprechen Sie uns gerne an."}}]}]}
   </script>
 </head>
 <body>
@@ -123,120 +126,153 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/univention):
-       - Enthielt 1 eingebettetes Video (https://youtu.be/d61ytxluCeg).
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-       - Meta-Description selbst formuliert – im Original stand keine.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Univention</span>
-        <h1>Univention Corporate Server (UCS)</h1>
-        <p class="lead">Univention Corporate Server (UCS) ist eine gute Basis, um Server&shy;anwendungen bzw. ganze IT-&#8288;Infrastrukturen wirtschaftlich zu betreiben und einfach zu administrieren. Das UCS System eignet sich optimal für das Management verteilter und …</p>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
+        <h1>Univention Nubus</h1>
+        <p class="lead">EGroupware gibt es als App für Univention Nubus, früher Univention Corporate Server (UCS). Sie installieren EGroupware über das Univention App Center und nutzen die zentrale Benutzer&shy;verwaltung von Univention – samt Mail&shy;server.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage kostenlos testen</a>
+          <a class="btn btn--ghost btn--lg" href="preise">Preise ansehen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>App Center</strong><span>Installation mit wenigen Klicks</span></li><li><strong>Zentrale Benutzer</strong><span>Identitäts&shy;verwaltung von Univention</span></li><li><strong>Mail&shy;server inklusive</strong><span>Postfach für jeden neuen Benutzer</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/ucs-logo-1.webp" alt="Univention Corporate Server (UCS)" width="967" height="127" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/00-2.webp" alt="Apps aus dem Univention App Center auf Basis der zentralen Identitätsverwaltung" width="1051" height="1069" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>Univention Corporate Server (UCS)</span></div></nav>
-    <section class="section section--knapp">
-      <div class="wrap split">
-        <div class="reveal">
-          <h2>“UCS ist der einfachste Weg für eine EGroupware Installation inkl. Mail&shy;server.”</h2>
-          <p class="mt-2">Univention Corporate Server (UCS) ist eine gute Basis, um Server&shy;anwendungen bzw. ganze IT-&#8288;Infrastrukturen wirtschaftlich zu betreiben und einfach zu administrieren. Das UCS System eignet sich optimal für das Management verteilter und heterogener IT-&#8288;Umgebungen. Gerade in virtualisierten IT-&#8288;Umgebungen können Sie UCS optimal einsetzten. Hierbei spiel es keine Rolle, ob Sie in Ihrem Unter&shy;nehmen Microsoft Windows, Mac OS X oder Linux-Systeme verwenden. Der große Vorteil von Univention Corporate Server ist das integrierte Identity- und Infrastruktur&shy;management&shy;system. Dies erleichtert die Administration von Anwendungen, Benutzern und Ressourcen. Die Administration der Server-Systeme erfolgt über die integrierte Weboberfläche. Über den Browser lassen sich die meisten Konfigurations&shy;einstellungen durch&shy;führen.</p>
-          
-          <div class="link-list mt-3"><a href="https://www.univention.de/produkte/ucs/" rel="noopener" target="_blank">Univention Corporate Server</a></div>
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/00-2.webp" alt="“UCS ist der einfachste Weg für eine EGroupware Installation inkl. Mailserver.”" width="1051" height="1069" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
+
+    <section class="section">
       <div class="wrap">
+        <article class="app-highlight app-highlight--neu app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEU</span><small>Seit EGroupware 26.10</small></div>
+            <h2>Eigenes Release für Univention Nubus</h2>
+            <p>Seit Oktober 2026 veröffentlichen wir EGroupware als eigenes Release für Univention Nubus, die frühere Plattform Univention Corporate Server (UCS). Die App wird als Docker-Container ausgeliefert; das Release 26.10 vom 22. Oktober 2026 brachte unter anderem ein PHP-&#8288;Sicherheits&shy;update. Release-Hinweise und Installations&shy;anleitungen finden Sie im EGroupware-Forum.</p>
+            <p class="mt-3"><a class="link-arrow" href="https://help.egroupware.org/t/80124" rel="noopener" target="_blank">Release-Hinweise im Forum</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>EGroupware und Univention zusammen</h2>
+          <p>Die einfache Art, EGroupware samt Mail&shy;server im eigenen Haus zu betreiben.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span>
-          <h2>Univention App Center</h2>
-          <p>UCS lässt sich dank standardisierter Schnittstellen leicht in vorhandene Umgebungen integrieren. Das integrierte App Center bietet eine große Zahl von Enterprise Lösungen, wie z.B. EGroupware, einen E-&#8288;Mail Server oder auch Collabora an. Wählen Sie eine oder mehrere Anwendungen aus den ca. 100 Anwendungen des App Centers aus. Diese Anwendungen lassen sich mit wenigen Klicks installieren und über die graphische Benutzer&shy;oberfläche administrieren. Server- und Cloud&shy;anwendungen verwalten Sie im Univention App Center wie Apps auf Ihrem Smart&shy;phone. Das App Center bietet damit die Möglichkeit, EGroupware einfach in der eigenen Infrastruktur zu installieren und zu testen. Ein fertiges VM-&#8288;Ware Image inkl. EGroupware können Sie einfach herunter&shy;laden und innerhalb weniger Augenblicke in Betrieb nehmen. Univention bietet Downloads für unterschiedliche Virtualisierungsplattformen wie z.B. VM-&#8288;Ware, VirtualBox, VM-&#8288;Ware ESX und KVM an. Die Apps lassen sich mit dem App Center einfach installieren, in die eigene IT integrieren und komfortabel über das zentrale Management&shy;system von UCS verwalten. Bilder und Informationen mit freundlicher Genehmigung der Univention GmbH.</p>
-          
-          <div class="link-list mt-3"><a href="https://www.univention.de/produkte/univention-app-center/app-katalog/egroupware/" rel="noopener" target="_blank">Univention App Center</a><a href="https://www.univention.de/produkte/univention-app-center/app-katalog/egroupware/" rel="noopener" target="_blank">herunter&shy;laden</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Active Directory-Funktionen</h2>
-          <p>Umfassende Active Directory-Funktionen ermöglichen sowohl die Integration mit Microsoft Windows-Umgebungen als auch deren Ablösung.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span>
-          <h2>Single Sign-&#8288;on</h2>
-          <p>Gerade für größere Unter&shy;nehmen ist ein Single Sign-&#8288;on und die Integration in die vorhandene IT-&#8288;Infrastruktur sehr wichtig. Mit EGroupware und UCS ergeben sich viele Vorteile für die Administration und die Anwender der entsprechenden Systeme.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15.5v3.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3.5M7.5 11 12 15.5 16.5 11M12 3v12"/></svg></span>
-          <h2>Migration zu UCS</h2>
-          <p>Sprechen Sie uns gerne wegen einer Migration in ein UCS-&#8288;Paket an. Wir bieten mehrere Möglichkeiten, wie Sie aus einer bestehenden EGroupware in ein Univention System wechseln können. Dabei bleiben alle Daten erhalten und Sie können die Vorteile von UCS und EGroupware nutzen.</p>
-          
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#store"/></svg></span>
+            <h3>Installation über das App Center</h3>
+            <p>Wählen Sie EGroupware im Univention App Center aus und installieren Sie es mit wenigen Klicks. Verwaltet wird die App über die grafische Oberfläche von Univention.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Zentrale Benutzer&shy;verwaltung</h3>
+            <p>Die integrierte Identitäts- und Infrastruktur&shy;verwaltung von Univention erleichtert die Verwaltung von Anwendungen, Benutzern und Ressourcen. Benutzer, die Sie in Univention anlegen, melden sich direkt in EGroupware an.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#mail"/></svg></span>
+            <h3>Mail&shy;server inklusive</h3>
+            <p>Auf Univention ist die E-&#8288;Mail-Verwaltung bereits eingerichtet: Jeder neue Benutzer erhält sofort sein Postfach. Aliase, Weiterleitungen und Speicher&shy;platz stellen Sie in der EGroupware-Administration ein.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#building"/></svg></span>
+            <h3>Active Directory</h3>
+            <p>Univention bringt umfassende Active-Directory-Funktionen mit. Damit lässt sich die Plattform in Microsoft-Windows-Umgebungen einbinden oder kann diese ablösen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#login"/></svg></span>
+            <h3>Single Sign-&#8288;on</h3>
+            <p>Gerade für größere Organisationen sind Single Sign-&#8288;on und die Einbindung in die vorhandene IT wichtig. EGroupware und Univention vereinfachen beides für Administratoren und Anwender.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#sync"/></svg></span>
+            <h3>Migration zu Univention</h3>
+            <p>Sie betreiben EGroupware bereits und möchten zu Univention wechseln? Wir bieten mehrere Wege dafür an, und alle Daten bleiben erhalten.</p>
+          </article>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap split">
         <div class="reveal">
-          <h2>Univention Corporate Server</h2>
-          
-          
-          
+          <span class="eyebrow">Installation</span>
+          <h2>So installieren Sie EGroupware auf Univention</h2>
+          <p class="mt-2">Haben Sie bereits einen Univention-Server im Unter&shy;nehmen, installieren Sie EGroupware einfach über das App Center. Zur ersten Anmeldung an EGroupware verwenden Sie den Benutzer&shy;namen „Administrator“ und das Passwort der Univention-Administration; bereits angelegte Univention-Benutzer können sich ebenfalls anmelden. Eine kostenlose 30-Tage-Test&shy;lizenz wird automatisch erzeugt. Bei Fragen zu Installation oder Migration sprechen Sie uns an.</p>
+          <p class="mt-3"><a class="link-arrow" href="https://www.univention.de/produkte/univention-app-center/app-katalog/egroupware/" rel="noopener" target="_blank">EGroupware im Univention App Center</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://www.univention.de/produkte/preise/" rel="noopener" target="_blank">Preis&shy;modelle von Univention</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://youtu.be/d61ytxluCeg" rel="noopener" target="_blank">Video zu EGroupware auf Univention</a></p>
+          <p class="mt-2"><a class="link-arrow" href="kontakt">Beratung zu Installation und Migration</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/00-1.webp" alt="Univention Corporate Server" width="948" height="950" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>EGroupware auf Nubus auf einen Blick</strong><span class="st-badge st-badge--update">UNIVENTION</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Plattform</dt><dd>Univention Nubus, früher UCS</dd></div>
+            <div class="fact"><dt>Installation</dt><dd>Univention App Center</dd></div>
+            <div class="fact"><dt>Auslieferung</dt><dd>Docker-Container</dd></div>
+            <div class="fact"><dt>Benutzer</dt><dd>Zentral in Univention</dd></div>
+            <div class="fact"><dt>E-&#8288;Mail</dt><dd>Postfach für jeden Benutzer</dd></div>
+            <div class="fact"><dt>Test</dt><dd>30-Tage-Lizenz automatisch</dd></div>
+          </dl>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
+
+    <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span>
-          <h2>Wie erfolgt die Installation?</h2>
-          <p>Für die Installation von EGroupware mit dem Univention Corporate Server (UCS) gibt es verschiedene Möglichkeiten: Falls Sie Fragen zu der Installation oder Migration haben, sprechen Sie uns einfach an.</p>
-          <ul class="check-list mt-3"><li>Wenn Sie bereits über einen bestehenden UCS-&#8288;Server in Ihrem Unter&shy;nehmen verfügen, dann können Sie einfach über das App Center EGroupware installieren.</li><li>Bitte benutzen Sie zur Anmeldung an EGroupware &quot;Administrator&quot; als Benutzer&shy;namen und das Passwort, das Sie zur UCS Administration verwenden. Wenn Sie bereits Benutzer bei UCS angelegt haben, können Sie sich damit natürlich auch anmelden. Eine kosten&shy;freie 30 Tage Test&shy;lizenz wird automatisch für Sie generiert.</li></ul>
-          <div class="link-list mt-3"><a href="kontakt">uns</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.5 5.2a7.5 7.5 0 1 0 0 13.6M3.5 10h9M3.5 14h9"/></svg></span>
-          <h2>Preise und Funktions&shy;weise</h2>
-          <p>Für UCS gibt es gestaffelte Preis&shy;modelle je nach Anwendungs&shy;fall und Größe. Für gemeinnützige Organisationen, Schulen und Bildungs&shy;einrichtungen bietet Univention ein eigenes Preis&shy;modell an. UCS Core Edition ist eine Voll&shy;version die gratis verwendet werden kann, aber keinen Support&shy;anspruch beinhaltet. Wir empfehlen die Base oder Standard Subskription, je nachdem ob Sie UCS als Domainkontroller einsetzen oder nicht. Sprechen Sie uns an, damit wir Ihnen die passende Lösung anbieten können.</p>
-          
-          <div class="link-list mt-3"><a href="https://www.univention.de/produkte/preise/" rel="noopener" target="_blank">Preis&shy;modelle</a><a href="kontakt">Sprechen Sie uns an</a></div>
-        </article>
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Arbeitet zusammen mit</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/admin.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="administration">Administration</a></h3><p>Benutzer, Rechte und Anmeldung steuern.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/mail.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="email">E-&#8288;Mail</a></h3><p>Postfach im Browser und per IMAP.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/collabora.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="online-office">Online-Office</a></h3><p>Dokumente gemeinsam mit Collabora Online.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/filemanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="dateiverwaltung">Datei&shy;verwaltung</a></h3><p>Dokumente zentral ablegen und teilen.</p></div></article>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="administration">Administration</a></li><li><a href="guacamole">Guacamole</a></li><li><a href="vidoteach">Lernen mit Videos</a></li><li><a href="community-edition-vs-epl">EGroupware CE vs. EPL</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zu EGroupware auf Univention</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Was ist der Unterschied zwischen Univention Nubus und UCS?</summary>
+            <div class="faq-body"><p>Univention Nubus ist die aktuelle Bezeichnung der Plattform, die früher Univention Corporate Server (UCS) hieß. Seit Oktober 2026 erscheint EGroupware als eigenes Release für Univention Nubus.</p></div>
+          </details>
+          <details>
+            <summary>Wie installiere ich EGroupware auf Univention?</summary>
+            <div class="faq-body"><p>Über das Univention App Center auf Ihrem bestehenden Univention-Server. Die App wird als Docker-Container ausgeliefert.</p></div>
+          </details>
+          <details>
+            <summary>Mit welchem Konto melde ich mich zuerst an?</summary>
+            <div class="faq-body"><p>Mit dem Benutzer&shy;namen „Administrator“ und dem Passwort der Univention-Administration. Benutzer, die Sie bereits in Univention angelegt haben, können sich ebenfalls anmelden.</p></div>
+          </details>
+          <details>
+            <summary>Kann ich eine bestehende EGroupware nach Univention umziehen?</summary>
+            <div class="faq-body"><p>Ja. Wir bieten mehrere Wege für die Migration an, dabei bleiben alle Daten erhalten. Sprechen Sie uns gerne an.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
           <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
           <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage kostenlos testen</a>
+            <a class="btn btn--light btn--lg" href="funktionen">Alle Funktionen</a>
           </div>
         </div>
       </div>

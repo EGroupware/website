@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Team Chat mit Rocket.Chat</title>
-  <meta name="description" content="Rocket.Chat makes fast and secure coordination possible - both with several participants in a team chat and directly">
+  <title>Team chat with Rocket.Chat: single sign-on and status app</title>
+  <meta name="description" content="Team chat in EGroupware with Rocket.Chat: single sign-on, chat and video calls with a right-click from the status app, apps for desktop and smartphone.">
   <link rel="canonical" href="https://www.egroupware.org/en/chat">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/chat">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/chat">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Team Chat mit Rocket.Chat">
-  <meta property="og:description" content="Rocket.Chat makes fast and secure coordination possible - both with several participants in a team chat and directly">
+  <meta property="og:title" content="Team chat with Rocket.Chat: single sign-on and status app">
+  <meta property="og:description" content="Team chat in EGroupware with Rocket.Chat: single sign-on, chat and video calls with a right-click from the status app, apps for desktop and smartphone.">
   <meta property="og:url" content="https://www.egroupware.org/en/chat">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/chat#webpage","url":"https://www.egroupware.org/en/chat","name":"Team chat with Rocket.Chat: single sign-on and status app","description":"Team chat in EGroupware with Rocket.Chat: single sign-on, chat and video calls with a right-click from the status app, apps for desktop and smartphone.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/chat#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/chat#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/chat#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://www.egroupware.org/en/features"},{"@type":"ListItem","position":3,"name":"Team chat","item":"https://www.egroupware.org/en/chat"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/chat#faq","mainEntity":[{"@type":"Question","name":"Do I need a separate account for the chat?","acceptedAnswer":{"@type":"Answer","text":"No. You log in via single sign-on with your EGroupware account. The administration decides which users and groups may use the chat."}},{"@type":"Question","name":"Are there apps for smartphone and desktop?","acceptedAnswer":{"@type":"Answer","text":"Yes. You download the Rocket.Chat apps for the different platforms from the Rocket.Chat website. Push notifications then inform you directly on your device."}},{"@type":"Question","name":"Where is the chat data stored?","acceptedAnswer":{"@type":"Answer","text":"On your own server or on the EGroupware Rocket.Chat server in a German data centre. The conversation is transmitted encrypted."}},{"@type":"Question","name":"Can I start a video conference from the chat?","acceptedAnswer":{"@type":"Answer","text":"Yes. With a right-click on a colleague in the status app you send a chat message or start a video conference directly."}}]}]}
   </script>
 </head>
 <body>
@@ -123,106 +126,140 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/chat):
-       - Enthielt 1 eingebettetes Video (https://www.youtube.com/watch?v=icBcfGjKg-A).
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Team chat</span>
-        <h1>Team Chat</h1>
-        <p class="lead">Rocket.Chat makes fast and secure coordination possible - both with several participants in a team chat and directly from colleague to colleague. The exchange of files works quickly and smoothly. And all of this is GDPR-compliant, as …</p>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="features">Features</a></nav>
+        <h1>Team chat</h1>
+        <p class="lead">Coordinate quickly – in a team chat with several colleagues or directly from person to person. The chat with Rocket.Chat is integrated into EGroupware, and you exchange files along the way.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="trial">Try free for 30 days</a>
+          <a class="btn btn--ghost btn--lg" href="pricing">See pricing</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Single sign-&#8288;on</strong><span>Log in with your EGroupware account</span></li><li><strong>Status app</strong><span>See who is available</span></li><li><strong>Open source</strong><span>Rocket.Chat on servers in Germany</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/desktop-rocketchat.webp" alt="Team Chat" width="1200" height="717" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/desktop-rocketchat.webp" alt="Rocket.Chat with channels and direct messages" width="1200" height="717" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>Team Chat</span></div></nav>
+
     <section class="section">
       <div class="wrap">
+        <article class="app-highlight app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--info">SPECIAL</span><small>Team chat highlight</small></div>
+            <h2>One account, one click to a conversation</h2>
+            <p>You log in to the chat with your EGroupware account – via single sign-&#8288;on, without a second password. In the status app you see which colleagues are available right now. A right-click on their picture is all it takes to send a chat message or start a video conference. You set your own availability status yourself.</p>
+            <p class="mt-3"><a class="link-arrow" href="videoconferences">More on video conferences</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Short paths in the team</h2>
+          <p>Faster than an email, easier to follow than a shout across the office.</p>
+        </div>
         <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 7 7.4 5.2a2 2 0 0 0 2.2 0L20.5 7"/></svg></span>
-          <h2>Privacy compliant chatting in the team</h2>
-          <p>Rocket.Chat makes fast and secure coordination possible - both with several participants in a team chat and directly from colleague to colleague. The exchange of files works quickly and smoothly. And all of this is GDPR-compliant, as EGroupware and Rocket.Chat run on the company&#x27;s own servers. Trial Version Try now 30 days for free</p>
-          
-          <div class="link-list mt-3"><a href="trial">Trial Version</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 7 7.4 5.2a2 2 0 0 0 2.2 0L20.5 7"/></svg></span>
-          <h2>Benefits of Rocket.Chat</h2>
-          <p>The exchange of files or audio/video conferences in real time facilitate team communication. The conversation is encrypted and the software can either be installed on your server or you can use the EGroupware Rocket.Chat server from the German data centre. You always have control over your data.</p>
-          
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Team chats and direct messages</h3>
+            <p>Set up different team chats in Rocket.Chat or write to colleagues directly. That way every discussion stays where it belongs.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#folder"/></svg></span>
+            <h3>Files, audio and video</h3>
+            <p>Exchange files in the chat and switch to a real-time audio or video call when needed. The conversation is transmitted encrypted.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#mail"/></svg></span>
+            <h3>Notification by email or push</h3>
+            <p>If you are not logged in, an email tells you about new messages. With the Rocket.Chat app on your PC or smart&shy;phone you receive push notifications straight on your device.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lock"/></svg></span>
+            <h3>Enable for users and groups</h3>
+            <p>In the administration you enable the chat for individual users or whole groups. Installation and setup are done directly from EGroupware.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>How does Rocket.Chat work?</h2>
-          <p class="mt-2">Rocket.chat is an open source solution that has been integrated into EGroupware. This means that the installation and use of a team chat is now very easy from EGroupware. You can release the software for corresponding users or groups via the administration. Then create different team chats within Rocket.Chat.</p>
-          
-          
+          <span class="eyebrow">Hosting and apps</span>
+          <h2>In the browser, in the app, on servers of your choice</h2>
+          <p class="mt-2">Rocket.Chat is open source. You install it on your own server or use the EGroupware Rocket.Chat server in a German data centre – so you keep control of your data and chat in compliance with the GDPR. On the move, you chat and make calls with the Rocket.Chat apps for desktop and smart&shy;phone.</p>
+          <p class="mt-3"><a class="link-arrow" href="https://rocket.chat/install" rel="noopener" target="_blank">Download the Rocket.Chat apps</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://www.youtube.com/watch?v=icBcfGjKg-A" rel="noopener" target="_blank">Webinar recording on chat and video conferences</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/desktop-rocketchat.webp" alt="How does Rocket.Chat work?" width="1200" height="717" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Team chat at a glance</strong><span class="st-badge st-badge--update">CHAT</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Software</dt><dd>Rocket.Chat, open source</dd></div>
+            <div class="fact"><dt>Login</dt><dd>Single sign-&#8288;on with your EGroupware account</dd></div>
+            <div class="fact"><dt>Hosting</dt><dd>Your own server or a data centre in Germany</dd></div>
+            <div class="fact"><dt>Apps</dt><dd>Desktop and smart&shy;phone</dd></div>
+            <div class="fact"><dt>Extras</dt><dd>Files, audio and video calls</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
-          <h2>Rocket.Chat on the smart&shy;phone</h2>
-          <p>Chat on the move. The advantage of the mobile app is that you can take your communication centre with you wherever you go. Even independently of EGroupware, you always stay informed about current projects and can make video calls. You can download the client for the different platforms directly from the Rocket.Chat website. There you will find even more information about Rocket.Chat.</p>
-          
-          <div class="link-list mt-3"><a href="https://rocket.chat/install" rel="noopener" target="_blank">Rocket.Chat website</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 7 7.4 5.2a2 2 0 0 0 2.2 0L20.5 7"/></svg></span>
-          <h2>Notification by email or push</h2>
-          <p>If you are not logged into EGroupware or your Rocket.Chat, you will be informed of a new message by email. It is also possible to install the Rocket.Chat application additionally on your PC or mobile phone. Push notifications inform you directly on your mobile phone. So you will never miss a chat again.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 7 7.4 5.2a2 2 0 0 0 2.2 0L20.5 7"/></svg></span>
-          <h2>Communication directly from the Status App</h2>
-          <p>See directly who is currently &quot;available&quot; (online) in EGroupware. With a right click on the picture of the participant, you can send them a chat message or start a video conference. To start a conversation with your colleagues, you can either call up the Rocket.Chat module directly or, even easier, address the participants directly via the Status App with a right-click. Each participant can set their own availability status.</p>
-          
-          <div class="link-list mt-3"><a href="videoconferences">video conference</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Webinar recording for chat or video conference</h2>
-          <p>Take a look at the functions of Rocket.Chat and Jitsi in EGroupware in the webinar recording. There we show live how you can plan or set up video calls. In addition, questions about the handling and the technical possibilities will be answered. If you have any further questions about the use or functionality of EGroupware, simply contact us. We look forward to hearing from you.</p>
-          
-          <div class="link-list mt-3"><a href="contact">contact</a></div>
-        </article>
+        <div class="section-head reveal">
+          <span class="eyebrow">Related</span>
+          <h2>Works together with</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/videoconference.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="videoconferences">Video conferences</a></h3><p>Meetings with Jitsi or BigBlueButton.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/calendar.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="calendar">Calendar</a></h3><p>Plan appointments as a team.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/filemanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="file-manager">File manager</a></h3><p>Store and share files centrally.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/collabora.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="online-office">Online office</a></h3><p>Edit documents together.</p></div></article>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
-        <ul class="sibling-list mt-3"><li><a href="calendar">Calendar</a></li><li><a href="videoconferences">Video&shy;conferences</a></li><li><a href="file-manager">Documents</a></li><li><a href="online-office">Online Office</a></li><li><a href="kanban">Kanban</a></li></ul>
-        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
+        <div class="section-head reveal">
+          <h2>Frequently asked questions about the team chat</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Do I need a separate account for the chat?</summary>
+            <div class="faq-body"><p>No. You log in via single sign-&#8288;on with your EGroupware account. The administration decides which users and groups may use the chat.</p></div>
+          </details>
+          <details>
+            <summary>Are there apps for smart&shy;phone and desktop?</summary>
+            <div class="faq-body"><p>Yes. You download the Rocket.Chat apps for the different platforms from the Rocket.Chat website. Push notifications then inform you directly on your device.</p></div>
+          </details>
+          <details>
+            <summary>Where is the chat data stored?</summary>
+            <div class="faq-body"><p>On your own server or on the EGroupware Rocket.Chat server in a German data centre. The conversation is transmitted encrypted.</p></div>
+          </details>
+          <details>
+            <summary>Can I start a video conference from the chat?</summary>
+            <div class="faq-body"><p>Yes. With a right-click on a colleague in the status app you send a chat message or start a video conference directly.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Try EGroupware free for 30 days</h2>
+          <h2>Try the team chat free for 30 days</h2>
           <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
-            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+            <a class="btn btn--solid-light btn--lg" href="trial">Try free for 30 days</a>
+            <a class="btn btn--light btn--lg" href="features">All features</a>
           </div>
         </div>
       </div>

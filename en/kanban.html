@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Managing workflows smart with Kanban in EGroupware</title>
-  <meta name="description" content="In EGroupware you can control processes easily and smartly with the new Kanban application. The Kanban method is suitable for sales processes">
+  <title>Kanban board for teams: contacts, tasks and tickets as cards</title>
+  <meta name="description" content="Kanban in EGroupware: design columns and swimlanes freely, contacts, tasks and tickets as cards, columns react to changes automatically. Enterprise Line.">
   <link rel="canonical" href="https://www.egroupware.org/en/kanban">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kanban">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/kanban">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Managing workflows smart with Kanban in EGroupware">
-  <meta property="og:description" content="In EGroupware you can control processes easily and smartly with the new Kanban application. The Kanban method is suitable for sales processes">
+  <meta property="og:title" content="Kanban board for teams: contacts, tasks and tickets as cards">
+  <meta property="og:description" content="Kanban in EGroupware: design columns and swimlanes freely, contacts, tasks and tickets as cards, columns react to changes automatically. Enterprise Line.">
   <meta property="og:url" content="https://www.egroupware.org/en/kanban">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/kanban#webpage","url":"https://www.egroupware.org/en/kanban","name":"Kanban board for teams: contacts, tasks and tickets as cards","description":"Kanban in EGroupware: design columns and swimlanes freely, contacts, tasks and tickets as cards, columns react to changes automatically. Enterprise Line.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/kanban#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/kanban#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/kanban#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://www.egroupware.org/en/features"},{"@type":"ListItem","position":3,"name":"Kanban","item":"https://www.egroupware.org/en/kanban"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/kanban#faq","mainEntity":[{"@type":"Question","name":"Is Kanban included in the Community Edition?","acceptedAnswer":{"@type":"Answer","text":"No. Kanban is part of the EGroupware Enterprise Line. Our comparison of the Community Edition and the Enterprise Line shows the differences between the editions."}},{"@type":"Question","name":"Which entries can I put on the board?","acceptedAnswer":{"@type":"Answer","text":"Contacts, tasks, tickets and projects from EGroupware. You decide which applications a board allows when you set it up."}},{"@type":"Question","name":"Do I have to move cards by hand after every change?","acceptedAnswer":{"@type":"Answer","text":"No. You define how entries move to another column automatically when they change, for example in their status. The other way round, moving a card can change the entry."}},{"@type":"Question","name":"Who may move cards?","acceptedAnswer":{"@type":"Answer","text":"You decide which groups have access to a board. For each swimlane you can also define who may move entries within it."}}]}]}
   </script>
 </head>
 <body>
@@ -123,141 +126,152 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/kanban):
-       - Enthielt 2 eingebettetes Video (https://youtu.be/9TieCfVdm5E, https://www.youtube.com/watch?v=iVaFVa7HYj4).
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Kanban</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="features">Features</a></nav>
         <h1>Kanban</h1>
-        <p class="lead">In EGroupware EPL you control processes easily and intelligently with the new Kanban application. The Kanban method is suitable for sales processes, project organisation, software development or the management of other services. The core …</p>
+        <p class="lead">Manage sales, projects, support or software development on a Kanban board that makes your work visible and limits the tasks running at the same time. Contacts, tasks and tickets from EGroupware go straight onto the board as cards.</p>
+        <p class="mt-2"><span class="st-badge st-badge--info">ENTERPRISE LINE</span> <a href="community-edition-vs-epl">Enterprise Line only</a></p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="trial">Try free for 30 days</a>
+          <a class="btn btn--ghost btn--lg" href="pricing">See pricing</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Flexible board</strong><span>Columns and swimlanes as needed</span></li><li><strong>Real data</strong><span>Contacts, tasks, tickets, projects</span></li><li><strong>Automation</strong><span>Board and entries stay in step</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/kanban-perspektive-edit-1080px-deen.webp" alt="Kanban" width="1080" height="945" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/kanban-perspektive-edit-1080px-deen.webp" alt="Kanban board in EGroupware with contacts as cards" width="1080" height="945" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>Kanban</span></div></nav>
-    <section class="section section--knapp">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Managing workflows with Kanban</h2>
-          <p class="mt-2">In EGroupware EPL you control processes easily and intelligently with the new Kanban application. The Kanban method is suitable for sales processes, project organisation, software development or the management of other services. The core of Kanban is the visualisation and limitation of the tasks to be completed simultaneously. As soon as capacities become free, an employee &quot;picks&quot; a task from the pool and pulls it onto &quot;Work in Progress&quot;. Download Webinar slides Kanban presentation</p>
-          
-          <div class="link-list mt-3"><a href="../assets/dokumente/Webinar-EGroupware-Kanban-03.2021-EN-1.pdf" class="link-list__pdf">Download Webinar slides</a></div>
+
+    <section class="section">
+      <div class="wrap">
+        <article class="app-highlight app-highlight--neu reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEW</span><small>Since EGroupware 23.1</small></div>
+            <h2>Columns that react to changes</h2>
+            <p>When a developer sets a ticket to the status "Testing", the card moves into the "Testing" column automatically – without anyone touching the board. The other way round, a column changes the entry as soon as you drag a card into it: for example, it sets the status or enters you as the person responsible. This keeps the board and the data in step without duplicate work.</p>
+          </div>
+          <figure class="shot"><img class="shot__img" src="../assets/img/import/kanbanboard-1.webp" alt="Editing a Kanban board: columns with actions when a card is added" width="791" height="590" loading="lazy" decoding="async"></figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Make workflows visible</h2>
+          <p>From incoming sales leads to the completed ticket – on one board.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#grid"/></svg></span>
+            <h3>Design the board freely</h3>
+            <p>Every new board starts with the columns "New (Pool)", "In progress" and "Done". You can change the number, names and colours of columns and swimlanes at any time, sort them by drag-&#8288;and-&#8288;drop and collapse them in one click.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#plug"/></svg></span>
+            <h3>Data from all applications</h3>
+            <p>Contacts, tasks, tickets and projects go onto the board as cards. Drag an entry onto the board or create it right there.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#user-plus"/></svg></span>
+            <h3>New entries automatically</h3>
+            <p>Define which new entries land in the first column automatically – in sales, for example, all contacts in the address book "Sales incoming", in development the tickets of a category or product version.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Responsibilities per step</h3>
+            <p>Give a column fixed responsible people or take over those of the swimlane. If you wish, completed entries can disappear from the board automatically.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lock"/></svg></span>
+            <h3>Permissions for board and swimlane</h3>
+            <p>You decide which groups have access to a board. For each swimlane you also define who may move entries within it.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>Boards as favourites</h3>
+            <p>Save your boards as favourites and switch between sales, support and development in one click.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEW</span> Favourites can be arranged hierarchically – handy if you manage a lot of boards.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>Practical example of the sales process</h2>
-          <p class="mt-2">In the video you can see a Kanban board and the workflows using the example of a sales process for acquiring new customers. Of course, you have to adapt the process, the address books or Infolog types and the status to your processes. As soon as the board is created and you have discussed the processes with the corresponding sales teams, the process can start. It makes sense to directly plan reviews and improvement processes in the sales team. Then adapt your board accordingly to the feedback from the sales team.</p>
-          
-          
+          <span class="eyebrow">In practice</span>
+          <h2>Kanban in sales, projects and support</h2>
+          <p class="mt-2">The core of Kanban is to make tasks visible and limit the work in progress: as soon as capacity becomes free, an employee picks the next task from the pool. One example is acquiring new customers in sales – you adapt the process, address books, task types and statuses to your own workflows. Keep the board simple and improve it with your team's feedback.</p>
+          <p class="mt-3"><a class="link-arrow" href="../assets/dokumente/Webinar-EGroupware-Kanban-03.2021-EN-1.pdf">Kanban webinar slides (PDF)</a></p>
+          <p class="mt-2"><a class="link-arrow" href="community-edition-vs-epl">Community Edition and Enterprise Line compared</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/kanbanboard-1.webp" alt="Practical example of the sales process" width="791" height="590" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Kanban at a glance</strong><span class="st-badge st-badge--update">KANBAN</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Edition</dt><dd>Enterprise Line</dd></div>
+            <div class="fact"><dt>Structure</dt><dd>Columns and swimlanes</dd></div>
+            <div class="fact"><dt>Cards</dt><dd>Contacts, tasks, tickets, projects</dd></div>
+            <div class="fact"><dt>Automation</dt><dd>New entries, column change, status change</dd></div>
+            <div class="fact"><dt>Handling</dt><dd>Drag-&#8288;and-&#8288;drop</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Related</span>
+          <h2>Works together with</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/tracker.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="helpdesk">Helpdesk</a></h3><p>Tickets onto the board automatically.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/infolog.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="tasks">Tasks</a></h3><p>Tasks and notes in the team.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="contacts">Contacts</a></h3><p>Manage sales contacts as cards.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/projectmanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="projects">Projects</a></h3><p>Plan and manage projects.</p></div></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Define Kanban Board</h2>
-          <p class="mt-2">In the first step, you define a name for your Kanban board, the applications to be used and which groups have access to the board. By default, 3 columns are created: &quot;New (Pool)&quot;, &quot;In Progress&quot; and &quot;Done&quot;. You can rename, delete, change colours or add new columns at any time. In addition, so-&#8288;called swimlanes can be created, either to categorise the process or to visualise different responsibilities. A swimlane is also assigned a title and, if necessary, a colour and access rights. The access rights here control who is authorised to move entries in this swimlane. The general rule is: keep the board as simple and clear as possible, with effective use.</p>
-          
-          
+        <div class="section-head reveal">
+          <h2>Frequently asked questions about Kanban</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Is Kanban included in the Community Edition?</summary>
+            <div class="faq-body"><p>No. Kanban is part of the EGroupware Enterprise Line. Our comparison of the Community Edition and the Enterprise Line shows the differences between the editions.</p></div>
+          </details>
+          <details>
+            <summary>Which entries can I put on the board?</summary>
+            <div class="faq-body"><p>Contacts, tasks, tickets and projects from EGroupware. You decide which applications a board allows when you set it up.</p></div>
+          </details>
+          <details>
+            <summary>Do I have to move cards by hand after every change?</summary>
+            <div class="faq-body"><p>No. You define how entries move to another column automatically when they change, for example in their status. The other way round, moving a card can change the entry.</p></div>
+          </details>
+          <details>
+            <summary>Who may move cards?</summary>
+            <div class="faq-body"><p>You decide which groups have access to a board. For each swimlane you can also define who may move entries within it.</p></div>
+          </details>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Kanban favourites</h2>
-          
-          <ul class="check-list mt-3"><li>Authorised applications</li><li>Permissions</li><li>Board description</li><li>Boards as favourites</li></ul>
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/kanban-favoriten.webp" alt="Kanban favourites" width="735" height="346" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Design Kanban</h2>
-          
-          <ul class="check-list mt-3"><li>Free design of columns and swimlanes: Number, colours, Designations/names.</li><li>Available EGroupware applications and access authorisations can be set.</li><li>Access rights for swimlanes can be set separately.</li><li>Maps are moved between columns (and swimlanes) by DnD. moved.</li><li>Columns and swimlanes can be collapsed by clicking on the can be collapsed by clicking on the designation.</li></ul>
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Sort columns and swimlanes</h2>
-          
-          <ul class="check-list mt-3"><li>Possible via DnD in board editing.</li><li>The handle is located at the front.</li></ul>
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/spalten-sortieren.webp" alt="Sort columns and swimlanes" width="755" height="467" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Elements via DnD into a Kanban board</h2>
-          
-          <ul class="check-list mt-3"><li>Drag a contact from address book to the Kanban tab and from there &quot;drop&quot; the element on the corresponding column</li><li>&quot;Drag and Drop&quot; also works between other modules (where it makes sense)</li></ul>
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Process control in the Kanban board</h2>
-          <p class="mt-2">Processes can be controlled at different levels:</p>
-          <ul class="check-list mt-3"><li>&quot;New Entries - Lists (Listen)&quot;: Here you define how new entries are automatically added to the first column (e.g. New or Pool). In the sales process, for example, you define a specific address book &quot;Sales-Incoming&quot;. In software development or complaint management, the subject area, category or version of the product.</li><li>&quot;Action on column change - changes the ticket&quot;: You can define on each column whether an action is to be carried out when the entry is moved to this column. For example, &quot;add the user as responsible who grabs the task&quot; or &quot;change the status of the ticket to &quot;testing&quot;&quot; when the entry is moved into this column. In addition, one can also set fixed responsibilities for the process step or responsibilities from the corresponding swimlane. If desired, one can also have completed tasks automatically removed from the board.</li><li>&quot;Change of a ticket - shift in the board&quot;: Further&shy;more, you can also define in the area &quot;Lists (listening)&quot; how existing entries of the board are automatically shifted between the columns. Concretely: A developer sets a &quot;Work in Progress&quot; ticket from the Kanban board to status &quot;testing&quot; with a comment on what needs to be tested. The ticket is automatically moved to the &quot;testing&quot; column in the board. This saves time and extra effort if the ticket is being processed anyway.</li></ul>
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/kanbanlisten2.webp" alt="Process control in the Kanban board" width="901" height="1409" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Kanban Basic Principles &amp; Core Practices</h2>
-          <p class="mt-2">Kanban Basic Principles: Kanban Core Practices:</p>
-          <ul class="check-list mt-3"><li>Start with what you are doing right now - simple introduction</li><li>Evolve through small/evolutionary steps</li><li>Consider current processes, roles and responsibilities</li><li>Encourage showing leadership at every level of the organisation</li><li>Visualisation of tasks and processes (workflow)</li><li>Limit &quot;Work in Progress&quot; (WIP) and concurrent tasks</li><li>Measurement and process control</li><li>Defining all rules and terminology in the process</li><li>Regular feedback loops and reviews</li><li>Continuous improvement processes in the team and process flow</li></ul>
-          
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
-        <ul class="sibling-list mt-3"><li><a href="calendar">Calendar</a></li><li><a href="chat">Team Chat</a></li><li><a href="videoconferences">Video&shy;conferences</a></li><li><a href="file-manager">Documents</a></li><li><a href="online-office">Online Office</a></li></ul>
-        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Try EGroupware free for 30 days</h2>
+          <h2>Try Kanban free for 30 days</h2>
           <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
-            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+            <a class="btn btn--solid-light btn--lg" href="trial">Try free for 30 days</a>
+            <a class="btn btn--light btn--lg" href="features">All features</a>
           </div>
         </div>
       </div>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>E-Rechnung in EGroupware – XRechnung und ZUGFeRD</title>
-  <meta name="description" content="E-Rechnung ab 2025: EGroupware erstellt und empfängt elektronische Rechnungen nach EN 16931 – als XRechnung und als ZUGFeRD.">
+  <title>E-Rechnung mit XRechnung und ZUGFeRD: Angebot bis Rechnung</title>
+  <meta name="description" content="E-Rechnungen nach EN 16931 als XRechnung oder ZUGFeRD erstellen und empfangen, KI-Import von Belegen, Angebot bis Rechnung – in der EGroupware Enterprise Line.">
   <link rel="canonical" href="https://www.egroupware.org/de/e-rechnung">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/e-rechnung">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/e-invoicing">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="E-Rechnung in EGroupware – XRechnung und ZUGFeRD">
-  <meta property="og:description" content="E-Rechnung ab 2025: EGroupware erstellt und empfängt elektronische Rechnungen nach EN 16931 – als XRechnung und als ZUGFeRD.">
+  <meta property="og:title" content="E-Rechnung mit XRechnung und ZUGFeRD: Angebot bis Rechnung">
+  <meta property="og:description" content="E-Rechnungen nach EN 16931 als XRechnung oder ZUGFeRD erstellen und empfangen, KI-Import von Belegen, Angebot bis Rechnung – in der EGroupware Enterprise Line.">
   <meta property="og:url" content="https://www.egroupware.org/de/e-rechnung">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/e-rechnung#webpage","url":"https://www.egroupware.org/de/e-rechnung","name":"E-Rechnung mit XRechnung und ZUGFeRD: Angebot bis Rechnung","description":"E-Rechnungen nach EN 16931 als XRechnung oder ZUGFeRD erstellen und empfangen, KI-Import von Belegen, Angebot bis Rechnung – in der EGroupware Enterprise Line.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/e-rechnung#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/e-rechnung#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/e-rechnung#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"E-Rechnung","item":"https://www.egroupware.org/de/e-rechnung"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/e-rechnung#faq","mainEntity":[{"@type":"Question","name":"Welche Formate unterstützt die E-Rechnung?","acceptedAnswer":{"@type":"Answer","text":"XRechnung (reines XML) und ZUGFeRD (PDF mit eingebetteten XML-Daten), beide nach der EU-Norm EN 16931."}},{"@type":"Question","name":"Kann ich auch Rechnungen empfangen und prüfen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Sie importieren E-Rechnungen im XML- oder ZUGFeRD-Format und prüfen sie in der App. Gescannte Belege und einfache PDF-Rechnungen liest der KI-gestützte Import ein."}},{"@type":"Question","name":"Ist die E-Rechnung in der Community Edition enthalten?","acceptedAnswer":{"@type":"Answer","text":"Nein, die E-Rechnung ist Teil der Enterprise Line. Den Unterschied der beiden Editionen zeigt unser Vergleich."}},{"@type":"Question","name":"Lässt sich eine Rechnung später noch ändern?","acceptedAnswer":{"@type":"Answer","text":"Im Entwurf ja. Ist eine Rechnung berechnet, lässt sie sich nur noch stornieren – die Daten bleiben unverändert."}}]}]}
   </script>
 </head>
 <body>
@@ -123,94 +126,153 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/e-rechnung):
-       - Kein eigener Einleitungstext – erster Abschnitt („Entdecken Sie die E-Rechnungs-App“) in den Kopfbereich gezogen.
-       - Title und Meta-Description gekürzt – im Original über 90 Zeichen.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">E-&#8288;Rechnung</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
         <h1>E-&#8288;Rechnung</h1>
-        <p class="lead">Mit der Einführung der verpflichtenden elektronischen Rechnungs&shy;stellung in Deutsch&shy;land am 1. Januar 2025 hat EGroupware eine Anwendung zur Rechnungs&shy;stellung entwickelt. Sie ermöglicht die Erstellung und den Empfang von elektronischen Rechnungen gemäß der EU-&#8288;Norm EN 16931 und unterstützt sowohl XRechnung (XML-&#8288;Format) als auch ZUGFeRD (hybrides PDF/XML). Das PDF-&#8288;Layout ist mit Platzhaltern anpassbar, während der XML-&#8288;Teil automatisch im gewünschten Format generiert wird.</p>
+        <p class="lead">Erstellen und empfangen Sie elektronische Rechnungen nach der EU-&#8288;Norm EN 16931 – als XRechnung oder ZUGFeRD. Vom Angebot über die Auftrags&shy;bestätigung bis zur Rechnung bleibt alles in EGroupware, mit Ihrem eigenen Layout.</p>
+        <p class="mt-2"><span class="st-badge st-badge--info">ENTERPRISE LINE</span> <a href="community-edition-vs-epl">Nur in der Enterprise Line</a></p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage kostenlos testen</a>
+          <a class="btn btn--ghost btn--lg" href="preise">Preise ansehen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>EN 16931</strong><span>XRechnung und ZUGFeRD</span></li><li><strong>KI-&#8288;Import</strong><span>Belege und PDF-&#8288;Rechnungen</span></li><li><strong>Angebot bis Rechnung</strong><span>In einer Anwendung</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/zugferd-rechnung.webp" alt="E-Rechnung" width="1200" height="760" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/zugferd-rechnung.webp" alt="ZUGFeRD-Rechnung mit PDF-Ansicht und Rechnungsdaten" width="1200" height="760" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>E-&#8288;Rechnung</span></div></nav>
+
     <section class="section">
       <div class="wrap">
+        <article class="app-highlight app-highlight--neu app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEU</span><small>Seit EGroupware 26.4</small></div>
+            <h2>Eingangs&shy;rechnungen mit KI importieren</h2>
+            <p>Neben E-&#8288;Rechnungen im XML- oder ZUGFeRD-Format importieren Sie jetzt auch gescannte Belege und Rechnungen sowie einfache PDF-&#8288;Rechnungen ohne ZUGFeRD-Daten – KI-&#8288;gestützt. Seit Version 26.7 erkennt der Import zusätzlich die Art des Dokuments, etwa Rechnung oder Gutschrift, und den Abrechnungs&shy;zeit&shy;raum. Sie prüfen das Ergebnis und arbeiten in der Rechnungs-&#8288;App weiter.</p>
+            <p class="mt-3"><a class="link-arrow" href="ki">Mehr zu KI in EGroupware</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Rechnungen schreiben, empfangen, prüfen</h2>
+          <p>Zur Einführung der E-&#8288;Rechnungs&shy;pflicht in Deutsch&shy;land am 1. Januar 2025 entwickelt – für beide gängigen Formate.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.5 5.2a7.5 7.5 0 1 0 0 13.6M3.5 10h9M3.5 14h9"/></svg></span>
-          <h2>Elektronische Rechnungs&shy;stellung</h2>
-          <p>Es gibt zwei gängige E-&#8288;Rechnungs-Verfahren der nach EN 16931: XRechnung, ein reines XML-&#8288;Format, das als Standard für die öffentliche Verwaltung verwendet wird, und ZUGFeRD, ein Hybridmodell, das eine strukturierte XML-&#8288;Datei mit einem lesbaren PDF kombiniert.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3.5" width="18" height="17" rx="2.5"/><path d="M3 9h18M9.5 9v11.5"/></svg></span>
-          <h2>Layout der Rechnung</h2>
-          <p>Der PDF-&#8288;Teil der Rechnung basiert auf einem Platzhalter&shy;dokument, in dem Sie Ihr Logo und alle Daten nach Belieben anordnen können, einschließlich der Tabelle mit den Rechnungs&shy;positionen. Der XML-&#8288;Teil wird automatisch in einem standardisierten Format erstellt.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 8.9 19.3a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.7 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.7 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.03-1.56V3a2 2 0 1 1 4 0v.1A1.7 1.7 0 0 0 15 4.7a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9v.03A1.7 1.7 0 0 0 21 10.06H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>
-          <h2>App-&#8288;Konfiguration</h2>
-          <p>In der App-&#8288;Konfiguration können Sie bis zu drei Standard&shy;verkäufer definieren und je nach Komplexität Ihrer Geschäfts&shy;beziehungen weitere Vertrags&shy;partner, wie Rechnungs&shy;empfänger oder Endkunden, hinzu&shy;fügen. Diese Partner können einfach aus dem Adressbuch ausgewählt werden und in der Konfiguration legen Sie fest, in welchem benutzer&shy;definierten Feld des Kontakts z.B. die Kunden&shy;nummer oder die Umsatzsteuer-&#8288;ID gespeichert werden.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.5 5.2a7.5 7.5 0 1 0 0 13.6M3.5 10h9M3.5 14h9"/></svg></span>
-          <h2>Zahlungs&shy;informationen</h2>
-          <p>Zahlungs&shy;informationen, Servicezeiträume und allgemeine Texte können einfach eingegeben werden. Artikel mit Beschreibungen, Mengen, Nettopreisen und Steuersätzen können in den Rechnungs&shy;positionen aufgeführt werden. Die Mehrwert&shy;steuer und der Gesamtpreis werden automatisch berechnet und als Gesamtsumme angezeigt. Es gibt auch eine Aufschlüsselung nach Steuersätzen.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.5 5.2a7.5 7.5 0 1 0 0 13.6M3.5 10h9M3.5 14h9"/></svg></span>
-          <h2>Status des Rechnungsentwurfs</h2>
-          <p>Solange sich eine Rechnung im Entwurfs&shy;status befindet, können alle Daten angepasst oder Testdrucke erstellt werden. Wenn sich eine Rechnung jedoch im Status &quot;Berechnet&quot; befindet, kann sie nur noch storniert werden und die Daten können nicht mehr geändert werden. Ein Notizfeld ermöglicht es Ihnen, der Rechnung Bemerkungen hinzuzufügen, z. B. das Datum einer Zahlungs&shy;erinnerung oder Mahnung.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15.5v3.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3.5M7.5 11 12 15.5 16.5 11M12 3v12"/></svg></span>
-          <h2>Import von lokalen Rechnungen</h2>
-          <p>Import von lokalen Rechnungen: Sie können derzeit E-&#8288;Rechnungen (strukturiertes XML oder PDFmit XML) über die Schaltfläche &quot;Importieren&quot; in die Rechnungs-&#8288;App importieren und prüfen. Es ist geplant, die Rechnungs-&#8288;App schritt&shy;weise zu erweitern, so dass z.B. XML-&#8288;Rechnungen direkt aus der Mail-&#8288;App angezeigt und importiert werden können. Zusätzliche Import&shy;schnittstellen und Export&shy;optionen sowie weitere Berichte sind geplant.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M22 20v-1.6a4 4 0 0 0-3-3.87M16.5 4.13a3.5 3.5 0 0 1 0 6.74"/></svg></span>
-          <h2>Testen Sie die neue App</h2>
-          <p>Die Voll&shy;version der neuen EGroupware EPL App ist seit diesem Wochenende verfügbar. Kontaktieren Sie uns, wenn Sie eine Test&shy;version benötigen, wenn wir Ihnen die App für elektronische Rechnungen vorstellen sollen oder wenn Sie Fragen oder Anregungen haben.</p>
-          
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>XRechnung und ZUGFeRD</h3>
+            <p>Beide Verfahren nach EN 16931 werden unterstützt: XRechnung, das reine XML-&#8288;Format und Standard der öffentlichen Verwaltung, und ZUGFeRD, das XML-&#8288;Daten mit einem lesbaren PDF verbindet.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#news"/></svg></span>
+            <h3>Eigenes Layout</h3>
+            <p>Der PDF-&#8288;Teil entsteht aus einem Vorlage&shy;dokument mit Platzhaltern, in dem Sie Logo, Daten und Positions&shy;tabelle frei anordnen. Den XML-&#8288;Teil erzeugt EGroupware automatisch im gewünschten Format.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#sync"/></svg></span>
+            <h3>Vom Angebot zur Rechnung</h3>
+            <p>Schreiben Sie ein Angebot, machen Sie daraus eine Auftrags&shy;bestätigung und schließlich die Rechnung – ohne die Daten neu einzugeben.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEU</span> Angebote und Auftragsbestätigungen seit EGroupware 26.4.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#clock"/></svg></span>
+            <h3>Zeiten und Tickets abrechnen</h3>
+            <p>Wählen Sie Stunden&shy;zettel, Aufgaben oder Tickets aus und erstellen Sie daraus eine Rechnung. Verknüpfte Stunden&shy;zettel werden zu Positionen und als abgerechnet markiert.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEU</span> Seit EGroupware 26.6.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#compare"/></svg></span>
+            <h3>Positionen und Steuern</h3>
+            <p>Erfassen Sie Artikel mit Beschreibung, Menge, Nettopreis und Steuer&shy;satz sowie Zahlungs&shy;informationen und Leistungs&shy;zeit&shy;räume. Mehrwertsteuer und Gesamtbetrag rechnet EGroupware aus, mit Aufschlüsselung nach Steuersätzen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Partner aus dem Adressbuch</h3>
+            <p>Legen Sie bis zu drei Standard&shy;verkäufer fest und wählen Sie Rechnungs&shy;empfänger oder Endkunden aus dem Adressbuch. Kunden&shy;nummer und Umsatzsteuer-&#8288;ID kommen aus Feldern, die Sie selbst bestimmen.</p>
+          </article>
         </div>
       </div>
     </section>
+
     <section class="section">
-      <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="aufgaben">Aufgaben</a></li><li><a href="projekte">Projekte</a></li><li><a href="stundenzettel">Zeit&shy;erfassung</a></li><li><a href="ressourcen">Ressourcen</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Schnittstellen</span>
+          <h2>Sauber dokumentiert, offen angebunden</h2>
+          <p class="mt-2">Solange eine Rechnung ein Entwurf ist, ändern Sie alle Daten und drucken zur Probe. Ist sie berechnet, lässt sie sich nur noch stornieren; ein Notizfeld hält etwa Zahlungs&shy;erinnerungen fest. Für die Anbindung anderer Systeme gibt es seit EGroupware 26.4 eine REST-&#8288;API für Rechnungen.</p>
+          <p class="mt-3"><a class="link-arrow" href="https://github.com/EGroupware/egroupware/blob/master/doc/REST-CalDAV-CardDAV/Invoices.md">REST-&#8288;API für Rechnungen (GitHub)</a></p>
+          <p class="mt-2"><a class="link-arrow" href="community-edition-vs-epl">Community Edition und Enterprise Line</a></p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>E-&#8288;Rechnung auf einen Blick</strong><span class="st-badge st-badge--update">E-&#8288;RECHNUNG</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Norm</dt><dd>EN 16931</dd></div>
+            <div class="fact"><dt>Formate</dt><dd>XRechnung, ZUGFeRD</dd></div>
+            <div class="fact"><dt>Belege</dt><dd>Angebot, Auftrags&shy;bestätigung, Rechnung</dd></div>
+            <div class="fact"><dt>Import</dt><dd>XML, ZUGFeRD, Scans und PDF per KI</dd></div>
+            <div class="fact"><dt>Edition</dt><dd>Enterprise Line</dd></div>
+          </dl>
+        </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Arbeitet zusammen mit</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/timesheet.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="stundenzettel">Zeit&shy;erfassung</a></h3><p>Geleistete Stunden erfassen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="crm">CRM</a></h3><p>Kunden&shy;vorgänge an einem Ort.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/tracker.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="helpdesk">Helpdesk</a></h3><p>Tickets bearbeiten und abrechnen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/collabora.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="online-office">Online Office</a></h3><p>Vorlagen mit Collabora Online.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-narrow">
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zur E-&#8288;Rechnung</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Welche Formate unterstützt die E-&#8288;Rechnung?</summary>
+            <div class="faq-body"><p>XRechnung (reines XML) und ZUGFeRD (PDF mit eingebetteten XML-&#8288;Daten), beide nach der EU-&#8288;Norm EN 16931.</p></div>
+          </details>
+          <details>
+            <summary>Kann ich auch Rechnungen empfangen und prüfen?</summary>
+            <div class="faq-body"><p>Ja. Sie importieren E-&#8288;Rechnungen im XML- oder ZUGFeRD-Format und prüfen sie in der App. Gescannte Belege und einfache PDF-&#8288;Rechnungen liest der KI-&#8288;gestützte Import ein.</p></div>
+          </details>
+          <details>
+            <summary>Ist die E-&#8288;Rechnung in der Community Edition enthalten?</summary>
+            <div class="faq-body"><p>Nein, die E-&#8288;Rechnung ist Teil der Enterprise Line. Den Unterschied der beiden Editionen zeigt unser Vergleich.</p></div>
+          </details>
+          <details>
+            <summary>Lässt sich eine Rechnung später noch ändern?</summary>
+            <div class="faq-body"><p>Im Entwurf ja. Ist eine Rechnung berechnet, lässt sie sich nur noch stornieren – die Daten bleiben unverändert.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
+          <h2>Testen Sie die E-&#8288;Rechnung 30 Tage kostenlos</h2>
           <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage kostenlos testen</a>
+            <a class="btn btn--light btn--lg" href="funktionen">Alle Funktionen</a>
           </div>
         </div>
       </div>

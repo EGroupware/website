@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The timesheet module - digital time recording with EGroupware</title>
-  <meta name="description" content="From simple time recording to the booking of complex hour quotas within projects. Create a documentation for your client.">
+  <title>Online timesheet: time recording for projects and tasks</title>
+  <meta name="description" content="Record working time by start and stop, assign times to projects, tasks and tickets, filter billable hours and create records as PDF – with EGroupware.">
   <link rel="canonical" href="https://www.egroupware.org/en/timesheet">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/stundenzettel">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/timesheet">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="The timesheet module - digital time recording with EGroupware">
-  <meta property="og:description" content="From simple time recording to the booking of complex hour quotas within projects. Create a documentation for your client.">
+  <meta property="og:title" content="Online timesheet: time recording for projects and tasks">
+  <meta property="og:description" content="Record working time by start and stop, assign times to projects, tasks and tickets, filter billable hours and create records as PDF – with EGroupware.">
   <meta property="og:url" content="https://www.egroupware.org/en/timesheet">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/timesheet#webpage","url":"https://www.egroupware.org/en/timesheet","name":"Online timesheet: time recording for projects and tasks","description":"Record working time by start and stop, assign times to projects, tasks and tickets, filter billable hours and create records as PDF – with EGroupware.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/timesheet#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/timesheet#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/timesheet#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://www.egroupware.org/en/features"},{"@type":"ListItem","position":3,"name":"Timesheet","item":"https://www.egroupware.org/en/timesheet"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/timesheet#faq","mainEntity":[{"@type":"Question","name":"Can I also record times from my smartphone?","acceptedAnswer":{"@type":"Answer","text":"Yes. With the mobile view of EGroupware, you book times in the browser of your smartphone or tablet, for example right at the customer's site."}},{"@type":"Question","name":"Who can see my timesheets?","acceptedAnswer":{"@type":"Answer","text":"You decide that with permissions. A typical set-up: employees see their own times, the team lead sees all times of their team."}},{"@type":"Question","name":"Can I create an invoice from the times?","acceptedAnswer":{"@type":"Answer","text":"Yes, with e-invoicing in the Enterprise Line: selected timesheets become invoice items and are marked as invoiced. Alternatively, you create a time record as a PDF attachment from a template."}},{"@type":"Question","name":"Can times be imported from other programs?","acceptedAnswer":{"@type":"Answer","text":"Yes, via CSV import, scheduled if required. A REST API is also available."}}]}]}
   </script>
 </head>
 <body>
@@ -123,145 +126,152 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/timesheet):
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Timesheet</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="features">Features</a></nav>
         <h1>Timesheet</h1>
-        <p class="lead">From simple time recording to booking complex hour quotas within projects, the timesheet module offers you many options for time recording. Complex filter options and reporting allow further processing, e.g. as an attachment to invoices. …</p>
+        <p class="lead">Record working time for tasks, tickets and projects – from simple time recording to hour quotas within a project. Filters and reports turn it into a record of work done, for example as an attachment to an invoice.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="trial">Try free for 30 days</a>
+          <a class="btn btn--ghost btn--lg" href="pricing">See pricing</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Start and stop</strong><span>Or the day in individual times</span></li><li><strong>For project and task</strong><span>Target and actual times</span></li><li><strong>Records as PDF</strong><span>With your logo</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/stundenzettel-anwendung-gr.webp" alt="Timesheet" width="1200" height="816" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/stundenzettel-anwendung-gr.webp" alt="EGroupware timesheet with daily totals" width="1200" height="816" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>Timesheet</span></div></nav>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Document times for tasks, tickets or projects</h2>
-          <p>From simple time recording to booking complex hour quotas within projects, the timesheet module offers you many options for time recording. Complex filter options and reporting allow further processing, e.g. as an attachment to invoices. Trial Version Try now 30 days for free</p>
-          
-          <div class="link-list mt-3"><a href="trial">Trial Version</a></div>
+        <article class="app-highlight reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--info">SPECIAL</span><small>Timesheet highlight</small></div>
+            <h2>Working time by start and stop</h2>
+            <p>Start time recording when you begin work and stop it at the end – or enter your day as individual times. If you like, EGroupware automatically suggests the next time slot of the day as the start time. That way, your daily record builds up almost by itself.</p>
+          </div>
+          <figure class="shot"><img class="shot__img" src="../assets/img/import/online-stundenzettel-stunden-erfassen-de-gr-1.webp" alt="Entering a timesheet with date, start time and duration" width="1200" height="717" loading="lazy" decoding="async"></figure>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Document working hours</h2>
-          <p>Your employees and colleagues can thus record the hours they have worked on the delegated tasks and projects. This provides transparency and at the same time a performance record for the client. A simple export of the time&shy;sheets into different file formats is possible at any time.</p>
-          
-          
-        </article>
-        </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Broad search and filter options</h2>
-          <p class="mt-2">The documented hours can be filtered and exported according to clients, projects, employees, tasks or time periods. Frequently used filter combinations can be saved as favourites and are then available with one click.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/online-stundenzettel-stunden-erfassen-de-gr-1.webp" alt="Broad search and filter options" width="1200" height="717" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Record and evaluate times</h2>
+          <p>Transparency for the team and a record of work done for your clients.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Task and project-related time documentation</h2>
-          <p>Record the hours worked on a project or a task with the timesheet module. EGroupware can compare target and actual times. This facilitates the overview and is also suitable for a later post-calculation of the projects.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Record additional information</h2>
-          <p>Benefit from easy recording and documentation of working hours for internal projects or for your customers. Record additional information in user-defined fields or with a status, for example, billed or paid. Changes to times or other timesheet information are recorded in the system and are only available to responsible employees.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Reporting of the time documentation</h2>
-          <p>Create your own reporting as a PDF file with your logo and the listing of the respective hours as an attachment to your invoice. From now on, labour-intensive processing of a timesheet is a thing of the past. Use the timesheet overview with the filters as a basis. Use the saved information via template documents and process them directly with Collabora Online.</p>
-          
-          <div class="link-list mt-3"><a href="online-office">Collabora Online</a></div>
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#clock"/></svg></span>
+            <h3>Times for project and task</h3>
+            <p>Book hours worked to a project, a task or a ticket. EGroupware compares target and actual times – useful for the overview and for post-calculation.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#tag"/></svg></span>
+            <h3>Custom fields and status</h3>
+            <p>Record additional information in custom fields or with a status, for example billed or paid. Changes to times are logged and are only visible to those responsible.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>Billable times in view</h3>
+            <p>Mark entries as invoiced or as not to be invoiced. A filter shows all times that still belong on an invoice.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEW</span> Since EGroupware 26.6: "billable" filter and status for e-&#8288;invoicing – there, selected time&shy;sheets become invoice items directly (Enterprise Line).</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#compare"/></svg></span>
+            <h3>Filters as favourites</h3>
+            <p>Filter the hours by customer, project, employee, task or time period and export the result. Save frequent combinations as a favourite.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEW</span> Favourites can be arranged hierarchically.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lock"/></svg></span>
+            <h3>Permissions and team leads</h3>
+            <p>You decide who may create, see and edit time&shy;sheets. Employees might see only their own times, while the team lead sees those of the whole team. Once billed, a status blocks further changes.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#news"/></svg></span>
+            <h3>Records from templates</h3>
+            <p>Create time records as a PDF with your logo – from template documents with placeholders that you design in Collabora Online. Sample templates are in the file manager, and all placeholders are listed in the side menu.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>Template documents with placeholders</h2>
-          <p class="mt-2">Create your own template with company logo in Collabora Online and provide it with placeholders. The placeholders are automatically replaced by inserting them into your document with the fields from EGroupware. You can find examples of templates or reports in the file manager of EGroupware, as well as a list of all placeholders in the side menu of the application. Edit the examples according to your wishes and insert all information relevant to you as placeholders.</p>
-          
-          
+          <span class="eyebrow">Interfaces</span>
+          <h2>Times from on the road and from other systems</h2>
+          <p class="mt-2">With the mobile view, field staff book their times directly from a smart&shy;phone or tablet. For exchanging data with other systems, there is import and export in CSV format, scheduled if required, for example from an ERP system or a service management tool. Time&shy;sheets can also be created via the REST API.</p>
+          <p class="mt-3"><a class="link-arrow" href="mobile-access">Mobile access</a></p>
+          <p class="mt-2"><a class="link-arrow" href="online-office">Collabora Online</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/stundenzettel-nach-benutzern.webp" alt="Template documents with placeholders" width="1200" height="717" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Timesheet at a glance</strong><span class="st-badge st-badge--update">TIMESHEET</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Recording</dt><dd>Start and stop or individual times</dd></div>
+            <div class="fact"><dt>Linked to</dt><dd>Projects, tasks, tickets</dd></div>
+            <div class="fact"><dt>Evaluation</dt><dd>Filters, favourites, reports as PDF</dd></div>
+            <div class="fact"><dt>Billing</dt><dd>Status, "billable" filter, e-&#8288;invoicing</dd></div>
+            <div class="fact"><dt>Exchange</dt><dd>CSV import and export, REST API</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>Who has access to the timesheet?</h2>
-          <p>Role-based rights management allows you to define who is allowed to create and edit time&shy;sheets. Read and write rights can be adapted very precisely to your company or organisation.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M22 20v-1.6a4 4 0 0 0-3-3.87M16.5 4.13a3.5 3.5 0 0 1 0 6.74"/></svg></span>
-          <h2>Team management keeps the overview</h2>
-          <p>Depending on the requirements, certain employees can only view their own hours worked, and the team leader, for example, can view all the hours worked by your team and possibly make changes. After a settlement has been made, the right to make changes can be restricted via a status.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
-          <h2>Record working times from on the road</h2>
-          <p>Are your employees often on the road in the field? With the mobile view of EGroupware, you can conveniently receive or delegate your tasks on the go with your smart&shy;phone or tablet. You can also book times from the road.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Synchronisation and data reconciliation</h2>
-          <p>As an import/export interface, an exchange in CSV format is possible, which can also import time-controlled data from an external system such as an enterprise resource planning system or service management tool.</p>
-          
-          
-        </article>
+        <div class="section-head reveal">
+          <span class="eyebrow">Related</span>
+          <h2>Works together with</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/projectmanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="projects">Projects</a></h3><p>Times and budgets in the project.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/infolog.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="tasks">Tasks</a></h3><p>Book time directly to the task.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/tracker.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="helpdesk">Helpdesk</a></h3><p>Record the effort for tickets.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/einvoice.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="e-invoicing">E-&#8288;invoicing</a></h3><p>Invoice hours directly.</p></div></article>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
-        <ul class="sibling-list mt-3"><li><a href="tasks">Tasks</a></li><li><a href="projects">Projects</a></li><li><a href="resources">Ressources</a></li><li><a href="e-invoicing">E-&#8288;Invoice</a></li></ul>
-        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
+        <div class="section-head reveal">
+          <h2>Frequently asked questions about the timesheet</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Can I also record times from my smart&shy;phone?</summary>
+            <div class="faq-body"><p>Yes. With the mobile view of EGroupware, you book times in the browser of your smart&shy;phone or tablet, for example right at the customer's site.</p></div>
+          </details>
+          <details>
+            <summary>Who can see my time&shy;sheets?</summary>
+            <div class="faq-body"><p>You decide that with permissions. A typical set-&#8288;up: employees see their own times, the team lead sees all times of their team.</p></div>
+          </details>
+          <details>
+            <summary>Can I create an invoice from the times?</summary>
+            <div class="faq-body"><p>Yes, with e-&#8288;invoicing in the Enterprise Line: selected time&shy;sheets become invoice items and are marked as invoiced. Alternatively, you create a time record as a PDF attachment from a template.</p></div>
+          </details>
+          <details>
+            <summary>Can times be imported from other programs?</summary>
+            <div class="faq-body"><p>Yes, via CSV import, scheduled if required. A REST API is also available.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Try EGroupware free for 30 days</h2>
+          <h2>Try the timesheet free for 30 days</h2>
           <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
-            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+            <a class="btn btn--solid-light btn--lg" href="trial">Try free for 30 days</a>
+            <a class="btn btn--light btn--lg" href="features">All features</a>
           </div>
         </div>
       </div>

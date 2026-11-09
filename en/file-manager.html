@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Edit ans share your documents in a structured way</title>
-  <meta name="description" content="The EGroupware file manager helps you to structure your files in the company and to include external partners.">
+  <title>Manage files online: sharing links, versioning, WebDAV</title>
+  <meta name="description" content="The EGroupware file manager: store documents centrally, share them with external partners via link, versioning, network drives and access as a drive via WebDAV.">
   <link rel="canonical" href="https://www.egroupware.org/en/file-manager">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/dateiverwaltung">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/file-manager">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Edit ans share your documents in a structured way">
-  <meta property="og:description" content="The EGroupware file manager helps you to structure your files in the company and to include external partners.">
+  <meta property="og:title" content="Manage files online: sharing links, versioning, WebDAV">
+  <meta property="og:description" content="The EGroupware file manager: store documents centrally, share them with external partners via link, versioning, network drives and access as a drive via WebDAV.">
   <meta property="og:url" content="https://www.egroupware.org/en/file-manager">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/file-manager#webpage","url":"https://www.egroupware.org/en/file-manager","name":"Manage files online: sharing links, versioning, WebDAV","description":"The EGroupware file manager: store documents centrally, share them with external partners via link, versioning, network drives and access as a drive via WebDAV.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/file-manager#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/file-manager#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/file-manager#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://www.egroupware.org/en/features"},{"@type":"ListItem","position":3,"name":"File manager","item":"https://www.egroupware.org/en/file-manager"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/file-manager#faq","mainEntity":[{"@type":"Question","name":"Can external partners upload files?","acceptedAnswer":{"@type":"Answer","text":"Yes. Via a sharing link to a folder, external partners upload files. Password and validity period secure the share."}},{"@type":"Question","name":"Can I use the file manager like a drive?","acceptedAnswer":{"@type":"Answer","text":"Yes. Via WebDAV you mount it in Windows Explorer, in the Mac Finder or on Linux, or synchronise a local directory."}},{"@type":"Question","name":"What happens if someone accidentally overwrites a file?","acceptedAnswer":{"@type":"Answer","text":"If versioning is switched on, EGroupware archives older versions automatically. You can go back to a previous version at any time."}},{"@type":"Question","name":"Can existing network drives be integrated?","acceptedAnswer":{"@type":"Answer","text":"Yes. SMB shares from Windows, Linux or NAS, FTP, local directories and WebDAV shares can be mounted in the file manager."}}]}]}
   </script>
 </head>
 <body>
@@ -123,136 +126,151 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/documents):
-       - Enthielt 1 eingebettetes Video (https://www.youtube.com/watch?v=lOR3vo6hMwA).
-       - Kein eigener Einleitungstext – erster Abschnitt („Edit documents in a structured way and across loca“) in den Kopfbereich gezogen.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Files</span>
-        <h1>Documents</h1>
-        <p class="lead">The EGroupware file manager helps you to structure your files in the company and to include external partners. Especially in times of home office and working at different locations.</p>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="features">Features</a></nav>
+        <h1>File manager</h1>
+        <p class="lead">Store your company's documents centrally and involve external partners in a controlled way. Ideal for multiple locations, distributed teams and remote work.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="trial">Try free for 30 days</a>
+          <a class="btn btn--ghost btn--lg" href="pricing">See pricing</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Sharing links</strong><span>With password and expiry date</span></li><li><strong>Versioning</strong><span>Protection against over&shy;writing</span></li><li><strong>Open standards</strong><span>As a drive via WebDAV</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/filemgr-persp-en.webp" alt="Documents" width="1080" height="945" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/filemgr-persp-en.webp" alt="EGroupware file manager with folders and files" width="1080" height="945" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>Documents</span></div></nav>
-    <section class="section section--knapp">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Manage documents centrally: The file server</h2>
-          <p class="mt-2">A working group usually uses dozens, often even hundreds of documents for each project - from text documents to tables, presentations, images and PDF files to videos and industry-specific document formats.</p>
-          
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Always access to the current files</h2>
-          <p class="mt-2">EGroupware manages all these documents transparently via the integrated file manager. Every member of your work group always has access to the current data. This eliminates the time-consuming process of sending data by email and minimises sources of errors in data organisation (duplicates, working with outdated files).</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/3-apps-flat-filemgr-1080.webp" alt="Always access to the current files" width="1080" height="881" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Access your folders and files at any time</h2>
-          <p>With intelligent features, EGroupware makes your daily work easier day after day: access folders and files in your network at any time; assign rights for access to public and private folders; create order with your individual list of favourites; move files simply by drag-&#8288;and-&#8288;drop or use the clever file manager upload widget.</p>
-          
-          
+        <article class="app-highlight app-highlight--neu app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEW</span><small>Since EGroupware 26.9</small></div>
+            <h2>From the scanner straight into EGroupware</h2>
+            <p>Xerox scanners file scanned documents directly in the EGroupware file manager. If you watch the target folder, EGroupware automatically creates a task from each new document and assigns it – for example as the start of an invoice workflow.</p>
+            <p class="mt-3"><a class="link-arrow" href="tasks">More on tasks</a></p>
+          </div>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
-          <h2>Access for mobile devices</h2>
-          <p>The EGroupware file manager facilitates cooperation with colleagues and external partners. Send large files or access to a folder via a sharing link, thus obtaining a data exchange directory in which external parties can also upload files again.</p>
-          
-          
-        </article>
-        </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Sending files via sharing links</h2>
-          <p class="mt-2">Files and folders can be shared. Sharing links are sent directly by e-&#8288;mail or the link can be passed on as desired. Validity period and password secure the sharing. This also enables the sending of large files that cannot otherwise be sent by e-&#8288;mail. In conjunction with a Collabora Online, external users can also edit documents. A hidden upload allows documents to be collected without anyone other than the person sharing the files seeing them. Important, for example, in educational institutions for homework.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/dateifreigabe-egw-sharing.webp" alt="Sending files via sharing links" width="1200" height="831" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Store and share documents as a team</h2>
+          <p>From your own folder to an exchange directory with customers and partners.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Internal file exchange via file sharing</h2>
-          <p>The internal exchange of data or the provision of shared folders can, in addition to group folders and file/folder permissions, also be solved by users themselves through file/folder sharing. And this without the otherwise necessary support of an administrator. Freely given files/folders can be integrated by the user into their personal folder and thus be used permanently.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Notifications for file changes</h2>
-          <p>The EGroupware message system informs you about every change to files and folders on request. As soon as documents are changed, deleted, edited or added, you and your team members automatically receive a notification via pop-&#8288;up window or email. You can integrate external employees, customers and service providers into the workflow by automatically sending them an email message with information about a file change and the corresponding file as an attachment.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Versioning and delete protection</h2>
-          <p>If desired, the EGroupware file manager automatically archives old file versions in the back&shy;ground, so that accidentally over&shy;writing or deleting a file loses its horror. Simply return to a previous version at any time. This additional security prevents useless multiple efforts and provides your employees with security.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Integrating SMB or NAS drives</h2>
-          <p>External drives/shares can be integrated into the EGroupware file manager. These can be SMB (Windows, Linux, NAS), FTP, local directories or WebDAV shares. For example, departmental drives or users&#x27; &quot;own files&quot; can be mounted in EGroupware and thus made flexibly accessible. EGroupware thus offers access to otherwise &quot;externally&quot; inaccessible company drives via a secure connection using 2-factor authentication.</p>
-          
-          <div class="link-list mt-3"><a href="administration">2-factor authentication</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Mount EGroupware files as a drive (via WebDAV)</h2>
-          <p>With EGroupware you can easily manage your files via browser. In addition, you have the option of accessing your folders and files with the file explorer (Windows) or Finder (Mac OS) on the basis of the WebDAV protocol. Either mount the EGroupware file manager as a local drive or synchronise a local directory with the file manager. In both cases, there is practically no need for you and your employees to get used to the system.</p>
-          
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#folder"/></svg></span>
+            <h3>Central and well organised</h3>
+            <p>All members of a work group access the same, up-&#8288;to-&#8288;date files. Permissions for public and private folders, favourites and drag-&#8288;and-&#8288;drop keep things in order.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEW</span> Favourites can be arranged hierarchically.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#cloud"/></svg></span>
+            <h3>Sharing links for external partners</h3>
+            <p>Share files and folders via a link, secured by password and validity period. External partners can also upload files and edit documents with Collabora Online. A hidden upload collects files without anyone else seeing them – for homework, for example.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Share internally without an administrator</h3>
+            <p>Alongside group folders, users share files and folders with colleagues themselves. Colleagues mount shared folders permanently in their personal folder.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#pulse"/></svg></span>
+            <h3>Notifications of changes</h3>
+            <p>If you wish, EGroupware informs you and your team by pop-&#8288;up or email as soon as files are added, changed or deleted. External partners receive the changed file straight away as an attachment.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#backup"/></svg></span>
+            <h3>Versioning and deletion protection</h3>
+            <p>If you wish, the file manager automatically archives older versions in the back&shy;ground. After accidentally over&shy;writing or deleting a file, you simply go back to a previous version.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#server"/></svg></span>
+            <h3>Integrate network drives</h3>
+            <p>Mount SMB shares (Windows, Linux, NAS), FTP, local directories or WebDAV shares. This lets you reach department drives from outside too – over a secure connection with two-&#8288;factor login.</p>
+          </article>
         </div>
       </div>
     </section>
+
     <section class="section">
-      <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
-        <ul class="sibling-list mt-3"><li><a href="calendar">Calendar</a></li><li><a href="chat">Team Chat</a></li><li><a href="videoconferences">Video&shy;conferences</a></li><li><a href="online-office">Online Office</a></li><li><a href="kanban">Kanban</a></li></ul>
-        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Synchronisation</span>
+          <h2>Your files as a drive</h2>
+          <p class="mt-2">EGroupware relies on open standards: via WebDAV you mount the file manager as a drive in Windows Explorer, in the Mac Finder or on Linux – or you synchronise a local directory. Your team works with folders and files as usual, with hardly any need to get used to something new.</p>
+          <p class="mt-3"><a class="link-arrow" href="synchronisation">Synchronisation</a></p>
+          <p class="mt-2"><a class="link-arrow" href="administration">Two-&#8288;factor login</a></p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>File manager at a glance</strong><span class="st-badge st-badge--update">FILES</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Storage</dt><dd>Personal folders, group folders, favourites</dd></div>
+            <div class="fact"><dt>Sharing</dt><dd>Links with password and expiry date</dd></div>
+            <div class="fact"><dt>Protection</dt><dd>Permissions, versioning</dd></div>
+            <div class="fact"><dt>Drives</dt><dd>SMB, NAS, FTP, WebDAV</dd></div>
+            <div class="fact"><dt>Access</dt><dd>Browser, Explorer, Finder</dd></div>
+          </dl>
+        </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Related</span>
+          <h2>Works together with</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/collabora.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="online-office">Online Office</a></h3><p>Edit documents in the browser.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/infolog.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="tasks">Tasks</a></h3><p>Turn files into tasks.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/mail.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="email">Email</a></h3><p>Attachments straight from storage.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/chat.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="chat">Team chat</a></h3><p>Quick coordination with Rocket.Chat.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-narrow">
+        <div class="section-head reveal">
+          <h2>Frequently asked questions about the file manager</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Can external partners upload files?</summary>
+            <div class="faq-body"><p>Yes. Via a sharing link to a folder, external partners upload files. Password and validity period secure the share.</p></div>
+          </details>
+          <details>
+            <summary>Can I use the file manager like a drive?</summary>
+            <div class="faq-body"><p>Yes. Via WebDAV you mount it in Windows Explorer, in the Mac Finder or on Linux, or synchronise a local directory.</p></div>
+          </details>
+          <details>
+            <summary>What happens if someone accidentally overwrites a file?</summary>
+            <div class="faq-body"><p>If versioning is switched on, EGroupware archives older versions automatically. You can go back to a previous version at any time.</p></div>
+          </details>
+          <details>
+            <summary>Can existing network drives be integrated?</summary>
+            <div class="faq-body"><p>Yes. SMB shares from Windows, Linux or NAS, FTP, local directories and WebDAV shares can be mounted in the file manager.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Try EGroupware free for 30 days</h2>
+          <h2>Try the file manager free for 30 days</h2>
           <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
-            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+            <a class="btn btn--solid-light btn--lg" href="trial">Try free for 30 days</a>
+            <a class="btn btn--light btn--lg" href="features">All features</a>
           </div>
         </div>
       </div>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Arbeitsabläufe intelligent verwalten mit Kanban in EGroupware</title>
-  <meta name="description" content="In EGroupware können Sie mit der neuen Kanban-Anwendung Prozesse einfach und intelligent steuern. Die Kanban-Methode für Vertriebsprozesse">
+  <title>Kanban-Board für Teams: Kontakte, Aufgaben und Tickets als Karten</title>
+  <meta name="description" content="Kanban in EGroupware: Spalten und Swimlanes frei gestalten, Kontakte, Aufgaben und Tickets als Karten, Spalten reagieren auf Änderungen. Enterprise Line.">
   <link rel="canonical" href="https://www.egroupware.org/de/kanban">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kanban">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/kanban">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Arbeitsabläufe intelligent verwalten mit Kanban in EGroupware">
-  <meta property="og:description" content="In EGroupware können Sie mit der neuen Kanban-Anwendung Prozesse einfach und intelligent steuern. Die Kanban-Methode für Vertriebsprozesse">
+  <meta property="og:title" content="Kanban-Board für Teams: Kontakte, Aufgaben und Tickets als Karten">
+  <meta property="og:description" content="Kanban in EGroupware: Spalten und Swimlanes frei gestalten, Kontakte, Aufgaben und Tickets als Karten, Spalten reagieren auf Änderungen. Enterprise Line.">
   <meta property="og:url" content="https://www.egroupware.org/de/kanban">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/kanban#webpage","url":"https://www.egroupware.org/de/kanban","name":"Kanban-Board für Teams: Kontakte, Aufgaben und Tickets als Karten","description":"Kanban in EGroupware: Spalten und Swimlanes frei gestalten, Kontakte, Aufgaben und Tickets als Karten, Spalten reagieren auf Änderungen. Enterprise Line.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/kanban#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/kanban#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/kanban#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"Kanban","item":"https://www.egroupware.org/de/kanban"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/kanban#faq","mainEntity":[{"@type":"Question","name":"Ist Kanban in der Community Edition enthalten?","acceptedAnswer":{"@type":"Answer","text":"Nein. Kanban ist Teil der EGroupware Enterprise Line. Den Unterschied der Editionen zeigt unser Vergleich von Community Edition und Enterprise Line."}},{"@type":"Question","name":"Welche Einträge kann ich auf die Tafel legen?","acceptedAnswer":{"@type":"Answer","text":"Kontakte, Aufgaben, Tickets und Projekte aus EGroupware. Welche Anwendungen eine Tafel zulässt, legen Sie beim Einrichten des Boards fest."}},{"@type":"Question","name":"Muss ich Karten nach jeder Änderung von Hand verschieben?","acceptedAnswer":{"@type":"Answer","text":"Nein. Sie legen fest, wie Einträge bei einer Änderung, etwa des Status, automatisch in eine andere Spalte wandern. Umgekehrt kann das Verschieben einer Karte den Eintrag ändern."}},{"@type":"Question","name":"Wer darf Karten verschieben?","acceptedAnswer":{"@type":"Answer","text":"Sie bestimmen, welche Gruppen Zugriff auf eine Tafel haben. Für jede Swimlane lässt sich zusätzlich festlegen, wer Einträge darin verschieben darf."}}]}]}
   </script>
 </head>
 <body>
@@ -123,151 +126,152 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/kanban):
-       - Enthielt 3 eingebettetes Video (https://youtu.be/9TieCfVdm5E, https://www.youtube.com/watch?v=q1a18a6-ZS0&amp;t=1s).
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Kanban</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
         <h1>Kanban</h1>
-        <p class="lead">In EGroupware EPL steuern Sie Prozesse mit der neuen Kanban-Anwendung einfach und intelligent. Die Kanban-Methode eignet sich für Vertriebs&shy;prozesse, Projekt&shy;organisation, Software&shy;entwicklung oder das Management anderer Dienst&shy;leistungen. Der …</p>
+        <p class="lead">Steuern Sie Vertrieb, Projekte, Support oder Software&shy;entwicklung auf einer Kanban-Tafel, die Ihre Arbeit sichtbar macht und die gleichzeitig laufenden Aufgaben begrenzt. Kontakte, Aufgaben und Tickets aus EGroupware landen direkt als Karten auf dem Board.</p>
+        <p class="mt-2"><span class="st-badge st-badge--info">ENTERPRISE LINE</span> <a href="community-edition-vs-epl">Nur in der Enterprise Line</a></p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage kostenlos testen</a>
+          <a class="btn btn--ghost btn--lg" href="preise">Preise ansehen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Freie Tafel</strong><span>Spalten und Swimlanes nach Bedarf</span></li><li><strong>Echte Daten</strong><span>Kontakte, Aufgaben, Tickets, Projekte</span></li><li><strong>Automatik</strong><span>Board und Einträge bleiben gleich</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/kanban-perspektive-edit-1080px-deen.webp" alt="Kanban" width="1080" height="945" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/kanban-perspektive-edit-1080px-deen.webp" alt="Kanban-Tafel in EGroupware mit Kontakten als Karten" width="1080" height="945" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>Kanban</span></div></nav>
-    <section class="section section--knapp">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Arbeits&shy;abläufe mit Kanban verwalten</h2>
-          <p class="mt-2">In EGroupware EPL steuern Sie Prozesse mit der neuen Kanban-Anwendung einfach und intelligent. Die Kanban-Methode eignet sich für Vertriebs&shy;prozesse, Projekt&shy;organisation, Software&shy;entwicklung oder das Management anderer Dienst&shy;leistungen. Der Kern von Kanban ist die Visualisierung und Begrenzung der gleichzeitig zu erledigenden Aufgaben. Sobald Kapazitäten frei werden, &quot;pickt&quot; sich ein Mitarbeiter eine Aufgabe aus dem Pool und zieht sie auf &quot;Work in Progress&quot;. Folien zum Download Präsentation herunter&shy;laden</p>
-          
-          <div class="link-list mt-3"><a href="../assets/dokumente/Webinar-EGroupware-Kanban-03.2021-DE-4.pdf" class="link-list__pdf">Folien zum Download</a></div>
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Praxis&shy;beispiel für den Verkaufs&shy;prozess</h2>
-          <p class="mt-2">Im Video sehen Sie eine Kanban-Tafel und die Workflows am Beispiel eines Vertriebs&shy;prozesses zur Neukundengewinnung. Natürlich müssen Sie den Ablauf, die Adressbücher bzw. Infolog-Typen und den Status an Ihre Prozesse anpassen. Sobald das Board erstellt ist und Sie die Prozesse mit den entsprechenden Vertriebs&shy;teams besprochen haben, kann der Prozess beginnen. Es macht Sinn, Reviews und Verbesserungs&shy;prozesse direkt im Vertriebs&shy;team zu planen. Passen Sie dann Ihr Board entsprechend dem Feedback des Vertriebs&shy;teams an.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/kanbanboard-1.webp" alt="Praxisbeispiel für den Verkaufsprozess" width="791" height="590" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Kanban-Tafel definieren</h2>
-          <p class="mt-2">Im ersten Schritt definieren Sie einen Namen für Ihre Kanban-Tafel, die zu verwendenden Anwendungen und welche Gruppen Zugriff auf die Tafel haben. Standardmäßig werden 3 Spalten angelegt: &quot;Neu (Pool)&quot;, &quot;In Bearbeitung&quot; und &quot;Erledigt&quot;. Sie können jederzeit Spalten umbenennen, löschen, Farben ändern oder neue Spalten hinzu&shy;fügen. Zusätzlich können sogenannte Swimlanes erstellt werden, entweder um den Prozess zu kategorisieren oder um verschiedene Verantwortlichkeiten zu visualisieren. Einer Swimlane wird außerdem ein Titel und ggf. eine Farbe sowie Zugriffs&shy;rechte zugewiesen. Die Zugriffs&shy;rechte steuern hier, wer berechtigt ist, Einträge in dieser Swimlane zu verschieben. Generell gilt: Halten Sie das Board so einfach und übersichtlich wie möglich, mit effektivem Einsatz.</p>
-          
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Kanban-Favoriten</h2>
-          
-          <ul class="check-list mt-3"><li>Zugelassene Anwendungen</li><li>Berechtigungen</li><li>Board-Beschreibung</li><li>Boards als Favoriten</li></ul>
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/kanban-favoriten.webp" alt="Kanban-Favoriten" width="735" height="346" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Kanban gestalten</h2>
-          
-          <ul class="check-list mt-3"><li>Freie Gestaltung von Spalten und Schwimmbahnen: Anzahl, Farben, Bezeichnungen/Namen.</li><li>Verfügbare EGroupware-Anwendungen und Zugriffs&shy;berechtigungen können eingestellt werden.</li><li>Zugriffs&shy;rechte für Schwimmbahnen separat einstellbar.</li><li>Karten werden per DnD zwischen den Spalten (und Schwimmbahnen) verschoben.</li><li>Spalten und Schwimmbahnen können durch einen Klick auf die Bezeichnung eingeklappt werden.</li></ul>
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Spalten und Schwimmbahnen sortieren</h2>
-          
-          <ul class="check-list mt-3"><li>Möglich per DnD in der Board-Bearbeitung.</li><li>Der Anfasser ist vorne angeordnet.</li></ul>
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/spalten-sortieren.webp" alt="Spalten und Schwimmbahnen sortieren" width="755" height="467" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Elemente per DnD in ein Kanban-Board</h2>
-          
-          <ul class="check-list mt-3"><li>Ziehen Sie z.B. einen Adress&shy;kontakt auf den Reiter Kanban und von dort aus können Sie das Element auf die entsprechenden Spalte &quot;fallen&quot; lassen</li><li>DnD funktioniert auch zwischen anderen Modulen (wo es Sinn macht)</li></ul>
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Prozess&shy;steuerung in der Kanban-Tafel</h2>
-          <p class="mt-2">Prozesse können auf verschiedenen Ebenen gesteuert werden:</p>
-          <ul class="check-list mt-3"><li>&quot;Neue Einträge - Listen (Listen)&quot;: Hier legen Sie fest, wie neue Einträge automatisch in die erste Spalte eingefügt werden (z. B. Neu oder Pool). Im Vertriebs&shy;prozess definieren Sie z. B. ein spezielles Adressbuch &quot;Vertriebseingang&quot;. In der Software&shy;entwicklung oder im Beschwerde&shy;management der Themen&shy;bereich, die Kategorie oder die Version des Produkts.</li><li>&quot;Aktion bei Spalten&shy;wechsel - ändert das Ticket&quot;: Sie können auf jeder Spalte festlegen, ob eine Aktion ausgeführt werden soll, wenn der Eintrag in diese Spalte verschoben wird. Zum Beispiel &quot;füge den Benutzer als Verantwortlichen hinzu, der sich die Aufgabe schnappt&quot; oder &quot;ändere den Status des Tickets auf &quot;Testen&quot;&quot;, wenn der Eintrag in diese Spalte verschoben wird. Zusätzlich kann man auch feste Zuständigkeiten für den Prozess&shy;schritt oder Zuständigkeiten aus der entsprechenden Swimlane einstellen. Auf Wunsch kann man erledigte Aufgaben auch automatisch aus dem Board entfernen lassen.</li><li>&quot;Änderung eines Tickets - Verschiebung im Board&quot;: Weiterhin können Sie im Bereich &quot;Listen (Zuhören)&quot; festlegen, wie bestehende Einträge des Boards automatisch zwischen den Spalten verschoben werden. Konkret: Ein Entwickler setzt ein &quot;Work in Progress&quot;-Ticket aus dem Kanban-Board auf den Status &quot;Testing&quot; mit einem Kommentar, was getestet werden soll. Das Ticket wird automatisch in die Spalte &quot;Testen&quot; im Board verschoben. Das spart Zeit und zusätzlichen Aufwand, wenn das Ticket ohnehin bearbeitet wird.</li></ul>
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/kanbanlisten2.webp" alt="Prozesssteuerung in der Kanban-Tafel" width="901" height="1409" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>Kanban-Webinar</h2>
-          <p>Kanban Webinar-Aufzeichnung vom 25. März 2021:</p>
-          <ul class="check-list mt-3"><li>Was ist Kanban und was sind die Vorteile?</li><li>Wie kann Kanban innerhalb von EGroupware eingesetzt werden?</li><li>Wie profitiert mein Team von Kanban?</li><li>Kann ich damit meine Arbeit effektiver organisieren?</li><li>Wie erhalte ich einen besseren Überblick über meine wichtigen Aufgaben?</li><li>Praktische Beispiele zeigen Ihnen, wie Sie ein Board selbst definieren und an Ihre Arbeits&shy;abläufe anpassen können.</li></ul>
-          
+        <article class="app-highlight app-highlight--neu reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEU</span><small>Seit EGroupware 23.1</small></div>
+            <h2>Spalten, die auf Änderungen reagieren</h2>
+            <p>Setzt ein Entwickler ein Ticket auf den Status „Testen“, wandert die Karte automatisch in die Spalte „Testen“ – ohne dass jemand das Board anfassen muss. Umgekehrt ändert eine Spalte den Eintrag, sobald Sie eine Karte hinein&shy;ziehen: Sie setzt zum Beispiel den Status oder trägt Sie als Verantwortlichen ein. So bleiben Board und Daten ohne Doppelarbeit auf demselben Stand.</p>
+          </div>
+          <figure class="shot"><img class="shot__img" src="../assets/img/import/kanbanboard-1.webp" alt="Kanban-Board bearbeiten: Spalten mit Aktionen beim Hinzufügen einer Karte" width="791" height="590" loading="lazy" decoding="async"></figure>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>Kanban-Grundprinzipien &amp; Kernpraktiken</h2>
-          <p>Kanban-Grundprinzipien: Kanban Core Practices:</p>
-          <ul class="check-list mt-3"><li>Beginnen Sie mit dem, was Sie gerade tun - einfache Einführung</li><li>Entwickeln Sie sich durch kleine/evolutionäre Schritte</li><li>Berücksichtigen Sie aktuelle Prozesse, Rollen und Verantwortlichkeiten</li><li>Ermutigen Sie dazu, auf jeder Ebene der Organisation Führung zu zeigen</li><li>Visualisierung von Aufgaben und Prozessen (Workflow)</li><li>Begrenzen Sie &quot;Work in Progress&quot; (WIP) und gleichzeitige Aufgaben</li><li>Messung und Prozess&shy;kontrolle</li><li>Definieren aller Regeln und Begriffe im Prozess</li><li>Regelmäßige Feedback-Schleifen und Über&shy;prüfungen</li><li>Kontinuierliche Verbesserungs&shy;prozesse im Team und Prozess&shy;ablauf</li></ul>
-          
-        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Abläufe sichtbar machen</h2>
+          <p>Vom Vertriebs&shy;eingang bis zum erledigten Ticket – auf einer Tafel.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#grid"/></svg></span>
+            <h3>Tafel frei gestalten</h3>
+            <p>Jede neue Tafel startet mit den Spalten „Neu (Pool)“, „In Bearbeitung“ und „Erledigt“. Anzahl, Namen und Farben von Spalten und Swimlanes ändern Sie jederzeit, sortieren sie per Drag-&#8288;and-&#8288;Drop und klappen sie mit einem Klick ein.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#plug"/></svg></span>
+            <h3>Daten aus allen Anwendungen</h3>
+            <p>Kontakte, Aufgaben, Tickets und Projekte kommen als Karten auf die Tafel. Ziehen Sie einen Eintrag per Drag-&#8288;and-&#8288;Drop auf das Board oder legen Sie ihn direkt dort an.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#user-plus"/></svg></span>
+            <h3>Neue Einträge automatisch</h3>
+            <p>Legen Sie fest, welche neuen Einträge automatisch in der ersten Spalte landen – im Vertrieb etwa alle Kontakte im Adressbuch „Vertriebs&shy;eingang“, in der Entwicklung Tickets einer Kategorie oder Produkt&shy;version.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Zuständigkeiten je Schritt</h3>
+            <p>Geben Sie einer Spalte feste Zuständige oder über&shy;nehmen Sie die Zuständigen der Swimlane. Erledigte Einträge können auf Wunsch automatisch vom Board verschwinden.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lock"/></svg></span>
+            <h3>Rechte für Tafel und Swimlane</h3>
+            <p>Sie bestimmen, welche Gruppen Zugriff auf eine Tafel haben. Für jede Swimlane legen Sie zusätzlich fest, wer Einträge darin verschieben darf.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>Boards als Favoriten</h3>
+            <p>Speichern Sie Ihre Boards als Favoriten und wechseln Sie mit einem Klick zwischen Vertrieb, Support und Entwicklung.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEU</span> Favoriten lassen sich hierarchisch ordnen – praktisch, wenn Sie viele Boards verwalten.</p>
+          </article>
         </div>
       </div>
     </section>
+
     <section class="section">
-      <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="kalender">Kalender</a></li><li><a href="chat">Team Chat</a></li><li><a href="videokonferenzen">Video&shy;konferenzen</a></li><li><a href="dateiverwaltung">Dateien</a></li><li><a href="online-office">Collabora Online Office</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Praxis</span>
+          <h2>Kanban im Vertrieb, im Projekt und im Support</h2>
+          <p class="mt-2">Der Kern von Kanban ist, Aufgaben sichtbar zu machen und die gleichzeitig laufende Arbeit zu begrenzen: Sobald Kapazität frei ist, holt sich ein Mitarbeiter die nächste Aufgabe aus dem Pool. Ein Beispiel ist die Neukundengewinnung im Vertrieb – Ablauf, Adressbücher, Aufgaben&shy;typen und Status passen Sie an Ihre Prozesse an. Halten Sie das Board einfach und verbessern Sie es mit dem Feedback Ihres Teams.</p>
+          <p class="mt-3"><a class="link-arrow" href="../assets/dokumente/Webinar-EGroupware-Kanban-03.2021-DE-4.pdf">Folien zum Kanban-Webinar (PDF)</a></p>
+          <p class="mt-2"><a class="link-arrow" href="community-edition-vs-epl">Community Edition und Enterprise Line im Vergleich</a></p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Kanban auf einen Blick</strong><span class="st-badge st-badge--update">KANBAN</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Edition</dt><dd>Enterprise Line</dd></div>
+            <div class="fact"><dt>Aufbau</dt><dd>Spalten und Swimlanes</dd></div>
+            <div class="fact"><dt>Karten</dt><dd>Kontakte, Aufgaben, Tickets, Projekte</dd></div>
+            <div class="fact"><dt>Automatik</dt><dd>Neue Einträge, Spalten&shy;wechsel, Status&shy;änderung</dd></div>
+            <div class="fact"><dt>Bedienung</dt><dd>Drag-&#8288;and-&#8288;Drop</dd></div>
+          </dl>
+        </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Arbeitet zusammen mit</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/tracker.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="helpdesk">Helpdesk</a></h3><p>Tickets automatisch aufs Board.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/infolog.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="aufgaben">Aufgaben</a></h3><p>Aufgaben und Notizen im Team.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="kontakte">Kontakte</a></h3><p>Vertriebs&shy;kontakte als Karten führen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/projectmanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="projekte">Projekte</a></h3><p>Projekte planen und steuern.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-narrow">
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zu Kanban</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Ist Kanban in der Community Edition enthalten?</summary>
+            <div class="faq-body"><p>Nein. Kanban ist Teil der EGroupware Enterprise Line. Den Unterschied der Editionen zeigt unser Vergleich von Community Edition und Enterprise Line.</p></div>
+          </details>
+          <details>
+            <summary>Welche Einträge kann ich auf die Tafel legen?</summary>
+            <div class="faq-body"><p>Kontakte, Aufgaben, Tickets und Projekte aus EGroupware. Welche Anwendungen eine Tafel zulässt, legen Sie beim Einrichten des Boards fest.</p></div>
+          </details>
+          <details>
+            <summary>Muss ich Karten nach jeder Änderung von Hand verschieben?</summary>
+            <div class="faq-body"><p>Nein. Sie legen fest, wie Einträge bei einer Änderung, etwa des Status, automatisch in eine andere Spalte wandern. Umgekehrt kann das Verschieben einer Karte den Eintrag ändern.</p></div>
+          </details>
+          <details>
+            <summary>Wer darf Karten verschieben?</summary>
+            <div class="faq-body"><p>Sie bestimmen, welche Gruppen Zugriff auf eine Tafel haben. Für jede Swimlane lässt sich zusätzlich festlegen, wer Einträge darin verschieben darf.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
+          <h2>Testen Sie Kanban 30 Tage kostenlos</h2>
           <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage kostenlos testen</a>
+            <a class="btn btn--light btn--lg" href="funktionen">Alle Funktionen</a>
           </div>
         </div>
       </div>

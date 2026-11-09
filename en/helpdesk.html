@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EGroupware Helpdesk - Keeping an eye on service cases</title>
-  <meta name="description" content="With the helpdesk module or ticket system, EGroupware offers a flexible tracking application for recording internal or external support cases.">
+  <title>Helpdesk and ticket system: tickets from emails, escalations, reports</title>
+  <meta name="description" content="The EGroupware helpdesk: tickets from emails, automatic assignment and escalation, comments and changes at a glance, reports with charts and export.">
   <link rel="canonical" href="https://www.egroupware.org/en/helpdesk">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/helpdesk">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/helpdesk">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="EGroupware Helpdesk - Keeping an eye on service cases">
-  <meta property="og:description" content="With the helpdesk module or ticket system, EGroupware offers a flexible tracking application for recording internal or external support cases.">
+  <meta property="og:title" content="Helpdesk and ticket system: tickets from emails, escalations, reports">
+  <meta property="og:description" content="The EGroupware helpdesk: tickets from emails, automatic assignment and escalation, comments and changes at a glance, reports with charts and export.">
   <meta property="og:url" content="https://www.egroupware.org/en/helpdesk">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/helpdesk#webpage","url":"https://www.egroupware.org/en/helpdesk","name":"Helpdesk and ticket system: tickets from emails, escalations, reports","description":"The EGroupware helpdesk: tickets from emails, automatic assignment and escalation, comments and changes at a glance, reports with charts and export.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/helpdesk#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/helpdesk#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/helpdesk#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://www.egroupware.org/en/features"},{"@type":"ListItem","position":3,"name":"Helpdesk","item":"https://www.egroupware.org/en/helpdesk"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/helpdesk#faq","mainEntity":[{"@type":"Question","name":"Can emails become tickets automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. If you wish, EGroupware monitors a mailbox and assigns incoming emails to existing tickets or creates new service cases. You convert individual emails into a ticket in one click."}},{"@type":"Question","name":"Is the helpdesk also suitable for customer enquiries?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can handle customer enquiries directly in the ticket system or use it as an internal helpdesk. It can also serve as a service module or forum replacement."}},{"@type":"Question","name":"Who may see and edit tickets?","acceptedAnswer":{"@type":"Answer","text":"You decide this with the permission settings in EGroupware – separately for who may create, read or change tickets."}},{"@type":"Question","name":"Can I export reports?","acceptedAnswer":{"@type":"Answer","text":"Yes. In addition to bar and pie charts for any period, you can export the data, for example as an Excel spreadsheet."}}]}]}
   </script>
 </head>
 <body>
@@ -123,134 +126,149 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/helpdesk):
-       - Kein eigener Einleitungstext – erster Abschnitt („Helpdesk: Keeping an eye on service cases“) in den Kopfbereich gezogen.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Helpdesk</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="features">Features</a></nav>
         <h1>Helpdesk</h1>
-        <p class="lead">With the ticket system, EGroupware offers you a flexible module for recording internal or external support cases. Convert emails into a ticket with one click or use automation functions for this. In addition, you can also use it as a service module or forum replacement.</p>
+        <p class="lead">Record internal and external support cases in a ticket system that you tailor precisely to your processes with your own subject areas, categories, fields and statuses. Emails become tickets in one click or automatically – and no request gets lost.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="trial">Try free for 30 days</a>
+          <a class="btn btn--ghost btn--lg" href="pricing">See pricing</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Tickets from emails</strong><span>In one click or automatically</span></li><li><strong>Escalations</strong><span>Automatic assignment and workflow</span></li><li><strong>Reports</strong><span>Charts and export</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/supportcenter-1080-en.webp" alt="Helpdesk" width="1080" height="945" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/supportcenter-1080-en.webp" alt="EGroupware helpdesk with ticket list by category" width="1080" height="945" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>Helpdesk</span></div></nav>
-    <section class="section section--knapp">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Advantages of the ticket system</h2>
-          <p class="mt-2">If you are missing transparency in your current workflow, EGroupware will significantly improve your service, event and task management. The helpdesk or ticket system can be tailored exactly to your needs with your own subject areas, categories, fields, status and escalations.</p>
-          
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Service cases &amp; automatic escalation processes</h2>
-          <p class="mt-2">You can analyse and delegate all service incidents, check the completion status and use escalation processes at any time. Handle customer enquiries directly with our ticket system or use it as an internal helpdesk. This is how EGroupware becomes your comprehensive service portal.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/supportcenter-popup-1080-en-r2.webp" alt="Service cases &amp; automatic escalation processes" width="1080" height="945" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <article class="app-highlight app-highlight--neu app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEW</span><small>New notifications</small></div>
+            <h2>New comments and changes at a glance</h2>
+            <p>The new notification view shows new comments and changes to a ticket together. You see straight away what a colleague or customer has written and what has changed in the ticket – without having to search through the ticket first. The new view applies throughout EGroupware, and the helpdesk is where it really shows its strengths.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Service cases under control</h2>
+          <p>From first contact to solution – traceable for the whole team.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Communicate effectively - set priorities</h2>
-          <p>Prioritise incoming service requests and tasks with the ticket system and clearly classify incidents into service and task classes. You can also monitor an email inbox and thus automatically assign incoming emails to tickets or create new service cases.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><circle cx="8.5" cy="14" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-          <h2>Automatic delegation to responsible persons</h2>
-          <p>Automatically assign tickets to a team or a person. With the help of the rights assignment in EGroupware, you can determine exactly which employees are allowed to create, read or change tickets.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M22 20v-1.6a4 4 0 0 0-3-3.87M16.5 4.13a3.5 3.5 0 0 1 0 6.74"/></svg></span>
-          <h2>Share information with the team</h2>
-          <p>Use the ticket system to track and shape the discussion process. Add comments or files in a structured way and exchange relevant information with the team. You always stay informed about changes in the ticket, as required by email or the internal notification system.</p>
-          
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#mail"/></svg></span>
+            <h3>Tickets from emails</h3>
+            <p>Convert an email into a ticket in one click. Or let EGroupware monitor a mailbox: incoming emails are assigned to existing tickets or created as new service cases.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#tag"/></svg></span>
+            <h3>Priorities and categories</h3>
+            <p>Prioritise requests and classify them into service and task classes. You adapt subject areas, categories, custom fields and statuses to your processes.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Automatic assignment</h3>
+            <p>Requests go automatically to a team or a person. With the permission settings you decide who may create, read or change tickets.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#sync"/></svg></span>
+            <h3>Workflow and escalations</h3>
+            <p>Decide what EGroupware triggers automatically: notifications, alerts and changes of category, responsibility or priority. Escalations make sure no case is left lying.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#quote"/></svg></span>
+            <h3>Comments and files</h3>
+            <p>Add comments and files to the ticket in a structured way and follow the whole discussion. EGroupware informs you of changes by email or through the internal notifications.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#pulse"/></svg></span>
+            <h3>Complete reporting</h3>
+            <p>Analyse your service performance for any period with bar and pie charts. If required, you export the data, for example as an Excel spreadsheet.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>Interactivity in EGroupware</h2>
-          <p class="mt-2">The integration with other modules allows you to link tickets with the wiki or the knowledge base. In addition, you can quickly and easily create tasks or time records linked to a ticket. You can convert emails into a ticket with one click or use automation functions for this.</p>
-          
-          
+          <span class="eyebrow">Collaboration</span>
+          <h2>Linked to tasks, times and Kanban</h2>
+          <p class="mt-2">Create linked tasks or time records from a ticket in a few clicks and connect tickets with the wiki or the knowledge base. With the Kanban board you organise tickets on boards – depending on conditions, new tickets can be added to a board automatically. You use the helpdesk internally, for customer enquiries or as a service module and forum replacement.</p>
+          <p class="mt-3"><a class="link-arrow" href="kanban">Kanban board</a></p>
+          <p class="mt-2"><a class="link-arrow" href="timesheet">Record times with the timesheet</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-projektmanger-vorlageprojekt.webp" alt="Interactivity in EGroupware" width="900" height="538" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Helpdesk at a glance</strong><span class="st-badge st-badge--update">HELPDESK</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Use</dt><dd>Internal support, customer enquiries, service module</dd></div>
+            <div class="fact"><dt>Input</dt><dd>Manually or from emails</dd></div>
+            <div class="fact"><dt>Tailoring</dt><dd>Subject areas, categories, fields, statuses</dd></div>
+            <div class="fact"><dt>Automation</dt><dd>Assignment, notification, escalation</dd></div>
+            <div class="fact"><dt>Reports</dt><dd>Charts, export e.g. to Excel</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>Quality assurance through workflow management</h2>
-          <p>The individually definable workflow management of the ticket system supports you in improving your service processes even further. Define which of the following activities are automatically triggered by EGroupware: Notifications, alerts, change of categories, responsibilities and priorities.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>Complete reporting</h2>
-          <p>Get an overview of your service and task management with sophisticated reports and analyse your service performance over time. For this purpose, the EGroupware ticket system provides you with graphical evaluations with bar and pie charts, and you can also export data (e.g. as an Excel table).</p>
-          
-          
-        </article>
+        <div class="section-head reveal">
+          <span class="eyebrow">Related</span>
+          <h2>Works together with</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/mail.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="email">Email</a></h3><p>Turn emails into tickets in one click.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/kanban.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="kanban">Kanban</a></h3><p>Manage tickets as cards on the board.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/timesheet.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="timesheet">Timesheet</a></h3><p>Record the time spent on tickets.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="crm">CRM</a></h3><p>All of a customer's activities in view.</p></div></article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>In Kombination mit dem integrierten Kanban-Board</h2>
-          <p class="mt-2">In combination with the integrated Kanban board, tickets as well as tasks, contacts, files and all other data objects from EGroupware can be organised in boards. Objects can be transferred to the board via DnD or newly created in the board. New tickets can also be added automatically. For example, tickets can be added to certain boards depending on conditions and further changes (e.g. responsibilities) can be made to the ticket.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/kanban-1080px-deen.webp" alt="In Kombination mit dem integrierten Kanban-Board" width="1080" height="672" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
-        <ul class="sibling-list mt-3"><li><a href="contacts">Contacts</a></li><li><a href="crm">CRM</a></li></ul>
-        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
+        <div class="section-head reveal">
+          <h2>Frequently asked questions about the helpdesk</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Can emails become tickets automatically?</summary>
+            <div class="faq-body"><p>Yes. If you wish, EGroupware monitors a mailbox and assigns incoming emails to existing tickets or creates new service cases. You convert individual emails into a ticket in one click.</p></div>
+          </details>
+          <details>
+            <summary>Is the helpdesk also suitable for customer enquiries?</summary>
+            <div class="faq-body"><p>Yes. You can handle customer enquiries directly in the ticket system or use it as an internal helpdesk. It can also serve as a service module or forum replacement.</p></div>
+          </details>
+          <details>
+            <summary>Who may see and edit tickets?</summary>
+            <div class="faq-body"><p>You decide this with the permission settings in EGroupware – separately for who may create, read or change tickets.</p></div>
+          </details>
+          <details>
+            <summary>Can I export reports?</summary>
+            <div class="faq-body"><p>Yes. In addition to bar and pie charts for any period, you can export the data, for example as an Excel spreadsheet.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Try EGroupware free for 30 days</h2>
+          <h2>Try the helpdesk free for 30 days</h2>
           <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
-            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+            <a class="btn btn--solid-light btn--lg" href="trial">Try free for 30 days</a>
+            <a class="btn btn--light btn--lg" href="features">All features</a>
           </div>
         </div>
       </div>

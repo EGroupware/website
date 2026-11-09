@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Collabora Online Office - Textverarbeitung im Browser</title>
-  <meta name="description" content="Mit Collabora Online Office bearbeiten Sie Texte oder Tabellen gemeinsam mit anderen Personen in Echtzeit direkt in EGroupware!">
+  <title>Collabora Online Office: Dokumente gemeinsam im Browser bearbeiten</title>
+  <meta name="description" content="Mit Collabora Online in EGroupware Texte, Tabellen und Präsentationen gemeinsam in Echtzeit im Browser bearbeiten – mit Freigabe-Links für Externe und Vorlagen.">
   <link rel="canonical" href="https://www.egroupware.org/de/online-office">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/online-office">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/online-office">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Collabora Online Office - Textverarbeitung im Browser">
-  <meta property="og:description" content="Mit Collabora Online Office bearbeiten Sie Texte oder Tabellen gemeinsam mit anderen Personen in Echtzeit direkt in EGroupware!">
+  <meta property="og:title" content="Collabora Online Office: Dokumente gemeinsam im Browser bearbeiten">
+  <meta property="og:description" content="Mit Collabora Online in EGroupware Texte, Tabellen und Präsentationen gemeinsam in Echtzeit im Browser bearbeiten – mit Freigabe-Links für Externe und Vorlagen.">
   <meta property="og:url" content="https://www.egroupware.org/de/online-office">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/online-office#webpage","url":"https://www.egroupware.org/de/online-office","name":"Collabora Online Office: Dokumente gemeinsam im Browser bearbeiten","description":"Mit Collabora Online in EGroupware Texte, Tabellen und Präsentationen gemeinsam in Echtzeit im Browser bearbeiten – mit Freigabe-Links für Externe und Vorlagen.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/online-office#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/online-office#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/online-office#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"Collabora Online Office","item":"https://www.egroupware.org/de/online-office"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/online-office#faq","mainEntity":[{"@type":"Question","name":"Brauche ich ein lokal installiertes Office-Programm?","acceptedAnswer":{"@type":"Answer","text":"Nein. Collabora Online läuft vollständig im Browser, ein aktueller Chrome, Edge oder Firefox genügt."}},{"@type":"Question","name":"Können Externe an Dokumenten mitarbeiten?","acceptedAnswer":{"@type":"Answer","text":"Ja. Über einen Collabora-Freigabe-Link bearbeiten Partner und Kunden ein Dokument gemeinsam mit Ihnen."}},{"@type":"Question","name":"Welche Lizenz brauche ich für Collabora?","acceptedAnswer":{"@type":"Answer","text":"Die Vollversion wird nach aktiven Benutzern lizenziert, Collabora Lite nach gleichzeitig geöffneten Dokumenten. Für Tests und den persönlichen Gebrauch gibt es Collabora CODE."}},{"@type":"Question","name":"Wie komme ich an die neue Version Collabora Online 26.04?","acceptedAnswer":{"@type":"Answer","text":"In einer Standardinstallation wird sie automatisch als neuer Container eingerichtet, in der EGroupware Cloud steht sie ebenfalls bereit."}}]}]}
   </script>
 </head>
 <body>
@@ -123,105 +126,153 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/online-office):
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Online Office</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
         <h1>Collabora Online Office</h1>
-        <p class="lead">Mit Collabora Online Office bearbeiten Sie Texte oder Tabellen gemeinsam mit anderen Personen in Echtzeit direkt in EGroupware! Mit der File&shy;sharing Funktion können Sie auch Externe (Partner. Kunden oder Mitarbeiter im Home&shy;office) direkt …</p>
+        <p class="lead">Bearbeiten Sie Texte, Tabellen und Präsentationen gemeinsam in Echtzeit – direkt in EGroupware im Browser. Über Freigabe-Links beziehen Sie auch Partner, Kunden oder Kollegen im Home&shy;office mit ein.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage kostenlos testen</a>
+          <a class="btn btn--ghost btn--lg" href="preise">Preise ansehen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Echtzeit</strong><span>Gemeinsam am selben Dokument</span></li><li><strong>Gängige Formate</strong><span>Text, Tabelle, Präsentation</span></li><li><strong>Ohne Installation</strong><span>Nur ein aktueller Browser</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/collabora-online-egroupware.webp" alt="Collabora Online Office" width="918" height="664" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/collabora-online-egroupware.webp" alt="Mehrere Personen bearbeiten ein Dokument in Collabora Online" width="918" height="664" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>Collabora Online Office</span></div></nav>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Dokumente direkt online mit Collabora bearbeiten</h2>
-          <p>Mit Collabora Online Office bearbeiten Sie Texte oder Tabellen gemeinsam mit anderen Personen in Echtzeit direkt in EGroupware! Mit der File&shy;sharing Funktion können Sie auch Externe (Partner. Kunden oder Mitarbeiter im Home&shy;office) direkt mit einbeziehen. Nutzen Sie Vorlage&shy;dokumente in Kombination mit Kontakten oder Aufgaben, um Ihre Prozesse zu vereinfachen. Test Version 30 Tage gratis testen</p>
-          
-          <div class="link-list mt-3"><a href="testversion">Test Version</a></div>
+        <article class="app-highlight app-highlight--neu reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEU</span><small>Seit Oktober 2026</small></div>
+            <h2>Collabora Online 26.04 kommt automatisch</h2>
+            <p>Die neue Jahres&shy;version Collabora Online 26.04 wird in einer Standard&shy;installation von EGroupware automatisch als neuer Container eingerichtet. In der EGroupware Cloud steht sie ebenfalls bereit. Wer eine ältere Version braucht, wechselt nach einer dokumentierten Anleitung zurück.</p>
+            <p class="mt-3"><a class="link-arrow" href="https://help.egroupware.org/t/80138" rel="noopener" target="_blank">Ankündigung im Forum</a></p>
+          </div>
+          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-collabora4-de.webp" alt="Präsentation in Collabora Online auf einem Laptop" width="1200" height="803" loading="lazy" decoding="async"></figure>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Was ist Collabora Online?</h2>
-          <p>Collabora Online ist eine leistungs&shy;starke LibreOffice-basierte Office-Suite mit kollaborativer Bearbeitungs&shy;funktionalität. Diese browser&shy;basierte Online-Version unterstützt alle gängigen Dokumenten&shy;typen wie Text-Dokumente (doc, docx, odt), Tabellenkalkulations- (xls, xlsx, ods) und Präsentations&shy;dateien (ppt, pptx, odp). Sie benötigen lediglich einen aktuellen Browser wie z.B. Chrome, Edge oder Firefox.</p>
-          
-          <div class="link-list mt-3"><a href="https://www.collaboraoffice.com/de/collabora-online/" rel="noopener" target="_blank">Collabora Online</a></div>
-        </article>
-        </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Gemeinsame Bearbeitung in Echtzeit</h2>
-          <p class="mt-2">EGroupware-Benutzer können in Echtzeit mit verschiedenen Geräten gleichzeitig am selben Dokument arbeiten. Über einen Collabora-Sharing-Link können auch Externe hierbei mit einbezogen werden. Dokumente können direkt als PDF in das EGroupware Datei&shy;system gespeichert, herunter&shy;geladen oder wieder als E-&#8288;Mail-Anlage verschickt werden.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-collabora4-de.webp" alt="Gemeinsame Bearbeitung in Echtzeit" width="1200" height="803" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Dokumente gemeinsam bearbeiten</h2>
+          <p>Vom Angebot bis zur Präsentation – ohne lokales Office-Programm.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Office Dokumente Online bearbeiten</h2>
-          <p>Die Installation eines lokalen Office-Programms ist nicht notwendig. Die Bearbeitung der Dokumente erfolgt bei Collabora Online ausschließlich im Browser. Die Option zur Installation auf dem eigenen Server stellt insbesondere bezüglich Daten&shy;sicherheit für viele Firmen ein erhebliches Plus dar.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h5"/></svg></span>
-          <h2>Profitieren Sie von Vorlage&shy;dokumenten</h2>
-          <p>Sie sammeln Ihre Daten in EGroupware, nutzen Vorlagen&shy;dokumente mit Platzhaltern und fügen die Inhalte dann in Ihre Dokumente ein. Die Weiter&shy;verarbeitung oder Speicherung als PDF erfolgt wieder direkt im Online Office. So können Sie Angebote oder Rechnungen direkt aus EGroupware heraus schreiben, versenden und im CRM dokumentieren.</p>
-          
-          <div class="link-list mt-3"><a href="crm">CRM</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Collabora Lizenz&shy;modelle</h2>
-          <p>Lizenzen der Voll&shy;version richten sich nach der Anzahl der aktiven Benutzern, die Zugriff auf Collabora haben. Ein weiteres Lizenz&shy;modell ist Collabora Lite, das auf der Anzahl der gleichzeitig geöffneten Dokumente (Minimum 50) basiert, aber keine Rabatte für NGO oder Mehrjahresverträge bietet. Für den persönlichen Gebrauch oder Tests steht auch das Community Produkt Collabora CODE zur Verfügung.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Collabora Lizenz kaufen</h2>
-          <p>Wenn Sie einen eigenen Collabora Server betreiben möchten, erwerben Sie einfach die benötigten Collabora Lizenzen. und tragen den Lizenz-Schlüssel in der Konfiguration in EGroupware ein. Genauere Informationen zur Installation finden Sie hier. In der EGroupware Cloud bestellen Sie auch die Anzahl der benötigten Lizenzen, wir tragen diese dann entsprechend für Sie ein.</p>
-          
-          <div class="link-list mt-3"><a href="preise#collabora">Collabora Lizenzen</a><a href="https://github.com/EGroupware/egroupware/wiki/Collabora-Integration" rel="noopener" target="_blank">hier</a></div>
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Gemeinsam in Echtzeit</h3>
+            <p>Mehrere Benutzer arbeiten gleichzeitig am selben Dokument, auch von verschiedenen Geräten aus. Jeder sieht die Änderungen der anderen sofort.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#news"/></svg></span>
+            <h3>Alle gängigen Formate</h3>
+            <p>Collabora Online basiert auf LibreOffice und öffnet Text&shy;dokumente (doc, docx, odt), Tabellen (xls, xlsx, ods) und Präsentationen (ppt, pptx, odp).</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#cloud"/></svg></span>
+            <h3>Externe einbeziehen</h3>
+            <p>Über einen Collabora-Freigabe-Link bearbeiten auch Partner und Kunden ein Dokument mit – ohne eigenes EGroupware-Konto.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#tag"/></svg></span>
+            <h3>Vorlagen mit Platzhaltern</h3>
+            <p>Füllen Sie Vorlagen mit Daten aus Kontakten oder Aufgaben. So schreiben Sie Angebote und Rechnungen direkt aus EGroupware, versenden sie und dokumentieren sie im CRM.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#mail"/></svg></span>
+            <h3>Als PDF speichern und versenden</h3>
+            <p>Speichern Sie Dokumente als PDF im Datei&shy;manager, laden Sie sie herunter oder verschicken Sie sie direkt als E-&#8288;Mail-Anhang.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#server"/></svg></span>
+            <h3>Auf dem eigenen Server</h3>
+            <p>Die Bearbeitung läuft voll&shy;ständig im Browser, ein lokales Office-Programm ist nicht nötig. Collabora Online lässt sich auf dem eigenen Server betreiben – ein Plus für die Daten&shy;sicherheit.</p>
+          </article>
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Lizenzen</span>
+          <h2>Collabora-Lizenzen für Ihren Bedarf</h2>
+          <p class="mt-2">Die Lizenzen der Voll&shy;version richten sich nach der Zahl der aktiven Benutzer mit Zugriff auf Collabora. Collabora Lite wird nach der Zahl gleichzeitig geöffneter Dokumente abgerechnet (mindestens 50), bietet aber keine Rabatte für gemeinnützige Organisationen oder Mehrjahresverträge. Für den persönlichen Gebrauch und Tests gibt es das Community-Produkt Collabora CODE.</p>
+          <p class="mt-2">Betreiben Sie einen eigenen Collabora-Server, tragen Sie den Lizenz&shy;schlüssel in der Konfiguration von EGroupware ein. In der EGroupware Cloud bestellen Sie die Lizenzen bei uns, wir richten sie für Sie ein.</p>
+          <p class="mt-3"><a class="link-arrow" href="preise#collabora">Collabora-Lizenzen</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://github.com/EGroupware/egroupware/wiki/Collabora-Integration" rel="noopener" target="_blank">Anleitung zur Installation</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://www.collaboraoffice.com/de/collabora-online/" rel="noopener" target="_blank">Mehr über Collabora Online</a></p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Online Office auf einen Blick</strong><span class="st-badge st-badge--update">OFFICE</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Basis</dt><dd>Collabora Online, auf Grundlage von LibreOffice</dd></div>
+            <div class="fact"><dt>Version</dt><dd>Collabora Online 26.04</dd></div>
+            <div class="fact"><dt>Formate</dt><dd>Docx, xlsx, pptx, odt, ods, odp und mehr</dd></div>
+            <div class="fact"><dt>Browser</dt><dd>Aktuelle Version von Chrome, Edge oder Firefox</dd></div>
+            <div class="fact"><dt>Betrieb</dt><dd>EGroupware Cloud oder eigener Server</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Arbeitet zusammen mit</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/filemanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="dateiverwaltung">Datei&shy;manager</a></h3><p>Dokumente zentral ablegen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="crm">CRM</a></h3><p>Angebote und Rechnungen dokumentieren.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/infolog.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="aufgaben">Aufgaben</a></h3><p>Vorlagen und Berichte erstellen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/videoconference.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="videokonferenzen">Video&shy;konferenzen</a></h3><p>Meetings mit Jitsi oder BigBlueButton.</p></div></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="kalender">Kalender</a></li><li><a href="chat">Team Chat</a></li><li><a href="videokonferenzen">Video&shy;konferenzen</a></li><li><a href="dateiverwaltung">Dateien</a></li><li><a href="kanban">Kanban</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zum Online Office</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Brauche ich ein lokal installiertes Office-Programm?</summary>
+            <div class="faq-body"><p>Nein. Collabora Online läuft voll&shy;ständig im Browser, ein aktueller Chrome, Edge oder Firefox genügt.</p></div>
+          </details>
+          <details>
+            <summary>Können Externe an Dokumenten mitarbeiten?</summary>
+            <div class="faq-body"><p>Ja. Über einen Collabora-Freigabe-Link bearbeiten Partner und Kunden ein Dokument gemeinsam mit Ihnen.</p></div>
+          </details>
+          <details>
+            <summary>Welche Lizenz brauche ich für Collabora?</summary>
+            <div class="faq-body"><p>Die Voll&shy;version wird nach aktiven Benutzern lizenziert, Collabora Lite nach gleichzeitig geöffneten Dokumenten. Für Tests und den persönlichen Gebrauch gibt es Collabora CODE.</p></div>
+          </details>
+          <details>
+            <summary>Wie komme ich an die neue Version Collabora Online 26.04?</summary>
+            <div class="faq-body"><p>In einer Standard&shy;installation wird sie automatisch als neuer Container eingerichtet, in der EGroupware Cloud steht sie ebenfalls bereit.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
+          <h2>Testen Sie das Online Office 30 Tage kostenlos</h2>
           <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage kostenlos testen</a>
+            <a class="btn btn--light btn--lg" href="funktionen">Alle Funktionen</a>
           </div>
         </div>
       </div>

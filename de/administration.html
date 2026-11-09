@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EGroupware Administration - Benutzer und Gruppen anlegen</title>
-  <meta name="description" content="Mit der EGroupware Administration können Sie wichtige Einstellungen und Konfigurationen verwalten. Auch LDAP und ActiceDirectory Anbindung">
+  <title>EGroupware-Administration: Benutzer, Rechte, SSO und Passkeys</title>
+  <meta name="description" content="Benutzer, Gruppen und Rechte zentral verwalten, Active Directory oder LDAP anbinden, Single Sign-on nutzen und die Anmeldung mit Passkey oder YubiKey absichern.">
   <link rel="canonical" href="https://www.egroupware.org/de/administration">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/administration">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/administration">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="EGroupware Administration - Benutzer und Gruppen anlegen">
-  <meta property="og:description" content="Mit der EGroupware Administration können Sie wichtige Einstellungen und Konfigurationen verwalten. Auch LDAP und ActiceDirectory Anbindung">
+  <meta property="og:title" content="EGroupware-Administration: Benutzer, Rechte, SSO und Passkeys">
+  <meta property="og:description" content="Benutzer, Gruppen und Rechte zentral verwalten, Active Directory oder LDAP anbinden, Single Sign-on nutzen und die Anmeldung mit Passkey oder YubiKey absichern.">
   <meta property="og:url" content="https://www.egroupware.org/de/administration">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/administration#webpage","url":"https://www.egroupware.org/de/administration","name":"EGroupware-Administration: Benutzer, Rechte, SSO und Passkeys","description":"Benutzer, Gruppen und Rechte zentral verwalten, Active Directory oder LDAP anbinden, Single Sign-on nutzen und die Anmeldung mit Passkey oder YubiKey absichern.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/administration#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/administration#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/administration#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"Administration","item":"https://www.egroupware.org/de/administration"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/administration#faq","mainEntity":[{"@type":"Question","name":"Kann EGroupware Benutzer aus Active Directory oder LDAP übernehmen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Benutzer und Gruppen können in Active Directory, LDAP oder Univention verwaltet werden und müssen nicht doppelt gepflegt werden. Welche Rechte sie in EGroupware haben, legen Sie in EGroupware fest."}},{"@type":"Question","name":"Welche zweiten Faktoren unterstützt EGroupware?","acceptedAnswer":{"@type":"Answer","text":"Neben einem Code aus einer App auf dem Smartphone auch Passkeys, Windows Hello und Hardware-Schlüssel wie YubiKey oder Nitrokey (WebAuthn). Seit EGroupware 26.8 ist WebAuthn auch in der Community Edition enthalten."}},{"@type":"Question","name":"Muss ich im Büro jedes Mal einen zweiten Faktor eingeben?","acceptedAnswer":{"@type":"Answer","text":"Nicht unbedingt. In der Enterprise Line kann ein IP-Bereich, etwa Ihr Firmennetz, als zweiter Faktor gelten."}},{"@type":"Question","name":"Werden Änderungen der Administratoren protokolliert?","acceptedAnswer":{"@type":"Answer","text":"Ja, alle administrativen Änderungen werden automatisch aufgezeichnet. In der Enterprise Line lässt sich zusätzlich festhalten, in wessen Auftrag und aus welchem Anlass die Änderung erfolgte."}}]}]}
   </script>
 </head>
 <body>
@@ -123,166 +126,151 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/administration):
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Administration</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
         <h1>Administration</h1>
-        <p class="lead">Mit dem Admin Modul stellen Sie die Berechtigung Ihrer Benutzer für die jeweiligen Anwendungen (z.B. Kalender, Kontakte,...) ein und verwalten Benutzer inkl. E-&#8288;Mail&shy;konten. Passen Sie EGroupware an Ihre Bedürfnisse an mittels …</p>
+        <p class="lead">Benutzer, Gruppen und Zugriffs&shy;rechte für alle Anwendungen verwalten Sie zentral in der Weboberfläche. Eigene Felder, Kategorien und Voreinstellungen passen EGroupware an Ihre Organisation an – ohne Programmierung.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage kostenlos testen</a>
+          <a class="btn btn--ghost btn--lg" href="preise">Preise ansehen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Rechte nach Gruppen</strong><span>Lesen, bearbeiten, löschen je Anwendung</span></li><li><strong>Bestehende Verzeichnisse</strong><span>Active Directory, LDAP, Univention</span></li><li><strong>Zwei-Faktor-Anmeldung</strong><span>Auch mit Passkey</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/modul-administration-1.webp" alt="Administration" width="1200" height="836" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/modul-administration-1.webp" alt="Benutzerkonto in der EGroupware-Administration bearbeiten" width="1200" height="836" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>Administration</span></div></nav>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="10.5" width="16" height="10.5" rx="2.5"/><path d="M8 10.5V7.2a4 4 0 1 1 8 0v3.3"/></svg></span>
-          <h2>EGroupware Administration und Verwaltung aller Zugriffs&shy;rechte</h2>
-          <p>Mit dem Admin Modul stellen Sie die Berechtigung Ihrer Benutzer für die jeweiligen Anwendungen (z.B. Kalender, Kontakte,...) ein und verwalten Benutzer inkl. E-&#8288;Mail&shy;konten. Passen Sie EGroupware an Ihre Bedürfnisse an mittels benutzerdefinierter Felder, Logo und eigener Start&shy;seite. Test Version 30 Tage gratis testen</p>
-          
-          <div class="link-list mt-3"><a href="testversion">Test Version</a></div>
+        <article class="app-highlight app-highlight--neu app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEU</span><small>Seit EGroupware 26.8</small></div>
+            <h2>Anmeldung mit Passkey – jetzt auch in der Community Edition</h2>
+            <p>Als zweiten Faktor bei der Anmeldung nutzen Ihre Benutzer einen Passkey, Windows Hello oder einen Hardware-Schlüssel wie YubiKey oder Nitrokey (WebAuthn). Bisher war das der Enterprise Line vorbehalten, seit Version 26.8 ist es auch in der Community Edition enthalten. Als Administrator können Sie die Zwei-Faktor-Authentifizierung für alle vorschreiben.</p>
+            <p class="mt-3"><a class="link-arrow" href="tutorials/2-faktor-authentifizierung-2fa">Zwei-Faktor-Authentifizierung einrichten</a></p>
+          </div>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 8.9 19.3a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.7 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.7 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.03-1.56V3a2 2 0 1 1 4 0v.1A1.7 1.7 0 0 0 15 4.7a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9v.03A1.7 1.7 0 0 0 21 10.06H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>
-          <h2>Einstellungen und Konfigurationen</h2>
-          <p>Die wichtigsten Einstellungen oder Konfigurationen für Ihre EGroupware Anwendung finden Sie in diesem Modul. Dazu zählt auch die Anpassung des Layouts (Farben, Logo, etc) an die CI Ihrer Organisation. Unsere Tutorials und Webinare helfen Ihnen dabei die wichtigsten Parameter festzulegen.</p>
-          
-          <div class="link-list mt-3"><a href="tutorials">Tutorials</a><a href="tutorials">Webinare</a></div>
-        </article>
-        </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Benutzer und Gruppen</h2>
-          <p class="mt-2">Sie können die Zugriffs&shy;rechte auf Gruppen- und Benutzer&shy;ebene festlegen. Erstellen Sie eigene Benutzer&shy;gruppen entsprechend Ihrem Organigramm und ordnen Sie Ihre Mitarbeiter zu. Legen Sie auf Gruppen&shy;ebene fest, wer Zugriff auf die jeweilige Anwendung hat - zum Beispiel E-&#8288;Mail, Kalender, Aufgaben oder Projekte. Zusätzlich definieren Sie, wer welche Daten innerhalb des Moduls lesen, bearbeiten oder löschen darf.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/admin-benutzer-bearbeiten-grau.webp" alt="Benutzer und Gruppen" width="1200" height="717" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Benutzer, Rechte und Anmeldung im Griff</h2>
+          <p>Alle wichtigen Einstellungen für Ihre EGroupware an einem Ort.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
-          <h2>Authentifizierung und Infrastruktur&shy;anbindung</h2>
-          <p>EGroupware bietet verschiedene Möglichkeiten der Benutzer-Authentifizierung oder Anbindung an bestehende Infrastruktur wie z.B. Active Directory, LDAP, Mail-Server oder Univention. Die Benutzer- und Gruppen&shy;verwaltung kann an externe Systeme ausgelagert werden und muss somit nicht doppelt gepflegt werden. Die Zugriffs&shy;rechte werden in EGroupware gesteuert.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span>
-          <h2>Schnittstellen und Integrationen</h2>
-          <p>EGroupware bietet zusätzliche Schnittstellen per Schibboleth, Single-Sign-&#8288;On, OpenID-Connect oder LTI an. Sie können damit zum Einen EGroupware Anwendungen wie zum Beispiel smallPART (video&shy;gestütztes Lernen) in Ihrer Lern&shy;plattform (Moodle, OpenOlat ...) verfügbar machen. Zum Anderen können Sie externe Anwendungen wie Guacamole, eine Webseite oder ein anderes Wiki per OpenID-Connect in EGroupware authentifizieren und einbinden. So ist auch Rocket.Chat eingebunden.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 7 7.4 5.2a2 2 0 0 0 2.2 0L20.5 7"/></svg></span>
-          <h2>E-&#8288;Mail-Konten Verwaltung</h2>
-          <p>In der EGroupware Cloud und im Univention Coperate Server (UCS) haben wir das für Sie schon so für Sie implementiert. Oder Sie nutzen unsere EGroupware Mail&shy;server-Pakete (Dovecot) mit Speicherung im SQL. Legen Sie einfach einen neuen Benutzer in der Administration an und sofort verfügt der neue Benutzer über sein persönliches E-&#8288;Mail-Konto. Auch die Einstellungen von E-&#8288;Mail-Aliasen, Weiterleitungen, Speicherplatz&shy;größe und weitere Zugriffs&shy;rechte sind jederzeit möglich.</p>
-          
-          <div class="link-list mt-3"><a href="preise">EGroupware Cloud</a><a href="univention">Univention Coperate Server (UCS)</a><a href="https://github.com/EGroupware/egroupware/wiki/EGrouwareMail" rel="noopener" target="_blank">EGroupware Mail&shy;server-Pakete</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span>
-          <h2>E-&#8288;Mail Server Integration</h2>
-          <p>In EGroupware lassen sich E-&#8288;Mail-Konten auf verschiedene Arten einbinden. Zum einen können Sie ein externes IMAP-Konto jederzeit im EGroupware E-&#8288;Mail Modul hinzu&shy;fügen. Durch die Anbindung an externe Authentifizierungs&shy;systeme ist auch die Möglichkeit der Steuerung Ihres E-&#8288;Mail Server innerhalb der EGroupware Administration möglich.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
-          <h2>Sicherheit durch Zwei-Faktor-Authentifizierung</h2>
-          <p>Als Administrator können Sie die Zwei-Faktor-Authentifizierung konfigurieren bzw. erzwingen. Als Teil der EPL-&#8288;Funktionen kann hierbei auch eine IP-&#8288;Range angegeben werden, die zum Beispiel im Firmen&shy;netzwerk als zweiter Faktor agiert. Gerade WebAuthn als zweiter Faktor ist sehr einfach nutzbar über einen Schlüssel (Yubikey), einen Fingerabdrucksensor am Handy oder Desktop (Windows Hello, Mac Authentifizierung).</p>
-          
-          <div class="link-list mt-3"><a href="tutorials/2-faktor-authentifizierung-2fa">Zwei-Faktor-Authentifizierung</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
-          <h2>Dokumentation von Änderungen (DSGVO)</h2>
-          <p>Alle administrativen Änderungen werden automatisch aufgezeichnet. Ein Teil der EPL-&#8288;Funktionen hierbei ist die zusätzliche Option zur Dokumentation in wessen Auftrag (z.B. Leiter Abteilung Marketing) und aus welchem Anlass (z.B. Mitarbeiter wechselt die Abteilung) die Änderung vorgenommen wurde. Bei einem Audit können diese Informationen wieder abgerufen werden.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 8.9 19.3a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.7 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.7 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.03-1.56V3a2 2 0 1 1 4 0v.1A1.7 1.7 0 0 0 15 4.7a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9v.03A1.7 1.7 0 0 0 21 10.06H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>
-          <h2>Konfiguration und Einstellungen</h2>
-          <p>Passen Sie EGroupware über die Konfiguration der Anwendungen jeweils auf Ihre individuellen Kunden&shy;bedürfnisse an. Zusätzlich können Administratoren pro Anwendung Einstellungen für alle Mitarbeiter erzwingen oder eine passende Voreinstellung setzen. Im Bedarfs&shy;fall kann ein Anwender diese Voreinstellungen individuell ändern.</p>
-          
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Benutzer und Gruppen</h3>
+            <p>Legen Sie Gruppen nach Ihrem Organigramm an und ordnen Sie die Mitarbeiter zu. Pro Gruppe bestimmen Sie, wer welche Anwendung nutzt und wer Daten darin lesen, bearbeiten oder löschen darf.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#server"/></svg></span>
+            <h3>Anbindung an bestehende Verzeichnisse</h3>
+            <p>Benutzer und Gruppen können aus Active Directory, LDAP oder Univention kommen und müssen nicht doppelt gepflegt werden. Die Zugriffs&shy;rechte steuern Sie weiterhin in EGroupware.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#login"/></svg></span>
+            <h3>Single Sign-&#8288;on und Schnittstellen</h3>
+            <p>EGroupware unterstützt Shibboleth, OpenID Connect und LTI. So melden sich Guacamole, Rocket.Chat oder ein Wiki über EGroupware an, und Vidoteach lässt sich in Lern&shy;plattformen wie Moodle oder OpenOLAT einbinden.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#mail"/></svg></span>
+            <h3>E-&#8288;Mail-Konten verwalten</h3>
+            <p>In der EGroupware Cloud, auf Univention und mit unseren Mail&shy;server-Paketen (Dovecot) erhält jeder neue Benutzer sofort sein Postfach. Aliase, Weiterleitungen und Speicher&shy;platz stellen Sie direkt in der Administration ein, externe IMAP-Konten lassen sich jederzeit hinzu&shy;fügen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#shield"/></svg></span>
+            <h3>Änderungen nachvollziehen (DSGVO)</h3>
+            <p>Alle administrativen Änderungen werden automatisch protokolliert und lassen sich bei einem Audit abrufen. In der Enterprise Line dokumentieren Sie zusätzlich, in wessen Auftrag und aus welchem Anlass eine Änderung erfolgte.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>Voreinstellungen für alle</h3>
+            <p>Konfigurieren Sie jede Anwendung für Ihre Organisation und geben Sie Einstellungen für alle Mitarbeiter vor – verbindlich oder als Voreinstellung, die jeder selbst ändern kann. Auch Logo und Farben passen Sie an Ihr Erscheinungs&shy;bild an.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>Verschiedene Typen von Kategorien</h2>
-          <p class="mt-2">In EGroupware können verschiedene Arten von Kategorien angelegt werden, um eine besser Übersicht und zusätzliche Filter&shy;kriterien zu erhalten. Hierbei können Sie Super&shy;globale Kategorien (gelten für alle Module), globale Kategorien (nur ein Modul) und persönliche Kategorien (pro Benutzer und Modul) anlegen. Diese Unterscheidung ermöglicht z.B. in der Adress&shy;verwaltung andere Kategorien zu verwenden als im Kalender.</p>
-          
-          
+          <span class="eyebrow">Anpassen</span>
+          <h2>EGroupware anpassen ohne Programmierung</h2>
+          <p class="mt-2">In vielen Anwendungen legen Sie eigene Felder, Status und Typen an. Kategorien gibt es in drei Stufen: super&shy;global für alle Anwendungen, global für eine Anwendung und persönlich für einzelne Benutzer – so nutzt das Adressbuch andere Kategorien als der Kalender. Dialoge und Listen lassen sich über das Vorlagen-System von EGroupware umgestalten; gerne beraten und unterstützen wir Sie dabei.</p>
+          <p class="mt-3"><a class="link-arrow" href="tutorials/egroupware-customizing">EGroupware anpassen ohne Programmierung</a></p>
+          <p class="mt-2"><a class="link-arrow" href="tutorials">Tutorials und Webinare</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://github.com/EGroupware/egroupware/wiki/EGrouwareMail" rel="noopener" target="_blank">Mail&shy;server-Pakete im Wiki</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-admin-konfiguration-der-anwendungen-gr.webp" alt="Verschiedene Typen von Kategorien" width="1200" height="717" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Administration auf einen Blick</strong><span class="st-badge st-badge--update">ADMIN</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Rechte</dt><dd>Je Gruppe, Benutzer und Anwendung</dd></div>
+            <div class="fact"><dt>Verzeichnisse</dt><dd>Active Directory, LDAP, Univention</dd></div>
+            <div class="fact"><dt>Anmeldung</dt><dd>OpenID Connect, Shibboleth, LTI</dd></div>
+            <div class="fact"><dt>Zwei-Faktor</dt><dd>Passkey, Windows Hello, YubiKey, Nitrokey</dd></div>
+            <div class="fact"><dt>Protokoll</dt><dd>Alle Änderungen der Administratoren</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h5"/></svg></span>
-          <h2>Eigene Felder und Templates definieren</h2>
-          <p>Sie können in vielen Anwendungen eigene Felder, Status oder Typen definieren und somit EGroupware einfach an Ihre Bedürfnisse anpassen. Zusätzlich kann auch das Aussehen der Dialoge und Listen über das Widget-basierte Template-System der EGroupware verändert werden - siehe auch EGroupware anpassen ohne programmieren. Gerne beraten oder unterstützen wir Sie hierbei.</p>
-          
-          <div class="link-list mt-3"><a href="tutorials/egroupware-customizing">EGroupware anpassen ohne programmieren</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M22 20v-1.6a4 4 0 0 0-3-3.87M16.5 4.13a3.5 3.5 0 0 1 0 6.74"/></svg></span>
-          <h2>Adressbuch Konfiguration</h2>
-          <p>In der Konfiguration vom Adressbuch können Sie z.B. ein Limit für zu exportierende Datensätze eintragen, die Routen&shy;planung konfigurieren oder die Telefonie-Integration für ausgehende Verbindungen an eine beliebige VOIP-Anlage.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Telefonie-Integration mit Placetel</h2>
-          <p>Verbinden Sie Ihre Kontakte bzw. Ihre Kunden&shy;management (CRM) direkt mit ihrer Telefon&shy;anlage. Mit der Integration öffnet sich die CRM-&#8288;Ansicht des Kontaktes automatisch für eingehenden und ausgehende Telefon&shy;anrufe. Weitere Integration z.B. Anzeige von Telefon&shy;listen wird folgen.</p>
-          <ul class="check-list mt-3"><li>Die Grund&shy;funktionalitäten für Telefonie-Integration sind auch in der CE Version vorhanden bzw. können auch für andere Telefonanlagen konfiguriert werden. Die Telefon&shy;anlage muss das natürlich unterstützen und Sie müssen alle Details der Schnittstelle definieren.</li><li>Für die Telefon&shy;anlage von Placetel gibt es ein spezielle Konfiguration bei der Sie nur Ihren Api-&#8288;Key aus Placetel eintragen und ein Token generieren für den Signatur-Header. Umgekehrt tragen Sie bei Placetel unter Integration -&gt; Notify-&#8288;Api die in EGroupware angezeigte &quot;URL Ihres API-&#8288;Endpoints (Webhook für eingehende Anrufe)&quot; und das Token ein.</li><li>Die Funktion in EGroupware finden Sie in Administration -&gt; Anwendungen -&gt; EPL-&#8288;Funktionen -&gt; Konfiguration der Anwendung</li></ul>
-          
-        </article>
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Arbeitet zusammen mit</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/mail.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="email">E-&#8288;Mail</a></h3><p>Postfächer, Aliase und Weiterleitungen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="kontakte">Kontakte</a></h3><p>Adressbücher mit Freigaben für Teams.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/cti.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="cti-telefon-integration">CTI-&#8288;Telefon&shy;integration</a></h3><p>Telefon&shy;anlage mit Kontakten verbinden.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/home.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="homeoffice-integration">Home&shy;office</a></h3><p>Firmen-&#8288;PC sicher per Guacamole erreichen.</p></div></article>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="guacamole">Guacamole</a></li><li><a href="univention">Univention Corporate Server (UCS)</a></li><li><a href="vidoteach">Lernen mit Videos</a></li><li><a href="community-edition-vs-epl">EGroupware CE vs. EPL</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zur Administration</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Kann EGroupware Benutzer aus Active Directory oder LDAP über&shy;nehmen?</summary>
+            <div class="faq-body"><p>Ja. Benutzer und Gruppen können in Active Directory, LDAP oder Univention verwaltet werden und müssen nicht doppelt gepflegt werden. Welche Rechte sie in EGroupware haben, legen Sie in EGroupware fest.</p></div>
+          </details>
+          <details>
+            <summary>Welche zweiten Faktoren unterstützt EGroupware?</summary>
+            <div class="faq-body"><p>Neben einem Code aus einer App auf dem Smart&shy;phone auch Passkeys, Windows Hello und Hardware-Schlüssel wie YubiKey oder Nitrokey (WebAuthn). Seit EGroupware 26.8 ist WebAuthn auch in der Community Edition enthalten.</p></div>
+          </details>
+          <details>
+            <summary>Muss ich im Büro jedes Mal einen zweiten Faktor eingeben?</summary>
+            <div class="faq-body"><p>Nicht unbedingt. In der Enterprise Line kann ein IP-&#8288;Bereich, etwa Ihr Firmen&shy;netz, als zweiter Faktor gelten.</p></div>
+          </details>
+          <details>
+            <summary>Werden Änderungen der Administratoren protokolliert?</summary>
+            <div class="faq-body"><p>Ja, alle administrativen Änderungen werden automatisch aufgezeichnet. In der Enterprise Line lässt sich zusätzlich fest&shy;halten, in wessen Auftrag und aus welchem Anlass die Änderung erfolgte.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
           <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
           <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage kostenlos testen</a>
+            <a class="btn btn--light btn--lg" href="funktionen">Alle Funktionen</a>
           </div>
         </div>
       </div>

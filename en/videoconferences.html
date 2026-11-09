@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Organise and start video conferences with EGroupware</title>
-  <meta name="description" content="Test video conferencing now. How do video conferences work with Jitsi? It&#x27;s easy thanks to the integration of Jitsi in EGroupware.">
+  <title>Video conferences with Jitsi and BigBlueButton in EGroupware</title>
+  <meta name="description" content="Video calls with a right-click from the status app and address book, conferences planned in the calendar, guests invited by email – Jitsi or BigBlueButton.">
   <link rel="canonical" href="https://www.egroupware.org/en/videoconferences">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/videokonferenzen">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/videoconferences">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Organise and start video conferences with EGroupware">
-  <meta property="og:description" content="Test video conferencing now. How do video conferences work with Jitsi? It&#x27;s easy thanks to the integration of Jitsi in EGroupware.">
+  <meta property="og:title" content="Video conferences with Jitsi and BigBlueButton in EGroupware">
+  <meta property="og:description" content="Video calls with a right-click from the status app and address book, conferences planned in the calendar, guests invited by email – Jitsi or BigBlueButton.">
   <meta property="og:url" content="https://www.egroupware.org/en/videoconferences">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/videoconferences#webpage","url":"https://www.egroupware.org/en/videoconferences","name":"Video conferences with Jitsi and BigBlueButton in EGroupware","description":"Video calls with a right-click from the status app and address book, conferences planned in the calendar, guests invited by email – Jitsi or BigBlueButton.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/videoconferences#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/videoconferences#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/videoconferences#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://www.egroupware.org/en/features"},{"@type":"ListItem","position":3,"name":"Video conferences","item":"https://www.egroupware.org/en/videoconferences"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/videoconferences#faq","mainEntity":[{"@type":"Question","name":"Can external participants join video conferences?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can invite external contacts too – the participant's email address is enough. They do not need an EGroupware account for this."}},{"@type":"Question","name":"Which video conferencing systems does EGroupware support?","acceptedAnswer":{"@type":"Answer","text":"EGroupware is integrated with the open source solutions Jitsi and BigBlueButton. You choose the server yourself: your own server, a rented server or, for Jitsi, a public server."}},{"@type":"Question","name":"Do I have to create conference rooms myself?","acceptedAnswer":{"@type":"Answer","text":"No. You simply plan the video conference in the calendar or start it spontaneously with a right-click from the status app or the address book."}},{"@type":"Question","name":"Does Jitsi cost extra in the EGroupware Cloud?","acceptedAnswer":{"@type":"Answer","text":"No. In the EGroupware Cloud, a Jitsi server from KiwiTalk is preset, which you use without additional effort or extra costs."}}]}]}
   </script>
 </head>
 <body>
@@ -123,139 +126,143 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/videoconferences):
-       - Enthielt 1 eingebettetes Video (https://www.youtube.com/watch?v=icBcfGjKg-A).
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Video conferences</span>
-        <h1>Video&shy;conferences</h1>
-        <p class="lead">EGroupware offers you various options for a video conference or webinar room. By integrating the Jitsi or BigBlueButton solutions into EGroupware, you can use the format that suits you best. Trial Version Try now 30 days for free</p>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="features">Features</a></nav>
+        <h1>Video conferences</h1>
+        <p class="lead">Start video calls and conferences straight from EGroupware – spontaneously from the status app or planned in the calendar. With Jitsi or BigBlueButton you choose the format that suits your meeting, training session or webinar.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="trial">Try free for 30 days</a>
+          <a class="btn btn--ghost btn--lg" href="pricing">See pricing</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Call with a right-click</strong><span>From the status app and address book</span></li><li><strong>Jitsi or BigBlueButton</strong><span>Open source, server of your choice</span></li><li><strong>External guests welcome</strong><span>The email address is enough</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/videokonferenzen-1.webp" alt="Videoconferences" width="1000" height="667" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/videokonferenzen-1.webp" alt="Video conference with many participants on a laptop" width="1000" height="667" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>Video&shy;conferences</span></div></nav>
+
     <section class="section">
       <div class="wrap">
+        <article class="app-highlight reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--info">SPECIAL</span><small>Video conference highlight</small></div>
+            <h2>Call from wherever you are working</h2>
+            <p>The status app shows you who is online right now – from the home office too. A right-click is all it takes to send a message or start a video call. You call or plan a conference from the address book in the same way, whether the participant uses EGroupware or is an external contact: their email address is enough for the invitation.</p>
+            <p class="mt-3"><a class="link-arrow" href="calendar">Video conference from the calendar appointment</a></p>
+          </div>
+          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-adressbuch-videoconferenzen-gr.webp" alt="Address book with context menu for video call and scheduling a video conference" width="1200" height="717" loading="lazy" decoding="async"></figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Meet, train, present</h2>
+          <p>From a quick call-back to a planned online seminar.</p>
+        </div>
         <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Organise and start video conferences with one click</h2>
-          <p>EGroupware offers you various options for a video conference or webinar room. By integrating the Jitsi or BigBlueButton solutions into EGroupware, you can use the format that suits you best. Trial Version Try now 30 days for free</p>
-          
-          <div class="link-list mt-3"><a href="trial">Trial Version</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Video Meetings mit Jitsi</h2>
-          <p>By integrating the open source solution Jitsi into EGroupware, you can easily set up video conferences or plan them with several participants. Jitsi enables video conferences and the sharing of screen content or a single browser window. You can either install your own Jitsi server, rent a DSGVO-compliant Jitsi server from KiwiTalk or register any public Jitsi server.</p>
-          
-          <div class="link-list mt-3"><a href="https://kiwitalk.de/" rel="noopener" target="_blank">KiwiTalk</a></div>
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#calendar"/></svg></span>
+            <h3>Plan in the calendar</h3>
+            <p>You do not have to worry about conference rooms: you simply plan the video conference as an appointment. With BigBlueButton, EGroupware checks the number of connections and warns you of scheduling conflicts.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#monitor"/></svg></span>
+            <h3>Share your screen</h3>
+            <p>Share your whole screen, a single window or a browser window. With BigBlueButton you can also upload a presentation for your participants.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#cap"/></svg></span>
+            <h3>Learning and working with BigBlueButton</h3>
+            <p>Create polls, use the integrated white&shy;board or edit an office document in parallel with Collabora Online – ideal for training sessions and workshops.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#shield"/></svg></span>
+            <h3>Data protection</h3>
+            <p>The connection is encrypted throughout. You decide which server the conference runs on – in the EGroupware Cloud, a Jitsi server from KiwiTalk in Germany is preset.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>Jitsi server in times of home office</h2>
-          <p class="mt-2">By default, EGroupware uses the Jitsi server of the Jitsi project meet.jit.si. For the EGroupware Cloud we use an &quot;enterprise&quot; Jitsi server from KiwiTalk, which is preset for all instances. With this service, we support work in the home office without additional effort or extra costs for our customers.</p>
-          
-          <div class="link-list mt-3"><a href="https://jitsi.org/" rel="noopener" target="_blank">Jitsi server</a><a href="https://jitsi.org/" rel="noopener" target="_blank">meet.jit.si</a><a href="https://kiwitalk.de/" rel="noopener" target="_blank">KiwiTalk</a></div>
+          <span class="eyebrow">Servers</span>
+          <h2>Jitsi or BigBlueButton – your choice</h2>
+          <p class="mt-2">For Jitsi, you install your own server, rent a GDPR-compliant server from KiwiTalk or enter any public Jitsi server; for your own installations, meet.jit.si is preset. In the EGroupware Cloud you use the KiwiTalk Jitsi server without additional effort or extra costs. For BigBlueButton, you enter your server in the configuration of the status app – or rent the connections you need from bbbserver.de in compliance with the GDPR.</p>
+          <p class="mt-3"><a class="link-arrow" href="news/video-conferences-and-remote-access-to-desktop-pcs-integrated">Integrated video conferencing</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://kiwitalk.de/" rel="noopener" target="_blank">KiwiTalk</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://bbbserver.de" rel="noopener" target="_blank">bbbserver.de</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://www.youtube.com/watch?v=icBcfGjKg-A" rel="noopener" target="_blank">Webinar recording on video conferences</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-videokonferenz.webp" alt="Jitsi server in times of home office" width="1200" height="693" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Video conferences at a glance</strong><span class="st-badge st-badge--update">VIDEO</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Systems</dt><dd>Jitsi, BigBlueButton</dd></div>
+            <div class="fact"><dt>Start</dt><dd>Status app, address book, calendar</dd></div>
+            <div class="fact"><dt>Participants</dt><dd>Colleagues and external guests</dd></div>
+            <div class="fact"><dt>Cloud</dt><dd>KiwiTalk Jitsi server preset</dd></div>
+            <div class="fact"><dt>Extras</dt><dd>Screen sharing, white&shy;board, polls</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Video&shy;conference via BigBlueButton (BBB)</h2>
-          <p>EGroupware can now also set up video conferences via BigBlueButton. All you have to do is set up and configure your BigBlueButton server accordingly in the configuration of the status application. Our recommendation, if you do not have your own BigBlueButton server, simply rent the corresponding number of connections from bbbserver.de (GDPR compliant).</p>
-          
-          <div class="link-list mt-3"><a href="https://bbbserver.de" rel="noopener" target="_blank">bbbserver.de</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Learning and working with BBB</h2>
-          <p>When using from EGroupware, you do not have to worry about creating rooms, you simply schedule your video conference in the calendar. EGroupware checks the number of connections and warns you of scheduling conflicts. Share your screen content, a browser window or upload a presentation for your participants. Create a survey, use the integrated white&shy;board or simply edit an Office document in parallel with Collabora Online.</p>
-          
-          <div class="link-list mt-3"><a href="online-office">Collabora Online</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>See who is online</h2>
-          <p>With the integrated status bar, you can immediately see who is currently &quot;online&quot; and can interact with colleagues immediately.</p>
-          
-          
-        </article>
+        <div class="section-head reveal">
+          <span class="eyebrow">Related</span>
+          <h2>Works together with</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/calendar.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="calendar">Calendar</a></h3><p>Plan conferences as appointments.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/chat.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="chat">Team chat</a></h3><p>Quick coordination with Rocket.Chat.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="contacts">Contacts</a></h3><p>Call or invite with a right-click.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/home.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="remote-work">Remote work</a></h3><p>From home to your office PC.</p></div></article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Start calls directly from EGroupware</h2>
-          <p class="mt-2">The advantage for you as an EGroupware user is that you can also see from your home office whether your colleague is currently available. With a right-click, you simply send him a message or start a video call.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-adressbuch-videoconferenzen-gr.webp" alt="Start calls directly from EGroupware" width="1200" height="717" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Schedule a video conference or call directly</h2>
-          <p>From the EGroupware address book, you can directly start a call or plan a conference with a &quot;right click&quot;. It does not matter whether the participant is an EGroupware user or an external contact. Even if you only know the email address of the participant, it is sufficient to invite him to the video call.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Data protection for video conferences</h2>
-          <p>Since the data connection is encrypted at all times and the server is located in Germany, there are no data protection concerns. At present, this can look different when using foreign service providers, where sometimes data protection guide&shy;lines are not easily visible or sometimes the connection is not encrypted.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg></span>
-          <h2>Webinar: Video&shy;konferenzen mit EGroupware</h2>
-          <p>Take a look at the functions of Jitsi in EGroupware in the webinar recording. There we show live how you can plan or set up video calls. In addition, questions about handling and the technical possibilities will be answered. Topic of the webinar:</p>
-          <ul class="check-list mt-3"><li>Calendar Meeting via video conference</li><li>Openid - external applications with access rights</li><li>Home Workplace over Guacamole Apache</li></ul>
-          
-        </article>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
-        <ul class="sibling-list mt-3"><li><a href="calendar">Calendar</a></li><li><a href="chat">Team Chat</a></li><li><a href="file-manager">Documents</a></li><li><a href="online-office">Online Office</a></li><li><a href="kanban">Kanban</a></li></ul>
-        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
+        <div class="section-head reveal">
+          <h2>Frequently asked questions about video conferences</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Can external participants join video conferences?</summary>
+            <div class="faq-body"><p>Yes. You can invite external contacts too – the participant's email address is enough. They do not need an EGroupware account for this.</p></div>
+          </details>
+          <details>
+            <summary>Which video conferencing systems does EGroupware support?</summary>
+            <div class="faq-body"><p>EGroupware is integrated with the open source solutions Jitsi and BigBlueButton. You choose the server yourself: your own server, a rented server or, for Jitsi, a public server.</p></div>
+          </details>
+          <details>
+            <summary>Do I have to create conference rooms myself?</summary>
+            <div class="faq-body"><p>No. You simply plan the video conference in the calendar or start it spontaneously with a right-click from the status app or the address book.</p></div>
+          </details>
+          <details>
+            <summary>Does Jitsi cost extra in the EGroupware Cloud?</summary>
+            <div class="faq-body"><p>No. In the EGroupware Cloud, a Jitsi server from KiwiTalk is preset, which you use without additional effort or extra costs.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Try EGroupware free for 30 days</h2>
+          <h2>Try video conferences free for 30 days</h2>
           <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
-            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+            <a class="btn btn--solid-light btn--lg" href="trial">Try free for 30 days</a>
+            <a class="btn btn--light btn--lg" href="features">All features</a>
           </div>
         </div>
       </div>

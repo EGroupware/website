@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Timesheet - Zeiten für Aufgaben, Tickets oder Projekte dokumentieren</title>
-  <meta name="description" content="Das Timesheet Modul bietet von der einfachen Zeiterfassung bis zur Buchung von komplexen Stundenkontingenten innerhalb von Projekten an.">
+  <title>Zeiterfassung online: Stundenzettel für Projekte und Aufgaben</title>
+  <meta name="description" content="Arbeitszeit per Start/Stopp erfassen, Projekten, Aufgaben und Tickets zuordnen, abrechenbare Stunden filtern und Nachweise als PDF erstellen – mit EGroupware.">
   <link rel="canonical" href="https://www.egroupware.org/de/stundenzettel">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/stundenzettel">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/timesheet">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Timesheet - Zeiten für Aufgaben, Tickets oder Projekte dokumentieren">
-  <meta property="og:description" content="Das Timesheet Modul bietet von der einfachen Zeiterfassung bis zur Buchung von komplexen Stundenkontingenten innerhalb von Projekten an.">
+  <meta property="og:title" content="Zeiterfassung online: Stundenzettel für Projekte und Aufgaben">
+  <meta property="og:description" content="Arbeitszeit per Start/Stopp erfassen, Projekten, Aufgaben und Tickets zuordnen, abrechenbare Stunden filtern und Nachweise als PDF erstellen – mit EGroupware.">
   <meta property="og:url" content="https://www.egroupware.org/de/stundenzettel">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/stundenzettel#webpage","url":"https://www.egroupware.org/de/stundenzettel","name":"Zeiterfassung online: Stundenzettel für Projekte und Aufgaben","description":"Arbeitszeit per Start/Stopp erfassen, Projekten, Aufgaben und Tickets zuordnen, abrechenbare Stunden filtern und Nachweise als PDF erstellen – mit EGroupware.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/stundenzettel#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/stundenzettel#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/stundenzettel#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"Zeiterfassung","item":"https://www.egroupware.org/de/stundenzettel"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/stundenzettel#faq","mainEntity":[{"@type":"Question","name":"Kann ich Zeiten auch vom Smartphone aus erfassen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Über die mobile Ansicht von EGroupware buchen Sie Zeiten im Browser Ihres Smartphones oder Tablets, zum Beispiel direkt beim Kunden."}},{"@type":"Question","name":"Wer sieht meine Stundenzettel?","acceptedAnswer":{"@type":"Answer","text":"Das legen Sie über Rechte fest. Typisch ist: Mitarbeiter sehen ihre eigenen Zeiten, die Teamleitung alle Zeiten ihres Teams."}},{"@type":"Question","name":"Kann ich aus den Zeiten eine Rechnung erstellen?","acceptedAnswer":{"@type":"Answer","text":"Ja, mit der E-Rechnung der Enterprise Line: Ausgewählte Stundenzettel werden zu Rechnungspositionen und als abgerechnet markiert. Alternativ erstellen Sie einen Stundennachweis als PDF-Anlage aus einer Vorlage."}},{"@type":"Question","name":"Lassen sich Zeiten aus anderen Programmen übernehmen?","acceptedAnswer":{"@type":"Answer","text":"Ja, per CSV-Import, auf Wunsch zeitgesteuert. Außerdem steht eine REST-API zur Verfügung."}}]}]}
   </script>
 </head>
 <body>
@@ -123,135 +126,152 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/stundenzettel):
-       - Kein eigener Einleitungstext – erster Abschnitt („Timesheet - Zeiten für Aufgaben, Tickets oder Proj“) in den Kopfbereich gezogen.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Zeit&shy;erfassung</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
         <h1>Zeit&shy;erfassung</h1>
-        <p class="lead">Von einer einfachen Zeit&shy;erfassung bis zur Buchung von komplexen Stunden&shy;kontingenten innerhalb von Projekten bietet Ihnen das Modul Stunden&shy;zettel (Timesheet) viele Möglichkeiten der Zeit&shy;erfassung. Komplexe Filter&shy;optionen und Reportings erlauben eine Weiter&shy;verarbeitung z.B. als Anlage an Rechnungen.</p>
+        <p class="lead">Erfassen Sie Arbeits&shy;zeiten für Aufgaben, Tickets und Projekte – von der einfachen Zeit&shy;erfassung bis zu Stunden&shy;kontingenten im Projekt. Filter und Reports machen daraus einen Leistungs&shy;nachweis, etwa als Anlage zur Rechnung.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage kostenlos testen</a>
+          <a class="btn btn--ghost btn--lg" href="preise">Preise ansehen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Start und Stopp</strong><span>Oder den Tag in Einzel&shy;zeiten</span></li><li><strong>Zu Projekt und Aufgabe</strong><span>Soll- und Ist-&#8288;Zeiten</span></li><li><strong>Nachweis als PDF</strong><span>Mit Ihrem Logo</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/stundenzettel-anwendung-gr.webp" alt="Zeiterfassung" width="1200" height="816" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/stundenzettel-anwendung-gr.webp" alt="EGroupware-Stundenzettel mit Tagessummen" width="1200" height="816" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>Zeit&shy;erfassung</span></div></nav>
-    <section class="section section--knapp">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Arbeits&shy;stunden dokumentieren im Timesheet</h2>
-          <p class="mt-2">Ihre Mitarbeiter und Kollegen können so Ihre erbrachten Arbeits&shy;stunden für die delegierten Aufgaben und Projekte erfassen. Dies bietet Transparenz und zugleich einen Leistungsnachweis für den Auftraggeber. Ein einfacher Export der Stunden&shy;nach&shy;weise in verschiedene Datei&shy;formate ist jederzeit möglich.</p>
-          
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Umfangreiche Such- und Filter&shy;möglichkeiten</h2>
-          <p class="mt-2">Die dokumentierten Stunden können nach Kunden, Projekten, Mitarbeitern, Aufgaben oder Zeit&shy;räumen gefiltert und exportiert werden. Häufig genutzte Filterkombinationen speichern Sie sich einfach als Favoriten ab und haben Sie dann mit einem Klick zur Verfügung.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/online-stundenzettel-stunden-erfassen-de-gr-1.webp" alt="Umfangreiche Such- und Filtermöglichkeiten" width="1200" height="717" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Aufgaben- und projektbezogene Zeit&shy;dokumentation</h2>
-          <p>Erfassen Sie die geleisteten Arbeits&shy;stunden zu einem Projekt oder einer Aufgabe mit dem Stunden&shy;zettel Modul. EGroupware kann dabei Soll- und Ist-&#8288;Zeiten gegenüber&shy;stellen. Dies erleichtert die Übersicht und eignet sich auch für eine spätere Nachkalkulation der Projekte.</p>
-          
-          
+        <article class="app-highlight reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--info">BESONDERS</span><small>Highlight in der Zeit&shy;erfassung</small></div>
+            <h2>Arbeits&shy;zeit per Start und Stopp</h2>
+            <p>Starten Sie die Zeit&shy;erfassung, wenn Sie mit der Arbeit beginnen, und stoppen Sie sie am Ende – oder tragen Sie Ihren Tag in einzelnen Zeiten ein. Auf Wunsch schlägt EGroupware das nächste Zeitintervall des Tages automatisch als Startzeit vor. So entsteht Ihr Tages&shy;nachweis fast nebenbei.</p>
+          </div>
+          <figure class="shot"><img class="shot__img" src="../assets/img/import/online-stundenzettel-stunden-erfassen-de-gr-1.webp" alt="Stundenzettel mit Datum, Startzeit und Dauer erfassen" width="1200" height="717" loading="lazy" decoding="async"></figure>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></span>
-          <h2>Zusätzliche Informationen erfassen mit dem Timesheet</h2>
-          <p>Profitieren Sie von der einfachen Erfassung und Dokumentation von Arbeits&shy;stunden für interne Projekte oder für Ihre Kunden. Erfassen Sie zusätzliche Informationen mit dem Timesheet in benutzer&shy;definierten Feldern oder mit einem Status, zum Beispiel abgerechnet oder bezahlt. Veränderungen an Zeiten oder sonstigen Stunden&shy;zettel-Informationen werden im System erfasst und stehen nur verantwortlichen Mitarbeitern zur Verfügung.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Reporting der Zeit&shy;dokumentation</h2>
-          <p>Erstellen Sie Ihr eigenes Reporting als PDF-&#8288;Datei mit Ihrem Logo und der Auflistung der jeweiligen Stunden als Anlage zu Ihrer Rechnung. Eine arbeits&shy;intensive Aufarbeitung eines Stundennachweises gehört ab jetzt der Vergangenheit an. Verwenden Sie die Stunden&shy;zettel-Übersicht mit den Filtern als Grundlage. Über Vorlage-Dokumente nutzen Sie die gespeicherten Informationen und bearbeiten Sie direkt mit Collabora Online weiter.</p>
-          
-          <div class="link-list mt-3"><a href="online-office">Collabora Online</a></div>
-        </article>
-        </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Vorlage&shy;dokumente mit Platzhaltern</h2>
-          <p class="mt-2">Erstellen Sie Ihre eigene Vorlage mit Firmen-Logo in Collabora Online und versehen diese mit Platzhaltern. Die Platzhalter werden automatisch durch das Einfügen in Ihr Dokument mit den Feldern aus EGroupware ersetzt. Beispiele von Vorlagen oder Reports finden Sie im Datei&shy;manager der EGroupware, sowie eine Liste aller Platzhalter im Seiten&shy;menü der Anwendung. Bearbeiten Sie die Beispiele nach Ihren Wünschen und fügen Sie alle für Sie relevanten Informationen als Platzhalter ein.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/stundenzettel-nach-benutzern.webp" alt="Vorlagedokumente mit Platzhaltern" width="1200" height="717" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Zeiten erfassen und auswerten</h2>
+          <p>Transparenz für das Team und ein Leistungs&shy;nachweis für Ihre Auftraggeber.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></span>
-          <h2>Wer hat Einsicht in den Stunden&shy;zettel?</h2>
-          <p>Über ein Rollenbasiertes Rechte&shy;management legen Sie fest, wer Stunden&shy;nach&shy;weise erstellen und bearbeiten darf. Dabei können Lese- und Schreibrechte sehr genau an Ihr Unter&shy;nehmen bzw. Ihre Organisation anpasst werden.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M22 20v-1.6a4 4 0 0 0-3-3.87M16.5 4.13a3.5 3.5 0 0 1 0 6.74"/></svg></span>
-          <h2>Team&shy;leitung behält den Überblick</h2>
-          <p>Je nach Anforderung können bestimmte Mitarbeiter nur Ihre eigenen geleisteten Stunden anzeigen und die z.B. Team&shy;leitung kann alle Stunden Ihres Teams einsehen und evtl. noch Änderungen vornehmen. Nachdem eine Abrechnung erfolgt ist, kann über einen Status das Recht zur Änderung eingeschränkt werden.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></span>
-          <h2>Von Unterwegs aus Arbeits&shy;zeiten erfassen</h2>
-          <p>Sind Ihre Mitarbeiter häufig im Außen&shy;dienst unterwegs? Mit der mobilen Ansicht der EGroupware erhalten oder delegieren Sie Ihre Aufgaben bequem von unterwegs aus mit Ihrem Smart&shy;phone oder Tablett. Sie können auch die Zeiten von unterwegs aus buchen.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Synchronisation und Daten&shy;abgleich</h2>
-          <p>Als Import-/Export Schnittstelle ist ein Austausch im CSV-&#8288;Format möglich, der auch zeit-gesteuert Daten aus einem externen System wie einem Warenwirtschaftssystem oder Service-Management Tool einspielen kann.</p>
-          
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#clock"/></svg></span>
+            <h3>Zeiten zu Projekt und Aufgabe</h3>
+            <p>Buchen Sie geleistete Stunden auf ein Projekt, eine Aufgabe oder ein Ticket. EGroupware stellt Soll- und Ist-&#8288;Zeiten gegenüber – hilfreich für den Überblick und die Nachkalkulation.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#tag"/></svg></span>
+            <h3>Eigene Felder und Status</h3>
+            <p>Erfassen Sie Zusatz&shy;informationen in eigenen Feldern oder mit einem Status, zum Beispiel abgerechnet oder bezahlt. Änderungen an Zeiten werden protokolliert und sind nur für Verantwortliche sichtbar.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>Abrechenbare Zeiten im Blick</h3>
+            <p>Markieren Sie Einträge als abgerechnet oder als nicht abzurechnen. Ein Filter zeigt alle Zeiten, die noch in eine Rechnung gehören.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEU</span> Seit EGroupware 26.6: Filter „abrechenbar“ und Status für die E-&#8288;Rechnung – dort werden ausgewählte Stunden&shy;zettel direkt zu Rechnungs&shy;positionen (Enterprise Line).</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#compare"/></svg></span>
+            <h3>Filter als Favoriten</h3>
+            <p>Filtern Sie die Stunden nach Kunden, Projekten, Mitarbeitern, Aufgaben oder Zeit&shy;räumen und exportieren Sie das Ergebnis. Häufige Kombinationen speichern Sie als Favorit.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEU</span> Favoriten lassen sich hierarchisch ordnen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lock"/></svg></span>
+            <h3>Rechte und Team&shy;leitung</h3>
+            <p>Sie legen fest, wer Stunden&shy;zettel anlegen, sehen und bearbeiten darf. Mitarbeiter sehen etwa nur ihre eigenen Zeiten, die Team&shy;leitung die des ganzen Teams. Nach der Abrechnung sperrt ein Status weitere Änderungen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#news"/></svg></span>
+            <h3>Nachweise aus Vorlagen</h3>
+            <p>Erstellen Sie Stunden&shy;nach&shy;weise als PDF mit Ihrem Logo – aus Vorlage&shy;dokumenten mit Platzhaltern, die Sie in Collabora Online gestalten. Beispiel&shy;vorlagen liegen im Datei&shy;manager, alle Platzhalter stehen im Seiten&shy;menü.</p>
+          </article>
         </div>
       </div>
     </section>
+
     <section class="section">
-      <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="aufgaben">Aufgaben</a></li><li><a href="projekte">Projekte</a></li><li><a href="ressourcen">Ressourcen</a></li><li><a href="e-rechnung">E-&#8288;Rechnung</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Schnittstellen</span>
+          <h2>Zeiten von unterwegs und aus anderen Systemen</h2>
+          <p class="mt-2">Über die mobile Ansicht buchen Mitarbeiter im Außen&shy;dienst ihre Zeiten direkt vom Smart&shy;phone oder Tablet. Für den Austausch mit anderen Systemen gibt es den Import und Export im CSV-&#8288;Format, auf Wunsch zeit&shy;gesteuert, etwa aus einer Waren&shy;wirtschaft oder einem Service-Management-Werkzeug. Zusätzlich lassen sich Stunden&shy;zettel über die REST-&#8288;API anlegen.</p>
+          <p class="mt-3"><a class="link-arrow" href="mobiler-zugang">Mobiler Zugang</a></p>
+          <p class="mt-2"><a class="link-arrow" href="online-office">Collabora Online</a></p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Zeit&shy;erfassung auf einen Blick</strong><span class="st-badge st-badge--update">STUNDENZETTEL</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Erfassung</dt><dd>Start und Stopp oder Einzel&shy;zeiten</dd></div>
+            <div class="fact"><dt>Bezug</dt><dd>Projekte, Aufgaben, Tickets</dd></div>
+            <div class="fact"><dt>Auswertung</dt><dd>Filter, Favoriten, Reports als PDF</dd></div>
+            <div class="fact"><dt>Abrechnung</dt><dd>Status, Filter „abrechenbar“, E-&#8288;Rechnung</dd></div>
+            <div class="fact"><dt>Austausch</dt><dd>CSV-&#8288;Import und -Export, REST-&#8288;API</dd></div>
+          </dl>
+        </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Arbeitet zusammen mit</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/projectmanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="projekte">Projekte</a></h3><p>Zeiten und Budgets im Projekt.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/infolog.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="aufgaben">Aufgaben</a></h3><p>Zeiten direkt zur Aufgabe buchen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/tracker.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="helpdesk">Helpdesk</a></h3><p>Aufwand für Tickets erfassen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/einvoice.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="e-rechnung">E-&#8288;Rechnung</a></h3><p>Stunden direkt in Rechnung stellen.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-narrow">
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zur Zeit&shy;erfassung</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Kann ich Zeiten auch vom Smart&shy;phone aus erfassen?</summary>
+            <div class="faq-body"><p>Ja. Über die mobile Ansicht von EGroupware buchen Sie Zeiten im Browser Ihres Smart&shy;phones oder Tablets, zum Beispiel direkt beim Kunden.</p></div>
+          </details>
+          <details>
+            <summary>Wer sieht meine Stunden&shy;zettel?</summary>
+            <div class="faq-body"><p>Das legen Sie über Rechte fest. Typisch ist: Mitarbeiter sehen ihre eigenen Zeiten, die Team&shy;leitung alle Zeiten ihres Teams.</p></div>
+          </details>
+          <details>
+            <summary>Kann ich aus den Zeiten eine Rechnung erstellen?</summary>
+            <div class="faq-body"><p>Ja, mit der E-&#8288;Rechnung der Enterprise Line: Ausgewählte Stunden&shy;zettel werden zu Rechnungs&shy;positionen und als abgerechnet markiert. Alternativ erstellen Sie einen Stunden&shy;nachweis als PDF-&#8288;Anlage aus einer Vorlage.</p></div>
+          </details>
+          <details>
+            <summary>Lassen sich Zeiten aus anderen Programmen über&shy;nehmen?</summary>
+            <div class="faq-body"><p>Ja, per CSV-&#8288;Import, auf Wunsch zeit&shy;gesteuert. Außerdem steht eine REST-&#8288;API zur Verfügung.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
+          <h2>Testen Sie die Zeit&shy;erfassung 30 Tage kostenlos</h2>
           <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage kostenlos testen</a>
+            <a class="btn btn--light btn--lg" href="funktionen">Alle Funktionen</a>
           </div>
         </div>
       </div>

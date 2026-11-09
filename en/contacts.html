@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact management in EGroupware</title>
-  <meta name="description" content="Manage your contacts in EGroupware and synchronise them to your smartphone – GDPR compliant, centrally, for the whole team.">
+  <title>Contact management: shared address books, GDPR and CardDAV</title>
+  <meta name="description" content="The EGroupware address book: shared address books, permissions, Policy for data protection, mail merges and sync via CardDAV with smartphones and Thunderbird.">
   <link rel="canonical" href="https://www.egroupware.org/en/contacts">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kontakte">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/contacts">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Contact management in EGroupware">
-  <meta property="og:description" content="Manage your contacts in EGroupware and synchronise them to your smartphone – GDPR compliant, centrally, for the whole team.">
+  <meta property="og:title" content="Contact management: shared address books, GDPR and CardDAV">
+  <meta property="og:description" content="The EGroupware address book: shared address books, permissions, Policy for data protection, mail merges and sync via CardDAV with smartphones and Thunderbird.">
   <meta property="og:url" content="https://www.egroupware.org/en/contacts">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/contacts#webpage","url":"https://www.egroupware.org/en/contacts","name":"Contact management: shared address books, GDPR and CardDAV","description":"The EGroupware address book: shared address books, permissions, Policy for data protection, mail merges and sync via CardDAV with smartphones and Thunderbird.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/contacts#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/contacts#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/contacts#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://www.egroupware.org/en/features"},{"@type":"ListItem","position":3,"name":"Contacts","item":"https://www.egroupware.org/en/contacts"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/contacts#faq","mainEntity":[{"@type":"Question","name":"Can I synchronise my contacts with my smartphone?","acceptedAnswer":{"@type":"Answer","text":"Yes. iPhone and iPad add the address book directly via CardDAV, Android devices with the DAVx⁵ app. For devices without CardDAV, the ActiveSync protocol is available via Z-Push."}},{"@type":"Question","name":"Who may see which contacts?","acceptedAnswer":{"@type":"Answer","text":"You decide that through the permissions of each address book. You can also share individual contacts in another address book, read-only or editable."}},{"@type":"Question","name":"Can I create mail merges from the address book?","acceptedAnswer":{"@type":"Answer","text":"Yes. With templates and placeholders you create mail merge letters, bulk emails and business documents straight from your contacts."}},{"@type":"Question","name":"Is the Policy application included in the Community Edition?","acceptedAnswer":{"@type":"Answer","text":"No. The Policy application with rules and deletion policies per address book is part of the Enterprise Line. The address book itself is included in both editions."}}]}]}
   </script>
 </head>
 <body>
@@ -123,115 +126,154 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/contacts):
-       - Diese Seite kam ohne Text aus dem WordPress-Export. Der Inhalt ist eine Uebersetzung der deutschen Fassung, kein Original von der alten englischen Seite - vor dem Livegang gegenlesen lassen.
-       - Die Screenshots sind die deutschen: Adressbuch_Persp_DE, Kontakt_Persp_1080_DE und Serienbriefe_platzhalter_DE. Englische Fassungen gibt es in der Mediathek nicht. Entweder neu erstellen lassen oder so belassen.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Contacts</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="features">Features</a></nav>
         <h1>Contacts</h1>
-        <p class="lead">Keep your contacts up to date. Manage your personal and company address books centrally and in line with the GDPR, using EGroupware. Synchronise your contacts to your smart&shy;phone and laptop and reach them wherever you are.</p>
+        <p class="lead">Manage personal and shared address books centrally and in compliance with the GDPR. Your contacts are available in the browser, on your smart&shy;phone and on your laptop – always up to date.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="trial">Try free for 30 days</a>
+          <a class="btn btn--ghost btn--lg" href="pricing">See pricing</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Shared address books</strong><span>For groups and departments</span></li><li><strong>Data protection</strong><span>Permissions and rules per address book</span></li><li><strong>Open standards</strong><span>Synchronisation via CardDAV</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/adressbuch-persp-de-1080px.webp" alt="Contacts" width="1080" height="945" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/adressbuch-persp-de-1080px.webp" alt="EGroupware address book with contact list" width="1080" height="945" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>Contacts</span></div></nav>
-    <section class="section section--knapp">
-      <div class="wrap-narrow">
-        <div class="reveal">
+
+    <section class="section">
+      <div class="wrap">
+        <article class="app-highlight app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--info">SPECIAL</span><small>Contacts highlight</small></div>
+            <h2>Data protection by fixed rules</h2>
+            <p>With the Policy application you set rules for each address book: which fields must be filled in, who may access it and who, for example, sees private phone numbers. Deletion policies remove contacts automatically, and after a set number of days EGroupware prompts a review of the contact data.</p>
+            <p>The rules can be printed and filed directly in your record of processing activities. The Policy application is part of the Enterprise Line.</p>
+            <p class="mt-3"><a class="link-arrow" href="community-edition-vs-epl">Community Edition and Enterprise Line compared</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
           <h2>Organise contacts and save time</h2>
-          <p class="mt-2">EGroupware lets you set up separate address books for groups or departments. Contacts can be categorised using distribution lists and custom fields.</p>
-          
-          
+          <p>From your personal address book to the customer base of the whole company.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Address books for teams</h3>
+            <p>Create separate address books for groups or departments and organise contacts with distribution lists and categories.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#tag"/></svg></span>
+            <h3>Your own contact fields</h3>
+            <p>Add your own data fields and adapt the address book to your needs without any programming knowledge.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lock"/></svg></span>
+            <h3>Sharing and permissions</h3>
+            <p>Decide centrally who may access which data. Individual contacts can also be shown in another address book, read-only or editable, via a share.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#news"/></svg></span>
+            <h3>Mail merges and emails</h3>
+            <p>With templates and placeholders you create business documents, mail merge letters and bulk emails straight from the address book, without transferring data to other programs.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>Views as favourites</h3>
+            <p>Save filters and views as a favourite and switch between your contact groups in one click.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEW</span> Favourites can be arranged hierarchically.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#chip"/></svg></span>
+            <h3>Contacts from the email signature</h3>
+            <p>Instead of typing in address details, let the AI read the signature of an email.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEW</span> With AI: read contact details from an email signature and create or update a contact from them.</p>
+            <p class="mt-2"><a class="link-arrow" href="ai">AI in EGroupware</a></p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
+
+    <section class="section">
+      <div class="wrap split">
         <div class="reveal">
-          <h2>Your own contact fields</h2>
-          <p class="mt-2">You can easily create your own data fields and adapt EGroupware to your needs without any programming knowledge.</p>
-          
-          
+          <span class="eyebrow">Synchronisation</span>
+          <h2>Your contacts on every device</h2>
+          <p class="mt-2">EGroupware relies on open standards: the address book synchronises via CardDAV with iPhone, iPad and Mac as well as with desktop programs such as Thunderbird or eM Client. Connect Android devices with the DAVx⁵ app. For devices that do not speak open standards, the ActiveSync protocol is available via the open-source software Z-&#8288;Push. You can also export your contacts in various formats.</p>
+          <p class="mt-3"><a class="link-arrow" href="mobile-access">Mobile access</a></p>
+          <p class="mt-2"><a class="link-arrow" href="caldav-synchronizer">Outlook via CalDAV Synchronizer</a></p>
         </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/kontakt-persp-1080-de.webp" alt="Your own contact fields" width="1080" height="945" loading="lazy" decoding="async"></figure>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Contacts at a glance</strong><span class="st-badge st-badge--update">CONTACTS</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Address books</dt><dd>Personal, for groups and departments</dd></div>
+            <div class="fact"><dt>Organisation</dt><dd>Distribution lists, categories, your own fields</dd></div>
+            <div class="fact"><dt>Data protection</dt><dd>Permissions, Policy (Enterprise Line)</dd></div>
+            <div class="fact"><dt>Sync</dt><dd>CardDAV, ActiveSync protocol via Z-&#8288;Push</dd></div>
+            <div class="fact"><dt>Programs</dt><dd>Thunderbird, eM Client, Apple Contacts</dd></div>
+          </dl>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
-          <h2>Putting the GDPR into practice – professional data protection</h2>
-          <p>The policy application in EGroupware lets you define rules for each individual address book. Which fields have to be filled in? Who inside the company may access them? Who is allowed to see a contact&#x27;s private phone numbers? A practical detail: the rules can be printed and filed directly in the record of processing activities.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M22 20v-1.6a4 4 0 0 0-3-3.87M16.5 4.13a3.5 3.5 0 0 1 0 6.74"/></svg></span>
-          <h2>Share contacts with other address books</h2>
-          <p>Contacts can be shown in another address book through a share, with read or write access. Specific fields can be excluded by policy, or marked as mandatory.</p>
-          
-          
-        </article>
+        <div class="section-head reveal">
+          <span class="eyebrow">Related</span>
+          <h2>Works together with</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/infolog.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="crm">CRM</a></h3><p>Customers and activities in view.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/mail.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="email">Email</a></h3><p>Addresses right as you write.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/tracker.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="helpdesk">Helpdesk</a></h3><p>Handle customer requests.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/cti.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="cti-phone-integration">CTI telephony</a></h3><p>Call contacts in one click.</p></div></article>
         </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Address book permissions</h2>
-          <p class="mt-2">Agile rights management lets you decide centrally who may access which data. Your addresses are also available for mail merges and for synchronisation with smart&shy;phones and mail clients.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/adressbuch-teilen-laptop.webp" alt="Address book permissions" width="1200" height="716" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap">
-        <div class="grid grid-2">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 7 7.4 5.2a2 2 0 0 0 2.2 0L20.5 7"/></svg></span>
-          <h2>Personalised mail merges and emails</h2>
-          <p>Templates with placeholders let you create business documents, mail merges and emails in a structured way – without moving your data into other software.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span>
-          <h2>Synchronise your contacts</h2>
-          <p>Keep your contacts with you at all times, on your laptop as well as on your smart&shy;phone. Beyond that you have many options for exchanging contacts in various formats.</p>
-          
-          
-        </article>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
-        <ul class="sibling-list mt-3"><li><a href="crm">CRM</a></li><li><a href="helpdesk">Helpdesk</a></li></ul>
-        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
+        <div class="section-head reveal">
+          <h2>Frequently asked questions about contacts</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Can I synchronise my contacts with my smart&shy;phone?</summary>
+            <div class="faq-body"><p>Yes. iPhone and iPad add the address book directly via CardDAV, Android devices with the DAVx⁵ app. For devices without CardDAV, the ActiveSync protocol is available via Z-&#8288;Push.</p></div>
+          </details>
+          <details>
+            <summary>Who may see which contacts?</summary>
+            <div class="faq-body"><p>You decide that through the permissions of each address book. You can also share individual contacts in another address book, read-only or editable.</p></div>
+          </details>
+          <details>
+            <summary>Can I create mail merges from the address book?</summary>
+            <div class="faq-body"><p>Yes. With templates and placeholders you create mail merge letters, bulk emails and business documents straight from your contacts.</p></div>
+          </details>
+          <details>
+            <summary>Is the Policy application included in the Community Edition?</summary>
+            <div class="faq-body"><p>No. The Policy application with rules and deletion policies per address book is part of the Enterprise Line. The address book itself is included in both editions.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Try EGroupware free for 30 days</h2>
+          <h2>Try contacts free for 30 days</h2>
           <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
-            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+            <a class="btn btn--solid-light btn--lg" href="trial">Try free for 30 days</a>
+            <a class="btn btn--light btn--lg" href="features">All features</a>
           </div>
         </div>
       </div>

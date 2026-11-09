@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>E-Mail Modul – EGroupware</title>
-  <meta name="description" content="Der EGroupware E​-Mail Client unterstützt Ihr Team bei der Bearbeitung von E-Mails. Sie optimieren Ihre Zusammenarbeit, da Sie von überall auf Ihre …">
+  <title>E-Mail im Team: Gruppenpostfächer, Verschlüsselung und IMAP</title>
+  <meta name="description" content="Der EGroupware-E-Mail-Client: Team-Postfächer, Ordnerfreigaben, S/MIME und PGP, farbige Markierungen und IMAP-Zugriff mit Thunderbird, eM Client und Smartphone.">
   <link rel="canonical" href="https://www.egroupware.org/de/email">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/email">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/email">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="E-Mail Modul – EGroupware">
-  <meta property="og:description" content="Der EGroupware E​-Mail Client unterstützt Ihr Team bei der Bearbeitung von E-Mails. Sie optimieren Ihre Zusammenarbeit, da Sie von überall auf Ihre …">
+  <meta property="og:title" content="E-Mail im Team: Gruppenpostfächer, Verschlüsselung und IMAP">
+  <meta property="og:description" content="Der EGroupware-E-Mail-Client: Team-Postfächer, Ordnerfreigaben, S/MIME und PGP, farbige Markierungen und IMAP-Zugriff mit Thunderbird, eM Client und Smartphone.">
   <meta property="og:url" content="https://www.egroupware.org/de/email">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/de/email#webpage","url":"https://www.egroupware.org/de/email","name":"E-Mail im Team: Gruppenpostfächer, Verschlüsselung und IMAP","description":"Der EGroupware-E-Mail-Client: Team-Postfächer, Ordnerfreigaben, S/MIME und PGP, farbige Markierungen und IMAP-Zugriff mit Thunderbird, eM Client und Smartphone.","inLanguage":"de","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/de/email#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/de/email#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/de/email#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://www.egroupware.org/de/"},{"@type":"ListItem","position":2,"name":"Funktionen","item":"https://www.egroupware.org/de/funktionen"},{"@type":"ListItem","position":3,"name":"E-Mail","item":"https://www.egroupware.org/de/email"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/de/email#faq","mainEntity":[{"@type":"Question","name":"Kann ich meine E-Mails auch mit Thunderbird oder dem Smartphone abrufen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Ihr Postfach ist per IMAP erreichbar, Thunderbird, eM Client und die Mail-Apps von Smartphones greifen parallel zum Browser darauf zu. Für Geräte ohne IMAP steht das ActiveSync-Protokoll über Z-Push bereit."}},{"@type":"Question","name":"Kann ein Team ein gemeinsames Postfach nutzen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Gemeinsame Postfächer wie ein Info- oder Office-Postfach binden Sie für die ganze Abteilung ein. Über die Rechte legen Sie fest, wer zugreifen darf, ohne Zugangsdaten weiterzugeben."}},{"@type":"Question","name":"Unterstützt EGroupware verschlüsselte E-Mails?","acceptedAnswer":{"@type":"Answer","text":"Ja, mit S/MIME und PGP. S/MIME-Zertifikate können Sie seit Version 26.8 direkt in EGroupware anfordern und importieren."}},{"@type":"Question","name":"Wie verschicke ich Dateien, die für einen Anhang zu groß sind?","acceptedAnswer":{"@type":"Answer","text":"Als Freigabe-Link aus dem Dateimanager. Überschreitet ein Anhang die eingestellte Größe, wandelt EGroupware ihn automatisch in einen Download-Link um."}}]}]}
   </script>
 </head>
 <body>
@@ -123,137 +126,170 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/de/email):
-       - Enthielt 1 eingebettetes Video (https://www.youtube.com/watch?v=7DZKPKa_Rj0).
-       - Kein eigener Einleitungstext – erster Abschnitt („E-Mail Kommunikation leicht gemacht“) in den Kopfbereich gezogen.
-       - Meta-Description selbst formuliert – im Original stand keine.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">E-&#8288;Mail</span>
-        <h1>E-&#8288;Mail Modul</h1>
-        <p class="lead">Der EGroupware E​-Mail Client unterstützt Ihr Team bei der Bearbeitung von E-&#8288;Mails. Sie optimieren Ihre Zusammen&shy;arbeit, da Sie von überall auf Ihre E-&#8288;Mails zugreifen können. Frei&shy;gegebene Gruppen&shy;postfächer erleichtern die Kommunikation und halten alle auf dem gleichen Informations&shy;stand.</p>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="funktionen">Funktionen</a></nav>
+        <h1>E-&#8288;Mail</h1>
+        <p class="lead">Persönliche Postfächer und gemeinsame Team-Postfächer in einer Oberfläche – im Browser, auf dem Smart&shy;phone und in Ihrem Mail-Programm. Weil der E-&#8288;Mail-Client mit Adressbuch, Aufgaben und Datei&shy;manager verknüpft ist, landet jede Information gleich am richtigen Ort.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="testversion">30 Tage kostenlos testen</a>
+          <a class="btn btn--ghost btn--lg" href="preise">Preise ansehen</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Team-Postfächer</strong><span>Freigaben bis auf Ordnerebene</span></li><li><strong>Verschlüsselung</strong><span>Mit S/MIME und PGP</span></li><li><strong>Offene Standards</strong><span>Zugriff per IMAP und JMAP</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/mail-egroupware-2.webp" alt="E-Mail Modul" width="1200" height="1010" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/mail-egroupware-2.webp" alt="EGroupware-E-Mail mit Liste und Vorschau" width="1200" height="1010" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Brotkrumen"><div class="wrap"><a href="funktionen">Alle Module im Überblick</a> <span aria-hidden="true">/</span> <span>E-&#8288;Mail Modul</span></div></nav>
-    <section class="section section--knapp">
-      <div class="wrap-narrow">
-        <div class="reveal">
-          <h2>Volle Integration in weitere EGroupware Anwendungen</h2>
-          <p class="mt-2">Der E-&#8288;Mail Client von EGroupware ist optimal mit den anderen Anwendungen wie Kalender, Adressbuch, Aufgaben&shy;verwaltung und Datei&shy;manager verknüpft.</p>
-          
-          
-        </div>
-      </div>
-    </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Mehrere E-&#8288;Mail-Konten möglich</h2>
-          <p class="mt-2">Der E-&#8288;Mail Client, als sehr häufig genutzte Anwendung, ermöglichst es Ihnen mehrere E-&#8288;Mail-Konten einzubinden. Auf Ihre E-&#8288;Mails können Sie sowohl über den Webbrowser als auch über Ihr Mobil&shy;telefon zugreifen und sind somit stets über den aktuellen Stand Ihrer Kommunikation informiert.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-mail-datei-anhaengen-klein.webp" alt="Mehrere E-Mail-Konten möglich" width="1200" height="717" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span>
-          <h2>Interaktion mit anderen Anwendungen</h2>
-          <p>Mit der Integration in den Datei&shy;manager können Sie ganz einfach Anhänge aus der internen Datei&shy;verwaltung an eine E-&#8288;Mail anhängen. Sie müssen die Anhänge nicht von Ihrer Lokalen Festplatte zuerst hochladen. Die einfache Ablage von E-&#8288;Mails in der Aufgaben&shy;verwaltung ermöglicht es, die Informationen direkt mit dem Absender zu verlinken. Sie nutzen damit EGroupware als zentrale Informationsquelle für Ihr digitales Büro.</p>
-          
-          
+        <article class="app-highlight app-highlight--neu app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--update">NEU</span><small>Seit EGroupware 26.9</small></div>
+            <h2>Farbige Markierungen und eigene Schlagwörter</h2>
+            <p>Zur bekannten roten Markierung „Wichtig“ kommen weitere Farben hinzu. Eigene Markierungen legen Sie als Kategorien für E-&#8288;Mails an und verwalten sie selbst. So sortieren Sie Ihren Post&shy;eingang nach Ihren Themen und sehen auf einen Blick, was als Nächstes zu tun ist.</p>
+          </div>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Senden von großen Dateien über Sharing-Links</h2>
-          <p>Sie können große Dateien über einen Sharing Link versenden oder ein Verzeichnis freigeben und erhalten so ein Datenaustausch&shy;verzeichnis, in dem externe Dateien wieder hoch&shy;geladen werden können.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 7 7.4 5.2a2 2 0 0 0 2.2 0L20.5 7"/></svg></span>
-          <h2>Signaturen und Abwesenheitsnotizen</h2>
-          <p>Mit dem EGroupware Mail&shy;client können Sie neben einer globalen Unternehmens&shy;signatur auch individuelle Signaturen erstellen, eigene Filter&shy;regeln verwalten, E-&#8288;Mail-Weiterleitungen bearbeiten und Abwesenheitsnachrichten erstellen.</p>
-          
-          
-        </article>
-        </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Freigaben auf Ordner&shy;ebene für Ihre Kollegen</h2>
-          <p class="mt-2">Besonders einfach ist das Verwalten von Freigaben auf Unter&shy;ordner für Ihre Kollegen, bzw. das Einstellen von Urlaubs-, oder Abwesenheitsbenachrichtigungen. Als Administrator können Sie auch Abwesenheitsbenachrichtigungen für einen Kollegen aktivieren, falls dieser z.B. durch Krankheit keine Möglichkeit mehr hierfür hatte.</p>
-          
-          
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-mail-spam-kennzeichnen.webp" alt="Freigaben auf Ordnerebene für Ihre Kollegen" width="1200" height="717" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>E-&#8288;Mail im Team bearbeiten</h2>
+          <p>Vom eigenen Postfach bis zum gemeinsamen Info-Postfach der Abteilung.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
-          <h2>E-&#8288;Mail Verschlüsselung</h2>
-          <p>EGroupware unterstützt die Verschlüsselung von E-&#8288;Mails sowohl per PGP (Speicherung der Schlüssel im Browser) als auch über S/MIME an. Bei S/MIME werden die Schlüssel in EGroupware zentral gespeichert - der öffentliche Schlüssel im Adressbuch und der private Schlüssel im E-&#8288;Mail-Profil des Benutzers.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span>
-          <h2>Als Spam Kennzeichnen</h2>
-          <p>Mit der Integration von SpamTitan in EGroupware können Hosting Kunden direkt aus dem E-&#8288;Mail Modul heraus E-&#8288;Mail&shy;adressen black- oder white-listen und E-&#8288;Mails als Spam oder Ham markieren. Somit lernt der Filter und verringert die Anzahl der unerwünschten E-&#8288;Mails. Wir bieten Spam- und Viren&shy;filterung über SpamTitan als Service kostengünstig an - auch für die Eigeninstallation. Sprechen Sie sie uns gerne hierzu an.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 7 7.4 5.2a2 2 0 0 0 2.2 0L20.5 7"/></svg></span>
-          <h2>E-&#8288;Mail Server und Konten verwalten</h2>
-          <p>In der EGroupware Cloud, im Univention Coperate Server (UCS) oder über unsere EGroupware Mail&shy;server-Pakete (Dovecot) haben wir eine voll&shy;ständige Email&shy;konten Verwaltung umgesetzt. Jedem Benutzer wird automatisch ein E-&#8288;Mail-Konto zugeordnet. Verwaltung von E-&#8288;Mail-Aliasen, Weiterleitungen, Speicherplatz&shy;größe oder Zugriffs&shy;rechte erfolgen direkt in EGroupware. Außerdem können Sie leicht gemeinsam genutzte E-&#8288;Mail-Konten für eine Abteilung einbinden, wie z.B. ein Office- oder Info-Postfach.</p>
-          
-          <div class="link-list mt-3"><a href="preise">EGroupware Cloud</a><a href="univention">Univention Coperate Server (UCS)</a><a href="https://github.com/EGroupware/egroupware/wiki/EGrouwareMail" rel="noopener" target="_blank">EGroupware Mail&shy;server-Pakete</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="10.5" width="16" height="10.5" rx="2.5"/><path d="M8 10.5V7.2a4 4 0 1 1 8 0v3.3"/></svg></span>
-          <h2>Rechte&shy;verwaltung und Administration</h2>
-          <p>Vereinfachen Sie die Administration für Ihre Organisation erheblich, indem Sie nur einen neuen Benutzer anlegen müssen und dieser dann automatisch neben dem Zugang zur EGroupware über sein eigenes E-&#8288;Mailkonto verfügt. Auch die Verwaltung der Signaturen ist zentral möglich und zeigt über Platzhalter die jeweiligen Daten des Benutzers an. Über das Rechte&shy;management haben Sie jederzeit volle Kontrolle, wer Zugriff auf das Konto hat, ohne Zugangs&shy;daten weiterzugeben zu müssen.</p>
-          
-          
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Mehrere Konten und Team-Postfächer</h3>
+            <p>Binden Sie mehrere E-&#8288;Mail-Konten ein und nutzen Sie gemeinsame Postfächer einer Abteilung, etwa ein Office- oder Info-Postfach. So bleiben alle auf demselben Stand.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lock"/></svg></span>
+            <h3>Freigaben und Rechte</h3>
+            <p>Geben Sie einzelne Ordner für Kollegen frei und legen Sie fest, wer auf ein Konto zugreifen darf – ohne Zugangs&shy;daten weiterzugeben. Administratoren können bei Krankheit auch die Abwesenheits&shy;notiz für einen Kollegen einschalten.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#grid"/></svg></span>
+            <h3>Verknüpft mit allen Anwendungen</h3>
+            <p>Hängen Sie Dateien direkt aus dem Datei&shy;manager an, ohne sie erst hochzuladen. Eine E-&#8288;Mail legen Sie mit einem Klick als Aufgabe ab – verknüpft mit dem Absender und mit allen Anhängen.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#cloud"/></svg></span>
+            <h3>Große Dateien per Link</h3>
+            <p>Versenden Sie große Dateien als Freigabe-Link oder geben Sie einen Ordner frei, in den Externe ihrerseits Dateien hochladen können.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEU</span> Überschreiten Anhänge die eingestellte Größe, verschickt EGroupware automatisch einen Download-Link.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#shield"/></svg></span>
+            <h3>Verschlüsseln und signieren</h3>
+            <p>EGroupware unterstützt S/MIME und PGP. Bei S/MIME liegen die Schlüssel zentral: der öffentliche im Adressbuch, der private im E-&#8288;Mail-Profil. PGP-&#8288;Schlüssel bleiben im Browser.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEU</span> PGP-&#8288;Signaturen eingehender E-&#8288;Mails werden direkt im Browser geprüft.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#check"/></svg></span>
+            <h3>S/MIME-Zertifikate direkt erzeugen</h3>
+            <p>Erstellen Sie die Zertifikats&shy;anfrage (CSR) in EGroupware, reichen Sie sie bei Ihrer Zertifizierungs&shy;stelle ein und importieren Sie das ausgestellte Zertifikat samt Zwischen&shy;zertifikat. Für Tests erzeugen Sie selbstsignierte Zertifikate.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEU</span> Seit EGroupware 26.8 – auch für die Erneuerung ablaufender Zertifikate.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#mail"/></svg></span>
+            <h3>Signaturen, Filter, Abwesenheit</h3>
+            <p>Neben einer zentralen Firmen&shy;signatur mit Platzhaltern für die Daten des Benutzers legen Sie eigene Signaturen an. Filter&shy;regeln, Weiterleitungen und Abwesenheits&shy;notizen verwalten Sie selbst.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#pulse"/></svg></span>
+            <h3>Schneller finden und sicher senden</h3>
+            <p>Kombinieren Sie Suchbegriffe mit UND, ODER, + und −. Auf Wunsch stehen ungelesene E-&#8288;Mails immer oben in der Liste.</p>
+            <p class="card-new"><span class="st-badge st-badge--update">NEU</span> Bei vielen Empfängern in An und Cc warnt EGroupware und bietet an, sie ins Bcc zu verschieben. Verteilerlisten lassen sich vor dem Senden in einzelne Empfänger auflösen.</p>
+          </article>
+          <article class="card card--wide reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#tag"/></svg></span>
+            <h3>Spam markieren</h3>
+            <p>Mit der Anbindung an SpamTitan markieren Hosting-Kunden E-&#8288;Mails direkt als Spam oder erwünscht und pflegen Black- und Whitelists. Der Filter lernt mit. Spam- und Viren&shy;filterung bieten wir als Dienst an, auch für die eigene Installation.</p>
+          </article>
         </div>
       </div>
     </section>
+
     <section class="section">
-      <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Passt dazu</h2>
-        <ul class="sibling-list mt-3"><li><a href="cti-telefon-integration">CTI Telefon-Integration</a></li><li><a href="homeoffice-integration">Home&shy;office Integration</a></li><li><a href="synchronisation">Synchronisation</a></li><li><a href="mobiler-zugang">Mobiler Zugang</a></li></ul>
-        <p class="mt-3 muted"><a href="funktionen">Alle Module im Überblick</a></p>
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Synchronisation</span>
+          <h2>Ihre E-&#8288;Mails in jedem Programm</h2>
+          <p class="mt-2">EGroupware setzt auf offene Standards: Ihr Postfach liegt auf einem IMAP-Server, Thunderbird, eM Client und die Mail-Apps von Smart&shy;phones greifen parallel zum Browser darauf zu. Seit Version 26.9 spricht der E-&#8288;Mail-Client zusätzlich das moderne Protokoll JMAP, etwa mit Mail&shy;servern wie Stalwart. Für Geräte, die keine offenen Standards sprechen, steht das ActiveSync-Protokoll über die Open-Source-Software Z-&#8288;Push bereit.</p>
+          <p class="mt-2">In der EGroupware Cloud, mit Univention Nubus (früher UCS) oder mit unseren Mail&shy;server-Paketen (Dovecot) erhält jeder neue Benutzer automatisch sein E-&#8288;Mail-Konto. Aliase, Weiterleitungen und Speicher&shy;platz verwalten Sie direkt in EGroupware.</p>
+          <p class="mt-3"><a class="link-arrow" href="mobiler-zugang">Mobiler Zugang</a></p>
+          <p class="mt-2"><a class="link-arrow" href="univention">EGroupware für Univention Nubus</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://github.com/EGroupware/egroupware/wiki/EGrouwareMail" rel="noopener" target="_blank">EGroupware-Mail&shy;server-Pakete</a></p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>E-&#8288;Mail auf einen Blick</strong><span class="st-badge st-badge--update">E-&#8288;MAIL</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Postfächer</dt><dd>Mehrere Konten, Team-Postfächer</dd></div>
+            <div class="fact"><dt>Protokolle</dt><dd>IMAP, JMAP, ActiveSync-Protokoll über Z-&#8288;Push</dd></div>
+            <div class="fact"><dt>Sicherheit</dt><dd>S/MIME und PGP</dd></div>
+            <div class="fact"><dt>Mail&shy;server</dt><dd>EGroupware Cloud, Univention Nubus, Dovecot</dd></div>
+            <div class="fact"><dt>Programme</dt><dd>Thunderbird, eM Client, Smart&shy;phone-Apps</dd></div>
+          </dl>
+        </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Passt dazu</span>
+          <h2>Arbeitet zusammen mit</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/addressbook.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="kontakte">Kontakte</a></h3><p>Adressen und Schlüssel zentral.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/infolog.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="aufgaben">Aufgaben</a></h3><p>E-&#8288;Mails als Aufgabe ablegen.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/filemanager.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="dateiverwaltung">Datei&shy;manager</a></h3><p>Anhänge direkt aus der Ablage.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/cti.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="cti-telefon-integration">CTI-&#8288;Telefonie</a></h3><p>Anrufen direkt aus EGroupware.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-narrow">
+        <div class="section-head reveal">
+          <h2>Häufige Fragen zur E-&#8288;Mail</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Kann ich meine E-&#8288;Mails auch mit Thunderbird oder dem Smart&shy;phone abrufen?</summary>
+            <div class="faq-body"><p>Ja. Ihr Postfach ist per IMAP erreichbar, Thunderbird, eM Client und die Mail-Apps von Smart&shy;phones greifen parallel zum Browser darauf zu. Für Geräte ohne IMAP steht das ActiveSync-Protokoll über Z-&#8288;Push bereit.</p></div>
+          </details>
+          <details>
+            <summary>Kann ein Team ein gemeinsames Postfach nutzen?</summary>
+            <div class="faq-body"><p>Ja. Gemeinsame Postfächer wie ein Info- oder Office-Postfach binden Sie für die ganze Abteilung ein. Über die Rechte legen Sie fest, wer zugreifen darf, ohne Zugangs&shy;daten weiterzugeben.</p></div>
+          </details>
+          <details>
+            <summary>Unterstützt EGroupware verschlüsselte E-&#8288;Mails?</summary>
+            <div class="faq-body"><p>Ja, mit S/MIME und PGP. S/MIME-Zertifikate können Sie seit Version 26.8 direkt in EGroupware anfordern und importieren.</p></div>
+          </details>
+          <details>
+            <summary>Wie verschicke ich Dateien, die für einen Anhang zu groß sind?</summary>
+            <div class="faq-body"><p>Als Freigabe-Link aus dem Datei&shy;manager. Überschreitet ein Anhang die eingestellte Größe, wandelt EGroupware ihn automatisch in einen Download-Link um.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
-          <h2>Testen Sie EGroupware 30 Tage kostenlos</h2>
+          <h2>Testen Sie die E-&#8288;Mail 30 Tage kostenlos</h2>
           <p>Ohne Installation, ohne Risiko: Cloud-Zugang anfordern, Team einladen, loslegen. Auf Wunsch zeigen wir Ihnen die Plattform vorab in einer persönlichen Demo.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="kontakt">30 Tage gratis testen</a>
-            <a class="btn btn--light btn--lg" href="preise">Preise ansehen</a>
+            <a class="btn btn--solid-light btn--lg" href="testversion">30 Tage kostenlos testen</a>
+            <a class="btn btn--light btn--lg" href="funktionen">Alle Funktionen</a>
           </div>
         </div>
       </div>

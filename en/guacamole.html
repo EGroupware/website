@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guacamole gives you secure access to your office PCs</title>
-  <meta name="description" content="The new &quot;Guacamole&quot; module provides a fully-fledged home office workplace by accessing the company PC via web browser">
+  <title>Guacamole: remote access to the office PC in the browser</title>
+  <meta name="description" content="Use your office PC via RDP, VNC or SSH in the browser with Apache Guacamole – with single sign-on via EGroupware and two-factor login, without open ports.">
   <link rel="canonical" href="https://www.egroupware.org/en/guacamole">
   <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/guacamole">
   <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/guacamole">
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EGroupware">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Guacamole gives you secure access to your office PCs">
-  <meta property="og:description" content="The new &quot;Guacamole&quot; module provides a fully-fledged home office workplace by accessing the company PC via web browser">
+  <meta property="og:title" content="Guacamole: remote access to the office PC in the browser">
+  <meta property="og:description" content="Use your office PC via RDP, VNC or SSH in the browser with Apache Guacamole – with single sign-on via EGroupware and two-factor login, without open ports.">
   <meta property="og:url" content="https://www.egroupware.org/en/guacamole">
   <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,9 @@
   <script>
     (function(){try{var t=localStorage.getItem("egw-theme");
     var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/guacamole#webpage","url":"https://www.egroupware.org/en/guacamole","name":"Guacamole: remote access to the office PC in the browser","description":"Use your office PC via RDP, VNC or SSH in the browser with Apache Guacamole – with single sign-on via EGroupware and two-factor login, without open ports.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","isPartOf":{"@id":"https://www.egroupware.org/#website"},"publisher":{"@id":"https://www.egroupware.org/#organization"},"breadcrumb":{"@id":"https://www.egroupware.org/en/guacamole#breadcrumb"},"mainEntity":{"@id":"https://www.egroupware.org/en/guacamole#faq"}},{"@type":"BreadcrumbList","@id":"https://www.egroupware.org/en/guacamole#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.egroupware.org/en/"},{"@type":"ListItem","position":2,"name":"Features","item":"https://www.egroupware.org/en/features"},{"@type":"ListItem","position":3,"name":"Guacamole","item":"https://www.egroupware.org/en/guacamole"}]},{"@type":"FAQPage","@id":"https://www.egroupware.org/en/guacamole#faq","mainEntity":[{"@type":"Question","name":"Which connection types does Guacamole support?","acceptedAnswer":{"@type":"Answer","text":"RDP for Windows desktops and terminal servers, VNC for existing desktop sessions and SSH for server consoles."}},{"@type":"Question","name":"Do I have to open RDP ports in the firewall?","acceptedAnswer":{"@type":"Answer","text":"No. The remote computers are accessed via EGroupware and the browser, so the RDP ports stay closed to the outside."}},{"@type":"Question","name":"Is Guacamole also available in the EGroupware Cloud?","acceptedAnswer":{"@type":"Answer","text":"With your own installation, Guacamole runs on the EGroupware server. In hosting a solution is possible that requires some configuration and coordination with your IT – please get in touch."}},{"@type":"Question","name":"Can the second factor be switched off in the company network?","acceptedAnswer":{"@type":"Answer","text":"Yes. In the Enterprise Line, an IP range such as your company network can count as the second factor, so the additional prompt is not needed there."}}]}]}
   </script>
 </head>
 <body>
@@ -123,141 +126,153 @@
     </div>
   </header>
   <main id="main">
-
-    <!-- TODO aus der Inhaltsuebernahme (https://www.egroupware.org/en/guacamole):
-       - Enthielt 4 eingebettetes Video (https://www.youtube.com/watch?v=kj1zOPG4QY4, https://www.youtube.com/watch?v=9j173lpDqz0).
-       - Kein eigener Einleitungstext – Anfang des ersten Abschnitts gekürzt übernommen, steht dadurch zweimal auf der Seite.
-    -->
     <section class="page-hero page-hero--split">
       <div class="wrap page-hero__grid">
         <div>
-        <span class="eyebrow">Guacamole</span>
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="features">Features</a></nav>
         <h1>Guacamole</h1>
-        <p class="lead">The new &quot;Guacamole&quot; module provides a fully-fledged home office workplace by accessing the company PC via web browser. Complex applications can be transferred to the browser of weaker PCs and used there. This also eliminates licensing cost …</p>
+        <p class="lead">With Apache Guacamole you reach your office PC, terminal server or other servers from home directly in the browser – embedded in EGroupware. EGroupware manages login and connections, secured with two-&#8288;factor authentication if you wish.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary btn--lg" href="trial">Try free for 30 days</a>
+          <a class="btn btn--ghost btn--lg" href="pricing">See pricing</a>
+        </div>
+        <ul class="trust-bar trust-bar--3"><li><strong>Remote access in the browser</strong><span>Via RDP, VNC and SSH</span></li><li><strong>Single sign-&#8288;on</strong><span>Via OpenID Connect</span></li><li><strong>Two-&#8288;factor login</strong><span>With passkeys too</span></li></ul>
         </div>
         <div class="hero-shot">
-<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/laptop-guacamole2.webp" alt="Guacamole" width="900" height="589" fetchpriority="high" decoding="async"></figure>
+<figure class="shot"><img class="hero-shot__img" src="../assets/img/import/laptop-guacamole2.webp" alt="Remote Windows desktop in EGroupware via Guacamole" width="900" height="589" fetchpriority="high" decoding="async"></figure>
         </div>
       </div>
     </section>
-    <nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="features">All modules at a glance</a> <span aria-hidden="true">/</span> <span>Guacamole</span></div></nav>
+
     <section class="section">
       <div class="wrap">
-        <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Guacamole gives you secure access to office PCs</h2>
-          <p>The new &quot;Guacamole&quot; module provides a fully-fledged home office workplace by accessing the company PC via web browser. Complex applications can be transferred to the browser of weaker PCs and used there. This also eliminates licensing cost issues for specialised applications on local PCs in the home office. Trial Version Try now 30 days for free</p>
-          
-          <div class="link-list mt-3"><a href="trial">Trial Version</a></div>
+        <article class="app-highlight app-highlight--text reveal">
+          <div>
+            <div class="app-highlight__head"><span class="st-badge st-badge--info">SPECIAL</span><small>Guacamole highlight</small></div>
+            <h2>Remote access in the browser – with single sign-&#8288;on and a second factor</h2>
+            <p>Guacamole provides RDP and VNC desktops via HTML5 directly in EGroupware. Login runs through EGroupware via OpenID Connect, and administrators manage the connections centrally. You can also secure access with a second factor – such as a passkey, Windows Hello or YubiKey, included in the Community Edition since EGroupware 26.8.</p>
+            <p class="mt-3"><a class="link-arrow" href="tutorials/2-factor-authentication-2fa-in-egroupware">Two-&#8288;factor authentication</a></p>
+          </div>
         </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><circle cx="8.5" cy="14" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-          <h2>What is Apache Guacomole</h2>
-          <p>Guacamole allows you to make a desktop PC, terminal server or any other server remotely accessible via the browser. This means that complex applications can be transferred to the browser of weaker PCs and used there. So it&#x27;s more than screen sharing or remote maintenance like TeamViewer, but full-fledged access to desktop PCs like Citrix Virtual Apps or Parallels RAS.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><circle cx="8.5" cy="14" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-          <h2>Guacamole safety</h2>
-          <p>It is up to the administrators to determine which users should have access to which desktops and which security levels, for example two-&#8288;factor authentication, are required for this. You can find more information in this Guacamole flyer.</p>
-          
-          <div class="link-list mt-3"><a href="../assets/dokumente/EGroupware-Flyer-Apache-Guacamole-EN.pdf" class="link-list__pdf">Guacamole flyer</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>Which protocols can be used?</h2>
-          <p>Access via RDP (Remote Desktop Protocol) makes working remotely very fast. Here you get direct access via RDP to the remote computer without having to open these ports to the outside. Instead, the remote computers are accessed via EGroupware and your browser. Neben RDP unterstützt Guacamole auch VNC und SSH. So können z. B. bestehende Sitzungen des fernen Desktops weiter verwendet werden (VNC) oder auch Server-Konsolen wie z. B. der EGroupware-Server fern gewartet werden (SSH). Sicherheitsvorkehrungen zu dem RPD Protokoll.</p>
-          
-          <div class="link-list mt-3"><a href="https://www.heise.de/hintergrund/Remote-Desktop-RDP-Liebstes-Kind-der-Cybercrime-Szene-1-4-4700048.html" rel="noopener" target="_blank">RPD Protokoll</a></div>
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span>
-          <h2>More safety through guacamole</h2>
-          <p>EGroupware with Guacamole allows &quot;secure&quot; access to the company desktop or server through two-&#8288;factor authentication. In the EPL version, WebAuthn / Fido2 Key is also possible. We recommend activating or enforcing these security functions.</p>
-          
-          
-        </article>
-        </div>
       </div>
     </section>
-    <section class="section section--soft">
-      <div class="wrap split split--flip">
-        <div class="reveal">
-          <h2>Two-&#8288;factor authentication</h2>
-          <p class="mt-2">You can also disable two-&#8288;factor authentication within the corporate environment (IP address recognition). You can find more technical information in the EGroupware Wiki and in the EGroupware Help Forum.</p>
-          
-          <div class="link-list mt-3"><a href="https://github.com/EGroupware/egroupware/wiki/Apache-Guacamole-managed-by-EGroupware" rel="noopener" target="_blank">EGroupware Wiki</a><a href="https://help.egroupware.org" rel="noopener" target="_blank">EGroupware Help Forum</a></div>
-        </div>
-        <div class="reveal">
-          <figure class="shot"><img class="shot__img" src="../assets/img/import/laptop-projektmanger-vorlageprojekt.webp" alt="Two-factor authentication" width="900" height="538" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-    </section>
+
     <section class="section">
       <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Secure access to the office PC</h2>
+          <p>A fully-fledged workplace at home – with nothing but the browser.</p>
+        </div>
         <div class="grid grid-3">
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.5 12 14l5-5.5"/><rect x="3" y="3.5" width="18" height="17" rx="3"/></svg></span>
-          <h2>Guacamole benefits</h2>
-          <p>Guacamole provides RDP or VNC desktops via HTML5 within EGroupware. EGroupware provides account information, authentication via OpenID Connect and enables connection management.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
-          <h2>Reduce data protection and GDPR risks</h2>
-          <p>Setting up a VPN connection on private computers can be very time-consuming and also involves GDPR risks, as files can be transferred to unsecured private laptops. EGroupware minimises these risks and at the same time lowers the costs of implementation compared to Virtual Apps or similar products.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Case study by Pfeifer Drako Drahtseilwerk GmbH on Guacamole an</h2>
-          <p>This practical example gives you a first impression of the possible uses of Guacamole. Guacamole was integrated into EGroupware in such a way that the users see the remote PC within EGroupware. In the self-installation, a component is installed on the same server on which the EGroupware is running. OpenID and the connections in the guacamole are set up accordingly by the administrator. In hosting, we can also offer you a solution, but requires some configuration and coordination with your IT administration.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 18.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h5l2 3h8a2 2 0 0 1 2 2z"/></svg></span>
-          <h2>Case study by IGU Daywork planning for guacamole in times of home office</h2>
-          <p>How can you make computing-intensive processes possible for your employees in times of Corona and home office? Is it possible to access the PC in the office remotely? See in the case study how an engineering office uses EGroupware and Guacamole. What are the advantages for the users and the company?</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.8"/><path d="m5.6 5.6 3.7 3.7m5.4 5.4 3.7 3.7m0-12.8-3.7 3.7m-5.4 5.4-3.7 3.7"/></svg></span>
-          <h2>Case study by Level 45 GmbH on Guacamole as support for employees</h2>
-          <p>Take a look at this practical example of Guacamole to find out how a studio uses the calendar, Guacamole and also the resource module.</p>
-          
-          
-        </article>
-        <article class="card feature reveal">
-          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7 12.6 12.6 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1l-1.1 1.1a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.6 12.6 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></span>
-          <h2>Guacamole Webinar Recording</h2>
-          <p>Take a look at the functions of Guacomole and other home office functions in the webinar recording. There we show live how Guacomole works in practice. In addition, questions about handling and the technical possibilities will be answered. If you have any further questions about the use or functionality of EGroupware, please do not hesitate to contact us. We look forward to hearing from you.</p>
-          
-          <div class="link-list mt-3"><a href="contact">contact us</a></div>
-        </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#monitor"/></svg></span>
+            <h3>A fully-fledged workplace</h3>
+            <p>Guacamole is more than screen sharing or remote maintenance: you work entirely on the remote computer. Demanding specialist applications keep running on the office PC, even if the computer at home is less powerful – and need no licence of their own there.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#lock"/></svg></span>
+            <h3>No open ports</h3>
+            <p>Access via RDP is fast without having to open the RDP ports to the outside. Instead, the connection runs through EGroupware and your browser.</p>
+            <p class="mt-3"><a class="link-arrow" href="https://www.heise.de/hintergrund/Remote-Desktop-RDP-Liebstes-Kind-der-Cybercrime-Szene-1-4-4700048.html" rel="noopener" target="_blank">Back&shy;ground on RDP security (heise, German)</a></p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#terminal"/></svg></span>
+            <h3>RDP, VNC and SSH</h3>
+            <p>Besides RDP, Guacamole supports VNC and SSH. This lets you continue existing sessions on the remote desktop (VNC) or maintain server consoles such as the EGroupware server remotely (SSH).</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#users"/></svg></span>
+            <h3>Access based on rights</h3>
+            <p>Administrators decide which users may access which desktops and which security level is required for it, for example two-&#8288;factor authentication.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#shield"/></svg></span>
+            <h3>Reduce data protection risks</h3>
+            <p>Setting up a VPN connection on private computers is time-consuming and involves GDPR risks, because files can end up on unsecured laptops. With Guacamole the data stays on the office PC.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261109c#quote"/></svg></span>
+            <h3>In practice</h3>
+            <p>Pfeifer Drako Drahtseilwerk GmbH, the engineering office IGU Tagwerksplanung and the studio Level 45 report how they use Guacamole with EGroupware – also together with the calendar and resources. In the webinar recording we show Guacamole live.</p>
+            <p class="mt-3"><a class="link-arrow" href="https://www.youtube.com/user/EGroupware" rel="noopener" target="_blank">Case studies and webinar on YouTube</a></p>
+          </article>
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Set-&#8288;up</span>
+          <h2>How Guacamole gets into your EGroupware</h2>
+          <p class="mt-2">With your own installation, Guacamole runs as a component on the same server as EGroupware. The administrator sets up OpenID Connect and the connections to the computers; users then see the remote PC directly in EGroupware. We can also offer a solution in hosting – this requires some configuration and coordination with your IT.</p>
+          <p class="mt-3"><a class="link-arrow" href="https://github.com/EGroupware/egroupware/wiki/Apache-Guacamole-managed-by-EGroupware" rel="noopener" target="_blank">Technical guide in the wiki</a></p>
+          <p class="mt-2"><a class="link-arrow" href="../assets/dokumente/EGroupware-Flyer-Apache-Guacamole-EN.pdf">Guacamole flyer (PDF)</a></p>
+          <p class="mt-2"><a class="link-arrow" href="https://help.egroupware.org/" rel="noopener" target="_blank">EGroupware forum</a></p>
+        </div>
+        <div class="fc-fact reveal">
+          <div class="fc-fact__head"><strong>Guacamole at a glance</strong><span class="st-badge st-badge--update">GUACAMOLE</span></div>
+          <dl class="facts mt-2">
+            <div class="fact"><dt>Protocols</dt><dd>RDP, VNC, SSH</dd></div>
+            <div class="fact"><dt>Display</dt><dd>HTML5 in the browser, inside EGroupware</dd></div>
+            <div class="fact"><dt>Login</dt><dd>OpenID Connect via EGroupware</dd></div>
+            <div class="fact"><dt>Two-&#8288;factor</dt><dd>Passkey, Windows Hello, YubiKey, Nitrokey</dd></div>
+            <div class="fact"><dt>Operation</dt><dd>Own server, hosting by arrangement</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Related</span>
+          <h2>Works together with</h2>
+        </div>
+        <div class="related-grid">
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/home.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="remote-work">Remote work</a></h3><p>Work from home as you do in the office.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/admin.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="administration">Administration</a></h3><p>Control users, rights and login.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/videoconference.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="videoconferences">Video conferences</a></h3><p>Meetings with Jitsi or BigBlueButton.</p></div></article>
+          <article class="module module--link reveal"><span class="icon-badge icon-badge--app"><img src="../assets/img/icons/chat.svg" alt="" width="26" height="26" loading="lazy"></span><div><h3><a href="chat">Team chat</a></h3><p>Quick coordination with Rocket.Chat.</p></div></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap-narrow">
-        <h2 style="font-size:var(--fs-h3)">Related modules</h2>
-        <ul class="sibling-list mt-3"><li><a href="administration">Administration</a></li><li><a href="univention">Univention Corporate Server (UCS)</a></li><li><a href="vidoteach">Video based learning</a></li><li><a href="community-edition-vs-epl">EGroupware CE vs EPL</a></li></ul>
-        <p class="mt-3 muted"><a href="features">All modules at a glance</a></p>
+        <div class="section-head reveal">
+          <h2>Frequently asked questions about Guacamole</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Which connection types does Guacamole support?</summary>
+            <div class="faq-body"><p>RDP for Windows desktops and terminal servers, VNC for existing desktop sessions and SSH for server consoles.</p></div>
+          </details>
+          <details>
+            <summary>Do I have to open RDP ports in the firewall?</summary>
+            <div class="faq-body"><p>No. The remote computers are accessed via EGroupware and the browser, so the RDP ports stay closed to the outside.</p></div>
+          </details>
+          <details>
+            <summary>Is Guacamole also available in the EGroupware Cloud?</summary>
+            <div class="faq-body"><p>With your own installation, Guacamole runs on the EGroupware server. In hosting a solution is possible that requires some configuration and coordination with your IT – please get in touch.</p></div>
+          </details>
+          <details>
+            <summary>Can the second factor be switched off in the company network?</summary>
+            <div class="faq-body"><p>Yes. In the Enterprise Line, an IP range such as your company network can count as the second factor, so the additional prompt is not needed there.</p></div>
+          </details>
+        </div>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-band reveal">
           <h2>Try EGroupware free for 30 days</h2>
           <p>No installation, no risk: request cloud access, invite your team, get going. We are also happy to walk you through the platform in a personal demo first.</p>
           <div class="btn-row center">
-            <a class="btn btn--solid-light btn--lg" href="contact">Start 30-day free trial</a>
-            <a class="btn btn--light btn--lg" href="pricing">See pricing</a>
+            <a class="btn btn--solid-light btn--lg" href="trial">Try free for 30 days</a>
+            <a class="btn btn--light btn--lg" href="features">All features</a>
           </div>
         </div>
       </div>
