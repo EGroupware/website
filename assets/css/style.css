@@ -2389,3 +2389,32 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
    damit lange Fragen die Antwortspalte nicht zusammendruecken. */
 .facts--qa .fact { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 @media (max-width: 420px) { .facts--qa .fact { grid-template-columns: 1fr; } }
+
+/* Vergleich CE/EPL: Gruppenzeilen gliedern die lange Tabelle in Bereiche,
+   die beiden Editions-Spalten sind gleich breit. */
+.compare--editions tbody th { width: 46%; }
+.compare--editions td { width: 27%; }
+.compare .compare-group th {
+  background: var(--st-head); color: var(--primary); font-size: var(--fs-xs); font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; padding-top: 1rem;
+}
+@media (max-width: 640px) {
+  table.compare tr.compare-group { border: 0; background: none; margin-top: 1.75rem; }
+  table.compare tr.compare-group th { background: none; border: 0; padding: 0 0 .25rem; }
+  .compare--editions tbody th, .compare--editions td { width: auto; }
+}
+@media (max-width: 640px) {
+  table.compare.compare--editions td { display: flex; gap: .4rem; align-items: baseline; }
+  table.compare.compare--editions td::before { flex: 0 0 8.5rem; margin-right: .35rem; }
+}
+@media (max-width: 380px) {
+  table.compare.compare--editions td { flex-wrap: wrap; }
+  table.compare.compare--editions td::before { flex-basis: 100%; }
+}
+.compare .cmp-yes { color: var(--st-ok); font-weight: 800; }
+
+/* Vergleich CE/EPL: gemeinsame Basis als Haekchenliste ueber der Tabelle */
+.both-editions { margin-bottom: 1.5rem; }
+@media (min-width: 761px) {
+  .check-list--2col { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; }
+}
