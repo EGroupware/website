@@ -417,10 +417,10 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/de/egroupware-26</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/egroupware-26"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/egroupware-26"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/egroupware-26"/>
+    <loc>https://www.egroupware.org/de/was-ist-neu</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/was-ist-neu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/whats-new"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/whats-new"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2064,10 +2064,10 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.egroupware.org/en/egroupware-26</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/egroupware-26"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/egroupware-26"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/egroupware-26"/>
+    <loc>https://www.egroupware.org/en/whats-new</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/was-ist-neu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/whats-new"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/whats-new"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

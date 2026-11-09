@@ -22,6 +22,8 @@ Alle Adressen ohne `.html`, relativ zu `https://www.egroupware.org`.
 | `/en/collaboration-tools` | `/en/features` | Seite entfernt (Doppelung) | 08.11.2026 | Meta-Refresh | offen |
 | `/de/integrationspartner` | `/de/technologiepartner` | Zusammengelegt zur Partnerseite | 08.11.2026 | Meta-Refresh | offen |
 | `/en/integration-partners` | `/en/technology-partners` | Zusammengelegt zur Partnerseite | 08.11.2026 | Meta-Refresh | offen |
+| `/de/egroupware-26` | `/de/was-ist-neu` | Release-Seite verallgemeinert | 09.11.2026 | Meta-Refresh | offen |
+| `/en/egroupware-26` | `/en/whats-new` | Release-Seite verallgemeinert | 09.11.2026 | Meta-Refresh | offen |
 
 ## Kundenstimmen umbenannt
 
