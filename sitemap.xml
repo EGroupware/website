@@ -81,6 +81,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.egroupware.org/de/ki</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/ki"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/ai"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.egroupware.org/de/kontakte</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kontakte"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/contacts"/>
@@ -1716,6 +1724,14 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/kalender"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/calendar"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/calendar"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.egroupware.org/en/ai</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/ki"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/ai"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
