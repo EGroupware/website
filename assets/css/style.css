@@ -2507,3 +2507,13 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
 /* -- Ueberschrift als kleines Label (h2 im Stil von .eyebrow) ---- */
 h2.eyebrow { font-family: inherit; font-size: var(--fs-xs); font-weight: 700; line-height: 1.4; letter-spacing: .14em; margin: 0 0 1rem; }
 .section-head:has(> h2.eyebrow:only-child) { margin-bottom: 1.25rem; }
+
+/* -- Modulfilter: "Alle Funktionen" neben der Suche, Kategorien darunter ---- */
+.js .module-filter:has(> .chip) .chips { flex-basis: 100%; }
+
+/* -- Bereichs-Etikett auf Modulkarten: flacher blauer Tag wie die Branche
+      bei den Kundenstimmen ---- */
+.module__cat, .section--soft .module__cat {
+  background: var(--st-info-bg); color: var(--st-info); border: 0;
+  border-radius: 4px; padding: .22rem .6rem; font-weight: 700; letter-spacing: .04em;
+}
