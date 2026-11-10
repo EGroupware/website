@@ -2529,3 +2529,8 @@ h2.eyebrow { font-family: inherit; font-size: var(--fs-xs); font-weight: 700; li
 .osba-box h3 { font-size: 1.05rem; margin: 0 0 .35rem; }
 .osba-box p { font-size: var(--fs-sm); margin: 0; }
 .osba-box p + p { margin-top: .6rem; }
+
+/* Seitenkopf ohne Bild kompakter, damit die Inhalte frueher sichtbar sind */
+.page-hero:not(.page-hero--split) { padding-block: clamp(2rem, 4vw, 3rem); }
+.page-hero:not(.page-hero--split) .eyebrow { margin-bottom: .75rem; }
+.page-hero:not(.page-hero--split) .lead { margin-top: .75rem; }
