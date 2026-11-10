@@ -24,6 +24,7 @@ Alle Adressen ohne `.html`, relativ zu `https://www.egroupware.org`.
 | `/en/integration-partners` | `/en/technology-partners` | Zusammengelegt zur Partnerseite | 08.11.2026 | Meta-Refresh | offen |
 | `/de/egroupware-26` | `/de/was-ist-neu` | Release-Seite verallgemeinert | 09.11.2026 | Meta-Refresh | offen |
 | `/en/egroupware-26` | `/en/whats-new` | Release-Seite verallgemeinert | 09.11.2026 | Meta-Refresh | offen |
+| `/en/privacy-policy` | `/en/privacy` | Alte Adresse der Datenschutzerklärung (WordPress), wird z. B. bei meetergo verlinkt | 10.11.2026 | – | offen |
 
 ## Kundenstimmen umbenannt
 

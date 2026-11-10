@@ -3498,4 +3498,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.egroupware.org/de/agb</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/agb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/terms"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.egroupware.org/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/agb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/terms"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
 </urlset>
