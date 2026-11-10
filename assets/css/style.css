@@ -894,7 +894,7 @@ strong { color: var(--text); font-weight: 650; }
 
 /* Empfehlung: volle Breite unter den Fragen, eigener Farbton. */
 .finder__ergebnis {
-  margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
+  margin-top: clamp(1rem, 2vw, 1.5rem);
   padding: clamp(1.1rem, 2.5vw, 1.6rem);
   border: 1px solid var(--gold-border); border-radius: var(--r-lg);
   background: var(--gold-bg);
@@ -2534,3 +2534,14 @@ h2.eyebrow { font-family: inherit; font-size: var(--fs-xs); font-weight: 700; li
 .page-hero:not(.page-hero--split) { padding-block: clamp(2rem, 4vw, 3rem); }
 .page-hero:not(.page-hero--split) .eyebrow { margin-bottom: .75rem; }
 .page-hero:not(.page-hero--split) .lead { margin-top: .75rem; }
+
+/* Kundenstimmen-Seite: Anwenderberichte 2er-Raster oben, Profile 3er-Raster darunter */
+.quote-grid--cases { grid-template-columns: 1fr; }
+.quote-grid--cases blockquote { font-size: 1.1rem; }
+.quote-grid--page { grid-template-columns: 1fr; margin-top: clamp(1rem, 2vw, 1.5rem); }
+@media (min-width: 640px) {
+  .quote-grid--cases, .quote-grid--page { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 980px) {
+  .quote-grid--page { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
