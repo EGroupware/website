@@ -2486,3 +2486,16 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
 .logo-strip__list img[src*="kommunale-immobilien-jena"] { max-width: 82%; transform: translateX(4%); }
 @media (max-width: 640px) { .logo-strip__list img[src*="stadt-nordenham"] { max-height: 50px; } }
 .logo-strip__list li > a { place-content: center; }
+
+/* Logo-Leiste: Hinweis beim Ueberfahren bzw. bei Tastaturfokus */
+.logo-strip__list li { position: relative; }
+.logo-strip__list li > a[data-tip]::after {
+  content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + 8px);
+  transform: translate(-50%, 4px); white-space: nowrap; pointer-events: none;
+  padding: .35rem .6rem; border-radius: var(--r-sm); font-size: var(--fs-xs); font-weight: 600;
+  background: var(--text); color: var(--bg); box-shadow: var(--shadow-sm);
+  opacity: 0; transition: opacity .15s ease, transform .15s ease; z-index: 5;
+}
+.logo-strip__list li > a[data-tip]:hover::after,
+.logo-strip__list li > a[data-tip]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+@media (hover: none) { .logo-strip__list li > a[data-tip]::after { display: none; } }
