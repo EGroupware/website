@@ -2545,3 +2545,6 @@ h2.eyebrow { font-family: inherit; font-size: var(--fs-xs); font-weight: 700; li
 @media (min-width: 980px) {
   .quote-grid--page { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+
+/* Kachel-Teaser (News, Tutorials) sind keine Einleitungstexte */
+main .section .post-card h2 + p { font-size: var(--fs-sm); line-height: 1.6; margin-top: 0; }
