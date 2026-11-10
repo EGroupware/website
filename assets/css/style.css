@@ -2499,3 +2499,7 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
 .logo-strip__list li > a[data-tip]:hover::after,
 .logo-strip__list li > a[data-tip]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
 @media (hover: none) { .logo-strip__list li > a[data-tip]::after { display: none; } }
+
+/* Kundenstimmen: Branche als flacher blauer Tag (wie die gruene Kennzahl),
+   ohne Rahmen – wirkt nicht mehr wie ein Button */
+.quote-tag { background: var(--st-info-bg); color: var(--st-info); border: 0; }
