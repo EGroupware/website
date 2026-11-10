@@ -233,6 +233,29 @@
 
     filterBar.hidden = false;
     apply();
+
+    /* Suchfeld so breit wie die ersten zwei Kategorie-Knoepfe der naechsten Zeile,
+       damit Suche und Knoepfe ein gemeinsames Raster bilden. Mindestbreite fuer die
+       Texteingabe; auf schmalen Schirmen (Suche allein in der Zeile) bleibt sie volle Breite. */
+    var searchBox = filterBar.querySelector(".module-filter__search");
+    var fitSearch = function () {
+      if (!searchBox || !filterBar.querySelector(":scope > .chip")) { return; }
+      searchBox.style.flex = ""; searchBox.style.maxWidth = "";
+      if (filterBar.clientWidth < 700) { return; }
+      for (var i = 0; i < 3; i++) {
+        var top = searchBox.offsetTop;
+        var below = chips.filter(function (c) { return c.offsetTop > top + 4; });
+        if (below.length < 2) { return; }
+        var row = below.filter(function (c) { return c.offsetTop === below[0].offsetTop; });
+        if (row.length < 2) { return; }
+        var w = row[1].offsetLeft + row[1].offsetWidth - row[0].offsetLeft;
+        if (w < 300) { w = 300; }
+        if (Math.abs(w - searchBox.offsetWidth) < 2) { return; }
+        searchBox.style.flex = "0 0 " + w + "px"; searchBox.style.maxWidth = "none";
+      }
+    };
+    fitSearch();
+    window.addEventListener("resize", fitSearch);
   }
 
   /* ---- Rückmeldung nach dem Absenden (?status=ok|error) ---- */

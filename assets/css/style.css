@@ -2511,7 +2511,7 @@ h2.eyebrow { font-family: inherit; font-size: var(--fs-xs); font-weight: 700; li
 /* -- Modulfilter: "Alles anzeigen" und Kategorien fliessen direkt hinter der Suche weiter ---- */
 .js .module-filter:has(> .chip) { gap: .6rem .5rem; }
 .js .module-filter:has(> .chip) .chips { display: contents; }
-.js .module-filter:has(> .chip) .module-filter__search { margin-right: .5rem; }
+.js .module-filter:has(> .chip) .module-filter__search { margin-right: 0; }
 
 /* -- Bereichs-Etikett auf Modulkarten: flacher blauer Tag wie die Branche
       bei den Kundenstimmen ---- */
