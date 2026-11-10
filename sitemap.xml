@@ -787,8 +787,8 @@
   <url>
     <loc>https://www.egroupware.org/de/allgemein/placetel-integration-in-egroupware</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/placetel-integration-in-egroupware"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/allgemein/placetel-integration-in-egroupware"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/allgemein/placetel-integration-in-egroupware"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-21-1-release-announcement-and-placetel-webinar-recording"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-21-1-release-announcement-and-placetel-webinar-recording"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -817,8 +817,8 @@
   <url>
     <loc>https://www.egroupware.org/de/allgemein/egroupware-21-1-webinarankuendigung-zur-cti-telefonintegration</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/egroupware-21-1-webinarankuendigung-zur-cti-telefonintegration"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/allgemein/egroupware-21-1-webinarankuendigung-zur-cti-telefonintegration"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/allgemein/egroupware-21-1-webinarankuendigung-zur-cti-telefonintegration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-21-1-webinarannouncement-on-cti-telephone-integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-21-1-webinarannouncement-on-cti-telephone-integration"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2273,28 +2273,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/allgemein/smart-collaboration-egroupware-und-managed-davx%e2%81%b5-steigern-die-produktivitaet-der-stadtverwaltung-jena</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/allgemein/smart-collaboration-egroupware-und-managed-davx%e2%81%b5-steigern-die-produktivitaet-der-stadtverwaltung-jena"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/allgemein/smart-collaboration-egroupware-und-managed-davx%e2%81%b5-steigern-die-produktivitaet-der-stadtverwaltung-jena"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/egroupware-in-the-press/egroupware-at-the-univention-summit-2022</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/egroupware-in-the-press/egroupware-at-the-univention-summit-2022"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/egroupware-in-the-press/egroupware-at-the-univention-summit-2022"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/allgemein/opensource-com-spannender-egroupware-artikel-erste-schritte-mit-egroupware</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/allgemein/opensource-com-spannender-egroupware-artikel-erste-schritte-mit-egroupware"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/allgemein/opensource-com-spannender-egroupware-artikel-erste-schritte-mit-egroupware"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/news/placeholders-and-automatic-generation-of-pdf-png-in-egroupware-21-1</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/placeholders-and-automatic-generation-of-pdf-png-in-egroupware-21-1"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/placeholders-and-automatic-generation-of-pdf-png-in-egroupware-21-1"/>
@@ -2315,14 +2301,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/egroupware-soutient-le-proces-contre-microsoft-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-soutient-le-proces-contre-microsoft-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-soutient-le-proces-contre-microsoft-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/news/egroupware-supports-lawsuit-against-microsoft</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-supports-lawsuit-against-microsoft"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-supports-lawsuit-against-microsoft"/>
@@ -2344,106 +2323,49 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/egroupware-21-1-freigegeben-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-21-1-freigegeben-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-21-1-freigegeben-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/news/egroupware-21-1-released</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-21-1-released"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-21-1-released"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/sortie-degroupware-21-1-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/sortie-degroupware-21-1-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/sortie-degroupware-21-1-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/webinars/placetel-configuration-workshop</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/placetel-configuration-workshop"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/placetel-configuration-workshop"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/webinars/taller-de-configuracion-de-placetel-consejos-y-trucos-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/taller-de-configuracion-de-placetel-consejos-y-trucos-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/taller-de-configuracion-de-placetel-consejos-y-trucos-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/pre-annonce-de-la-version-egroupware-21-1-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/pre-annonce-de-la-version-egroupware-21-1-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/pre-annonce-de-la-version-egroupware-21-1-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/news/pre-annuncio-di-rilascio-egroupware-21-1-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/pre-annuncio-di-rilascio-egroupware-21-1-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/pre-annuncio-di-rilascio-egroupware-21-1-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/release-pre-announcement-egroupware-21-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/release-pre-announcement-egroupware-21-1"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/pressemitteilung-vorankuendigung-release-egroupware-21-1-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/pressemitteilung-vorankuendigung-release-egroupware-21-1-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/pressemitteilung-vorankuendigung-release-egroupware-21-1-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/news/release-pre-announcement-egroupware-21-1</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/release-pre-announcement-egroupware-21-1"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/release-pre-announcement-egroupware-21-1"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/annuncio-del-rilascio-di-egroupware-21-1-e-registrazione-del-webinar-di-placetel-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/annuncio-del-rilascio-di-egroupware-21-1-e-registrazione-del-webinar-di-placetel-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/annuncio-del-rilascio-di-egroupware-21-1-e-registrazione-del-webinar-di-placetel-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/news/egroupware-21-1-release-announcement-and-placetel-webinar-recording</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-21-1-release-announcement-and-placetel-webinar-recording"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-21-1-release-announcement-and-placetel-webinar-recording"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/giornata-delleducazione-aperta-2021</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/giornata-delleducazione-aperta-2021"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/giornata-delleducazione-aperta-2021"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/news/integrazione-di-placetel-in-egroupware</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/integrazione-di-placetel-in-egroupware"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/integrazione-di-placetel-in-egroupware"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-21-1-release-announcement-and-placetel-webinar-recording"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-21-1-release-announcement-and-placetel-webinar-recording"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/allgemein/placetel-integration-in-egroupware</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/placetel-integration-in-egroupware"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/allgemein/placetel-integration-in-egroupware"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/allgemein/placetel-integration-in-egroupware"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/events/open-education-day-2021</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/open-education-day-2021"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/events/open-education-day-2021"/>
@@ -2451,71 +2373,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/webinars/integracion-telefonica-en-egroupware-integracion-cti-con-el-ejemplo-de-placetel-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/integracion-telefonica-en-egroupware-integracion-cti-con-el-ejemplo-de-placetel-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/integracion-telefonica-en-egroupware-integracion-cti-con-el-ejemplo-de-placetel-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/webinars/integration-telephonique-dans-egroupware-integration-cti-a-laide-de-lexemple-de-placetel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/integration-telephonique-dans-egroupware-integration-cti-a-laide-de-lexemple-de-placetel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/integration-telephonique-dans-egroupware-integration-cti-a-laide-de-lexemple-de-placetel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/telephone-integration-in-egroupware-cti-integration-using-placetel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/telephone-integration-in-egroupware-cti-integration-using-placetel"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/webinars/telefonintegration-in-egroupware-cti-integration-am-beispiel-von-placetel-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/telefonintegration-in-egroupware-cti-integration-am-beispiel-von-placetel-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/telefonintegration-in-egroupware-cti-integration-am-beispiel-von-placetel-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/allgemein/telefonintegration-in-egroupware-cti-integration-am-beispiel-von-placetel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/allgemein/telefonintegration-in-egroupware-cti-integration-am-beispiel-von-placetel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/allgemein/telefonintegration-in-egroupware-cti-integration-am-beispiel-von-placetel"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/webinars/telephone-integration-in-egroupware-cti-integration-using-placetel</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/telephone-integration-in-egroupware-cti-integration-using-placetel"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/telephone-integration-in-egroupware-cti-integration-using-placetel"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/events/chemnitzer-linux-tage-2021-egroupware-im-home-office-und-in-bildungseinrichtungen-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/events/chemnitzer-linux-tage-2021-egroupware-im-home-office-und-in-bildungseinrichtungen-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/events/chemnitzer-linux-tage-2021-egroupware-im-home-office-und-in-bildungseinrichtungen-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/events/chemnitzer-linux-tage-2021-egroupware-in-the-home-office-and-in-educational-institutions</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/events/chemnitzer-linux-tage-2021-egroupware-in-the-home-office-and-in-educational-institutions"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/events/chemnitzer-linux-tage-2021-egroupware-in-the-home-office-and-in-educational-institutions"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/egroupware-21-1-annuncio-del-webinar-sullintegrazione-telefonica-cti-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-21-1-annuncio-del-webinar-sullintegrazione-telefonica-cti-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-21-1-annuncio-del-webinar-sullintegrazione-telefonica-cti-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.egroupware.org/en/allgemein/egroupware-21-1-webinarankuendigung-zur-cti-telefonintegration</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/egroupware-21-1-webinarankuendigung-zur-cti-telefonintegration"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/allgemein/egroupware-21-1-webinarankuendigung-zur-cti-telefonintegration"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/allgemein/egroupware-21-1-webinarankuendigung-zur-cti-telefonintegration"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/news/egroupware-21-1-webinarannouncement-on-cti-telephone-integration</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-21-1-webinarannouncement-on-cti-telephone-integration"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-21-1-webinarannouncement-on-cti-telephone-integration"/>
@@ -2529,31 +2408,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/webinars/webinaire-smallpart-avec-examens-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/webinaire-smallpart-avec-examens-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/webinaire-smallpart-avec-examens-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/webinars/kanban-web-training</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/kanban-web-training"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/kanban-web-training"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/seminaires-web-sur-egroupware-21-1-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/seminaires-web-sur-egroupware-21-1-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/seminaires-web-sur-egroupware-21-1-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/news/webinare-zu-egroupware-21-1-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/webinare-zu-egroupware-21-1-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/webinare-zu-egroupware-21-1-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/webinars-on-egroupware-21-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/webinars-on-egroupware-21-1"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2564,17 +2429,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/nouvelles-fonctionnalites-et-applications-dans-egroupware-21-1-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/nouvelles-fonctionnalites-et-applications-dans-egroupware-21-1-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/nouvelles-fonctionnalites-et-applications-dans-egroupware-21-1-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/webinars/smart-working-educazione-e-scuole-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/smart-working-educazione-e-scuole-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/smart-working-educazione-e-scuole-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/smart-working-educations-and-schools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/smart-working-educations-and-schools"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2733,14 +2591,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/collabora-3-1-disponible-con-egroupware-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/collabora-3-1-disponible-con-egroupware-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/collabora-3-1-disponible-con-egroupware-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/egroupware-in-the-press/cloud-computing-insider-arbeiten-mit-egroupware-und-collabora</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/in-der-presse/cloud-computing-insider-arbeiten-mit-egroupware-und-collabora"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/egroupware-in-the-press/cloud-computing-insider-arbeiten-mit-egroupware-und-collabora"/>
@@ -2780,14 +2631,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/egroupware-in-the-press/egroupware-17-1-con-collabora-fusion-de-groupware-clasico-y-servidor-de-archivos-con-oficina-en-linea-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/egroupware-in-the-press/egroupware-17-1-con-collabora-fusion-de-groupware-clasico-y-servidor-de-archivos-con-oficina-en-linea-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/egroupware-in-the-press/egroupware-17-1-con-collabora-fusion-de-groupware-clasico-y-servidor-de-archivos-con-oficina-en-linea-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/egroupware-in-the-press/egroupware-egroupware-17-1-now-released</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/egroupware-in-the-press/egroupware-egroupware-17-1-now-released"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/egroupware-in-the-press/egroupware-egroupware-17-1-now-released"/>
@@ -2953,14 +2797,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/webinars/egroupware-16-1-informacion-actualizada-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/egroupware-16-1-informacion-actualizada-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/webinars/egroupware-16-1-informacion-actualizada-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/webinars/egroupware-16-1-update-infos</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/webinare/egroupware-16-1-update-infos"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/webinars/egroupware-16-1-update-infos"/>
@@ -2968,14 +2805,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/general/egroupware-16-1-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/general/egroupware-16-1-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/general/egroupware-16-1-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/general/egroupware-16-1</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/allgemein/egroupware-16-1"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/general/egroupware-16-1"/>
@@ -2999,14 +2829,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/egroupware-in-the-press/datacenter-insider-los-usuarios-deciden-el-desarrollo-de-egroupware-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/egroupware-in-the-press/datacenter-insider-los-usuarios-deciden-el-desarrollo-de-egroupware-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/egroupware-in-the-press/datacenter-insider-los-usuarios-deciden-el-desarrollo-de-egroupware-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/egroupware-in-the-press/datacenter-insider-users-decide-egroupware-development</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/in-der-presse/datacenter-insider-users-decide-egroupware-development"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/egroupware-in-the-press/datacenter-insider-users-decide-egroupware-development"/>
@@ -3252,14 +3075,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.egroupware.org/en/news/egroupware-14-1-pubblicato-2</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-14-1-pubblicato-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/news/egroupware-14-1-pubblicato-2"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
+<url>
     <loc>https://www.egroupware.org/en/news/egroupware-14-1-released</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/neuigkeiten/egroupware-14-1-released"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/news/egroupware-14-1-released"/>
