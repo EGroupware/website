@@ -2521,3 +2521,11 @@ h2.eyebrow { font-family: inherit; font-size: var(--fs-xs); font-weight: 700; li
 }
 /* Suchfeld so hoch wie die Filter-Knoepfe (40px) */
 .module-filter__search input { height: 40px; padding-block: 0; }
+
+/* -- Ueber uns: OSBA-Mitgliedschaft unter den Werten ---- */
+.osba-box { margin-top: 1.25rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.osba-box .seal { flex: 0 0 auto; box-shadow: none; border: 1px solid var(--border); }
+.osba-box > div { flex: 1 1 22rem; }
+.osba-box h3 { font-size: 1.05rem; margin: 0 0 .35rem; }
+.osba-box p { font-size: var(--fs-sm); margin: 0; }
+.osba-box p + p { margin-top: .6rem; }
