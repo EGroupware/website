@@ -2470,3 +2470,19 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
   .logo-strip__list img { max-height: 40px; }
 }
 @media (min-width: 641px) { .logo-strip__list { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); } }
+
+/* Logo-Leiste immer in vollen, zentrierten Reihen: 6 nebeneinander, darunter 3 x 2 */
+.logo-strip__list { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+.logo-strip__list li { flex: 0 0 calc((100% - 5 * .75rem) / 6); }
+@media (max-width: 900px) { .logo-strip__list li { flex-basis: calc((100% - 2 * .75rem) / 3); } }
+@media (max-width: 640px) {
+  .logo-strip__list { gap: .5rem; }
+  .logo-strip__list li { flex-basis: calc((100% - 2 * .5rem) / 3); }
+}
+
+/* Optische Korrektur einzelner Logos: Nordenham ist sehr klein und hoch,
+   Jena sehr breit mit blassen Streifen links – beide wirken sonst versetzt. */
+.logo-strip__list img[src*="stadt-nordenham"] { max-height: 68px; }
+.logo-strip__list img[src*="kommunale-immobilien-jena"] { max-width: 82%; transform: translateX(4%); }
+@media (max-width: 640px) { .logo-strip__list img[src*="stadt-nordenham"] { max-height: 50px; } }
+.logo-strip__list li > a { place-content: center; }
