@@ -2548,3 +2548,6 @@ h2.eyebrow { font-family: inherit; font-size: var(--fs-xs); font-weight: 700; li
 
 /* Kachel-Teaser (News, Tutorials) sind keine Einleitungstexte */
 main .section .post-card h2 + p { font-size: var(--fs-sm); line-height: 1.6; margin-top: 0; }
+
+/* Rechtstexte: erster Absatz nach Ueberschrift ist kein Einleitungstext */
+main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inherit; margin-top: .9rem; }
