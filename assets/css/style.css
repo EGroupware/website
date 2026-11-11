@@ -2551,3 +2551,9 @@ main .section .post-card h2 + p { font-size: var(--fs-sm); line-height: 1.6; mar
 
 /* Rechtstexte: erster Absatz nach Ueberschrift ist kein Einleitungstext */
 main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inherit; margin-top: .9rem; }
+
+/* -- Archivhinweis in alten Beitraegen ---- */
+.post__archive { display: flex; gap: .6rem; align-items: baseline; margin-top: 1rem;
+  padding: .65rem .9rem; border: 1px solid var(--border); border-radius: var(--r-md);
+  background: var(--bg-soft); font-size: var(--fs-sm); color: var(--text-soft); }
+.post__archive .st-badge { flex: none; }
