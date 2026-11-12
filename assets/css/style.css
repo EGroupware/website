@@ -2557,3 +2557,7 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
   padding: .65rem .9rem; border: 1px solid var(--border); border-radius: var(--r-md);
   background: var(--bg-soft); font-size: var(--fs-sm); color: var(--text-soft); }
 .post__archive .st-badge { flex: none; }
+
+/* -- Gleich hohe Kacheln im Preisraster (z. B. Support-Kanaele) ---- */
+.price-grid--even { align-items: stretch; }
+.price-grid--even .check-list { margin-top: 0; }
