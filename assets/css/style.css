@@ -2561,3 +2561,7 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 /* -- Gleich hohe Kacheln im Preisraster (z. B. Support-Kanaele) ---- */
 .price-grid--even { align-items: stretch; }
 .price-grid--even .check-list { margin-top: 0; }
+
+/* -- Icons ohne Hintergrund (KI-Seite), 25 % groesser ---- */
+.icon-badge--plain { width: auto; height: auto; background: none; border-radius: 0; place-items: start; }
+.icon-badge--plain svg { width: 27.5px; height: 27.5px; }
