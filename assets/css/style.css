@@ -2696,3 +2696,19 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 .video__cover:has(.video__poster) .video__label {
   background: rgba(11, 49, 81, .72); padding: .2rem .7rem; border-radius: 999px; text-shadow: none;
 }
+
+/* -- Live-Chat-Knopf (Rocket.Chat erst auf Klick) ---- */
+/* Gleiche Lage, Groesse und Farbe wie der Knopf im Rocket.Chat-Widget,
+   damit beim Nachladen nichts springt. */
+.livechat-start {
+  position: fixed; right: 16px; bottom: 16px; z-index: 12344;
+  width: 54px; height: 54px; padding: 0; border: 0; border-radius: 4px;
+  display: grid; place-items: center; cursor: pointer;
+  background: #c1272d; color: #fff; box-shadow: 0 7px 16px rgba(0, 0, 0, .1);
+  transition: filter .15s ease;
+}
+.livechat-start:hover { filter: brightness(1.1); }
+.livechat-start:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+.livechat-start svg { width: 24px; height: 24px; }
+.livechat-start[aria-busy] { cursor: progress; opacity: .85; }
+@media print { .livechat-start { display: none; } }

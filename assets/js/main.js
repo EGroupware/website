@@ -434,13 +434,43 @@
   if (year) { year.textContent = String(new Date().getFullYear()); }
 })();
 
-/* Rocket.Chat livechat widget - unmodified official embed snippet, same
-   as used on the current www.egroupware.org (served by the Rocket.Chat
-   instance itself, so it always loads whatever version is deployed
-   there - no update needed here when Rocket.Chat is upgraded). */
-(function (w, d, s, u) {
-  w.RocketChat = function (c) { w.RocketChat._.push(c); }; w.RocketChat._ = []; w.RocketChat.url = u;
-  var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-  j.async = true; j.src = 'https://pole.egroupware.org/livechat/rocketchat-livechat.min.js?_=201912110000';
-  h.parentNode.insertBefore(j, h);
-})(window, document, 'script', 'https://pole.egroupware.org/livechat');
+
+/* Rocket.Chat-Livechat: erst auf Klick laden.
+   Das Widget setzt beim Laden Cookies (rc_is_widget, rc_room_type) und eine
+   Besucherkennung im lokalen Speicher von pole.egroupware.org. Deshalb zeigen
+   wir zuerst nur einen eigenen Knopf im Aussehen des Rocket.Chat-Knopfs; erst
+   der Klick laedt das offizielle Embed-Skript (unveraendert, Version kommt
+   vom Rocket.Chat-Server) und oeffnet das Chatfenster direkt. */
+(function (w, d) {
+  var u = 'https://pole.egroupware.org/livechat';
+  var en = (d.documentElement.lang || '').slice(0, 2) === 'en';
+  var btn = d.createElement('button');
+  btn.type = 'button';
+  btn.className = 'livechat-start';
+  btn.setAttribute('aria-label', en ? 'Open live chat' : 'Live-Chat öffnen');
+  btn.title = en ? 'Live chat – loads the chat from pole.egroupware.org'
+                 : 'Live-Chat – lädt den Chat von pole.egroupware.org';
+  btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor">' +
+    '<path d="M21.63 11.09c0-3.26-4-5.9-8.94-5.9-4.94 0-8.94 2.64-8.94 5.9 0 1.42.76 2.73 2.03 3.75.22 2.12-.8 3.41-1.49 4.18 2.11.55 4.29-1.16 5.28-2.39.97.24 2.03.37 3.13.37 4.94 0 8.94-2.64 8.94-5.91zM3.8 20.99.58 20.15l2.27-2.52c.58-.64.9-1.18.97-1.85-1.29-1.31-2.04-2.93-2.04-4.68 0-4.63 5.02-7.94 10.9-7.94 5.89 0 10.9 3.31 10.9 7.94 0 4.63-5.01 7.94-10.9 7.94-.83 0-1.65-.07-2.45-.2-1.76 1.71-4.13 2.75-6.43 2.15z"/>' +
+    '<circle cx="8.91" cy="11.03" r="1.3"/><circle cx="12.8" cy="11.03" r="1.3"/><circle cx="16.7" cy="11.03" r="1.3"/></g></svg>';
+  btn.addEventListener('click', function () {
+    if (btn.getAttribute('aria-busy')) { return; }
+    btn.setAttribute('aria-busy', 'true');
+    /* Offizielles Rocket.Chat-Embed-Snippet */
+    (function (w, d, s, u) {
+      w.RocketChat = function (c) { w.RocketChat._.push(c); }; w.RocketChat._ = []; w.RocketChat.url = u;
+      var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+      j.async = true; j.src = 'https://pole.egroupware.org/livechat/rocketchat-livechat.min.js?_=201912110000';
+      h.parentNode.insertBefore(j, h);
+    })(w, d, 'script', u);
+    w.RocketChat(function () {
+      if (this.maximizeWidget) { this.maximizeWidget(); }
+      setTimeout(function () { btn.remove(); }, 800);
+    });
+    /* Falls der Chat-Server nicht antwortet: Knopf wieder freigeben. */
+    setTimeout(function () {
+      if (!d.querySelector('.rocketchat-widget')) { btn.removeAttribute('aria-busy'); }
+    }, 10000);
+  });
+  d.body.appendChild(btn);
+})(window, document);
