@@ -2565,3 +2565,16 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 /* -- Icons ohne Hintergrund (KI-Seite), 25 % groesser ---- */
 .icon-badge--plain { width: auto; height: auto; background: none; border-radius: 0; place-items: start; }
 .icon-badge--plain svg { width: 27.5px; height: 27.5px; }
+
+/* -- App-Icons ohne Hintergrund (Modulkarten Startseite), 25 % groesser.
+      Im Dunkelmodus bleibt eine helle Kachel, sonst sind dunkle App-Icons
+      (E-Rechnung, CRM, Aufgaben) auf der dunklen Karte kaum zu sehen ---- */
+.module:has(> .icon-badge--bare) { grid-template-columns: 30px 1fr; }
+.module .icon-badge--bare { width: 30px; height: auto; background: none; border: 0; border-radius: 0; }
+.module .icon-badge--bare img { width: 30px; height: 30px; }
+:root[data-theme="dark"] .module:has(> .icon-badge--bare) { grid-template-columns: 42px 1fr; }
+:root[data-theme="dark"] .module .icon-badge--bare { width: 42px; height: 42px; background: #f4f7fb; border-radius: var(--r-md); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .module:has(> .icon-badge--bare) { grid-template-columns: 42px 1fr; }
+  :root:not([data-theme="light"]) .module .icon-badge--bare { width: 42px; height: 42px; background: #f4f7fb; border-radius: var(--r-md); }
+}
