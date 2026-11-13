@@ -113,7 +113,19 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
 - Immer beide Sprachen anlegen, mit gegenseitigen `hreflang`-Links im `<head>`
   (`de`, `en`, `x-default` = englisch) und passendem `canonical`.
 - Eine bestehende Seite als Vorlage nehmen, damit Header, Footer und Kopfdaten stimmen.
-- In `sitemap.xml` eintragen und, wenn sinnvoll, im Menü und Footer verlinken.
+- Sitemap neu erzeugen (siehe „Sitemap“ unten) und, wenn sinnvoll, im Menü und Footer verlinken.
+
+## Sitemap
+
+`sitemap.xml` wird nicht von Hand gepflegt, sondern aus den Seiten erzeugt:
+`python3 .claude/tools/sitemap.py` im Repo-Hauptordner (unter Windows `python`).
+Das Skript nimmt alle Seiten unter `de/` und `en/` auf – außer Weiterleitungen, Seiten mit
+`noindex` und Vorschau-Seiten – und übernimmt die Sprachverweise (`hreflang`) aus dem `<head>`
+der Seite. Priorität und Änderungshäufigkeit bestehender Einträge bleiben erhalten.
+
+**Ausführen, sobald** eine Seite neu angelegt, gelöscht, umbenannt oder zur Weiterleitung wird,
+eine Übersetzung dazukommt (`hreflang`) oder sich `noindex` ändert – im selben Commit.
+`python3 .claude/tools/sitemap.py --check` prüft nur und meldet, ob die Sitemap veraltet ist.
 
 ## Seite löschen oder umbenennen
 
@@ -122,7 +134,7 @@ Header, Menü und Footer stehen **in jeder Seite einzeln** (kein Include). Eine
   dauerhaften Weiterleitungen (301) auf dem Server ein.
 - Bis dahin unter der alten Adresse eine kleine HTML-Weiterleitung lassen (`noindex`, `canonical`
   auf die neue Seite, `meta refresh`), Links im Menü und in Texten auf die neue Adresse umstellen
-  und den Eintrag in `sitemap.xml` entfernen bzw. anpassen.
+  und die Sitemap neu erzeugen (siehe „Sitemap“).
 
 ## Design und CSS
 
