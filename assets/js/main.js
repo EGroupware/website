@@ -351,6 +351,82 @@
         zeigen();
       });
     });
+
+    /* Schritt fuer Schritt: immer nur eine Frage sichtbar, nach der Antwort
+       geht es zur naechsten, am Ende kommt die Empfehlung. Ohne JavaScript
+       gibt es den Berater ohnehin nicht (siehe oben). */
+    var fragen = [].slice.call(finder.querySelectorAll(".finder__frage"));
+    var ergebnis = finder.querySelector(".finder__ergebnis");
+    var fragenFeld = finder.querySelector(".finder");
+    if (fragen.length && ergebnis && fragenFeld) {
+      var de = (document.documentElement.lang || "").indexOf("de") === 0;
+      var T = de
+        ? { schritt: "Schritt", von: "von", zurueck: "Zurück", neu: "Neu starten", fertig: "Fertig" }
+        : { schritt: "Step", von: "of", zurueck: "Back", neu: "Start over", fertig: "Done" };
+      finder.classList.add("finder-karte--wizard");
+
+      var fort = document.createElement("div");
+      fort.className = "finder__fort";
+      var schrittText = document.createElement("p");
+      schrittText.className = "finder__schritt";
+      schrittText.setAttribute("aria-live", "polite");
+      var balken = document.createElement("ol");
+      balken.className = "finder__balken";
+      balken.setAttribute("aria-hidden", "true");
+      fragen.forEach(function () { balken.appendChild(document.createElement("li")); });
+      fort.appendChild(schrittText);
+      fort.appendChild(balken);
+      fragenFeld.parentNode.insertBefore(fort, fragenFeld);
+
+      var nav = document.createElement("div");
+      nav.className = "finder__nav";
+      var zurueck = document.createElement("button");
+      zurueck.type = "button";
+      zurueck.className = "finder__zurueck";
+      zurueck.textContent = "← " + T.zurueck;
+      var neu = document.createElement("button");
+      neu.type = "button";
+      neu.className = "finder__zurueck";
+      neu.textContent = T.neu;
+      nav.appendChild(zurueck);
+      nav.appendChild(neu);
+      ergebnis.parentNode.insertBefore(nav, ergebnis.nextSibling);
+      ergebnis.setAttribute("tabindex", "-1");
+      fragen.forEach(function (f) { f.setAttribute("tabindex", "-1"); });
+
+      var schritt = 0;
+      var gehe = function (n, fokus) {
+        schritt = n;
+        var fertig = n >= fragen.length;
+        fragen.forEach(function (f, i) { f.hidden = i !== n; });
+        ergebnis.hidden = !fertig;
+        [].forEach.call(balken.children, function (li, i) {
+          li.className = i < n ? "is-fertig" : (i === n ? "is-aktiv" : "");
+        });
+        schrittText.textContent = fertig ? T.fertig
+          : T.schritt + " " + (n + 1) + " " + T.von + " " + fragen.length;
+        zurueck.hidden = n === 0;
+        neu.hidden = !fertig;
+        if (fokus) {
+          // Fokus auf die ganze Frage, nicht auf eine Antwort – sonst sieht
+          // die erste Antwort aus, als waere sie schon gewaehlt.
+          var ziel = fertig ? ergebnis : fragen[n];
+          ziel.focus({ preventScroll: true });
+        }
+      };
+
+      fragen.forEach(function (f, i) {
+        f.querySelectorAll(".finder__opt").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            // Kurz stehen lassen, damit die Auswahl sichtbar ist.
+            setTimeout(function () { gehe(i + 1, true); }, 250);
+          });
+        });
+      });
+      zurueck.addEventListener("click", function () { gehe(Math.max(0, schritt - 1), true); });
+      neu.addEventListener("click", function () { gehe(0, true); });
+      gehe(0, false);
+    }
   }
 
   /* ---- Footer year ---- */

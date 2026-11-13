@@ -2624,3 +2624,24 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
   :root:not([data-theme="light"]) .module .icon-badge--plain { width: 42px; height: 42px; place-items: center; background: #f4f7fb; border-radius: var(--r-md); }
 }
 .grid:has(.icon-badge--bare) .card > .icon-badge--plain svg { width: 32px; height: 32px; }
+
+/* -- Tarifberater als Schritt-fuer-Schritt-Assistent (per JS aktiviert):
+      eine Frage pro Schritt, Fortschritt oben, Zurueck unten ---- */
+.finder-karte--wizard .finder__nr { display: none; }
+.finder-karte--wizard .finder__frage legend { font-size: var(--fs-lg); margin-bottom: .9rem; }
+.finder-karte--wizard .finder__opt { font-size: var(--fs-base); padding: .8rem 1.25rem; }
+.finder-karte--wizard .finder__ergebnis { margin-top: 0; }
+.finder-karte--wizard .finder__ergebnis:focus, .finder-karte--wizard .finder__frage:focus { outline: none; }
+.finder-karte--wizard .finder__warte { display: none; }
+.finder__fort { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.1rem; }
+.finder__schritt { margin: 0; font-size: var(--fs-xs); font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+.finder__balken { list-style: none; margin: 0; padding: 0; display: flex; gap: .35rem; flex: 1; max-width: 12rem; }
+.finder__balken li { flex: 1; height: 4px; border-radius: 2px; background: var(--border); }
+.finder__balken li.is-fertig, .finder__balken li.is-aktiv { background: var(--primary); }
+.finder__balken li.is-aktiv { opacity: .45; }
+.finder__nav { display: flex; gap: 1.25rem; margin-top: 1rem; }
+.finder__zurueck { font: inherit; font-size: var(--fs-sm); font-weight: 600; color: var(--primary);
+  background: none; border: 0; padding: .25rem 0; cursor: pointer; }
+.finder__zurueck:hover { text-decoration: underline; }
+.finder__zurueck[hidden] { display: none; }
