@@ -2578,3 +2578,11 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
   :root:not([data-theme="light"]) .module:has(> .icon-badge--bare) { grid-template-columns: 42px 1fr; }
   :root:not([data-theme="light"]) .module .icon-badge--bare { width: 42px; height: 42px; background: #f4f7fb; border-radius: var(--r-md); }
 }
+
+/* -- Logoleiste: Logos immer farbig; beim Ueberfahren wird nur der Rand blau ---- */
+.logo-strip__list img,
+.logo-strip__list img[src$="kdsz-bayern.webp"],
+.logo-strip__list img[src$="stadt-nordenham.jpg"] { filter: none; opacity: 1; }
+.logo-strip__list li { transition: border-color .2s ease; }
+.logo-strip__list li:has(> a):hover,
+.logo-strip__list li:has(> a:focus-visible) { border-color: var(--primary); }
