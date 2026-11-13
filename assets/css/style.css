@@ -2586,3 +2586,19 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 .logo-strip__list li { transition: border-color .2s ease; }
 .logo-strip__list li:has(> a):hover,
 .logo-strip__list li:has(> a:focus-visible) { border-color: var(--primary); }
+
+/* -- Screenshot-Treppe: drei flache Screenshots versetzt uebereinander
+      (Startseite, Kontakt). Hinten oben rechts, vorne unten links ---- */
+.shot-stack { position: relative; margin: 0; aspect-ratio: 1080 / 790; }
+.shot-stack img {
+  position: absolute; width: 80%; height: auto; border-radius: 10px;
+  border: 1px solid var(--border); background: #fff;
+  box-shadow: 0 2px 6px rgba(11, 49, 81, .08), 0 22px 44px rgba(11, 49, 81, .20);
+}
+.shot-stack img:nth-child(1) { top: 0;   right: 0; }
+.shot-stack img:nth-child(2) { top: 19%; right: 10%; }
+.shot-stack img:nth-child(3) { top: 38%; right: 20%; }
+/* Gespiegelte Treppe (zweites Bild auf der Startseite): hinten oben links, vorne unten rechts */
+.shot-stack--flip img:nth-child(1) { right: auto; left: 0; }
+.shot-stack--flip img:nth-child(2) { right: auto; left: 10%; }
+.shot-stack--flip img:nth-child(3) { right: auto; left: 20%; }
