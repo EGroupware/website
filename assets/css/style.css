@@ -2651,3 +2651,7 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 /* -- Karte in einem Panel (Startseite, E-Rechnung): kein eigener Kasten,
       der Inhalt steht direkt auf dem blaeulichen Panel ---- */
 .panel > .card { background: none; border: 0; box-shadow: none; padding: 0; }
+
+/* -- Tarifberater-Assistent: Empfehlung ohne gelben Kasten, steht direkt in der Karte ---- */
+.finder-karte--wizard .finder__ergebnis { background: none; border: 0; padding: 0; }
+.finder-karte--wizard .finder__label { color: var(--primary); }
