@@ -2611,3 +2611,16 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .card > .icon-badge--bare { width: 46px; height: 46px; background: #f4f7fb; border-radius: var(--r-md); place-items: center; }
 }
+
+/* -- Linien-Icons ohne Kaestchen neben App-Icons (Modulkarten, gemischte Kartenraster),
+      gleich gross wie die App-Icons ---- */
+.module:has(> .icon-badge--plain) { grid-template-columns: 30px 1fr; }
+.module .icon-badge--plain { width: 30px; height: auto; margin: 0; background: none; border: 0; border-radius: 0; }
+.module .icon-badge--plain svg { width: 30px; height: 30px; }
+:root[data-theme="dark"] .module:has(> .icon-badge--plain) { grid-template-columns: 42px 1fr; }
+:root[data-theme="dark"] .module .icon-badge--plain { width: 42px; height: 42px; place-items: center; background: #f4f7fb; border-radius: var(--r-md); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .module:has(> .icon-badge--plain) { grid-template-columns: 42px 1fr; }
+  :root:not([data-theme="light"]) .module .icon-badge--plain { width: 42px; height: 42px; place-items: center; background: #f4f7fb; border-radius: var(--r-md); }
+}
+.grid:has(.icon-badge--bare) .card > .icon-badge--plain svg { width: 32px; height: 32px; }
