@@ -2647,3 +2647,7 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 .finder__zurueck[hidden] { display: none; }
 /* Linien-Icons ohne Kaestchen gelten seitenweit, auch in dunklen Baendern */
 .section--dark .icon-badge--plain, .icon-badge--accent.icon-badge--plain { background: none; }
+
+/* -- Karte in einem Panel (Startseite, E-Rechnung): kein eigener Kasten,
+      der Inhalt steht direkt auf dem blaeulichen Panel ---- */
+.panel > .card { background: none; border: 0; box-shadow: none; padding: 0; }
