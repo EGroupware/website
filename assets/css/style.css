@@ -2602,3 +2602,12 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 .shot-stack--flip img:nth-child(1) { right: auto; left: 0; }
 .shot-stack--flip img:nth-child(2) { right: auto; left: 10%; }
 .shot-stack--flip img:nth-child(3) { right: auto; left: 20%; }
+
+/* -- App-Icons ohne Hintergrund auf groesseren Karten (z. B. Synchronisation),
+      25 % groesser; im Dunkelmodus helle Kachel wie bei den Modulkarten ---- */
+.card > .icon-badge--bare { width: auto; height: auto; background: none; border: 0; border-radius: 0; place-items: start; }
+.card > .icon-badge--bare img { width: 32px; height: 32px; }
+:root[data-theme="dark"] .card > .icon-badge--bare { width: 46px; height: 46px; background: #f4f7fb; border-radius: var(--r-md); place-items: center; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .card > .icon-badge--bare { width: 46px; height: 46px; background: #f4f7fb; border-radius: var(--r-md); place-items: center; }
+}
