@@ -2652,6 +2652,18 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
       der Inhalt steht direkt auf dem blaeulichen Panel ---- */
 .panel > .card { background: none; border: 0; box-shadow: none; padding: 0; }
 
-/* -- Tarifberater-Assistent: Empfehlung ohne gelben Kasten, steht direkt in der Karte ---- */
-.finder-karte--wizard .finder__ergebnis { background: none; border: 0; padding: 0; }
+/* -- Tarifberater-Assistent: Empfehlung in hellblauem Kasten statt gelb,
+      mit mehr Luft zwischen Knoepfen und Link ---- */
+.finder-karte--wizard .finder__ergebnis {
+  background: var(--st-info-bg); border: 1px solid var(--border); border-radius: var(--r-lg);
+  padding: clamp(1.25rem, 3vw, 1.9rem);
+}
 .finder-karte--wizard .finder__label { color: var(--primary); }
+.finder-karte--wizard .finder__tarif { margin: .6rem 0 .75rem; }
+.finder-karte--wizard .finder__treffer .btn-row { margin-top: 1.4rem; }
+.finder-karte--wizard .finder__treffer .btn-row + p { margin-top: 1.25rem; }
+/* Im Dunkelmodus heller als die Karte, damit die Empfehlung heraussticht */
+:root[data-theme="dark"] .finder-karte--wizard .finder__ergebnis { background: #1d3557; border-color: #33557f; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .finder-karte--wizard .finder__ergebnis { background: #1d3557; border-color: #33557f; }
+}
