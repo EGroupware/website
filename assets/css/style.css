@@ -2645,3 +2645,5 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
   background: none; border: 0; padding: .25rem 0; cursor: pointer; }
 .finder__zurueck:hover { text-decoration: underline; }
 .finder__zurueck[hidden] { display: none; }
+/* Linien-Icons ohne Kaestchen gelten seitenweit, auch in dunklen Baendern */
+.section--dark .icon-badge--plain, .icon-badge--accent.icon-badge--plain { background: none; }
