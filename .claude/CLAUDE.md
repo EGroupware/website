@@ -19,6 +19,9 @@ Commit-Nachrichten oder Kommentaren ablegen – auch nicht in dieser Datei.
 - `assets/css/style.css` – das einzige Stylesheet, Design-Tokens oben in `:root`
 - `assets/img/` – Logos (`EGroupware-Logo.svg`, `-invert.svg`, `EGroupware-Mark.svg`), Bilder
 - `sitemap.xml`, `robots.txt`, `404.html`
+- `.well-known/security.txt` – Meldeweg für Sicherheitslücken (RFC 9116, Pflicht aus dem CRA).
+  **`Expires` läuft jährlich ab** (zuletzt gesetzt bis 18.11.2027): rechtzeitig um ein Jahr
+  verlängern und die Kontakte mit `SECURITY.md` im EGroupware-Repo abgleichen.
 - `.github/workflows/` – automatisches Veröffentlichen (siehe unten)
 
 ## Pfeil-Links
