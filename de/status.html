@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="de" data-theme-init>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EGroupware Cloud Status</title>
+  <meta name="description" content="Aktueller Status der EGroupware Cloud, E-Mail-Dienste, Rocket.Chat und Collabora Online sowie alle bisherigen Störungen und Wartungen.">
+  <link rel="canonical" href="https://www.egroupware.org/de/status">
+  <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/status">
+  <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/status">
+  <link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/status">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EGroupware">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="EGroupware Cloud Status">
+  <meta property="og:description" content="Aktueller Status der EGroupware Cloud, E-Mail-Dienste, Rocket.Chat und Collabora Online sowie alle bisherigen Störungen und Wartungen.">
+  <meta property="og:url" content="https://www.egroupware.org/de/status">
+  <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/css/style.css?v=20261113l" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261113l">
+  <script>
+    (function(){try{var t=localStorage.getItem("egw-theme");
+    var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Haupt&shy;inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="./">
+        <img class="brand-light" src="../assets/img/EGroupware-Logo.svg"
+             alt="EGroupware – Smart Online Office" width="189" height="37" fetchpriority="high">
+        <img class="brand-dark" src="../assets/img/EGroupware-Logo-invert.svg"
+             alt="" aria-hidden="true" width="189" height="37">
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="primary-nav">
+        <li><a href="./">Start</a></li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="funktionen">Funktionen</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Funktionen – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Organisation</p><ul><li><a href="kalender"><img class="nav-sub__icon" src="../assets/img/icons/calendar.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kalender</span></a></li><li><a href="kontakte"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kontakte</span></a></li><li><a href="aufgaben"><img class="nav-sub__icon" src="../assets/img/icons/infolog.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Aufgaben</span></a></li><li><a href="projekte"><img class="nav-sub__icon" src="../assets/img/icons/projectmanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Projekte</span></a></li><li><a href="stundenzettel"><img class="nav-sub__icon" src="../assets/img/icons/timesheet.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Zeit&shy;erfassung</span></a></li><li><a href="ressourcen"><img class="nav-sub__icon" src="../assets/img/icons/resources.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Ressourcen</span></a></li><li><a href="e-rechnung"><img class="nav-sub__icon" src="../assets/img/icons/einvoice.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-&#8288;Rechnung</span></a></li><li><a href="administration"><img class="nav-sub__icon" src="../assets/img/icons/admin.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Administration</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Kommunikation</p><ul><li><a href="email"><img class="nav-sub__icon" src="../assets/img/icons/mail.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-&#8288;Mail</span></a></li><li><a href="chat"><img class="nav-sub__icon" src="../assets/img/icons/chat.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Team Chat</span></a></li><li><a href="videokonferenzen"><img class="nav-sub__icon" src="../assets/img/icons/videoconference.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Video&shy;konferenzen</span></a></li><li><a href="dateiverwaltung"><img class="nav-sub__icon" src="../assets/img/icons/filemanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Dateien</span></a></li><li><a href="online-office"><img class="nav-sub__icon" src="../assets/img/icons/collabora.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Collabora Online Office</span></a></li><li><a href="kanban"><img class="nav-sub__icon" src="../assets/img/icons/kanban.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kanban</span></a></li><li><a href="helpdesk"><img class="nav-sub__icon" src="../assets/img/icons/tracker.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Helpdesk</span></a></li><li><a href="crm"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CRM-&#8288;Funktionen</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Technik &amp; Integration</p><ul><li><a href="ki"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5l1.7 4.6 4.6 1.7-4.6 1.7L12 16.1l-1.7-4.6L5.7 9.8l4.6-1.7z"/><path d="M18.5 15.5l.8 2.1 2.1.8-2.1.8-.8 2.1-.8-2.1-2.1-.8 2.1-.8z"/></svg></span><span>KI in EGroupware</span></a></li><li><a href="cti-telefon-integration"><img class="nav-sub__icon" src="../assets/img/icons/cti.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CTI Telefon-Integration</span></a></li><li><a href="homeoffice-integration"><img class="nav-sub__icon" src="../assets/img/icons/home.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Home&shy;office Integration</span></a></li><li><a href="mobiler-zugang"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span>Mobiler Zugang</span></a></li><li><a href="synchronisation"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span><span>Synchronisation</span></a></li><li><a href="guacamole"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span><span>Guacamole</span></a></li><li><a href="univention"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><span>Univention Corporate Server (UCS)</span></a></li><li><a href="vidoteach"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span><span>Lernen mit Videos</span></a></li></ul></div>
+        </div>
+        </li>
+        <li><a class="nav-ai" href="ki">KI <span class="nav-badge">NEU</span></a></li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="preise">Tarife</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Tarife – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="preise"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#tag"/></svg></span><span>Tarife</span></a></li><li><a href="cloud-oder-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#compare"/></svg></span><span>Cloud oder eigener Server?</span></a></li><li><a href="community-edition-vs-epl"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span><span>EGroupware CE vs. EPL</span></a></li><li><a href="cloud-dienst"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#cloud-check"/></svg></span><span>EGroupware Cloud</span></a></li><li><a href="installation-eigener-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#server"/></svg></span><span>EGroupware auf eigenem Server</span></a></li><li><a href="testversion"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#clock"/></svg></span><span>Test&shy;version</span></a></li><li><a href="demo"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#monitor"/></svg></span><span>Online Demo</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="branchen">Branchen</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Branchen – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Lösungen</p><ul><li><a href="branchen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#building"/></svg></span><span>Branchen</span></a></li><li><a href="bildungseinrichtungen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#cap"/></svg></span><span>Bildungs&shy;einrichtungen</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Im Vergleich zu</p><ul><li><a href="alternativen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#compare"/></svg></span><span>Microsoft 365 &amp; Google</span></a></li><li><a href="exchange-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#mail"/></svg></span><span>Exchange</span></a></li><li><a href="dropbox-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#folder"/></svg></span><span>Dropbox</span></a></li><li><a href="owncloud-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#cloud"/></svg></span><span>ownCloud</span></a></li><li><a href="google-kalender-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#calendar"/></svg></span><span>Google Kalender</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="ueber-uns">Über uns</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Über uns – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Unter&shy;nehmen</p><ul><li><a href="ueber-uns"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#info"/></svg></span><span>Über uns</span></a></li><li><a href="kundenstimmen"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#quote"/></svg></span><span>Kunden&shy;stimmen</span></a></li><li><a href="warum-egroupware"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#check"/></svg></span><span>Warum EGroupware?</span></a></li><li><a href="digitale-souveraenitaet"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#shield"/></svg></span><span>Digitale Souveränität</span></a></li><li><a href="presse"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#news"/></svg></span><span>Presse</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Partner &amp; Community</p><ul><li><a href="community"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#users"/></svg></span><span>Community</span></a></li><li><a href="technologiepartner"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#chip"/></svg></span><span>Technologie- und Integrations&shy;partner</span></a></li><li><a href="reseller"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#store"/></svg></span><span>EGroupware Reseller</span></a></li><li><a href="reseller-werden"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#user-plus"/></svg></span><span>Reseller werden</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="support">Support</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Support – Untermenü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Hilfe &amp; Service</p><ul><li><a href="support"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#lifebuoy"/></svg></span><span>Support</span></a></li><li><a href="support-login"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#login"/></svg></span><span>Support Login</span></a></li><li><a href="status" aria-current="page"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#pulse"/></svg></span><span>EGroupware Cloud Status</span></a></li><li><a href="sicherheit-datenschutz"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#lock"/></svg></span><span>Sicherheit und Daten&shy;schutz</span></a></li><li><a href="datensicherung"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#backup"/></svg></span><span>Daten&shy;sicherung</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Selbst betreiben</p><ul><li><a href="download"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#download"/></svg></span><span>Download</span></a></li><li><a href="https://github.com/EGroupware/egroupware/wiki/Installation-using-egroupware-docker-RPM-DEB-package" target="_blank" rel="noopener"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#terminal"/></svg></span><span>Installations&shy;anleitung</span></a></li><li><a href="tutorials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#play"/></svg></span><span>Webinare und Tutorials</span></a></li><li><a href="caldav-synchronisierer"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261113l#sync"/></svg></span><span>Caldav-Synchronisierer</span></a></li></ul></div>
+        </div>
+        </li>
+        <li><a href="blog">News</a></li>
+        <li><a href="kontakt">Kontakt</a></li>
+          <li class="nav-cta"><a class="btn btn--primary" href="testversion">30 Tage gratis testen</a></li>
+          <li class="nav-theme">
+            <button class="theme-toggle-inline" type="button">
+              <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+              <span>Farbschema wechseln</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Sprache"><a href="status" hreflang="de" data-set-lang="de" aria-current="true">DE</a><a href="../en/status" hreflang="en" data-set-lang="en">EN</a></div>
+        <button class="theme-toggle" type="button" aria-label="Farbschema wechseln"
+                data-label-dark="Farbschema wechseln" data-label-light="Farbschema wechseln">
+          <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+        </button>
+        <a class="btn btn--primary btn--sm" href="testversion">30 Tage gratis testen</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="primary-nav" aria-label="Menü öffnen">
+          <span class="i-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg></span><span class="i-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="status-page">
+
+    <!-- Pflege der Statusseite (gilt fuer de/status.html und en/status.html, immer beide Sprachen):
+       - Aktueller Status: pro Dienst das Badge tauschen
+           st-badge--ok      IN BETRIEB / OPERATIONAL
+           st-badge--warn    EINGESCHRAENKT / DEGRADED   bzw. WARTUNG / MAINTENANCE
+           st-badge--err     STOERUNG / OUTAGE
+         und das "Stand"-Datum anpassen.
+       - Neue Meldung: als erstes <article> in die <details> des aktuellen Jahres setzen
+         (neues Jahr: neues <details class="status-year" open> oben einfuegen, beim Vorjahr "open" entfernen,
+         Zaehler in .status-year__count anpassen).
+           <article class="incident incident--stoerung">   (oder incident--wartung)
+             <header class="incident__head"><h3>Dienst: Datum, Uhrzeit</h3><span class="st-badge st-badge--stoerung">STOERUNG</span></header>
+             <div class="incident__body"><p>Was ist passiert, Ursache, Loesung.</p></div>
+           </article>
+       - Update zu einem laufenden Vorfall: eigenes <article class="incident incident--update"> direkt
+         ueber der urspruenglichen Meldung, Badge st-badge--update.
+    -->
+    <section class="page-hero page-hero--knapp">
+      <div class="wrap">
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="support">Support</a></nav>
+        <div class="status-hero__title">
+          <img src="../assets/img/EGroupware-Mark.svg" alt="" width="64" height="64">
+          <h1>EGroupware Cloud Status</h1>
+        </div>
+        <p class="lead">Aktueller Betriebs&shy;zustand der EGroupware Cloud und der zugehörigen Dienste – dazu alle bisherigen Störungen und Wartungs&shy;fenster.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="status-board">
+          <div class="status-board__head">
+            <h2 id="status-aktuell">Aktueller Status</h2>
+            <span class="status-board__stand">Stand: 04.11.2026</span>
+          </div>
+          <ul class="status-board__list" aria-labelledby="status-aktuell">
+              <li data-service="cloud"><span class="status-board__svc">EGroupware Cloud</span><span class="st-badge st-badge--ok">IN BETRIEB</span></li>
+              <li data-service="mail"><span class="status-board__svc">E-&#8288;Mail-Dienste</span><span class="st-badge st-badge--ok">IN BETRIEB</span></li>
+              <li data-service="chat"><span class="status-board__svc">Rocket.Chat</span><span class="st-badge st-badge--ok">IN BETRIEB</span></li>
+              <li data-service="office"><span class="status-board__svc">Collabora Online</span><span class="st-badge st-badge--ok">IN BETRIEB</span></li>
+          </ul>
+        </div>
+        <p class="status-note">Sie bemerken eine Störung, die hier noch nicht aufgeführt ist? Melden Sie sich bitte bei unserem <a href="support">Support</a>.</p>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Vergangene Störungen und Wartungen</h2>
+          <p class="lead-sm">Alle Meldungen nach Jahr, die neuesten zuerst. Updates zu einem Vorfall stehen eingerückt direkt über der ursprünglichen Meldung.</p>
+        </div>
+        <dl class="status-legend" aria-label="Legende">
+          <div><dt><span class="st-badge st-badge--stoerung">STÖRUNG</span></dt><dd>Ausfall oder Einschränkung</dd></div>
+          <div><dt><span class="st-badge st-badge--wartung">WARTUNG</span></dt><dd>Geplante Arbeiten</dd></div>
+          <div><dt><span class="st-badge st-badge--update">UPDATE</span></dt><dd>Neuer Stand zu einem Vorfall</dd></div>
+        </dl>
+        <div class="status-history">
+        <details class="status-year" open>
+          <summary><span>2026</span> <span class="status-year__count">19 Meldungen</span></summary>
+          <div class="status-year__list">
+            <article class="incident incident--update">
+              <header class="incident__head"><h3>Update zum Vorfall vom 30. September 2026: Ursache gefunden und behoben</h3><span class="st-badge st-badge--update">UPDATE</span></header>
+              <div class="incident__body">
+                <p>Wir haben die Ursache für den Absturz des Datenbank-Knotens gefunden und behoben: Die standardmäßige Methode zur Berechnung des Speicherverbrauchs hat nicht korrekt funktioniert und dadurch einen Out-&#8288;of-&#8288;Memory-Kill des Datenbank-Prozesses ausgelöst. Wir verwenden jetzt eine andere Methode zur Berechnung des Speicherverbrauchs.</p>
+                <p>Außerdem haben wir heraus&shy;gefunden, warum der Galera-Knoten neu gestartet wurde, obwohl eine Regel einen Neustart nur außerhalb der Arbeits&shy;zeiten zulässt. Auch das ist korrigiert. Beide Änderungen sind seit dem 1. Oktober 2026 umgesetzt.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud &amp; Mail: Mittwoch, 30. September 2026 15.45 – 16.40 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Einer der Datenbank Knoten wurde unerwartet beendet und bei der Synchronisation der Daten kommt es zu einem Performance&shy;verlust. Zusätzlich treten aber unerwartete Verbindungs&shy;probleme zu den Mail&shy;servern auf. Die Synchronisation der Daten&shy;banken hat fast eine Stunde gedauert, direkt danach waren alle System wieder verfügbar.</p>
+                <p>Wir müssen jetzt im Nachgang die Logs prüfen, wieso der Datenbank-Sync die Verbindung zu den Mail&shy;servern verhindert hat oder es da einen anderen Fehler zusätzlich gab. Eigentlich sollte nach dem Umbau der Mail-Anwendung, hier keine Datenbank-Abfrage mehr notwendig sein und damit eine Abhängigkeit weniger in den Systemen existiteren.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>Collabora Cloud: Montag, 24. August 2026 17.00 – 19.10 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Störung der Collabora Online Nutzung Zeit&shy;gleich mit dem IONOS Kubernetes Maintenance (17.00 – 19.00 Uhr). Sobald die Wartung beendet wurde, konnten wir die Services neu starten. Egroupware Cloud und Mail war nicht betroffen.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud: Montag, 07. Juli 2026 14.40 – 14.50 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Das managed Kubernetes von IONOS hat seit dem Wochenende Probleme mit dem Dashboard &amp; Kontrol-Panel über das Skalierung und Neustart von Kubernetes Knoten gesteuert wird. Das standardmäßige Neubilden der Kubernetes Knoten Samstag auf Sonntag Nacht, wurde scheinbar nicht korrekt beendet, daher ist keine Skalierung der Systeme möglich. Beim Versuch eine Kunden-Datenbank teilweise wiederherzustellen, erfolgt eine Überlastung des Systems. Wir haben das natürlich direkt gestoppt! Egroupware aber für ca. 10 Minuten nur bedingt erreichbar. Wir warten jetzt auf die Behebung durch IONOS, des grundlegenden Problems.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Mail Services: Sonntag, 07. Juni 2026 16.30 – 18.30 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Verbindungs&shy;probleme zu den Mail&shy;servern, die EGroupware Dienste, Rocketchat und Collabrora laufen.<br> Ursache war, das die Authentifizierung zum Management Server über den gleichen Service/Kanal läuft, wie die Anfragen des AI Proxy. Der IONOS AI Modelhub war stark überlastet, das hat dann die Verbindungen .fpür die anderen Dienste auch blockiert. EGroupware Kunden die bereits eingeloggt waren, hatten keine Problem (abgesehen von den Mail Diensten), Neuanmeldung und Mail ging in der Zeit nicht. Als Workaround haben wir den AI Proxy temporär deaktiviert und wir müssen unsere Service jetzt so umstellen, das der AI Proxy nicht mehr den gleichen Servicie/Kanal wie die anderen Dienste verwendet. Zusätzlich über&shy;arbeiten wir die Handhabung bei Timeouts bzw. keinen Antworten in einem solchen Fall.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud Services: Donnerstag, 28. Mai 2026 10.00 – 10.50 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Erneut hohe Load auf einer der Kubernetes Knoten ohne erkennbare Ursache. Wir haben einen zusätzlichen Kubernetes Knoten gestartet und damit ging die Load dann entsprechend runter. Die genaue Ursache der Probleme gestern und heute sind noch nicht geklärt. Wir informieren hier weiter.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud Services: Mittwoch, 27. Mai 2026 13.25 – 14.00 und 14.25 – 14.36 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Hohe Load im System, die Prüfung ergab das der NFS-&#8288;Server von den Kubernetes Knoten nicht erreichbar war und daher die CPU-&#8288;Load und die Anzahl der Anfragen entsprechend in die Höhe ging. Wir melden das Problem natürlich an IONOS, damit die Kollegen dort die Netzwerk&shy;verbindung in deren Managed Kubernetes-Cluster prüfen können. An sich haben wir nur die Systeme skaliert und Monitored. Sobald die Verbindung zum NFS-&#8288;Server wieder funktioniert hat (worauf wir keinen Einfluss haben), ging die Last auch wieder herunter und alle Systeme sind wieder verfügbar.</p>
+                <p>Die Mail-Dienste waren davon nur zum Teil betroffen, da über externe Clients die Verbindung weiterhin möglich war. Sofern weiter Informationen von IONOS zu dem Vorfall kommen, würden wir das hier entsprechend ergänzen.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud und Mail Services: Freitag, 15. Mai 2026 10.00 – 11.00 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Hohe Load im System, die Prüfung ergab das eine Masse von Sync-Requests ohne Authentifizierung die Systeme überlastet haben. Wir haben direkt Gegen&shy;maßnahmen ergriffen und blockieren diese Anfragen jetzt bevor sie an die entsprechenden Authentifizierungs&shy;systeme gelangen.</p>
+              </div>
+            </article>
+            <article class="incident incident--update">
+              <header class="incident__head"><h3>3. Aktueller Stand zum Vorfall, 8. April 2026, 13:30 Uhr</h3><span class="st-badge st-badge--update">UPDATE</span></header>
+              <div class="incident__body">
+                <p>IONOS hat eine Korrektur für das zugrunde liegende Leistungs&shy;problem bereit&shy;gestellt:</p>
+                <p><em>„The adjustment was rolled out. Our Compute team is seeing dropping CPU steal time. We are monitoring the situation. Our Tech Teams are preparing another rollout that should improve the performance further.“</em></p>
+                <p>Die EGroupware-Cloud- und Mail-Dienste sind wieder betriebs&shy;bereit. Wir warten noch auf eine abschließende Erklärung von IONOS, was die Ursache des Problems war, sowie auf Maßnahmen, um eine solche Situation in Zukunft zu vermeiden. Danach haben wir eine entsprechende Kunden&shy;information versendet.</p>
+              </div>
+            </article>
+            <article class="incident incident--update">
+              <header class="incident__head"><h3>2. Update zum Vorfall 8.4.2026 10:50</h3><span class="st-badge st-badge--update">UPDATE</span></header>
+              <div class="incident__body">
+                <p>Die Management&shy;konsole von IONOS (Datacenterdesigner) ist wieder frei&shy;gegeben und wir haben die 3 Knoten neu gestartet. Wirklich Entwarnung können wir aktuell noch nicht geben, weil wir auch noch keine Rückmeldung von IONOS haben, außer deren Update auf der Status-Seite wo sie die Probleme mit der CPU-&#8288;Last offziell bestätigen, aber auch das noch kein Fix ausgerollt ist:</p>
+                <p><em>„We have identified an increase in CPU steal time on affected hosts. Our Compute team has identified a likely culprit and is currently testing a potential mitigation to ensure its effectiveness before a rollout.“</em></p>
+              </div>
+            </article>
+            <article class="incident incident--update">
+              <header class="incident__head"><h3>Update zum Vorfall 8.4.2026 8:50</h3><span class="st-badge st-badge--update">UPDATE</span></header>
+              <div class="incident__body">
+                <p>Das Problem das unsere Infrastruktur hat ist gleichzeitig auch die Ursache dafür, das die Management&shy;konsole (Datacenterdesigner) aktuell gesperrt ist und somit keinerlei Änderungen vorgenommen werden können:</p>
+                <p>Siehe auch die Meldungen auf der Status-Seite von IONOS dazu: https://status.ionos.cloud/incidents/7vwr9vk67xzv</p>
+                <p>Laut Aussage der Hotline von IONOS am Telefon, ist das Problem bei IONOS entsprechend hoch eskaliert worden und das komplette Team arbeitet an einer Lösung. Sie hoffen diese im Laufe des Tages bereit stellen zu können. Genauere Aussagen liegen uns nicht vor!</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud- und Mail-Services : Mittwoch, 8.04.2026, 07:15 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Das gleiche Problem (Load auf der CPU (infrastruktur von IONOS) tritt erneut auf zwei der drei Kubernetes-Knoten auf. Trotz Zusicherung von IONOS das Sie das Problem mit Hochdruck prüfen und an einer Lösung arbeiten, haben wie leider selbst nicht bekommen. Wir werden das natürlich bei IONOS versuchen weiter zu eskalieren. Da sich die Infrastruktur von IONOS aber gerade in einem Wartungsinterwall befindet, können wir gerade auch selbst nichts ändern und z.B. den betroffenen Knoten beenden oder migrieren.</p>
+                <p>Wir haben gerade ein Update von IONOS erhalten aus deren internem Ticket: “ es handelt sich wohl um ein bekanntes Problem, das vermutlich durch ein kürzliches Update der Infrastruktur ausgelöst wird“. Sie eskalieren das jetzt nochmal intern bei IONOS und melden sich dann bei uns.</p>
+                <p>Aktuell können wir nicht mehr machen, als auf die Rückmeldung von IONOS zu warten oder das Ende des Wartungsintervalls gegen 8,30 Uhr, um dann ggf. den betroffenen Knoten neu zu starten.</p>
+                <p>Wir informieren hier weiter,</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud- und Mail-Services : Dienstag, 7.04.2026, 18:30 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Das gleiche Problem (Load auf der CPU (infrastruktur von IONOS )tritt derzeit erneut auf einem der drei Kubernetes-Knoten auf. IONOS unter&shy;sucht das Problem aktiv und arbeitet an einer Lösung.</p>
+                <p>Die Auslastung von EGroupware und den E-&#8288;Mail-Diensten ist ziemlich hoch, aber wir haben beschlossen, keine weiteren Maßnahmen zu ergreifen, da wir uns außerhalb der regulären Arbeits&shy;zeiten befinden und IONOS Zeit und Gelegenheit braucht, das Problem zu unter&shy;suchen, während es auftritt!</p>
+                <p>Wir behalten die Status&shy;überwachung bei, bis wir Rückmeldung von IONOS erhalten, insbesondere dass das Problem behoben wurde.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud- und Mail-Services : Dienstag, 7.04.2026, 13:05 – 14.55 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Erneute Störung: eigentlich laufen alle Systeme, aber EGroupware ist aktuell nicht von außen erreichbar.</p>
+                <p>Nachdem wir alle externe Last (IMAP &amp; eSync) erst einmal gestoppt hatten, ging die Last trotzdem nicht runten. Intern gab es aber auch keine Aktivitäten. Darauf hin haben wir die CPU-&#8288;Last der Kubernetes Knoten geprüft und fest&shy;gestellt, das die extrem hoch war, obwohl keine Last unsererseits vorlag.</p>
+                <p>Wir haben darauf hin testweise einen Kubernetes Knoten beendet und neu gestartet. Nach dem der voll&shy;ständig verfpgbar war, die Dateanbnk und alle anderen Prozesse dorthin umgezogen waren, haben wir gegen 14:15 uhr erste Besserung fest&shy;stellen können. Die Login-Seiten waren z.B. wieder erreichbar und auch der Login war (wenn auch verlangsamt) wieder möglich. Der neue Knoten hat auch das Fehlerbind der „alten Knoten“ nicht!</p>
+                <p>Daraufhin haben wir die anderen beiden Knoten auch sukzessive neu gestartet, das dauert jeweils 15 min, bis alle Service umgezogen und auf den neuen Knoten verfügbar waren. Seit ca, 14.55 Uhr war EGroupware wieder voll verfügbar und wir haben auch die externen Services (IMAP &amp; eSync) wieder frei&shy;gegeben.</p>
+                <p>Wir sind aktuell noch im Austausch mit IONOS wie das Problem zustande kam und in Zukunft verhindert werden kann. Wir informieren per Kunden&shy;information dann spätestens morgen.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud- und Mail-Services : Mittwoch, 1.04.2026, 12:15 – 13.15 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Erneute Störung vermutlich wieder ausgehend vom Mail&shy;system, wir haben die Externe Mail&shy;verbindung wieder gestoppt und stellen die EGroupware Dienste schnellst möglich wieder zur Verfügung. Es gab ein Problem das die Tabelle der Sitzungen gelockt wurde und keine Schreibvorgänge mehr möglich waren. Wir haben die Daten&shy;banken neu gestartet und die hängenden Sitzungs&shy;anfragen gelöscht. Damit sind die Systeme jetzt wieder verfügbar, Wir sind immer noch in der Analyse der Ursache, um Maßnahmen für die Zukunft festzulegen.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud- und Mail-Services : Dienstag, 31.03.2026, 09:30 – 11.30 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Problem mit der Firewall (PFsense) über die sich alles verbindet, wir haben die Firewall neu gestartet, ebenso wie die Services. Trotzdem ist aktuell noch immer zu viel Load auf den Systemen. Wir prüfen die Situation mit Hochdruck und informieren, sobald wir weitere Informationen haben.</p>
+                <p>Aktuell gehen wir von einem „Denial of Service“-Angriff auf den externen IMAP aus, den wir vorübergehend ausgeschaltet haben. Daher war für ca. 2 Stunden der Mail&shy;zugriff nur über EGroupware selbst und ActiveSync-Protokoll möglich. Seit 13.00 Uhr ist der Zugriff per IMAP wieder frei&shy;gegeben und alle Systeme laufen im Regel&shy;betrieb.</p>
+                <p><strong>Nach den Erkenntnissen von heute (8. April) gehen wir davon aus, das es sich doch nicht um einen Denial of service Angriff gehandelt hat, sondern dem Infrastruktur&shy;problem bei IONOS zuzuschreiben ist uns es temporär zu einer nicht-Verfügbarkeit der CPU-&#8288;Leistung kam.</strong></p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Services : Donnerstag, 26.03.2026, 16:10 – 16.45 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Eine der Galera Datenbank Knoten ist abgestürzt. Eigentlich läuft ein Skript das verhindert das der Sync des Datenbank-Knotens während der Geschäfts&shy;zeiten läuft, doch das hat nicht gegriffen und beim Sync ist dann ein zweiter Knoten abgestürzt. Aktuell syncronisieren sich beide Knoten jetzt mit dem noch laufenden Knoten. Allerdings ist die EGroupware Cloud während dem Sync der Knoten nicht erreichbar. Der Sync hat ca. 30 Minuten gedauert und EGroupware Cloud ist wieder verfügbar.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Collabora-Services : Dienstag, 24.02.2026, 21:30 – 22:15 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Nach der IONOS-Wartung (heute Abend) sind die K8s-&#8288;API-&#8288;Server weder intern noch extern vom Kubernetes-Cluster erreichbar. Dies betrifft den Collabora Cool Controller, der die Verbindung zum API-&#8288;Server benötigt. Daher ist die Collabora Cloud derzeit nicht verfügbar.</p>
+                <p>IONOS meldet Netzwerk&shy;probleme in FRA, die ebenfalls einen Teil der Probleme verursachen könnten.</p>
+                <p>Die EGroupware Cloud- und Mail-Dienste laufen weiterhin.</p>
+                <p>Nach Lösung der Netzwerk&shy;probleme durch IONOS, laufen auch die Collabora Server wieder.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware E-&#8288;Mail-Service: Montag, 26.01.2026, 09:45 – 12.20 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Verbindungs&shy;probleme zu den EGroupware Mail&shy;servern mit entsprechend langsamen Zugriff&shy;zeiten. Wir haben ein entsprechendes Ticket bei IONOS eröffnet, die sich die unter&shy;liegende Infrastruktur anschauen. Ein Teil der Maildieste wurde ins Backup-Rechen&shy;zentrum in Mutterstadt umgeleitet. EGroupware Cloud ist dadurch auch zum Teil betroffen durch verlangsamte Zugriffe.</p>
+                <p>Seit 12.20 sind die Verbindungs&shy;probleme (hauptsächlich betroffen Schreibzugriffe) gelöst, wir warten aber noch auf die Ursachen&shy;klärung durch IONOS.</p>
+              </div>
+            </article>
+          </div>
+        </details>
+        <details class="status-year">
+          <summary><span>2025</span> <span class="status-year__count">15 Meldungen</span></summary>
+          <div class="status-year__list">
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud- und E-&#8288;Mail-Service: Freitag, 05.12.2025, 12:30 – 13.30 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Störung der EGroupware Cloud und Mail&shy;dienste: unsere Technik hat folgendes Problem als Ursache identifiziert:</p>
+                <p>Es gab bei einem größeren Kunden einen Ausfall des Glasfasernetzes. Der Kunde hat eine permanente Verbindung zu unserem Rechen&shy;zentrum für die Authentifizierung gegen deren ActiveDirectory. Das Timeout für den Verbindungs&shy;aufbau war zu hoch und hat letztendlich zu einer Überlastung der Anfragen an unser Management&shy;system und die Mail&shy;server gesorgt. Zum Zeitpunkt als die Überwachung der Systeme die Alarmierung gesendet hatte, war das System bereits so stark überlastet, das die Behebung entsprechend Zeit gebraucht hat. Insbesondere musste die Technik erst einmal die Ursache identifizieren und dann Gegen&shy;maßnahmen ergreifen.</p>
+                <p>Um das in Zukunft zu verhindern werden wir im Laufe der nächsten 1-2 Wochen 2 Maßnahmen umsetzen:</p>
+                <ol><li><strong>EGroupware</strong>: Unterschiedliche Timeouts implementieren für Verbindungs&shy;aufbau und Antworten bei der Authentifizierung gegen externe Systeme (ActiveDirectory, LDAP, OpenID Connect Provider)</li><li><strong>Mail</strong>: Unterschiedliche Timeouts implementieren bzw. in einer grundlegenden Komponente einen Fix implementieren für Verbindungs&shy;aufbau und Antworten gegen den Mail&shy;server</li></ol>
+                <p>Kürzere Timeouts verhindern Aufschaukeln von Requests und die Blockierung der Systeme.</p>
+                <p>Gemäß Überwachung war EGroupware und Email bereits ab ca. 13.00 Uhr wieder erreichbar, aber noch mit höherer Last und daher langsamerer Geschwindigkeit. Seit 13.30 Uhr sind die Systeme wieder alle verfügbar und im Regel&shy;betrieb.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud- und E-&#8288;Mail-Service: Montag, 08.09.2025, 11:55 – 12:05 Uhr (MESZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Störung der EGroupware Cloud und Mail&shy;dienste nach hoher Auslastung der E-&#8288;Mail-Server in Frankfurt. Dies führte auch zu einem kurzen Ausfall der EGroupware Cloud-Dienste. Sobald die Auslastung zurück&shy;ging, erholte sich das System wieder.</p>
+                <p>Wir haben einen Bericht an IONOS geschickt, um das zugrunde liegende Speicher&shy;system zu über&shy;prüfen, da wir dort eine hohe IO-&#8288;Auslastung fest&shy;stellen.</p>
+                <p>Um 12:30 Uhr kam es erneut zu einer hohen Auslastung bei den Mail&shy;servern in FRA, und Mail wurde für 10 Minuten auf die Backup-Mail&shy;server umgeschaltet und dann wieder auf das primäre System in Frankfurt zurückgeschaltet.</p>
+                <p>Nach sorgfältigen Prüfung und Rückmeldungen mit dem IONOS Support-Team haben wir beiderseits Änderungen vorgenommen und das System läuft seit dem wieder stabil inklusive Performance Verbesserungen.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware-Cloud &amp; Mail: Donnerstag, 10.07.2025, 15:05-15.25 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>System&shy;ausfall da der NFS-&#8288;Server nicht mehr erreichbar ist. Wir versuchen den NFS gerade neu zu starten. Und damit die Services schnellst&shy;möglich wieder erreichbar zu machen. Aktuell sieht es so aus, das nach dem Neustart vom NFS die restliche Dienste sich recovern und die Load entsprechend reduziert wird. VDie Services sind jetzt wieder alle verfügbar</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware-Cloud &amp; Mail: Donnerstag, 10.07.2025, 10:05-11.30 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>System&shy;ausfall aufgrund eines Netzwerk-Problems in Verbindung mit der Skalierung des Clusters und der Webserver. Die Haupt&shy;ursache ist immer noch in Prüfung und wir informieren per Kunden&shy;information, sobald wir alle Details geklärt haben. Die Dienste sind alle wieder verfügbar seit 11.30 Uhr, bauen natürlich noch Lasten ab gerade im Bereich eingehender Emails</p>
+              </div>
+            </article>
+            <article class="incident incident--wartung">
+              <header class="incident__head"><h3>EGroupware-Cloud Maintenance: Mittwoch, 09.07.2025, 20:05-23.00 Uhr</h3><span class="st-badge st-badge--wartung">WARTUNG</span></header>
+              <div class="incident__body">
+                <p>Während der Wartungs&shy;arbeiten, um den 3. Galera-Knoten hochzufahren und zu synchronisieren, ist der Cluster erneut abgestürzt. Der erste Datenbank-Knoten wurde direkt neu gestartet und wird nun mit dem zweiten Knoten synchronisiert. Dies wird wieder ca. 40min dauern und starten dann einen 3. und 4. Knoten inklusive Sync aller Daten. Anschließend werden wir noch verschiedene Tests laufen lassen.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>Ausfall der EGroupware-Cloud- und E-&#8288;Mail-Dienste: Mittwoch, 09.07.2025, 12:05-15.00 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Ausfall der Services erneut nach einem Absturz zweier Galera-Knoten im Datenbank-Cluster. Wir müssen die Dienste herunter&shy;fahren, um die Knoten wiederherzustellen und zu synchronisieren. Ein Datenbank-Knoten ist wieder angestartet und der zweite Knoten synchronisiert seine Daten mit dem ersten Knoten. Der Sync dauert vermutlich 30-40 min, in der Zeit sind die Cloud Dienste aktuell nur Lesbar zur Verfügung. Email-Dienste sind wieder verfügbar. Ab 15:00 Uhr sind alle Dienste wieder voll.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>Ausfall der EGroupware-Cloud- und E-&#8288;Mail-Dienste: Dienstag, 08.07.2025, 20:58 – 21.25 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Ausfall der Services nach einem Absturz zweier Galera-Knoten im Datenbank-Cluster. Wir müssen die Dienste herunter&shy;fahren, um die Knoten wiederherzustellen und zu synchronisieren. Service ist wieder voll&shy;ständig verfügbar.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>Störung EGroupware-Cloud-Dienste: Montag, 16.06.2025, 16:15 – 16:30 Uhr (MESZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Der Ausfall wurde wahrscheinlich durch ein Netzwerk&shy;problem im zweiten Rechen&shy;zentrum in Frankfurt verursacht – dies führte auch dazu, dass die Website während dieses Zeitraums nicht verfügbar war. Das Problem wurde von IONOS selbst behoben, ohne dass wir Maßnahmen ergreifen mussten.</p>
+              </div>
+            </article>
+            <article class="incident incident--wartung">
+              <header class="incident__head"><h3>EGroupware Cloud-Wartungs&shy;fenster: Mittwoch 26.03.2025 23.00 – 24:00 (CET)</h3><span class="st-badge st-badge--wartung">WARTUNG</span></header>
+              <div class="incident__body">
+                <p>EGroupware läuft auf einem Managed Kubernetes Cluster bei IONOS in zwei Frankfurter Rechenzentren. Alle Services (Daten&shy;banken, Webserver, Mail …) des Kubernetes Cluster laufen auf sogenannten Knoten (Nodes). Einer der Services ist der Storage (NFS-&#8288;Server) der aktuell auch direkt im Kubernetes Cluster läuft.</p>
+                <p>Die genaue Analyse zur Ursache ist leider noch nicht abschließend geklärt, aber <strong>Fakt ist, das es immer wieder Verbindungs&shy;probleme gab zwischen den Pods der PHP Prozesse und dem NFS Storage.</strong> In Rücksprache mit IONOS haben wir uns entschieden heute Nacht das System umzubauen und den NFS-&#8288;Server auf einen dedizierten Host außerhalb des Kubernetes Cluster zu migrieren. <strong>Damit umgehen wir das Kubernetes interne Pod Netzwerk als Ursache für die Verbindungsabbrüche.</strong></p>
+                <p>Während dem Wartungs&shy;fenster müssen wir Änderungen an grundlegenden Konfigurations&shy;parametern vornehmen und die web-&#8288;basierenden Services neu starten. Daher ist EGroupware Cloud in der Zeit voraussichtlich nicht nutzbar. Wir geben alles wieder frei, sobald der Prozess abgeschlossen ist. Die Mail-Services sollten die ganze Zeit nutzbar sein.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Mittwoch 26.03.2025 13:10 14:15(CET)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>EGroupware Infrastruktur (Kubernetes Knoten) hat erneut keinen Zugriff mehr auf den dahinter liegenden Speicher – zum zweiten Mal heute. Wir sind weiterhin in Verbindung mit unserem Infrastruktur-Provider IONOS bzgl. einer generellen Lösung. Ausfälle alle paar Wochen sind für uns nicht akzeptabel.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Mittwoch 26.03.2025 08:45 – 09.25 (CET)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>EGroupware Infrastruktur (Kubernetes Knoten) hat keinen Zugriff mehr auf den dahinter liegenden Speicher. Wir sind bereits seit den letzten Vorfällen in Verbindung mit unserem Infrastruktur-Provider IONOS bzgl. einer generellen Lösung.</p>
+                <p>Wir starten die Knoten einzeln durch, damit die Verbindung wieder hergestellt werden kann.</p>
+                <p>Sobald wir mit IONOS Rücksprache gehalten haben, werden wir auch eine generelle Kunden&shy;information senden.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Freitag 21.03.2025 11:30 – 12:05 (CET)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>FPM Prozesse sind unter sehr hoher load, daher reagiert EGroupware nicht mehr. Neustart Knoten oder FPM hatte keine Auswirkung, Eine Prüfung der Requests zeigt kein höheres Aufkommen, sondern hauptsächlich Start&shy;seite und Anfragen für Bearbeiten-Dialoge, die normalerweise nicht so lange dauern können.<br> Vermutung wäre, dass es ein Verbindungs&shy;problem zwischen den Knoten gab, das auch den Memcache mit einschließt, an den Sitzungs&shy;anfragen gehen.<br> Wir richten gerade eine Anfrage/Prüfung an IONOS dies&shy;bezüglich. Denn das Problem trat seit 10:00 Uhr immer mal wieder auf und endete ohne Änderung unsererseits um 12.05 Uhr.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Dienstag 11.03.2025 14:00 – 15:05 (CET)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>EGroupware Infrastruktur (Kubernetes Knoten) hat keinen Zugriff mehr auf den dahinter&shy;liegenden Speicher. Das Problem wird aktuell beim Infrastruktur-Provider IONOS geprüft. Wir starten die Knoten einzeln durch, damit die Verbindung wieder hergestellt werden kann.</p>
+                <p>Die Systeme sind wieder komplett verfügbar. Sollten Sie noch Probleme haben, bitte den Browser einmal neustarten.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud- und Mail-Dienste: Montag 03.02.2025 08:00 – 08:30 (CET)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Bedingt durch den Fehler / Ausfall am Vortag hängt der Push-Service, was leider erst mit zunehmender Last in den Morgen&shy;stunden auffällt. Es gibt daher temporäre Probleme mit EGroupware und Mail-Services. Manuelles Eingreifen mit Neustart Push-Service und Skalierung der Systeme ist notwendig. Gegen 08.45 Uhr ist wieder Normal&shy;betrieb gewähr&shy;leistet.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Sonntag 02.02.2025 00:00 – 05:15 (CET)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Ausfall der Dienste, da der reguläre Node-Rebuild um Mitternacht aufgrund eines Problems von IONOS nicht beendet werden konnte. IONOS hat die Knoten des Datenbank-Clusters gegen 02.00 Uhr wieder hochgefahren, aber der Rest war bis 05.15 Uhr morgens nicht verfügbar. IONOS arbeitet noch an dem zugrunde liegenden Problem und konnte bisher keine Schätzung abgeben, wann dieses abgeschlossen und behoben ist. Da der Node-Rebuild nur bei einem Knoten funktionierte, sind die anderen noch für einen Rebuild vorgesehen. Das Kubernetes Dashboard ist derzeit ebenfalls deaktiviert und wir müssen warten, bis IONOS das Problem behoben hat.</p>
+                <p>Gegen 15.45 Uhr meldet IONOS, dass das Problem gefunden wurde und ein Fix ausgerollt wird, während die Services (auch managed Kubernetes) streng überwacht werden im Hinblick auf das Problem und den Fix.</p>
+                <p>Der Zugriff auf das Kubernetes Dashboard ist dann auch wieder verfügbar. Die beiden alten Knoten, die noch nicht aktualisiert waren, wurden im Laufe des Abends/der Nacht neu gebildet.</p>
+              </div>
+            </article>
+          </div>
+        </details>
+        <details class="status-year">
+          <summary><span>2024</span> <span class="status-year__count">10 Meldungen</span></summary>
+          <div class="status-year__list">
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud &amp; Mail-Dienste: Donnerstag 19.12.2024 15:00 – 15:45 (CET)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Ausfall der Dienste, die genaue Ursache ist aktuell noch in Prüfung. Nach einem Neustart ist EGroupware wieder verfügbar, aber das Datenbank-Cluster musste temporär herunter skaliert werden.</p>
+                <p>Der Neustart der fehlenden Datenbank-Knoten erfolgt heute Nacht zwischen 22.30 – 24.00 Uhr. In der finalen Phase der Synchronisation ist die Datenbank für ca. 5 Minuten blockiert.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Mittwoch 11.12.2024 07:00 – 08:20 (CET)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Durch ein Software-Update kam es zu Problemen bei der Anzeige des EGroupware-Kalenders. Leider wurde dies beim Testen nicht im Vorfeld erkannt, da der problematische Commit in einem ganz anderen Bereich lag. Sobald wir über das Problem informiert wurden (gegen 07.45 Uhr), haben wir das zugrunde&shy;liegende Problem sofort behoben.<br> In der Zwischen&shy;zeit jedoch wurde der Kalender nicht korrekt angezeigt, die Benutzer versuchten, ihn neu zu laden, wodurch das System immer mehr Anfragen erhielt. Ein Neustart des Systems war notwendig und EGroupware war daher zwischen 08.13 – 08.18 nicht verfügbar.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware E-&#8288;Mail-Dienste: Mittwoch 27.11.2024 15:00 – 18:25 (CET)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>IONOS meldet Netzwerk&shy;probleme im Frankfurter Rechen&shy;zentrum. Dies führt auch in EGroupware zu Verbindungs&shy;fehlern in der Mail-Anwendung beim Lesen oder Versenden von E-&#8288;Mails.<br> IONOS arbeitet noch an einer Lösung und wir überwachen unsere Dienste genau. Generell sind die Mail&shy;server nicht stark belastet, es ist etwas in der Verbindung dazwischen, was auch zu dem von IONOS gemeldeten Problemen passt.<br> IONOS meldet Problem&shy;lösung gegen 17.30 Uhr, allerdings hat das Netzwerk&shy;problem kurz davor die Verbindung zu den NFS Servern betroffen. Erster Neustart der Knoten half nur temporär, danach ging die Load erneut hoch. Daher war ein nochmaligen Neubilden aller Knoten notwendig, damit diese wieder Verbindung zum NFS Server bekamen.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Freitag 23.08.2024 12:55 – 14:15 (MESZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Probleme mit dem NFS Server (Netzwerk), der von EGroupware nicht mehr erreichbar ist. Dadurch gab es hohen Load im Datenbank-Cluster. Der NFS-&#8288;Server wurde auf einen anderen Knoten verschoben und die Datenbank-Knoten nacheinander durch&shy;gestartet.</p>
+                <p>14:00 (MESZ): Problem tritt erneut auf, wir starten einen zusätzlichen Knoten und verschieben den NFS Server dorthin, der Knoten auf den der NFS zuvor migriert wurde, war nicht neu gestartet worden.</p>
+                <p>Alle Systeme sind wieder verfügbar.</p>
+              </div>
+            </article>
+            <article class="incident incident--wartung">
+              <header class="incident__head"><h3>EGroupware Wartungs&shy;fenster: Samstag Nacht 03.08.2024 22:00 – 01:00 (MESZ)</h3><span class="st-badge st-badge--wartung">WARTUNG</span></header>
+              <div class="incident__body">
+                <p>Update der Kubernetes Version mit mehrfachem Neustart aller Systeme bei dem zwischen&shy;zeitlich Ausfälle von maximal 5 Minuten zu erwarten sind.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Freitag 02.08.2024 10:30 – 11.30 (MESZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>EGroupware Cluster Störung – vermutlich ein Netzwerk&shy;problem bei IONOS. Die Kubernetes Knoten können sich untereinander nicht mehr erreichen, das hat Auswirkungen auf die Daten&shy;banken und deren Verfügbarkeit.</p>
+                <p>Nach Rücksprache mit IONOS und den internen Analysen, wurden allen Knoten neu gestartet und laufen wieder ohne Probleme. Die eigentliche Ursache des Ausfalls muss noch geklärt werden.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Mail Dienste: 01.07.2024 12:00 (MESZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Problem mit eingehenden Mail-Queues: die Emails werden aktuell nicht bzw. nur sehr langsam in den Post&shy;eingang des Benutzers zugestellt.</p>
+                <p>Die Prüfung ergab, das hier ein fälschlicherweise ein „historischer (viel zu kleiner) Wert“ heran gezogen wurde, dafür wieviel Verbindungen aktiv sein können. Dieser Wert wurde jetzt hoch&shy;gesetzt und die Queues arbeiten wieder normal.</p>
+              </div>
+            </article>
+            <article class="incident incident--wartung">
+              <header class="incident__head"><h3>Wartungs&shy;arbeiten EGroupware Cloud &amp; Mail-Dienste: 03.02.2024 22:00 – 24:00 Uhr</h3><span class="st-badge st-badge--wartung">WARTUNG</span></header>
+              <div class="incident__body">
+                <p>Die geplanten Änderungen an einigen grundlegenden Konfigurations&shy;parametern wurden erfolgreich durchgeführt und alle Systeme waren während dessen erreichbar.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Dienstag 16.01.2024 16:20 17:10 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>EGroupware Cluster Störung – es gab erneut ein Problem auf dem Storage-System bei IONOS. EGroupware Mail war durchgängig verfügbar, EGroupware Cloud &amp; Rocket.Chat sind seit 17.10 wieder verfügbar. Die genaue Ursache des Ausfalls bei IONOS klären wir noch und informieren per Mail.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Dienstag 09.01.2024 13:20 – 13:40 (MEZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>EGroupware Cluster hängt bedingt durch ein Problem auf dem NFS Server (Storage bei IONOS). Nach Neustart der Systeme und Check durch IONOS sind die Dienste wieder alle Verfügbar.</p>
+              </div>
+            </article>
+          </div>
+        </details>
+        <details class="status-year">
+          <summary><span>2023</span> <span class="status-year__count">9 Meldungen</span></summary>
+          <div class="status-year__list">
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Mittwoch 04.10.2023 10:00 – 10:50 Uhr (MESZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>EGroupware Cluster hängt bedingt durch ein Problem beim NFS Server. Wir starten die System neu. Das wird vermutlich 30-45min dauern. Wir bedauern den Ausfall und melden, sobald es behoben ist.</p>
+                <p>Alle Service sind wieder verfügbar. Falls noch Probleme auftreten, bitte einmal den Browser Cache löschen.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud-Dienste: Donnerstag 28.09.2023 19:05 – 18:50 (MESZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Einer der Kybernetes-Knoten ist abgestürzt und musste neu gestartet werden. Das hat insgesamt etwa 45 Minuten gedauert, bis alles auf diesem Knoten wieder lief. EGroupware Instanzen auf diesem Knoten hatten während dieser Zeit vermutlich Probleme, Ihre Daten waren aber die ganze Zeit sicher. Leider dauert die Synchronisierung aller Dienste und Quellen einige Zeit, insbesondere wenn das System aufgrund der Arbeits&shy;zeiten noch belastet ist.</p>
+                <p>Wir bedauern die Störung und entschuldigen uns für die Unannehmlichkeiten.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud &amp; Mail Dienste: Mittwoch 27.09.2023 13:59 – 14.03 Uhr (MESZ)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>IONOS hatte eine kurze Netzwerk&shy;störung in den Frankfurter Rechenzentren. Die Kubernetes Control Plane und alle Dienste waren von dieser Störung betroffen. Die Verbindung wurde nach kurzer Zeit wieder hergestellt.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud &amp; Mail Services: Samstag 19.08.2023 8:00 – 8:35</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Nach einem Incident Störung bei IONOS mit Ausfall eines Storage-Systems am gestrigen Freitag Nachmittag, liefen erst einmal alle Systeme, obwohl zwei wichtige Komponenten vom Ausfall betroffen waren:<br> Das primäre Mail Gateway in Frankfurt und die PFSense (Firewall) in Frankfurt. Die Redundanz hatte gegriffen und alle Daten und Dienste liefen über das sekundäre Mail&shy;gateway2 in Karlsruhe und die dortige PFSense.</p>
+                <p>Gegen Mitternacht brach der Tunnel zwischen beiden Standorten zusammen, die Ursache ist noch in Untersuchung. Damit wurden keine neuen Emails mehr zugestellt seit Mitternacht, das betraf auch die Alarmierungs&shy;emails. An sich liefen die EGroupware Cloud und auch Mail&shy;dienste erst einmal.</p>
+                <p>Gegen 8 Uhr beim Versuch die hängende PFSense in Frankfurt abzuschalten, brach dann die Verbindung komplett ab und EGroupware Mail &amp; Cloud Dienste sind nicht verfügbar.</p>
+                <p>Da wir nicht auf die Console der Maschinen kommen, stoppt IONOS die PFSense und startet Sie erfolgreich neu. damit sind alle EGroupware &amp; Mail&shy;dienste wieder verfügbar, die ausstehenden Emails seit Mitternacht wurden zugestellt.</p>
+                <p>Das primäre Mail&shy;gateway ist noch nicht wieder am Laufen und wir prüfen aktuell wieso neue Emails aktuell verzögert zugestellt werden. Das primäre Mail&shy;gateway wird in Rücksprache mit IONOS auch wieder neu gestartet werden, Wir erwarten kein Auswirkungen bzw. Ausfälle.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud &amp; Mail Services: Mittwoch 24.05.2023 0:30 – 02:00 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Ein Update der Firewall Systeme in Frankfurt erzeugte unerwartete Ausfälle der EGroupware und Mail Dienste. Die Systeme wurden neu gestartet und sind seit 01.10 Uhr wieder verfügbar. Weitere Update&shy;schritte können nochmal kurzfristig zu Störungen führen, während die Systeme neu gestartet werden.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud: Donnerstag 11.05.2023 9:20 – 10:15 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Loadbalancer (Route53) erkennt Verbindungsabbrüche in Frankfurt und schaltet dann alle Instanzen temporär um auf Karlsruhe. Damit verbunden ist dann eine Neuanmeldung am System. Aktuell scheint die Verbindung wieder ok zu sein. Zum Teil treten auch „Paketverluste“ bei der Verbindung auf, was zu langsameren Verbindungen und Ladezeiten führt. Wir sind in Kontakt mit IONOS zur Klärung der Situation, warten da aktuell auf Feedback. Sollte sich die Situation nicht verbessern, werden wir für den Rest des Tages die Systeme permanent auf Karlsruhe umschalten. Wir informieren hier, sobald es Neuigkeiten gibt.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud: DNS Problem bei unserem DNS Provider Core-Networks 26. April 2023 13:00 – 15:00 (CEST)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>An sich laufen alle Dienste bis auf den DNS Provider wodurch Anfragen einen Fehler ergeben „ERR_NAME_NOT_RESOLVED“. Wir prüfen, welche Möglichkeiten es gibt, die Instanzen für die Kunden wieder erreichbar zu machen.</p>
+                <p>Ein Workaround wäre, das Sie die IP-&#8288;Adresse 157.97.107.123 in Ihrem Router bzw. lokalen DNS Server für Ihre EGroupware Instanz eintragen.</p>
+                <p>Die DNS Services von Core-Networks laufen wieder, damit ist EGroupware Cloud &amp; Mail wieder normal (ohne Workaround) erreichbar.</p>
+              </div>
+            </article>
+            <article class="incident incident--wartung">
+              <header class="incident__head"><h3>EGroupware Cloud &amp; Mail in Frankfurt und Karlsruhe Wartungs&shy;arbeiten 27. Januar 2023 22:00 – 02:00 (CET)</h3><span class="st-badge st-badge--wartung">WARTUNG</span></header>
+              <div class="incident__body">
+                <p>Verbindungs&shy;probleme zur pfSense in FRA erzwingen einen Neustart der Systeme. EGroupware und Mail Verfügbarkeit gestört für einige Minuten. Backend in Frankfurt ist direkt wieder verfügbar und daher wurde alles auf FRA umgestellt. Das Backend in Karlsruhe wurde neu gestartet.</p>
+                <p>Erneute hoher Load auf der pfSense in FRA, daher erfolgt einer weiterer Reboot. Aufgrund eines Crash während dem Bootvorgang muss die pfSense aus einem Backup wieder&shy;hergestellt werden. Alle Systeme benötigen einen kompletten Neustart inklusive Synchronisation des Galera Clusters. EGroupware und Mail&shy;dienste waren für ca. 2 Stunden nicht verfügbar. Alle Systeme laufen wieder korrekt in beiden Verfügbarkeitszonen.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud &amp; Mail Probleme auf Grund von IONOS Provisionierungs-Fehler 2023 5. Januar 13:30 – 14:00 Uhr (CET)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>EGroupware und Mail Verfügbarkeit gestört für einige Minuten. Backend in Frankfurt ist direkt wieder verfügbar und daher wurde alles auf FRA umgestellt. Das Backend in Karlsruhe muss neu gestartet werden und ist gerade in Arbeit. Danach wird alles wieder auf die beiden Verfügbarkeitszonen umgestellt.</p>
+              </div>
+            </article>
+          </div>
+        </details>
+        <details class="status-year">
+          <summary><span>2022</span> <span class="status-year__count">8 Meldungen</span></summary>
+          <div class="status-year__list">
+            <article class="incident incident--wartung">
+              <header class="incident__head"><h3>EGroupware Cloud &amp; Mail in Frankfurt und Karlsruhe Wartungs&shy;arbeiten 2022 Oktober 12th 22:00 – 13th 0:50 (CEST)</h3><span class="st-badge st-badge--wartung">WARTUNG</span></header>
+              <div class="incident__body">
+                <p>Wartungs&shy;arbeiten erfolgreich beendet. EGroupware Cloud und Mail war zeitweise nicht erreichbar.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud in Frankfurt und Karlsruhe Fehlerhaft 2022 Oktober 12th 14:38 (CEST)</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Unser Infrastruktur&shy;provider IONOS hat einen Vorfall/Ausfall, siehe Meldung von IONOS (https://status.ionos.cloud):<br> Wir unter&shy;suchen derzeit ein Problem mit der IONOS Cloud Kubernetes API.</p>
+                <p>EGroupware war in der ersten Phase nicht betroffen.</p>
+              </div>
+            </article>
+            <article class="incident incident--update">
+              <header class="incident__head"><h3>2022 Oktober 12th 15:20 (CEST)</h3><span class="st-badge st-badge--update">UPDATE</span></header>
+              <div class="incident__body">
+                <p>Die EGroupware-Infrastruktur ist betroffen und wir versuchen weitere Details von IONOS zu erhalten, wann das Problem behoben werden kann.</p>
+              </div>
+            </article>
+            <article class="incident incident--update">
+              <header class="incident__head"><h3>2022 12. Oktober 15:30 (MESZ)</h3><span class="st-badge st-badge--update">UPDATE</span></header>
+              <div class="incident__body">
+                <p>Die Knoten in KA sind wieder da, aber FRA hat immer noch Probleme und nach 10min ist auch KA wieder nicht erreichbar. Wir arbeiten noch an der Situation und entschuldigen uns für die Ausfälle.</p>
+              </div>
+            </article>
+            <article class="incident incident--update">
+              <header class="incident__head"><h3>2022 Oktober 12th 16:30 (CEST)</h3><span class="st-badge st-badge--update">UPDATE</span></header>
+              <div class="incident__body">
+                <p>Gemäß Status&shy;meldung IONOS wurde ein Fehler in der Provisionierung behoben, aber wir haben leider immer noch keinen Zugriff über die Kubernetes API auf unsere Systeme., Die Kollegen arbeiten weiterhin am Problem.</p>
+              </div>
+            </article>
+            <article class="incident incident--update">
+              <header class="incident__head"><h3>2022 Oktober 12th 17:00 (CEST)</h3><span class="st-badge st-badge--update">UPDATE</span></header>
+              <div class="incident__body">
+                <p>Aktuell sind alle EGroupware Services wieder verfügbar, aber wir können nach wie vor die Kubernetes API nicht nutzen. Daher können wir nur abwarten, ob es komplett behoben sind.</p>
+                <p>Wir informieren weiter, sobald es zusätzliche Informationen gibt.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud in Frankfurt und Karlsruhe betroffen: 27. September 2022 14:10 – 14:20 Uhr &amp; 16.12 – 16.15 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Unser Infrastruktur-Provider IONOS hatte eine Störung / Ausfall für einige Minuten. Dies hatte auch Auswirkungen auf unsere Infrastruktur und der Dienst war für 10 Minuten offline. Laut dem Vorfalls&shy;bericht von IONOS wird dieses Problem mit dem nächsten Kubernetes Stability Upgrade am 4. Oktober 2022 behoben.</p>
+                <p>Wir bedauern die Störung während den Geschäfts&shy;zeiten!</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>EGroupware Cloud in Frankfurt – ein Datenbank Knoten betroffen: 09. September 2022 08:00 – 08:30Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Unserer Infrastruktur&shy;anbieter IONOS hatte bei einem Host in Frankfurt einen Ausfall, von dem ein Datenbank-Knoten betroffen war. Durch eine Änderung in PHP 8.1 wurde nicht automatisch auf einen andere Datenbank-Knoten umgeschaltet. Dadurch waren Instanzen auf dem Datenbank-Knoten kurzfristig nicht erreichbar. Der Fehler konnte noch vor Wieder&shy;herstellung der primären Node behoben werden, sprich das sollte so nicht mehr auftreten.</p>
+                <p>Wir bitten den Ausfall zu entschuldigen.</p>
+                <p><strong>EGroupware Rocket.Chat vorübergehend nicht verfügbar, Wartungs&shy;arbeiten EGroupware Cluster: 2022 May 26th 10:30 – 12.30 (CEST):</strong></p>
+                <p>Nach einem geplanten Kybernetes-Update in der Nacht vom 25. auf den 26. Mai startet Rocket-Chat nicht mehr.</p>
+                <p>Daher müssen heute über Tag weitere Wartungs&shy;arbeiten durchgeführt werden, die u.U. kurzfristige Ausfälle der EGroupware Cloud zur Folge haben können. Der Ausfall wird maximal wenige Minuten betreffen. EGroupware Mail ist davon nicht betroffen und wird die ganze Zeit verfügbar sein. Wir bedauern die möglichen Umstände ohne vorherige Ankündigung, aber die Wartungs&shy;arbeiten sind aktuell notwendig und es handelt sich um einen gesetzlichen Feiertag, also außerhalb der Kern&shy;arbeits&shy;zeiten unserer Kunden.</p>
+                <p>==&gt; Wartungs&shy;arbeiten wurden erfolgreich ohne Störungen der EGroupware Dienste durchgeführt. Rocket.Chat ist wieder verfügbar.</p>
+                <p><strong>EGroupware Mail &amp; Cloud Service vorübergehend nicht verfügbar: 2022 May 5th 16:10 – 16:25 (CEST):</strong></p>
+                <p>Netzwerk&shy;probleme von IONOS in KA und FRA.<br> Nach der Meldung an IONOS wurde es wieder&shy;hergestellt und alle Dienste sind wieder verfügbar.</p>
+                <p><strong>EGroupware Mail &amp; Cloud Service sind in Betrieb: 2022 April 15th 17:00 (CEST):</strong></p>
+                <p>Die EGroupware-Dienste laufen jetzt auch, aber nicht alle Kubernetes- und Datenbank&shy;knoten sind schon wieder da. Wir arbeiten noch an der Vervollständigung der Infrastruktur, aber wir erwarten keine weiteren Ausfälle bei den Diensten.</p>
+                <p><strong>EGroupware Mail Service läuft wieder, während EGroupware weiterhin betroffen ist: 2022 April 15th 16:00 (CEST):</strong></p>
+                <p>EGroupware Mail Service läuft wieder, während EGroupware weiterhin betroffen ist: 2022 April 15th 16:00 (CEST):</p>
+                <p>Die Stromversorgung im Rechen&shy;zentrum ist wieder&shy;hergestellt, IONOS arbeitet noch an der Wieder&shy;herstellung aller Dienste.<br> EGroupware Mail ist verfügbar, EGroupware selbst ist immer noch nicht erreichbar, da das zugrunde liegende Datei&shy;system noch nicht verfügbar ist. Wir arbeiten weiterhin mit Hochdruck an dem Problem.</p>
+                <p><strong>EGroupware Cloud services FRA &amp; KA: 2022 April 15th 15.00h (CEST):</strong></p>
+                <p>Stromausfall Im Rechen&shy;zentrum in Frankfurt – siehe auch https://status.ionos.cloud/<br> Scheinbar ist aber auch Karlsruhe aktuell nicht erreichbar, genauere Infos liegen derzeit noch nicht vor. Wir informieren, sobald es Neuigkeiten gibt.</p>
+                <p><strong>EGroupware Cloud-Dienste FRA &amp; KA: 20. Oktober 2021 07.30h:</strong></p>
+                <p>EGroupware Cloud Dienste stehen wieder zur Verfügung, Mail &amp; Rocket.Chat waren die ganze Zeit nutzbar.</p>
+                <p><strong>EGroupware Cloud-Dienste FRA &amp; KA: 20. Oktober 2021 07.15h:</strong></p>
+                <p>Erneuter Ausfall der EGroupware Cloud Dienste am frühen Morgen. Problem im Datenbank-Cluster, das keine Schreibzugriffe mehr ausgeführt werden können. Die Daten&shy;banken wurden bereits gestoppt, und sind am Synchronisieren des zweiten Datenbank-Knotens. Der Sync sollte gegen 07.30h voll&shy;ständig sein.</p>
+                <p>Die Maßnahmen seit dem letzten Vorfall haben im Bereich der Überwachung funktioniert, die dann heute morgen um 6:17h angeschlagen ist und wir daher den Neustart früher in Gang setzen konnten. Die Untersuchung, wieso es wieder zu dem Problem kam, läuft aktuell.</p>
+                <p><strong>EGroupware Cloud-Dienste FRA &amp; KA: 20. Oktober 2021 9.00h:</strong></p>
+                <p>EGroupware Cloud, Rocket.Chat und Mail Dienste sind wieder verfügbar. Die Dienste sind heute über Tag wahrscheinlich etwas langsamer, da nur 3 Datenbanknoten laufen. Die restlichen Datenbank Knoten werden heute nach Feierabend synchronisiert.</p>
+                <p><strong>EGroupware Cloud-Dienste FRA &amp; KA: 20. Oktober 2021 8.30h:</strong></p>
+                <p>Zwei Datenbank Knoten sind gestartet, der dritte wird gerade synchronisiert. Die Mail Dienste Und Rocket.Chat sind wieder aktiviert. Cloud braucht noch ca. 20min.</p>
+                <p><strong>EGroupware Cloud-Dienste FRA &amp; KA: 20. Oktober 2021:</strong></p>
+                <p>Ausfall der EGroupware Cloud Dienste am frühen Morgen. Problem im Datenbank-Cluster, das keine Schreibzugriffe mehr ausgeführt werden können. Die Daten&shy;banken werden gerade gestoppt, um dann neu gestartet zu werden. Da die Datenbank-Knoten einen vollen Sync ausführen müssen, werden die EGroupware Cloud und Mail Dienste voraussichtlich erst gegen 09.00h wieder verfügbar sein.</p>
+                <p><strong>EGroupware Cloud-Dienste FRA &amp; KA: 2021 29. September 11.30h:</strong></p>
+                <p>EGroupware Cluster: erneuter Ausfall eines Datenbank-Knotens. Wir müssen die Systeme vorübergehend abschalten, um wieder in einem Normal&shy;betrieb mit mindestens 3 Datenbank-Knoten zu kommen. Alle Dienste sind ab 12.10 Uhr wieder voll verfügbar.</p>
+                <p><strong>EGroupware Cloud-Dienste FRA &amp; KA: 2021 29. September 08.30h:</strong></p>
+                <p>EGroupware Cloud ist wieder online. Das Cluster läuft vorübergehend auf 2 Datenbank-Knoten, die andern werden heute Abend synchronisiert und zugeschaltet.</p>
+                <p><strong>EGroupware Cloud-Dienste FRA &amp; KA: 2021 29. September:</strong></p>
+                <p>Ausfall der EGroupware Cloud Dienste Nachts. Problem im Datenbank-Cluster, das keine Schreibzugriffe mehr ausgeführt werden können. Die Daten&shy;banken werden gerade gestoppt, um dann neu gestartet zu werden. Der erste Datenbank-Knoten ist wieder online, der zweite Knoten braucht ca. 20 min, um sich mit dem ersten voll&shy;ständig zu verbinden. Die EGroupware Cloud Dienste sind daher bis 08.00h offline.</p>
+                <p>Der Ausfall kann auch die Mail&shy;dienste beeinflussen.</p>
+                <p><strong>EGroupware E-&#8288;Mail-Dienste FRA: 2021 6. Juli:</strong></p>
+                <p>Scrub (File&shy;system check) läuft, um alles im Detail zu prüfen. Dies wird auf jeden Fall einige Tage dauern. Bis es fertig ist, haben wir die Hälfte der Instanzen nach Karlsruhe verschoben, um den File&shy;system-Check nicht zu verlangsamen.</p>
+                <p>Die betroffenen Mailboxen wurden aus KA wieder&shy;hergestellt und funktionieren jetzt auch wieder in FRA.</p>
+                <p><strong>EGroupware E-&#8288;Mail-Dienste: 5. Juli 2021 10.30 Uhr</strong><br> Storage System im Rechen&shy;zentrum in Frankfurt zeigt Checksummenfehler und einzelne Mailboxen sind nicht verfügbar.</p>
+                <ul><li>Ticket beim Service Provider des Rechenzentrums IONOS eröffnet und warten auf Antwort bzw. Fehler&shy;behebung</li><li>Das Mail-Backend in Frankfurt wurde vorübergehend abgeschaltet, damit die Redundanz über&shy;nehmen konnte und die Mail-Dienste laufen nun alle im Rechen&shy;zentrum in Karlsruhe.</li></ul>
+                <p><strong>Ihre Daten sind sicher, aber die Performance wird etwas langsamer sein, bis Frankfurt wieder zugeschaltet werden kann.</strong></p>
+                <p>Wir werden hier informieren, sobald es Neuigkeiten zu diesem Thema gibt.</p>
+              </div>
+            </article>
+          </div>
+        </details>
+        <details class="status-year">
+          <summary><span>2021</span> <span class="status-year__count">3 Meldungen</span></summary>
+          <div class="status-year__list">
+            <article class="incident incident--wartung">
+              <header class="incident__head"><h3>Wartungs&shy;fenster EGroupware Cloud: 02.06.2021ab 20.00 – 21.30 Uhr</h3><span class="st-badge st-badge--wartung">WARTUNG</span></header>
+              <div class="incident__body">
+                <p><strong>Unsere Vermutung zum Problem von gestern ist, dass eine „fehlerhafte Anfrage“ von einem Client auf einer einzelnen Domain, dann „Traefik“ dazu veranlasst, auf mehr als diesen Client für einige Zeit mit einem „500 Internal Server Error“ zu antworten. </strong></p>
+                <p>Wir werden „Traefik“ heute Abend wieder aktivieren und versuchen, herauszufinden, welche Anfrage, Domain und IP das Problem verursacht.</p>
+                <p>Problem wurde mit hoher Wahrscheinlichkeit identifiziert und alles auf Normal&shy;betrieb zurück&shy;gestellt.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>Internal Server Error in Frankfurt: 01.06.2021 21:00 – 23.59 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>Es gab ein Problem in der EGroupware Cloud Verfügbarkeitszone in Frankfurt, sodass dort immer wieder „500 Internal Server Error“ aufgetreten sind. Die Verfügbarkeitszone in Karlsruhe war von dem Problem nicht oder nur kurzfristig betroffen nach dem wir als Workaround alles auf Karlsruhe umgeschaltet hatten.</p>
+                <p>Weiter&shy;führende Untersuchungen legen nahe, dass es KEINEN direkten Zusammenhang mit dem Update auf 21.1 gibt, sondern ein Problem mit „Traefik“ als Proxy / Kubenetes Ingress Controller, das nur unter ganz bestimmten Bedingungen zum tragen kommt.</p>
+                <p>Im ersten Schritt haben wir gestern die Version vom „Traefik“ aktualisiert, das hat das Problem zwar veringert, aber nicht beseitigt. Eine Suche in den „Github Foren von Traefik“ gab eine ähnliche Fehler&shy;beschreibung in dem folgenden <a href="https://github.com/traefik/traefik/issues/4481#issuecomment-852958720">Beitrag</a>. Um eine sinnvoll nutzbare EGroupware Cloud heute bereit&shy;stellen zu können, haben wir gestern Nacht „Traefik“ entfernt und sprechen direkt mit Nginx, damit gab es dann keine „Internal Server Errors“ mehr.</p>
+              </div>
+            </article>
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>Ausfall aller EGroupware und Mail&shy;dienste: 06.04.2021: 17.45 – 19.20 Uhr</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p>IONOS hat ein Netzwerk&shy;problem verursacht, daher der Ausfall der EGroupware und Mail Dienste.<br> Die Kollegen arbeiten schnellst&shy;möglich an einer Bereinigung und Wieder&shy;herstellung der Verbindungen.</p>
+                <p>06.04.2021: 18.30 Uhr Das Netzwerk von IONOS steht wieder, aber es wird noch etwas dauern, bis EGroupware und Mail wieder verfügbar sind.</p>
+                <p><strong>06.04.2021: 19.20 Uhr Die Knoten in Karlsruhe und danach auf Frankfurt sind wieder verfügbar, somit sind alle EGroupware und Mail Dienste wieder verfügbar.</strong></p>
+              </div>
+            </article>
+          </div>
+        </details>
+        <details class="status-year">
+          <summary><span>2020</span> <span class="status-year__count">1 Meldung</span></summary>
+          <div class="status-year__list">
+            <article class="incident incident--stoerung">
+              <header class="incident__head"><h3>STÖRUNG EGROUPWARE KNOTEN KARLSRUHE &amp; FRANKFURT 24.08.2020</h3><span class="st-badge st-badge--stoerung">STÖRUNG</span></header>
+              <div class="incident__body">
+                <p><strong>Störung EGroupware Knoten Karlsruhe &amp; Frankfurt 24.08.2020 15.40 Uhr</strong><br> Wir prüfen gerade, wo das Problem liegt. Aktuell scheinen beide Knoten betroffen zu sein. Erste Analyse zeigt ein Verbindungs&shy;problem auf den Loadbalancern, daher kommt von außen keine Verbindung zu Stande.</p>
+                <p>18.00 Uhr: Alle Systeme (inklusive des Datenbank-Clusters). wurden heruntergefahren. Der erste Datenbank&shy;knoten wurde erfolgreich neu gestartet. Aktuell startet der zweite Datenbank&shy;knoten und synchronisiert sich mit dem ersten. Sobald das Abgeschlossen ist, starten wir auch wieder die restlichen System.</p>
+                <p><strong>18.30 Uhr: EGroupware und Mail-System sind wieder verfügbar.</strong></p>
+              </div>
+            </article>
+          </div>
+        </details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="./">
+            <img src="../assets/img/EGroupware-Logo-invert.svg" alt="EGroupware"
+                 width="173" height="34" loading="lazy">
+          </a>
+          <p>Die Open-Source-Collaboration-Lösung aus Deutsch&shy;land – für Unter&shy;nehmen, Verwaltungen und Bildungs&shy;einrichtungen.</p>
+        </div>
+      <div>
+        <h2 class="footer-h">Produkt</h2>
+        <ul>
+          <li><a href="funktionen">Funktionen</a></li>
+          <li><a href="preise">Tarife</a></li>
+          <li><a href="branchen">Branchen</a></li>
+          <li><a href="ki">KI in EGroupware</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Unter&shy;nehmen</h2>
+        <ul>
+          <li><a href="ueber-uns">Über uns</a></li>
+          <li><a href="support">Support</a></li>
+          <li><a href="status">Cloud-Status</a></li>
+          <li><a href="kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Rechtliches</h2>
+        <ul>
+          <li><a href="impressum">Impressum</a></li>
+          <li><a href="datenschutz">Daten&shy;schutz</a></li>
+          <li><a href="haftungsausschluss">Haftungsausschluss</a></li>
+          <li><a href="agb">AGB</a></li>
+          <li><a href="vertrag-kuendigen">Vertrag kündigen</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> EGroupware GmbH. Alle Rechte vorbehalten.</p>
+        <nav class="footer-social" aria-label="Social Media"><a href="https://de.linkedin.com/company/egroupware-gmbh" target="_blank" rel="noopener" aria-label="EGroupware bei LinkedIn"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#linkedin"/></svg></a><a href="https://fosstodon.org/@EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Mastodon"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#mastodon"/></svg></a><a href="https://bsky.app/profile/egroupware.org" target="_blank" rel="noopener" aria-label="EGroupware bei Bluesky"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#bluesky"/></svg></a><a href="https://www.youtube.com/user/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei YouTube"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#youtube"/></svg></a><a href="https://www.facebook.com/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware bei Facebook"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#facebook"/></svg></a><a href="https://github.com/EGroupware/egroupware" target="_blank" rel="noopener" aria-label="EGroupware bei GitHub"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#github"/></svg></a><a href="https://help.egroupware.org/" target="_blank" rel="noopener" aria-label="EGroupware Community-Forum"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#egroupware"/></svg></a></nav>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js?v=20261113l" defer></script>
+</body>
+</html>

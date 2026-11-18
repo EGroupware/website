@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EGroupware – News</title>
+    <link>https://www.egroupware.org/de/blog</link>
+    <atom:link href="https://www.egroupware.org/de/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Neues aus Entwicklung, Veranstaltungen und Presse: Releases, Anwenderberichte und Webinare rund um EGroupware.</description>
+    <language>de</language>
+    <item>
+      <title>PHP2Shell und unsere Maßnahmen</title>
+      <link>https://www.egroupware.org/de/allgemein/php2shell-und-unsere-massnahmen</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/php2shell-und-unsere-massnahmen</guid>
+      <pubDate>2026-10-27 09:00:00 +0100</pubDate>
+      <description>Am 21.10.2026 hat das PHP-Projekt zwei kritische Sicherheitslücken veröffentlicht. Was EGroupware getan hat, ab wann die Systeme aktualisiert waren und was Sie bei einer Eigeninstallation prüfen sollten.</description>
+    </item>
+    <item>
+      <title>Gelungene Digitalisierung und souveräne Behördenstrukturen</title>
+      <link>https://www.egroupware.org/de/allgemein/gelungene-digitalisierung-souveraene-behoerdenstrukturen</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/gelungene-digitalisierung-souveraene-behoerdenstrukturen</guid>
+      <pubDate>2026-09-08 09:00:00 +0100</pubDate>
+      <description>Zettl: &quot;Ich übe die Datenschutzaufsicht über die katholischen Einrichtungen in Bayern aus. Als unabhängige Datenschutzaufsichtsbehörde begleiten wir als KDSZ Bayern rund 8.000 kirchliche Einrichtungen und setzen dabei auch in der eigenen Verwaltung konsequent …</description>
+    </item>
+    <item>
+      <title>Newsletter Mai 2026</title>
+      <link>https://www.egroupware.org/de/allgemein/newsletter-mai-2026</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/newsletter-mai-2026</guid>
+      <pubDate>2026-06-02 09:00:00 +0100</pubDate>
+      <description>KI ist in aller Munde. Aber wie nutzt man sie sicher, sinnvoll integriert und datenschutz-konform? Wir freuen uns, Ihnen die aktuellen Entwicklungen bei EGroupware vorzustellen und den ein oder anderen Einblick zu geben.</description>
+    </item>
+    <item>
+      <title>Clevere IT-Strategie mit der Open Source Version</title>
+      <link>https://www.egroupware.org/de/allgemein/clevere-it-strategie-mit-der-community-edition</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/clevere-it-strategie-mit-der-community-edition</guid>
+      <pubDate>2026-04-27 09:00:00 +0100</pubDate>
+      <description>Wie kann die Nutzung der kostenfreien CE mit Installation on Premises ein Open-Source-Projekt mit tragen und welche Freiheiten und Sicherheiten bringt sie dem Unternehmen? Wir haben mit Samuel Wolf von der Wolf Maschinenbau AG über ihre Nutzung der CE unserer …</description>
+    </item>
+    <item>
+      <title>Pressemitteilung - EGroupware 26.2 veröffentlicht</title>
+      <link>https://www.egroupware.org/de/allgemein/pressemitteilung-26-2</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/pressemitteilung-26-2</guid>
+      <pubDate>2026-02-09 09:00:00 +0100</pubDate>
+      <description>Neues Release-Modell, modernes &amp; responsives Frontend, mehr Barrierefreiheit und Anpassbarkeit, Einstieg in die KI-Integration</description>
+    </item>
+    <item>
+      <title>Newsletter November 2025</title>
+      <link>https://www.egroupware.org/de/allgemein/news-2511</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/news-2511</guid>
+      <pubDate>2025-11-25 09:00:00 +0100</pubDate>
+      <description>Was erwartet Sie in der neuen Version? Success Stories: Wie setzen andere EGroupware clever ein? Roadmap: Accessibility und KI</description>
+    </item>
+    <item>
+      <title>Sichere Cloud-Plattform zum Datenaustausch bei PersCom</title>
+      <link>https://www.egroupware.org/de/allgemein/sucess-story-perscom</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/sucess-story-perscom</guid>
+      <pubDate>2025-10-07 09:00:00 +0100</pubDate>
+      <description>PersCom ist ein HR-Dienstleister mit dem Kerngeschäft Gehaltsabrechnung und Personal-/Zeitwirtschaft. Datensicherheit ist für viele Kunden entscheidend. Die PersCom GmbH setzte ursprünglich auf die Groupware-Lösung Kopano auf einem eigenen Server. Mit der …</description>
+    </item>
+    <item>
+      <title>Digitale Souveränität - Offener Brief an Claudia Plattner vom BSI</title>
+      <link>https://www.egroupware.org/de/allgemein/digitale-souveraenitaet-offener-brief-an-claudia-plattner-vom-bsi</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/digitale-souveraenitaet-offener-brief-an-claudia-plattner-vom-bsi</guid>
+      <pubDate>2025-08-27 09:00:00 +0100</pubDate>
+      <description>Digitale Souveränität ist nicht erreichbar? Wer das sagt, spielt genau in die Karten der Big-Tech-Unternehmen, die gar nicht wollen, dass wir eigene, unabhängige Software-Alternativen aufbauen.</description>
+    </item>
+    <item>
+      <title>EGroupware bildet Prozesse maßgeschneidert ab</title>
+      <link>https://www.egroupware.org/de/neuigkeiten/hexapilots-success-story</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/neuigkeiten/hexapilots-success-story</guid>
+      <pubDate>2025-04-01 09:00:00 +0100</pubDate>
+      <description>Unternehmen: Dienstleister im Bereich unbemannte LuftfahrtMitarbeitende: 2–5Einsatzbereich: Projektmanagement, Drohnen-Logbuch, Dokumentation für das Luftfahrt-BundesamtLösung: EGroupware CloudSchwerpunkt: Anpassbare Business-Software mit hohem …</description>
+    </item>
+    <item>
+      <title>2025 - Zeit für den Umstieg von Microsoft auf EGroupware</title>
+      <link>https://www.egroupware.org/de/allgemein/2025-zeit-fuer-umstieg-von-microsoft</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/2025-zeit-fuer-umstieg-von-microsoft</guid>
+      <pubDate>2025-03-10 09:00:00 +0100</pubDate>
+      <description>Zum 14. Oktober 2025 stellt Microsoft den technischen Support für Exchange 2016 und Exchange 2019 ein. Diese Entscheidung hat weitreichende Konsequenzen für Unternehmen, die auf Microsofts E-Mail-Server angewiesen sind.</description>
+    </item>
+    <item>
+      <title>Wenn nachhaltige Open-Source-Anbieter mit Dumpinganbietern konkurrieren</title>
+      <link>https://www.egroupware.org/de/allgemein/kriterien-fuer-os-projekte</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/kriterien-fuer-os-projekte</guid>
+      <pubDate>2025-02-13 09:00:00 +0100</pubDate>
+      <description>Wie auf heise.de beschrieben, hat die OSBA Kriterien vorgeschlagen, um bei der öffentlichen Hand Preisdumping rund um freie Software zu verhindern und nachhaltige Projekte zu fördern. EGroupware Geschäftsführerin Birgit Becker hat aktiv in der Arbeitsgruppe mitgewirkt.</description>
+    </item>
+    <item>
+      <title>Als Mitglied der OSBA teilt und unterstützt EGroupware die Forderungen auf digitale Souveränität</title>
+      <link>https://www.egroupware.org/de/allgemein/als-mitglied-der-osba-teilt-und-unterstuetzt-egroupware-die-forderungen-auf-digitale-souveraenitaet</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/als-mitglied-der-osba-teilt-und-unterstuetzt-egroupware-die-forderungen-auf-digitale-souveraenitaet</guid>
+      <pubDate>2025-01-29 09:00:00 +0100</pubDate>
+      <description>Die politische Debatte um digitale Souveränität bleibt in Deutschland weiterhin erstaunlich verhalten. In den Wahlprogrammen der CDU/CSU wird</description>
+    </item>
+    <item>
+      <title>E-Rechnungen erstellen mit EGroupware</title>
+      <link>https://www.egroupware.org/de/allgemein/e-rechnungen-erstellen-mit-egroupware</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/e-rechnungen-erstellen-mit-egroupware</guid>
+      <pubDate>2024-12-20 09:00:00 +0100</pubDate>
+      <description>Am 1. Januar 2025 stehen große Veränderungen an. Dank des deutschen Wachstumschancengesetzes wird die elektronische Rechnungsstellung (oder E-Invoicing)</description>
+    </item>
+    <item>
+      <title>Vereinfachen Sie die Rechnungsstellung mit der neuen EGroupware App</title>
+      <link>https://www.egroupware.org/de/allgemein/vereinfachen-sie-die-rechnungsstellung-mit-der-neuen-egroupware-app</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/vereinfachen-sie-die-rechnungsstellung-mit-der-neuen-egroupware-app</guid>
+      <pubDate>2024-12-17 09:00:00 +0100</pubDate>
+      <description>Zum Jahresende wünscht Ihnen EGroupware alles Gute  – und freut sich, Ihnen die neue E-Rechnungs-Anwendung vorstellen zu können</description>
+    </item>
+    <item>
+      <title>Webinar: Lehre in Zeiten künstlicher Intelligenz &amp; Open Source Events</title>
+      <link>https://www.egroupware.org/de/allgemein/webinar-lehre-in-zeiten-kuenstlicher-intelligenz-open-source-events</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/webinar-lehre-in-zeiten-kuenstlicher-intelligenz-open-source-events</guid>
+      <pubDate>2024-08-20 09:00:00 +0100</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Keine übereilten Verträge für die Delos Cloud</title>
+      <link>https://www.egroupware.org/de/allgemein/keine-uebereilten-vertraege-fuer-die-delos-cloud</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/keine-uebereilten-vertraege-fuer-die-delos-cloud</guid>
+      <pubDate>2024-06-25 09:00:00 +0100</pubDate>
+      <description>Das Bundeskanzleramt übt derzeit starken Druck auf die Bundesländer aus, sofort Cloud-Verträge mit Delos, einer deutschen Version der Microsoft Azure Cloud, abzuschließen. Am 27. Juni 2024 soll in einer Sondersitzung des IT-Planungsrats ein entsprechender …</description>
+    </item>
+    <item>
+      <title>Vereinfachtes Customizing in EGroupware und mehr Datensicherheit mit S3 Storage</title>
+      <link>https://www.egroupware.org/de/allgemein/customizing-und-s3-storage</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/customizing-und-s3-storage</guid>
+      <pubDate>2024-06-17 09:00:00 +0100</pubDate>
+      <description>Im März war das Thema mangelnder Datenschutz (leider) wieder im Gespräch. Die Europäische Kommission verstößt laut Europäischem Datenschutzbeauftragten bei der Nutzung von MS 365 gegen ihre eigenen Datenschutz-Regeln: Die Kommission habe es versäumt, …</description>
+    </item>
+    <item>
+      <title>Webinar: Lehre in Zeiten künstlicher Intelligenz &amp; Open Source Events</title>
+      <link>https://www.egroupware.org/de/allgemein/webinar-antecedent-und-opensource-veranstaltungen</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/webinar-antecedent-und-opensource-veranstaltungen</guid>
+      <pubDate>2024-06-17 09:00:00 +0100</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Neues Outlook ermöglicht ungewollten Datenabfluss an Microsoft</title>
+      <link>https://www.egroupware.org/de/allgemein/neues-outlook-ermoeglicht-ungewollten-datenabfluss-an-microsoft</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/neues-outlook-ermoeglicht-ungewollten-datenabfluss-an-microsoft</guid>
+      <pubDate>2024-01-26 09:00:00 +0100</pubDate>
+      <description>Selbst Heise.de warnte im November &#x27;23 vor dem neuen Outlook. Laut dem IT-Portal schickt die neue Outlook-App Zugangsdaten zu IMAP- und SMTP-Servern an Microsoft-Cloud-Server, die damit die Mails der Nutzer spiegeln.Auf Nachfrage hat Microsoft erklärt, warum …</description>
+    </item>
+    <item>
+      <title>Schnittstelle Rest-API zur Einbindung von Kontakten, Mails, Kalendern und Aufgaben</title>
+      <link>https://www.egroupware.org/de/allgemein/rest-api-interface-for-integration-of-contacts-mails-calendars-and-tasks</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/rest-api-interface-for-integration-of-contacts-mails-calendars-and-tasks</guid>
+      <pubDate>2023-07-10 09:00:00 +0100</pubDate>
+      <description>Liebe Anwender*innen,schon seit einiger Zeit nutzen wir die Software-Schnittstelle REST-API (Representational State Transfer Application Programming Interface), um eine einheitliche Kommunikation und den Datenaustausch zwischen EGroupware und anderen …</description>
+    </item>
+    <item>
+      <title>EGroupware plus Collabora Online – Video der Cool Days 2023 jetzt online</title>
+      <link>https://www.egroupware.org/de/allgemein/egroupware-at-cool-days-2023</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/egroupware-at-cool-days-2023</guid>
+      <pubDate>2023-04-25 09:00:00 +0100</pubDate>
+      <description>EGroupware und Collabora Online – Video jetzt onlineLiebe Kunden*innen und EGroupware-Benutzer*innen,spannende Vorträge, News rund um Collabora Online und viele nette Leute: Die Cool Days 2023 in Cambridge waren ein voller Erfolg!Beim „Technical Day“ drehte …</description>
+    </item>
+    <item>
+      <title>EGroupware 23.1 ab heute verfügbar</title>
+      <link>https://www.egroupware.org/de/neuigkeiten/egroupware-23-1-ab-heute-verfuegbar</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/neuigkeiten/egroupware-23-1-ab-heute-verfuegbar</guid>
+      <pubDate>2023-03-15 09:00:00 +0100</pubDate>
+      <description>heute ist es endlich soweit: Die aktuelle EGroupware Version 23.1 ist da. Pünktlich zum Release möchten wir Ihnen wichtige Infos zur neuesten Version mitgeben und ein paar nützliche Links teilen.</description>
+    </item>
+    <item>
+      <title>Von der Zettelsammlung zur automatischen Anmeldung: EGroupware bei der Jugendfarm Elsental</title>
+      <link>https://www.egroupware.org/de/neuigkeiten/von-der-zettelsammlung-zur-automatischen-anmeldung-egroupware-bei-der-jugendfarm-elsental</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/neuigkeiten/von-der-zettelsammlung-zur-automatischen-anmeldung-egroupware-bei-der-jugendfarm-elsental</guid>
+      <pubDate>2023-02-17 09:00:00 +0100</pubDate>
+      <description>Die Jugendfarm Elsental setzt auf EGroupware – nicht nur für die Buchhaltung, sondern seit Neuestem auch für die Anmeldung zu den Freizeitaktivitäten. Das ist seitdem alles viel einfacher geworden und entlastet das Farm-Team: Eltern können sich selbst …</description>
+    </item>
+    <item>
+      <title>Neue Features EGroupware 23.1 plus Managed DAVx5, CLT und COOL Days</title>
+      <link>https://www.egroupware.org/de/neuigkeiten/neue-features-egroupware-23-1-plus-managed-davx5-clt-und-cool-days</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/neuigkeiten/neue-features-egroupware-23-1-plus-managed-davx5-clt-und-cool-days</guid>
+      <pubDate>2023-02-14 09:00:00 +0100</pubDate>
+      <description>Liebe Kunden:innen und EGroupware-Benutzer:innen,seit unserem letzten Newsletter ist etwas Zeit vergangen und inzwischen hat sich bei uns einiges getan.Die spannendste Nachricht für Sie als Anwender:innenEGroupware 23.1 ist auf dem Weg.Geplant ist das Release …</description>
+    </item>
+    <item>
+      <title>Smarte Lösung: EGroupware und Managed DAVx⁵ in der Stadtverwaltung Jena</title>
+      <link>https://www.egroupware.org/de/neuigkeiten/smart-collaboration-egroupware-und-managed-davx5-steigern-die-produktivitaet-der-stadtverwaltung-jena</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/neuigkeiten/smart-collaboration-egroupware-und-managed-davx5-steigern-die-produktivitaet-der-stadtverwaltung-jena</guid>
+      <pubDate>2023-01-30 09:00:00 +0100</pubDate>
+      <description>Seit mehr als 15 Jahren ist EGroupware die zentrale Groupware-Lösung bei der Stadtverwaltung Jena. Vor etwa zwei Jahren haben die verantwortlichen IT-Dienstleister Managed DAVx⁵ für die Smartphones der Mitarbeitenden eingeführt. Seitdem synchronisiert die App …</description>
+    </item>
+    <item>
+      <title>EGroupware auf dem Univention-Summit 2022</title>
+      <link>https://www.egroupware.org/de/allgemein/egroupware-auf-dem-univention-summit-2022</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/egroupware-auf-dem-univention-summit-2022</guid>
+      <pubDate>2022-04-13 09:00:00 +0100</pubDate>
+      <description>Treffen Sie das EGroupware Team auf dem dem Univention Summit 2022 in Bremen.</description>
+    </item>
+    <item>
+      <title>Platzhalter und automatische Erzeugung von PDF/PNG in 21.1</title>
+      <link>https://www.egroupware.org/de/allgemein/platzhalter-und-automatische-erzeugung-von-pdf-png-in-21-1</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/allgemein/platzhalter-und-automatische-erzeugung-von-pdf-png-in-21-1</guid>
+      <pubDate>2022-01-24 09:00:00 +0100</pubDate>
+      <description>Wie Sie Platzhalter und automatische Generierung von PDF/PNG in EGroupware und Collabora online Office nutzen können</description>
+    </item>
+    <item>
+      <title>Asterisk Telefon Integration mit EGroupware</title>
+      <link>https://www.egroupware.org/de/news/asterisk-telefon-integration-mit-egroupware</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/news/asterisk-telefon-integration-mit-egroupware</guid>
+      <pubDate>2022-01-21 09:00:00 +0100</pubDate>
+      <description>Weitere Informationen über die Asterisk Telefon Integration.</description>
+    </item>
+    <item>
+      <title>Sicherheitslücke log4j - EGroupware und die integrierten Tools sind ausdrücklich NICHT betroffen</title>
+      <link>https://www.egroupware.org/de/neuigkeiten/sicherheitsluecke-log4j-egroupware-und-die-integrierten-tools-sind-ausdruecklich-nicht-betroffen</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/neuigkeiten/sicherheitsluecke-log4j-egroupware-und-die-integrierten-tools-sind-ausdruecklich-nicht-betroffen</guid>
+      <pubDate>2021-12-15 09:00:00 +0100</pubDate>
+      <description>EGroupware und die integrierten Tools sind ausdrücklich NICHT betroffen.</description>
+    </item>
+    <item>
+      <title>EGroupware unterstützt Klage gegen Microsoft</title>
+      <link>https://www.egroupware.org/de/neuigkeiten/egroupware-unterstuetzt-klage-gegen-microsoft</link>
+      <guid isPermaLink="true">https://www.egroupware.org/de/neuigkeiten/egroupware-unterstuetzt-klage-gegen-microsoft</guid>
+      <pubDate>2021-11-26 09:00:00 +0100</pubDate>
+      <description>Microsoft missbraucht seine marktbeherrschende Stellung und schadet somit dem europäischen IT-Ökosystem durch die Verknüpfung seine Online-Dienste.</description>
+    </item>
+  </channel>
+</rss>

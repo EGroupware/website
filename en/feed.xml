@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EGroupware – News</title>
+    <link>https://www.egroupware.org/en/blog</link>
+    <atom:link href="https://www.egroupware.org/en/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>News from development, events and the press: releases, case studies and webinars around EGroupware.</description>
+    <language>en</language>
+    <item>
+      <title>PHP2Shell and Our Strategy</title>
+      <link>https://www.egroupware.org/en/general/php2shell-and-our-strategy</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/php2shell-and-our-strategy</guid>
+      <pubDate>2026-10-27 09:00:00 +0100</pubDate>
+      <description>On 21 October 2026 the PHP project disclosed two critical security vulnerabilities. What EGroupware did, when the systems were patched and what to check on your own installation.</description>
+    </item>
+    <item>
+      <title>Successful Digital Transformation and Well-Managed Government Structures</title>
+      <link>https://www.egroupware.org/en/general/successful-digital-transformation-and-well-managed-government-structures</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/successful-digital-transformation-and-well-managed-government-structures</guid>
+      <pubDate>2026-09-08 09:00:00 +0100</pubDate>
+      <description>Zettl: &quot;I oversee data protection for Catholic institutions in Bavaria. As an independent data protection supervisory authority, we at KDSZ Bayern support approximately 8,000 church institutions and consistently prioritize digital sovereignty within our own …</description>
+    </item>
+    <item>
+      <title>Clever IT Strategy including the Open Source Version</title>
+      <link>https://www.egroupware.org/en/general/clever-it-strategy-including-the-open-source-version</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/clever-it-strategy-including-the-open-source-version</guid>
+      <pubDate>2026-04-27 09:00:00 +0100</pubDate>
+      <description>How can using the free CE version with on-premises installation support an open-source project, and what freedoms and safeguards does it offer the company? We spoke to Samuel Wolf from Wolf Maschinenbau AG about how they use the CE version of our …</description>
+    </item>
+    <item>
+      <title>Press release - EGroupware 26.2</title>
+      <link>https://www.egroupware.org/en/general/press-release-26-2</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/press-release-26-2</guid>
+      <pubDate>2026-02-09 09:00:00 +0100</pubDate>
+      <description>New release model, modern &amp; fully responsive frontend, improved accessibility and UI customization, introduction of AI integration</description>
+    </item>
+    <item>
+      <title>Newsletter November 2025</title>
+      <link>https://www.egroupware.org/en/general/news-2511</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/news-2511</guid>
+      <pubDate>2025-11-25 09:00:00 +0100</pubDate>
+      <description>What can you expect in the new EGroupware version? Success stories: How are others using EGroupware cleverly? EGroupware roadmap: Accessibility and artificial intelligence</description>
+    </item>
+    <item>
+      <title>E-Invoicing Made Easy with EGroupware</title>
+      <link>https://www.egroupware.org/en/general/e-invoicing-made-easy-with-egroupware</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/e-invoicing-made-easy-with-egroupware</guid>
+      <pubDate>2024-12-20 09:00:00 +0100</pubDate>
+      <description>Big changes are coming on January 1, 2025. Thanks to the German Growth Opportunities Act, electronic invoicing (or e-invoicing)</description>
+    </item>
+    <item>
+      <title>Simplify invoicing with EGroupware&#x27;s new app</title>
+      <link>https://www.egroupware.org/en/general/simplify-invoicing-with-egroupwares-new-app</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/simplify-invoicing-with-egroupwares-new-app</guid>
+      <pubDate>2024-12-17 09:00:00 +0100</pubDate>
+      <description>At the end of the year, EGroupware wishes you all the best – and is pleased to introduce the new e-invoicing application to you</description>
+    </item>
+    <item>
+      <title>Webinar: Teaching in times of artificial intelligence &amp; open source events</title>
+      <link>https://www.egroupware.org/en/general/webinar-teaching-in-times-of-artificial-intelligence-open-source-events-2</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/webinar-teaching-in-times-of-artificial-intelligence-open-source-events-2</guid>
+      <pubDate>2024-08-20 09:00:00 +0100</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>No rushed contracts for the Delos Cloud</title>
+      <link>https://www.egroupware.org/en/general/no-rushed-contracts-for-the-delos-cloud</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/no-rushed-contracts-for-the-delos-cloud</guid>
+      <pubDate>2024-06-25 09:00:00 +0100</pubDate>
+      <description>The Federal Chancellery is currently exerting strong pressure on the federal states to conclude immediate cloud contracts with Delos, a German version of the Microsoft Azure Cloud. On 27 June 2024, a corresponding resolution is to be passed at a special …</description>
+    </item>
+    <item>
+      <title>Simplified customizing in EGroupware and more data security with S3 Storage</title>
+      <link>https://www.egroupware.org/en/general/simplified-customizing-in-egroupware-and-more-data-security-with-s3-storage</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/simplified-customizing-in-egroupware-and-more-data-security-with-s3-storage</guid>
+      <pubDate>2024-06-17 09:00:00 +0100</pubDate>
+      <description>In March, the issue of a lack of data protection was (unfortunately) back on the agenda. According to the European Data Protection Supervisor, the European Commission is violating its own data protection rules when using MS 365: The Commission has failed to …</description>
+    </item>
+    <item>
+      <title>Webinar: Teaching in times of artificial intelligence &amp; open source events</title>
+      <link>https://www.egroupware.org/en/general/webinar-teaching-in-times-of-artificial-intelligence-open-source-events</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/webinar-teaching-in-times-of-artificial-intelligence-open-source-events</guid>
+      <pubDate>2024-06-17 09:00:00 +0100</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Too nosy: New Outlook enables unwanted data leakage to Microsoft</title>
+      <link>https://www.egroupware.org/en/general/new-outlook-enables-unwanted-data-leakage-to-microsoft</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/new-outlook-enables-unwanted-data-leakage-to-microsoft</guid>
+      <pubDate>2024-01-26 09:00:00 +0100</pubDate>
+      <description>Even Heise.de issued a warning about the new Outlook in November 23. According to the IT portal, the new Outlook app sends access data to IMAP and SMTP servers to Microsoft cloud servers, which then mirror users&#x27; emails.When asked, Microsoft explained why the …</description>
+    </item>
+    <item>
+      <title>Rest API interface for integration of contacts, mails, calendars and tasks</title>
+      <link>https://www.egroupware.org/en/general/rest-api-interface-for-integration-of-contacts-mails-calendars-and-tasks</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/rest-api-interface-for-integration-of-contacts-mails-calendars-and-tasks</guid>
+      <pubDate>2023-07-10 09:00:00 +0100</pubDate>
+      <description>Dear customers and EGroupware users,For some time now, we have been using the software interface REST-API (Representational State Transfer Application Programming Interface) to enable uniform communication and data exchange between EGroupware and other …</description>
+    </item>
+    <item>
+      <title>EGroupware plus Collabora Online – Video of Cool Days 2023 now online</title>
+      <link>https://www.egroupware.org/en/general/egroupware-at-cool-days-2023</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/general/egroupware-at-cool-days-2023</guid>
+      <pubDate>2023-04-25 09:00:00 +0100</pubDate>
+      <description>Dear customers and EGroupware users,exciting presentations, news about Collabora Online and many nice people: The Cool Days 2023 in Cambridge were a great success!The &quot;Technical Day&quot; was all about performance improvements, new features, interoperability …</description>
+    </item>
+    <item>
+      <title>EGroupware 23.1 available as of today</title>
+      <link>https://www.egroupware.org/en/news/egroupware-23-1-available-as-of-today</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/egroupware-23-1-available-as-of-today</guid>
+      <pubDate>2023-03-15 09:00:00 +0100</pubDate>
+      <description>Finally the time has come: The latest EGroupware version 23.1 is available. With the release, we would like to provide you with important information about the latest version and share a few useful links.The most important innovations at a glance:✔ Technology …</description>
+    </item>
+    <item>
+      <title>Transforming Chaos to Convenience: Elsental Youth Farm&#x27;s Journey with EGroupware&#x27;s InfoLog</title>
+      <link>https://www.egroupware.org/en/news/transforming-chaos-to-convenience-elsental-youth-farms-journey-with-egroupwares-infolog</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/transforming-chaos-to-convenience-elsental-youth-farms-journey-with-egroupwares-infolog</guid>
+      <pubDate>2023-02-17 09:00:00 +0100</pubDate>
+      <description>The Elsental Youth Farm near Stuttgart, Germany, relies on EGroupware — not just for accounting, but also for booking of leisure activities. About two years ago, they implemented a registration system with EGroupware. Parents can now sign up their children …</description>
+    </item>
+    <item>
+      <title>New Features EGroupware 23.1 plus Managed DAVx5, CLT and COOL Days</title>
+      <link>https://www.egroupware.org/en/news/new-features-egroupware-23-1-plus-managed-davx5-clt-and-cool-days</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/new-features-egroupware-23-1-plus-managed-davx5-clt-and-cool-days</guid>
+      <pubDate>2023-02-14 09:00:00 +0100</pubDate>
+      <description>Dear Customers und EGroupware Users,Some time has passed since our last newsletter, and in the meantime a lot has happened here.The most exciting news for you as a user: EGroupware 23.1 is on its way.The release is currently planned for the beginning of …</description>
+    </item>
+    <item>
+      <title>Smart Collaboration: EGroupware and Managed DAVx⁵ Enhance Productivity at Jena City Council</title>
+      <link>https://www.egroupware.org/en/news/smart-collaboration-egroupware-and-managed-davx5-enhance-productivity-at-jena-city-council</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/smart-collaboration-egroupware-and-managed-davx5-enhance-productivity-at-jena-city-council</guid>
+      <pubDate>2023-01-30 09:00:00 +0100</pubDate>
+      <description>The Jena City Council has been using EGroupware as its main groupware solution for more than 15 years. About two years ago, the IT service providers implemented Managed DAVx⁵ for employees to use on their smartphones, which has been successfully syncing …</description>
+    </item>
+    <item>
+      <title>Smart Collaboration: EGroupware und Managed DAVx⁵ steigern die Produktivität der Stadtverwaltung Jena</title>
+      <link>https://www.egroupware.org/en/allgemein/smart-collaboration-egroupware-und-managed-davx%e2%81%b5-steigern-die-produktivitaet-der-stadtverwaltung-jena</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/allgemein/smart-collaboration-egroupware-und-managed-davx%e2%81%b5-steigern-die-produktivitaet-der-stadtverwaltung-jena</guid>
+      <pubDate>2023-01-30 09:00:00 +0100</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>EGroupware at the Univention Summit 2022</title>
+      <link>https://www.egroupware.org/en/egroupware-in-the-press/egroupware-at-the-univention-summit-2022</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/egroupware-in-the-press/egroupware-at-the-univention-summit-2022</guid>
+      <pubDate>2022-04-13 09:00:00 +0100</pubDate>
+      <description>Visit us at the Univention Summit 2022</description>
+    </item>
+    <item>
+      <title>opensource.com - Spannender EGroupware-Artikel - Erste Schritte mit EGroupware</title>
+      <link>https://www.egroupware.org/en/allgemein/opensource-com-spannender-egroupware-artikel-erste-schritte-mit-egroupware</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/allgemein/opensource-com-spannender-egroupware-artikel-erste-schritte-mit-egroupware</guid>
+      <pubDate>2022-03-09 09:00:00 +0100</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Placeholders, and automatic generation of PDF/PNG in 21.1</title>
+      <link>https://www.egroupware.org/en/news/placeholders-and-automatic-generation-of-pdf-png-in-egroupware-21-1</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/placeholders-and-automatic-generation-of-pdf-png-in-egroupware-21-1</guid>
+      <pubDate>2022-01-24 09:00:00 +0100</pubDate>
+      <description>How you can use Placeholders and automatic generation of PDF/PNG in EGroupware and Collabora online Office</description>
+    </item>
+    <item>
+      <title>Asterisk Telefon Integration with EGroupware</title>
+      <link>https://www.egroupware.org/en/news/asterisk-telefon-integration-with-egroupware</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/asterisk-telefon-integration-with-egroupware</guid>
+      <pubDate>2022-01-21 09:00:00 +0100</pubDate>
+      <description>More Information about the Asterisk Telefon Integration.</description>
+    </item>
+    <item>
+      <title>Security vulnerability log4j - EGroupware and the integrated tools are explicitly NOT affected</title>
+      <link>https://www.egroupware.org/en/news/security-vulnerability-log4j-egroupware-and-the-integrated-tools-are-explicitly-not-affected</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/security-vulnerability-log4j-egroupware-and-the-integrated-tools-are-explicitly-not-affected</guid>
+      <pubDate>2021-12-15 09:00:00 +0100</pubDate>
+      <description>EGroupware and the integrated tools are explicitly NOT affected.</description>
+    </item>
+    <item>
+      <title>EGroupware soutient le procès contre Microsoft</title>
+      <link>https://www.egroupware.org/en/news/egroupware-soutient-le-proces-contre-microsoft-2</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/egroupware-soutient-le-proces-contre-microsoft-2</guid>
+      <pubDate>2021-11-26 09:00:00 +0100</pubDate>
+      <description>Microsoft abuse de sa position dominante et nuit ainsi à l&#x27;écosystème informatique européen en liant ses services en ligne.</description>
+    </item>
+    <item>
+      <title>EGroupware supports lawsuit against Microsoft</title>
+      <link>https://www.egroupware.org/en/news/egroupware-supports-lawsuit-against-microsoft</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/egroupware-supports-lawsuit-against-microsoft</guid>
+      <pubDate>2021-11-26 09:00:00 +0100</pubDate>
+      <description>Microsoft abuses its dominant position and thus harms the European IT ecosystem by linking its online services.</description>
+    </item>
+    <item>
+      <title>CTI telephone system connection with AGFEO</title>
+      <link>https://www.egroupware.org/en/news/cti-telephone-system-connection-with-agfeo</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/cti-telephone-system-connection-with-agfeo</guid>
+      <pubDate>2021-10-04 09:00:00 +0100</pubDate>
+      <description>Integration of your AGFEO phones can be found in this article.</description>
+    </item>
+    <item>
+      <title>COOLDays 2021</title>
+      <link>https://www.egroupware.org/en/news/cooldays-2021</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/cooldays-2021</guid>
+      <pubDate>2021-09-30 09:00:00 +0100</pubDate>
+      <description>COOLDays were held for the first time. A two-day event around Collabora Online (COOL) with a presentation of EGroupware</description>
+    </item>
+    <item>
+      <title>EGroupware 21.1 freigegeben</title>
+      <link>https://www.egroupware.org/en/news/egroupware-21-1-freigegeben-2</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/egroupware-21-1-freigegeben-2</guid>
+      <pubDate>2021-05-25 09:00:00 +0100</pubDate>
+      <description>Die EGroupware Version 21.1 wurde am 25. Mai 2021 freigegeben.</description>
+    </item>
+    <item>
+      <title>EGroupware 21.1 released</title>
+      <link>https://www.egroupware.org/en/news/egroupware-21-1-released</link>
+      <guid isPermaLink="true">https://www.egroupware.org/en/news/egroupware-21-1-released</guid>
+      <pubDate>2021-05-25 09:00:00 +0100</pubDate>
+      <description>The EGroupware version 21.1 has been released on May 25, 2021.</description>
+    </item>
+  </channel>
+</rss>

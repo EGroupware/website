@@ -1,0 +1,164 @@
+/* VORSCHAU (nur Staging, vor Merge nach main entfernen) – Variante E "Kapitel mit Akzenten"
+   Entscheidung: Grundlage A (ein Hintergrund, Weissraum, Labels mit Akzentstrich),
+   Abschnittswechsel als Kapitel wie C (Titel links mitlaufend, ohne Nummern),
+   Farbakzente aus D (Kopfleisten, blaue Vergleichsspalte, gruene Kommentar-Boxen). */
+
+/* ---- Grundlage (A) ---- */
+.v-e .section--soft { background: transparent; }
+.v-e .section { padding-block: clamp(3rem, 6vw, 5rem); }
+.v-e .section--tight { padding-block: clamp(2rem, 4vw, 3rem); }
+
+.v-e .eyebrow {
+  background: none; padding: 0; border-radius: 0; gap: .75rem;
+  color: var(--text-muted); letter-spacing: .14em;
+}
+.v-e .eyebrow::before {
+  content: ""; width: 28px; height: 3px; border-radius: 2px; background: var(--primary);
+}
+.v-e .section--dark .eyebrow { color: rgba(255, 255, 255, .75); }
+.v-e .section--dark .eyebrow::before { background: var(--accent-400); }
+
+/* Linie zwischen den Kapiteln, nur so breit wie der Inhalt und genau in der Mitte:
+   kein Abstand oben am Abschnitt, dafuer derselbe Abstand unter der Linie. */
+.v-e main > .section:not(.section--dark):not(.section--tight):not(:first-of-type) > :is(.wrap, .wrap-narrow) {
+  border-top: 1px solid var(--chapter-line); padding-top: clamp(3rem, 6vw, 5rem);
+}
+/* Nach dem dunklen Band keine Linie (eigener Abstand reicht) */
+.v-e main > .section.section--dark + .section:not(.section--dark):not(.section--tight) > :is(.wrap, .wrap-narrow) { border-top: 0; padding-top: 0; }
+
+/* Logoleiste: Label wie die Kapitel-Labels, keine durchgehende Linie */
+.v-e .logo-strip { border-bottom: 0; padding-block: clamp(2.5rem, 5vw, 3.5rem) 1rem; }
+.v-e .logo-strip__label {
+  display: flex; align-items: center; justify-content: center; gap: .75rem;
+  color: var(--text-muted); letter-spacing: .14em; margin-bottom: 1.5rem;
+}
+.v-e .logo-strip__label::before {
+  content: ""; width: 28px; height: 3px; border-radius: 2px; background: var(--primary);
+}
+
+/* ---- Kapitel (C): Kopf links mitlaufend, Inhalt rechts ----
+   Nur bei linksbuendigen Abschnittskoepfen und nicht bei breiten Tabellen. */
+@media (min-width: 960px) {
+  .v-e .section > .wrap:has(> .section-head:not(.center)):not(:has(.table-wrap, .price)) {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.3fr);
+    column-gap: clamp(2rem, 4vw, 4rem); align-items: start;
+  }
+  .v-e .section > .wrap:has(> .section-head:not(.center)):not(:has(.table-wrap, .price)) > .section-head {
+    position: sticky; top: calc(var(--header-h) + 2rem); margin-bottom: 0;
+  }
+  .v-e .section > .wrap:has(> .section-head:not(.center)):not(:has(.table-wrap, .price)) > :not(.section-head) { grid-column: 2; }
+  .v-e .section > .wrap:has(> .section-head:not(.center)):not(:has(.table-wrap, .price)) > .section-head h2 {
+    font-size: clamp(1.6rem, 1.2vw + 1.1rem, 2.2rem);
+  }
+  .v-e .section > .wrap:has(> .section-head:not(.center)):not(:has(.table-wrap, .price)) .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---- Farbakzente (D) ---- */
+/* Kennzahlen: ohne Kasten, linksbuendig; Akzentlinie links verbindet Zahl und Bezeichnung */
+.v-e .stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2.5rem);
+  background: none; border: 0; border-radius: 0; overflow: visible;
+}
+.v-e .stats .stat {
+  background: none; text-align: left; padding: .2rem 0 .3rem 1.1rem;
+  border-left: 3px solid var(--primary);
+}
+.v-e .stats .stat dd { font-size: clamp(1.9rem, 3.2vw, 2.75rem); }
+.v-e .stats .stat dt {
+  margin-top: .3rem; font-size: var(--fs-sm); font-weight: 500;
+  letter-spacing: 0; text-transform: none; color: var(--text-soft);
+}
+@media (max-width: 560px) {
+  .v-e .stats .stat { padding-left: .7rem; }
+  .v-e .stats .stat dd { font-size: 1.55rem; }
+  .v-e .stats .stat dt { font-size: var(--fs-xs); }
+}
+
+/* "EGroupware auf einen Blick": Karte mit Kopfleiste und Label-Wert-Zeilen */
+.v-e #was-ist-egroupware .panel {
+  padding: 0; overflow: hidden; background: var(--bg-elevated);
+  border: 1px solid var(--border); border-radius: var(--r-md); box-shadow: none;
+}
+.v-e #was-ist-egroupware .panel .facts-h3 {
+  margin: 0; padding: .9rem 1.25rem; background: var(--st-head);
+  border-bottom: 1px solid var(--border); font-size: var(--fs-base);
+}
+.v-e #was-ist-egroupware .panel .facts { margin: 0; padding: .25rem 1.25rem .75rem; }
+
+/* Vergleich: EGroupware-Spalte in Markenblau (Gelb bleibt fuer Achtung/Geaendert) */
+.v-e .compare thead th { background: var(--st-head); }
+.v-e .compare tr > :nth-child(2) {
+  background: var(--brand-100); box-shadow: inset 4px 0 0 var(--brand-700); font-weight: 600;
+}
+.v-e .compare thead th:nth-child(2) { color: var(--text); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .v-e .compare tr > :nth-child(2) { background: var(--primary-soft); box-shadow: inset 4px 0 0 var(--primary); }
+}
+:root[data-theme="dark"] .v-e .compare tr > :nth-child(2) { background: var(--primary-soft); box-shadow: inset 4px 0 0 var(--primary); }
+
+/* Kundenstimmen als Kommentar-Boxen, Kapitel-Strich in Gruen */
+.v-e #kundenstimmen .eyebrow::before { background: var(--st-note-bar); }
+.v-e .quote {
+  background: var(--st-note-bg); border: 0; border-left: 4px solid var(--st-note-bar);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+}
+.v-e .quote-tag {
+  align-self: flex-start; border-radius: 4px; letter-spacing: .06em;
+  background: var(--bg-elevated); color: var(--text-soft); border: 1px solid var(--border-strong);
+}
+.v-e .quote-metric { border-radius: 4px; background: var(--st-ok-bg); color: var(--st-ok); }
+
+/* FAQ: geoeffnete Frage bekommt die Kopfleiste */
+.v-e .faq details[open] summary { background: var(--st-head); border-bottom: 1px solid var(--border); }
+.v-e .faq details[open] .faq-body { padding-top: 1rem; }
+
+/* ---- Einheitliche Einleitungstexte ----
+   Der erste Absatz nach einer Abschnittsueberschrift hat immer dieselbe Groesse,
+   egal ob Abschnittskopf, zweispaltiger Abschnitt oder Abschluss-Band. */
+.v-e main .section h2 + p,
+.v-e main .section h2 + .lead-sm,
+.v-e main .section .section-head p {
+  font-size: var(--fs-lg); line-height: 1.6; margin-top: .9rem;
+}
+.v-e main > .section:not(.section--dark):not(.section--tight):not(:first-of-type) { padding-top: 0; }
+.v-e main > .section--dark + .section { padding-top: clamp(3rem, 6vw, 5rem) !important; }
+
+/* Einleitungstexte unter Ueberschriften ebenfalls nicht trennen */
+.v-e main .section h2 + p,
+.v-e main .section h2 + .lead-sm,
+.v-e main .section .section-head p { hyphens: manual; }
+
+/* Farbe der Kapitel-Linie: kraeftiger als die normalen Rahmen */
+.v-e { --chapter-line: color-mix(in srgb, var(--n-400) 60%, var(--n-300)); }
+@media (prefers-color-scheme: dark) {
+  :root.v-e:not([data-theme="light"]) { --chapter-line: #4d5d78; }
+}
+:root.v-e[data-theme="dark"] { --chapter-line: #4d5d78; }
+
+/* Merkmale im Kopfbereich: ruhige Zeile statt Pillen-Rahmen,
+   Icon in Akzentfarbe, duenne Linie darueber trennt sie von den Buttons. */
+.v-e .hero-pills {
+  display: grid; grid-template-columns: repeat(2, max-content);
+  gap: .7rem 2.5rem; margin-top: 2rem; padding-top: 1.25rem;
+  border-top: 1px solid var(--border); max-width: 36rem;
+}
+.v-e .hero-pills .pill {
+  background: none; border: 0; padding: 0; border-radius: 0;
+  font-size: var(--fs-sm); color: var(--text-soft); white-space: nowrap; gap: .45rem;
+}
+.v-e .hero-pills .pill svg { width: 17px; height: 17px; color: var(--primary); }
+/* Einleitung im Kopfbereich nicht trennen */
+.v-e .hero .lead { hyphens: manual; }
+@media (max-width: 420px) { .v-e .hero-pills { grid-template-columns: 1fr; } }
+
+/* Ueberschriften durchgaengig links: auch bisher zentrierte Abschnittskoepfe,
+   die Logoleiste und die FAQ (dort Spalte schmal, aber an der linken Kante). */
+.v-e .section-head.center { margin-inline: 0; text-align: left; }
+.v-e .btn-row.center { justify-content: flex-start; }
+.v-e .logo-strip__label { justify-content: flex-start; text-align: left; }
+.v-e .logo-strip__list { justify-content: start; }
+.v-e main .wrap-narrow { width: min(100% - 2.5rem, var(--wrap)); }
+.v-e main .wrap-narrow > * { max-width: var(--wrap-narrow); }
+@media (max-width: 400px) { .v-e main .wrap-narrow { width: min(100% - 1.75rem, var(--wrap)); } }
