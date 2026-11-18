@@ -28,6 +28,12 @@ aufgerufen (mit Staging-Login, ohne Weiterleitungen zu folgen). Ergebnis:
   `/en/news/giornata-delleducazione-aperta-2021` (nicht aus dieser Liste, offenbar eine
   bestehende Serverregel). Das Ziel ist selbst eine Meta-Refresh-Datei; besser direkt auf
   `/en/events/open-education-day-2021` leiten.
+- **Server-Aufgabe, nicht Weiterleitung – `/.well-known/` auf www freigeben:** Seit 18.11.2026
+  liegt `.well-known/security.txt` im Repo (CRA-Pflicht, RFC 9116). Staging liefert sie aus
+  (200), www2 antwortet mit 404 (Deployment lief erfolgreich). Vermutlich sperrt die nginx-Regel
+  auf www2 alle Punkt-Ordner statt nur `/.claude/`. Bitte `/.well-known/` erlauben, `/.claude/`
+  weiter gesperrt lassen. Prüfen: `https://www.egroupware.org/.well-known/security.txt` → 200,
+  `text/plain`.
 - **Neu seit 18.11.2026:** Design-Vorschauseiten `/de/vorschau-design-*` gelöscht → 301 auf `/de/`
   (siehe erste Tabelle).
 
