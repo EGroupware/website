@@ -1,0 +1,6 @@
+Contact: mailto:security@egroupware.org
+Contact: https://github.com/EGroupware/egroupware/security/advisories/new
+Policy: https://github.com/EGroupware/egroupware/blob/master/SECURITY.md
+Preferred-Languages: de, en
+Canonical: https://www.egroupware.org/.well-known/security.txt
+Expires: 2027-11-18T00:00:00.000Z
