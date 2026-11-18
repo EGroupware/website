@@ -10,30 +10,17 @@ Status: *offen* → *eingerichtet am …* (dann kann die HTML-Weiterleitung weg)
 
 Alle Adressen ohne `.html`, relativ zu `https://www.egroupware.org`.
 
-## Prüfstand 18.11.2026 (www2.egroupware.org, main)
+## Prüfstand 18.11.2026 (www.egroupware.org, neue Seite)
 
-Alle alten Adressen aus den Tabellen unten wurden am 18.11.2026 auf www2.egroupware.org
-aufgerufen (mit Staging-Login, ohne Weiterleitungen zu folgen). Ergebnis:
+Alle alten Adressen aus den Tabellen unten wurden am 18.11.2026 auf www.egroupware.org
+aufgerufen (ohne Weiterleitungen zu folgen). Hinweis: www2 zeigt vorübergehend noch die alte
+WordPress-Seite und ist für diese Prüfung nicht maßgeblich. Ergebnis:
 
 - **Keine einzige Server-301 eingerichtet.** Alle Einträge stehen daher zu Recht auf *offen*.
-- **37 Adressen → 200:** Das sind die Meta-Refresh-Dateien (Spalte „Übergang“). Nach dem
-  Einrichten der 301 kann die jeweilige HTML-Datei aus dem Repo gelöscht werden.
-- **21 Kundenstimmen → 404:** Erwartet, es gibt keine Übergangsdatei. Brauchen die 301.
-- **Auffällig, bitte prüfen – 4 Adressen → 404, obwohl die Meta-Refresh-Datei auf `main` liegt:**
-  `/de/kollaborationswerkzeuge`, `/en/integration-partners`, `/de/egroupware-26`,
-  `/en/egroupware-26` (auch mit `.html` 404). Zum Vergleich: `/de/warum-cloud` liefert 200.
-  Ursache unklar (unvollständiges Deployment oder eine Serverregel?). Mit der 301 erledigt sich
-  das, die Ursache sollte trotzdem geklärt werden, falls auch andere Seiten betroffen sind.
-- Nebenbei: `/en/notizie/giornata-delleducazione-aperta-2021` antwortet bereits mit 301 auf
-  `/en/news/giornata-delleducazione-aperta-2021` (nicht aus dieser Liste, offenbar eine
-  bestehende Serverregel). Das Ziel ist selbst eine Meta-Refresh-Datei; besser direkt auf
-  `/en/events/open-education-day-2021` leiten.
-- **Server-Aufgabe, nicht Weiterleitung – `/.well-known/` auf www freigeben:** Seit 18.11.2026
-  liegt `.well-known/security.txt` im Repo (CRA-Pflicht, RFC 9116). Staging liefert sie aus
-  (200), www2 antwortet mit 404 (Deployment lief erfolgreich). Vermutlich sperrt die nginx-Regel
-  auf www2 alle Punkt-Ordner statt nur `/.claude/`. Bitte `/.well-known/` erlauben, `/.claude/`
-  weiter gesperrt lassen. Prüfen: `https://www.egroupware.org/.well-known/security.txt` → 200,
-  `text/plain`.
+- **Alle Adressen mit Meta-Refresh-Datei → 200** (Spalte „Übergang“). Nach dem Einrichten der
+  301 kann die jeweilige HTML-Datei aus dem Repo gelöscht werden.
+- **Kundenstimmen und `/en/privacy-policy` → 404:** Erwartet, es gibt keine Übergangsdatei.
+  Diese brauchen die 301 am dringendsten.
 - **Neu seit 18.11.2026:** Design-Vorschauseiten `/de/vorschau-design-*` gelöscht → 301 auf `/de/`
   (siehe erste Tabelle).
 
