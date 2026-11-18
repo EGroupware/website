@@ -10,6 +10,31 @@ Status: *offen* → *eingerichtet am …* (dann kann die HTML-Weiterleitung weg)
 
 Alle Adressen ohne `.html`, relativ zu `https://www.egroupware.org`.
 
+## Prüfstand 18.11.2026 (www2.egroupware.org, main)
+
+Alle alten Adressen aus den Tabellen unten wurden am 18.11.2026 auf www2.egroupware.org
+aufgerufen (mit Staging-Login, ohne Weiterleitungen zu folgen). Ergebnis:
+
+- **Keine einzige Server-301 eingerichtet.** Alle Einträge stehen daher zu Recht auf *offen*.
+- **37 Adressen → 200:** Das sind die Meta-Refresh-Dateien (Spalte „Übergang“). Nach dem
+  Einrichten der 301 kann die jeweilige HTML-Datei aus dem Repo gelöscht werden.
+- **21 Kundenstimmen → 404:** Erwartet, es gibt keine Übergangsdatei. Brauchen die 301.
+- **Auffällig, bitte prüfen – 4 Adressen → 404, obwohl die Meta-Refresh-Datei auf `main` liegt:**
+  `/de/kollaborationswerkzeuge`, `/en/integration-partners`, `/de/egroupware-26`,
+  `/en/egroupware-26` (auch mit `.html` 404). Zum Vergleich: `/de/warum-cloud` liefert 200.
+  Ursache unklar (unvollständiges Deployment oder eine Serverregel?). Mit der 301 erledigt sich
+  das, die Ursache sollte trotzdem geklärt werden, falls auch andere Seiten betroffen sind.
+- Nebenbei: `/en/notizie/giornata-delleducazione-aperta-2021` antwortet bereits mit 301 auf
+  `/en/news/giornata-delleducazione-aperta-2021` (nicht aus dieser Liste, offenbar eine
+  bestehende Serverregel). Das Ziel ist selbst eine Meta-Refresh-Datei; besser direkt auf
+  `/en/events/open-education-day-2021` leiten.
+- **Neu seit 18.11.2026:** Design-Vorschauseiten `/de/vorschau-design-*` gelöscht → 301 auf `/de/`
+  (siehe erste Tabelle).
+
+**Prüfen nach dem Einrichten:** Für jede Zeile `curl -s -o /dev/null -w "%{http_code} %{redirect_url}"`
+auf die alte Adresse – erwartet wird `301` mit der neuen Adresse aus der Tabelle. Danach Status
+auf *eingerichtet am …* setzen und die Meta-Refresh-Dateien entfernen.
+
 ## Seiten zusammengelegt oder entfernt
 
 | Alte Adresse | Neue Adresse | Grund | Seit | Übergang | Status |
