@@ -45,9 +45,40 @@ www.egroupware.org:
 - `/feed`, `/de/feed`, `/en/feed` → **404**; `/de/feed.xml` und `/en/feed.xml` funktionieren.
 - `/wp-content/uploads/…` → **404** wie erwartet.
 
-Das sind keine der oben gelisteten Einzeladressen, sondern Muster – noch offen, ob/wie sie
-behoben werden sollen (z. B. generische try_files- oder rewrite-Regeln). Noch nicht umgesetzt,
-Ralf entscheidet.
+Das sind keine der oben gelisteten Einzeladressen, sondern Muster.
+
+## Zusammenfassung 19.11.2026: was erledigt ist, was offen bleibt
+
+**Erledigt:**
+
+- Alle 64 Adressen aus den vier Tabellen unten: 301 live auf www.egroupware.org und
+  staging.egroupware.org (gemeinsames nginx-Snippet `weiterleitungen.conf`, stichprobenartig
+  verifiziert). Status auf *eingerichtet am 19.11.2026* gesetzt.
+- Die 41 Meta-Refresh-Dateien aus dem Repo gelöscht (Übergang → „–“), `staging` nach `main`
+  gemergt, deployt.
+- GitHub-Actions-Workflow für den Produktiv-Deploy umbenannt (hieß noch „currently
+  www2.egroupware.org“ von vor dem Umzug).
+- Drei der vier Muster aus „Beim Umstieg von WordPress prüfen“ sind jetzt ebenfalls per nginx
+  gelöst (zweites gemeinsames Snippet `wp-migration-fixes.conf`, auf beiden Domains aktiv):
+  - Schrägstrich am Ende (`/de/preise/`) → 301 auf die Adresse ohne Schrägstrich, sofern die
+    passende `.html`-Datei existiert; echte Verzeichnis-Seiten (z. B. `/de/`, `/en/`) bleiben
+    unverändert 200.
+  - `.html`-Adressen (`/de/preise.html`) → 301 auf die Adresse ohne `.html`. Ausnahme bewusst:
+    `.../index.html` wird NICHT umgeschrieben (sonst Redirect-Loop bei jeder Verzeichnis-Seite),
+    bleibt also wie bisher direkt erreichbar – betrifft aber keine bekannte, verlinkte Adresse.
+  - `/feed`, `/de/feed`, `/en/feed` → 301 auf `/de/feed.xml` bzw. `/en/feed.xml`. **Das nackte
+    `/feed` zeigt vorerst auf die deutsche Fassung (Ralfs Entscheidung, 19.11.2026) – Birgit/
+    Marketing können das bei Bedarf auf Englisch ändern, falls das die falsche Standardsprache
+    ist.**
+
+**Noch offen (Entscheidung bei Birgit/Marketing):**
+
+- `/wp-content/uploads/…` → weiterhin 404. Die Bilder existieren nur noch auf www2 (altes
+  WordPress, passwortgeschützt). Zwei ältere Presseartikel verlinken noch dorthin. Optionen:
+  (a) so lassen (404), (b) die betroffenen Bilder einzeln kopieren/neu hochladen und gezielt
+  umleiten, oder (c) `/wp-content/uploads/` serverseitig auf www2 durchreichen (würde eine
+  Ausnahme vom Passwortschutz nur für diesen Pfad erfordern – echte Abwägung, keine reine
+  Konfigänderung).
 
 ## Seiten zusammengelegt oder entfernt
 
