@@ -1,0 +1,5 @@
+# /currentversion is hand-managed directly on the server (not part of this
+# repo's content) - see .claude/weiterleitungen.md discussion 2026-11-19.
+# Ignored so it's never accidentally added/committed, which would make the
+# next deploy's `git reset --hard` overwrite the server-managed file.
+/currentversion
