@@ -1,4 +1,4 @@
-name: Deploy egroupware.org site (currently www2.egroupware.org)
+name: Deploy egroupware.org site (www.egroupware.org)
 
 on:
   push:
