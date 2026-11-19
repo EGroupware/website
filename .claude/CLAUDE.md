@@ -133,11 +133,20 @@ eine Übersetzung dazukommt (`hreflang`) oder sich `noindex` ändert – im selb
 ## Seite löschen oder umbenennen
 
 - Alte Adresse nie einfach ins Leere laufen lassen: in **`.claude/weiterleitungen.md`** eintragen
-  (alte Adresse, neue Adresse, Grund, Datum, Status „offen“). Ralf richtet daraus die
-  dauerhaften Weiterleitungen (301) auf dem Server ein.
-- Bis dahin unter der alten Adresse eine kleine HTML-Weiterleitung lassen (`noindex`, `canonical`
-  auf die neue Seite, `meta refresh`), Links im Menü und in Texten auf die neue Adresse umstellen
-  und die Sitemap neu erzeugen (siehe „Sitemap“).
+  (alte Adresse, neue Adresse, Grund, Datum, Status „offen“). Ralf richtet daraus zeitnah
+  (meist am selben Tag) die dauerhaften Weiterleitungen (301) auf dem Server ein – seit
+  19.11.2026 serverseitig per nginx-Snippet, gemeinsam für www.egroupware.org und
+  staging.egroupware.org.
+- **Keine Meta-Refresh-Seite mehr anlegen.** Das war der Zwischenschritt, bis der Server-301
+  eingerichtet war; seit die 301 zeitnah eingerichtet werden, entfällt er. Alte Seite beim
+  Löschen/Umbenennen einfach entfernen, nicht durch eine Weiterleitungsseite ersetzen.
+- Links im Menü und in Texten sofort auf die neue Adresse umstellen und die Sitemap neu
+  erzeugen (siehe „Sitemap“).
+- **Schrägstrich am Ende oder `.html` in der alten Adresse** (z. B. `/de/alte-seite/` oder
+  `/de/alte-seite.html`) müssen nicht einzeln eingetragen werden: zwei allgemeine nginx-Regeln
+  fangen das automatisch ab und leiten auf die Adresse ohne Schrägstrich/`.html` weiter, sofern
+  diese existiert. Ausnahme: `.../index.html` ist davon bewusst ausgenommen (sonst
+  Redirect-Loop bei Verzeichnis-Seiten) und bleibt wie gehabt direkt erreichbar.
 
 ## Design und CSS
 
