@@ -134,6 +134,9 @@ Nginx-Snippet: `/etc/nginx/snippets/wp-config-redirects.conf`, eingebunden direk
 | `/en/egroupware-26` | `/en/whats-new` | Release-Seite verallgemeinert | 09.11.2026 | – | eingerichtet am 19.11.2026 |
 | `/en/privacy-policy` | `/en/privacy` | Alte Adresse der Datenschutzerklärung (WordPress), wird z. B. bei meetergo verlinkt | 10.11.2026 | – | eingerichtet am 19.11.2026 |
 | `/de/vorschau-design-*` (original, a–e) | `/de/` | Design-Vorschauseiten entfernt (waren noindex, nur einen Tag auf main) | 18.11.2026 | – | eingerichtet am 19.11.2026 |
+| `/fr/instance-non-trouvee` | `/en/noinstancefound` | „Instanz nicht gefunden“-Seite (Ziel der Cloud-Weiterleitung) nur noch DE/EN; andere Sprachen → Englisch | 19.11.2026 | – | offen |
+| `/es/instancia-no-encontrada` | `/en/noinstancefound` | „Instanz nicht gefunden“-Seite (Ziel der Cloud-Weiterleitung) nur noch DE/EN; andere Sprachen → Englisch | 19.11.2026 | – | offen |
+| `/fr/*`, `/es/*`, `/it/*` (alle übrigen Adressen) | `/en/` | Website nur noch DE/EN, frühere WPML-Sprachen werden auf Englisch geleitet (Entscheidung Birgit 19.11.2026). Die beiden Einzelregeln darüber haben Vorrang. | 19.11.2026 | – | offen |
 
 ## Kundenstimmen umbenannt
 
