@@ -78,7 +78,45 @@ Das sind keine der oben gelisteten Einzeladressen, sondern Muster.
   (a) so lassen (404), (b) die betroffenen Bilder einzeln kopieren/neu hochladen und gezielt
   umleiten, oder (c) `/wp-content/uploads/` serverseitig auf www2 durchreichen (würde eine
   Ausnahme vom Passwortschutz nur für diesen Pfad erfordern – echte Abwägung, keine reine
-  Konfigänderung).
+  Konfigänderung). Betrifft auch die zwei PDF-Weiterleitungen in der Tabelle unten
+  (`/fileadmin/files/agb/...pdf`), deren Ziel ebenfalls unter `/wp-content/uploads/` liegt.
+- `/smallpart-video-supported-learning-and-teaching/` (aus `wp-config.php`, Tabelle unten):
+  keine erkennbare 1:1-Nachfolgeseite auf der neuen Seite gefunden. Bleibt vorerst 404 – wenn
+  Birgit/Marketing eine passende Zielseite nennt, kann die Weiterleitung ergänzt werden.
+
+## Weitere Weiterleitungen aus wp-config.php der alten WordPress-Seite (gefunden 19.11.2026)
+
+Ralf hatte in der alten WordPress-Installation (`wp-config.php`, Kommentar „Ralf's changes“) ein
+eigenes `$redirects`-Array, das noch **vor** dem eigentlichen WordPress-Start per `header()`+`exit`
+griff – deshalb tauchten diese Adressen in keiner der bisherigen Prüfungen/Plugins auf. Beim
+Umzug auf die neue statische Seite wurden sie übersehen. Alle unten stehenden (außer den beiden
+offenen oben) sind jetzt per nginx nachgebaut und am 19.11.2026 live verifiziert (301, auf beiden
+Domains).
+
+| Alte Adresse | Neue Adresse | Hinweis | Status |
+| - | - | - | - |
+| `/changelog` | `https://github.com/EGroupware/egroupware/releases` | unverändert (externes Ziel) | eingerichtet am 19.11.2026 |
+| `/forum` | `https://help.egroupware.org/` | Ziel in `wp-config.php` war `help.egropware.org` (Tippfehler, fehlendes „u“, lässt sich nicht auflösen) – hier korrigiert | eingerichtet am 19.11.2026 |
+| `/EPL` | `/de/community-edition-vs-epl` | Altes relatives Ziel (`/egroupware-ce-vs-epl`) existiert nicht mehr; Standard Deutsch, analog zur `/feed`-Entscheidung | eingerichtet am 19.11.2026 |
+| `/epl` | `/de/community-edition-vs-epl` | s.o. | eingerichtet am 19.11.2026 |
+| `/products` | `/de/community-edition-vs-epl` | s.o. | eingerichtet am 19.11.2026 |
+| `/egroupware-support/` | `/de/support` | altes Ziel `/professional-support` existiert nicht mehr | eingerichtet am 19.11.2026 |
+| `/happy-people/partners/` | `/de/technologiepartner` | altes Ziel `/partner` existiert nicht mehr | eingerichtet am 19.11.2026 |
+| `/collabora-office/` | `/de/preise#Onlineoffice` | Anker aus dem Original übernommen, nicht neu geprüft | eingerichtet am 19.11.2026 |
+| `/rocketchat/` | `/de/chat` | altes Ziel `/chat` (ohne Sprachpräfix) existiert so nicht mehr | eingerichtet am 19.11.2026 |
+| `/start/rss.xml` | `/feed` | läuft in die bestehende `/feed`-Regel (→ `/de/feed.xml`) | eingerichtet am 19.11.2026 |
+| `/index.php?module=news_admin&cat_id=95,200` | `/feed` | alte TYPO3-Adresse, läuft in die bestehende `/feed`-Regel | eingerichtet am 19.11.2026 |
+| `/index.php?module=news_admin&cat_id=3,200` | `/feed` | alte TYPO3-Adresse, läuft in die bestehende `/feed`-Regel | eingerichtet am 19.11.2026 |
+| `/fileadmin/files/agb/EGroupware-Geschaeftsbedingungen.pdf` | `/wp-content/uploads/2016/10/EGroupware_terms_and_conditions.pdf` | Ziel liegt unter `/wp-content/uploads/`, siehe offener Punkt oben | offen |
+| `/fileadmin/files/agb/EGroupware-terms-and-conditions.pdf` | `/wp-content/uploads/2016/10/EGroupware_terms_and_conditions.pdf` | s.o. | offen |
+| `/etemplate2.0.dtd` | GitHub-Rohdatei (`doc/etemplate2/etemplate2.0.dtd`, master) | unverändert (externes Ziel); evtl. noch von alten EGroupware-Installationen als Schema-URL referenziert | eingerichtet am 19.11.2026 |
+| `/etemplate2.0.rng` | GitHub-Rohdatei (`doc/etemplate2/etemplate2.0.rng`, master) | s.o. | eingerichtet am 19.11.2026 |
+| `/etemplate2.dtd` | GitHub-Rohdatei (`doc/etemplate2/etemplate2.dtd`, master) | s.o. | eingerichtet am 19.11.2026 |
+| `/etemplate2.rng` | GitHub-Rohdatei (`doc/etemplate2/etemplate2.rng`, master) | s.o. | eingerichtet am 19.11.2026 |
+| `/smallpart-video-supported-learning-and-teaching/` | `/video-supported-learning` | altes Ziel existiert nicht mehr, keine passende Nachfolgeseite gefunden | offen, siehe offener Punkt oben |
+
+Nginx-Snippet: `/etc/nginx/snippets/wp-config-redirects.conf`, eingebunden direkt nach
+`wp-migration-fixes.conf` auf www.egroupware.org und staging.egroupware.org.
 
 ## Seiten zusammengelegt oder entfernt
 
