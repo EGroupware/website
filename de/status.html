@@ -156,7 +156,7 @@
         <div class="status-board">
           <div class="status-board__head">
             <h2 id="status-aktuell">Aktueller Status</h2>
-            <span class="status-board__stand">Stand: 04.11.2026</span>
+            <span class="status-board__stand">Stand: 21.11.2026</span>
           </div>
           <ul class="status-board__list" aria-labelledby="status-aktuell">
               <li data-service="cloud"><span class="status-board__svc">EGroupware Cloud</span><span class="st-badge st-badge--ok">IN BETRIEB</span></li>
@@ -182,8 +182,19 @@
         </dl>
         <div class="status-history">
         <details class="status-year" open>
-          <summary><span>2026</span> <span class="status-year__count">19 Meldungen</span></summary>
+          <summary><span>2026</span> <span class="status-year__count">20 Meldungen</span></summary>
           <div class="status-year__list">
+            <article class="incident incident--wartung">
+              <header class="incident__head"><h3>EGroupware Cloud: Sicherheits&shy;updates für nginx und PHP, Donnerstag, 19. November 2026</h3><span class="st-badge st-badge--wartung">WARTUNG</span></header>
+              <div class="incident__body">
+                <p>Alle Instanzen der EGroupware Cloud sind auf dem aktuellen Stand:</p>
+                <ul>
+                  <li><strong>nginx („nginx2root“, u. a. CVE-2026-123007):</strong> Alle Cloud-Instanzen wurden am 19. November 2026 auf die korrigierte Version aktualisiert.</li>
+                  <li><strong>PHP-&#8288;Sicherheits&shy;updates vom 19. November 2026:</strong> Alle Cloud-Instanzen laufen seit dem 19. November 2026 mit PHP 8.5.13 und EGroupware 26.11.20261119, das zusätzlich weitere Sicherheits&shy;korrekturen enthält.</li>
+                </ul>
+                <p>Für Cloud-Kunden besteht kein Handlungsbedarf. Eine Ausnutzung der Lücken in der EGroupware Cloud ist uns nicht bekannt.</p>
+              </div>
+            </article>
             <article class="incident incident--update">
               <header class="incident__head"><h3>Update zum Vorfall vom 30. September 2026: Ursache gefunden und behoben</h3><span class="st-badge st-badge--update">UPDATE</span></header>
               <div class="incident__body">

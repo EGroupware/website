@@ -156,7 +156,7 @@
         <div class="status-board">
           <div class="status-board__head">
             <h2 id="status-aktuell">Current status</h2>
-            <span class="status-board__stand">As of: 04 Nov 2026</span>
+            <span class="status-board__stand">As of: 21 Nov 2026</span>
           </div>
           <ul class="status-board__list" aria-labelledby="status-aktuell">
               <li data-service="cloud"><span class="status-board__svc">EGroupware Cloud</span><span class="st-badge st-badge--ok">OPERATIONAL</span></li>
@@ -182,8 +182,19 @@
         </dl>
         <div class="status-history">
         <details class="status-year" open>
-          <summary><span>2026</span> <span class="status-year__count">19 reports</span></summary>
+          <summary><span>2026</span> <span class="status-year__count">20 reports</span></summary>
           <div class="status-year__list">
+            <article class="incident incident--wartung">
+              <header class="incident__head"><h3>EGroupware Cloud: security updates for nginx and PHP, Thursday 19 November 2026</h3><span class="st-badge st-badge--wartung">MAINTENANCE</span></header>
+              <div class="incident__body">
+                <p>All EGroupware Cloud instances are up to date:</p>
+                <ul>
+                  <li><strong>nginx ("nginx2root", including CVE-2026-123007):</strong> All cloud instances were updated to the fixed version on 19 November 2026.</li>
+                  <li><strong>PHP security releases of 19 November 2026:</strong> Since 19 November 2026, all cloud instances have been running PHP 8.5.13 and EGroupware 26.11.20261119, which also contains further security fixes.</li>
+                </ul>
+                <p>No action is required from cloud customers. We are not aware of any exploitation of these vulnerabilities in the EGroupware Cloud.</p>
+              </div>
+            </article>
             <article class="incident incident--update">
               <header class="incident__head"><h3>Update on the incident of 30 September 2026: root cause found and fixed</h3><span class="st-badge st-badge--update">UPDATE</span></header>
               <div class="incident__body">
