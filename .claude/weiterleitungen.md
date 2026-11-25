@@ -10,7 +10,7 @@ Status: *offen* → *eingerichtet am …* (dann kann die HTML-Weiterleitung weg)
 
 Alle Adressen ohne `.html`, relativ zu `https://www.egroupware.org`.
 
-## Offen (25.11.2026): Adressen ohne Sprachkürzel nach Browsersprache weiterleiten
+## Eingerichtet (25.11.2026): Adressen ohne Sprachkürzel nach Browsersprache weiterleiten
 
 **Wunsch Birgit:** Auf der alten WordPress-Seite ging z. B. `www.egroupware.org/status` ohne `de/`
 oder `en/` und landete auf der Statusseite. Auf der neuen Seite gibt das 404 (geprüft 25.11.2026).
@@ -28,28 +28,31 @@ leiten. Sonst wie bisher 404.
   jeweilige Sprache: `/kalender` → `/de/kalender`, `/calendar` → `/en/calendar`. Das ist so gewollt.
 - Echte Dateien, Ordner und die bestehenden 301-Regeln haben Vorrang.
 
-Skizze (die `map` für die Startseite gibt es vermutlich schon, dann diese wiederverwenden):
+Umgesetzt wie skizziert, mit dem bereits vorhandenen `$lang_prefix`-Mapping aus
+`/etc/nginx/conf.d/lang-negotiation.conf` (keine zweite `map` angelegt):
 
 ```nginx
-map $http_accept_language $egw_lang { default en; ~*^de de; }
-
 location / {
     try_files $uri $uri.html $uri/ @lang;
 }
 location @lang {
-    add_header Vary Accept-Language always;
-    if (-f $document_root/$egw_lang$uri.html) { return 302 /$egw_lang$uri; }
-    if (-f $document_root/de$uri.html)        { return 302 /de$uri; }
-    if (-f $document_root/en$uri.html)        { return 302 /en$uri; }
+    add_header Vary "Accept-Language" always;
+    if (-f $document_root/$lang_prefix$uri.html) { return 302 /$lang_prefix$uri; }
+    if (-f $document_root/de$uri.html)           { return 302 /de$uri; }
+    if (-f $document_root/en$uri.html)           { return 302 /en$uri; }
     return 404;
 }
 ```
 
-**Prüfen:** `curl -sI -H "Accept-Language: de-DE" https://www.egroupware.org/status` → 302 auf
-`/de/status`; dasselbe mit `en-US` → `/en/status`; `/kalender` → `/de/kalender`;
-`/gibtsnicht` → 404.
+Liegt als neues Snippet `/etc/nginx/snippets/lang-fallback.conf` auf docker.egroupware.org,
+eingebunden in `www.egroupware.org` (`/root/egroupware.org/nginx.conf`) und
+`staging.egroupware.org` direkt nach dem `wp-config-redirects.conf`-Include.
 
-Status: offen
+**Geprüft 25.11.2026:** `curl -sI -H "Accept-Language: de-DE" https://www.egroupware.org/status` →
+302 auf `/de/status`; dasselbe mit `en-US` → `/en/status`; `/kalender` → `/de/kalender`;
+`/calendar` → `/en/calendar`; `/gibtsnicht` → 404; `/` und bestehende 301-Regeln unverändert.
+
+Status: eingerichtet am 25.11.2026
 
 ## Prüfstand 18.11.2026 (www.egroupware.org, neue Seite)
 
