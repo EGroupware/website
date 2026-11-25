@@ -10,6 +10,47 @@ Status: *offen* → *eingerichtet am …* (dann kann die HTML-Weiterleitung weg)
 
 Alle Adressen ohne `.html`, relativ zu `https://www.egroupware.org`.
 
+## Offen (25.11.2026): Adressen ohne Sprachkürzel nach Browsersprache weiterleiten
+
+**Wunsch Birgit:** Auf der alten WordPress-Seite ging z. B. `www.egroupware.org/status` ohne `de/`
+oder `en/` und landete auf der Statusseite. Auf der neuen Seite gibt das 404 (geprüft 25.11.2026).
+Das soll **allgemein per Regel** funktionieren, nicht Seite für Seite.
+
+**Regel:** Gibt es eine Adresse `/xyz` nicht, aber `de/xyz.html` und/oder `en/xyz.html`, dann
+weiterleiten auf die passende Sprache, gewählt nach `Accept-Language`, genau wie bei der Startseite
+(`/` → `/de/` bzw. `/en/` funktioniert bereits). Gibt es die Seite nur in einer Sprache, dorthin
+leiten. Sonst wie bisher 404.
+
+- **302, nicht 301:** Das Ziel hängt vom Browser ab und darf nicht dauerhaft gecacht werden
+  (dazu `Vary: Accept-Language`).
+- **Sprachwahl gibt es nur bei gleichnamigen Seiten** (derzeit 23, z. B. `status`, `blog`, `support`, `demo`, `crm`, `download`).
+  Wo DE und EN verschiedene Slugs haben (`kalender`/`calendar`), greift die Regel nur für die
+  jeweilige Sprache: `/kalender` → `/de/kalender`, `/calendar` → `/en/calendar`. Das ist so gewollt.
+- Echte Dateien, Ordner und die bestehenden 301-Regeln haben Vorrang.
+
+Skizze (die `map` für die Startseite gibt es vermutlich schon, dann diese wiederverwenden):
+
+```nginx
+map $http_accept_language $egw_lang { default en; ~*^de de; }
+
+location / {
+    try_files $uri $uri.html $uri/ @lang;
+}
+location @lang {
+    add_header Vary Accept-Language always;
+    if (-f $document_root/$egw_lang$uri.html) { return 302 /$egw_lang$uri; }
+    if (-f $document_root/de$uri.html)        { return 302 /de$uri; }
+    if (-f $document_root/en$uri.html)        { return 302 /en$uri; }
+    return 404;
+}
+```
+
+**Prüfen:** `curl -sI -H "Accept-Language: de-DE" https://www.egroupware.org/status` → 302 auf
+`/de/status`; dasselbe mit `en-US` → `/en/status`; `/kalender` → `/de/kalender`;
+`/gibtsnicht` → 404.
+
+Status: offen
+
 ## Prüfstand 18.11.2026 (www.egroupware.org, neue Seite)
 
 Alle alten Adressen aus den Tabellen unten wurden am 18.11.2026 auf www.egroupware.org
