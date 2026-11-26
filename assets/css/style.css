@@ -2716,15 +2716,21 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 @media print { .livechat-start { display: none; } }
 
 /* -- Kennzahlen mit Symbol ---- */
-/* Symbol im dunklen EGroupware-Blau (Logo) statt Akzentlinie links */
+/* Symbol im dunklen EGroupware-Blau (Logo) statt Akzentlinie links, linksbuendig ueber der grauen Bezeichnung */
 .stats .stat { border-left: 0; padding-left: 0; }
 .stats .stat .stat-icon {
-  display: inline-block; width: .72em; height: .72em; margin-right: .3em;
-  vertical-align: -.05em; color: #4177a2;
+  display: block; width: 1.5rem; height: 1.5rem; margin-bottom: -.2rem;
+  color: #4177a2;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .stats .stat .stat-icon { color: var(--brand-300); } }
 :root[data-theme="dark"] .stats .stat .stat-icon { color: var(--brand-300); }
 @media (max-width: 560px) { .stats .stat { padding-left: 0; } }
+/* Schmale Fenster und Handy: Zahl oben, darunter Symbol und Bezeichnung nebeneinander */
+@media (max-width: 1023px) {
+  .stats .stat { flex-direction: column; align-items: flex-start; }
+  .stats .stat dt { display: flex; align-items: flex-start; gap: .35rem; }
+  .stats .stat .stat-icon { width: 1.15em; height: 1.15em; margin: .1em 0 0; flex: none; }
+}
 
 /* -- Kundenlogos unter den Kennzahlen ---- */
 /* Weniger Abstand zu den Kennzahlen darueber, mehr Luft bis zur Trennlinie darunter */
