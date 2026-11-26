@@ -2113,14 +2113,14 @@ main > .section.section--dark + .section:not(.section--dark):not(.section--tight
 .stats .stat {
   display: flex; flex-wrap: wrap; align-items: baseline; column-gap: .5rem; row-gap: .1rem;
 }
-.stats .stat dd { font-size: clamp(1.5rem, 2.2vw, 2rem); }
+.stats .stat dd { font-size: clamp(1.75rem, 2.7vw, 2.4rem); }
 .stats .stat dt {
   margin-top: 0; font-size: var(--fs-base); font-weight: 500;
   letter-spacing: 0; text-transform: none; color: var(--text-soft);
 }
 @media (max-width: 560px) {
   .stats .stat { padding-left: .7rem; }
-  .stats .stat dd { font-size: 1.35rem; }
+  .stats .stat dd { font-size: 1.45rem; }
   .stats .stat dt { font-size: var(--fs-sm); }
 }
 
@@ -2716,3 +2716,19 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 .livechat-start svg { width: 24px; height: 24px; }
 .livechat-start[aria-busy] { cursor: progress; opacity: .85; }
 @media print { .livechat-start { display: none; } }
+
+/* -- Kennzahlen mit Symbol ---- */
+/* Symbol im dunklen EGroupware-Blau (Logo) statt Akzentlinie links */
+.stats .stat { border-left: 0; padding-left: 0; }
+.stats .stat .stat-icon {
+  display: inline-block; width: .72em; height: .72em; margin-right: .3em;
+  vertical-align: -.05em; color: #4177a2;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .stats .stat .stat-icon { color: var(--brand-300); } }
+:root[data-theme="dark"] .stats .stat .stat-icon { color: var(--brand-300); }
+@media (max-width: 560px) { .stats .stat { padding-left: 0; } }
+
+/* -- Kundenlogos unter den Kennzahlen ---- */
+/* Weniger Abstand zu den Kennzahlen darueber, mehr Luft bis zur Trennlinie darunter */
+.logo-strip { padding-block: .75rem clamp(2.75rem, 5vw, 3.75rem); }
+.section--tight:has(+ .logo-strip) { padding-bottom: 1.5rem; }
