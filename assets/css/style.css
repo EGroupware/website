@@ -2736,3 +2736,20 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 /* Weniger Abstand zu den Kennzahlen darueber, mehr Luft bis zur Trennlinie darunter */
 .logo-strip { padding-block: .75rem clamp(2.75rem, 5vw, 3.75rem); }
 .section--tight:has(+ .logo-strip) { padding-bottom: 1.5rem; }
+
+/* -- Linkliste untereinander ---- */
+/* Pfeil-Links als kurze Liste, je Link eine Zeile (z. B. "Weiter zu:" auf der Startseite) */
+.link-stack { list-style: none; padding: 0; margin-bottom: 0; display: grid; gap: .15rem; justify-items: start; }
+
+/* -- "EGroupware auf einen Blick" (Startseite): Bezeichnung fett, Wert normal ---- */
+#was-ist-egroupware .facts dt { font-weight: 650; color: var(--text); }
+#was-ist-egroupware .facts dd { font-weight: 400; color: var(--text-soft); }
+/* Leichter Verlauf als Hintergrund: links weiss, nach rechts hellblau-tuerkis; Kapitellinie oben wie unten */
+main > #was-ist-egroupware {
+  padding-block: 0 clamp(3rem, 6vw, 5rem);
+  background:
+    radial-gradient(900px 480px at 88% 20%, color-mix(in srgb, var(--accent-500) 12%, transparent), transparent 65%),
+    linear-gradient(90deg, var(--bg) 0%, var(--bg) 15%, transparent 65%),
+    var(--bg-soft);
+}
+main > #was-ist-egroupware > .wrap { border-top: 1px solid var(--chapter-line); padding-top: clamp(3rem, 6vw, 5rem); }
