@@ -82,7 +82,10 @@ Pressemitteilungen, die es nur auf Deutsch gibt).
 | Zweig     | Push veröffentlicht auf                                  |
 |-----------|----------------------------------------------------------|
 | `staging` | Staging-Seite (passwortgeschützt) – normaler Arbeitszweig |
-| `main`    | egroupware.org (derzeit www2.egroupware.org)             |
+| `main`    | www.egroupware.org (live)                                |
+
+**Achtung:** www2.egroupware.org ist die **alte WordPress-Seite** und hat mit diesem
+Repo nichts zu tun. Live-Stand von `main` immer unter https://www.egroupware.org prüfen.
 
 - Gearbeitet wird auf `staging`. Nach `main` nur, wenn es ausdrücklich gesagt wird.
 - **Vor jedem Commit die Änderung lokal im Browser zeigen** und auf Freigabe warten.
@@ -98,7 +101,7 @@ Pressemitteilungen, die es nur auf Deutsch gibt).
 Seite umgestellt ist, gehen Änderungen an `de/status.html` und `en/status.html`
 (Status umschalten, Störungsmeldungen, Updates) direkt auf `main`, damit Kunden sie
 sofort sehen. Danach `main` in `staging` mergen, damit beide Zweige gleich bleiben.
-Stand 04.11.2026: noch nicht umgestellt – bis dahin auch die Statusseite über `staging`.
+Stand 26.11.2026: www.egroupware.org läuft auf `main`, die Ausnahme gilt also.
 
 ## Seitenübergreifende Teile: Header, Navigation, Footer
 
