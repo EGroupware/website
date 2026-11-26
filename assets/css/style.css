@@ -2744,12 +2744,15 @@ main .section .prose--legal h2 + p { font-size: var(--fs-sm); line-height: inher
 /* -- "EGroupware auf einen Blick" (Startseite): Bezeichnung fett, Wert normal ---- */
 #was-ist-egroupware .facts dt { font-weight: 650; color: var(--text); }
 #was-ist-egroupware .facts dd { font-weight: 400; color: var(--text-soft); }
-/* Leichter Verlauf als Hintergrund: links weiss, nach rechts hellblau-tuerkis; Kapitellinie oben wie unten */
+/* Leichter Verlauf als Hintergrund: links weiss, nach rechts hellblau-tuerkis; Linien oben und unten ueber die volle Breite */
 main > #was-ist-egroupware {
-  padding-block: 0 clamp(3rem, 6vw, 5rem);
+  padding-block: clamp(3rem, 6vw, 5rem);
+  border-block: 1px solid var(--chapter-line);
   background:
     radial-gradient(900px 480px at 88% 20%, color-mix(in srgb, var(--accent-500) 12%, transparent), transparent 65%),
     linear-gradient(90deg, var(--bg) 0%, var(--bg) 15%, transparent 65%),
     var(--bg-soft);
 }
-main > #was-ist-egroupware > .wrap { border-top: 1px solid var(--chapter-line); padding-top: clamp(3rem, 6vw, 5rem); }
+main > #was-ist-egroupware > .wrap { border-top: 0; padding-top: 0; }
+/* Linie zum naechsten Abschnitt traegt dieser Abschnitt selbst (volle Breite) */
+main > #was-ist-egroupware + .section > :is(.wrap, .wrap-narrow) { border-top: 0; }
