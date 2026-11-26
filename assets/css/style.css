@@ -2366,8 +2366,6 @@ main section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 1rem); }
   font-size: .62rem; font-weight: 700; letter-spacing: .05em; line-height: 1.2; vertical-align: .1em;
   background: var(--st-ok-bg); color: var(--st-ok);
 }
-/* Bei knapper Breite entfaellt "Start" in der Leiste – das Logo fuehrt ebenfalls zur Startseite */
-@media (min-width: 961px) and (max-width: 1199px) { .nav-links > li:first-child { display: none; } }
 /* Karte ueber die volle Rasterbreite, z. B. als fuenfte Karte unter einem 2er-Raster */
 .grid > .card--wide { grid-column: 1 / -1; }
 
