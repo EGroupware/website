@@ -3377,6 +3377,22 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.egroupware.org/de/e-mail-einrichten</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/e-mail-einrichten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/email-setup"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/email-setup"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.egroupware.org/en/email-setup</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/e-mail-einrichten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/email-setup"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/email-setup"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.egroupware.org/de/alternativen</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/alternativen"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/alternatives"/>

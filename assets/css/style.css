@@ -2784,3 +2784,8 @@ main > #was-ist-egroupware + .section > :is(.wrap, .wrap-narrow) { border-top: 0
   border-color: color-mix(in srgb, var(--accent-400) 45%, var(--card-bg));
 }
 :root[data-theme="dark"] #module .module .icon-badge { border-color: color-mix(in srgb, var(--accent-400) 45%, var(--bg)); }
+
+/* -- Tabelle mit neuen Werten: letzte Spalte gruen (z. B. Ordner seit Stalwart) ---- */
+.table-neu tr > :last-child {
+  background: var(--st-note-bg); box-shadow: inset 4px 0 0 var(--st-note-bar); color: var(--text);
+}

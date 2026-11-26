@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en" data-theme-init>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set up your email program – EGroupware</title>
+  <meta name="description" content="Server settings for Thunderbird, Outlook, Apple Mail and smartphones: mail.egroupware.org, IMAP 993, SMTP 465 or 587, login with your email address. Plus the folders since the move to Stalwart.">
+  <link rel="canonical" href="https://www.egroupware.org/en/email-setup">
+  <link rel="alternate" hreflang="de" href="https://www.egroupware.org/de/e-mail-einrichten">
+  <link rel="alternate" hreflang="en" href="https://www.egroupware.org/en/email-setup">
+  <link rel="alternate" hreflang="x-default" href="https://www.egroupware.org/en/email-setup">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EGroupware">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Set up your email program – EGroupware">
+  <meta property="og:description" content="Server settings for Thunderbird, Outlook, Apple Mail and smartphones: mail.egroupware.org, IMAP 993, SMTP 465 or 587, login with your email address. Plus the folders since the move to Stalwart.">
+  <meta property="og:url" content="https://www.egroupware.org/en/email-setup">
+  <meta property="og:image" content="https://www.egroupware.org/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b5fa5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/css/style.css?v=20261126h" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261126h">
+  <script>
+    (function(){try{var t=localStorage.getItem("egw-theme");
+    var s=localStorage.getItem("egw-theme-sys"),c=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if((t==="dark"||t==="light")&&s===c){document.documentElement.setAttribute("data-theme",t);}else if(t){localStorage.removeItem("egw-theme");localStorage.removeItem("egw-theme-sys");}}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.egroupware.org/en/email-setup#webpage","url":"https://www.egroupware.org/en/email-setup","name":"Set up your email program – EGroupware","description":"Server settings for Thunderbird, Outlook, Apple Mail and smartphones: mail.egroupware.org, IMAP 993, SMTP 465 or 587, login with your email address. Plus the folders since the move to Stalwart.","inLanguage":"en","datePublished":"2026-11-26","dateModified":"2026-11-26","isPartOf":{"@id":"https://www.egroupware.org/#website"}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="./">
+        <img class="brand-light" src="../assets/img/EGroupware-Logo.svg"
+             alt="EGroupware – Smart Online Office" width="189" height="37" fetchpriority="high">
+        <img class="brand-dark" src="../assets/img/EGroupware-Logo-invert.svg"
+             alt="" aria-hidden="true" width="189" height="37">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="primary-nav">
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="features">Features</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Features – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Organisation</p><ul><li><a href="calendar"><img class="nav-sub__icon" src="../assets/img/icons/calendar.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Calendar</span></a></li><li><a href="contacts"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Contacts</span></a></li><li><a href="tasks"><img class="nav-sub__icon" src="../assets/img/icons/infolog.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Tasks</span></a></li><li><a href="projects"><img class="nav-sub__icon" src="../assets/img/icons/projectmanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Projects</span></a></li><li><a href="timesheet"><img class="nav-sub__icon" src="../assets/img/icons/timesheet.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Timesheet</span></a></li><li><a href="resources"><img class="nav-sub__icon" src="../assets/img/icons/resources.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Ressources</span></a></li><li><a href="e-invoicing"><img class="nav-sub__icon" src="../assets/img/icons/einvoice.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>E-&#8288;Invoice</span></a></li><li><a href="administration"><img class="nav-sub__icon" src="../assets/img/icons/admin.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Administration</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Communication</p><ul><li><a href="email"><img class="nav-sub__icon" src="../assets/img/icons/mail.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Email</span></a></li><li><a href="chat"><img class="nav-sub__icon" src="../assets/img/icons/chat.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Team Chat</span></a></li><li><a href="videoconferences"><img class="nav-sub__icon" src="../assets/img/icons/videoconference.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Video&shy;conferences</span></a></li><li><a href="file-manager"><img class="nav-sub__icon" src="../assets/img/icons/filemanager.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Documents</span></a></li><li><a href="online-office"><img class="nav-sub__icon" src="../assets/img/icons/collabora.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Online Office</span></a></li><li><a href="kanban"><img class="nav-sub__icon" src="../assets/img/icons/kanban.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Kanban</span></a></li><li><a href="helpdesk"><img class="nav-sub__icon" src="../assets/img/icons/tracker.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Helpdesk</span></a></li><li><a href="crm"><img class="nav-sub__icon" src="../assets/img/icons/addressbook.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CRM</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Tech &amp; integration</p><ul><li><a href="ai"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5l1.7 4.6 4.6 1.7-4.6 1.7L12 16.1l-1.7-4.6L5.7 9.8l4.6-1.7z"/><path d="M18.5 15.5l.8 2.1 2.1.8-2.1.8-.8 2.1-.8-2.1-2.1-.8 2.1-.8z"/></svg></span><span>AI in EGroupware</span></a></li><li><a href="cti-phone-integration"><img class="nav-sub__icon" src="../assets/img/icons/cti.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>CTI Telefon-Integration</span></a></li><li><a href="remote-work"><img class="nav-sub__icon" src="../assets/img/icons/home.svg" alt="" width="18" height="18" loading="lazy" decoding="async"><span>Home&shy;office Integration</span></a></li><li><a href="mobile-access"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span>Mobil Access</span></a></li><li><a href="synchronisation"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 4.5v6h-6"/><path d="M3.5 19.5v-6h6"/><path d="M19.2 9.5a7.5 7.5 0 0 0-12.6-3L3.5 9.5m17 5-3.1 3a7.5 7.5 0 0 1-12.6-3"/></svg></span><span>Synchronisation</span></a></li><li><a href="guacamole"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="3.5" width="19" height="7" rx="2"/><rect x="2.5" y="13.5" width="19" height="7" rx="2"/><path d="M6.5 7h.01M6.5 17h.01"/></svg></span><span>Guacamole</span></a></li><li><a href="univention"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.6 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.4 12 22 12 22z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><span>Univention Corporate Server (UCS)</span></a></li><li><a href="vidoteach"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2.5 8.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 10.6v4.6c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.6M21.5 8.5v6"/></svg></span><span>Video based learning</span></a></li></ul></div>
+        </div>
+        </li>
+        <li><a class="nav-ai" href="ai">AI <span class="nav-badge">NEW</span></a></li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="pricing">Pricing</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Pricing – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub">
+          <div class="nav-sub__col"><ul><li><a href="pricing"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#tag"/></svg></span><span>Pricing</span></a></li><li><a href="cloud-or-own-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#compare"/></svg></span><span>Cloud or own server?</span></a></li><li><a href="community-edition-vs-epl"><span class="nav-sub__icon nav-sub__icon--line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3.5h2.4a1.6 1.6 0 1 1 3.2 0H17a1.5 1.5 0 0 1 1.5 1.5v2.4a1.6 1.6 0 1 0 0 3.2v3.9a1.5 1.5 0 0 1-1.5 1.5h-2.4a1.6 1.6 0 1 0-3.2 0H9a1.5 1.5 0 0 1-1.5-1.5v-2.4a1.6 1.6 0 1 1 0-3.2V5A1.5 1.5 0 0 1 9 3.5z"/></svg></span><span>EGroupware CE vs EPL</span></a></li><li><a href="cloud-services"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#cloud-check"/></svg></span><span>EGroupware Cloud</span></a></li><li><a href="installation-on-your-own-server"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#server"/></svg></span><span>EGroupware on your own server</span></a></li><li><a href="trial"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#clock"/></svg></span><span>Trial Version</span></a></li><li><a href="demo"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#monitor"/></svg></span><span>Online Demo</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="industries">Industries</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Industries – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Solutions</p><ul><li><a href="industries"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#building"/></svg></span><span>Industries</span></a></li><li><a href="education"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#cap"/></svg></span><span>Educational institutions</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Compared with</p><ul><li><a href="alternatives"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#compare"/></svg></span><span>Microsoft 365 &amp; Google</span></a></li><li><a href="exchange-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#mail"/></svg></span><span>Exchange</span></a></li><li><a href="dropbox-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#folder"/></svg></span><span>Dropbox</span></a></li><li><a href="owncloud-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#cloud"/></svg></span><span>ownCloud</span></a></li><li><a href="google-calendar-alternative"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#calendar"/></svg></span><span>Google Calendar</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="about">About</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="About – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Company</p><ul><li><a href="about"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#info"/></svg></span><span>About</span></a></li><li><a href="testimonials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#quote"/></svg></span><span>Testimonials</span></a></li><li><a href="why-egroupware"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#check"/></svg></span><span>Why EGroupware?</span></a></li><li><a href="digital-sovereignty"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#shield"/></svg></span><span>Digital sovereignty</span></a></li><li><a href="press"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#news"/></svg></span><span>Press</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Partners &amp; community</p><ul><li><a href="community"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#users"/></svg></span><span>Community</span></a></li><li><a href="technology-partners"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#chip"/></svg></span><span>Technology &amp; integration partners</span></a></li><li><a href="resellers"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#store"/></svg></span><span>EGroupware Reseller</span></a></li><li><a href="become-reseller"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#user-plus"/></svg></span><span>Become Reseller</span></a></li></ul></div>
+        </div>
+        </li>
+        <li class="nav-has-sub">
+          <span class="nav-top">
+            <a href="support">Support</a>
+            <button class="nav-sub__toggle" type="button" aria-expanded="false"
+                    aria-label="Support – submenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></button>
+          </span>
+        <div class="nav-sub nav-sub--wide">
+          <div class="nav-sub__col"><p class="nav-sub__head">Help &amp; service</p><ul><li><a href="support"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#lifebuoy"/></svg></span><span>Support</span></a></li><li><a href="customer-support-login"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#login"/></svg></span><span>Customer Support Login</span></a></li><li><a href="status"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#pulse"/></svg></span><span>EGroupware Cloud Status</span></a></li><li><a href="security-and-data-privacy"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#lock"/></svg></span><span>Security and data privacy</span></a></li><li><a href="data-backup"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#backup"/></svg></span><span>Data backup</span></a></li></ul></div>
+          <div class="nav-sub__col"><p class="nav-sub__head">Self-hosting</p><ul><li><a href="download"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#download"/></svg></span><span>Download</span></a></li><li><a href="https://github.com/EGroupware/egroupware/wiki/Installation-using-egroupware-docker-RPM-DEB-package" target="_blank" rel="noopener"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#terminal"/></svg></span><span>Installation guide</span></a></li><li><a href="tutorials"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#play"/></svg></span><span>Webinars and tutorials</span></a></li><li><a href="caldav-synchronizer"><span class="nav-sub__icon nav-sub__icon--line"><svg aria-hidden="true" focusable="false"><use href="../assets/img/nav-icons.svg?v=20261126#sync"/></svg></span><span>Caldav Synchronizer</span></a></li></ul></div>
+        </div>
+        </li>
+        <li><a href="blog">News</a></li>
+        <li><a href="contact">Contact</a></li>
+          <li class="nav-cta"><a class="btn btn--primary" href="trial">Start 30-day free trial</a></li>
+          <li class="nav-theme">
+            <button class="theme-toggle-inline" type="button">
+              <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+              <span>Switch colour scheme</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language"><a href="../de/e-mail-einrichten" hreflang="de" data-set-lang="de">DE</a><a href="email-setup" hreflang="en" data-set-lang="en" aria-current="true">EN</a></div>
+        <button class="theme-toggle" type="button" aria-label="Switch colour scheme"
+                data-label-dark="Switch colour scheme" data-label-light="Switch colour scheme">
+          <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"/></svg></span><span class="i-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg></span>
+        </button>
+        <a class="btn btn--primary btn--sm" href="trial">Start 30-day free trial</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="primary-nav" aria-label="Open menu">
+          <span class="i-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg></span><span class="i-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="eyebrow" aria-label="Breadcrumb"><a href="support">Support</a></nav>
+        <h1>Set up your email program</h1>
+        <p class="lead">You can reach your EGroupware cloud mailbox not only in the browser but also with Thunderbird, eM Client, Outlook, Apple Mail and smart&shy;phone mail apps. These are the settings you need.</p>
+        <ul class="trust-bar trust-bar--3">
+          <li><strong>One server</strong><span>mail.egroupware.org for incoming and outgoing mail</span></li>
+          <li><strong>Encrypted</strong><span>SSL/TLS or STARTTLS</span></li>
+          <li><strong>Login</strong><span>Full email address and password</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="settings">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Settings</span>
+          <h2>Server and ports</h2>
+          <p>Choose one of the two options for incoming and one for outgoing mail. Both are encrypted; SSL/TLS is the first choice. Some programs call SSL/TLS just “SSL” and STARTTLS just “TLS”.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead><tr><th>Service</th><th>Server</th><th>Port</th><th>Encryption</th></tr></thead>
+            <tbody>
+            <tr><td>Incoming (IMAP)</td><td>mail.egroupware.org</td><td>993</td><td>SSL/TLS (recommended)</td></tr>
+            <tr><td>Incoming (IMAP)</td><td>mail.egroupware.org</td><td>143</td><td>STARTTLS</td></tr>
+            <tr><td>Outgoing (SMTP)</td><td>mail.egroupware.org</td><td>465</td><td>SSL/TLS (recommended)</td></tr>
+            <tr><td>Outgoing (SMTP)</td><td>mail.egroupware.org</td><td>587</td><td>STARTTLS</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-2 mt-3">
+          <article class="card reveal">
+            <h3>Login</h3>
+            <p>Your user name is your full email address, the password is your EGroupware password. Choose “Normal password” as the authentication method. The outgoing server requires the same login as the incoming server.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Encryption is required</h3>
+            <p>For security reasons, we do not accept unencrypted connections. If your program reports a certificate error, check the server name: it must be exactly mail.egroupware.org.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="folders">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Folders</span>
+          <div class="app-highlight__head"><span class="st-badge st-badge--warn">CHANGED</span><small>Since the move to Stalwart</small></div>
+          <h2>Sent, Trash and the others are at the top level</h2>
+          <p>Since our mail server moved from Dovecot to Stalwart, the special folders are no longer below the Inbox but next to it. If your program was set up before the move, you need to change it once.</p>
+        </div>
+        <div class="table-wrap table-neu reveal">
+          <table>
+            <thead><tr><th>Folder</th><th>Before (Dovecot)</th><th>Now (Stalwart)</th></tr></thead>
+            <tbody>
+            <tr><td>Sent</td><td>INBOX/Sent</td><td>Sent</td></tr>
+            <tr><td>Drafts</td><td>INBOX/Drafts</td><td>Drafts</td></tr>
+            <tr><td>Templates</td><td>INBOX/Templates</td><td>Templates</td></tr>
+            <tr><td>Trash</td><td>INBOX/Trash</td><td>Trash</td></tr>
+            <tr><td>Junk</td><td>INBOX/Junk</td><td>Junk</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="fc-fact reveal mt-3">
+          <div class="fc-fact__head"><strong>Why this matters</strong><span class="st-badge st-badge--info">NOTE</span></div>
+          <p>Many programs remember the old path. If they can no longer find INBOX/Trash, they create the folder again. You then see a second “INBOX” folder with a Trash folder below it, and sent or deleted emails end up there instead of in the right folder.</p>
+          <p class="mt-2">We regularly move emails from such a duplicate folder to the right folders. Only changing your program fixes it for good. In EGroupware itself this has already been done.</p>
+        </div>
+        <ol class="schritte mt-3 reveal">
+          <li><strong>Reload the folder list</strong><span>Re-&#8288;subscribe to the folders or refresh the folder list.</span></li>
+          <li><strong>Assign the special folders</strong><span>In the account settings, assign Sent, Drafts, Templates, Trash and Junk to the top-&#8288;level folders.</span></li>
+          <li><strong>Clear the IMAP prefix</strong><span>If “IMAP server directory” or “IMAP Path Prefix” still says “INBOX”, empty the field.</span></li>
+          <li><strong>Remove the duplicate folder</strong><span>If a second “INBOX” folder has already appeared, move its emails and delete the folder.</span></li>
+        </ol>
+        <div class="grid grid-3 mt-3">
+          <article class="card reveal">
+            <h3>Thunderbird</h3>
+            <p>Account Settings → Copies &amp; Folders (Sent, Drafts, Templates), Server Settings (Trash), Junk Settings (Junk). The IMAP server directory is under Server Settings → Advanced.</p>
+          </article>
+          <article class="card reveal">
+            <h3>eM Client</h3>
+            <p>eM Client recognises the special folders by their markings on the server. Under Menu → Accounts → your account, check that no “INBOX” prefix is set in the IMAP settings, then refresh the folder list. If that does not help, add the account again.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Outlook</h3>
+            <p>Outlook assigns Sent and Deleted Items itself, based on the server. The most reliable way: remove the account and add it again as an IMAP account. In classic Outlook, the “Root folder path” under More Settings → Advanced must be empty.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Apple Mail on the Mac</h3>
+            <p>Mail → Settings → Accounts → your account → Mailbox Behaviors. The IMAP Path Prefix is under Server Settings → Advanced IMAP Settings.</p>
+          </article>
+          <article class="card reveal">
+            <h3>iPhone and iPad</h3>
+            <p>Settings → Apps → Mail → Mail Accounts → your account → Account → Advanced (up to iOS 17: Settings → Mail → Accounts). Under Mailbox Behaviors, assign the folders “On the Server” and empty the IMAP Path Prefix.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Samsung smart&shy;phone</h3>
+            <p>The “Email” app takes the special folders from the server during setup. So remove the account under Menu → Settings → your account → Remove and add it again as an IMAP account. Your emails stay on the server.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2>Something not working?</h2>
+          <p>Customers can reach our support by email at tracker@egroupware.org or by phone, Monday to Friday, 9 am to 6 pm (CET).</p>
+          <div class="btn-row center">
+            <a class="btn btn--solid-light btn--lg" href="support">Go to support</a>
+            <a class="btn btn--light btn--lg" href="email">Email in EGroupware</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="./">
+            <img src="../assets/img/EGroupware-Logo-invert.svg" alt="EGroupware"
+                 width="173" height="34" loading="lazy">
+          </a>
+          <p>The open source collaboration solution from Germany – for companies, public bodies and educational institutions.</p>
+        </div>
+      <div>
+        <h2 class="footer-h">Product</h2>
+        <ul>
+          <li><a href="features">Features</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="industries">Industries</a></li>
+          <li><a href="ai">AI in EGroupware</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Company</h2>
+        <ul>
+          <li><a href="about">About us</a></li>
+          <li><a href="support">Support</a></li>
+          <li><a href="status">Cloud status</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Legal</h2>
+        <ul>
+          <li><a href="imprint">Imprint</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="site-terms">Site terms</a></li>
+          <li><a href="terms">Terms and conditions</a></li>
+          <li><a href="cancel-contract" aria-current="page">Cancel contract</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> EGroupware GmbH. All rights reserved.</p>
+        <nav class="footer-social" aria-label="Social media"><a href="https://de.linkedin.com/company/egroupware-gmbh" target="_blank" rel="noopener" aria-label="EGroupware on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#linkedin"/></svg></a><a href="https://fosstodon.org/@EGroupware" target="_blank" rel="noopener" aria-label="EGroupware on Mastodon"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#mastodon"/></svg></a><a href="https://bsky.app/profile/egroupware.org" target="_blank" rel="noopener" aria-label="EGroupware on Bluesky"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#bluesky"/></svg></a><a href="https://www.youtube.com/user/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware on YouTube"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#youtube"/></svg></a><a href="https://www.facebook.com/EGroupware" target="_blank" rel="noopener" aria-label="EGroupware on Facebook"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#facebook"/></svg></a><a href="https://github.com/EGroupware/egroupware" target="_blank" rel="noopener" aria-label="EGroupware on GitHub"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#github"/></svg></a><a href="https://help.egroupware.org/" target="_blank" rel="noopener" aria-label="EGroupware community forum"><svg aria-hidden="true" focusable="false"><use href="../assets/img/social.svg?v=20261113l#egroupware"/></svg></a></nav>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js?v=20261113l" defer></script>
+  <script>
+  (function () {
+    var form = document.querySelector('form[action="../send.php"]');
+    if (!form) return;
+    var status = document.querySelector('.form-status[data-ok]');
+
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+
+      // Honeypot: real users never fill this field.
+      if (form.website.value.trim() !== '') return;
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      var submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      if (status) { status.hidden = true; status.className = 'form-status'; }
+
+      // Field mapping matches the production WordPress cancel-contract
+      // form's existing Fluent Forms -> EGroupware webhook (verified
+      // 2026-10-31): the "organization" field is deliberately repurposed
+      // there to hold the customer/order number, not a company name.
+      var fullName = form.name.value.trim();
+      var nameParts = fullName.split(/\s+/);
+      var payload = {
+        fullName: fullName,
+        name: [
+          { '@type': 'NameComponent', type: 'personal', value: nameParts.shift() },
+          { '@type': 'NameComponent', type: 'surname', value: nameParts.join(' ') }
+        ],
+        'emails/work': form.email.value.trim(),
+        'notes/note': form.reason.value.trim(),
+        'egroupware.org:customfields/allow_data_processing': 'on'
+      };
+      if (form.phone.value.trim()) payload['phones/tel_work'] = form.phone.value.trim();
+      if (form.custno.value.trim()) payload['organizations/org/name'] = form.custno.value.trim();
+      if (form.country.value.trim()) payload['addresses/work/country'] = form.country.value.trim();
+
+      fetch('/pole', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          if (status) {
+            status.hidden = false;
+            status.textContent = status.getAttribute('data-ok');
+            status.className = 'form-status form-status--ok';
+            status.setAttribute('role', 'status');
+          }
+          form.reset();
+        })
+        .catch(function () {
+          if (status) {
+            status.hidden = false;
+            status.textContent = status.getAttribute('data-error');
+            status.className = 'form-status form-status--error';
+            status.setAttribute('role', 'status');
+          }
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+        });
+    });
+  })();
+  </script>
+</body>
+</html>
