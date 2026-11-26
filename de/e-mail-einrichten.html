@@ -174,7 +174,7 @@
           <span class="eyebrow">Ordner</span>
           <div class="app-highlight__head"><span class="st-badge st-badge--warn">GEÄNDERT</span><small>Seit dem Wechsel auf Stalwart</small></div>
           <h2>Gesendet, Papierkorb und&nbsp;Co<br> liegen auf oberster Ebene</h2>
-          <p>Seit dem Wechsel unseres Mailservers von Dovecot auf Stalwart liegen die Sonderordner nicht mehr unter dem Posteingang, sondern daneben. Programme, die vorher schon eingerichtet waren, müssen Sie einmal umstellen.</p>
+          <p>Seit dem Wechsel unseres Mailservers von Dovecot auf Stalwart liegen die Sonderordner nicht mehr unter dem Posteingang, sondern daneben. Der Server leitet die alten Pfade automatisch um, bestehende Programme funktionieren daher weiter. Wir empfehlen trotzdem, sie bei Gelegenheit umzustellen.</p>
         </div>
         <div class="table-wrap table-neu reveal">
           <table>
@@ -189,15 +189,15 @@
           </table>
         </div>
         <div class="fc-fact reveal mt-3">
-          <div class="fc-fact__head"><strong>Warum das wichtig ist</strong><span class="st-badge st-badge--info">HINWEIS</span></div>
-          <p>Viele Programme merken sich den alten Pfad. Finden sie INBOX/Trash nicht mehr, legen sie den Ordner neu an. Dann erscheint ein zweiter Ordner „INBOX“ mit einem Papierkorb darunter, und gesendete oder gelöschte E-&#8288;Mails landen dort statt im richtigen Ordner.</p>
-          <p class="mt-2">E-&#8288;Mails, die in so einem doppelten Ordner landen, verschieben wir regelmäßig in die richtigen Ordner. Dauerhaft hilft aber nur, das Programm umzustellen. In EGroupware selbst ist das bereits erledigt.</p>
+          <div class="fc-fact__head"><strong>Alte Einstellungen funktionieren weiter</strong><span class="st-badge st-badge--info">HINWEIS</span></div>
+          <p>Viele Programme merken sich den alten Pfad, zum Beispiel INBOX/Sent, oder suchen eigene Ordnernamen wie „Gesendete Objekte“. Der Server leitet solche Zugriffe dauerhaft auf die neuen Ordner um. Gesendete und gelöschte E-&#8288;Mails, Entwürfe, Vorlagen und Spam landen deshalb auch mit den bisherigen Einstellungen im richtigen Ordner.</p>
+          <p class="mt-2">E-&#8288;Mails, die vor der Umleitung in einem doppelten Ordner „INBOX“ gelandet sind, bleiben dort, bis sie verschoben werden. Das erledigen wir automatisch, Sie können sie aber auch selbst verschieben. In EGroupware selbst ist bereits alles umgestellt.</p>
         </div>
         <ol class="schritte mt-3 reveal">
           <li><strong>Ordnerliste neu laden</strong><span>Ordner neu abonnieren bzw. die Ordnerliste aktualisieren.</span></li>
           <li><strong>Sonderordner zuweisen</strong><span>In den Konto&shy;einstellungen Gesendet, Entwürfe, Vorlagen, Papierkorb und Spam den Ordnern auf oberster Ebene zuordnen.</span></li>
           <li><strong>IMAP-Präfix leeren</strong><span>Steht bei „IMAP-Server-Verzeichnis“ oder „IMAP-Pfad-Präfix“ noch „INBOX“, das Feld leeren.</span></li>
-          <li><strong>Doppelten Ordner entfernen</strong><span>Ist schon ein zweiter Ordner „INBOX“ entstanden, die E-&#8288;Mails darin verschieben und den Ordner löschen.</span></li>
+          <li><strong>Doppelten Ordner abbestellen</strong><span>Ist ein zweiter Ordner „INBOX“ entstanden, die E-&#8288;Mails darin in die richtigen Ordner verschieben und den Ordner abbestellen (nicht löschen, das Programm würde ihn sonst neu anlegen).</span></li>
         </ol>
         <h3 class="mt-3">Anleitungen für gängige Programme</h3>
         <p>Klicken Sie auf Ihr Programm, um die Schritte aufzuklappen.</p>
@@ -224,7 +224,7 @@
           </details>
           <details>
             <summary>Outlook (Windows)</summary>
-            <div class="faq-body"><p>Outlook ordnet Gesendet und Gelöscht anhand der Kennzeichnung auf dem Server selbst zu. Am zuverlässigsten ist es daher, das Konto neu einzurichten. Ihre E-&#8288;Mails bleiben dabei auf dem Server erhalten.</p><ol>
+            <div class="faq-body"><p>Outlook sucht für Gesendet und Gelöscht eigene Ordnernamen wie „Gesendete Objekte“. Der Server ordnet diese automatisch den Ordnern Sent und Trash zu. Sie müssen Outlook deshalb nicht neu einrichten. Möchten Sie die Ordnerliste aufräumen, können Sie das Konto neu einrichten. Ihre E-&#8288;Mails bleiben dabei auf dem Server erhalten.</p><ol>
               <li>Klassisches Outlook: Datei → Konto&shy;einstellungen → Konto&shy;einstellungen… → Konto markieren → Entfernen.<br>Neues Outlook: Einstellungen → Konten → E-&#8288;Mail-Konten → Verwalten → Entfernen.</li>
               <li>Konto neu hinzufügen, als Kontotyp IMAP wählen und die Server&shy;einstellungen aus der Tabelle oben eintragen.</li>
               <li>Im klassischen Outlook prüfen: Datei → Konto&shy;einstellungen → Konto&shy;einstellungen… → Konto → Ändern → Weitere Einstellungen → Erweitert: Das Feld „Stammordnerpfad“ muss leer sein.</li>

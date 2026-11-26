@@ -174,7 +174,7 @@
           <span class="eyebrow">Folders</span>
           <div class="app-highlight__head"><span class="st-badge st-badge--warn">CHANGED</span><small>Since the move to Stalwart</small></div>
           <h2>Sent, Trash and the others are at the top level</h2>
-          <p>Since our mail server moved from Dovecot to Stalwart, the special folders are no longer below the Inbox but next to it. If your program was set up before the move, you need to change it once.</p>
+          <p>Since our mail server moved from Dovecot to Stalwart, the special folders are no longer below the Inbox but next to it. The server automatically redirects the old paths, so existing programs keep working. We still recommend changing them when convenient.</p>
         </div>
         <div class="table-wrap table-neu reveal">
           <table>
@@ -189,15 +189,15 @@
           </table>
         </div>
         <div class="fc-fact reveal mt-3">
-          <div class="fc-fact__head"><strong>Why this matters</strong><span class="st-badge st-badge--info">NOTE</span></div>
-          <p>Many programs remember the old path. If they can no longer find INBOX/Trash, they create the folder again. You then see a second “INBOX” folder with a Trash folder below it, and sent or deleted emails end up there instead of in the right folder.</p>
-          <p class="mt-2">We regularly move emails from such a duplicate folder to the right folders. Only changing your program fixes it for good. In EGroupware itself this has already been done.</p>
+          <div class="fc-fact__head"><strong>Old settings keep working</strong><span class="st-badge st-badge--info">NOTE</span></div>
+          <p>Many programs remember the old path, for example INBOX/Sent, or look for their own folder names such as “Sent Items”. The server permanently redirects such access to the new folders. Sent and deleted emails, drafts, templates and junk therefore end up in the right folder even with your existing settings.</p>
+          <p class="mt-2">Emails that ended up in a duplicate “INBOX” folder before the redirect stay there until they are moved. We do this automatically, but you can also move them yourself. In EGroupware itself everything has already been changed.</p>
         </div>
         <ol class="schritte mt-3 reveal">
           <li><strong>Reload the folder list</strong><span>Re-&#8288;subscribe to the folders or refresh the folder list.</span></li>
           <li><strong>Assign the special folders</strong><span>In the account settings, assign Sent, Drafts, Templates, Trash and Junk to the top-&#8288;level folders.</span></li>
           <li><strong>Clear the IMAP prefix</strong><span>If “IMAP server directory” or “IMAP Path Prefix” still says “INBOX”, empty the field.</span></li>
-          <li><strong>Remove the duplicate folder</strong><span>If a second “INBOX” folder has already appeared, move its emails and delete the folder.</span></li>
+          <li><strong>Unsubscribe from the duplicate folder</strong><span>If a second “INBOX” folder has appeared, move its emails to the right folders and unsubscribe from the folder (do not delete it, otherwise your program would create it again).</span></li>
         </ol>
         <h3 class="mt-3">Guides for common programs</h3>
         <p>Click your program to open the steps.</p>
@@ -224,7 +224,7 @@
           </details>
           <details>
             <summary>Outlook (Windows)</summary>
-            <div class="faq-body"><p>Outlook assigns Sent and Deleted Items itself, based on the markings on the server. The most reliable way is therefore to set up the account again. Your emails stay on the server.</p><ol>
+            <div class="faq-body"><p>For Sent and Deleted Items, Outlook looks for its own folder names such as “Sent Items”. The server automatically maps these to the Sent and Trash folders. You therefore do not need to set up Outlook again. If you want to tidy up the folder list, you can set up the account again. Your emails stay on the server.</p><ol>
               <li>Classic Outlook: File → Account Settings → Account Settings… → select the account → Remove.<br>New Outlook: Settings → Accounts → Email accounts → Manage → Remove.</li>
               <li>Add the account again, choose IMAP as the account type and enter the server settings from the table above.</li>
               <li>In classic Outlook, check: File → Account Settings → Account Settings… → account → Change → More Settings → Advanced: the “Root folder path” field must be empty.</li>
